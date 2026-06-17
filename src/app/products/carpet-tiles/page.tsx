@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { products } from "@/lib/data";
+import ProductImage from "@/components/ProductImage";
 
 export default function CarpetTilesPage() {
   const categoryProducts = products.filter((p) => p.category === "carpet-tiles");
@@ -24,18 +25,8 @@ export default function CarpetTilesPage() {
               <Link
                 key={product.id}
                 href={`/products/carpet-tiles/${product.id}`}
-                className="group bg-surface rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all"
-              >
-                <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                  <div className="text-center px-4">
-                    <div className="flex justify-center gap-1.5 mb-3">
-                      {product.spec.colors.slice(0, 6).map((c) => (
-                        <span key={c.hex} className="w-6 h-6 rounded-full border border-gray-200" style={{ backgroundColor: c.hex }} title={c.name} />
-                      ))}
-                    </div>
-                    <span className="text-xs text-muted">{product.spec.colors.length} colors available</span>
-                  </div>
-                </div>
+                className="group bg-white rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all">
+                <ProductImage src={product.image} alt={product.name} className="h-48" />
                 <div className="p-5">
                   <h3 className="font-semibold text-primary group-hover:text-accent transition-colors mb-2">{product.name}</h3>
                   <p className="text-sm text-muted line-clamp-2 mb-3">{product.description}</p>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { products } from "@/lib/data";
+import ProductImage from "@/components/ProductImage";
 
 export default function BroadloomPage() {
   const categoryProducts = products.filter((p) => p.category === "broadloom");

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { productCategories as categories, caseStudies, blogPosts, certifications, solutions, testimonials, processSteps } from "@/lib/data";
+import ProductImage from "@/components/ProductImage";
 
 export default function Home() {
   return (
@@ -201,9 +202,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {caseStudies.slice(0, 4).map((cs) => (
               <div key={cs.id} className="group bg-surface rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all">
-                <div className="h-44 bg-gradient-to-br from-primary/80 to-primary flex items-center justify-center">
-                  <span className="text-white/60 text-sm font-medium">{cs.client}</span>
-                </div>
+                <ProductImage src={cs.image} alt={cs.client} className="h-44" />
                 <div className="p-5">
                   <span className="text-xs text-accent font-semibold uppercase">{cs.category === "carpet-tiles" ? "Carpet Tiles" : "Broadloom"}</span>
                   <h3 className="font-semibold text-primary mt-1 mb-2 group-hover:text-accent transition-colors">{cs.title}</h3>
@@ -253,9 +252,7 @@ export default function Home() {
                 href={`/blog/${post.slug}`}
                 className="group bg-white rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all"
               >
-                <div className="h-44 bg-gradient-to-br from-accent/20 via-accent/10 to-primary/10 flex items-center justify-center">
-                  <span className="text-xs text-muted">{post.category}</span>
-                </div>
+                <ProductImage src={post.image} alt={post.title} className="h-44" />
                 <div className="p-5">
                   <div className="flex items-center gap-2 text-xs text-muted mb-2">
                     <span>{post.date}</span>

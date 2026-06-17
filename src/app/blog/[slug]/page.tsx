@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/data";
-
+import ProductImage from "@/components/ProductImage";
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
 }
@@ -64,7 +64,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             <div className="grid sm:grid-cols-3 gap-6">
               {relatedPosts.map((rp) => (
                 <Link key={rp.slug} href={`/blog/${rp.slug}`} className="group bg-white rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all">
-                  <div className="h-32 bg-gradient-to-br from-accent/20 to-primary/10" />
+                  <ProductImage src={rp.image} alt={rp.title} className="h-32" />
                   <div className="p-4">
                     <div className="text-xs text-muted mb-1">{rp.date}</div>
                     <h3 className="font-semibold text-sm text-primary group-hover:text-accent transition-colors">{rp.title}</h3>

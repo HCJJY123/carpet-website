@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { blogPosts } from "@/lib/data";
+import ProductImage from "@/components/ProductImage";
 
 export default function BlogPage() {
   return (
@@ -19,9 +20,7 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="group bg-surface rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all"
               >
-                <div className="h-44 bg-gradient-to-br from-accent/20 via-accent/10 to-primary/10 flex items-center justify-center">
-                  <span className="text-xs text-muted font-medium">{post.category}</span>
-                </div>
+                <ProductImage src={post.image} alt={post.title} className="h-44" />
                 <div className="p-5">
                   <div className="flex items-center gap-2 text-xs text-muted mb-2">
                     <span>{post.date}</span>

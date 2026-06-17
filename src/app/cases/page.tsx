@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { caseStudies } from "@/lib/data";
+import ProductImage from "@/components/ProductImage";
 
 export default function CasesPage() {
   return (
@@ -15,9 +16,7 @@ export default function CasesPage() {
           <div className="grid sm:grid-cols-2 gap-8">
             {caseStudies.map((cs) => (
               <div key={cs.id} className="group bg-surface rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all">
-                <div className="h-48 bg-gradient-to-br from-primary/80 to-primary flex items-center justify-center">
-                  <span className="text-white/60 text-lg font-medium">{cs.client}</span>
-                </div>
+                <ProductImage src={cs.image} alt={cs.client} className="h-48" />
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-xs font-semibold text-accent uppercase bg-accent/10 px-2 py-1 rounded">
