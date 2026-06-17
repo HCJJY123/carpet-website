@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { categories } from "@/lib/data";
+import { productCategories as categories } from "@/lib/data";
 
 export default function ProductsPage() {
   return (

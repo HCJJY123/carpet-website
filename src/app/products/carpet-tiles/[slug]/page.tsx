@@ -35,7 +35,8 @@ export default function CarpetTileDetail({ params }: { params: { slug: string } 
             </div>
             <div>
               <h1 className="text-3xl font-bold text-primary mb-3">{product.name}</h1>
-              <p className="text-muted mb-6">{product.description}</p>
+              <p className="text-muted mb-4">{product.description}</p>
+              <p className="text-sm text-muted leading-relaxed mb-6">{product.longDescription}</p>
               <Link
                 href={`/contact?product=${product.id}`}
                 className="inline-block bg-accent text-white font-medium px-6 py-3 rounded-lg hover:bg-accent-light transition-colors text-sm"

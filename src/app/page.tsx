@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { categories, caseStudies, blogPosts, certifications } from "@/lib/data";
+import { productCategories as categories, caseStudies, blogPosts, certifications, solutions, testimonials, processSteps } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -135,6 +135,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Solutions */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Carpet Solutions Tailored to Your Project</h2>
+            <p className="text-muted max-w-2xl mx-auto">
+              With more than 15 years of experience in commercial carpet production and export, we have helped
+              clients in 40+ countries with customized flooring solutions for diverse applications.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {solutions.map((sol) => (
+              <div key={sol.name} className="group bg-surface rounded-xl p-5 border border-border hover:border-accent/50 hover:shadow-md transition-all">
+                <span className="text-2xl block mb-3">{sol.icon}</span>
+                <h3 className="font-semibold text-primary mb-1.5 text-sm">{sol.name}</h3>
+                <p className="text-xs text-muted leading-relaxed">{sol.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Steps */}
+      <section className="py-16 md:py-24 bg-surface">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">8 Steps to Complete Your Project</h2>
+            <p className="text-muted max-w-2xl mx-auto">
+              From initial consultation to final delivery, our streamlined process ensures quality at every stage.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {processSteps.map((step) => (
+              <div key={step.step} className="bg-white rounded-xl p-6 border border-border hover:shadow-lg transition-all relative">
+                <span className="text-3xl font-bold text-accent/20 absolute top-3 right-4">{step.step}</span>
+                <h3 className="font-semibold text-primary mb-2 relative">{step.title}</h3>
+                <p className="text-sm text-muted leading-relaxed relative">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Featured Projects */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -235,6 +278,34 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Happy Clients</h2>
+            <p className="text-muted max-w-xl mx-auto">
+              Check out the feedback from our contented clients who have experienced the CarpetPro advantage.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <div key={i} className="bg-surface rounded-xl p-6 border border-border relative">
+                <svg className="w-8 h-8 text-accent/20 absolute top-4 left-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <div className="relative z-10">
+                  <p className="text-sm text-muted leading-relaxed mb-4 italic">"{t.quote}"</p>
+                  <div>
+                    <div className="font-semibold text-primary text-sm">{t.name}</div>
+                    <div className="text-xs text-muted">{t.role}, {t.location}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
