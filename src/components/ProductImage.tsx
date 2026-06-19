@@ -1,3 +1,7 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
 import { products, productCategories } from "@/lib/data";
 
 type ImageContext =
@@ -32,6 +36,7 @@ export default function ProductImage({
   alt: string;
   className?: string;
 }) {
+  const [imageError, setImageError] = useState(false);
   const ctx = resolveContext(src);
   const productData = ctx?.type === "product"
     ? products.find((p) => p.id === ctx.productId)
@@ -61,6 +66,21 @@ export default function ProductImage({
     categoryData?.name ||
     alt ||
     "Product Image";
+
+  if (!imageError) {
+    return (
+      <div className={`relative overflow-hidden ${className}`}>
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          onError={() => setImageError(true)}
+        />
+      </div>
+    );
+  }
 
   return (
     <div

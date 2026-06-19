@@ -1,13 +1,18 @@
 import Link from "next/link";
 import { certifications } from "@/lib/data";
+import ProductImage from "@/components/ProductImage";
 
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-surface border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">About Us</h1>
-          <p className="text-muted max-w-2xl">A trusted manufacturer and exporter of premium commercial flooring solutions since 2005.</p>
+      <section className="relative bg-primary overflow-hidden min-h-[420px] flex items-end">
+        <div className="absolute inset-0">
+          <ProductImage src="/images/about-hero.jpg" alt="Carpet showroom with commercial flooring displays" className="h-full w-full" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/55 to-transparent" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 w-full">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">About Us</h1>
+          <p className="text-gray-200 max-w-2xl text-lg">A trusted manufacturer and exporter of premium commercial flooring solutions since 2005.</p>
         </div>
       </section>
 
@@ -22,12 +27,15 @@ export default function AboutPage() {
                 <p>Our commitment to quality, innovation, and customer service has earned us long-term partnerships with global brands including Hilton, Marriott, IKEA, and WeWork.</p>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 min-h-[300px] flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-5xl font-bold text-primary mb-2">20+</div>
-                <div className="text-sm text-muted">Years of Excellence</div>
-                <div className="text-5xl font-bold text-primary mt-6 mb-2">40+</div>
-                <div className="text-sm text-muted">Countries Exported To</div>
+            <div className="relative min-h-[320px] rounded-2xl overflow-hidden border border-border bg-surface">
+              <div className="absolute inset-0">
+                <ProductImage src="/images/about-factory.jpg" alt="Carpet factory and showroom floor" className="h-full w-full" />
+              </div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/85 to-transparent p-6 text-white">
+                <div className="text-5xl font-bold mb-2">20+</div>
+                <div className="text-sm text-white/80">Years of Excellence</div>
+                <div className="text-5xl font-bold mt-6 mb-2">40+</div>
+                <div className="text-sm text-white/80">Countries Exported To</div>
               </div>
             </div>
           </div>
@@ -37,6 +45,7 @@ export default function AboutPage() {
       <section className="py-12 md:py-16 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-primary mb-8 text-center">Our Facility</h2>
+          <ProductImage src="/images/about-quality-control.jpg" alt="Carpet quality control inspection" className="h-72 md:h-96 rounded-2xl border border-border mb-8" />
           <div className="grid sm:grid-cols-3 gap-6">
             {[
               { stat: "50,000 m²", label: "Production Area" },

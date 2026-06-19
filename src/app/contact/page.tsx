@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ProductImage from "@/components/ProductImage";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -12,10 +13,14 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="bg-surface border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">Contact Us</h1>
-          <p className="text-muted max-w-2xl">Get a free quote or ask us anything about our products. We typically respond within 24 hours.</p>
+      <section className="relative bg-primary overflow-hidden min-h-[420px] flex items-end">
+        <div className="absolute inset-0">
+          <ProductImage src="/images/contact-hero.jpg" alt="Commercial carpet reception area for customer consultation" className="h-full w-full" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-primary/15" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 w-full">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Contact Us</h1>
+          <p className="text-gray-200 max-w-2xl text-lg">Get a free quote or ask us anything about our products. We typically respond within 24 hours.</p>
         </div>
       </section>
       <section className="py-12 md:py-16 bg-white">
@@ -77,6 +82,7 @@ export default function ContactPage() {
               )}
             </div>
             <div>
+              <ProductImage src="/images/contact-sales.jpg" alt="Carpet sales consultation table with samples" className="h-56 rounded-xl border border-border mb-6" />
               <div className="bg-surface rounded-xl p-6 border border-border mb-6">
                 <h3 className="font-semibold text-primary mb-4">Contact Information</h3>
                 <div className="space-y-4 text-sm text-muted">
@@ -94,6 +100,8 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
+              <ProductImage src="/images/samples-box.jpg" alt="Carpet samples box for project consultation" className="h-48 rounded-xl border border-border mb-6" />
+              <ProductImage src="/images/whatsapp-support.jpg" alt="Carpet showroom support desk" className="h-48 rounded-xl border border-border mb-6" />
               <div className="bg-primary rounded-xl p-6 text-white">
                 <h3 className="font-semibold mb-2">Need a Quick Quote?</h3>
                 <p className="text-sm text-gray-300 mb-4">Send us your requirements and area size, and we'll get back to you with a competitive quote within 24 hours.</p>

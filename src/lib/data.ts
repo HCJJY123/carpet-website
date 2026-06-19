@@ -347,7 +347,7 @@ export const blogPosts = [
     date: "2026-06-10",
     author: "Carpet Expert",
     category: "Buying Guide",
-    image: "/images/blog-comparison.jpg",
+    image: "/images/blog-material-comparison.jpg",
   },
   {
     slug: "hospitality-carpet-trends-2026",
@@ -356,7 +356,7 @@ export const blogPosts = [
     date: "2026-06-03",
     author: "Carpet Expert",
     category: "Industry Trends",
-    image: "/images/blog-trends.jpg",
+    image: "/images/blog-design-trends.jpg",
   },
   {
     slug: "sustainable-commercial-flooring",
@@ -365,7 +365,7 @@ export const blogPosts = [
     date: "2026-05-22",
     author: "Carpet Expert",
     category: "Sustainability",
-    image: "/images/blog-sustainable.jpg",
+    image: "/images/blog-buying-guide.jpg",
   },
   {
     slug: "carpet-maintenance-hotel",
@@ -374,7 +374,7 @@ export const blogPosts = [
     date: "2026-05-15",
     author: "Carpet Expert",
     category: "Maintenance",
-    image: "/images/blog-maintenance.jpg",
+    image: "/images/blog-installation-maintenance.jpg",
   },
   {
     slug: "office-carpet-acoustics",
@@ -383,7 +383,7 @@ export const blogPosts = [
     date: "2026-05-08",
     author: "Carpet Expert",
     category: "Industry Insights",
-    image: "/images/blog-acoustics.jpg",
+    image: "/images/blog-office-carpet.jpg",
   },
   {
     slug: "custom-carpet-design-process",
@@ -392,7 +392,7 @@ export const blogPosts = [
     date: "2026-04-28",
     author: "Carpet Expert",
     category: "Design",
-    image: "/images/blog-custom.jpg",
+    image: "/images/blog-hotel-carpet.jpg",
   },
 ];
 

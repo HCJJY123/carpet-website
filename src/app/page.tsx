@@ -6,10 +6,12 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-primary overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-95" />
-        <div className="absolute top-20 right-[-20%] w-[60%] h-[80%] rounded-full bg-accent/5 blur-3xl" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      <section className="relative bg-primary overflow-hidden min-h-[620px] flex items-center">
+        <div className="absolute inset-0">
+          <ProductImage src="/images/hero-home.jpg" alt="Commercial carpet flooring in a modern lobby" className="h-full w-full" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/65 to-primary/20" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 w-full">
           <div className="max-w-2xl">
             <span className="inline-block text-accent text-sm font-semibold uppercase tracking-widest mb-4">
               Since 2005 · Quality Flooring
@@ -88,6 +90,29 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Factory Showroom */}
+      <section className="py-16 md:py-24 bg-surface">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
+            <ProductImage src="/images/factory-showroom.jpg" alt="Carpet factory showroom with sample walls" className="h-80 md:h-[460px] rounded-2xl border border-border" />
+            <div>
+              <span className="text-xs font-semibold text-accent uppercase tracking-wider">Factory Showroom</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mt-3 mb-5">See materials, colors, and production capability in one place</h2>
+              <p className="text-muted leading-relaxed mb-6">
+                Our showroom connects sample selection with factory-direct manufacturing, helping designers,
+                contractors, and purchasing teams compare textures, colors, and project-ready carpet systems faster.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-accent text-white font-medium px-6 py-3 rounded-lg hover:bg-accent-light transition-colors text-sm"
+              >
+                Request Samples
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -175,6 +200,29 @@ export default function Home() {
                 <p className="text-sm text-muted leading-relaxed relative">{step.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Catalogue */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <span className="text-xs font-semibold text-accent uppercase tracking-wider">Product Catalogue</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mt-3 mb-5">Compare carpet textures before your quote</h2>
+              <p className="text-muted leading-relaxed mb-6">
+                Choose from commercial carpet tiles, hotel broadloom, and custom color ranges. We can prepare
+                sample boards, catalogue references, and project recommendations based on your space and budget.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 border border-accent text-accent font-medium px-6 py-3 rounded-lg hover:bg-accent hover:text-white transition-colors text-sm"
+              >
+                Ask for Catalogue
+              </Link>
+            </div>
+            <ProductImage src="/images/catalogue-cover.jpg" alt="Commercial carpet catalogue and sample swatches" className="h-80 md:h-[460px] rounded-2xl border border-border" />
           </div>
         </div>
       </section>
