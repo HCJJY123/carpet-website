@@ -27,7 +27,7 @@ export interface FAQItem {
 }
 
 export const brandInfo = {
-  name: "Vishome Global Commercial Carpet Co., Ltd.",
+  name: "Vishome Global Commercial Carpet Co. Ltd.",
   shortName: "Vishome",
   url: "https://www.visfurn.com",
   email: "zara@visfurn.com",

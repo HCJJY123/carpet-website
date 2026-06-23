@@ -19,7 +19,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 font-medium">
-              Vishome Global Commercial Carpet Co., Ltd. is a premier B2B manufacturer specializing in high-performance flooring solutions since 2005.
+              Vishome Global Commercial Carpet Co. Ltd. is a premier B2B manufacturer specializing in high-performance flooring solutions since 2005.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/5 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] font-black text-white/30 uppercase tracking-[0.3em]">
-            &copy; {new Date().getFullYear()} Vishome Global Commercial Carpet Co., Ltd.
+            &copy; {new Date().getFullYear()} Vishome Global Commercial Carpet Co. Ltd.
           </p>
           <div className="flex gap-10 opacity-30">
              <span className="text-[10px] font-black text-white uppercase tracking-widest">Tianjin Factory Direct</span>

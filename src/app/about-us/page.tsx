@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Vishome Global Commercial Carpet Co., Ltd. | Commercial Carpet Manufacturer",
-  description: "Vishome Global Commercial Carpet Co., Ltd. is a professional commercial carpet manufacturer with a 50,000-square-meter factory, 900+ employees, and exports to over 45 countries and regions. We supply commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event carpets, and custom carpet solutions for global B2B projects.",
+  title: "About Vishome Global Commercial Carpet Co. Ltd. | Commercial Carpet Manufacturer",
+  description: "Vishome Global Commercial Carpet Co. Ltd. is a professional commercial carpet manufacturer with a 50,000-square-meter factory, 900+ employees, and exports to over 45 countries and regions. We supply commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event carpets, and custom carpet solutions for global B2B projects.",
   keywords: "commercial carpet manufacturer, commercial carpet tiles manufacturer, hotel carpet supplier, custom carpet manufacturer, wall to wall carpet supplier, office carpet tiles, commercial carpet tiles, custom carpet solutions, carpet supplier for contractors, carpet for flooring distributors, hotel carpet project supplier",
 };
 
@@ -24,7 +24,7 @@ export default function AboutUsPage() {
           <div className="max-w-[760px]">
             <p className="text-accent font-black tracking-[0.4em] text-[10px] uppercase mb-4">About Vishome Global</p>
             <h1 className="text-4xl md:text-6xl font-black uppercase mb-8 leading-tight tracking-wider">
-              About Vishome Global Commercial Carpet Co., Ltd.
+              About Vishome Global Commercial Carpet Co. Ltd.
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-12 font-medium leading-relaxed">
               A professional commercial carpet manufacturer supplying carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpets, event carpets, and custom carpet solutions for global B2B projects.
@@ -52,7 +52,7 @@ export default function AboutUsPage() {
               </h3>
               <div className="text-muted space-y-6 text-lg leading-relaxed">
                 <p>
-                  Vishome Global Commercial Carpet Co., Ltd. is a professional commercial carpet manufacturer specializing in carpet research, development, production, and international trade. We provide reliable carpet solutions for flooring distributors, contractors, hotels, offices, commercial buildings, event companies, and project-based buyers worldwide.
+                  Vishome Global Commercial Carpet Co. Ltd. is a professional commercial carpet manufacturer specializing in carpet research, development, production, and international trade. We provide reliable carpet solutions for flooring distributors, contractors, hotels, offices, commercial buildings, event companies, and project-based buyers worldwide.
                 </p>
                 <p>
                   Our product range includes commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event and exhibition carpets, stair runners, corridor carpets, and customized rugs. With strong production capability and project-based customization support, we help global customers complete commercial flooring projects with stable quality, flexible specifications, and professional export service.

@@ -112,7 +112,7 @@ export default function Home() {
                 Corporate Profile
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 uppercase leading-tight">
-                Vishome Global Commercial Carpet Co., Ltd.
+                Vishome Global Commercial Carpet Co. Ltd.
               </h2>
               <div className="prose prose-slate max-w-none">
                 <p className="text-muted text-lg leading-relaxed mb-6 font-medium">
