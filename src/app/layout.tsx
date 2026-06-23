@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import WhatsAppFloating from "@/components/WhatsAppFloating";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,18 +17,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CarpetPro | Commercial Carpet Tiles & Hotel Broadloom Manufacturer",
+  title: "Vishome | Commercial Carpet Tiles & Hotel Broadloom Manufacturer",
   description:
-    "Professional manufacturer of commercial carpet tiles and hotel broadloom carpets. Quality flooring solutions for offices, hotels, and commercial spaces worldwide.",
+    "Vishome Global Commercial Carpet Co., Ltd. manufactures commercial carpet tiles, hotel broadloom carpets, and custom flooring solutions for global B2B projects.",
   keywords:
-    "carpet tiles, broadloom carpet, commercial carpet, hotel carpet, modular flooring, China carpet manufacturer",
+    "Vishome, carpet tiles, broadloom carpet, commercial carpet, hotel carpet, modular flooring, China carpet manufacturer",
   openGraph: {
-    title: "CarpetPro | Premium Carpet Flooring Solutions",
-    description:
-      "Professional manufacturer of commercial carpet tiles and hotel broadloom carpets.",
+    title: "Vishome | Premium Commercial Carpet & Flooring Solutions",
+    description: "Vishome Global Commercial Carpet Co., Ltd.: a Tianjin-based manufacturer for commercial carpet tiles, hotel carpets, and custom B2B flooring projects.",
+    url: "https://www.visfurn.com",
+    siteName: "Vishome",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/logo-mark.svg",
+  }
 };
+
 
 export default function RootLayout({
   children,
@@ -38,10 +46,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col font-sans">
+        <JsonLd />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsAppFloating />
       </body>
     </html>
   );

@@ -1,0 +1,22 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Vishome logo mark</title>
+  <desc id="desc">Interwoven V-shaped carpet tile logo mark for Vishome.</desc>
+  <defs>
+    <linearGradient id="tileGradient" x1="42" y1="36" x2="210" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#164E63"/>
+      <stop offset="1" stop-color="#0F2F3D"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="59" y1="65" x2="182" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D6A95A"/>
+      <stop offset="1" stop-color="#B9822F"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#F7F5EF"/>
+  <rect x="38" y="36" width="180" height="180" rx="46" fill="url(#tileGradient)"/>
+  <path d="M82 78H121L141 158L161 78H198L163 180H122L82 78Z" fill="#F8F3E8"/>
+  <path d="M82 78H123L144 163L124 180L82 78Z" fill="url(#accentGradient)"/>
+  <path d="M110 78H148L127 126H92L110 78Z" fill="#F8F3E8" fill-opacity="0.9"/>
+  <path d="M152 78H198L184 116H164L152 78Z" fill="#F8F3E8" fill-opacity="0.74"/>
+  <path d="M97 142H132L122 180H76L97 142Z" fill="#F8F3E8" fill-opacity="0.2"/>
+  <path d="M150 142H184L163 180H122L150 142Z" fill="#D6A95A" fill-opacity="0.26"/>
+</svg>

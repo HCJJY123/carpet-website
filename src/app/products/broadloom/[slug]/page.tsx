@@ -4,12 +4,12 @@ import { products } from "@/lib/data";
 
 export function generateStaticParams() {
   return products
-    .filter((p) => p.category === "broadloom")
+    .filter((p) => p.category === "wall-to-wall")
     .map((p) => ({ slug: p.id }));
 }
 
 export default function BroadloomDetail({ params }: { params: { slug: string } }) {
-  const product = products.find((p) => p.id === params.slug && p.category === "broadloom");
+  const product = products.find((p) => p.id === params.slug && p.category === "wall-to-wall");
   if (!product) notFound();
 
   return (

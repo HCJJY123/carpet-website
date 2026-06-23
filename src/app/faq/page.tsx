@@ -5,8 +5,8 @@ export default function FAQPage() {
     <>
       <section className="bg-surface border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">Frequently Asked Questions</h1>
-          <p className="text-muted max-w-2xl">Answers to common questions about our products, ordering, and services.</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">Commercial Carpet Buyer FAQ</h1>
+          <p className="text-muted max-w-2xl">Practical answers for quotation, samples, customization, compliance, production, shipping, delivery, and after-sales support.</p>
         </div>
       </section>
       <section className="py-12 md:py-16 bg-white">

@@ -1,40 +1,59 @@
 import Link from "next/link";
-import { blogPosts } from "@/lib/data";
+import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
 
 export default function BlogPage() {
   return (
-    <>
-      <section className="bg-surface border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">Blog</h1>
-          <p className="text-muted max-w-2xl">Industry insights, buying guides, and expert tips for commercial flooring projects.</p>
+    <div className="bg-white min-h-screen">
+      {/* Blog Header - Foxflor Style */}
+      <section className="bg-primary-light py-20">
+        <div className="container-fox text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 uppercase tracking-widest">B2B Sourcing Insights</h1>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg opacity-90">
+            Professional guides on carpet specifications, fire ratings, logistics, and procurement strategies for global projects.
+          </p>
         </div>
       </section>
-      <section className="py-12 md:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      {/* Blog Grid */}
+      <section className="section-padding">
+        <div className="container-fox">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {blogPosts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group bg-surface rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all"
+                className="group flex flex-col bg-white border border-border rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500"
               >
-                <ProductImage src={post.image} alt={post.title} className="h-44" />
-                <div className="p-5">
-                  <div className="flex items-center gap-2 text-xs text-muted mb-2">
+                <div className="aspect-[16/10] overflow-hidden">
+                  <ProductImage
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <div className="p-8 flex-1 flex flex-col">
+                  <div className="flex items-center gap-3 text-[10px] font-bold text-accent uppercase tracking-[0.2em] mb-4">
                     <span>{post.date}</span>
-                    <span>·</span>
+                    <span className="w-1 h-1 bg-border rounded-full"></span>
                     <span>{post.category}</span>
                   </div>
-                  <h2 className="font-semibold text-primary group-hover:text-accent transition-colors mb-2">{post.title}</h2>
-                  <p className="text-sm text-muted line-clamp-2">{post.excerpt}</p>
+                  <h2 className="text-xl font-bold text-primary mb-4 leading-tight group-hover:text-accent transition-colors">
+                    {post.title}
+                  </h2>
+                  <p className="text-sm text-muted line-clamp-3 leading-relaxed mb-6">
+                    {post.description}
+                  </p>
+                  <div className="mt-auto pt-4 border-t border-border flex items-center justify-between">
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Read Article</span>
+                    <span className="text-accent group-hover:translate-x-2 transition-transform">→</span>
+                  </div>
                 </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

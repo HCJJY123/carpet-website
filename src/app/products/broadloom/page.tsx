@@ -3,7 +3,7 @@ import { products } from "@/lib/data";
 import ProductImage from "@/components/ProductImage";
 
 export default function BroadloomPage() {
-  const categoryProducts = products.filter((p) => p.category === "broadloom");
+  const categoryProducts = products.filter((p) => p.category === "wall-to-wall");
   return (
     <>
       <section className="bg-surface border-b border-border">
