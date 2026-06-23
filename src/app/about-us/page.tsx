@@ -112,8 +112,8 @@ export default function AboutUsPage() {
             </div>
             <div className="lg:w-1/2">
               <img
-                src="/images/about/factory-exterior.webp"
-                alt="Vishome factory exterior and facilities"
+                src="/images/about/our-story-export-logistics.jpg"
+                alt="Export logistics loading of commercial carpets at Vishome factory"
                 className="rounded-[24px] shadow-xl w-full h-auto object-cover border border-border"
               />
             </div>
