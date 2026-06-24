@@ -3,7 +3,7 @@ import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 
 export default function CategoryPage() {
-  const categoryId = "carpet-tiles";
+  const categoryId = "wall-to-wall";
   const currentCategory = productCategories.find((c) => c.id === categoryId);
   const categoryProducts = products.filter((p) => p.category === categoryId);
 

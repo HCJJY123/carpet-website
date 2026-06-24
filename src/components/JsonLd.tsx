@@ -1,4 +1,4 @@
-import { products, faqItems, brandInfo } from "@/lib/data";
+import { products, faqSections, brandInfo } from "@/lib/data";
 
 export default function JsonLd() {
   const organizationData = {
@@ -6,33 +6,23 @@ export default function JsonLd() {
     "@type": "Organization",
     "name": brandInfo.name,
     "url": brandInfo.url,
-    "logo": `${brandInfo.url}/logo.svg`,
+    "logo": `${brandInfo.url}/logo.png`,
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": brandInfo.phone,
-      "email": brandInfo.email,
       "contactType": "sales",
-      "areaServed": brandInfo.stats.markets,
+      "areaServed": ["North America", "Europe", "Australia", "Middle East"],
       "availableLanguage": ["English", "Chinese"]
     }
   };
 
-  const productData = products.map((product) => ({
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": product.name,
-    "description": product.description,
-    "image": `${brandInfo.url}${product.image}`,
-    "brand": {
-      "@type": "Brand",
-      "name": brandInfo.name
-    }
-  }));
+  // Combine all questions from all sections for FAQ Schema
+  const allFaqs = faqSections.flatMap(section => section.questions);
 
   const faqData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqItems.map((item) => ({
+    "mainEntity": allFaqs.map((item) => ({
       "@type": "Question",
       "name": item.q,
       "acceptedAnswer": {
@@ -48,13 +38,6 @@ export default function JsonLd() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
       />
-      {productData.map((data, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-        />
-      ))}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}

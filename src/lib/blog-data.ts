@@ -1,6 +1,16 @@
+export interface BlogSection {
+  title: string;
+  paragraphs: string[];
+  image?: string;
+  imageAlt?: string;
+  imageCaption?: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
+  subtitle: string;
+  painPoint: string;
   seoTitle: string;
   description: string;
   keywords: string[];
@@ -8,332 +18,385 @@ export interface BlogPost {
   author: string;
   category: string;
   image: string;
-  content: string;
+  h1Image?: string;
+  h1ImageAlt?: string;
+  h1ImageCaption?: string;
+  sections: BlogSection[];
   suggestedLinks: { label: string; href: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "carpet-tiles-vs-broadloom-commercial-projects",
-    title: "Carpet Tiles vs Broadloom: Which Commercial Carpet Is Better for Your Project?",
-    seoTitle: "Carpet Tiles vs Broadloom: Which Commercial Carpet Is Better for Your Project?",
-    description: "Compare carpet tiles and broadloom carpet for offices, hotels, corridors, and public spaces. Learn which option fits your budget, installation, maintenance, and design needs.",
-    keywords: ["carpet tiles vs broadloom", "commercial carpet tiles", "broadloom carpet supplier", "hotel carpet", "office carpet flooring"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Buying Guide",
-    image: "/images/blog-material-comparison.jpg",
-    content: `For commercial flooring buyers, the choice between carpet tiles and broadloom is rarely just about appearance. It affects installation speed, maintenance cost, waste rate, shipping method, replacement strategy, and long-term project budget. The right choice depends on where the carpet will be used and how the space will operate after installation.
-
-Carpet tiles are modular pieces, commonly supplied in square formats such as 50x50 cm or 24x24 inches. They are widely used in offices, retail spaces, schools, airports, and flexible commercial interiors. Their biggest advantage is selective replacement. If one area is stained or damaged, the facility team can replace individual tiles instead of removing a full roll of carpet.
-
-Broadloom carpet is supplied in rolls and creates a more seamless surface. It is often preferred for hotels, guest rooms, corridors, ballrooms, luxury retail, and hospitality projects where visual continuity matters. Broadloom can feel more premium, especially when custom patterns or wool-blend constructions are used.
-
-For offices, carpet tiles usually offer the best balance of durability and maintenance. Rolling chairs, heavy furniture, cable routes, and frequent layout changes make modular replacement valuable. Solution-dyed nylon carpet tiles are a strong option for high-traffic workspaces because they resist staining, fading, and pile crushing.
-
-For hotels, the answer depends on the area. Guest rooms and corridors often use broadloom because a seamless design can create a softer hospitality feel. Public areas, meeting rooms, and back-of-house zones may use carpet tiles because downtime and replacement cost matter more.`,
+    slug: "commercial-space-carpet-tiles-maintenance-cost-guide",
+    title: "Transform Your Commercial Space: How Premium Carpet Tiles Cut Maintenance Costs by 40%",
+    subtitle: "Strategic flooring solutions for hotels, offices, and retail environments.",
+    painPoint: "High maintenance budgets, frequent replacement needs, and downtime costs.",
+    seoTitle: "Premium Carpet Tiles Maintenance Cost Guide | VISHOME",
+    description: "How modular carpet tiles reduce maintenance scope, replacement waste, and lifecycle cost in commercial spaces.",
+    keywords: ["carpet tiles", "maintenance cost", "commercial flooring", "hospitality carpet ROI"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
+    category: "Cost & ROI",
+    image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.png",
+    h1Image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.png",
+    h1ImageAlt: "Blog 1 hotel lobby before and after comparison",
+    h1ImageCaption: "表格位置要求：H1 后",
+    sections: [
+      {
+        title: "The Financial Reality",
+        paragraphs: [
+          "Commercial property managers face a difficult balance: preserving premium visual standards while controlling maintenance budgets and downtime.",
+          "Traditional broadloom often forces full-area replacement when damage is localized, which drives unnecessary material waste and labor cost.",
+          "Modular carpet tiles shift the maintenance model by allowing selective replacement in high-wear zones.",
+          "In practical operations, this reduces disruption windows and improves lifecycle budget predictability for hotels, offices, and retail chains."
+        ]
+      },
+      {
+        title: "安装优势（Installation Advantages）",
+        paragraphs: [
+          "Modern carpet tiles integrate with HVAC access routes, cable systems, and phased renovation schedules without requiring full-site shutdown.",
+          "The 50x50 modular format supports faster logistics handling and staged installation by functional zone.",
+          "For active sites, teams can often complete section-based replacement within short operational windows.",
+          "This is especially valuable for facilities that cannot tolerate prolonged closure or full-floor shutdown."
+        ],
+        image: "/images/blog-series/blog-1/Blog_1_Installation_Process.png",
+        imageAlt: "Blog 1 installation process",
+        imageCaption: "表格位置要求：\"安装优势\" 后"
+      },
+      {
+        title: "ROI 计算（ROI Calculation）",
+        paragraphs: [
+          "A practical ROI model should include installation cost, replacement cycle, deep-cleaning frequency, and operational downtime.",
+          "For a 1,000 m² project, 5-year savings often come from reduced replacement scope rather than lower upfront price alone.",
+          "Higher-grade tiles can outperform low-cost options when measured against real operating conditions.",
+          "For B2B buyers, total ownership cost is the decision metric that matters most—not unit price in isolation."
+        ],
+        image: "/images/blog-series/blog-1/Blog_1_Durability_Infographic.png",
+        imageAlt: "Blog 1 durability and maintenance infographic",
+        imageCaption: "表格位置要求：\"ROI 计算\" 后"
+      }
+    ],
     suggestedLinks: [
-      { label: "Commercial Carpet Tiles", href: "/commercial-carpet-tiles" },
-      { label: "Broadloom Carpet", href: "/broadloom-carpet" },
-      { label: "Contact Us", href: "/contact" }
+      { label: "Carpet Tile Products", href: "/products/carpet-tiles" },
+      { label: "Request Quote", href: "/contact" }
     ]
   },
   {
-    slug: "50x50-carpet-tiles-buying-guide",
-    title: "50x50 Carpet Tiles Buying Guide for Offices, Hotels, and Commercial Spaces",
-    seoTitle: "50x50 Carpet Tiles Buying Guide for Offices, Hotels, and Commercial Spaces",
-    description: "Learn how to choose 50x50 carpet tiles for commercial projects, including material, backing, pile height, fire rating, MOQ, samples, and installation planning.",
-    keywords: ["50x50 carpet tiles", "carpet tiles 50x50", "commercial carpet tiles 50x50", "office carpet tiles", "modular carpet tiles"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Buying Guide",
-    image: "/images/carpet-tile-premium.jpg",
-    content: `50x50 carpet tiles are one of the most common modular flooring formats for commercial projects. They are easy to transport, flexible to install, and simple to replace after installation. For buyers managing office, hotel, school, or public-area projects, this size offers a practical balance between design flexibility and site efficiency.
-
-The first decision is fiber. Solution-dyed nylon is usually the best choice for high-traffic commercial areas because the color goes through the fiber instead of sitting only on the surface. This improves fade resistance and stain performance. Polypropylene can be more cost-effective, but it is better suited to lower-traffic areas. Recycled PET may be attractive for sustainability-focused projects.
-
-The second decision is backing. A stable backing helps tiles stay flat and reduces curling. For office and hotel use, dimensional stability is important because chairs, trolleys, and cleaning machines can stress the floor over time. Ask for backing type, tile weight, and dimensional stability data if the project is large.
-
-Pile height and density also matter. A very soft tile may feel comfortable, but it can crush faster under rolling chairs. For commercial spaces, appearance retention is more important than initial softness. A dense, low-to-medium pile is usually safer for offices and corridors.`,
-    suggestedLinks: [
-      { label: "50x50 Carpet Tiles", href: "/carpet-tiles-50x50" },
-      { label: "Office Carpet Tiles", href: "/office-carpet-tiles" },
-      { label: "Request Samples", href: "/contact" }
-    ]
-  },
-  {
-    slug: "fire-rated-commercial-carpet-guide",
-    title: "Fire-Rated Commercial Carpet: What Buyers Should Check Before Ordering",
-    seoTitle: "Fire-Rated Commercial Carpet: What Buyers Should Check Before Ordering",
-    description: "A practical guide to fire-rated commercial carpet for offices, hotels, schools, and public buildings. Learn what documents, tests, and specifications to request.",
-    keywords: ["fire rated carpet", "fire rated commercial carpet", "carpet fire rating", "hotel carpet fire rating", "ASTM E648 carpet"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
+    slug: "axminster-vs-wilton-vs-tufted-hospitality-guide",
+    title: "Axminster vs Wilton vs Tufted Carpets: What Indian Hospitality Groups Must Know",
+    subtitle: "Technical specifications that determine durability, appearance, and customer satisfaction.",
+    painPoint: "Specification confusion, quality compromise, and warranty disputes.",
+    seoTitle: "Axminster vs Wilton vs Tufted Hospitality Guide | VISHOME",
+    description: "A technical comparison of three major carpet constructions for hospitality procurement decisions.",
+    keywords: ["axminster", "wilton", "tufted", "hospitality carpet", "technical comparison"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
     category: "Technical Guide",
-    image: "/images/blog-installation-maintenance.jpg",
-    content: `Fire rating is one of the most important checks in commercial carpet procurement. For hotels, offices, schools, healthcare spaces, and public buildings, flooring is not approved only because it looks good. It must meet the project’s safety requirements and documentation standards.
-
-The first thing buyers should understand is that fire requirements vary by country, building type, and project owner. A carpet suitable for one market may not automatically satisfy another. That is why buyers should ask suppliers for test reports, certification documents, and product-level specifications before placing a bulk order.
-
-Common documents may include fire resistance or flame spread testing, low-smoke requirements, and indoor air quality documentation. In some projects, ASTM E648, EN 13501-1, CE-related documentation, or other local standards may be requested. The exact requirement should come from the architect, contractor, or local building code consultant.`,
+    image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.png",
+    sections: [
+      {
+        title: "技术规格（Technical Specifications）",
+        paragraphs: [
+          "Hospitality operators managing multi-property portfolios need clear construction logic to avoid costly specification mistakes.",
+          "Axminster supports rich multi-color design and high pattern fidelity, making it strong for premium guest-facing zones.",
+          "Wilton offers dense woven performance and consistent heritage aesthetics in executive corridors and formal spaces.",
+          "Tufted systems deliver faster output and flexible cost control for large-volume rooms and general commercial areas."
+        ],
+        image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.png",
+        imageAlt: "Blog 2 manufacturing process comparison",
+        imageCaption: "表格位置要求：\"技术规格\" 后"
+      },
+      {
+        title: "对比表（Comparison Table）",
+        paragraphs: [
+          "Comparison should go beyond marketing claims and include tuft density, pattern precision, lead time, seam behavior, and maintenance profile.",
+          "A durable system with poor seam quality can still fail visual expectations in premium hospitality environments.",
+          "Likewise, premium pattern capability without lifecycle planning can create budget pressure in high-volume projects.",
+          "A structured comparison framework helps procurement teams justify decisions to operations, design, and finance stakeholders."
+        ],
+        image: "/images/blog-series/blog-2/Blog_2_Durability_Chart.png",
+        imageAlt: "Blog 2 durability comparison chart",
+        imageCaption: "表格位置要求：\"对比表\" 后"
+      },
+      {
+        title: "接缝质量（Seam Quality）",
+        paragraphs: [
+          "Seaming is often the hidden cost driver and visual risk point in hospitality carpet delivery.",
+          "Luxury environments demand minimal seam visibility and strict color continuity at junction lines.",
+          "Installation QA should include seam direction planning, pattern registration checks, and post-install visual audits.",
+          "Where seaming discipline is weak, guest-facing perception declines even if material specification appears strong on paper."
+        ],
+        image: "/images/blog-series/blog-2/Blog_2_Seam_Quality_Macro.png",
+        imageAlt: "Blog 2 seam quality macro comparison",
+        imageCaption: "表格位置要求：\"接缝质量\" 后"
+      }
+    ],
     suggestedLinks: [
-      { label: "Fire-Rated Carpet", href: "/fire-rated-carpet" },
-      { label: "Hotel Carpet", href: "/hotel-carpet" },
-      { label: "Technical Inquiry", href: "/contact" }
+      { label: "Wall-to-Wall Carpet", href: "/products/wall-to-wall" },
+      { label: "Hospitality Solutions", href: "/products/hotel-hospitality" }
     ]
   },
   {
-    slug: "hotel-carpet-buying-guide",
-    title: "Hotel Carpet Buying Guide: Guest Rooms, Corridors, Lobbies, and Public Areas",
-    seoTitle: "Hotel Carpet Buying Guide: Guest Rooms, Corridors, Lobbies, and Public Areas",
-    description: "Learn how to choose hotel carpet for guest rooms, corridors, lobbies, and public areas. Covers broadloom, carpet tiles, custom patterns, fire rating, and maintenance.",
-    keywords: ["hotel carpet", "hotel carpet supplier", "hospitality carpet", "hotel corridor carpet", "broadloom hotel carpet"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Buying Guide",
-    image: "/images/blog-hotel-carpet.jpg",
-    content: `Hotel carpet has to do more than decorate a space. It must handle guest traffic, luggage wheels, cleaning schedules, acoustic comfort, fire safety requirements, and brand design. A good hotel carpet specification balances appearance with long-term operation.
-
-Guest rooms usually need comfort and a warm residential feeling. Broadloom carpet is often selected because it creates a continuous surface and softer visual effect. Wool-blend or nylon constructions can be used depending on budget and positioning. For large hotel chains, color consistency and batch control are especially important.
-
-Corridors have different requirements. They receive constant foot traffic, housekeeping carts, and luggage movement. A denser pile and stronger backing are usually more important than softness. Patterns are useful because they hide soil and wear better than plain light colors.
-
-Lobbies and public areas require the highest visual impact. Custom patterns, carpet tiles, or high-grade broadloom may all be suitable. The choice depends on whether the priority is luxury presentation or easy replacement.`,
+    slug: "carpet-printing-technology-design-to-installation-guide",
+    title: "Carpet Printing Technology: From Digital Design to On-Floor Installation",
+    subtitle: "How advanced printing methods create bespoke designs at competitive prices.",
+    painPoint: "High custom design cost, unpredictable lead time, and quality inconsistency.",
+    seoTitle: "Carpet Printing Technology Guide | VISHOME",
+    description: "How digital carpet printing improves flexibility, revision speed, and production control for custom projects.",
+    keywords: ["carpet printing", "digital inkjet carpet", "custom pattern carpet", "color precision"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
+    category: "Design & Production",
+    image: "/images/blog-series/blog-3/Blog_3_Printing_Process.png",
+    sections: [
+      {
+        title: "技术对比（Technology Comparison）",
+        paragraphs: [
+          "Modern digital printing has reduced entry barriers for custom carpet programs once limited to large-scale budgets.",
+          "Unlike traditional screen-based workflows, digital pipelines reduce setup friction and allow faster design iteration.",
+          "This is particularly useful for medium-volume hospitality, retail, and branded commercial interiors.",
+          "For project teams, faster revision loops significantly improve alignment between design intent and factory output."
+        ],
+        image: "/images/blog-series/blog-3/Blog_3_Printing_Process.png",
+        imageAlt: "Blog 3 printing process flow",
+        imageCaption: "表格位置要求：\"技术对比\" 后"
+      },
+      {
+        title: "应用示例（Application Examples）",
+        paragraphs: [
+          "Digital print applications now span hotel branding, retail wayfinding, casino pattern systems, and themed commercial zones.",
+          "Design intent can be adapted by zone function without restarting full production tooling.",
+          "This flexibility enables stronger brand coherence across multi-space programs.",
+          "Application context—not just unit price—should determine which print route is selected."
+        ],
+        image: "/images/blog-series/blog-3/Blog_3_Custom_Designs_Gallery.png",
+        imageAlt: "Blog 3 custom design showcase",
+        imageCaption: "表格位置要求：\"应用示例\" 后"
+      },
+      {
+        title: "质量控制（Quality Control）",
+        paragraphs: [
+          "Color precision and registration tolerance must be validated before bulk production release.",
+          "QA should include spectrophotometric checks, repeat alignment control, and batch consistency verification.",
+          "Lighting-condition review is also essential to prevent on-site color mismatch disputes.",
+          "A disciplined QC protocol protects both visual consistency and downstream installation quality."
+        ],
+        image: "/images/blog-series/blog-3/Blog_3_Color_Precision.png",
+        imageAlt: "Blog 3 color precision and registration",
+        imageCaption: "表格位置要求：\"质量控制\" 后"
+      }
+    ],
     suggestedLinks: [
-      { label: "Hotel Carpet", href: "/hotel-carpet" },
-      { label: "Custom Carpet", href: "/custom-carpet" },
-      { label: "Request Samples", href: "/contact" }
+      { label: "Custom Project Inquiry", href: "/contact" },
+      { label: "Project Cases", href: "/projects" }
     ]
   },
   {
-    slug: "office-carpet-tiles-selection-guide",
-    title: "How to Choose Office Carpet Tiles for High-Traffic Commercial Workspaces",
-    seoTitle: "How to Choose Office Carpet Tiles for High-Traffic Commercial Workspaces",
-    description: "A practical office carpet tile guide for buyers, contractors, and facility managers. Covers durability, acoustics, rolling chairs, maintenance, and samples.",
-    keywords: ["office carpet tiles", "commercial office carpet", "carpet tiles for office", "high traffic carpet tiles", "modular office flooring"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Buying Guide",
-    image: "/images/blog-office-carpet.jpg",
-    content: `Office carpet tiles must support daily work, not just interior design. They need to handle rolling chairs, desk legs, foot traffic, coffee spills, cleaning machines, and layout changes. For procurement teams, the best office carpet tile is the one that stays presentable with controlled maintenance cost.
-
-The most important factor is appearance retention. A carpet tile may look soft in a sample, but if the pile crushes quickly under chairs, the office will look worn within months. Dense construction, suitable pile height, and resilient fiber are essential.
-
-Solution-dyed nylon is a strong option for offices because it resists staining and fading. It is especially useful in open-plan offices, coworking spaces, meeting rooms, and corridors. Polypropylene can be used for budget-sensitive areas, but buyers should be realistic about long-term performance.`,
+    slug: "carpet-tile-specifications-high-traffic-durability-guide",
+    title: "Carpet Tile Specifications for High-Traffic Commercial Zones: The Science Behind Durability",
+    subtitle: "Technical parameters that determine performance in demanding environments.",
+    painPoint: "Premature wear patterns, visible damage in 2-3 years, and warranty disputes.",
+    seoTitle: "High-Traffic Carpet Tile Specification Guide | VISHOME",
+    description: "A technical guide to pile, density, backing, and moisture metrics for high-traffic commercial carpet systems.",
+    keywords: ["carpet tile specs", "high traffic durability", "tuft density", "moisture management"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
+    category: "Technical Guide",
+    image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.png",
+    sections: [
+      {
+        title: "规格详解（Specification Details）",
+        paragraphs: [
+          "Pile height, tuft density, and backing system stability are core determinants of durability in high-traffic commercial zones.",
+          "Specification decisions should follow traffic profile, cleaning method, and functional zoning requirements.",
+          "Aesthetics alone cannot predict lifecycle performance under rolling loads, repeated cleaning, and climate variation.",
+          "The right technical baseline reduces early wear complaints and warranty conflict."
+        ],
+        image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.png",
+        imageAlt: "Blog 4 carpet tile cross-section",
+        imageCaption: "表格位置要求：\"规格详解\" 后"
+      },
+      {
+        title: "磨损对比（Wear Comparison）",
+        paragraphs: [
+          "Wear should be evaluated across lifecycle checkpoints rather than judged from first-install appearance.",
+          "Early-stage visual quality can hide structural weaknesses that appear under sustained traffic cycles.",
+          "Progressive wear comparison gives procurement teams a clearer decision basis than catalog claims.",
+          "This helps avoid false savings from low-grade products that fail early in operation."
+        ],
+        image: "/images/blog-series/blog-4/Blog_4_Traffic_Durability_Progression.png",
+        imageAlt: "Blog 4 traffic durability progression",
+        imageCaption: "表格位置要求：\"磨损对比\" 后"
+      },
+      {
+        title: "气候适应（Climate Adaptation）",
+        paragraphs: [
+          "Climate behavior is critical in monsoon and mixed-humidity regions where moisture stress can alter carpet stability.",
+          "Backing composition, antimicrobial treatment, and vapor-management behavior should be included in technical review.",
+          "Moisture adaptation is a procurement-stage decision, not a late installation workaround.",
+          "Projects that ignore climate variables often face dimensional movement, odor risk, and higher maintenance frequency."
+        ],
+        image: "/images/blog-series/blog-4/Blog_4_Moisture_Management.png",
+        imageAlt: "Blog 4 moisture management infographic",
+        imageCaption: "表格位置要求：\"气候适应\" 后"
+      }
+    ],
     suggestedLinks: [
-      { label: "Office Carpet Tiles", href: "/office-carpet-tiles" },
-      { label: "Commercial Carpet Tiles", href: "/commercial-carpet-tiles" },
-      { label: "Contact Us", href: "/contact" }
+      { label: "Technical Consultation", href: "/contact" },
+      { label: "Carpet Tile Collection", href: "/products/carpet-tiles" }
     ]
   },
   {
-    slug: "wall-to-wall-carpet-commercial-guide",
-    title: "Wall-to-Wall Carpet for Commercial Projects: When Broadloom Makes Sense",
-    seoTitle: "Wall-to-Wall Carpet for Commercial Projects: When Broadloom Makes Sense",
-    description: "Learn when to choose wall-to-wall broadloom carpet for hotels, offices, corridors, and large commercial spaces. Covers design, seams, maintenance, and logistics.",
-    keywords: ["wall to wall carpet", "wall-to-wall commercial carpet", "broadloom carpet", "hotel broadloom carpet", "carpet roll supplier"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Product Guide",
-    image: "/images/category-broadloom.jpg",
-    content: `Wall-to-wall carpet, also called broadloom carpet, remains a strong choice for many commercial and hospitality projects. While carpet tiles are popular for modular maintenance, broadloom offers a continuous surface that can feel more refined, especially in hotels, guest rooms, corridors, lounges, and luxury interiors.
-
-The main advantage of broadloom is visual continuity. In spaces where seams and module lines would interrupt the design, broadloom creates a smoother look. This is why hotels often use it in guest rooms and corridors, especially when custom patterns are required.
-
-Broadloom also supports large-scale pattern development. Jacquard, printed, or custom woven designs can help match a hotel brand, casino interior, or cultural theme. For designers, broadloom can become part of the architecture rather than just a floor covering.`,
+    slug: "hidden-cost-of-cheap-carpets-hospitality-roi-guide",
+    title: "The Hidden Cost of Cheap Carpets: Why Replacing Floor Coverings After 3 Years Destroys Hospitality ROI",
+    subtitle: "Lifecycle economics behind flooring decisions in hospitality assets.",
+    painPoint: "Low upfront price but high replacement frequency and service disruption.",
+    seoTitle: "Hidden Cost of Cheap Hospitality Carpets | VISHOME",
+    description: "Why low-cost carpet choices can damage hospitality ROI over a 10-year operating horizon.",
+    keywords: ["hospitality ROI", "carpet lifecycle cost", "cheap carpet risk", "replacement strategy"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
+    category: "Cost & ROI",
+    image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.png",
+    sections: [
+      {
+        title: "财务分析（Financial Analysis）",
+        paragraphs: [
+          "Low unit pricing can be misleading when replacement cycles are short and operational disruption is frequent.",
+          "Lifecycle modeling should include reinstall labor, downtime, disposal, and turnover impact.",
+          "Over a 10-year horizon, repeated replacement often outweighs initial purchase savings.",
+          "Hospitality assets benefit more from predictable performance than from short-term material cost reductions."
+        ],
+        image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.png",
+        imageAlt: "Blog 5 ten-year cost comparison",
+        imageCaption: "表格位置要求：\"财务分析\" 后"
+      },
+      {
+        title: "品牌影响（Brand Impact）",
+        paragraphs: [
+          "Guest-facing flooring condition directly shapes perceived quality and review sentiment.",
+          "Visible wear in lobbies and corridors can undermine premium positioning even when service standards remain high.",
+          "Carpet performance is therefore part of brand delivery—not a hidden back-of-house expense.",
+          "This link between surface condition and customer trust should be reflected in procurement criteria."
+        ],
+        image: "/images/blog-series/blog-5/Blog_5_Customer_Experience_Timeline.png",
+        imageAlt: "Blog 5 customer experience timeline",
+        imageCaption: "表格位置要求：\"品牌影响\" 后"
+      },
+      {
+        title: "成本明细（Cost Breakdown）",
+        paragraphs: [
+          "A robust cost model should combine material, labor, maintenance, disruption, customer-impact, and equipment-wear factors.",
+          "Category-level breakdown makes trade-offs visible to finance, procurement, and operations teams.",
+          "This enables more defensible tender decisions and better capex planning.",
+          "In hospitality procurement, cost transparency is often the strongest defense against low-price, high-risk options."
+        ],
+        image: "/images/blog-series/blog-5/Blog_5_Cost_Breakdown.png",
+        imageAlt: "Blog 5 cost breakdown visualization",
+        imageCaption: "表格位置要求：\"成本明细\" 后"
+      }
+    ],
     suggestedLinks: [
-      { label: "Wall-to-Wall Carpet", href: "/wall-to-wall-carpet" },
-      { label: "Broadloom Carpet", href: "/broadloom-carpet" },
-      { label: "Hotel Carpet", href: "/hotel-carpet" }
+      { label: "Hospitality Solutions", href: "/products/hotel-hospitality" },
+      { label: "Request Project Costing", href: "/contact" }
     ]
   },
   {
-    slug: "custom-carpet-design-process-b2b",
-    title: "Custom Carpet Design Process for Hotels, Offices, and Commercial Projects",
-    seoTitle: "Custom Carpet Design Process for Hotels, Offices, and Commercial Projects",
-    description: "Learn how custom commercial carpet is developed from reference design to sample approval and production. Covers color matching, patterns, MOQ, timeline, and documents.",
-    keywords: ["custom carpet", "custom hotel carpet", "custom carpet design", "Pantone carpet color matching", "bespoke commercial carpet"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Design",
-    image: "/images/blog-design-trends.jpg",
-    content: `Custom carpet can transform a commercial space, but it also adds decisions that buyers must manage carefully. Color, pattern, material, sample approval, MOQ, production time, and installation schedule all affect the final result. A clear process helps avoid delays and mismatched expectations.
-
-The first step is project briefing. Buyers should provide the project type, area, target market, installation deadline, and intended use. A hotel corridor, office reception, casino floor, and mosque prayer hall all require different construction and design logic.
-
-The second step is design reference. Useful inputs include interior renderings, Pantone colors, brand guidelines, existing carpet photos, mood boards, and drawings. The more specific the reference, the easier it is for the supplier to create a practical carpet design.`,
-    suggestedLinks: [
-      { label: "Custom Carpet", href: "/custom-carpet" },
-      { label: "Hotel Carpet", href: "/hotel-carpet" },
-      { label: "Contact Us", href: "/contact" }
-    ]
-  },
-  {
-    slug: "carpet-sample-swatches-before-bulk-order",
-    title: "Why Carpet Samples Matter Before Bulk Orders: A B2B Buyer Checklist",
-    seoTitle: "Why Carpet Samples Matter Before Bulk Orders: A B2B Buyer Checklist",
-    description: "Learn why commercial carpet buyers should request samples before bulk orders. Covers texture, color, backing, fire rating, edge quality, and project approval.",
-    keywords: ["carpet samples", "carpet swatches", "commercial carpet samples", "carpet tile samples", "request carpet samples"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Buying Guide",
-    image: "/images/samples-box.jpg",
-    content: `For commercial carpet procurement, samples are not just a sales tool. They are a risk-control step. A website photo can show color and atmosphere, but it cannot fully show pile texture, density, backing strength, edge quality, or how the product looks under project lighting.
-
-The first reason to request samples is color accuracy. Carpet color changes under different light sources. A grey carpet may look warm in a hotel room and cool in an office with LED lighting. Physical samples allow designers and buyers to compare real color with other materials.
-
-The second reason is texture. Buyers should touch the pile, bend the sample, check density, and compare softness with durability expectations. A product that feels very soft may not always be the best option for high-traffic commercial use.`,
-    suggestedLinks: [
-      { label: "Carpet Samples", href: "/carpet-samples" },
-      { label: "Commercial Carpet Tiles", href: "/commercial-carpet-tiles" },
-      { label: "Contact Us", href: "/contact" }
-    ]
-  },
-  {
-    slug: "commercial-carpet-moq-pricing-guide",
-    title: "Commercial Carpet MOQ and Pricing: What Buyers Should Know Before Requesting a Quote",
-    seoTitle: "Commercial Carpet MOQ and Pricing: What Buyers Should Know Before Requesting a Quote",
-    description: "Understand how commercial carpet MOQ and pricing work, including material, quantity, custom colors, backing, freight, samples, and project timelines.",
-    keywords: ["commercial carpet price", "carpet tiles MOQ", "carpet tile price", "broadloom carpet MOQ", "carpet quotation"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Buying Guide",
-    image: "/images/blog-material-comparison.jpg",
-    content: `Commercial carpet pricing is not based only on square meter cost. Material, construction, backing, quantity, customization, packaging, shipping method, and documentation can all affect the final quotation. Buyers who prepare the right information get faster and more accurate quotes.
-
-MOQ depends on product type. Standard carpet tiles often have lower MOQ because stock colors or regular production materials are available. Custom colors, special backing, and broadloom rolls usually require higher MOQ because production setup is more involved.
-
-Material is a major price driver. Solution-dyed nylon usually costs more than polypropylene but performs better in high-traffic areas. Wool-blend broadloom can create a premium hospitality feel, but it has a different cost structure.`,
-    suggestedLinks: [
-      { label: "Contact Us", href: "/contact" },
-      { label: "Commercial Carpet Tiles", href: "/commercial-carpet-tiles" },
-      { label: "Broadloom Carpet", href: "/broadloom-carpet" }
-    ]
-  },
-  {
-    slug: "commercial-carpet-shipping-lead-time",
-    title: "Commercial Carpet Shipping and Lead Time: How to Plan Overseas Orders",
-    seoTitle: "Commercial Carpet Shipping and Lead Time: How to Plan Overseas Orders",
-    description: "A practical guide for overseas commercial carpet buyers covering samples, production lead time, packaging, sea freight, air freight, and project deadlines.",
-    keywords: ["carpet shipping", "commercial carpet lead time", "carpet tiles delivery", "broadloom carpet shipping", "overseas carpet supplier"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
+    slug: "shipping-optimization-5000sqm-mumbai-14days",
+    title: "Shipping Optimization: How to Move 5,000 Sq Meters of Carpet to Mumbai in 14 Days",
+    subtitle: "Logistics playbook for accelerated international carpet programs.",
+    painPoint: "Uncertain shipping windows, damage risk, and schedule overruns.",
+    seoTitle: "Carpet Shipping Optimization to Mumbai in 14 Days | VISHOME",
+    description: "How to plan route, packaging, and timeline controls for fast 5,000 sqm carpet delivery to Mumbai.",
+    keywords: ["shipping optimization", "mumbai carpet delivery", "carpet logistics", "project lead time"],
+    date: "2026-06-24",
+    author: "Vishome Export Team",
     category: "Logistics",
-    image: "/images/blog-office-carpet.jpg",
-    content: `Overseas carpet procurement needs timeline planning. A good product can still cause project problems if samples, production, inspection, packing, and shipping are not scheduled correctly. Buyers should treat lead time as part of the sourcing decision.
-
-The first stage is sample delivery. Standard samples can often be prepared faster than custom samples. Custom color or pattern development may require additional time because the supplier must create a trial sample for approval.
-
-The second stage is production. Standard carpet tiles in regular colors usually have shorter lead times. Custom broadloom, special colors, and jacquard designs need more planning. Buyers should confirm whether the quoted lead time starts after deposit, sample approval, or final artwork confirmation.`,
+    image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.png",
+    sections: [
+      {
+        title: "物流优化（Logistics Optimization）",
+        paragraphs: [
+          "Route planning should compare standard ocean, expedited ocean, and hybrid multimodal options against deadline certainty.",
+          "For time-sensitive openings, schedule reliability often outweighs lowest freight rate."
+        ],
+        image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.png",
+        imageAlt: "Blog 6 shipping routes map",
+        imageCaption: "表格位置要求：\"物流优化\" 后"
+      },
+      {
+        title: "防损预防（Damage Prevention）",
+        paragraphs: [
+          "Packaging sequence—barrier wrap, palletization, labeling, and shrink protection—directly reduces transit-loss exposure.",
+          "Protection standards should be defined per handling stage, not only at factory dispatch."
+        ],
+        image: "/images/blog-series/blog-6/Blog_6_Packaging_Process.png",
+        imageAlt: "Blog 6 packaging protection workflow",
+        imageCaption: "表格位置要求：\"防损预防\" 后"
+      },
+      {
+        title: "时间管理（Timeline Management）",
+        paragraphs: [
+          "A day-by-day execution model with customs buffers and handover checkpoints keeps fast-track delivery realistic.",
+          "Transparent cost phasing helps procurement and logistics teams align decisions under time pressure."
+        ],
+        image: "/images/blog-series/blog-6/Blog_6_Timeline_Cost_Breakdown.png",
+        imageAlt: "Blog 6 timeline and cost breakdown",
+        imageCaption: "表格位置要求：\"时间管理\" 后"
+      }
+    ],
     suggestedLinks: [
-      { label: "Shipping & Lead Time", href: "/shipping-and-lead-time" },
-      { label: "Contact Us", href: "/contact" },
-      { label: "Carpet Samples", href: "/carpet-samples" }
+      { label: "View Project Cases", href: "/projects" },
+      { label: "Contact Export Team", href: "/contact" }
     ]
   },
   {
-    slug: "low-voc-commercial-carpet-guide",
-    title: "Low-VOC Commercial Carpet: What It Means for Offices, Hotels, and Public Spaces",
-    seoTitle: "Low-VOC Commercial Carpet: What It Means for Offices, Hotels, and Public Spaces",
-    description: "Learn why low-VOC carpet matters for indoor air quality, commercial buildings, hotels, and office projects. Includes buyer checklist and document tips.",
-    keywords: ["low VOC carpet", "low VOC commercial carpet", "indoor air quality carpet", "CRI Green Label carpet", "eco friendly carpet tiles"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Technical Guide",
-    image: "/images/about-quality-control.jpg",
-    content: `Low-VOC carpet is increasingly important for commercial buildings. Offices, hotels, schools, and public spaces must consider indoor air quality as part of product selection. For buyers, low VOC is not only an environmental claim. It can affect project approval, occupant comfort, and brand reputation.
-
-VOC stands for volatile organic compounds. These substances can be released from some materials, adhesives, backings, or finishes. Low-VOC carpet is designed and tested to reduce emissions after installation.
-
-For office projects, indoor air quality is connected to employee comfort. For hotels, it affects guest experience. For schools and healthcare spaces, it may be part of stricter procurement requirements.`,
+    slug: "climate-control-carpet-installation-stability-guide",
+    title: "Climate Control in Carpet Installation: Preventing Wrinkles, Mold, and Dimensional Instability",
+    subtitle: "Temperature and humidity controls for stable commercial carpet installation.",
+    painPoint: "Post-install wrinkling, mold risk, and dimensional movement in humid climates.",
+    seoTitle: "Climate Control Carpet Installation Stability Guide | VISHOME",
+    description: "How controlled installation climate reduces deformation, cure defects, and post-handover failures.",
+    keywords: ["climate control", "carpet installation", "humidity", "dimensional stability", "mold prevention"],
+    date: "2026-06-24",
+    author: "Vishome Technical Team",
+    category: "Installation",
+    image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.png",
+    sections: [
+      {
+        title: "科学原理（Scientific Principle）",
+        paragraphs: [
+          "Fiber and backing systems respond to humidity shifts. Excessive expansion during cure phase can trigger wrinkling and alignment drift.",
+          "Environmental targets should be treated as installation specs, not optional site recommendations."
+        ],
+        image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.png",
+        imageAlt: "Blog 7 humidity expansion visualization",
+        imageCaption: "表格位置要求：\"科学原理\" 后"
+      },
+      {
+        title: "设备设置（Equipment Setup）",
+        paragraphs: [
+          "HVAC, dehumidifiers, and sensor layout must be coordinated at floor-plan level to maintain uniform climate zones.",
+          "Localized imbalance can compromise seam stability even when average room conditions appear acceptable."
+        ],
+        image: "/images/blog-series/blog-7/Blog_7_HVAC_Equipment_Layout.png",
+        imageAlt: "Blog 7 HVAC equipment layout",
+        imageCaption: "表格位置要求：\"设备设置\" 后"
+      },
+      {
+        title: "项目管理（Project Management）",
+        paragraphs: [
+          "A phased timeline should include pre-conditioning, controlled install, cure stabilization, and gradual normalization.",
+          "This method reduces post-handover defect probability in monsoon and high-humidity regions."
+        ],
+        image: "/images/blog-series/blog-7/Blog_7_Installation_Timeline_Climate.png",
+        imageAlt: "Blog 7 climate-phase installation timeline",
+        imageCaption: "表格位置要求：\"项目管理\" 后"
+      }
+    ],
     suggestedLinks: [
-      { label: "Low-VOC Carpet", href: "/low-voc-carpet" },
-      { label: "Commercial Carpet Tiles", href: "/commercial-carpet-tiles" },
-      { label: "Contact Us", href: "/contact" }
-    ]
-  },
-  {
-    slug: "hotel-corridor-carpet-selection",
-    title: "Hotel Corridor Carpet: How to Choose Durable Carpet for High-Traffic Areas",
-    seoTitle: "Hotel Corridor Carpet: How to Choose Durable Carpet for High-Traffic Areas",
-    description: "Learn how to choose hotel corridor carpet for durability, pattern design, fire rating, cleaning, luggage traffic, and long-term maintenance.",
-    keywords: ["hotel corridor carpet", "corridor carpet", "hotel hallway carpet", "hospitality corridor carpet", "durable hotel carpet"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Product Guide",
-    image: "/images/blog-hotel-carpet.jpg",
-    content: `Hotel corridors are among the most demanding carpet areas in a hospitality project. They receive constant guest movement, luggage wheels, housekeeping carts, cleaning equipment, and directional traffic. A corridor carpet must look good, reduce noise, and survive heavy use.
-
-Pattern is important. Plain light colors may look clean at first but can show traffic lanes quickly. Mixed tones, textured patterns, and medium-depth colors help hide soil and wear. Corridor patterns can also guide movement and support the hotel’s interior identity.
-
-Durability should be prioritized over softness. A dense pile and stable backing help the carpet resist crushing and maintain appearance. Nylon and wool-nylon blends are common choices depending on budget and hotel positioning.`,
-    suggestedLinks: [
-      { label: "Hotel Carpet", href: "/hotel-carpet" },
-      { label: "Wall-to-Wall Carpet", href: "/wall-to-wall-carpet" },
-      { label: "Custom Carpet", href: "/custom-carpet" }
-    ]
-  },
-  {
-    slug: "stair-carpet-commercial-buying-guide",
-    title: "Stair Carpet for Commercial Projects: Safety, Durability, and Design Tips",
-    seoTitle: "Stair Carpet for Commercial Projects: Safety, Durability, and Design Tips",
-    description: "Learn how to choose stair carpet for hotels, offices, and public buildings. Covers durability, stair runners, edge wear, fire rating, and installation planning.",
-    keywords: ["stair carpet", "staircase carpet", "stair runner carpet", "commercial stair carpet", "hotel stair carpet"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Product Guide",
-    image: "/images/blog-installation-maintenance.jpg",
-    content: `Stairs are a special challenge in commercial carpet projects. They experience concentrated foot pressure on edges, frequent directional movement, and higher safety expectations. The wrong carpet can wear quickly or create installation problems.
-
-Durability is the first priority. Stair edges receive more stress than flat floors, so buyers should choose a dense construction with good pile recovery. Soft residential-style carpet may not perform well in commercial staircases.
-
-Material selection depends on use. Nylon is often a strong choice for commercial stairs because of its resilience. Wool blends can be used in premium hotels, but construction and maintenance must be considered carefully.`,
-    suggestedLinks: [
-      { label: "Stair Carpet", href: "/stair-carpet" },
-      { label: "Hotel Carpet", href: "/hotel-carpet" },
-      { label: "Contact Us", href: "/contact" }
-    ]
-  },
-  {
-    slug: "exhibition-carpet-flooring-guide",
-    title: "Exhibition Carpet Flooring: How to Choose Carpet for Trade Shows and Events",
-    seoTitle: "Exhibition Carpet Flooring: How to Choose Carpet for Trade Shows and Events",
-    description: "A practical guide to exhibition carpet flooring for trade shows, booths, public events, and temporary commercial spaces. Covers cost, installation, color, and logistics.",
-    keywords: ["exhibition carpet flooring", "expo carpet", "trade show carpet", "event carpet flooring", "temporary carpet supplier"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Product Guide",
-    image: "/images/blog-design-trends.jpg",
-    content: `Exhibition carpet flooring has different priorities from permanent commercial carpet. It must install quickly, look clean during the event, control cost, and be easy to transport or remove. For trade shows, booths, and event halls, the best carpet is practical and project-specific.
-
-The first decision is whether the carpet is temporary or reusable. Single-event carpet can focus on cost and speed. Reusable exhibition carpet needs better durability, backing stability, and storage planning.
-
-Color matters for booth presentation. Neutral grey, charcoal, blue, and black are common because they hide dirt and work with many brand designs. Bright colors can create strong visual impact but may show stains faster.`,
-    suggestedLinks: [
-      { label: "Exhibition Carpet", href: "/exhibition-carpet-flooring" },
-      { label: "Commercial Carpet Tiles", href: "/commercial-carpet-tiles" },
-      { label: "Contact Us", href: "/contact" }
-    ]
-  },
-  {
-    slug: "commercial-carpet-installation-maintenance-guide",
-    title: "Commercial Carpet Installation and Maintenance Guide for Long-Term Performance",
-    seoTitle: "Commercial Carpet Installation and Maintenance Guide for Long-Term Performance",
-    description: "Learn how proper installation and maintenance extend commercial carpet life. Covers subfloor checks, tile layout, cleaning, replacement, and project handover.",
-    keywords: ["commercial carpet installation", "carpet tile installation", "commercial carpet maintenance", "hotel carpet maintenance", "office carpet maintenance"],
-    date: "2026-06-19",
-    author: "Carpet Expert",
-    category: "Maintenance",
-    image: "/images/blog-installation-maintenance.jpg",
-    content: `Commercial carpet performance depends on more than product quality. Installation and maintenance strongly affect appearance, safety, and service life. Even a good carpet can fail early if the subfloor is not prepared, the wrong adhesive is used, or cleaning is neglected.
-
-Before installation, the subfloor should be clean, dry, level, and stable. Moisture problems must be solved before carpet is installed. If the subfloor is uneven, tiles may not sit correctly and broadloom may show surface issues.
-
-For carpet tiles, layout planning is important. Installers should decide the starting point, laying direction, and pattern method before placing tiles. Common methods include monolithic, ashlar, brick, quarter-turn, and random lay.`,
-    suggestedLinks: [
-      { label: "Installation Guide", href: "/carpet-installation-guide" },
-      { label: "Commercial Carpet Tiles", href: "/commercial-carpet-tiles" },
-      { label: "Contact Us", href: "/contact" }
+      { label: "Installation Support", href: "/contact" },
+      { label: "Hotel & Hospitality Solutions", href: "/products/hotel-hospitality" }
     ]
   }
 ];

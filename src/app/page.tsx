@@ -122,7 +122,7 @@ export default function Home() {
                   Our main products include commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event carpets, stair runners, and customized rugs. Backed by a professional design and production team, we support custom sizes, colors, materials, patterns, and project-based flooring solutions for international B2B customers.
                 </p>
               </div>
-              <Link href="/about" className="btn-fox-orange inline-block">
+              <Link href="/products" className="btn-fox-orange inline-block">
                 View Full Factory Capability
               </Link>
             </div>

@@ -3,18 +3,20 @@ import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 
 export default function CategoryPage() {
-  const categoryId = "carpet-tiles";
+  const categoryId = "public-area";
   const currentCategory = productCategories.find((c) => c.id === categoryId);
+  // 获取该分类下的真实产品
   const categoryProducts = products.filter((p) => p.category === categoryId);
 
   return (
     <div className="bg-white min-h-screen font-sans">
       <section className="bg-[#102A43] py-24 text-center">
         <div className="container-fox">
-          <h1 className="text-4xl md:text-6xl font-black text-white uppercase tracking-widest">{currentCategory?.name}</h1>
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-sm font-bold uppercase tracking-widest">{currentCategory?.description}</p>
+          <h1 className="text-4xl md:text-6xl font-black text-white uppercase tracking-widest">{currentCategory?.name || "Public Area Carpets"}</h1>
+          <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-sm font-bold uppercase tracking-widest">{currentCategory?.description || "Heavy-duty specialized flooring for public areas."}</p>
         </div>
       </section>
+
       <section className="section-padding">
         <div className="container-fox">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -31,6 +33,12 @@ export default function CategoryPage() {
               </Link>
             ))}
           </div>
+          {categoryProducts.length === 0 && (
+            <div className="text-center py-20 border-2 border-dashed border-border">
+               <p className="text-muted italic uppercase tracking-widest">More collections are being added. Please contact us for the latest B2B catalogue.</p>
+               <Link href="/contact" className="btn-fox-orange mt-8 inline-block">Request Full PDF Catalogue</Link>
+            </div>
+          )}
         </div>
       </section>
     </div>
