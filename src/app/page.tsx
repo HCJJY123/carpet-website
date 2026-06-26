@@ -154,13 +154,13 @@ export default function Home() {
                 Proven experience in hotel renovations and commercial office fit-outs worldwide.
               </p>
             </div>
-            <Link href="/cases" className="text-primary font-bold text-sm uppercase tracking-widest border-b-2 border-primary pb-2 hover:text-muted hover:border-muted transition-all">
+            <Link href="/projects" className="text-primary font-bold text-sm uppercase tracking-widest border-b-2 border-primary pb-2 hover:text-muted hover:border-muted transition-all">
               View All Global Cases
             </Link>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {caseStudies.map((cs) => (
-              <div key={cs.id} className="group flex flex-col">
+              <Link key={cs.id} href={`/projects/${cs.id}`} className="group flex flex-col">
                 <div className="aspect-[4/3] overflow-hidden bg-surface mb-6">
                   <ProductImage
                     src={cs.image}
@@ -172,11 +172,11 @@ export default function Home() {
                   {cs.title}
                 </h3>
                 <div className="mt-auto">
-                  <Link href="/cases" className="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50 group-hover:text-primary transition-colors">
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50 group-hover:text-primary transition-colors">
                     Technical Overview →
-                  </Link>
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
