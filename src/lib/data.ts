@@ -1,6 +1,7 @@
 export interface ProductColor { name: string; hex: string; }
 export interface TechnicalSpecs { fireRating: string; trafficClass: string; yarnSystem: string; backing: string; pileWeight: string; totalThickness: string; soundInsulation: string; antistatic: string; }
 export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; moq: string; leadTime: string; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
+export interface CaseStudy { id: string; title: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; image: string; description: string; }
 
 export const brandInfo = {
   name: "Vishome Global Commercial Carpet Co., Ltd.",
@@ -13,6 +14,41 @@ export const brandInfo = {
   stats: { area: "50,000㎡", employees: "900+", markets: "45+", experience: "15+ Years" }
 };
 
+export const faqSections = [
+  {
+    title: "Product FAQs",
+    questions: [
+      { q: "What types of commercial carpets do you offer?", a: "We provide Carpet Tiles, Broadloom Carpets, Modular Carpet Systems, Custom Area Rugs, and Entrance Mat Systems suitable for offices, hotels, healthcare, and public facilities." },
+      { q: "What is the difference between carpet tiles and broadloom carpet?", a: "Carpet tiles offer flexible installation and easier replacement. Broadloom carpet provides a seamless appearance and is commonly used in hospitality projects." },
+      { q: "Are your carpets suitable for high-traffic commercial areas?", a: "Yes. Our commercial flooring solutions are designed for environments such as hotel corridors, office spaces, airports, and schools." },
+      { q: "How long do commercial carpets typically last?", a: "Service life depends on traffic level and product specification. Our commercial-grade carpets are engineered for extended performance." }
+    ]
+  },
+  {
+    title: "Custom Design FAQs",
+    questions: [
+      { q: "Can you customize carpet designs?", a: "Yes. We offer custom patterns, colors, brand graphics, wayfinding designs, and bespoke hospitality collections." },
+      { q: "Can you match our designer’s color palette?", a: "Absolutely. We can develop precise colors based on Pantone references, brand guidelines, or existing samples." },
+      { q: "Can you work directly from architectural drawings?", a: "Yes, we regularly work with CAD files, PDF layouts, and interior design packages." }
+    ]
+  },
+  {
+    title: "Commercial Project FAQs",
+    questions: [
+      { q: "What information do you need to provide a quotation?", a: "Please provide floor plans, estimated quantities, project location, design requirements, and delivery schedule." },
+      { q: "Can you support international commercial projects?", a: "Yes. We regularly support overseas projects with export packaging, shipping coordination, and documentation support." }
+    ]
+  },
+  {
+    title: "Manufacturing & Logistics FAQs",
+    questions: [
+      { q: "How do you ensure quality consistency?", a: "QC includes raw material inspection, production monitoring, finished product testing, and color verification." },
+      { q: "What is your MOQ?", a: "MOQ depends on product type and customization; project-specific recommendations are available." },
+      { q: "Why choose Vishome as your commercial carpet supplier?", a: "B2B expertise, custom design capability, large-scale manufacturing, and reliable delivery." }
+    ]
+  }
+];
+
 export const products: Product[] = [
   {
     id: "nylon-tiles-elite",
@@ -24,7 +60,7 @@ export const products: Product[] = [
     moq: "200 SQM",
     leadTime: "10-14 Days",
     spec: { material: "100% Solution-Dyed Nylon 6.6", size: "50x50 cm", colors: [] },
-    technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 33 Heavy Commercial", yarnSystem: "Multi-level Loop Pile", backing: "High-Stability Bitumen with Glass Fiber", pileWeight: "20 oz/yd²", totalThickness: "6.5 mm", soundInsulation: "ΔLw 24dB", antistatic: "< 2.0 kV" },
+    technicalSpecs: { fireRating: "ASTM E648 Class I / EN 13501-1 Bfl-s1", trafficClass: "Class 33 Heavy Commercial", yarnSystem: "Multi-level Loop Pile", backing: "High-Stability Bitumen with Glass Fiber", pileWeight: "20 oz/yd²", totalThickness: "6.5 mm", soundInsulation: "ΔLw 24dB", antistatic: "< 2.0 kV" },
     features: ["Stain Resistance", "Dimensional Stability", "Anti-microbial"]
   },
   {
@@ -61,53 +97,17 @@ export const productCategories = [
   { id: "public-area", name: "Public Area Carpets", description: "Heavy-duty specialized flooring.", image: "/images/public-area-carpets.webp", slug: "public-area" }
 ];
 
-export const faqSections = [
-  {
-    title: "Product FAQs",
-    questions: [
-      { q: "What types of commercial carpets do you offer?", a: "We provide Carpet Tiles, Broadloom Carpets, Modular Carpet Systems, Custom Area Rugs, and Entrance Mat Systems." },
-      { q: "What is the difference between carpet tiles and broadloom carpet?", a: "Carpet tiles offer flexible installation and easier replacement. Broadloom carpet provides a seamless appearance for hospitality projects." },
-      { q: "Are your carpets suitable for high-traffic commercial areas?", a: "Yes. Our commercial flooring solutions are designed for environments such as hotel corridors, office spaces, airports, and healthcare facilities." },
-      { q: "How long do commercial carpets typically last?", a: "Service life depends on traffic and product specification, but commercial-grade carpets are engineered for extended performance." }
-    ]
-  },
-  {
-    title: "Custom Design FAQs",
-    questions: [
-      { q: "Can you customize carpet designs?", a: "Yes. We offer custom patterns, custom colors, brand graphics, and bespoke hospitality collections." },
-      { q: "Can you match our designer’s color palette?", a: "Yes. We develop colors based on Pantone references, brand guidelines, or existing samples." },
-      { q: "Can you work directly from architectural drawings?", a: "Absolutely. We regularly work with CAD Files, PDF Layouts, and Interior Design Packages." },
-      { q: "Can you provide project samples before production?", a: "Yes. Available samples include material samples, swatches, strike-offs, and prototype samples." }
-    ]
-  },
-  {
-    title: "Commercial Project FAQs",
-    questions: [
-      { q: "What information do you need to provide a quotation?", a: "Please provide floor plans, quantities, project location, design requirements, and delivery schedule." },
-      { q: "Can you assist with specification and product selection?", a: "Yes. Our technical team can assist with product selection, traffic analysis, and budget planning." },
-      { q: "Can you support international commercial projects?", a: "Yes. We regularly support overseas projects with export packaging and documentation support." },
-      { q: "How can commercial carpet reduce lifecycle costs?", a: "Commercial carpet reduces maintenance costs, replacement frequency, and installation downtime." }
-    ]
-  },
-  {
-    title: "Manufacturing & Logistics FAQs",
-    questions: [
-      { q: "What is your production capacity?", a: "Our facilities support large-scale commercial projects and multi-location developments." },
-      { q: "How do you ensure quality consistency?", a: "QC includes raw material inspection, production monitoring, finished product testing, and color verification." },
-      { q: "What certifications can be provided?", a: "Products comply with ASTM E648 Fire Performance, CRI Green Label Plus, and Commercial Durability standards." },
-      { q: "What is your MOQ?", a: "MOQ depends on product type and customization; project-specific recommendations are available." },
-      { q: "Why choose Vishome as your commercial carpet supplier?", a: "B2B expertise, custom design capability, large-scale manufacturing, and reliable delivery performance." }
-    ]
-  }
-];
-
 export const certifications = [{ name: "ASTM E648", description: "US Fire Rating" }, { name: "CRI Green Label Plus", description: "Indoor Air Quality" }];
 
-export const caseStudies = [
-  { id: "hotel-dubai", title: "Luxury Hotel Lobby — Dubai", category: "wall-to-wall", image: "/images/about/hero.png", description: "Supplied 5,000+ sqm of custom Axminster broadloom. ASTM E648 Class I certified." },
-  { id: "retail-india", title: "Department Store — India", category: "public-area", image: "/images/about/project-application.png", description: "Color-coded navigation flooring for retail projects." },
-  { id: "casino-vegas", title: "Casino Floor — Las Vegas", category: "wall-to-wall", image: "/images/about/production-workshop.png", description: "High-density woven carpets with extreme wear resistance." },
-  { id: "medical-singapore", title: "Medical Facility — Singapore", category: "carpet-tiles", image: "/images/about/qc.png", description: "Hygienic-focused flooring for hospital wings." },
-  { id: "office-tokyo", title: "Corporate Space — Tokyo", category: "carpet-tiles", image: "/images/about/custom-design.png", description: "Multi-floor fit-out with high-performance acoustic carpet tiles." },
-  { id: "airport-changai", title: "Airport Terminal — Singapore", category: "public-area", image: "/images/about/warehouse.png", description: "Heavy-duty corridor carpet rolls for high traffic." }
+export const caseStudies: CaseStudy[] = [
+  { id: "hotel-dubai", title: "Luxury Hotel Lobby — Dubai", category: "wall-to-wall", image: "/images/about/hero.png", description: "5,000+ sqm custom Axminster installation." },
+  { id: "retail-india", title: "Department Store — India", category: "public-area", image: "/images/about/project-application.png", description: "Color-coded navigation flooring." },
+  { id: "casino-vegas", title: "Casino Floor — Las Vegas", category: "wall-to-wall", image: "/images/about/production-workshop.png", description: "24/7 heavy-traffic woven carpets." },
+  { id: "medical-singapore", title: "Medical Facility — Singapore", category: "carpet-tiles", image: "/images/about/qc.png", description: "Hygienic-focused hospital wings." },
+  { id: "office-tokyo", title: "Corporate Space — Tokyo", category: "carpet-tiles", image: "/images/about/custom-design.png", description: "Multi-floor fit-out." },
+  { id: "airport-changi", title: "Airport Terminal — Singapore", category: "public-area", image: "/images/about/warehouse.png", description: "Heavy-duty corridor carpet rolls." },
+  { id: "residence-mumbai", title: "Luxury Residential — Mumbai", category: "wall-to-wall", image: "/images/about/factory-exterior.png", description: "Bespoke residential interiors." },
+  { id: "edu-australia", title: "Educational Institution — Australia", category: "carpet-tiles", image: "/images/about/project-application.png", description: "Sustainable university zones." },
+  { id: "hospitality-korea", title: "Extended-Stay — South Korea", category: "wall-to-wall", image: "/images/about/hero.png", description: "Guest room renovation." },
+  { id: "retail-paris", title: "Retail Flagship — Paris", category: "public-area", image: "/images/about/custom-design.png", description: "Fashion boutique pattern carpets." }
 ];
