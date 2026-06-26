@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import { products, productCategories } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 
+export const metadata: Metadata = {
+  title: "Commercial Carpet Tiles | Modular 50x50 Carpet Tile Manufacturer | VISHOME",
+  description: "Commercial carpet tiles for offices, hotels, retail spaces, and high-traffic commercial interiors with modular installation and technical project support.",
+  alternates: { canonical: "/products/carpet-tiles" },
+};
 export default function CategoryPage() {
   const categoryId = "carpet-tiles";
   const currentCategory = productCategories.find((c) => c.id === categoryId);

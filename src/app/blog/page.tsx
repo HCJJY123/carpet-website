@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
 
+export const metadata: Metadata = {
+  title: "Commercial Carpet Blog | B2B Sourcing, Specs & Project Guides | VISHOME",
+  description: "B2B guides on commercial carpet specifications, hotel carpet procurement, carpet tile maintenance, fire ratings, logistics, and project flooring decisions.",
+  alternates: { canonical: "/blog" },
+};
 export default function BlogPage() {
   return (
     <div className="bg-white min-h-screen">

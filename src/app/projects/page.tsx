@@ -4,10 +4,10 @@ import ProductImage from "@/components/ProductImage";
 import { caseStudies } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Global Commercial Carpet Projects | Case Studies | VISHOME",
-  description: "Excellence in hotel and office flooring across 45+ countries."
+  title: "Global Commercial Carpet Projects | Hotel, Retail & Office Case Studies | VISHOME",
+  description: "Review VISHOME commercial carpet case studies for hotel, retail, office, public area, and multi-site B2B flooring projects across global markets.",
+  alternates: { canonical: "/projects" },
 };
-
 export default function ProjectsPage() {
   return (
     <div className="bg-white min-h-screen">

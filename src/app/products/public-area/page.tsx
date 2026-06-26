@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import { products, productCategories } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 
+export const metadata: Metadata = {
+  title: "Public Area Carpet | Heavy-Duty Commercial Flooring Systems | VISHOME",
+  description: "Heavy-duty public area carpet systems for airports, exhibition centers, corridors, and high-traffic commercial projects requiring durability and fire-rated performance.",
+  alternates: { canonical: "/products/public-area" },
+};
 export default function CategoryPage() {
   const categoryId = "public-area";
   const currentCategory = productCategories.find((c) => c.id === categoryId);

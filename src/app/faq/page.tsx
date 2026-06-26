@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { faqSections } from "@/lib/data";
+import { safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "B2B Carpet Sourcing FAQ | Project & Technical Support | VISHOME",
@@ -9,8 +10,26 @@ export const metadata: Metadata = {
 };
 
 export default function FAQPage() {
+  const allFaqs = faqSections.flatMap((section) => section.questions);
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: allFaqs.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
   return (
     <div className="bg-white min-h-screen font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }}
+      />
       {/* Header */}
       <section className="bg-[#102A43] py-20 text-center relative overflow-hidden">
         <div className="container-fox relative z-10">

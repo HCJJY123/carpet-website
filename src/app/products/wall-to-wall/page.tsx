@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import { products, productCategories } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 
+export const metadata: Metadata = {
+  title: "Wall-to-Wall Hotel Broadloom Carpet | Hospitality Carpet Supplier | VISHOME",
+  description: "Wall-to-wall broadloom carpet systems for hotel guestrooms, corridors, lobbies, and hospitality projects with custom pattern and export support.",
+  alternates: { canonical: "/products/wall-to-wall" },
+};
 export default function CategoryPage() {
   const categoryId = "wall-to-wall";
   const currentCategory = productCategories.find((c) => c.id === categoryId);

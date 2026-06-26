@@ -1,7 +1,13 @@
+import Image from "next/image";
+import { Metadata } from "next";
 import Link from "next/link";
 import { productCategories as categories, caseStudies, certifications } from "@/lib/data";
 import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://www.visfurn.com" },
+};
 
 export default function Home() {
   return (
@@ -18,10 +24,13 @@ export default function Home() {
          <div className="absolute inset-0 bg-[#102A43]/85"></div>
 
           {/* Brand Watermark Decor */}
-          <img
+          <Image
             src="/logo-mark.svg"
             alt=""
+            width={550}
+            height={550}
             className="absolute right-[-80px] bottom-[-60px] w-[400px] md:w-[550px] h-auto opacity-[0.07] pointer-events-none select-none"
+            priority
           />
         </div>
 

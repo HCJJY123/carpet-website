@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-data";
+import { brandInfo } from "@/lib/data";
+import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 
 interface Props {
@@ -20,7 +22,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.seoTitle,
     description: post.description,
     keywords: post.keywords,
-    alternates: { canonical: `/blog/${post.slug}` }
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: absoluteUrl(`/blog/${post.slug}`),
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author],
+      images: [{ url: absoluteUrl(post.image), alt: post.title }],
+    },
   };
 }
 
@@ -32,8 +43,52 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    image: absoluteUrl(post.image),
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: post.author || brandInfo.name,
+      url: brandInfo.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: brandInfo.name,
+      logo: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/logo.svg"),
+      },
+    },
+    mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
+    articleSection: post.category,
+    keywords: post.keywords.join(", "),
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Blog", item: absoluteUrl("/blog") },
+      { "@type": "ListItem", position: 3, name: post.title, item: absoluteUrl(`/blog/${post.slug}`) },
+    ],
+  };
+
   return (
     <article className="bg-white min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }}
+      />
       <header className="bg-[#102A43] py-20 text-center">
         <div className="container-fox">
           <Link href="/blog" className="text-accent font-bold text-xs uppercase mb-6 inline-block">

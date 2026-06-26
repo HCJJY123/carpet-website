@@ -1,46 +1,52 @@
-import { products, faqSections, brandInfo } from "@/lib/data";
+import { brandInfo } from "@/lib/data";
+import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 
 export default function JsonLd() {
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": brandInfo.name,
-    "url": brandInfo.url,
-    "logo": `${brandInfo.url}/logo.png`,
-    "contactPoint": {
+    name: brandInfo.name,
+    alternateName: brandInfo.shortName,
+    url: brandInfo.url,
+    logo: absoluteUrl("/logo.svg"),
+    email: brandInfo.email,
+    telephone: brandInfo.phone,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: brandInfo.address,
+      addressCountry: "CN",
+    },
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": brandInfo.phone,
-      "contactType": "sales",
-      "areaServed": ["North America", "Europe", "Australia", "Middle East"],
-      "availableLanguage": ["English", "Chinese"]
-    }
+      telephone: brandInfo.phone,
+      contactType: "sales",
+      areaServed: ["North America", "Europe", "Australia", "Middle East", "Asia"],
+      availableLanguage: ["English", "Chinese"],
+    },
   };
 
-  // Combine all questions from all sections for FAQ Schema
-  const allFaqs = faqSections.flatMap(section => section.questions);
-
-  const faqData = {
+  const websiteData = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": allFaqs.map((item) => ({
-      "@type": "Question",
-      "name": item.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.a
-      }
-    }))
+    "@type": "WebSite",
+    name: brandInfo.shortName,
+    alternateName: brandInfo.name,
+    url: brandInfo.url,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${brandInfo.url}/blog?search={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(organizationData) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(websiteData) }}
       />
     </>
   );
