@@ -53,20 +53,20 @@ export default function ContactPage() {
 
       <section className="section-padding">
         <div className="container-fox">
-          <div className="grid lg:grid-cols-3 gap-16">
+          <div className="grid gap-10 lg:grid-cols-3 lg:gap-16">
             {/* Form Column */}
             <div className="lg:col-span-2">
               {state.submitted ? (
-                <div className="bg-success/5 border border-success/20 rounded-2xl p-12 text-center animate-in zoom-in duration-500">
+                <div className="animate-in rounded-2xl border border-success/20 bg-success/5 p-8 text-center duration-500 zoom-in md:p-12">
                   <div className="w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">✓</div>
                   <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-widest">Inquiry Received</h3>
                   <p className="text-muted text-lg font-medium">Thank you for choosing Vishome. Our technical sales team will review your requirements and provide a preliminary quote within 24 hours.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-8 bg-surface p-10 md:p-12 rounded-2xl border border-border shadow-sm">
+                <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl border border-border bg-surface p-5 shadow-sm md:space-y-8 md:p-12">
                   {state.error && <p className="text-red-600 font-bold text-center text-sm">{state.error}</p>}
 
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
                     <div>
                       <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Full Name *</label>
                       <input name="name" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="John Doe" />
@@ -77,7 +77,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
                     <div>
                       <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Company Name *</label>
                       <input name="company" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Architecture / Hotel Group" />
@@ -88,7 +88,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
                     <div>
                       <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Project Type</label>
                       <select name="projectType" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all text-sm font-bold text-primary">
@@ -107,7 +107,7 @@ export default function ContactPage() {
 
                   <div>
                     <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-6">Technical Requirements</label>
-                    <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
                       {[
                         "ASTM E648 Fire Rating",
                         "CRI Green Label Plus (Low VOC)",
@@ -118,7 +118,7 @@ export default function ContactPage() {
                       ].map((req) => (
                         <label key={req} className="flex items-center gap-3 cursor-pointer group">
                           <input name="requirements" value={req} type="checkbox" className="w-5 h-5 border-border rounded text-primary focus:ring-primary transition-all" />
-                          <span className="text-xs font-bold text-muted group-hover:text-primary transition-colors uppercase tracking-widest">{req}</span>
+                          <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-muted transition-colors group-hover:text-primary md:text-xs md:tracking-widest">{req}</span>
                         </label>
                       ))}
                     </div>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={state.submitting}
-                    className="w-full btn-fox-orange py-6 text-base tracking-[0.4em] disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-2xl"
+                    className="btn-fox-orange w-full py-5 text-sm tracking-[0.16em] hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 md:py-6 md:text-base md:tracking-[0.4em]"
                   >
                     {state.submitting ? "SENDING INQUIRY..." : "SUBMIT FORMAL INQUIRY"}
                   </button>
@@ -141,7 +141,7 @@ export default function ContactPage() {
             </div>
 
             {/* Info Column */}
-            <div className="space-y-12">
+            <div className="space-y-8 md:space-y-12">
               <div>
                 <h3 className="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-6">Headquarters</h3>
                 <div className="space-y-4 text-muted">
@@ -160,7 +160,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-2xl bg-primary p-8 text-white shadow-xl">
+              <div className="relative overflow-hidden rounded-2xl bg-primary p-6 text-white shadow-xl md:p-8">
                 <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#25D366]/15" />
                 <div className="relative">
                   <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-[#25D366]/15 px-3 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#25D366] ring-1 ring-[#25D366]/25">
@@ -175,7 +175,7 @@ export default function ContactPage() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mb-6 inline-flex w-full items-center justify-center gap-3 rounded-sm bg-[#25D366] px-5 py-4 text-xs font-black uppercase tracking-[0.2em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
+                    className="mb-6 inline-flex w-full items-center justify-center gap-3 rounded-sm bg-[#25D366] px-4 py-4 text-[11px] font-black uppercase tracking-[0.12em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d] md:px-5 md:text-xs md:tracking-[0.2em]"
                     aria-label="Start WhatsApp Business chat with VISHOME"
                   >
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">

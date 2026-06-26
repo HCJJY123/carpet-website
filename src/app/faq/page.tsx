@@ -44,16 +44,16 @@ export default function FAQPage() {
       {/* FAQ Main Content */}
       <section className="section-padding">
         <div className="container-fox">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-24 items-start">
              {faqSections.map((section) => (
-               <div key={section.title} className="mb-20">
-                 <div className="flex items-center gap-4 mb-10 border-b-4 border-primary pb-4">
-                   <h2 className="text-2xl font-black text-primary uppercase tracking-widest">{section.title}</h2>
+               <div key={section.title} className="mb-12 md:mb-20">
+                 <div className="mb-8 flex items-center gap-4 border-b-4 border-primary pb-4 md:mb-10">
+                   <h2 className="text-xl font-black uppercase tracking-[0.12em] text-primary md:text-2xl md:tracking-widest">{section.title}</h2>
                  </div>
                  
-                 <div className="space-y-12">
+                 <div className="space-y-8 md:space-y-12">
                    {section.questions.map((item) => (
-                     <div key={item.q} className="group border-l-2 border-border pl-8 py-2 hover:border-accent transition-colors">
+                     <div key={item.q} className="group border-l-2 border-border py-2 pl-5 transition-colors hover:border-accent md:pl-8">
                        <h3 className="text-lg font-bold text-primary mb-4 leading-snug flex items-start gap-4">
                          <span className="text-accent italic font-black">Q.</span>
                          {item.q}
@@ -68,7 +68,7 @@ export default function FAQPage() {
                    ))}
                  </div>
                  
-                 <div className="mt-12 bg-surface p-6 border border-border flex items-center justify-between">
+                 <div className="mt-10 flex flex-col items-start justify-between gap-4 border border-border bg-surface p-5 sm:flex-row sm:items-center md:mt-12 md:p-6">
                     <span className="text-[10px] font-black uppercase tracking-widest text-primary/50">Still have specific project questions?</span>
                     <Link href="/contact" className="text-[10px] font-black uppercase tracking-widest text-accent hover:text-primary transition-all flex items-center gap-2">
                       Inquire Technical Team <span>→</span>
@@ -81,20 +81,20 @@ export default function FAQPage() {
       </section>
 
       {/* Global Support CTA */}
-      <section className="py-24 bg-primary text-white text-center relative overflow-hidden">
+      <section className="relative overflow-hidden bg-primary py-16 text-center text-white md:py-24">
         <div className="absolute inset-0 bg-[#0B2E4A] opacity-50"></div>
         <div className="container-fox relative z-10">
-          <h2 className="text-3xl md:text-5xl font-black mb-8 uppercase tracking-widest leading-tight">
+          <h2 className="mb-8 text-3xl font-black uppercase leading-tight tracking-[0.08em] md:text-5xl md:tracking-widest">
             Ready to Start Your <br />Technical Assessment?
           </h2>
           <p className="text-gray-400 mb-12 max-w-3xl mx-auto text-lg font-light leading-relaxed">
             Our specialized B2B project management team is ready to assist with material selection, technical drawings (CAD), fire rating verification, and global logistics planning.
           </p>
-          <div className="flex flex-wrap justify-center gap-8">
-            <Link href="/contact" className="bg-white text-primary font-black px-16 py-6 uppercase tracking-[0.3em] text-xs hover:bg-gray-100 transition-all shadow-2xl">
+          <div className="flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap md:gap-8">
+            <Link href="/contact" className="bg-white px-8 py-5 text-xs font-black uppercase tracking-[0.18em] text-primary shadow-2xl transition-all hover:bg-gray-100 md:px-16 md:py-6 md:tracking-[0.3em]">
               Contact Factory Experts
             </Link>
-            <Link href="/contact?subject=Samples" className="border-2 border-white/20 text-white font-black px-16 py-6 uppercase tracking-[0.3em] text-xs hover:bg-white/10 transition-all">
+            <Link href="/contact?subject=Samples" className="border-2 border-white/20 px-8 py-5 text-xs font-black uppercase tracking-[0.18em] text-white transition-all hover:bg-white/10 md:px-16 md:py-6 md:tracking-[0.3em]">
               Request Free Sample Box
             </Link>
           </div>

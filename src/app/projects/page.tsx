@@ -23,17 +23,17 @@ export default function ProjectsPage() {
 
       <section className="section-padding">
         <div className="container-fox">
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
             {caseStudies.map((cs) => (
-              <Link key={cs.id} href={`/projects/${cs.id}`} className="group block border-b border-border pb-16">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm mb-10 shadow-xl relative">
+              <Link key={cs.id} href={`/projects/${cs.id}`} className="group block border-b border-border pb-10 md:pb-16">
+                <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-sm shadow-xl md:mb-10">
                   <ProductImage src={cs.image} alt={cs.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
                   <div className="absolute top-6 left-6 bg-primary px-4 py-2 text-[10px] font-black text-white uppercase tracking-widest">
                     {cs.category === "carpet-tiles" ? "Modular" : "Hospitality"}
                   </div>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 uppercase tracking-tight group-hover:text-accent transition-colors">{cs.title}</h2>
-                <p className="text-muted text-lg leading-relaxed mb-10 h-24 overflow-hidden">{cs.description}</p>
+                <p className="mb-6 text-base leading-relaxed text-muted md:mb-10 md:h-24 md:overflow-hidden md:text-lg">{cs.description}</p>
                 <div className="flex items-center gap-4 text-xs font-black text-primary uppercase tracking-[0.2em]">
                    Request Solution Details <span className="text-accent">→</span>
                 </div>
