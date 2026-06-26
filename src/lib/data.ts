@@ -15,18 +15,51 @@ export const brandInfo = {
   stats: { area: "50,000㎡", employees: "900+", markets: "45+", experience: "15+ Years" }
 };
 
+export const faqSections = [
+  {
+    title: "Product FAQs",
+    questions: [
+      { q: "What types of commercial carpets do you offer?", a: "We provide Carpet Tiles, Broadloom Carpets, Modular Carpet Systems, Custom Area Rugs, and Entrance Mat Systems." },
+      { q: "What is the difference between carpet tiles and broadloom carpet?", a: "Carpet tiles offer modular installation and easier replacement. Broadloom carpet provides a seamless appearance for grand hospitality spaces." },
+      { q: "Are your carpets suitable for high-traffic commercial areas?", a: "Yes. Our commercial flooring solutions are designed for demanding environments such as hotel corridors, office spaces, and airports." },
+      { q: "How long do commercial carpets typically last?", a: "Service life depends on traffic, but our commercial-grade carpets are engineered for high appearance retention over many years." }
+    ]
+  },
+  {
+    title: "Custom Design FAQs",
+    questions: [
+      { q: "Can you customize carpet designs?", a: "Yes. We offer custom patterns, colors, and brand graphics developed for your specific project." },
+      { q: "Can you match our designer’s color palette?", a: "Absolutely. We match Pantone references, brand guidelines, or physical samples." }
+    ]
+  },
+  {
+    title: "Commercial Project FAQs",
+    questions: [
+      { q: "What information do you need for a quotation?", a: "Please provide floor plans, estimated quantities, project location, and your delivery schedule." },
+      { q: "Can you support international commercial projects?", a: "Yes. We provide export packaging and global shipping support for B2B projects." }
+    ]
+  },
+  {
+    title: "Manufacturing & Logistics FAQs",
+    questions: [
+      { q: "What is your production capacity?", a: "Our 50,000㎡ facility supports large-scale developments and bulk procurement." },
+      { q: "What certifications can be provided?", a: "Products comply with ASTM E648 Fire Rating, CRI Green Label Plus, and CE standards." }
+    ]
+  }
+];
+
 export const products: Product[] = [
   {
     id: "nylon-tiles-elite",
     name: "Premium Nylon 6.6 Commercial Carpet Tiles",
     category: "carpet-tiles",
     description: "Modular 50x50cm tiles engineered for high-traffic corporate offices and corridors.",
-    longDescription: "Our Premium Nylon 6.6 series represents the pinnacle of modular flooring performance. Designed for the global B2B market, these tiles offer exceptional appearance retention under heavy rolling chair loads and are treated with advanced stain-resistance technology.",
+    longDescription: "Our Premium Nylon 6.6 series represents the pinnacle of modular flooring performance. Designed for global commercial standards, these tiles offer exceptional durability.",
     image: "/images/carpet-tile-premium.jpg",
     moq: "200 SQM",
     leadTime: "10-14 Days",
-    spec: { material: "100% Solution-Dyed Nylon 6.6", size: "50x50 cm", colors: [] },
-    technicalSpecs: { fireRating: "ASTM E648 Class I / EN 13501-1 Bfl-s1", trafficClass: "Class 33 Heavy Commercial", yarnSystem: "Multi-level Loop Pile", backing: "High-Stability Bitumen with Glass Fiber", pileWeight: "20 oz/yd²", totalThickness: "6.5 mm", soundInsulation: "ΔLw 24dB", antistatic: "< 2.0 kV" },
+    spec: { material: "100% Nylon 6.6", size: "50x50 cm", colors: [] },
+    technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 33 Heavy Commercial", yarnSystem: "Loop Pile", backing: "Bitumen with Glass Fiber", pileWeight: "20 oz/yd²", totalThickness: "6.5 mm", soundInsulation: "24dB", antistatic: "< 2.0 kV" },
     features: ["Stain Resistance", "Dimensional Stability"]
   },
   {
@@ -34,56 +67,46 @@ export const products: Product[] = [
     name: "Axminster 80/20 Wool Blend Hotel Carpet",
     category: "wall-to-wall",
     description: "Custom jacquard woven broadloom specifically designed for 5-star hotel guest rooms.",
-    longDescription: "Vishome Axminster collections offer the ultimate hospitality experience. Combining the natural luxury of New Zealand wool with the durability of anti-static nylon.",
+    longDescription: "Combining the luxury of wool with the durability of nylon, Visfurn Axminster is the standard for high-end hospitality flooring.",
     image: "/images/broadloom-premium.jpg",
     moq: "500 SQM",
-    leadTime: "30 Days",
-    spec: { material: "80% Wool / 20% Nylon", size: "4m Width Rolls", colors: [] },
-    technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 32 Hospitality", yarnSystem: "Woven Axminster", backing: "Jute/Cotton", pileWeight: "42 oz/yd²", totalThickness: "11 mm", soundInsulation: "ΔLw 28dB", antistatic: "Permanent" },
-    features: ["Custom Pattern", "Luxury Feel"]
+    leadTime: "25-35 Days",
+    spec: { material: "80% Wool / 20% Nylon", size: "4m width", colors: [] },
+    technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 32 Hospitality", yarnSystem: "Woven Axminster", backing: "Jute/Cotton", pileWeight: "36-50 oz", totalThickness: "10-12 mm", soundInsulation: "28dB", antistatic: "Permanent" },
+    features: ["Bespoke Pattern", "Luxurious Texture"]
   },
   {
     id: "public-area-heavy-duty",
     name: "High-Traffic Public Area Corridor Carpet",
     category: "public-area",
-    description: "Extra-durable broadloom rolls for airports and exhibition centers.",
-    longDescription: "Engineered for maximum durability in high-traffic public infrastructure projects.",
+    description: "Extra-durable broadloom rolls for airports, exhibition centers, and commercial passageways.",
+    longDescription: "Engineered for maximum durability in high-traffic public infrastructure projects. Low maintenance and high-performance design.",
     image: "/images/public-area-carpets.webp",
     moq: "300 SQM",
-    leadTime: "20 Days",
-    spec: { material: "Solution-Dyed Nylon", size: "4m Width Rolls", colors: [] },
-    technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 33 Extra Heavy", yarnSystem: "Tufted Loop Pile", backing: "Heavy-Duty Bitumen", pileWeight: "28 oz/yd²", totalThickness: "8.5 mm", soundInsulation: "ΔLw 22dB", antistatic: "< 2.0 kV" },
-    features: ["Heavy Traffic", "Non-slip"]
+    leadTime: "15-20 Days",
+    spec: { material: "100% Solution-Dyed Nylon", size: "4m width", colors: [] },
+    technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 33 Extra Heavy", yarnSystem: "Dense Tufted", backing: "Bitumen/PVC", pileWeight: "28 oz/yd²", totalThickness: "8.5 mm", soundInsulation: "22dB", antistatic: "< 2.0 kV" },
+    features: ["Heavy Traffic Resistance", "Non-slip"]
   }
 ];
 
 export const productCategories = [
-  { id: "carpet-tiles", name: "Commercial Carpet Tiles", description: "Modular solutions.", image: "/images/category-tiles.jpg", slug: "carpet-tiles" },
-  { id: "wall-to-wall", name: "Wall-to-Wall Carpets", description: "Seamless broadloom.", image: "/images/category-broadloom.jpg", slug: "wall-to-wall" },
+  { id: "carpet-tiles", name: "Commercial Carpet Tiles", description: "Modular solutions for offices.", image: "/images/category-tiles.jpg", slug: "carpet-tiles" },
+  { id: "wall-to-wall", name: "Wall-to-Wall Carpets", description: "Seamless broadloom for hospitality.", image: "/images/category-broadloom.jpg", slug: "wall-to-wall" },
   { id: "public-area", name: "Public Area Carpets", description: "Heavy-duty specialized flooring.", image: "/images/public-area-carpets.webp", slug: "public-area" }
 ];
 
-export const caseStudies: CaseStudy[] = [
-  { id: "hotel-dubai", title: "Luxury Hotel Lobby — Dubai", category: "wall-to-wall", image: "/images/about/hero.png", description: "5,000+ sqm custom Axminster broadloom renovation. ASTM E648 Class I certified.", projectSpecs: [{label: "Area", value: "5,000 sqm"}, {label: "Material", value: "80/20 Wool Nylon"}] },
-  { id: "retail-india", title: "Department Store — India", category: "public-area", image: "/images/about/project-application.png", description: "Large scale retail department store navigation flooring.", projectSpecs: [{label: "Market", value: "India"}, {label: "Product", value: "Public Area Rolls"}] },
-  { id: "casino-vegas", title: "Casino Floor — Las Vegas", category: "wall-to-wall", image: "/images/about/production-workshop.png", description: "Extreme wear resistance for 24/7 casino gaming floors.", projectSpecs: [{label: "Location", value: "Las Vegas, USA"}, {label: "Durability", value: "Class 33"}] },
-  { id: "medical-singapore", title: "Medical Facility — Singapore", category: "carpet-tiles", image: "/images/about/qc.png", description: "Antimicrobial carpet tiles for hospital wings and healthcare spaces.", projectSpecs: [{label: "Standard", value: "CRI Green Label"}, {label: "Feature", value: "Antimicrobial"}] },
-  { id: "office-tokyo", title: "Corporate Space — Tokyo", category: "carpet-tiles", image: "/images/about/custom-design.png", description: "Acoustic-optimized fit-out for multi-floor corporate headquarters.", projectSpecs: [{label: "Type", value: "Office HQ"}, {label: "Acoustics", value: "24dB Reduction"}] },
-  { id: "airport-changi", title: "Airport Terminal — Singapore", category: "public-area", image: "/images/about/warehouse.png", description: "High-performance corridor carpet rolls for intense luggage traffic.", projectSpecs: [{label: "Project", Changi: "Airport"}, {label: "Class", value: "Extra Heavy Commercial"}] },
-  { id: "residence-mumbai", title: "Luxury Residential — Mumbai", category: "wall-to-wall", image: "/images/about/factory-exterior.png", description: "Premium bespoke wool broadloom for high-end residential towers.", projectSpecs: [{label: "Market", value: "India"}, {label: "Style", value: "Hand-tufted Look"}] },
-  { id: "edu-australia", title: "Educational Institution — Australia", category: "carpet-tiles", image: "/images/about/project-application.png", description: "Sustainable university flooring for collaborative learning zones.", projectSpecs: [{label: "Region", value: "Australia"}, {label: "Standard", value: "Low VOC"}] },
-  { id: "hospitality-korea", title: "Extended-Stay — South Korea", category: "wall-to-wall", image: "/images/about/hero.png", description: "Serviced apartment corridor renovation with fire-rated broadloom.", projectSpecs: [{label: "Project", value: "South Korea"}, {label: "Type", value: "Serviced Apartments"}] },
-  { id: "retail-paris", title: "Retail Flagship — Paris", category: "public-area", image: "/images/about/custom-design.png", description: "Custom pattern design for luxury fashion boutique flagship store.", projectSpecs: [{label: "City", value: "Paris, France"}, {label: "Design", value: "Custom Pattern"}] }
-];
+export const certifications = [{ name: "ASTM E648", description: "Fire Rating" }, { name: "CRI Green Label", description: "Indoor Air Quality" }];
 
-export const faqSections = [
-  {
-    title: "Sourcing FAQs",
-    questions: [
-      { q: "What types of commercial carpets do you offer?", a: "We provide Carpet Tiles, Broadloom Carpets, Modular Systems, and Custom Area Rugs." },
-      { q: "What is your typical production lead time?", a: "Standard stock items ship within 7-10 days. Custom orders require 25-35 days." },
-      { q: "Do you supply fire-rated carpet?", a: "Yes, our commercial ranges meet ASTM E648 Class I and EN 13501-1 certifications." }
-    ]
-  }
+export const caseStudies: CaseStudy[] = [
+  { id: "hotel-dubai", title: "Luxury Hotel Lobby — Dubai", category: "wall-to-wall", image: "/images/about/about-us-hero-banner.webp", description: "Supplied 5,000+ sqm of custom Axminster broadloom. ASTM E648 Class I certified.", projectSpecs: [{label:"Area", value:"5,000 sqm"}, {label:"Material", value:"Axminster 80/20"}] },
+  { id: "retail-india", title: "Department Store — India", category: "public-area", image: "/images/about/commercial-project-application.webp", description: "Retail department store color-coded flooring project.", projectSpecs: [{label:"Type", value:"Retail"}, {label:"Scale", value:"Multi-department"}] },
+  { id: "casino-vegas", title: "Casino Floor — Las Vegas", category: "wall-to-wall", image: "/images/about/production-workshop.webp", description: "Extreme wear resistance for 24/7 casino gaming floors.", projectSpecs: [{label:"Durability", value:"Class 33"}, {label:"Traffic", value:"24/7"}] },
+  { id: "medical-singapore", title: "Medical Facility — Singapore", category: "carpet-tiles", image: "/images/about/quality-control-inspection.webp", description: "Antimicrobial carpet tiles for hospital wings.", projectSpecs: [{label:"Standard", value:"CRI Green Label"}, {label:"Safety", value:"Antimicrobial"}] },
+  { id: "office-tokyo", title: "Corporate Space — Tokyo", category: "carpet-tiles", image: "/images/about/custom-design-support.webp", description: "Acoustic-optimized fit-out for corporate headquarters.", projectSpecs: [{label:"Acoustics", value:"24dB"}, {label:"Format", value:"Carpet Tiles"}] },
+  { id: "airport-changi", title: "Airport Terminal — Singapore", category: "public-area", image: "/images/about/carpet-tile-inventory-warehouse.webp", description: "High-performance corridor rolls for intense luggage traffic.", projectSpecs: [{label:"Load", value:"Intense Wheels"}, {label:"Maintenance", value:"Low"}] },
+  { id: "residence-mumbai", title: "Luxury Residential — Mumbai", category: "wall-to-wall", image: "/images/about/factory-exterior.webp", description: "Bespoke wool broadloom for high-end residential interiors.", projectSpecs: [{label:"Market", value:"India"}, {label:"Style", value:"Bespoke"}] },
+  { id: "edu-australia", title: "Educational Institution — Australia", category: "carpet-tiles", image: "/images/about/commercial-project-application.webp", description: "Sustainable university zones fit-out.", projectSpecs: [{label:"Market", value:"Australia"}, {label:"VOC", value:"Low"}] },
+  { id: "hospitality-korea", title: "Extended-Stay — South Korea", category: "wall-to-wall", image: "/images/about/about-us-hero-banner.webp", description: "Hospitality corridor renovation.", projectSpecs: [{label:"Location", value:"Seoul"}, {label:"Compliance", value:"Fire Rated"}] },
+  { id: "retail-paris", title: "Retail Flagship — Paris", category: "public-area", image: "/images/about/custom-design-support.webp", description: "Custom pattern design for luxury boutique.", projectSpecs: [{label:"Design", value:"Custom Pattern"}, {label:"City", value:"Paris"}] }
 ];
-export const certifications = [{ name: "ASTM E648", description: "Fire Rating" }, { name: "CRI Green Label", description: "IAQ" }];
