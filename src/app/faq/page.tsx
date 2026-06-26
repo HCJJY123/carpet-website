@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { faqSections } from "@/lib/data";
 import { safeJsonLd } from "@/lib/seo";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "B2B Carpet Sourcing FAQ | Project & Technical Support | VISHOME",
@@ -31,18 +32,14 @@ export default function FAQPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }}
       />
-      {/* Header */}
-      <section className="bg-[#102A43] py-20 text-center relative overflow-hidden">
-        <div className="container-fox relative z-10">
-          <span className="text-accent font-black tracking-[0.4em] text-[10px] uppercase mb-4 block">B2B Knowledge Hub</span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-widest leading-tight">
-            Procurement & Project FAQ
-          </h1>
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-xs uppercase tracking-widest font-bold leading-loose">
-            Addressing Technical Concerns for Architects, Contractors, and Hotel Groups
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Procurement & Project FAQ"
+        eyebrow="B2B Knowledge Hub"
+        description="Addressing technical concerns for architects, contractors, hotel groups, and flooring distributors."
+        image="/images/about/quality-control-inspection.webp"
+        imageAlt="Commercial carpet quality inspection background"
+        objectPosition="center 45%"
+      />
 
       {/* FAQ Main Content */}
       <section className="section-padding">

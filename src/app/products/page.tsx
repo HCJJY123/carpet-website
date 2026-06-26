@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { productCategories as categories } from "@/lib/data";
 import ProductImage from "@/components/ProductImage";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Commercial Carpet Products | Carpet Tiles, Broadloom & Public Area Carpet | VISHOME",
@@ -11,9 +12,14 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <div className="bg-white min-h-screen">
-      <section className="bg-[#102A43] py-20 text-center">
-        <div className="container-fox"><h1 className="text-4xl md:text-5xl font-black text-white mb-4 uppercase tracking-widest">Our Products</h1></div>
-      </section>
+      <PageHero
+        title="Our Products"
+        eyebrow="Commercial Carpet Systems"
+        description="Explore modular carpet tiles, wall-to-wall broadloom, and heavy-duty public area carpet systems for global B2B projects."
+        image="/images/carpet-tile-premium.jpg"
+        imageAlt="Commercial carpet tiles product background"
+        objectPosition="center 58%"
+      />
       <section className="section-padding">
         <div className="container-fox">
           <div className="grid md:grid-cols-3 gap-8">

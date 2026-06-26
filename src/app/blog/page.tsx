@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Commercial Carpet Blog | B2B Sourcing, Specs & Project Guides | VISHOME",
@@ -11,15 +12,14 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <div className="bg-white min-h-screen">
-      {/* Blog Header - Foxflor Style */}
-      <section className="bg-primary-light py-20">
-        <div className="container-fox text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 uppercase tracking-widest">B2B Sourcing Insights</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg opacity-90">
-            Professional guides on carpet specifications, fire ratings, logistics, and procurement strategies for global projects.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="B2B Sourcing Insights"
+        eyebrow="Commercial Carpet Knowledge"
+        description="Professional guides on carpet specifications, fire ratings, logistics, and procurement strategies for global projects."
+        image="/images/blog-material-comparison.jpg"
+        imageAlt="Commercial carpet material comparison background"
+        objectPosition="center 50%"
+      />
 
       {/* Blog Grid */}
       <section className="section-padding">

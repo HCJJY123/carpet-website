@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ProductImage from "@/components/ProductImage";
+import PageHero from "@/components/PageHero";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 
 export default function ContactPage() {
@@ -41,15 +42,14 @@ export default function ContactPage() {
 
   return (
     <div className="bg-white">
-      {/* Targeted Hero */}
-      <section className="relative bg-primary-light py-24 overflow-hidden">
-        <div className="container-fox text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 uppercase tracking-wider">Start Your Procurement</h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg opacity-90 leading-relaxed font-light">
-            Request pricing, technical certificates, or professional sample matching for your commercial flooring project.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Start Your Procurement"
+        eyebrow="Factory Direct Project Support"
+        description="Request pricing, technical certificates, or professional sample matching for your commercial flooring project."
+        image="/images/contact-hero.jpg"
+        imageAlt="Commercial carpet procurement consultation background"
+        objectPosition="center 42%"
+      />
 
       <section className="section-padding">
         <div className="container-fox">

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+import PageHero from "@/components/PageHero";
 import { caseStudies } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -11,12 +12,14 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div className="bg-white min-h-screen">
-      <section className="bg-[#102A43] py-24 text-center">
-        <div className="container-fox">
-          <h1 className="text-4xl md:text-6xl font-black text-white uppercase tracking-widest leading-tight">Project Case Studies</h1>
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-xs uppercase font-bold tracking-widest">Proven Sourcing Solutions for Global B2B Projects</p>
-        </div>
-      </section>
+      <PageHero
+        title="Project Case Studies"
+        eyebrow="Global Installation References"
+        description="Proven sourcing solutions for hotel, retail, office, and public-area commercial carpet projects."
+        image="/images/case-series/case-1/Case_1_Lobby_Grand_Reveal.jpg"
+        imageAlt="Luxury hotel lobby carpet project background"
+        objectPosition="center 48%"
+      />
 
       <section className="section-padding">
         <div className="container-fox">
