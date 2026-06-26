@@ -1,27 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import WhatsAppFloating from "@/components/WhatsAppFloating";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.visfurn.com"),
   title: "Vishome | Commercial Carpet Tiles & Hotel Broadloom Manufacturer",
   description:
     "Vishome Global Commercial Carpet Co. Ltd. manufactures commercial carpet tiles, hotel broadloom carpets, and custom flooring solutions for global B2B projects.",
   keywords:
     "Vishome, carpet tiles, broadloom carpet, commercial carpet, hotel carpet, modular flooring, China carpet manufacturer",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Vishome | Premium Commercial Carpet & Flooring Solutions",
     description: "Vishome Global Commercial Carpet Co. Ltd.: a Tianjin-based manufacturer for commercial carpet tiles, hotel carpets, and custom B2B flooring projects.",
@@ -42,10 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col font-sans">
         <JsonLd />
         <Header />

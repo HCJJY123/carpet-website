@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import { products, productCategories } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+
+export const metadata: Metadata = {
+  title: "Commercial Carpet Tiles | Modular Office & Project Flooring | VISHOME",
+  description:
+    "Explore Vishome commercial carpet tiles for offices, education, retail, and project-based interiors with modular maintenance and flexible installation benefits.",
+  alternates: {
+    canonical: "/products/carpet-tiles",
+  },
+};
 
 export default function CategoryPage() {
   const categoryId = "carpet-tiles";

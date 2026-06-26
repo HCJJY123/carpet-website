@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -8,9 +9,11 @@ export default function Footer() {
           {/* Logo & Intro - FIXED VERSION WITH REAL LOGO */}
           <div className="col-span-1 lg:col-span-1">
             <div className="mb-8 flex items-center gap-4">
-              <img
+              <Image
                 src="/logo-footer.svg"
                 alt="Vishome Logo"
+                width={112}
+                height={64}
                 className="h-16 w-auto"
               />
               <div className="flex flex-col">
@@ -42,7 +45,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4">
               <li><Link href="/about-us" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">About Us</Link></li>
-              <li><Link href="/cases" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Case Studies</Link></li>
+              <li><Link href="/projects" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Case Studies</Link></li>
               <li><Link href="/blog" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">B2B Insights</Link></li>
               <li><Link href="/faq" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">FAQ</Link></li>
             </ul>

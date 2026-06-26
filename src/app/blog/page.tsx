@@ -1,6 +1,23 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
+
+export const metadata: Metadata = {
+  title: "B2B Carpet Sourcing Insights | Blog | VISHOME",
+  description:
+    "Technical articles on commercial carpet specification, installation, maintenance, logistics, and sourcing strategy for global B2B flooring projects.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "B2B Carpet Sourcing Insights | VISHOME",
+    description:
+      "Commercial carpet guides covering specifications, logistics, hospitality sourcing, and project planning.",
+    url: "https://www.visfurn.com/blog",
+    type: "website",
+  },
+};
 
 export default function BlogPage() {
   return (

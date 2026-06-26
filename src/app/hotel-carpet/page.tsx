@@ -27,7 +27,7 @@ export default function HotelCarpetPage() {
               </p>
               <div className="flex flex-wrap gap-6">
                 <Link href="/contact" className="btn-fox-orange">Request Design Proposal</Link>
-                <Link href="/cases" className="btn-fox-outline">View Hotel Projects</Link>
+                <Link href="/projects" className="btn-fox-outline">View Hotel Projects</Link>
               </div>
             </div>
             <div className="lg:w-2/5 relative">

@@ -20,7 +20,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.seoTitle,
     description: post.description,
     keywords: post.keywords,
-    alternates: { canonical: `/blog/${post.slug}` }
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: post.seoTitle,
+      description: post.description,
+      url: `https://www.visfurn.com/blog/${post.slug}`,
+      type: "article",
+      images: post.h1Image || post.image ? [post.h1Image || post.image] : undefined,
+    }
   };
 }
 

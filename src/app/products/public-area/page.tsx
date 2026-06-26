@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import { products, productCategories } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+
+export const metadata: Metadata = {
+  title: "Public Area Carpets | Heavy-Duty Commercial Flooring | VISHOME",
+  description:
+    "Discover Vishome public-area carpets designed for heavy traffic, circulation zones, and demanding commercial environments that need durable flooring performance.",
+  alternates: {
+    canonical: "/products/public-area",
+  },
+};
 
 export default function CategoryPage() {
   const categoryId = "public-area";
