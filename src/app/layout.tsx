@@ -31,6 +31,20 @@ export const metadata: Metadata = {
     url: "https://www.visfurn.com",
     siteName: "Vishome",
     type: "website",
+    images: [
+      {
+        url: "https://www.visfurn.com/images/og-cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Vishome Global Commercial Carpet Manufacturer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vishome | Premium Commercial Carpet & Flooring Solutions",
+    description: "B2B commercial carpet manufacturer in Tianjin, China. Carpet tiles, hotel broadloom, public area flooring for global projects.",
+    images: ["https://www.visfurn.com/images/og-cover.jpg"],
   },
   icons: {
     icon: "/favicon.svg",
