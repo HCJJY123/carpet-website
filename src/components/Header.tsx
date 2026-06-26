@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -12,6 +13,7 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border shadow-sm">
       <div className="max-w-[1200px] mx-auto px-4">

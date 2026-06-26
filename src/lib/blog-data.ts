@@ -1,198 +1,402 @@
-export interface BlogPost { slug: string; title: string; seoTitle: string; description: string; keywords: string[]; date: string; author: string; category: string; image: string; content: string; suggestedLinks: { label: string; href: string }[]; }
+export interface BlogSection {
+  title: string;
+  paragraphs: string[];
+  image?: string;
+  imageAlt?: string;
+  imageCaption?: string;
+}
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  subtitle: string;
+  painPoint: string;
+  seoTitle: string;
+  description: string;
+  keywords: string[];
+  date: string;
+  author: string;
+  category: string;
+  image: string;
+  h1Image?: string;
+  h1ImageAlt?: string;
+  h1ImageCaption?: string;
+  sections: BlogSection[];
+  suggestedLinks: { label: string; href: string }[];
+}
+
 export const blogPosts: BlogPost[] = [
   {
-    slug: "carpet-tiles-vs-broadloom-commercial-projects",
-    title: "Carpet Tiles vs Broadloom: Which Commercial Carpet Is Better for Your Project?",
-    seoTitle: "Carpet Tiles vs Broadloom | Visfurn Commercial Flooring",
-    description: "In-depth comparison of modular carpet tiles and broadloom rolls for hotel, office, and commercial projects.",
-    keywords: ["carpet tiles", "broadloom", "commercial carpet", "flooring comparison"],
-    date: "2026-06-19",
+    slug: "commercial-space-carpet-tiles-maintenance-cost-guide",
+    title: "Transform Your Commercial Space: How Premium Carpet Tiles Cut Maintenance Costs by 40%",
+    subtitle: "Strategic flooring solutions for hotels, offices, and retail environments.",
+    painPoint: "High maintenance budgets, frequent replacement needs, and downtime costs.",
+    seoTitle: "Premium Carpet Tiles Maintenance Cost Guide | VISHOME",
+    description: "How modular carpet tiles reduce maintenance scope, replacement waste, and lifecycle cost in commercial spaces.",
+    keywords: ["carpet tiles", "maintenance cost", "commercial flooring", "hospitality carpet ROI"],
+    date: "2026-06-23",
     author: "Vishome Technical Team",
-    category: "Buying Guide",
-    image: "/images/blog-material-comparison.jpg",
-    content: "When specifying commercial flooring, the choice between carpet tiles and broadloom often comes down to installation flexibility versus visual continuity. Carpet tiles are modular 50x50cm pieces that offer unparalleled ease of maintenance. If a tile is damaged, it can be replaced individually, making them ideal for corporate offices and high-traffic public facilities. \n\nBroadloom carpet, supplied in 4-meter wide rolls, provides a seamless, luxurious look that is often preferred for 5-star hotel guest rooms and grand ballrooms. While the waste factor is higher for broadloom (typically 15-20% compared to 5% for tiles), the aesthetic impact of a continuous pattern is unmatched in luxury hospitality design. \n\nFor corridors and lobby areas, Visfurn recommends high-density Axminster broadloom for maximum appearance retention, while open-plan offices benefit most from solution-dyed nylon carpet tiles with bitumen or PVC backing.",
-    suggestedLinks: [{ label: "Commercial Tiles", href: "/products/carpet-tiles" }, { label: "Broadloom Rolls", href: "/products/wall-to-wall" }]
+    category: "Cost & ROI",
+    image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.png",
+    h1Image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.png",
+    h1ImageAlt: "Blog 1 hotel lobby before and after comparison",
+    h1ImageCaption: "表格位置要求：H1 后",
+    sections: [
+      {
+        title: "The Financial Reality",
+        paragraphs: [
+          "Commercial property managers face a difficult balance: preserving premium visual standards while controlling maintenance budgets and downtime.",
+          "Traditional broadloom often forces full-area replacement when damage is localized, which drives unnecessary material waste and labor cost.",
+          "Modular carpet tiles shift the maintenance model by allowing selective replacement in high-wear zones.",
+          "In practical operations, this reduces disruption windows and improves lifecycle budget predictability for hotels, offices, and retail chains."
+        ]
+      },
+      {
+        title: "安装优势（Installation Advantages）",
+        paragraphs: [
+          "Modern carpet tiles integrate with HVAC access routes, cable systems, and phased renovation schedules without requiring full-site shutdown.",
+          "The 50x50 modular format supports faster logistics handling and staged installation by functional zone.",
+          "For active sites, teams can often complete section-based replacement within short operational windows.",
+          "This is especially valuable for facilities that cannot tolerate prolonged closure or full-floor shutdown."
+        ],
+        image: "/images/blog-series/blog-1/Blog_1_Installation_Process.png",
+        imageAlt: "Blog 1 installation process",
+        imageCaption: "表格位置要求：\"安装优势\" 后"
+      },
+      {
+        title: "ROI 计算（ROI Calculation）",
+        paragraphs: [
+          "A practical ROI model should include installation cost, replacement cycle, deep-cleaning frequency, and operational downtime.",
+          "For a 1,000 m² project, 5-year savings often come from reduced replacement scope rather than lower upfront price alone.",
+          "Higher-grade tiles can outperform low-cost options when measured against real operating conditions.",
+          "For B2B buyers, total ownership cost is the decision metric that matters most—not unit price in isolation."
+        ],
+        image: "/images/blog-series/blog-1/Blog_1_Durability_Infographic.png",
+        imageAlt: "Blog 1 durability and maintenance infographic",
+        imageCaption: "表格位置要求：\"ROI 计算\" 后"
+      }
+    ],
+    suggestedLinks: [
+      { label: "Carpet Tile Products", href: "/products/carpet-tiles" },
+      { label: "Request Quote", href: "/contact" }
+    ]
   },
   {
-    slug: "50x50-carpet-tiles-buying-guide",
-    title: "50x50 Carpet Tiles Buying Guide for Offices and Commercial Spaces",
-    seoTitle: "50x50 Carpet Tiles Buying Guide | Office Fit-out Tips",
-    description: "Learn how to choose the right 50x50 modular carpet tiles for your commercial renovation.",
-    keywords: ["50x50 carpet tiles", "modular carpet", "office flooring", "carpet manufacturer"],
-    date: "2026-06-19",
-    author: "Sourcing Expert",
-    category: "Buying Guide",
-    image: "/images/carpet-tile-premium.jpg",
-    content: "50x50cm (approx. 20x20 inches) is the global standard for modular carpet tiles. This size maximizes logistics efficiency and vertical transport in building elevators. When selecting 50x50 tiles, B2B buyers should focus on the yarn system and the backing. \n\nSolution-dyed nylon 6.6 is the gold standard for office environments because the color is part of the fiber itself, providing superior stain resistance and fade performance. For budget-sensitive projects, polypropylene (PP) tiles offer a cost-effective alternative. \n\nBacking is equally critical for dimensional stability. Visfurn provides bitumen with glass fiber reinforcement to ensure tiles stay flat and edges do not curl under rolling chair traffic. Our 50x50 range supports various installation methods including ashlar, monolithic, and quarter-turn patterns.",
-    suggestedLinks: [{ label: "Browse 50x50 Tiles", href: "/products/carpet-tiles" }, { label: "Request Samples", href: "/contact" }]
+    slug: "axminster-vs-wilton-vs-tufted-hospitality-guide",
+    title: "Axminster vs Wilton vs Tufted Carpets: What Indian Hospitality Groups Must Know",
+    subtitle: "Technical specifications that determine durability, appearance, and customer satisfaction.",
+    painPoint: "Specification confusion, quality compromise, and warranty disputes.",
+    seoTitle: "Axminster vs Wilton vs Tufted Hospitality Guide | VISHOME",
+    description: "A technical comparison of three major carpet constructions for hospitality procurement decisions.",
+    keywords: ["axminster", "wilton", "tufted", "hospitality carpet", "technical comparison"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
+    category: "Technical Guide",
+    image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.png",
+    sections: [
+      {
+        title: "技术规格（Technical Specifications）",
+        paragraphs: [
+          "Hospitality operators managing multi-property portfolios need clear construction logic to avoid costly specification mistakes.",
+          "Axminster supports rich multi-color design and high pattern fidelity, making it strong for premium guest-facing zones.",
+          "Wilton offers dense woven performance and consistent heritage aesthetics in executive corridors and formal spaces.",
+          "Tufted systems deliver faster output and flexible cost control for large-volume rooms and general commercial areas."
+        ],
+        image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.png",
+        imageAlt: "Blog 2 manufacturing process comparison",
+        imageCaption: "表格位置要求：\"技术规格\" 后"
+      },
+      {
+        title: "对比表（Comparison Table）",
+        paragraphs: [
+          "Comparison should go beyond marketing claims and include tuft density, pattern precision, lead time, seam behavior, and maintenance profile.",
+          "A durable system with poor seam quality can still fail visual expectations in premium hospitality environments.",
+          "Likewise, premium pattern capability without lifecycle planning can create budget pressure in high-volume projects.",
+          "A structured comparison framework helps procurement teams justify decisions to operations, design, and finance stakeholders."
+        ],
+        image: "/images/blog-series/blog-2/Blog_2_Durability_Chart.png",
+        imageAlt: "Blog 2 durability comparison chart",
+        imageCaption: "表格位置要求：\"对比表\" 后"
+      },
+      {
+        title: "接缝质量（Seam Quality）",
+        paragraphs: [
+          "Seaming is often the hidden cost driver and visual risk point in hospitality carpet delivery.",
+          "Luxury environments demand minimal seam visibility and strict color continuity at junction lines.",
+          "Installation QA should include seam direction planning, pattern registration checks, and post-install visual audits.",
+          "Where seaming discipline is weak, guest-facing perception declines even if material specification appears strong on paper."
+        ],
+        image: "/images/blog-series/blog-2/Blog_2_Seam_Quality_Macro.png",
+        imageAlt: "Blog 2 seam quality macro comparison",
+        imageCaption: "表格位置要求：\"接缝质量\" 后"
+      }
+    ],
+    suggestedLinks: [
+      { label: "Wall-to-Wall Carpet", href: "/products/wall-to-wall" },
+      { label: "Hospitality Solutions", href: "/products/hotel-hospitality" }
+    ]
   },
   {
-    slug: "fire-rated-commercial-carpet-guide",
-    title: "Fire-Rated Commercial Carpet: Essential Standards for Hotel & Office Projects",
-    seoTitle: "Fire-Rated Commercial Carpet Guide | ASTM E648 Class I",
-    description: "Technical guide for fire safety certifications (ASTM E648) in commercial carpet procurement.",
-    keywords: ["fire rated carpet", "ASTM E648", "commercial safety", "carpet certification"],
-    date: "2026-06-19",
-    author: "Compliance Specialist",
-    category: "Technical",
-    image: "/images/blog-installation-maintenance.jpg",
-    content: "Fire safety is a non-negotiable requirement for commercial buildings. In the US and many international markets, commercial carpet must meet the ASTM E648 Standard Test Method for Critical Radiant Flux. A 'Class I' rating is typically required for corridors and public exits in hotels and hospitals. \n\nAt Vishome, our commercial carpet tiles and hotel broadloom are rigorously tested to meet or exceed ASTM E648 and European EN 13501-1 standards. These certifications ensure that the flooring contributes minimal flame spread and smoke in the event of an emergency. When requesting a quotation, always ask for the radiant panel test report to ensure your project complies with local building codes.",
-    suggestedLinks: [{ label: "Technical Support", href: "/contact" }, { label: "Project Cases", href: "/projects" }]
+    slug: "carpet-printing-technology-design-to-installation-guide",
+    title: "Carpet Printing Technology: From Digital Design to On-Floor Installation",
+    subtitle: "How advanced printing methods create bespoke designs at competitive prices.",
+    painPoint: "High custom design cost, unpredictable lead time, and quality inconsistency.",
+    seoTitle: "Carpet Printing Technology Guide | VISHOME",
+    description: "How digital carpet printing improves flexibility, revision speed, and production control for custom projects.",
+    keywords: ["carpet printing", "digital inkjet carpet", "custom pattern carpet", "color precision"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
+    category: "Design & Production",
+    image: "/images/blog-series/blog-3/Blog_3_Printing_Process.png",
+    sections: [
+      {
+        title: "技术对比（Technology Comparison）",
+        paragraphs: [
+          "Modern digital printing has reduced entry barriers for custom carpet programs once limited to large-scale budgets.",
+          "Unlike traditional screen-based workflows, digital pipelines reduce setup friction and allow faster design iteration.",
+          "This is particularly useful for medium-volume hospitality, retail, and branded commercial interiors.",
+          "For project teams, faster revision loops significantly improve alignment between design intent and factory output."
+        ],
+        image: "/images/blog-series/blog-3/Blog_3_Printing_Process.png",
+        imageAlt: "Blog 3 printing process flow",
+        imageCaption: "表格位置要求：\"技术对比\" 后"
+      },
+      {
+        title: "应用示例（Application Examples）",
+        paragraphs: [
+          "Digital print applications now span hotel branding, retail wayfinding, casino pattern systems, and themed commercial zones.",
+          "Design intent can be adapted by zone function without restarting full production tooling.",
+          "This flexibility enables stronger brand coherence across multi-space programs.",
+          "Application context—not just unit price—should determine which print route is selected."
+        ],
+        image: "/images/blog-series/blog-3/Blog_3_Custom_Designs_Gallery.png",
+        imageAlt: "Blog 3 custom design showcase",
+        imageCaption: "表格位置要求：\"应用示例\" 后"
+      },
+      {
+        title: "质量控制（Quality Control）",
+        paragraphs: [
+          "Color precision and registration tolerance must be validated before bulk production release.",
+          "QA should include spectrophotometric checks, repeat alignment control, and batch consistency verification.",
+          "Lighting-condition review is also essential to prevent on-site color mismatch disputes.",
+          "A disciplined QC protocol protects both visual consistency and downstream installation quality."
+        ],
+        image: "/images/blog-series/blog-3/Blog_3_Color_Precision.png",
+        imageAlt: "Blog 3 color precision and registration",
+        imageCaption: "表格位置要求：\"质量控制\" 后"
+      }
+    ],
+    suggestedLinks: [
+      { label: "Custom Project Inquiry", href: "/contact" },
+      { label: "Project Cases", href: "/projects" }
+    ]
   },
   {
-    slug: "hotel-carpet-buying-guide",
-    title: "Hotel Carpet Buying Guide: Rooms, Corridors, and Public Areas",
-    seoTitle: "Hotel Carpet Sourcing Guide | Hospitality Flooring",
-    description: "How to specify hospitality-grade carpet for luxury hotel projects.",
-    keywords: ["hotel carpet", "hospitality flooring", "Axminster", "hotel corridor"],
-    date: "2026-06-19",
-    author: "Design Team",
-    category: "Hospitality",
-    image: "/images/blog-hotel-carpet.jpg",
-    content: "Hospitality flooring must balance luxury with extreme durability. Hotel guest rooms require a soft, comfortable touch, whereas corridors must withstand the constant stress of heavy luggage wheels and housekeeping carts. \n\nVisfurn recommends an 80/20 wool-nylon blend for high-end guest rooms, providing natural insulation and a premium underfoot feel. For corridors and ballrooms, Axminster construction with a high density (7x7 or 7x8) ensures the pattern remains crisp even after millions of footfalls. Our bespoke design service allows hotel groups to match Pantone references and integrate brand-specific motifs into the carpet patterns.",
-    suggestedLinks: [{ label: "Hotel Solutions", href: "/products/wall-to-wall" }, { label: "Custom Design", href: "/factory" }]
+    slug: "carpet-tile-specifications-high-traffic-durability-guide",
+    title: "Carpet Tile Specifications for High-Traffic Commercial Zones: The Science Behind Durability",
+    subtitle: "Technical parameters that determine performance in demanding environments.",
+    painPoint: "Premature wear patterns, visible damage in 2-3 years, and warranty disputes.",
+    seoTitle: "High-Traffic Carpet Tile Specification Guide | VISHOME",
+    description: "A technical guide to pile, density, backing, and moisture metrics for high-traffic commercial carpet systems.",
+    keywords: ["carpet tile specs", "high traffic durability", "tuft density", "moisture management"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
+    category: "Technical Guide",
+    image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.png",
+    sections: [
+      {
+        title: "规格详解（Specification Details）",
+        paragraphs: [
+          "Pile height, tuft density, and backing system stability are core determinants of durability in high-traffic commercial zones.",
+          "Specification decisions should follow traffic profile, cleaning method, and functional zoning requirements.",
+          "Aesthetics alone cannot predict lifecycle performance under rolling loads, repeated cleaning, and climate variation.",
+          "The right technical baseline reduces early wear complaints and warranty conflict."
+        ],
+        image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.png",
+        imageAlt: "Blog 4 carpet tile cross-section",
+        imageCaption: "表格位置要求：\"规格详解\" 后"
+      },
+      {
+        title: "磨损对比（Wear Comparison）",
+        paragraphs: [
+          "Wear should be evaluated across lifecycle checkpoints rather than judged from first-install appearance.",
+          "Early-stage visual quality can hide structural weaknesses that appear under sustained traffic cycles.",
+          "Progressive wear comparison gives procurement teams a clearer decision basis than catalog claims.",
+          "This helps avoid false savings from low-grade products that fail early in operation."
+        ],
+        image: "/images/blog-series/blog-4/Blog_4_Traffic_Durability_Progression.png",
+        imageAlt: "Blog 4 traffic durability progression",
+        imageCaption: "表格位置要求：\"磨损对比\" 后"
+      },
+      {
+        title: "气候适应（Climate Adaptation）",
+        paragraphs: [
+          "Climate behavior is critical in monsoon and mixed-humidity regions where moisture stress can alter carpet stability.",
+          "Backing composition, antimicrobial treatment, and vapor-management behavior should be included in technical review.",
+          "Moisture adaptation is a procurement-stage decision, not a late installation workaround.",
+          "Projects that ignore climate variables often face dimensional movement, odor risk, and higher maintenance frequency."
+        ],
+        image: "/images/blog-series/blog-4/Blog_4_Moisture_Management.png",
+        imageAlt: "Blog 4 moisture management infographic",
+        imageCaption: "表格位置要求：\"气候适应\" 后"
+      }
+    ],
+    suggestedLinks: [
+      { label: "Technical Consultation", href: "/contact" },
+      { label: "Carpet Tile Collection", href: "/products/carpet-tiles" }
+    ]
   },
   {
-    slug: "custom-carpet-design-process-b2b",
-    title: "Custom Carpet Design Process for B2B Projects: From Concept to Container",
-    seoTitle: "Custom Carpet Design Process | Bespoke B2B Solutions",
-    description: "Step-by-step guide on how Visfurn handles custom carpet pattern development.",
-    keywords: ["custom carpet", "design process", "bespoke flooring", "OEM carpet"],
-    date: "2026-06-19",
-    author: "Creative Director",
-    category: "Design",
-    image: "/images/blog-design-trends.jpg",
-    content: "Bespoke design is the heartbeat of hotel and luxury retail projects. The process begins with a design brief or reference image. Our Tianjin-based design studio creates a 3D visualization to show the pattern scale and color interaction. \n\nOnce the digital proof is approved, we produce a physical 'strike-off' sample (typically 1m x 1m) and courier it to the project site for final approval under real lighting conditions. This sample-first approach eliminates risk and ensures the mass production perfectly matches the architect's vision. From approval to container loading, our custom lead times for Axminster broadloom typically range from 25 to 35 days.",
-    suggestedLinks: [{ label: "Factory Tour", href: "/about-us" }, { label: "Start Inquiry", href: "/contact" }]
+    slug: "hidden-cost-of-cheap-carpets-hospitality-roi-guide",
+    title: "The Hidden Cost of Cheap Carpets: Why Replacing Floor Coverings After 3 Years Destroys Hospitality ROI",
+    subtitle: "Lifecycle economics behind flooring decisions in hospitality assets.",
+    painPoint: "Low upfront price but high replacement frequency and service disruption.",
+    seoTitle: "Hidden Cost of Cheap Hospitality Carpets | VISHOME",
+    description: "Why low-cost carpet choices can damage hospitality ROI over a 10-year operating horizon.",
+    keywords: ["hospitality ROI", "carpet lifecycle cost", "cheap carpet risk", "replacement strategy"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
+    category: "Cost & ROI",
+    image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.png",
+    sections: [
+      {
+        title: "财务分析（Financial Analysis）",
+        paragraphs: [
+          "Low unit pricing can be misleading when replacement cycles are short and operational disruption is frequent.",
+          "Lifecycle modeling should include reinstall labor, downtime, disposal, and turnover impact.",
+          "Over a 10-year horizon, repeated replacement often outweighs initial purchase savings.",
+          "Hospitality assets benefit more from predictable performance than from short-term material cost reductions."
+        ],
+        image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.png",
+        imageAlt: "Blog 5 ten-year cost comparison",
+        imageCaption: "表格位置要求：\"财务分析\" 后"
+      },
+      {
+        title: "品牌影响（Brand Impact）",
+        paragraphs: [
+          "Guest-facing flooring condition directly shapes perceived quality and review sentiment.",
+          "Visible wear in lobbies and corridors can undermine premium positioning even when service standards remain high.",
+          "Carpet performance is therefore part of brand delivery—not a hidden back-of-house expense.",
+          "This link between surface condition and customer trust should be reflected in procurement criteria."
+        ],
+        image: "/images/blog-series/blog-5/Blog_5_Customer_Experience_Timeline.png",
+        imageAlt: "Blog 5 customer experience timeline",
+        imageCaption: "表格位置要求：\"品牌影响\" 后"
+      },
+      {
+        title: "成本明细（Cost Breakdown）",
+        paragraphs: [
+          "A robust cost model should combine material, labor, maintenance, disruption, customer-impact, and equipment-wear factors.",
+          "Category-level breakdown makes trade-offs visible to finance, procurement, and operations teams.",
+          "This enables more defensible tender decisions and better capex planning.",
+          "In hospitality procurement, cost transparency is often the strongest defense against low-price, high-risk options."
+        ],
+        image: "/images/blog-series/blog-5/Blog_5_Cost_Breakdown.png",
+        imageAlt: "Blog 5 cost breakdown visualization",
+        imageCaption: "表格位置要求：\"成本明细\" 后"
+      }
+    ],
+    suggestedLinks: [
+      { label: "Hospitality Solutions", href: "/products/hotel-hospitality" },
+      { label: "Request Project Costing", href: "/contact" }
+    ]
   },
   {
-    slug: "carpet-sample-swatches-before-bulk-order",
-    title: "Why Carpet Samples Matter Before Bulk Orders: A B2B Buyer Checklist",
-    seoTitle: "B2B Carpet Sourcing | Importance of Physical Samples",
-    description: "Physical verification tips for contractors and distributors before bulk procurement.",
-    keywords: ["carpet samples", "sourcing guide", "quality check", "B2B buying"],
-    date: "2026-06-19",
-    author: "Sourcing Expert",
-    category: "Buying Guide",
-    image: "/images/samples-box.jpg",
-    content: "In the digital age, it's tempting to buy based on a PDF datasheet, but for commercial carpet, the 'touch and feel' is vital. A physical sample box allows the buyer to verify the pile density, backing stiffness, and fiber resilience. \n\nKey checks for B2B buyers: 1. Bend the tile to check backing flexibility. 2. Rub the pile to assess yarn twist and shed risk. 3. Place the sample under different lighting (natural vs LED). Visfurn provides professional sample boxes to contractors and distributors globally via express courier, ensuring you can sign off on quality with 100% confidence.",
-    suggestedLinks: [{ label: "Request Sample Box", href: "/contact" }, { label: "About Factory", href: "/about-us" }]
-  },
-  {
-    slug: "low-voc-commercial-carpet-guide",
-    title: "Low-VOC Commercial Carpet: Improving Indoor Air Quality (IAQ)",
-    seoTitle: "Low-VOC Carpet Guide | Sustainability in Office Projects",
-    description: "Why indoor air quality matters in commercial flooring and the role of low-VOC certifications.",
-    keywords: ["low VOC", "indoor air quality", "CRI Green Label", "sustainable carpet"],
-    date: "2026-06-19",
-    author: "Technical Team",
-    category: "Sustainability",
-    image: "/images/about-quality-control.jpg",
-    content: "Modern office and healthcare projects are increasingly focused on occupant wellness. Volatile Organic Compounds (VOCs) can be released from adhesives and backings, affecting air quality. Commercial carpet with CRI Green Label Plus certification ensures that emissions are kept to an absolute minimum. \n\nVisfurn modular tiles use low-VOC adhesives and stabilized bitumen backings that meet stringent international air quality standards. By specifying low-emission flooring, project managers can contribute to LEED or WELL building certifications and create a healthier environment for employees and guests.",
-    suggestedLinks: [{ label: "Technical Specs", href: "/products/carpet-tiles" }, { label: "Compliance Info", href: "/faq" }]
-  },
-  {
-    slug: "hotel-corridor-carpet-selection",
-    title: "How to Specify Durable Carpet for Hotel Corridors",
-    seoTitle: "Hotel Corridor Carpet Guide | High-Traffic Durability",
-    description: "Choosing the right construction and pattern for hospitality corridors.",
-    keywords: ["corridor carpet", "high traffic", "hotel renovation", "durable flooring"],
-    date: "2026-06-19",
-    author: "Hospitality Lead",
-    category: "Hospitality",
-    image: "/images/blog-hotel-carpet.jpg",
-    content: "Hotel corridors are the ultimate testing ground for carpet. They experience 24/7 foot traffic and directional wear from luggage carts. A dense, low-profile cut pile or a multi-level loop is recommended. \n\nPattern selection is also strategic; organic, multi-colored designs hide soil and 'traffic lanes' much more effectively than plain solid colors. Visfurn recommends a minimum pile weight of 36oz/yd² for corridors to ensure long-term appearance retention. Our solution-dyed nylon fibers provide excellent resilience and ease of spot cleaning for housekeeping teams.",
-    suggestedLinks: [{ label: "View Corridor Projects", href: "/projects" }, { label: "Catalogue", href: "/products" }]
-  },
-  {
-    slug: "stair-carpet-commercial-buying-guide",
-    title: "Commercial Stair Carpet: Safety, Durability, and Installation",
-    seoTitle: "Stair Carpet Guide | Commercial & Safety Requirements",
-    description: "B2B guide for specifying and installing carpet on commercial staircases.",
-    keywords: ["stair carpet", "commercial safety", "staircase flooring", "nylon carpet"],
-    date: "2026-06-19",
-    author: "Technical Team",
-    category: "Buying Guide",
-    image: "/images/blog-installation-maintenance.jpg",
-    content: "Stairs receive concentrated pressure on the nosing (the front edge). For commercial applications, a heavy-duty nylon carpet with a dense construction is essential to prevent the 'grin' (the backing showing through) when the carpet is wrapped around the step. \n\nSafety is paramount; stair runners must be installed with high-grade tack strips or adhesives to prevent movement. Visfurn provides reinforced broadloom and customized stair runners for hotel lobbies and public buildings, meeting all local fire and slip-resistance codes.",
-    suggestedLinks: [{ label: "Project Gallery", href: "/projects" }, { label: "Contact Us", href: "/contact" }]
-  },
-  {
-    slug: "exhibition-carpet-flooring-guide",
-    title: "Exhibition Carpet: Quick Installation and High Visual Impact",
-    seoTitle: "Exhibition Carpet Guide | Trade Show & Event Flooring",
-    description: "Selecting temporary and reusable carpet for events and exhibitions.",
-    keywords: ["exhibition carpet", "event flooring", "trade show", "red carpet"],
-    date: "2026-06-19",
-    author: "Events Manager",
-    category: "Product",
-    image: "/images/blog-design-trends.jpg",
-    content: "Trade shows and public events require flooring that can be installed overnight and removed easily. Exhibition carpet rolls are typically lightweight and cost-effective. \n\nVisfurn supplies a range of 'ready-to-ship' event carpets in classic colors like charcoal, navy, and red. For recurring exhibitions, we offer reusable tiles that can be palletized and stored between events. These solutions provide the professional look required for corporate branding while keeping the project budget under control.",
-    suggestedLinks: [{ label: "Exhibition Range", href: "/products/public-area" }, { label: "MOQ Info", href: "/faq" }]
-  },
-  {
-    slug: "commercial-carpet-installation-maintenance-guide",
-    title: "Maximizing ROI: Commercial Carpet Installation and Maintenance",
-    seoTitle: "Carpet Maintenance Guide | B2B Facility Management",
-    description: "Professional maintenance routines to extend the life of commercial flooring.",
-    keywords: ["maintenance", "carpet cleaning", "ROI", "facility management"],
-    date: "2026-06-19",
-    author: "Operations Lead",
-    category: "Maintenance",
-    image: "/images/blog-installation-maintenance.jpg",
-    content: "A commercial carpet's lifecycle cost is determined by its maintenance. Proper subfloor preparation—ensuring it is dry, level, and clean—is the first step. For carpet tiles, we recommend a planned replacement rotation where tiles from high-traffic zones are swapped with tiles from under-furniture zones every few years. \n\nDaily vacuuming with a dual-motor machine and scheduled deep extraction cleaning every 6-12 months can extend the carpet's life by up to 40%. Visfurn provides detailed technical maintenance sheets with every bulk order to assist facility managers.",
-    suggestedLinks: [{ label: "Technical FAQ", href: "/faq" }, { label: "Contact Support", href: "/contact" }]
-  },
-  {
-    slug: "office-carpet-tiles-selection-guide",
-    title: "Office Carpet Tiles: Balancing Acoustics and Aesthetics",
-    seoTitle: "Office Carpet Guide | Modular Flooring for Workspaces",
-    description: "How modular tiles improve office productivity through noise reduction and design.",
-    keywords: ["office carpet", "acoustics", "workplace design", "carpet tiles"],
-    date: "2026-06-19",
-    author: "Design Team",
-    category: "Buying Guide",
-    image: "/images/blog-office-carpet.jpg",
-    content: "In open-plan offices, floor coverings play a major role in acoustic control. Modular carpet tiles with a cushioned backing can reduce impact noise by up to 24dB, significantly improving employee focus. \n\nVisfurn office collections focus on modern, textured patterns that hide desk leg marks and rolling chair paths. Our tiles are antistatic and meet Class 33 Heavy Commercial ratings, ensuring they look new even in 24/7 coworking environments.",
-    suggestedLinks: [{ label: "Office Collections", href: "/products/carpet-tiles" }, { label: "Case Studies", href: "/projects" }]
-  },
-  {
-    slug: "wall-to-wall-carpet-commercial-guide",
-    title: "The Enduring Appeal of Wall-to-Wall Carpet in B2B Projects",
-    seoTitle: "Wall-to-Wall Carpet Guide | Luxury Broadloom Applications",
-    description: "When to choose broadloom over carpet tiles for commercial interiors.",
-    keywords: ["wall to wall", "broadloom rolls", "luxury flooring", "hotel renovation"],
-    date: "2026-06-19",
-    author: "Creative Director",
-    category: "Product",
-    image: "/images/category-broadloom.jpg",
-    content: "Despite the popularity of modular tiles, broadloom rolls remain the first choice for luxury hospitality. The ability to create grand, uninterrupted patterns is essential for ballrooms and high-end suites. \n\nVisfurn's woven broadloom is engineered for maximum dimensional stability, preventing the wrinkles and stretching often seen in residential-grade products. We offer multiple width options (up to 4m) to minimize seams and simplify installation in large-scale commercial venues.",
-    suggestedLinks: [{ label: "Broadloom Range", href: "/products/wall-to-wall" }, { label: "RFQ", href: "/rfq" }]
-  },
-  {
-    slug: "commercial-carpet-moq-pricing-guide",
-    title: "Commercial Carpet MOQ and Pricing: A Buyer's Blueprint",
-    seoTitle: "Carpet Pricing Guide | B2B Procurement Tips",
-    description: "Understanding the factors that influence bulk carpet pricing and minimum order quantities.",
-    keywords: ["MOQ", "pricing", "bulk order", "carpet wholesale"],
-    date: "2026-06-19",
-    author: "Sourcing Expert",
-    category: "Buying Guide",
-    image: "/images/blog-material-comparison.jpg",
-    content: "B2B pricing is dynamic and depends on three factors: material weight, pattern complexity, and total volume. Standard modular tiles typically have a lower MOQ (200-300 sqm) because they are part of regular production cycles. \n\nCustom jacquard broadloom requires a higher MOQ (typically 500+ sqm) due to the time-intensive setup of the looms. Visfurn offers tiered pricing for global distributors, providing significant cost advantages for container-load orders. Contact our sales team with your project schedule for a tailored quotation.",
-    suggestedLinks: [{ label: "Get Quote", href: "/contact" }, { label: "Factory Specs", href: "/about-us" }]
-  },
-  {
-    slug: "commercial-carpet-shipping-lead-time",
-    title: "Global Logistics: Managing Carpet Shipping and Lead Times",
-    seoTitle: "Logistics Guide | Importing Carpet from China",
-    description: "Planning your project timeline around production and international shipping.",
-    keywords: ["shipping", "lead time", "DDP", "export logistics"],
-    date: "2026-06-19",
-    author: "Logistics Team",
+    slug: "shipping-optimization-5000sqm-mumbai-14days",
+    title: "Shipping Optimization: How to Move 5,000 Sq Meters of Carpet to Mumbai in 14 Days",
+    subtitle: "Logistics playbook for accelerated international carpet programs.",
+    painPoint: "Uncertain shipping windows, damage risk, and schedule overruns.",
+    seoTitle: "Carpet Shipping Optimization to Mumbai in 14 Days | VISHOME",
+    description: "How to plan route, packaging, and timeline controls for fast 5,000 sqm carpet delivery to Mumbai.",
+    keywords: ["shipping optimization", "mumbai carpet delivery", "carpet logistics", "project lead time"],
+    date: "2026-06-24",
+    author: "Vishome Export Team",
     category: "Logistics",
-    image: "/images/blog-office-carpet.jpg",
-    content: "Procurement success depends on logistics. Standard Visfurn items have a production lead time of 7-14 days, while custom Axminster takes 25-35 days. Buyers must also factor in sea freight (typically 20-40 days depending on the destination port). \n\nWe provide full DDP (Delivered Duty Paid) support to many regions, including the US, UK, and Australia, handling all customs clearance and door-to-door delivery. To stay on schedule, we recommend finalizing designs and deposits at least 12 weeks before the project handover date.",
-    suggestedLinks: [{ label: "Logistics Info", href: "/about-us" }, { label: "Contact Us", href: "/contact" }]
+    image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.png",
+    sections: [
+      {
+        title: "物流优化（Logistics Optimization）",
+        paragraphs: [
+          "Route planning should compare standard ocean, expedited ocean, and hybrid multimodal options against deadline certainty.",
+          "For time-sensitive openings, schedule reliability often outweighs lowest freight rate."
+        ],
+        image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.png",
+        imageAlt: "Blog 6 shipping routes map",
+        imageCaption: "表格位置要求：\"物流优化\" 后"
+      },
+      {
+        title: "防损预防（Damage Prevention）",
+        paragraphs: [
+          "Packaging sequence—barrier wrap, palletization, labeling, and shrink protection—directly reduces transit-loss exposure.",
+          "Protection standards should be defined per handling stage, not only at factory dispatch."
+        ],
+        image: "/images/blog-series/blog-6/Blog_6_Packaging_Process.png",
+        imageAlt: "Blog 6 packaging protection workflow",
+        imageCaption: "表格位置要求：\"防损预防\" 后"
+      },
+      {
+        title: "时间管理（Timeline Management）",
+        paragraphs: [
+          "A day-by-day execution model with customs buffers and handover checkpoints keeps fast-track delivery realistic.",
+          "Transparent cost phasing helps procurement and logistics teams align decisions under time pressure."
+        ],
+        image: "/images/blog-series/blog-6/Blog_6_Timeline_Cost_Breakdown.png",
+        imageAlt: "Blog 6 timeline and cost breakdown",
+        imageCaption: "表格位置要求：\"时间管理\" 后"
+      }
+    ],
+    suggestedLinks: [
+      { label: "View Project Cases", href: "/projects" },
+      { label: "Contact Export Team", href: "/contact" }
+    ]
+  },
+  {
+    slug: "climate-control-carpet-installation-stability-guide",
+    title: "Climate Control in Carpet Installation: Preventing Wrinkles, Mold, and Dimensional Instability",
+    subtitle: "Temperature and humidity controls for stable commercial carpet installation.",
+    painPoint: "Post-install wrinkling, mold risk, and dimensional movement in humid climates.",
+    seoTitle: "Climate Control Carpet Installation Stability Guide | VISHOME",
+    description: "How controlled installation climate reduces deformation, cure defects, and post-handover failures.",
+    keywords: ["climate control", "carpet installation", "humidity", "dimensional stability", "mold prevention"],
+    date: "2026-06-24",
+    author: "Vishome Technical Team",
+    category: "Installation",
+    image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.png",
+    sections: [
+      {
+        title: "科学原理（Scientific Principle）",
+        paragraphs: [
+          "Fiber and backing systems respond to humidity shifts. Excessive expansion during cure phase can trigger wrinkling and alignment drift.",
+          "Environmental targets should be treated as installation specs, not optional site recommendations."
+        ],
+        image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.png",
+        imageAlt: "Blog 7 humidity expansion visualization",
+        imageCaption: "表格位置要求：\"科学原理\" 后"
+      },
+      {
+        title: "设备设置（Equipment Setup）",
+        paragraphs: [
+          "HVAC, dehumidifiers, and sensor layout must be coordinated at floor-plan level to maintain uniform climate zones.",
+          "Localized imbalance can compromise seam stability even when average room conditions appear acceptable."
+        ],
+        image: "/images/blog-series/blog-7/Blog_7_HVAC_Equipment_Layout.png",
+        imageAlt: "Blog 7 HVAC equipment layout",
+        imageCaption: "表格位置要求：\"设备设置\" 后"
+      },
+      {
+        title: "项目管理（Project Management）",
+        paragraphs: [
+          "A phased timeline should include pre-conditioning, controlled install, cure stabilization, and gradual normalization.",
+          "This method reduces post-handover defect probability in monsoon and high-humidity regions."
+        ],
+        image: "/images/blog-series/blog-7/Blog_7_Installation_Timeline_Climate.png",
+        imageAlt: "Blog 7 climate-phase installation timeline",
+        imageCaption: "表格位置要求：\"项目管理\" 后"
+      }
+    ],
+    suggestedLinks: [
+      { label: "Installation Support", href: "/contact" },
+      { label: "Hotel & Hospitality Solutions", href: "/products/hotel-hospitality" }
+    ]
   }
 ];

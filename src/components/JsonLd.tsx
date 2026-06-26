@@ -1,4 +1,4 @@
-import { faqSections, brandInfo } from "@/lib/data";
+import { products, faqSections, brandInfo } from "@/lib/data";
 
 export default function JsonLd() {
   const organizationData = {

@@ -32,7 +32,7 @@ export default function ContactPage() {
       } else {
         throw new Error("Submission failed");
       }
-    } catch {
+    } catch (err) {
       setState({ submitting: false, submitted: false, error: "Oops! There was a problem with the submission. Please try again." });
     }
   }

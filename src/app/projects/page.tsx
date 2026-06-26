@@ -4,8 +4,8 @@ import ProductImage from "@/components/ProductImage";
 import { caseStudies } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Global Commercial Carpet Projects | Project Case Studies | VISHOME",
-  description: "Explore our project portfolio across 45+ countries. Supplying high-performance flooring to 500+ global commercial projects.",
+  title: "Global Commercial Carpet Projects | Case Studies | VISHOME",
+  description: "Excellence in hotel and office flooring across 45+ countries."
 };
 
 export default function ProjectsPage() {
@@ -13,35 +13,28 @@ export default function ProjectsPage() {
     <div className="bg-white min-h-screen">
       <section className="bg-[#102A43] py-24 text-center">
         <div className="container-fox">
-          <span className="text-accent font-black tracking-[0.4em] text-[10px] uppercase mb-4 block">Proven Excellence</span>
-          <h1 className="text-4xl md:text-5xl font-black text-white uppercase tracking-widest leading-tight">Project Case Studies</h1>
+          <h1 className="text-4xl md:text-6xl font-black text-white uppercase tracking-widest leading-tight">Project Case Studies</h1>
+          <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-xs uppercase font-bold tracking-widest">Proven Sourcing Solutions for Global B2B Projects</p>
         </div>
       </section>
 
       <section className="section-padding">
         <div className="container-fox">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+          <div className="grid lg:grid-cols-2 gap-16">
             {caseStudies.map((cs) => (
-              <div key={cs.id} className="group">
-                <Link href={`/projects/${cs.id}`} className="block overflow-hidden rounded-sm mb-6 shadow-xl relative aspect-[4/3]">
-                  <ProductImage src={cs.image} alt={cs.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
-                </Link>
-                
-                <Link href={`/projects/${cs.id}`} className="block">
-                  <h3 className="font-bold text-primary text-sm uppercase leading-tight mb-4 h-12 overflow-hidden group-hover:text-accent transition-colors">
-                    {cs.title}
-                  </h3>
-                </Link>
-
-                <div className="flex flex-col gap-6 pt-4 border-t border-border">
-                  <Link 
-                    href={`/projects/${cs.id}`} 
-                    className="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50 group-hover:text-primary transition-all flex items-center gap-2"
-                  >
-                    Technical Overview <span className="text-accent">→</span>
-                  </Link>
+              <Link key={cs.id} href={`/projects/${cs.id}`} className="group block border-b border-border pb-16">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm mb-10 shadow-xl relative">
+                  <ProductImage src={cs.image} alt={cs.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                  <div className="absolute top-6 left-6 bg-primary px-4 py-2 text-[10px] font-black text-white uppercase tracking-widest">
+                    {cs.category === "carpet-tiles" ? "Modular" : "Hospitality"}
+                  </div>
                 </div>
-              </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 uppercase tracking-tight group-hover:text-accent transition-colors">{cs.title}</h2>
+                <p className="text-muted text-lg leading-relaxed mb-10 h-24 overflow-hidden">{cs.description}</p>
+                <div className="flex items-center gap-4 text-xs font-black text-primary uppercase tracking-[0.2em]">
+                   Request Solution Details <span className="text-accent">→</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

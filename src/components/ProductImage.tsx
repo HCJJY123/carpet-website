@@ -61,6 +61,12 @@ export default function ProductImage({
           ]
         : []);
 
+  const label =
+    productData?.name ||
+    categoryData?.name ||
+    alt ||
+    "Product Image";
+
   if (!imageError) {
     return (
       <div className={`relative overflow-hidden ${className}`}>

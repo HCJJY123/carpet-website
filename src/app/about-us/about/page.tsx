@@ -1,5 +1,5 @@
 import ProductImage from "@/components/ProductImage";
-import { certifications } from "@/lib/data";
+import { certifications, brandInfo } from "@/lib/data";
 import Link from "next/link";
 
 export default function AboutPage() {
@@ -156,7 +156,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white border border-border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
               <div className="aspect-[4/3] bg-primary/5 overflow-hidden">
-                <ProductImage src="/images/about/production-workshop.webp" alt="Production team at work" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/images/about/production-workshop.webp" alt="Production team at work" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-8">
                 <h4 className="text-[11px] font-black text-primary uppercase tracking-[0.2em] mb-3">Production & QC Team</h4>
@@ -165,7 +165,7 @@ export default function AboutPage() {
             </div>
             <div className="bg-white border border-border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
               <div className="aspect-[4/3] bg-primary/5 overflow-hidden">
-                <ProductImage src="/images/about/custom-design-support.webp" alt="Design and R&D team" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/images/about/custom-design-support.webp" alt="Design and R&D team" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-8">
                 <h4 className="text-[11px] font-black text-primary uppercase tracking-[0.2em] mb-3">R&D & Design Team</h4>
@@ -174,7 +174,7 @@ export default function AboutPage() {
             </div>
             <div className="bg-white border border-border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all group">
               <div className="aspect-[4/3] bg-primary/5 overflow-hidden">
-                <ProductImage src="/images/about/global-export-container-loading.webp" alt="Export and sales team" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/images/about/global-export-container-loading.webp" alt="Export and sales team" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-8">
                 <h4 className="text-[11px] font-black text-primary uppercase tracking-[0.2em] mb-3">Export & Sales Team</h4>

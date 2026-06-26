@@ -186,7 +186,7 @@ export default function HotelHospitalitySolutionPage() {
                 Request Project Quotation
               </Link>
               <Link
-                href="/products/wall-to-wall"
+                href="/products/broadloom"
                 className="btn-fox-outline !border-white !text-white hover:!bg-white hover:!text-primary !px-10 !py-5"
               >
                 Explore Broadloom Systems
