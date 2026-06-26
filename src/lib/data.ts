@@ -21,7 +21,10 @@ export const faqSections = [
       { q: "What types of commercial carpets do you offer?", a: "We provide Carpet Tiles, Broadloom Carpets, Modular Carpet Systems, Custom Area Rugs, and Entrance Mat Systems suitable for offices, hotels, healthcare, and public facilities." },
       { q: "What is the difference between carpet tiles and broadloom carpet?", a: "Carpet tiles offer flexible installation and easier replacement. Broadloom carpet provides a seamless appearance and is commonly used in hospitality projects." },
       { q: "Are your carpets suitable for high-traffic commercial areas?", a: "Yes. Our commercial flooring solutions are designed for environments such as hotel corridors, office spaces, airports, and schools." },
-      { q: "How long do commercial carpets typically last?", a: "Service life depends on traffic level and product specification. Our commercial-grade carpets are engineered for extended performance." }
+      { q: "How long do commercial carpets typically last?", a: "Service life depends on traffic level and product specification. Our commercial-grade carpets are engineered for extended performance." },
+      { q: "What carpet solutions are best for office buildings?", a: "Office projects typically prioritize durability and acoustic performance; carpet tiles are often preferred." },
+      { q: "What carpet solutions are best for hotels?", a: "We provide customized recommendations for guest rooms, corridors, ballrooms, and lobbies." },
+      { q: "What carpet options are suitable for healthcare facilities?", a: "Healthcare projects require hygiene-focused, durable, and easy-to-maintain flooring." }
     ]
   },
   {
@@ -29,22 +32,33 @@ export const faqSections = [
     questions: [
       { q: "Can you customize carpet designs?", a: "Yes. We offer custom patterns, colors, brand graphics, wayfinding designs, and bespoke hospitality collections." },
       { q: "Can you match our designer’s color palette?", a: "Absolutely. We can develop precise colors based on Pantone references, brand guidelines, or existing samples." },
-      { q: "Can you work directly from architectural drawings?", a: "Yes, we regularly work with CAD files, PDF layouts, and interior design packages." }
+      { q: "Can you work directly from architectural drawings?", a: "Yes, we regularly work with CAD files, PDF layouts, and interior design packages." },
+      { q: "Can you provide project samples before production?", a: "Yes. Available samples include material samples, color swatches, and strike-offs." },
+      { q: "Can you develop custom hotel carpet collections?", a: "Yes, we provide fully customized hospitality flooring for all hotel zones." }
     ]
   },
   {
     title: "Commercial Project FAQs",
     questions: [
-      { q: "What information do you need to provide a quotation?", a: "Please provide floor plans, estimated quantities, project location, design requirements, and delivery schedule." },
-      { q: "Can you support international commercial projects?", a: "Yes. We regularly support overseas projects with export packaging, shipping coordination, and documentation support." }
+      { q: "What information do you need to provide a quotation?", a: "Please provide floor plans, quantities, project location, design requirements, and delivery schedule." },
+      { q: "Can you assist with specification and product selection?", a: "Yes. Our technical team assists with product selection, traffic analysis, and budget planning." },
+      { q: "How long does a commercial carpet project take?", a: "Timeline depends on product type, customization level, and quantity." },
+      { q: "Can you support phased deliveries?", a: "Yes. We can arrange staged production and shipment schedules according to construction progress." },
+      { q: "Can you support international commercial projects?", a: "Yes. We provide export packaging, shipping coordination, and documentation support." },
+      { q: "Can you provide third-party inspections before shipment?", a: "Yes, independent inspections can be arranged upon request." },
+      { q: "How can commercial carpet reduce lifecycle costs?", a: "High performance reduces maintenance, replacement frequency, and installation downtime." },
+      { q: "Why do developers choose carpet instead of hard flooring?", a: "Key advantages include acoustic comfort, walking safety, and design flexibility." }
     ]
   },
   {
     title: "Manufacturing & Logistics FAQs",
     questions: [
-      { q: "How do you ensure quality consistency?", a: "QC includes raw material inspection, production monitoring, finished product testing, and color verification." },
+      { q: "What is your production capacity?", a: "Our facilities support large-scale commercial projects and multi-location developments." },
+      { q: "How do you ensure quality consistency?", a: "QC includes raw material inspection, production monitoring, and finished product verification." },
+      { q: "What certifications can be provided?", a: "Products comply with ASTM E648 Fire Performance, CRI Green Label Plus, and Commercial Durability standards." },
       { q: "What is your MOQ?", a: "MOQ depends on product type and customization; project-specific recommendations are available." },
-      { q: "Why choose Vishome as your commercial carpet supplier?", a: "B2B expertise, custom design capability, large-scale manufacturing, and reliable delivery." }
+      { q: "What warranty or after-sales support do you provide?", a: "We provide technical assistance, maintenance guidance, and project coordination." },
+      { q: "Why choose Vishome as your commercial carpet supplier?", a: "B2B expertise, custom design capability, large-scale manufacturing, and reliable delivery performance." }
     ]
   }
 ];
@@ -97,17 +111,21 @@ export const productCategories = [
   { id: "public-area", name: "Public Area Carpets", description: "Heavy-duty specialized flooring.", image: "/images/public-area-carpets.webp", slug: "public-area" }
 ];
 
-export const certifications = [{ name: "ASTM E648", description: "US Fire Rating" }, { name: "CRI Green Label Plus", description: "Indoor Air Quality" }];
-
-export const caseStudies: CaseStudy[] = [
-  { id: "hotel-dubai", title: "Luxury Hotel Lobby — Dubai", category: "wall-to-wall", image: "/images/about/hero.png", description: "5,000+ sqm custom Axminster installation." },
+export const caseStudies = [
+  { id: "hotel-dubai", title: "Luxury Hotel Lobby — Dubai", category: "wall-to-wall", image: "/images/about/hero.png", description: "5,000+ sqm custom Axminster installation. ASTM E648 Class I certified." },
   { id: "retail-india", title: "Department Store — India", category: "public-area", image: "/images/about/project-application.png", description: "Color-coded navigation flooring." },
   { id: "casino-vegas", title: "Casino Floor — Las Vegas", category: "wall-to-wall", image: "/images/about/production-workshop.png", description: "24/7 heavy-traffic woven carpets." },
   { id: "medical-singapore", title: "Medical Facility — Singapore", category: "carpet-tiles", image: "/images/about/qc.png", description: "Hygienic-focused hospital wings." },
-  { id: "office-tokyo", title: "Corporate Space — Tokyo", category: "carpet-tiles", image: "/images/about/custom-design.png", description: "Multi-floor fit-out." },
+  { id: "office-tokyo", title: "Corporate Space — Tokyo", category: "carpet-tiles", image: "/images/about/custom-design.png", description: "Multi-floor fit-out with high-performance acoustic carpet tiles." },
   { id: "airport-changi", title: "Airport Terminal — Singapore", category: "public-area", image: "/images/about/warehouse.png", description: "Heavy-duty corridor carpet rolls." },
   { id: "residence-mumbai", title: "Luxury Residential — Mumbai", category: "wall-to-wall", image: "/images/about/factory-exterior.png", description: "Bespoke residential interiors." },
   { id: "edu-australia", title: "Educational Institution — Australia", category: "carpet-tiles", image: "/images/about/project-application.png", description: "Sustainable university zones." },
   { id: "hospitality-korea", title: "Extended-Stay — South Korea", category: "wall-to-wall", image: "/images/about/hero.png", description: "Guest room renovation." },
   { id: "retail-paris", title: "Retail Flagship — Paris", category: "public-area", image: "/images/about/custom-design.png", description: "Fashion boutique pattern carpets." }
+];
+
+export const certifications = [
+  { name: "ASTM E648", description: "US Fire Rating" },
+  { name: "CRI Green Label", description: "Indoor Air Quality" },
+  { name: "ISO 9001", description: "Quality Management" }
 ];
