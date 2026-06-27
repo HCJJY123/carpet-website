@@ -9,7 +9,6 @@ interface PageHeroProps {
   image: string;
   imageAlt: string;
   objectPosition?: string;
-  align?: "center" | "left";
   children?: React.ReactNode;
 }
 
@@ -20,13 +19,10 @@ export default function PageHero({
   image,
   imageAlt,
   objectPosition = "center",
-  align = "center",
   children,
 }: PageHeroProps) {
-  const isLeft = align === "left";
-
   return (
-    <section className={`relative isolate min-h-[280px] overflow-hidden bg-[#102A43] py-16 text-white sm:min-h-[320px] sm:py-20 md:min-h-[360px] md:py-24 ${isLeft ? "text-left" : "text-center"}`}>
+    <section className="relative isolate min-h-[280px] overflow-hidden bg-[#102A43] py-16 text-center text-white sm:min-h-[320px] sm:py-20 md:min-h-[360px] md:py-24">
       <Image
         src={image}
         alt={imageAlt}
@@ -39,7 +35,7 @@ export default function PageHero({
       <div className="absolute inset-0 -z-10 bg-[#102A43]/78 md:bg-[#102A43]/72" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_35%,rgba(200,150,62,0.26),transparent_30%),linear-gradient(90deg,rgba(15,43,74,0.95),rgba(15,43,74,0.72)_45%,rgba(15,43,74,0.58))]" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-[#102A43]/55 to-transparent" />
-      <div className={`container-fox relative z-10 flex min-h-[150px] flex-col justify-center md:min-h-[190px] ${isLeft ? "items-start" : "items-center"}`}>
+      <div className="container-fox relative z-10 flex min-h-[150px] flex-col items-center justify-center md:min-h-[190px]">
         {eyebrow ? (
           <span className="mb-4 block text-[10px] font-black uppercase tracking-[0.35em] text-accent md:mb-5">
             {eyebrow}
@@ -49,7 +45,7 @@ export default function PageHero({
           {title}
         </h1>
         {description ? (
-          <p className={`mt-5 max-w-3xl text-sm font-semibold leading-relaxed text-white/76 sm:mt-6 md:text-lg ${isLeft ? "" : "mx-auto"}`}>
+          <p className="mx-auto mt-5 max-w-3xl text-sm font-semibold leading-relaxed text-white/76 sm:mt-6 md:text-lg">
             {description}
           </p>
         ) : null}
