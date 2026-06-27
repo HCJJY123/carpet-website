@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 
@@ -16,13 +17,14 @@ const navLinks = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border shadow-sm">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 xl:px-4">
-        <div className="grid h-16 grid-cols-[1fr_auto] items-center md:h-20 xl:h-24 xl:grid-cols-[300px_1fr_auto]">
-          <Link href="/" className="flex min-w-0 items-center gap-2 xl:-translate-x-14 2xl:-translate-x-20" onClick={() => setMenuOpen(false)}>
+      <div className="mx-auto max-w-[1480px] px-4 sm:px-6 xl:px-6">
+        <div className="grid h-16 grid-cols-[1fr_auto] items-center md:h-20 xl:h-24 xl:grid-cols-[310px_minmax(620px,1fr)_390px]">
+          <Link href="/" className="flex min-w-0 items-center gap-2 xl:-translate-x-8 2xl:-translate-x-12" onClick={() => setMenuOpen(false)}>
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#102A43] md:h-10 md:w-10">
               <span className="text-lg font-black italic text-white">V</span>
             </span>
@@ -32,13 +34,29 @@ export default function Header() {
             </div>
           </Link>
 
-          <nav className="hidden xl:flex translate-x-8 items-center justify-center gap-6 2xl:translate-x-12">
-            {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="whitespace-nowrap text-[11px] font-black text-[#102A43]/60 hover:text-[#102A43] transition-colors uppercase tracking-widest">{link.label}</Link>
-            ))}
+          <nav className="hidden translate-x-4 items-center justify-center xl:flex 2xl:translate-x-8" aria-label="Primary navigation">
+            <div className="flex items-center gap-1 rounded-full border border-border/80 bg-white/85 px-2 py-2 shadow-[0_10px_30px_rgba(16,42,67,0.06)] backdrop-blur">
+              {navLinks.map((link) => {
+                const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`whitespace-nowrap rounded-full px-3.5 py-2 text-[10.5px] font-bold uppercase tracking-[0.16em] transition-all ${
+                      active
+                        ? "bg-[#102A43] text-white shadow-sm"
+                        : "text-[#102A43]/58 hover:bg-surface hover:text-[#102A43]"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </div>
           </nav>
 
-          <div className="hidden xl:flex translate-x-8 items-center gap-6 2xl:translate-x-12">
+          <div className="hidden translate-x-4 items-center justify-end gap-5 xl:flex 2xl:translate-x-6">
             <Link href="/contact" className="whitespace-nowrap bg-[#102A43] text-white text-[11px] font-black px-6 py-3 rounded-sm hover:bg-black transition-all uppercase tracking-widest shadow-lg">Get a Quote</Link>
             <a
               href={whatsappUrl}
