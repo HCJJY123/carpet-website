@@ -6,7 +6,7 @@ export function getWhatsAppBusinessUrl(message: string) {
 }
 
 export const whatsappBusinessMessages = {
-  header: `Hello ${brandInfo.shortName}, I need commercial carpet support. Please help me with product selection, quotation, and samples.`,
-  floating: `Hello ${brandInfo.shortName}, I am interested in your commercial carpet solutions. Could you help me with a project quote?`,
-  contact: `Hello ${brandInfo.shortName}, I am preparing a commercial carpet project. I can share area, timeline, and floor plan for a quick quote.`,
+  header: `Hello Zara, I am interested in your commercial carpet solutions. Could you help me with a project quote?`,
+  floating: `Hello Zara, I am interested in your commercial carpet solutions. Could you help me with a project quote?`,
+  contact: `Hello Zara, I am interested in your commercial carpet solutions. Could you help me with a project quote?`,
 };

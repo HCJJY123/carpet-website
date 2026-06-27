@@ -346,7 +346,7 @@ export default function HotelHospitalitySolutionPage() {
                 Contact Project Team
               </Link>
               <a
-                href="https://wa.me/8615222885400"
+                href="https://wa.me/8615222885400?text=Hello%20Zara%2C%20I%20am%20interested%20in%20your%20commercial%20carpet%20solutions.%20Could%20you%20help%20me%20with%20a%20project%20quote%3F"
                 target="_blank"
                 rel="noreferrer"
                 className="btn-fox-outline !border-white !text-white hover:!bg-white hover:!text-primary !px-10 !py-5"
