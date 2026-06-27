@@ -200,6 +200,27 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Dynamic Map Section */}
+      <section className="bg-surface border-y border-border">
+        <div className="w-full h-[450px] relative grayscale hover:grayscale-0 transition-all duration-700">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12234.331707981507!2d117.38283627043328!3d39.46746244677708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35ed8422a57199c1%3A0xc399066f466b0d9e!2sCuihuangkou%20Town%2C%20Wuqing%20District%2C%20Tianjin!5e0!3m2!1sen!2scn!4v1719412345678!5m2!1sen!2scn" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen={true} 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Vishome Factory Location"
+            className="opacity-80 hover:opacity-100 transition-opacity"
+          ></iframe>
+          <div className="absolute top-8 left-8 bg-primary/90 text-white p-6 shadow-2xl rounded-sm border-l-4 border-accent hidden md:block pointer-events-none">
+            <h4 className="text-sm font-black uppercase tracking-[0.3em] mb-2">Manufacturing Hub</h4>
+            <p className="text-[10px] text-gray-300 uppercase font-bold">Wuqing District, Tianjin, China</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
