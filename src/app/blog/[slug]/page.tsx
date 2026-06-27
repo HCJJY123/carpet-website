@@ -111,8 +111,8 @@ export default async function BlogPostPage({ params }: Props) {
       <div className="max-w-[1000px] mx-auto px-4 -mt-16 pb-24">
         {post.h1Image ? (
           <figure className="mb-8">
-            <div className="aspect-[21/9] rounded-xl overflow-hidden shadow-2xl border-8 border-white">
-              <ProductImage src={post.h1Image} alt={post.h1ImageAlt || post.title} className="w-full h-full object-cover" />
+            <div className="aspect-[16/9] rounded-xl overflow-hidden bg-white shadow-2xl border-8 border-white">
+              <ProductImage src={post.h1Image} alt={post.h1ImageAlt || post.title} className="w-full h-full" fit="contain" />
             </div>
             {post.h1ImageCaption ? (
               <figcaption className="text-xs text-muted mt-3 uppercase tracking-wider font-semibold">
@@ -140,8 +140,8 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
               {section.image ? (
                 <figure className="mt-8">
-                  <div className="rounded-xl overflow-hidden border border-border shadow-md">
-                    <ProductImage src={section.image} alt={section.imageAlt || section.title} className="w-full aspect-[16/10]" />
+                  <div className="rounded-xl overflow-hidden border border-border bg-white shadow-md">
+                    <ProductImage src={section.image} alt={section.imageAlt || section.title} className="w-full aspect-[16/10]" fit="contain" />
                   </div>
                   {section.imageCaption ? (
                     <figcaption className="text-xs text-muted mt-3 uppercase tracking-wider font-semibold">

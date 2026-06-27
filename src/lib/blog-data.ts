@@ -41,7 +41,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.png",
     h1Image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.png",
     h1ImageAlt: "Blog 1 hotel lobby before and after comparison",
-    h1ImageCaption: "表格位置要求：H1 后",
     sections: [
       {
         title: "The Financial Reality",
@@ -53,7 +52,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       {
-        title: "安装优势（Installation Advantages）",
+        title: "Installation Advantages",
         paragraphs: [
           "Modern carpet tiles integrate with HVAC access routes, cable systems, and phased renovation schedules without requiring full-site shutdown.",
           "The 50x50 modular format supports faster logistics handling and staged installation by functional zone.",
@@ -62,10 +61,9 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-1/Blog_1_Installation_Process.png",
         imageAlt: "Blog 1 installation process",
-        imageCaption: "表格位置要求：\"安装优势\" 后"
       },
       {
-        title: "ROI 计算（ROI Calculation）",
+        title: "ROI Calculation",
         paragraphs: [
           "A practical ROI model should include installation cost, replacement cycle, deep-cleaning frequency, and operational downtime.",
           "For a 1,000 m² project, 5-year savings often come from reduced replacement scope rather than lower upfront price alone.",
@@ -74,7 +72,6 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-1/Blog_1_Durability_Infographic.png",
         imageAlt: "Blog 1 durability and maintenance infographic",
-        imageCaption: "表格位置要求：\"ROI 计算\" 后"
       }
     ],
     suggestedLinks: [
@@ -96,7 +93,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.png",
     sections: [
       {
-        title: "技术规格（Technical Specifications）",
+        title: "Technical Specifications",
         paragraphs: [
           "Hospitality operators managing multi-property portfolios need clear construction logic to avoid costly specification mistakes.",
           "Axminster supports rich multi-color design and high pattern fidelity, making it strong for premium guest-facing zones.",
@@ -105,10 +102,9 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.png",
         imageAlt: "Blog 2 manufacturing process comparison",
-        imageCaption: "表格位置要求：\"技术规格\" 后"
       },
       {
-        title: "对比表（Comparison Table）",
+        title: "Comparison Table",
         paragraphs: [
           "Comparison should go beyond marketing claims and include tuft density, pattern precision, lead time, seam behavior, and maintenance profile.",
           "A durable system with poor seam quality can still fail visual expectations in premium hospitality environments.",
@@ -117,10 +113,9 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-2/Blog_2_Durability_Chart.png",
         imageAlt: "Blog 2 durability comparison chart",
-        imageCaption: "表格位置要求：\"对比表\" 后"
       },
       {
-        title: "接缝质量（Seam Quality）",
+        title: "Seam Quality",
         paragraphs: [
           "Seaming is often the hidden cost driver and visual risk point in hospitality carpet delivery.",
           "Luxury environments demand minimal seam visibility and strict color continuity at junction lines.",
@@ -129,7 +124,6 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-2/Blog_2_Seam_Quality_Macro.png",
         imageAlt: "Blog 2 seam quality macro comparison",
-        imageCaption: "表格位置要求：\"接缝质量\" 后"
       }
     ],
     suggestedLinks: [
@@ -151,7 +145,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog-series/blog-3/Blog_3_Printing_Process.png",
     sections: [
       {
-        title: "技术对比（Technology Comparison）",
+        title: "Technology Comparison",
         paragraphs: [
           "Modern digital printing has reduced entry barriers for custom carpet programs once limited to large-scale budgets.",
           "Unlike traditional screen-based workflows, digital pipelines reduce setup friction and allow faster design iteration.",
@@ -160,10 +154,9 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-3/Blog_3_Printing_Process.png",
         imageAlt: "Blog 3 printing process flow",
-        imageCaption: "表格位置要求：\"技术对比\" 后"
       },
       {
-        title: "应用示例（Application Examples）",
+        title: "Application Examples",
         paragraphs: [
           "Digital print applications now span hotel branding, retail wayfinding, casino pattern systems, and themed commercial zones.",
           "Design intent can be adapted by zone function without restarting full production tooling.",
@@ -172,10 +165,9 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-3/Blog_3_Custom_Designs_Gallery.png",
         imageAlt: "Blog 3 custom design showcase",
-        imageCaption: "表格位置要求：\"应用示例\" 后"
       },
       {
-        title: "质量控制（Quality Control）",
+        title: "Quality Control",
         paragraphs: [
           "Color precision and registration tolerance must be validated before bulk production release.",
           "QA should include spectrophotometric checks, repeat alignment control, and batch consistency verification.",
@@ -184,7 +176,6 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-3/Blog_3_Color_Precision.png",
         imageAlt: "Blog 3 color precision and registration",
-        imageCaption: "表格位置要求：\"质量控制\" 后"
       }
     ],
     suggestedLinks: [
@@ -206,7 +197,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.png",
     sections: [
       {
-        title: "规格详解（Specification Details）",
+        title: "Specification Details",
         paragraphs: [
           "Pile height, tuft density, and backing system stability are core determinants of durability in high-traffic commercial zones.",
           "Specification decisions should follow traffic profile, cleaning method, and functional zoning requirements.",
@@ -215,10 +206,9 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.png",
         imageAlt: "Blog 4 carpet tile cross-section",
-        imageCaption: "表格位置要求：\"规格详解\" 后"
       },
       {
-        title: "磨损对比（Wear Comparison）",
+        title: "Wear Comparison",
         paragraphs: [
           "Wear should be evaluated across lifecycle checkpoints rather than judged from first-install appearance.",
           "Early-stage visual quality can hide structural weaknesses that appear under sustained traffic cycles.",
@@ -227,10 +217,9 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-4/Blog_4_Traffic_Durability_Progression.png",
         imageAlt: "Blog 4 traffic durability progression",
-        imageCaption: "表格位置要求：\"磨损对比\" 后"
       },
       {
-        title: "气候适应（Climate Adaptation）",
+        title: "Climate Adaptation",
         paragraphs: [
           "Climate behavior is critical in monsoon and mixed-humidity regions where moisture stress can alter carpet stability.",
           "Backing composition, antimicrobial treatment, and vapor-management behavior should be included in technical review.",
@@ -239,7 +228,6 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-4/Blog_4_Moisture_Management.png",
         imageAlt: "Blog 4 moisture management infographic",
-        imageCaption: "表格位置要求：\"气候适应\" 后"
       }
     ],
     suggestedLinks: [
@@ -261,7 +249,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.png",
     sections: [
       {
-        title: "财务分析（Financial Analysis）",
+        title: "Financial Analysis",
         paragraphs: [
           "Low unit pricing can be misleading when replacement cycles are short and operational disruption is frequent.",
           "Lifecycle modeling should include reinstall labor, downtime, disposal, and turnover impact.",
@@ -270,10 +258,9 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.png",
         imageAlt: "Blog 5 ten-year cost comparison",
-        imageCaption: "表格位置要求：\"财务分析\" 后"
       },
       {
-        title: "品牌影响（Brand Impact）",
+        title: "Brand Impact",
         paragraphs: [
           "Guest-facing flooring condition directly shapes perceived quality and review sentiment.",
           "Visible wear in lobbies and corridors can undermine premium positioning even when service standards remain high.",
@@ -282,10 +269,9 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-5/Blog_5_Customer_Experience_Timeline.png",
         imageAlt: "Blog 5 customer experience timeline",
-        imageCaption: "表格位置要求：\"品牌影响\" 后"
       },
       {
-        title: "成本明细（Cost Breakdown）",
+        title: "Cost Breakdown",
         paragraphs: [
           "A robust cost model should combine material, labor, maintenance, disruption, customer-impact, and equipment-wear factors.",
           "Category-level breakdown makes trade-offs visible to finance, procurement, and operations teams.",
@@ -294,7 +280,6 @@ export const blogPosts: BlogPost[] = [
         ],
         image: "/images/blog-series/blog-5/Blog_5_Cost_Breakdown.png",
         imageAlt: "Blog 5 cost breakdown visualization",
-        imageCaption: "表格位置要求：\"成本明细\" 后"
       }
     ],
     suggestedLinks: [
@@ -316,34 +301,31 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.png",
     sections: [
       {
-        title: "物流优化（Logistics Optimization）",
+        title: "Logistics Optimization",
         paragraphs: [
           "Route planning should compare standard ocean, expedited ocean, and hybrid multimodal options against deadline certainty.",
           "For time-sensitive openings, schedule reliability often outweighs lowest freight rate."
         ],
         image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.png",
         imageAlt: "Blog 6 shipping routes map",
-        imageCaption: "表格位置要求：\"物流优化\" 后"
       },
       {
-        title: "防损预防（Damage Prevention）",
+        title: "Damage Prevention",
         paragraphs: [
           "Packaging sequence—barrier wrap, palletization, labeling, and shrink protection—directly reduces transit-loss exposure.",
           "Protection standards should be defined per handling stage, not only at factory dispatch."
         ],
         image: "/images/blog-series/blog-6/Blog_6_Packaging_Process.png",
         imageAlt: "Blog 6 packaging protection workflow",
-        imageCaption: "表格位置要求：\"防损预防\" 后"
       },
       {
-        title: "时间管理（Timeline Management）",
+        title: "Timeline Management",
         paragraphs: [
           "A day-by-day execution model with customs buffers and handover checkpoints keeps fast-track delivery realistic.",
           "Transparent cost phasing helps procurement and logistics teams align decisions under time pressure."
         ],
         image: "/images/blog-series/blog-6/Blog_6_Timeline_Cost_Breakdown.png",
         imageAlt: "Blog 6 timeline and cost breakdown",
-        imageCaption: "表格位置要求：\"时间管理\" 后"
       }
     ],
     suggestedLinks: [
@@ -365,34 +347,31 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.png",
     sections: [
       {
-        title: "科学原理（Scientific Principle）",
+        title: "Scientific Principle",
         paragraphs: [
           "Fiber and backing systems respond to humidity shifts. Excessive expansion during cure phase can trigger wrinkling and alignment drift.",
           "Environmental targets should be treated as installation specs, not optional site recommendations."
         ],
         image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.png",
         imageAlt: "Blog 7 humidity expansion visualization",
-        imageCaption: "表格位置要求：\"科学原理\" 后"
       },
       {
-        title: "设备设置（Equipment Setup）",
+        title: "Equipment Setup",
         paragraphs: [
           "HVAC, dehumidifiers, and sensor layout must be coordinated at floor-plan level to maintain uniform climate zones.",
           "Localized imbalance can compromise seam stability even when average room conditions appear acceptable."
         ],
         image: "/images/blog-series/blog-7/Blog_7_HVAC_Equipment_Layout.png",
         imageAlt: "Blog 7 HVAC equipment layout",
-        imageCaption: "表格位置要求：\"设备设置\" 后"
       },
       {
-        title: "项目管理（Project Management）",
+        title: "Project Management",
         paragraphs: [
           "A phased timeline should include pre-conditioning, controlled install, cure stabilization, and gradual normalization.",
           "This method reduces post-handover defect probability in monsoon and high-humidity regions."
         ],
         image: "/images/blog-series/blog-7/Blog_7_Installation_Timeline_Climate.png",
         imageAlt: "Blog 7 climate-phase installation timeline",
-        imageCaption: "表格位置要求：\"项目管理\" 后"
       }
     ],
     suggestedLinks: [
