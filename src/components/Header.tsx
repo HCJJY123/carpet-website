@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border shadow-sm">
-      <div className="max-w-[1120px] mx-auto px-4 sm:px-6 xl:px-4">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 xl:px-4">
         <div className="flex items-center justify-between h-16 md:h-20 xl:h-24">
           <Link href="/" className="flex min-w-0 items-center gap-2" onClick={() => setMenuOpen(false)}>
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#102A43] md:h-10 md:w-10">
@@ -32,21 +32,23 @@ export default function Header() {
             </div>
           </Link>
 
-          <nav className="hidden xl:flex items-center gap-5">
+          <nav className="hidden xl:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className="text-[11px] font-black text-[#102A43]/60 hover:text-[#102A43] transition-colors uppercase tracking-widest">{link.label}</Link>
             ))}
-            <Link href="/contact" className="bg-[#102A43] text-white text-[11px] font-black px-6 py-3 rounded-sm hover:bg-black transition-all uppercase tracking-widest ml-2 shadow-lg">Get a Quote</Link>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-sm border border-[#25D366]/35 bg-[#25D366] px-5 py-3 text-[10px] font-black uppercase tracking-[0.18em] text-white shadow-lg shadow-[#25D366]/20 transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
-              aria-label="Contact VISHOME on WhatsApp Business"
-            >
-              <WhatsAppIcon className="flex h-5 w-5 items-center justify-center rounded-full bg-white p-1 text-[#25D366]" />
-              WhatsApp Business
-            </a>
+            <div className="ml-4 flex translate-x-8 items-center gap-6 2xl:translate-x-12">
+              <Link href="/contact" className="whitespace-nowrap bg-[#102A43] text-white text-[11px] font-black px-6 py-3 rounded-sm hover:bg-black transition-all uppercase tracking-widest shadow-lg">Get a Quote</Link>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex whitespace-nowrap items-center gap-2 rounded-sm border border-[#25D366]/35 bg-[#25D366] px-5 py-3 text-[10px] font-black uppercase tracking-[0.18em] text-white shadow-lg shadow-[#25D366]/20 transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
+                aria-label="Contact VISHOME on WhatsApp Business"
+              >
+                <WhatsAppIcon className="flex h-5 w-5 items-center justify-center rounded-full bg-white p-1 text-[#25D366]" />
+                WhatsApp Business
+              </a>
+            </div>
           </nav>
 
           <div className="flex items-center gap-2 xl:hidden">
