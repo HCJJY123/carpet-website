@@ -128,7 +128,7 @@ export const blogPosts: BlogPost[] = [
     ],
     suggestedLinks: [
       { label: "Wall-to-Wall Carpet", href: "/products/wall-to-wall" },
-      { label: "Hospitality Solutions", href: "/products/hotel-hospitality" }
+      { label: "Hospitality Solutions", href: "/projects" }
     ]
   },
   {
@@ -283,7 +283,7 @@ export const blogPosts: BlogPost[] = [
       }
     ],
     suggestedLinks: [
-      { label: "Hospitality Solutions", href: "/products/hotel-hospitality" },
+      { label: "Hospitality Solutions", href: "/projects" },
       { label: "Request Project Costing", href: "/contact" }
     ]
   },
@@ -376,7 +376,7 @@ export const blogPosts: BlogPost[] = [
     ],
     suggestedLinks: [
       { label: "Installation Support", href: "/contact" },
-      { label: "Hotel & Hospitality Solutions", href: "/products/hotel-hospitality" }
+      { label: "Hotel & Hospitality Solutions", href: "/projects" }
     ]
   }
 ];
