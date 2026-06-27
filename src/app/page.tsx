@@ -62,7 +62,7 @@ export default function Home() {
         <div className="container-fox">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center md:gap-8">
             <p className="text-xs font-bold text-primary uppercase tracking-[0.2em]">
-              Primary Markets: USA / UK / Canada / Australia / UAE / Saudi Arabia
+              Primary Markets: USA / UK / Canada / Australia / Bulgaria / the Philippines / Malaysia, etc.
             </p>
             <div className="flex flex-wrap items-center gap-4 opacity-60 md:gap-8">
               {certifications.map((cert) => (
