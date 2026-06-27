@@ -34,8 +34,8 @@ export default function Header() {
             </div>
           </Link>
 
-          <nav className="hidden translate-x-4 items-center justify-center xl:flex 2xl:translate-x-8" aria-label="Primary navigation">
-            <div className="flex items-center gap-1 rounded-full border border-border/80 bg-white/85 px-2 py-2 shadow-[0_10px_30px_rgba(16,42,67,0.06)] backdrop-blur">
+          <nav className="hidden -translate-x-8 items-center justify-center xl:flex 2xl:-translate-x-6" aria-label="Primary navigation">
+            <div className="flex items-center gap-0.5 rounded-full border border-border/80 bg-white/85 px-1.5 py-1.5 shadow-[0_10px_30px_rgba(16,42,67,0.06)] backdrop-blur">
               {navLinks.map((link) => {
                 const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
 
@@ -43,7 +43,7 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`whitespace-nowrap rounded-full px-3.5 py-2 text-[10.5px] font-bold uppercase tracking-[0.16em] transition-all ${
+                    className={`whitespace-nowrap rounded-full px-3 py-2 text-[10.5px] font-bold uppercase tracking-[0.13em] transition-all ${
                       active
                         ? "bg-[#102A43] text-white shadow-sm"
                         : "text-[#102A43]/58 hover:bg-surface hover:text-[#102A43]"
