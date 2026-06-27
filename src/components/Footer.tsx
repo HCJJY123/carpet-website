@@ -59,7 +59,7 @@ export default function Footer() {
             <ul className="space-y-6">
               <li className="flex flex-col gap-1">
                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">Email Inquiry</span>
-                <span className="text-sm font-bold text-gray-200">zara@visfurn.com</span>
+                <span className="text-sm font-bold text-gray-200">oilero@outlook.com</span>
               </li>
               <li className="flex flex-col gap-1">
                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">B2B Hotline</span>

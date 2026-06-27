@@ -155,7 +155,7 @@ export default function ContactPage() {
                   </p>
                   <p className="flex items-start gap-4">
                     <span className="text-accent font-bold">E</span>
-                    zara@visfurn.com
+                    oilero@outlook.com
                   </p>
                 </div>
               </div>
