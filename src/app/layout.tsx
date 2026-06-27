@@ -38,10 +38,18 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Vishome Global Commercial Carpet Manufacturer",
       },
+      {
+        url: "https://www.vishomecarpet.com/images/hero-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Vishome commercial carpet tiles and hotel flooring solutions",
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@VishomeCarpet",
+    creator: "@VishomeCarpet",
     title: "Vishome | Premium Commercial Carpet & Flooring Solutions",
     description: "B2B commercial carpet manufacturer in Tianjin, China. Carpet tiles, hotel broadloom, public area flooring for global projects.",
     images: ["https://www.vishomecarpet.com/images/og-cover.jpg"],
@@ -49,9 +57,8 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
     apple: "/logo-mark.svg",
-  }
+  },
 };
-
 
 export default function RootLayout({
   children,

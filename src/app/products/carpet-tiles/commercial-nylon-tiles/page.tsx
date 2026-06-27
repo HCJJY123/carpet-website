@@ -50,6 +50,10 @@ export default function ProductDetailPage() {
       name,
       value,
     })),
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".product-summary"],
+    },
     offers: {
       "@type": "Offer",
       url: absoluteUrl(productPath(p.id)),
@@ -59,6 +63,18 @@ export default function ProductDetailPage() {
         "@type": "Organization",
         name: brandInfo.name,
       },
+    },
+  };
+
+  const productWebPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: p.name,
+    description: p.description,
+    url: absoluteUrl(productPath(p.id)),
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".product-summary"],
     },
   };
 
@@ -77,6 +93,10 @@ export default function ProductDetailPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(productJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(productWebPageJsonLd) }}
       />
       <script
         type="application/ld+json"
@@ -101,6 +121,7 @@ export default function ProductDetailPage() {
               <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:mb-8 md:text-5xl">
                 {p.name}
               </h1>
+              <p className="product-summary mb-6 text-muted leading-relaxed">{p.description}</p>
               <div className="mb-8 space-y-4 border border-border bg-surface p-5 md:mb-10 md:p-8">
                 <div className="flex justify-between gap-6 text-xs uppercase">
                   <span>MOQ</span>

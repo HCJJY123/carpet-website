@@ -15,6 +15,7 @@ export interface BlogPost {
   description: string;
   keywords: string[];
   date: string;
+  dateModified?: string;
   author: string;
   category: string;
   image: string;

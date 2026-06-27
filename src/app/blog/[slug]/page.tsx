@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: absoluteUrl(`/blog/${post.slug}`),
       type: "article",
       publishedTime: post.date,
+      modifiedTime: post.dateModified ?? post.date,
       authors: [post.author],
       images: [{ url: absoluteUrl(post.image), alt: post.title }],
     },
@@ -50,7 +51,7 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.description,
     image: absoluteUrl(post.image),
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.dateModified ?? post.date,
     author: {
       "@type": "Organization",
       name: post.author || brandInfo.name,
@@ -67,6 +68,10 @@ export default async function BlogPostPage({ params }: Props) {
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
     articleSection: post.category,
     keywords: post.keywords.join(", "),
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["article h1", ".article-summary", ".article-section h2"],
+    },
   };
 
   const breadcrumbJsonLd = {
@@ -97,7 +102,7 @@ export default async function BlogPostPage({ params }: Props) {
           <h1 className="text-3xl md:text-5xl text-white font-black uppercase tracking-wider leading-tight">
             {post.title}
           </h1>
-          <p className="text-gray-300 mt-6 max-w-3xl mx-auto text-base leading-relaxed">
+          <p className="article-summary text-gray-300 mt-6 max-w-3xl mx-auto text-base leading-relaxed">
             {post.subtitle}
           </p>
         </div>
@@ -124,7 +129,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         <div className="mt-10 space-y-12">
           {post.sections.map((section) => (
-            <section key={section.title} className="border-b border-border pb-10">
+            <section key={section.title} className="article-section border-b border-border pb-10">
               <h2 className="text-2xl font-bold text-primary mb-5 uppercase tracking-tight">{section.title}</h2>
               <div className="space-y-4">
                 {section.paragraphs.map((paragraph, index) => (
