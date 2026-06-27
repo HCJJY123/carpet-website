@@ -43,7 +43,8 @@ export default function ContactPage() {
   return (
     <div className="bg-white">
       <PageHero
-        title="Start Your Procurement"
+        title="CONTACT US"
+        align="left"
         eyebrow="Factory Direct Project Support"
         description="Request pricing, technical certificates, or professional sample matching for your commercial flooring project."
         image="/images/contact-hero.jpg"
