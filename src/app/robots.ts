@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://www.visfurn.com/sitemap.xml",
-    host: "https://www.visfurn.com",
+    sitemap: "https://www.vishomecarpet.com/sitemap.xml",
+    host: "https://www.vishomecarpet.com",
   };
 }

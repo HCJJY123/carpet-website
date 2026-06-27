@@ -9,7 +9,7 @@ export interface CaseStudy { id: string; title: string; subtitle?: string; categ
 export const brandInfo = {
   name: "Vishome Global Commercial Carpet Co., Ltd.",
   shortName: "Visfurn",
-  url: "https://www.visfurn.com",
+  url: "https://www.vishomecarpet.com",
   email: "oilero@outlook.com",
   phone: "+86 152 2288 5400",
   whatsapp: "+86 152 2288 5400",

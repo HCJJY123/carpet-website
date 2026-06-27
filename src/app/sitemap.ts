@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-data";
 
-const BASE = "https://www.visfurn.com";
+const BASE = "https://www.vishomecarpet.com";
 
 const staticRoutes: { url: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
   { url: "/",                          priority: 1.0, changeFrequency: "weekly" },

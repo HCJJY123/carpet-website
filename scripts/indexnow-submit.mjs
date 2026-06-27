@@ -5,7 +5,7 @@
  */
 
 const KEY = "47ce845ea2794869a16a0b4abad37110";
-const HOST = "www.visfurn.com";
+const HOST = "www.vishomecarpet.com";
 const BASE = `https://${HOST}`;
 
 const urls = [

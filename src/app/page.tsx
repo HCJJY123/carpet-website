@@ -6,7 +6,7 @@ import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "https://www.visfurn.com" },
+  alternates: { canonical: "https://www.vishomecarpet.com" },
 };
 
 export default function Home() {

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Hotel & Hospitality Carpet Solutions | VISHOME",
     description:
       "Commercial hotel carpet systems for luxury hospitality projects, from design and sampling to production and delivery.",
-    url: "https://www.visfurn.com/solutions/hotel-hospitality",
+    url: "https://www.vishomecarpet.com/solutions/hotel-hospitality",
     type: "website",
   },
 };
@@ -106,19 +106,19 @@ export default function HotelHospitalitySolutionPage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.visfurn.com/",
+        item: "https://www.vishomecarpet.com/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Solutions",
-        item: "https://www.visfurn.com/solutions",
+        item: "https://www.vishomecarpet.com/solutions",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Hotel & Hospitality",
-        item: "https://www.visfurn.com/solutions/hotel-hospitality",
+        item: "https://www.vishomecarpet.com/solutions/hotel-hospitality",
       },
     ],
   };
@@ -130,7 +130,7 @@ export default function HotelHospitalitySolutionPage() {
     provider: {
       "@type": "Organization",
       name: "Vishome Global Commercial Carpet Co., Ltd.",
-      url: "https://www.visfurn.com",
+      url: "https://www.vishomecarpet.com",
     },
     areaServed: ["North America", "Europe", "Australia", "Middle East", "Asia"],
     serviceType: "Commercial hospitality carpet solution and supply",
