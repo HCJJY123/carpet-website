@@ -1,5 +1,5 @@
 export interface ProductColor { name: string; hex: string; }
-export interface TechnicalSpecs { fireRating: string; trafficClass: string; yarnSystem: string; backing: string; pileWeight: string; totalThickness: string; rollWidth?: string; soundInsulation: string; antistatic: string; }
+export interface TechnicalSpecs { fireRating: string; trafficClass: string; fiber?: string; yarnSystem: string; backing: string; pileWeight: string; totalThickness: string; rollWidth?: string; soundInsulation?: string; antistatic: string; }
 export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; leadTime: string; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
 export interface CaseSpecItem { label: string; value: string; }
 export interface CaseSection { title: string; paragraphs: string[]; image?: string; imageAlt?: string; imageCaption?: string; }
@@ -110,6 +110,38 @@ export const products: Product[] = [
     spec: { material: "Solution-Dyed Nylon", size: "4m Width", colors: [] },
     technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 33", yarnSystem: "Tufted", backing: "Bitumen", pileWeight: "28oz", totalThickness: "8.5mm", soundInsulation: "22dB", antistatic: "< 2.0 kV" },
     features: ["Heavy Traffic"]
+  },
+  {
+    id: "natural-sisal-carpet",
+    name: "Natural Sisal Linen-Weave Commercial Carpet",
+    category: "public-area",
+    description: "100% natural sisal carpet with a refined linen-weave texture for offices, retail, and hospitality public spaces.",
+    longDescription: "Vishomecarpet's Natural Sisal Linen-Weave Commercial Carpet is a 100% plant-fiber flooring crafted from durable agave sisalana sisal, woven into a refined linen-look flatweave.",
+    image: "/images/natural-sisal-carpet.jpg",
+    moq: "300 SQM",
+    leadTime: "30 Days",
+    spec: {
+      material: "100% Natural Sisal",
+      size: "4m Width",
+      colors: [
+        { name: "Wheat Beige", hex: "#C7A66A" },
+        { name: "Warm Greige", hex: "#9F9482" },
+        { name: "Taupe Brown", hex: "#806B55" },
+        { name: "Charcoal Grey", hex: "#4C4B47" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I (FR-treated)",
+      trafficClass: "Class 32",
+      fiber: "100% Natural Sisal",
+      yarnSystem: "Woven Flatweave",
+      backing: "Natural Latex + Jute (Non-Slip)",
+      pileWeight: "56oz (≈1,900 g/m²)",
+      totalThickness: "7mm",
+      rollWidth: "4m",
+      antistatic: "Permanent (Natural Fiber)"
+    },
+    features: ["Natural Sisal", "Linen-Weave Texture", "Biophilic Commercial Flooring"]
   }
 ];
 
