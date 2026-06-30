@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: "Wall-to-wall broadloom carpet systems for hotel guestrooms, corridors, lobbies, and hospitality projects with custom pattern and export support.",
   alternates: { canonical: "/products/wall-to-wall" },
 };
+
 export default function CategoryPage() {
   const categoryId = "wall-to-wall";
   const currentCategory = productCategories.find((c) => c.id === categoryId);
@@ -27,12 +28,12 @@ export default function CategoryPage() {
             {categoryProducts.map((p) => (
               <Link key={p.id} href={`/products/${categoryId}/${p.id}`} className="group block bg-white border border-border p-8 hover:shadow-2xl transition-all duration-500 rounded-sm">
                 <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
-                   <ProductImage src={p.image} alt={p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                  <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                 </div>
                 <h3 className="font-bold text-xl text-primary uppercase mb-6 h-14 leading-tight group-hover:text-accent transition-colors">{p.name}</h3>
                 <div className="flex justify-between items-center text-[10px] font-black text-accent uppercase tracking-widest border-t border-border pt-6">
-                   <span>Technical Details</span>
-                   <span>→</span>
+                  <span>Technical Details</span>
+                  <span>→</span>
                 </div>
               </Link>
             ))}

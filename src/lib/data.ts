@@ -1,6 +1,6 @@
 export interface ProductColor { name: string; hex: string; }
-export interface TechnicalSpecs { fireRating: string; trafficClass: string; yarnSystem: string; backing: string; pileWeight: string; totalThickness: string; soundInsulation: string; antistatic: string; }
-export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; moq: string; leadTime: string; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
+export interface TechnicalSpecs { fireRating: string; trafficClass: string; yarnSystem: string; backing: string; pileWeight: string; totalThickness: string; rollWidth?: string; soundInsulation: string; antistatic: string; }
+export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; leadTime: string; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
 export interface CaseSpecItem { label: string; value: string; }
 export interface CaseSection { title: string; paragraphs: string[]; image?: string; imageAlt?: string; imageCaption?: string; }
 export interface CaseCostItem { item: string; amount: string; }
@@ -74,6 +74,29 @@ export const products: Product[] = [
     spec: { material: "80% Wool / 20% Nylon", size: "4m Width", colors: [] },
     technicalSpecs: { fireRating: "Class I", trafficClass: "32", yarnSystem: "Woven", backing: "Jute", pileWeight: "40oz", totalThickness: "11mm", soundInsulation: "28dB", antistatic: "Permanent" },
     features: ["Custom Pattern"]
+  },
+  {
+    id: "3d-printed-hotel-carpet",
+    name: "3D HD Printed Nylon Hotel Carpet",
+    category: "wall-to-wall",
+    description: "High-definition 3D-printed nylon broadloom for hotel guestrooms, corridors, and lobbies - fully custom patterns, fast 25-day production.",
+    longDescription: "Vishomecarpet's 3D HD Printed Nylon Hotel Carpet is a wall-to-wall broadloom flooring solution engineered for hospitality interiors. Using high-definition digital printing on a durable 100% nylon surface, it reproduces intricate, photo-realistic patterns and rich color depth that conventional dyed carpets cannot match - at a lower setup cost and faster lead time than woven Axminster or Wilton broadloom.",
+    image: "/images/3d-printed-hotel-carpet.jpg",
+    imageAlt: "3D HD printed nylon hotel carpet swatch with elegant gold and burgundy pattern by Vishomecarpet",
+    gallery: [
+      { src: "/images/3d-printed-hotel-carpet-roll.jpg", alt: "Wall-to-wall printed hotel broadloom carpet roll, 4m width, Vishomecarpet" },
+      { src: "/images/3d-printed-hotel-carpet-guestroom.jpg", alt: "Printed nylon broadloom carpet installed in a luxury hotel guestroom" },
+      { src: "/images/3d-printed-hotel-carpet-corridor.jpg", alt: "Seamless wall-to-wall printed hotel corridor carpet with ornamental pattern" },
+      { src: "/images/3d-printed-hotel-carpet-ballroom.jpg", alt: "Large-scale printed broadloom carpet in a grand hotel lobby and ballroom" },
+      { src: "/images/3d-printed-hotel-carpet-macro.jpg", alt: "Close-up macro of dense printed nylon hotel carpet pile texture" },
+      { src: "/images/3d-printed-hotel-carpet-backing.jpg", alt: "ActionBac backing detail of printed nylon hotel broadloom carpet" },
+      { src: "/images/3d-printed-hotel-carpet-colorways.jpg", alt: "Hotel printed broadloom carpet pattern shown in four custom colorways" }
+    ],
+    moq: "300 SQM",
+    leadTime: "25 Days",
+    spec: { material: "100% Nylon (HD Printed)", size: "4m Width", colors: [] },
+    technicalSpecs: { fireRating: "Class I (ASTM E648)", trafficClass: "33", yarnSystem: "100% Nylon (HD Printed)", backing: "ActionBac (PP + Latex)", pileWeight: "32oz", totalThickness: "9mm", rollWidth: "4m", soundInsulation: "25dB", antistatic: "Permanent" },
+    features: ["Custom Pattern", "HD Printed Nylon", "Hospitality Broadloom"]
   },
   {
     id: "public-area-heavy-duty",
