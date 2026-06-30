@@ -117,7 +117,7 @@ export const products: Product[] = [
     category: "public-area",
     description: "100% natural sisal carpet with a refined linen-weave texture for offices, retail, and hospitality public spaces.",
     longDescription: "Vishomecarpet's Natural Sisal Linen-Weave Commercial Carpet is a 100% plant-fiber flooring crafted from durable agave sisalana sisal, woven into a refined linen-look flatweave.",
-    image: "/images/natural-sisal-carpet.jpg",
+    image: "/images/natural-sisal-carpet-office.jpg",
     moq: "300 SQM",
     leadTime: "30 Days",
     spec: {
