@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     url: absoluteUrl(canonicalPath),
     images: [
       {
-        url: absoluteUrl("/images/3d-printed-hotel-carpet.jpg"),
+        url: absoluteUrl("/images/3d-printed-hotel-carpet-corridor.jpg"),
         alt: "3D HD Printed Nylon Hotel Carpet by Vishomecarpet"
       }
     ],
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "3D HD Printed Nylon Hotel Carpet | VISHOME",
     description: "High-definition 3D-printed nylon broadloom carpet for hotel guestrooms, corridors, and lobbies. Custom patterns, Class I fire rating, 4m width.",
-    images: [absoluteUrl("/images/3d-printed-hotel-carpet.jpg")]
+    images: [absoluteUrl("/images/3d-printed-hotel-carpet-corridor.jpg")]
   }
 };
 
@@ -77,9 +77,9 @@ const productJsonLd = {
   "@type": "Product",
   "name": "3D HD Printed Nylon Hotel Carpet",
   "image": [
-    absoluteUrl("/images/3d-printed-hotel-carpet.jpg"),
+    absoluteUrl("/images/3d-printed-hotel-carpet-corridor.jpg"),
     absoluteUrl("/images/3d-printed-hotel-carpet-guestroom.jpg"),
-    absoluteUrl("/images/3d-printed-hotel-carpet-corridor.jpg")
+    absoluteUrl("/images/3d-printed-hotel-carpet.jpg")
   ],
   "description": "High-definition 3D-printed nylon broadloom carpet for hotel guestrooms, corridors, and lobbies. Fully custom patterns, Class I fire rating, 4m width, factory-direct from Vishomecarpet.",
   "brand": { "@type": "Brand", "name": "Vishomecarpet" },
