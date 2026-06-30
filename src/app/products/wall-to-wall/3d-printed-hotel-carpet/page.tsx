@@ -90,6 +90,18 @@ const productJsonLd = {
     "name": brandInfo.name,
     "url": brandInfo.url
   },
+  "offers": product?.fobPrice
+    ? {
+        "@type": "AggregateOffer",
+        "url": absoluteUrl(productPath(product.id)),
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": product.fobPrice.currency,
+        "lowPrice": product.fobPrice.lowPrice,
+        "highPrice": product.fobPrice.highPrice,
+        "offerCount": "1",
+        "seller": { "@type": "Organization", "name": brandInfo.name }
+      }
+    : undefined,
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Fire Rating", "value": "Class I (ASTM E648)" },
     { "@type": "PropertyValue", "name": "Traffic Class", "value": "33" },
@@ -185,6 +197,12 @@ export default function ProductDetailPage() {
                   <span>LEAD TIME</span>
                   <span className="font-bold">{product.leadTime}</span>
                 </div>
+                {product.fobPrice && (
+                  <div className="flex justify-between uppercase text-xs gap-6">
+                    <span>FOB PRICE</span>
+                    <span className="text-right font-bold">{product.fobPrice.display}</span>
+                  </div>
+                )}
               </div>
               <Link href="/contact" className="btn-fox-orange w-full py-5 text-center text-sm uppercase tracking-widest shadow-lg">Request Technical Quote</Link>
             </div>

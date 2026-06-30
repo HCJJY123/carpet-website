@@ -113,13 +113,18 @@ export default function NaturalSisalCarpetPage() {
       { "@type": "PropertyValue", name: "Roll Width", value: "4m" },
       { "@type": "PropertyValue", name: "Antistatic", value: "Permanent (Natural Fiber)" },
     ],
-    offers: {
-      "@type": "Offer",
-      url: absoluteUrl(productPath(p.id)),
-      availability: "https://schema.org/InStock",
-      priceCurrency: "USD",
-      seller: { "@type": "Organization", name: brandInfo.name },
-    },
+    offers: p.fobPrice
+      ? {
+          "@type": "AggregateOffer",
+          url: absoluteUrl(productPath(p.id)),
+          availability: "https://schema.org/InStock",
+          priceCurrency: p.fobPrice.currency,
+          lowPrice: p.fobPrice.lowPrice,
+          highPrice: p.fobPrice.highPrice,
+          offerCount: "1",
+          seller: { "@type": "Organization", name: brandInfo.name },
+        }
+      : undefined,
   };
 
   const breadcrumbJsonLd = {
@@ -199,6 +204,12 @@ export default function NaturalSisalCarpetPage() {
                   <span>Lead Time</span>
                   <span className="text-right font-bold">{p.leadTime}</span>
                 </div>
+                {p.fobPrice && (
+                  <div className="flex justify-between gap-6 text-xs uppercase">
+                    <span>FOB Price</span>
+                    <span className="text-right font-bold">{p.fobPrice.display}</span>
+                  </div>
+                )}
                 <div className="flex justify-between gap-6 text-xs uppercase">
                   <span>Roll Width</span>
                   <span className="text-right font-bold">4m</span>

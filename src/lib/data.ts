@@ -1,6 +1,7 @@
 export interface ProductColor { name: string; hex: string; }
 export interface TechnicalSpecs { fireRating: string; trafficClass: string; fiber?: string; yarnSystem: string; backing: string; pileWeight: string; totalThickness: string; rollWidth?: string; soundInsulation?: string; antistatic: string; }
-export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; leadTime: string; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
+export interface FobPriceRange { display: string; lowPrice: string; highPrice: string; currency: "USD"; unit: string; }
+export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; leadTime: string; fobPrice?: FobPriceRange; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
 export interface CaseSpecItem { label: string; value: string; }
 export interface CaseSection { title: string; paragraphs: string[]; image?: string; imageAlt?: string; imageCaption?: string; }
 export interface CaseCostItem { item: string; amount: string; }
@@ -94,6 +95,7 @@ export const products: Product[] = [
     ],
     moq: "300 SQM",
     leadTime: "25 Days",
+    fobPrice: { display: "US$3.50-7.80 / SQM", lowPrice: "3.50", highPrice: "7.80", currency: "USD", unit: "SQM" },
     spec: { material: "100% Nylon (HD Printed)", size: "4m Width", colors: [] },
     technicalSpecs: { fireRating: "Class I (ASTM E648)", trafficClass: "33", yarnSystem: "100% Nylon (HD Printed)", backing: "ActionBac (PP + Latex)", pileWeight: "32oz", totalThickness: "9mm", rollWidth: "4m", soundInsulation: "25dB", antistatic: "Permanent" },
     features: ["Custom Pattern", "HD Printed Nylon", "Hospitality Broadloom"]
@@ -120,6 +122,7 @@ export const products: Product[] = [
     image: "/images/natural-sisal-carpet-office.jpg",
     moq: "300 SQM",
     leadTime: "30 Days",
+    fobPrice: { display: "US$6.50-14.80 / SQM", lowPrice: "6.50", highPrice: "14.80", currency: "USD", unit: "SQM" },
     spec: {
       material: "100% Natural Sisal",
       size: "4m Width",
