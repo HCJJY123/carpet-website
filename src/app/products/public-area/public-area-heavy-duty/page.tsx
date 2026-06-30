@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { brandInfo, products } from "@/lib/data";
-import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
+import { products } from "@/lib/data";
+import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 
 const productId = "public-area-heavy-duty";
@@ -27,44 +27,7 @@ export default function ProductDetailPage() {
   const p = products.find((prod) => prod.id === productId);
   if (!p) return <div>Product Not Found</div>;
 
-  const productJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: p.name,
-    description: p.description,
-    image: absoluteUrl(p.image),
-    brand: {
-      "@type": "Brand",
-      name: brandInfo.shortName,
-    },
-    manufacturer: {
-      "@type": "Organization",
-      name: brandInfo.name,
-      url: brandInfo.url,
-    },
-    category: p.category,
-    material: p.spec.material,
-    size: p.spec.size,
-    additionalProperty: Object.entries(p.technicalSpecs).map(([name, value]) => ({
-      "@type": "PropertyValue",
-      name,
-      value,
-    })),
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: ["h1", ".product-summary"],
-    },
-    offers: {
-      "@type": "Offer",
-      url: absoluteUrl(productPath(p.id)),
-      availability: "https://schema.org/InStock",
-      priceCurrency: "USD",
-      seller: {
-        "@type": "Organization",
-        name: brandInfo.name,
-      },
-    },
-  };
+  const jsonLd = productJsonLd(p);
 
   const productWebPageJsonLd = {
     "@context": "https://schema.org",
@@ -78,21 +41,13 @@ export default function ProductDetailPage() {
     },
   };
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
-      { "@type": "ListItem", position: 2, name: "Products", item: absoluteUrl("/products") },
-      { "@type": "ListItem", position: 3, name: p.name, item: absoluteUrl(productPath(p.id)) },
-    ],
-  };
+  const breadcrumbJsonLd = productBreadcrumbJsonLd(p);
 
   return (
     <div className="bg-white min-h-screen">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: safeJsonLd(productJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <script
         type="application/ld+json"

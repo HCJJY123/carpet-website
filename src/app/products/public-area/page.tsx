@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { products, productCategories } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+import { productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Public Area Carpet | Heavy-Duty Commercial Flooring Systems | VISHOME",
@@ -11,11 +12,17 @@ export const metadata: Metadata = {
 export default function CategoryPage() {
   const categoryId = "public-area";
   const currentCategory = productCategories.find((c) => c.id === categoryId);
-  // 获取该分类下的真实产品
   const categoryProducts = products.filter((p) => p.category === categoryId);
+  const jsonLd = productItemListJsonLd({
+    name: "Public Area Commercial Carpet",
+    description: "Heavy-duty public area carpet systems for airports, exhibition centers, corridors, retail, and high-traffic commercial projects.",
+    url: "/products/public-area",
+    items: categoryProducts,
+  });
 
   return (
     <div className="bg-white min-h-screen font-sans">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
       <section className="bg-[#102A43] py-24 text-center">
         <div className="container-fox">
           <h1 className="text-4xl md:text-6xl font-black text-white uppercase tracking-widest">{currentCategory?.name || "Public Area Carpets"}</h1>

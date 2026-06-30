@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { products, productCategories } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+import { productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Commercial Carpet Tiles | Modular 50x50 Carpet Tile Manufacturer | VISHOME",
@@ -12,9 +13,16 @@ export default function CategoryPage() {
   const categoryId = "carpet-tiles";
   const currentCategory = productCategories.find((c) => c.id === categoryId);
   const categoryProducts = products.filter((p) => p.category === categoryId);
+  const jsonLd = productItemListJsonLd({
+    name: "Commercial Carpet Tiles",
+    description: "Modular 50x50 commercial carpet tiles for offices, hotels, retail spaces, and high-traffic commercial interiors.",
+    url: "/products/carpet-tiles",
+    items: categoryProducts,
+  });
 
   return (
     <div className="bg-white min-h-screen font-sans">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
       <section className="bg-[#102A43] py-24 text-center">
         <div className="container-fox">
           <h1 className="text-4xl md:text-6xl font-black text-white uppercase tracking-widest">{currentCategory?.name}</h1>

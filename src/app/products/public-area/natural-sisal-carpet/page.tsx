@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { brandInfo, products } from "@/lib/data";
-import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
+import { products } from "@/lib/data";
+import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 
 const productId = "natural-sisal-carpet";
@@ -91,52 +91,9 @@ export default function NaturalSisalCarpetPage() {
   const p = products.find((prod) => prod.id === productId);
   if (!p) return <div>Product Not Found</div>;
 
-  const productJsonLd = {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    name: p.name,
-    image: [productImages.hero, "/images/natural-sisal-carpet.jpg", "/images/natural-sisal-carpet-macro.jpg"].map(absoluteUrl),
-    description:
-      "Natural 100% sisal commercial carpet with a refined linen-weave texture for offices, retail, exhibitions, and hotel public areas. Eco-friendly, FR-treated to Class I, custom widths, factory-direct from Vishomecarpet.",
-    brand: { "@type": "Brand", name: "Vishomecarpet" },
-    category: "Public Area Commercial Carpet",
-    material: "100% Sisal (Natural Fiber)",
-    manufacturer: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
-    additionalProperty: [
-      { "@type": "PropertyValue", name: "Fire Rating", value: "ASTM E648 Class I (FR-treated)" },
-      { "@type": "PropertyValue", name: "Traffic Class", value: "EN 1307 Class 32" },
-      { "@type": "PropertyValue", name: "Fiber", value: "100% Natural Sisal" },
-      { "@type": "PropertyValue", name: "Construction", value: "Woven Flatweave" },
-      { "@type": "PropertyValue", name: "Backing", value: "Natural Latex + Jute (Non-Slip)" },
-      { "@type": "PropertyValue", name: "Pile Weight", value: "56oz (1,900 g/m²)" },
-      { "@type": "PropertyValue", name: "Total Thickness", value: "7mm" },
-      { "@type": "PropertyValue", name: "Roll Width", value: "4m" },
-      { "@type": "PropertyValue", name: "Antistatic", value: "Permanent (Natural Fiber)" },
-    ],
-    offers: p.fobPrice
-      ? {
-          "@type": "AggregateOffer",
-          url: absoluteUrl(productPath(p.id)),
-          availability: "https://schema.org/InStock",
-          priceCurrency: p.fobPrice.currency,
-          lowPrice: p.fobPrice.lowPrice,
-          highPrice: p.fobPrice.highPrice,
-          offerCount: "1",
-          seller: { "@type": "Organization", name: brandInfo.name },
-        }
-      : undefined,
-  };
+  const jsonLd = productJsonLd(p);
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
-      { "@type": "ListItem", position: 2, name: "Products", item: absoluteUrl("/products") },
-      { "@type": "ListItem", position: 3, name: "Public Area Carpets", item: absoluteUrl("/products/public-area") },
-      { "@type": "ListItem", position: 4, name: p.name, item: absoluteUrl(productPath(p.id)) },
-    ],
-  };
+  const breadcrumbJsonLd = productBreadcrumbJsonLd(p);
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -150,7 +107,7 @@ export default function NaturalSisalCarpetPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(productJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
 

@@ -6,6 +6,7 @@ const BASE = "https://www.vishomecarpet.com";
 const staticRoutes: { url: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
   { url: "/", priority: 1.0, changeFrequency: "weekly" },
   { url: "/products", priority: 0.9, changeFrequency: "monthly" },
+  { url: "/commercial-carpet-manufacturer", priority: 0.9, changeFrequency: "monthly" },
   { url: "/products/carpet-tiles", priority: 0.9, changeFrequency: "monthly" },
   { url: "/products/wall-to-wall", priority: 0.9, changeFrequency: "monthly" },
   { url: "/products/public-area", priority: 0.9, changeFrequency: "monthly" },
@@ -18,6 +19,7 @@ const staticRoutes: { url: string; priority: number; changeFrequency: MetadataRo
   { url: "/commercial-carpet-tiles", priority: 0.8, changeFrequency: "monthly" },
   { url: "/hotel-carpet", priority: 0.8, changeFrequency: "monthly" },
   { url: "/carpet-tiles-50x50", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/natural-sisal-carpet", priority: 0.8, changeFrequency: "monthly" },
   { url: "/projects", priority: 0.85, changeFrequency: "monthly" },
   { url: "/projects/case-1", priority: 0.75, changeFrequency: "yearly" },
   { url: "/projects/case-2", priority: 0.75, changeFrequency: "yearly" },

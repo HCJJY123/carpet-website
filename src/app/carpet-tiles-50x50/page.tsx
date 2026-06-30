@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import { products } from "@/lib/data";
+import { productPath } from "@/lib/seo";
 
 export const metadata = {
   title: "50x50 Carpet Tiles | Standard Modular Flooring | Vishome",
@@ -96,7 +97,7 @@ export default function CarpetTiles50x50Page() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {products50x50.map((product) => (
-              <Link key={product.id} href={`/products/${product.id}`} className="group bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all border border-border">
+              <Link key={product.id} href={productPath(product.id)} className="group bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all border border-border">
                 <div className="aspect-square overflow-hidden">
                   <ProductImage src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
