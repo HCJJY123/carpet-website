@@ -8,10 +8,10 @@ const productId = "natural-sisal-carpet";
 const product = products.find((prod) => prod.id === productId);
 
 const productImages = {
-  hero: "/images/natural-sisal-carpet.jpg",
+  hero: "/images/natural-sisal-carpet-office.jpg",
   gallery: [
     { src: "/images/natural-sisal-carpet-roll.jpg", alt: "Natural sisal broadloom carpet roll, 4m width, with jute backing", title: "Broadloom Roll" },
-    { src: "/images/natural-sisal-carpet-office.jpg", alt: "Natural sisal carpet in a modern biophilic office reception", title: "Office Reception" },
+    { src: "/images/natural-sisal-carpet.jpg", alt: "Natural sisal linen-weave commercial carpet swatch in warm wheat tone by Vishomecarpet", title: "Linen-Weave Swatch" },
     { src: "/images/natural-sisal-carpet-retail.jpg", alt: "Sisal commercial carpet flooring in an upscale boutique retail interior", title: "Boutique Retail" },
     { src: "/images/natural-sisal-carpet-lobby.jpg", alt: "Natural sisal broadloom in a hotel lobby and exhibition public area", title: "Lobby and Exhibition" },
     { src: "/images/natural-sisal-carpet-macro.jpg", alt: "Macro close-up of woven natural sisal linen-weave fiber texture", title: "Linen-Weave Macro" },
@@ -75,7 +75,7 @@ export const metadata: Metadata = product
           "Natural 100% sisal commercial carpet with a linen-weave texture for offices, retail, exhibitions, and hotel public areas. Eco-friendly, custom widths.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
-        images: [{ url: absoluteUrl(productImages.hero), alt: "Natural sisal linen-weave commercial carpet by Vishomecarpet" }],
+        images: [{ url: absoluteUrl(productImages.hero), alt: "Natural sisal carpet in a modern biophilic office reception by Vishomecarpet" }],
       },
       twitter: {
         card: "summary_large_image",
@@ -95,7 +95,7 @@ export default function NaturalSisalCarpetPage() {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: p.name,
-    image: [productImages.hero, "/images/natural-sisal-carpet-office.jpg", "/images/natural-sisal-carpet-macro.jpg"].map(absoluteUrl),
+    image: [productImages.hero, "/images/natural-sisal-carpet.jpg", "/images/natural-sisal-carpet-macro.jpg"].map(absoluteUrl),
     description:
       "Natural 100% sisal commercial carpet with a refined linen-weave texture for offices, retail, exhibitions, and hotel public areas. Eco-friendly, FR-treated to Class I, custom widths, factory-direct from Vishomecarpet.",
     brand: { "@type": "Brand", name: "Vishomecarpet" },
@@ -164,7 +164,7 @@ export default function NaturalSisalCarpetPage() {
               <div className="aspect-[3/2] overflow-hidden rounded-2xl border border-border bg-white shadow-xl">
                 <ProductImage
                   src={productImages.hero}
-                  alt="Natural sisal linen-weave commercial carpet swatch in warm wheat tone by Vishomecarpet"
+                  alt="Natural sisal carpet in a modern biophilic office reception"
                   className="h-full w-full"
                 />
               </div>
