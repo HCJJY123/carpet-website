@@ -18,6 +18,37 @@ export const brandInfo = {
 };
 
 export const products: Product[] = [
+
+  {
+    id: "ecocore-pe-backing-carpet-tiles",
+    name: "Vishomecarpet EcoCore PVC-Free PE Backing Carpet Tiles",
+    category: "carpet-tiles",
+    description: "Eco-friendly 50x50cm modular carpet tiles with PVC-free PE backing for sustainable offices, green buildings, and heavy commercial interiors.",
+    longDescription: "Vishomecarpet EcoCore PE Backing Carpet Tiles are developed for B2B flooring projects where sustainability, modular flexibility, and commercial durability need to work together. The product combines a dense textured loop pile surface with a stable PVC-free PE backing structure, creating a practical flooring solution for office buildings, coworking spaces, education facilities, public workspaces, and LEED-oriented green building interiors.",
+    image: "/images/products/ecocore-pe-backing/01-hero-white-background.png",
+    moq: "Project-Based",
+    leadTime: "10-20 Days",
+    spec: {
+      material: "Solution-Dyed Nylon / Synthetic Fiber Option",
+      size: "50x50 cm",
+      colors: [
+        { name: "Carbon Gray", hex: "#4A4D4D" },
+        { name: "Warm Greige", hex: "#8B857A" },
+        { name: "Silver Ash", hex: "#A3A6A3" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I Option",
+      trafficClass: "Heavy Commercial Use",
+      yarnSystem: "Tufted Multi-Level Loop",
+      backing: "PVC-Free PE Backing",
+      pileWeight: "500-600 g/sqm",
+      totalThickness: "6.0-7.0mm",
+      soundInsulation: "Acoustic Comfort Option",
+      antistatic: "Low Static / Office Use"
+    },
+    features: ["PVC-Free PE Backing", "Low VOC", "Easy Replacement", "Green Building Ready"]
+  },
   {
     id: "commercial-nylon-tiles",
     name: "Premium Nylon 6.6 Commercial Carpet Tiles",

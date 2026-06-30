@@ -9,6 +9,7 @@ const staticRoutes: { url: string; priority: number; changeFrequency: MetadataRo
   { url: "/products/carpet-tiles", priority: 0.9, changeFrequency: "monthly" },
   { url: "/products/wall-to-wall", priority: 0.9, changeFrequency: "monthly" },
   { url: "/products/public-area", priority: 0.9, changeFrequency: "monthly" },
+  { url: "/products/carpet-tiles/ecocore-pe-backing-carpet-tiles", priority: 0.85, changeFrequency: "monthly" },
   { url: "/products/carpet-tiles/commercial-nylon-tiles", priority: 0.8, changeFrequency: "monthly" },
   { url: "/products/wall-to-wall/luxury-hotel-broadloom", priority: 0.8, changeFrequency: "monthly" },
   { url: "/products/public-area/public-area-heavy-duty", priority: 0.8, changeFrequency: "monthly" },
