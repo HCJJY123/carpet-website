@@ -191,6 +191,13 @@ export default function ProductDetailPage() {
               <div className="aspect-[3/2] rounded-sm overflow-hidden border border-border shadow-xl">
                 <ProductImage src={product.image} alt={product.imageAlt} className="w-full h-full object-cover" />
               </div>
+              <div className="mt-5 grid grid-cols-3 gap-4">
+                {product.mainImages.slice(1).map((image) => (
+                  <figure key={image.src} className="aspect-[4/3] overflow-hidden border border-border bg-white">
+                    <ProductImage src={image.src} alt={image.alt} className="w-full h-full" fit="contain" />
+                  </figure>
+                ))}
+              </div>
             </div>
             <div className="lg:w-2/5 flex flex-col justify-center">
               <p className="text-[11px] font-black text-accent uppercase tracking-[0.28em] mb-4">Vishomecarpet Wall-to-Wall Hotel Carpet</p>
@@ -251,8 +258,8 @@ export default function ProductDetailPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {product.mainImages.map((image) => (
               <figure key={image.src} className="bg-white border border-border">
-                <div className="aspect-[3/2] overflow-hidden">
-                  <ProductImage src={image.src} alt={image.alt} className="w-full h-full object-cover" />
+                <div className="aspect-[3/2] overflow-hidden bg-white">
+                  <ProductImage src={image.src} alt={image.alt} className="w-full h-full" fit="contain" />
                 </div>
               </figure>
             ))}
