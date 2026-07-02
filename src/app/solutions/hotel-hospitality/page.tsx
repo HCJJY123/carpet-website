@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 
+const siteUrl = "https://www.vishomecarpet.com";
+
 export const metadata: Metadata = {
   title: "Hotel & Hospitality Carpet Solutions | Wall-to-Wall Broadloom | VISHOME",
   description:
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
     title: "Hotel & Hospitality Carpet Solutions | VISHOME",
     description:
       "Commercial hotel carpet systems for luxury hospitality projects, from design and sampling to production and delivery.",
-    url: "https://www.vishomecarpet.com/solutions/hotel-hospitality",
+    url: `${siteUrl}/solutions/hotel-hospitality`,
     type: "website",
   },
 };
@@ -106,19 +108,19 @@ export default function HotelHospitalitySolutionPage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.vishomecarpet.com/",
+        item: `${siteUrl}/`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Solutions",
-        item: "https://www.vishomecarpet.com/solutions",
+        item: `${siteUrl}/solutions`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Hotel & Hospitality",
-        item: "https://www.vishomecarpet.com/solutions/hotel-hospitality",
+        item: `${siteUrl}/solutions/hotel-hospitality`,
       },
     ],
   };
@@ -130,7 +132,7 @@ export default function HotelHospitalitySolutionPage() {
     provider: {
       "@type": "Organization",
       name: "Vishome Global Commercial Carpet Co., Ltd.",
-      url: "https://www.vishomecarpet.com",
+      url: siteUrl,
     },
     areaServed: ["North America", "Europe", "Australia", "Middle East", "Asia"],
     serviceType: "Commercial hospitality carpet solution and supply",
@@ -186,7 +188,7 @@ export default function HotelHospitalitySolutionPage() {
                 Request Project Quotation
               </Link>
               <Link
-                href="/products/broadloom"
+                href="/products/wall-to-wall"
                 className="btn-fox-outline !border-white !text-white hover:!bg-white hover:!text-primary !px-10 !py-5"
               >
                 Explore Broadloom Systems
@@ -346,7 +348,7 @@ export default function HotelHospitalitySolutionPage() {
                 Contact Project Team
               </Link>
               <a
-                href="https://wa.me/8615222885400?text=Hello%20Zara%2C%20I%20am%20interested%20in%20your%20commercial%20carpet%20solutions.%20Could%20you%20help%20me%20with%20a%20project%20quote%3F"
+                href="https://wa.me/8615222885400"
                 target="_blank"
                 rel="noreferrer"
                 className="btn-fox-outline !border-white !text-white hover:!bg-white hover:!text-primary !px-10 !py-5"

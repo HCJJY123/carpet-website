@@ -1,34 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-import { productCategories as categories, products } from "@/lib/data";
-import { productItemListJsonLd, safeJsonLd } from "@/lib/seo";
+import { productCategories as categories } from "@/lib/data";
 import ProductImage from "@/components/ProductImage";
-import PageHero from "@/components/PageHero";
 
-export const metadata: Metadata = {
-  title: "Commercial Carpet Products | Carpet Tiles, Broadloom & Public Area Carpet | VISHOME",
-  description: "Explore VISHOME commercial carpet products including modular carpet tiles, wall-to-wall hotel broadloom, and heavy-duty public area carpet systems for global B2B projects.",
-  alternates: { canonical: "/products" },
-};
 export default function ProductsPage() {
-  const jsonLd = productItemListJsonLd({
-    name: "VISHOME Commercial Carpet Products",
-    description: "Commercial carpet tiles, hotel broadloom, and public-area carpet systems for global B2B flooring projects.",
-    url: "/products",
-    items: products,
-  });
-
   return (
     <div className="bg-white min-h-screen">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
-      <PageHero
-        title="Our Products"
-        eyebrow="Commercial Carpet Systems"
-        description="Explore modular carpet tiles, wall-to-wall broadloom, and heavy-duty public area carpet systems for global B2B projects."
-        image="/images/carpet-tile-premium.jpg"
-        imageAlt="Commercial carpet tiles product background"
-        objectPosition="center 58%"
-      />
+      <section className="bg-[#102A43] py-20 text-center">
+        <div className="container-fox"><h1 className="text-4xl md:text-5xl font-black text-white mb-4 uppercase tracking-widest">Our Products</h1></div>
+      </section>
       <section className="section-padding">
         <div className="container-fox">
           <div className="grid md:grid-cols-3 gap-8">

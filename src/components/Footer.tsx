@@ -12,7 +12,7 @@ export default function Footer() {
               <Image
                 src="/logo-footer.svg"
                 alt="Vishome Logo"
-                width={64}
+                width={112}
                 height={64}
                 className="h-16 w-auto"
               />
@@ -35,7 +35,6 @@ export default function Footer() {
               <li><Link href="/products/carpet-tiles" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Commercial Carpet Tiles</Link></li>
               <li><Link href="/products/wall-to-wall" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Wall-to-Wall Carpets</Link></li>
               <li><Link href="/products/public-area" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Public Area Carpets</Link></li>
-              <li><Link href="/natural-sisal-carpet" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Natural Sisal Carpet</Link></li>
             </ul>
           </div>
 
@@ -46,7 +45,6 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4">
               <li><Link href="/about-us" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">About Us</Link></li>
-              <li><Link href="/commercial-carpet-manufacturer" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Manufacturer</Link></li>
               <li><Link href="/projects" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Case Studies</Link></li>
               <li><Link href="/blog" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">B2B Insights</Link></li>
               <li><Link href="/faq" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">FAQ</Link></li>
@@ -61,7 +59,7 @@ export default function Footer() {
             <ul className="space-y-6">
               <li className="flex flex-col gap-1">
                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">Email Inquiry</span>
-                <span className="text-sm font-bold text-gray-200">oilero@outlook.com</span>
+                <span className="text-sm font-bold text-gray-200">zara@visfurn.com</span>
               </li>
               <li className="flex flex-col gap-1">
                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">B2B Hotline</span>

@@ -31,12 +31,10 @@ export default function ProductImage({
   src,
   alt,
   className = "",
-  fit = "cover",
 }: {
   src: string;
   alt: string;
   className?: string;
-  fit?: "cover" | "contain";
 }) {
   const [imageError, setImageError] = useState(false);
   const ctx = resolveContext(src);
@@ -70,7 +68,7 @@ export default function ProductImage({
           src={src}
           alt={alt}
           fill
-          className={fit === "contain" ? "object-contain" : "object-cover"}
+          className="object-cover"
           sizes="(max-width: 768px) 100vw, 50vw"
           onError={() => setImageError(true)}
         />

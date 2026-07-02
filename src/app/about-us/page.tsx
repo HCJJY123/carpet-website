@@ -1,23 +1,24 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import ProductImage from "@/components/ProductImage";
 
 export const metadata: Metadata = {
   title: "About Vishome Global Commercial Carpet Co. Ltd. | Commercial Carpet Manufacturer",
   description: "Vishome Global Commercial Carpet Co. Ltd. is a professional commercial carpet manufacturer with a 50,000-square-meter factory, 900+ employees, and exports to over 45 countries and regions. We supply commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event carpets, and custom carpet solutions for global B2B projects.",
   keywords: "commercial carpet manufacturer, commercial carpet tiles manufacturer, hotel carpet supplier, custom carpet manufacturer, wall to wall carpet supplier, office carpet tiles, commercial carpet tiles, custom carpet solutions, carpet supplier for contractors, carpet for flooring distributors, hotel carpet project supplier",
-  alternates: { canonical: "https://www.vishomecarpet.com/about-us" },
 };
 
 export default function AboutUsPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* 1. Hero Banner */}
-      <section className="relative flex min-h-[560px] items-center overflow-hidden md:h-[760px]">
+      <section className="relative h-[620px] md:h-[760px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <ProductImage
+          <Image
             src="/images/about/about-us-hero-banner.webp"
             alt="Commercial carpet manufacturing factory interior"
+            fill
+            sizes="100vw"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-[#0B2E4A]/45"></div>
@@ -25,13 +26,13 @@ export default function AboutUsPage() {
         <div className="container-fox relative z-10 text-white">
           <div className="max-w-[760px]">
             <p className="text-accent font-black tracking-[0.4em] text-[10px] uppercase mb-4">About Vishome Global</p>
-            <h1 className="mb-6 text-4xl font-black uppercase leading-tight tracking-[0.06em] md:mb-8 md:text-6xl md:tracking-wider">
+            <h1 className="text-4xl md:text-6xl font-black uppercase mb-8 leading-tight tracking-wider">
               About Vishome Global Commercial Carpet Co. Ltd.
             </h1>
-            <p className="mb-8 text-base font-medium leading-relaxed text-gray-200 md:mb-12 md:text-xl">
+            <p className="text-lg md:text-xl text-gray-200 mb-12 font-medium leading-relaxed">
               A professional commercial carpet manufacturer supplying carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpets, event carpets, and custom carpet solutions for global B2B projects.
             </p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap md:gap-6">
+            <div className="flex flex-wrap gap-6">
               <Link href="/contact" className="btn-fox-orange !px-12 !py-5">
                 Request a Quote
               </Link>
@@ -46,7 +47,7 @@ export default function AboutUsPage() {
       {/* 2. Company Overview */}
       <section className="section-padding bg-white overflow-hidden">
         <div className="container-fox">
-          <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-24">
+          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
             <div className="lg:w-1/2">
               <h2 className="text-sm font-black text-muted uppercase tracking-[0.4em] mb-4">Company Overview</h2>
               <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8 uppercase leading-tight">
@@ -62,10 +63,12 @@ export default function AboutUsPage() {
               </div>
             </div>
             <div className="lg:w-1/2">
-              <ProductImage
+              <Image
                 src="/images/about/factory-exterior.webp"
                 alt="Modern commercial carpet factory exterior"
-                className="rounded-[24px] shadow-xl w-full aspect-[4/3] object-cover border border-border"
+                width={1200}
+                height={900}
+                className="rounded-[24px] shadow-xl w-full h-auto object-cover border border-border"
               />
             </div>
           </div>
@@ -75,7 +78,7 @@ export default function AboutUsPage() {
             {/* 3. Brand Story & Timeline */}
       <section className="section-padding bg-white overflow-hidden">
         <div className="container-fox">
-          <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-24">
+          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
             <div className="lg:w-1/2">
               <h2 className="text-sm font-black text-muted uppercase tracking-[0.4em] mb-4">Our Story</h2>
               <h3 className="text-3xl md:text-4xl font-bold text-primary mb-8 uppercase leading-tight">
@@ -113,10 +116,12 @@ export default function AboutUsPage() {
               </div>
             </div>
             <div className="lg:w-1/2">
-              <ProductImage
+              <Image
                 src="/images/about/our-story-export-logistics.jpg"
                 alt="Export logistics loading of commercial carpets at Vishome factory"
-                className="rounded-[24px] shadow-xl w-full aspect-[4/3] object-cover border border-border"
+                width={1200}
+                height={900}
+                className="rounded-[24px] shadow-xl w-full h-auto object-cover border border-border"
               />
             </div>
           </div>
@@ -129,7 +134,7 @@ export default function AboutUsPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary uppercase tracking-tight">Our Manufacturing Strength in Numbers</h2>
           </div>
-          <div className="grid grid-cols-2 gap-4 sm:gap-8 lg:grid-cols-3">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { num: "50,000㎡", label: "Factory Area" },
               { num: "900+", label: "Employees" },
@@ -138,8 +143,8 @@ export default function AboutUsPage() {
               { num: "OEM / ODM", label: "Custom Support" },
               { num: "B2B Projects", label: "For Distributors" },
             ].map((fact, idx) => (
-              <div key={idx} className="flex flex-col items-center rounded-xl border border-border bg-white p-5 text-center shadow-sm transition-all group hover:border-primary md:p-10">
-                <p className="mb-3 text-2xl font-black text-primary transition-colors group-hover:text-accent md:mb-4 md:text-5xl">{fact.num}</p>
+              <div key={idx} className="bg-white p-10 rounded-xl shadow-sm border border-border flex flex-col items-center text-center group hover:border-primary transition-all">
+                <p className="text-4xl md:text-5xl font-black text-primary mb-4 group-hover:text-accent transition-colors">{fact.num}</p>
                 <p className="text-xs font-bold text-muted uppercase tracking-[0.2em]">{fact.label}</p>
               </div>
             ))}
@@ -179,9 +184,9 @@ export default function AboutUsPage() {
       <section className="section-padding bg-[#F7F8FA] border-y border-border">
         <div className="container-fox">
           <h2 className="text-3xl md:text-5xl font-bold text-primary mb-12 uppercase text-center tracking-tight">Factory & Production Strength</h2>
-          <div className="grid items-start gap-10 mb-12 lg:grid-cols-2 lg:gap-16 md:mb-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-start mb-16">
             <div className="space-y-8">
-              <ProductImage src="/images/about/production-workshop.webp" alt="Commercial carpet production workshop" className="rounded-xl shadow-lg w-full aspect-video object-cover" />
+              <Image src="/images/about/production-workshop.webp" alt="Commercial carpet production workshop" width={1200} height={675} className="rounded-xl shadow-lg aspect-video object-cover" />
               <div className="prose prose-slate max-w-none text-muted">
                 <p className="text-lg leading-relaxed font-medium">
                   Our factory covers an area of 50,000 square meters and employs more than 900 skilled workers. With organized production workshops, experienced technicians, and stable manufacturing processes, we support bulk orders, project-based production, and long-term supply for overseas distributors and contractors.
@@ -189,7 +194,7 @@ export default function AboutUsPage() {
               </div>
             </div>
             <div className="space-y-8">
-              <div className="grid grid-cols-2 gap-4 sm:gap-6">
+              <div className="grid grid-cols-2 gap-6">
                 {[
                   "Bulk Order Production", "Stable Manufacturing Process", "Organized Warehouse",
                   "Export Packaging Support", "Long-Term Supply", "Project-Based Production"
@@ -199,7 +204,7 @@ export default function AboutUsPage() {
                   </div>
                 ))}
               </div>
-              <ProductImage src="/images/about/carpet-tile-inventory-warehouse.webp" alt="Carpet tile inventory warehouse" className="rounded-xl shadow-lg w-full aspect-video object-cover" />
+              <Image src="/images/about/carpet-tile-inventory-warehouse.webp" alt="Carpet tile inventory warehouse" width={1200} height={675} className="rounded-xl shadow-lg aspect-video object-cover" />
             </div>
           </div>
         </div>
@@ -236,16 +241,16 @@ export default function AboutUsPage() {
       {/* SECTION 8: Custom Project Support */}
       <section className="section-padding bg-white">
         <div className="container-fox">
-          <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-20">
+          <div className="flex flex-col lg:flex-row items-center gap-20">
             <div className="lg:w-1/2">
-              <ProductImage src="/images/about/custom-design-support.webp" alt="Custom carpet design and project support" className="rounded-2xl shadow-2xl w-full aspect-[4/3] object-cover" />
+              <Image src="/images/about/custom-design-support.webp" alt="Custom carpet design and project support" width={1200} height={900} className="rounded-2xl shadow-2xl" />
             </div>
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 uppercase tracking-tight">Custom Project Support</h2>
               <p className="text-muted text-lg mb-10 leading-relaxed font-medium">
                 We support custom carpet solutions for hotels, offices, commercial spaces, events, exhibitions, corridors, staircases, and interior design projects.
               </p>
-              <div className="mb-10 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-x-12 sm:gap-y-10 md:mb-12">
+              <div className="grid grid-cols-2 gap-x-12 gap-y-10 mb-12">
                 {[
                   "Custom Size", "Custom Color", "Custom Pattern", "Custom Logo",
                   "Material Selection", "Backing Options", "Sample Development", "Bulk Production"
@@ -278,7 +283,7 @@ export default function AboutUsPage() {
               </div>
             </div>
             <div className="lg:w-1/2">
-              <ProductImage src="/images/about/global-export-container-loading.webp" alt="Carpet factory export loading and logistics" className="rounded-xl shadow-xl w-full aspect-[4/3] object-cover" />
+              <Image src="/images/about/global-export-container-loading.webp" alt="Carpet factory export loading and logistics" width={1200} height={900} className="rounded-xl shadow-xl w-full" />
             </div>
           </div>
         </div>
@@ -295,10 +300,10 @@ export default function AboutUsPage() {
               </p>
             </div>
             <div className="lg:w-1/2">
-              <ProductImage src="/images/about/quality-control-inspection.webp" alt="Commercial carpet quality control inspection" className="rounded-xl shadow-2xl w-full aspect-[4/3] object-cover" />
+              <Image src="/images/about/quality-control-inspection.webp" alt="Commercial carpet quality control inspection" width={1200} height={900} className="rounded-xl shadow-2xl" />
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               "Material Inspection", "Production Monitoring", "Size & Color Checking",
               "Backing Quality Control", "Packaging Inspection", "Export Shipment Support"
@@ -317,7 +322,7 @@ export default function AboutUsPage() {
       {/* 11. Who We Serve */}
       <section className="section-padding bg-[#F7F8FA] border-y border-border">
         <div className="container-fox">
-          <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-24">
+          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
             <div className="lg:w-2/5">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 uppercase tracking-tight">Who We Serve</h2>
               <p className="text-muted text-lg leading-relaxed mb-12">
@@ -337,14 +342,14 @@ export default function AboutUsPage() {
               </div>
             </div>
             <div className="lg:w-3/5">
-              <ProductImage src="/images/about/commercial-project-application.webp" alt="Commercial carpet tiles installed in office project" className="rounded-2xl shadow-xl border-8 border-white w-full aspect-[16/10] object-cover" />
+              <Image src="/images/about/commercial-project-application.webp" alt="Commercial carpet tiles installed in office project" width={1200} height={900} className="rounded-2xl shadow-xl border-8 border-white w-full" />
             </div>
           </div>
         </div>
       </section>
 
       {/* 12. Final CTA */}
-      <section className="relative overflow-hidden bg-[#0B2E4A] py-16 text-center text-white md:py-24">
+      <section className="py-24 bg-[#0B2E4A] text-white text-center relative overflow-hidden">
         <div className="container-fox relative z-10">
           <h2 className="text-3xl md:text-5xl font-black mb-10 uppercase tracking-widest leading-tight">
             Looking for a Reliable <br />Commercial Carpet Manufacturer?
@@ -352,11 +357,11 @@ export default function AboutUsPage() {
           <p className="text-gray-300 mb-16 max-w-3xl mx-auto text-lg md:text-xl font-light leading-relaxed">
             Send us your project requirements, including carpet type, size, material, color, quantity, and destination market. Our team will provide a suitable carpet solution and quotation for your project.
           </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row sm:flex-wrap md:gap-8">
-            <Link href="/contact" className="rounded-sm bg-white px-8 py-5 text-xs font-black uppercase tracking-[0.16em] text-primary shadow-2xl transition-all hover:bg-gray-100 md:px-16 md:py-6 md:tracking-[0.4em]">
+          <div className="flex flex-wrap justify-center gap-8">
+            <Link href="/contact" className="bg-white text-primary font-black px-16 py-6 rounded-sm uppercase tracking-[0.4em] text-xs hover:bg-gray-100 transition-all shadow-2xl">
               Request a Quote
             </Link>
-            <Link href="/contact" className="rounded-sm border-2 border-white/40 px-8 py-5 text-xs font-black uppercase tracking-[0.16em] text-white transition-all hover:bg-white/10 md:px-16 md:py-6 md:tracking-[0.4em]">
+            <Link href="/contact" className="border-2 border-white/40 text-white font-black px-16 py-6 rounded-sm uppercase tracking-[0.4em] text-xs hover:bg-white/10 transition-all">
               Send Your Requirements
             </Link>
           </div>

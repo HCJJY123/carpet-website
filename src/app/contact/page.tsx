@@ -2,11 +2,8 @@
 
 import { useState } from "react";
 import ProductImage from "@/components/ProductImage";
-import PageHero from "@/components/PageHero";
-import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 
 export default function ContactPage() {
-  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.contact);
   const [state, setState] = useState({
     submitting: false,
     submitted: false,
@@ -42,31 +39,32 @@ export default function ContactPage() {
 
   return (
     <div className="bg-white">
-      <PageHero
-        title="Start Your Procurement"
-        eyebrow="Factory Direct Project Support"
-        description="Request pricing, technical certificates, or professional sample matching for your commercial flooring project."
-        image="/images/contact-hero.jpg"
-        imageAlt="Commercial carpet procurement consultation background"
-        objectPosition="center 42%"
-      />
+      {/* Targeted Hero */}
+      <section className="relative bg-primary-light py-24 overflow-hidden">
+        <div className="container-fox text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 uppercase tracking-wider">Start Your Procurement</h1>
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg opacity-90 leading-relaxed font-light">
+            Request pricing, technical certificates, or professional sample matching for your commercial flooring project.
+          </p>
+        </div>
+      </section>
 
       <section className="section-padding">
         <div className="container-fox">
-          <div className="grid gap-10 lg:grid-cols-3 lg:gap-16">
+          <div className="grid lg:grid-cols-3 gap-16">
             {/* Form Column */}
             <div className="lg:col-span-2">
               {state.submitted ? (
-                <div className="animate-in rounded-2xl border border-success/20 bg-success/5 p-8 text-center duration-500 zoom-in md:p-12">
+                <div className="bg-success/5 border border-success/20 rounded-2xl p-12 text-center animate-in zoom-in duration-500">
                   <div className="w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">✓</div>
                   <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-widest">Inquiry Received</h3>
                   <p className="text-muted text-lg font-medium">Thank you for choosing Vishome. Our technical sales team will review your requirements and provide a preliminary quote within 24 hours.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl border border-border bg-surface p-5 shadow-sm md:space-y-8 md:p-12">
+                <form onSubmit={handleSubmit} className="space-y-8 bg-surface p-10 md:p-12 rounded-2xl border border-border shadow-sm">
                   {state.error && <p className="text-red-600 font-bold text-center text-sm">{state.error}</p>}
 
-                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
+                  <div className="grid md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Full Name *</label>
                       <input name="name" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="John Doe" />
@@ -77,7 +75,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
+                  <div className="grid md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Company Name *</label>
                       <input name="company" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Architecture / Hotel Group" />
@@ -88,7 +86,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
+                  <div className="grid md:grid-cols-2 gap-8">
                     <div>
                       <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Project Type</label>
                       <select name="projectType" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all text-sm font-bold text-primary">
@@ -107,7 +105,7 @@ export default function ContactPage() {
 
                   <div>
                     <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-6">Technical Requirements</label>
-                    <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
                       {[
                         "ASTM E648 Fire Rating",
                         "CRI Green Label Plus (Low VOC)",
@@ -118,7 +116,7 @@ export default function ContactPage() {
                       ].map((req) => (
                         <label key={req} className="flex items-center gap-3 cursor-pointer group">
                           <input name="requirements" value={req} type="checkbox" className="w-5 h-5 border-border rounded text-primary focus:ring-primary transition-all" />
-                          <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-muted transition-colors group-hover:text-primary md:text-xs md:tracking-widest">{req}</span>
+                          <span className="text-xs font-bold text-muted group-hover:text-primary transition-colors uppercase tracking-widest">{req}</span>
                         </label>
                       ))}
                     </div>
@@ -132,7 +130,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={state.submitting}
-                    className="btn-fox-orange w-full py-5 text-sm tracking-[0.16em] hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 md:py-6 md:text-base md:tracking-[0.4em]"
+                    className="w-full btn-fox-orange py-6 text-base tracking-[0.4em] disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-2xl"
                   >
                     {state.submitting ? "SENDING INQUIRY..." : "SUBMIT FORMAL INQUIRY"}
                   </button>
@@ -141,7 +139,7 @@ export default function ContactPage() {
             </div>
 
             {/* Info Column */}
-            <div className="space-y-8 md:space-y-12">
+            <div className="space-y-12">
               <div>
                 <h3 className="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-6">Headquarters</h3>
                 <div className="space-y-4 text-muted">
@@ -155,39 +153,15 @@ export default function ContactPage() {
                   </p>
                   <p className="flex items-start gap-4">
                     <span className="text-accent font-bold">E</span>
-                    oilero@outlook.com
+                    zara@visfurn.com
                   </p>
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-2xl bg-primary p-6 text-white shadow-xl md:p-8">
-                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#25D366]/15" />
-                <div className="relative">
-                  <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-[#25D366]/15 px-3 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#25D366] ring-1 ring-[#25D366]/25">
-                    <span className="h-2 w-2 rounded-full bg-[#25D366] animate-pulse" />
-                    WhatsApp Business Online
-                  </div>
-                  <h3 className="font-bold text-xl mb-4 uppercase tracking-widest">Fast Project Quote</h3>
-                  <p className="text-sm text-gray-300 mb-6 leading-relaxed">
-                    Send your area, carpet type, timeline, or floor plan via WhatsApp Business. Our sales team can reply with sample, TDS, and quotation guidance faster than email.
-                  </p>
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mb-6 inline-flex w-full items-center justify-center gap-3 rounded-sm bg-[#25D366] px-4 py-4 text-[11px] font-black uppercase tracking-[0.12em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d] md:px-5 md:text-xs md:tracking-[0.2em]"
-                    aria-label="Start WhatsApp Business chat with VISHOME"
-                  >
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.353-.883-.788-1.48-1.766-1.653-2.063-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.128.571-.075 1.758-.717 2.009-1.412.25-.694.25-1.288.175-1.412-.075-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-2.578l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.87 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                    </svg>
-                    Chat on WhatsApp Business
-                  </a>
-                  <div className="border-t border-white/10 pt-5">
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/45">Direct Phone / WhatsApp</p>
-                    <div className="mt-2 text-2xl font-bold text-accent">+86 152 2288 5400</div>
-                  </div>
-                </div>
+              <div className="bg-primary p-8 rounded-xl text-white">
+                <h3 className="font-bold text-lg mb-4 uppercase tracking-widest">Sourcing Hotline</h3>
+                <p className="text-sm text-gray-400 mb-6 leading-relaxed">Direct connection for project managers and contractors. Get technical support via WhatsApp or Phone.</p>
+                <div className="text-2xl font-bold text-accent">+86 152 2288 5400</div>
               </div>
 
               <div className="space-y-6">
@@ -197,27 +171,6 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Dynamic Map Section */}
-      <section className="bg-surface border-y border-border">
-        <div className="w-full h-[450px] relative grayscale hover:grayscale-0 transition-all duration-700">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12234.331707981507!2d117.38283627043328!3d39.46746244677708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35ed8422a57199c1%3A0xc399066f466b0d9e!2sCuihuangkou%20Town%2C%20Wuqing%20District%2C%20Tianjin!5e0!3m2!1sen!2scn!4v1719412345678!5m2!1sen!2scn" 
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen={true} 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Vishome Factory Location"
-            className="opacity-80 hover:opacity-100 transition-opacity"
-          ></iframe>
-          <div className="absolute top-8 left-8 bg-primary/90 text-white p-6 shadow-2xl rounded-sm border-l-4 border-accent hidden md:block pointer-events-none">
-            <h4 className="text-sm font-black uppercase tracking-[0.3em] mb-2">Manufacturing Hub</h4>
-            <p className="text-[10px] text-gray-300 uppercase font-bold">Wuqing District, Tianjin, China</p>
           </div>
         </div>
       </section>

@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { brandInfo, caseStudies } from "@/lib/data";
-import { absoluteUrl, safeJsonLd } from "@/lib/seo";
+import { caseStudies } from "@/lib/data";
 import ProductImage from "@/components/ProductImage";
 
 interface Props {
@@ -20,14 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${project.title} | Project Case Study | VISHOME`,
     description: project.description,
-    alternates: { canonical: `/projects/${project.id}` },
-    openGraph: {
-      title: `${project.title} | VISHOME Project Case Study`,
-      description: project.description,
-      url: absoluteUrl(`/projects/${project.id}`),
-      type: "article",
-      images: [{ url: absoluteUrl(project.image), alt: project.title }],
-    },
+    alternates: { canonical: `/projects/${project.id}` }
   };
 }
 
@@ -39,50 +31,8 @@ export default async function ProjectDetailPage({ params }: Props) {
     notFound();
   }
 
-  const caseJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: project.title,
-    description: project.description,
-    image: absoluteUrl(project.image),
-    author: {
-      "@type": "Organization",
-      name: brandInfo.name,
-      url: brandInfo.url,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: brandInfo.name,
-      logo: {
-        "@type": "ImageObject",
-        url: absoluteUrl("/logo.svg"),
-      },
-    },
-    mainEntityOfPage: absoluteUrl(`/projects/${project.id}`),
-    articleSection: "Project Case Study",
-    about: project.category,
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
-      { "@type": "ListItem", position: 2, name: "Projects", item: absoluteUrl("/projects") },
-      { "@type": "ListItem", position: 3, name: project.title, item: absoluteUrl(`/projects/${project.id}`) },
-    ],
-  };
-
   return (
     <div className="bg-white min-h-screen">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: safeJsonLd(caseJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }}
-      />
       <nav className="bg-surface py-4 border-b border-border">
         <div className="container-fox">
           <Link href="/projects" className="text-[10px] font-black text-primary/50 uppercase hover:text-primary">

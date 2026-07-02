@@ -1,20 +1,16 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+
+const siteUrl = "https://www.vishomecarpet.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: "*",
-        allow: "/",
-        disallow: ["/api/", "/_next/", "/admin/"],
-      },
-      {
-        // Allow AI crawlers explicitly
-        userAgent: ["GPTBot", "ChatGPT-User", "PerplexityBot", "ClaudeBot", "Googlebot", "Bingbot"],
-        allow: "/",
-      },
+        allow: "/"
+      }
     ],
-    sitemap: "https://www.vishomecarpet.com/sitemap.xml",
-    host: "https://www.vishomecarpet.com",
+    sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl
   };
 }

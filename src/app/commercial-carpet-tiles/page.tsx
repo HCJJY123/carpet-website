@@ -1,7 +1,6 @@
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import { products } from "@/lib/data";
-import { productPath } from "@/lib/seo";
 
 export const metadata = {
   title: "Commercial Carpet Tiles | Global B2B Supplier | Vishome",
@@ -27,7 +26,7 @@ export default function CommercialCarpetTilesPage() {
             </p>
             <div className="flex flex-wrap gap-6">
               <Link href="/contact" className="btn-fox-orange">Get Project Quotation</Link>
-              <Link href="/contact" className="btn-fox-outline">Request Free Samples</Link>
+              <Link href="/carpet-samples" className="btn-fox-outline">Request Free Samples</Link>
             </div>
           </div>
         </div>
@@ -88,7 +87,7 @@ export default function CommercialCarpetTilesPage() {
         <div className="container-fox">
           <div className="grid md:grid-cols-3 gap-8">
             {tileProducts.map((product) => (
-              <Link key={product.id} href={productPath(product.id)} className="group block">
+              <Link key={product.id} href={`/products/${product.id}`} className="group block">
                 <div className="aspect-square overflow-hidden rounded-lg mb-6 border border-border">
                   <ProductImage src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 </div>
