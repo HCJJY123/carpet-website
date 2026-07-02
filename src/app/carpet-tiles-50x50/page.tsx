@@ -99,13 +99,23 @@ export default function CarpetTiles50x50Page() {
             {products50x50.map((product) => (
               <Link key={product.id} href={productPath(product.id)} className="group bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all border border-border">
                 <div className="aspect-square overflow-hidden">
-                  <ProductImage src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <ProductImage src={product.image} alt={product.imageAlt || product.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="p-8">
                   <h3 className="font-bold text-lg text-primary mb-2 uppercase">{product.name}</h3>
-                  <div className="flex justify-between items-center text-[10px] font-bold text-accent uppercase tracking-widest">
-                    <span>50x50 cm</span>
-                    <span>Ready to Ship</span>
+                  <div className="space-y-2 border-t border-border pt-4 text-[10px] font-bold text-accent uppercase tracking-widest">
+                    <div className="flex justify-between gap-4">
+                      <span>FOB Price</span>
+                      <span className="text-right">{product.fobPrice?.display}</span>
+                    </div>
+                    <div className="flex justify-between gap-4">
+                      <span>MOQ</span>
+                      <span className="text-right">{product.moq}</span>
+                    </div>
+                    <div className="flex justify-between gap-4">
+                      <span>Availability</span>
+                      <span className="text-right">In Stock / Made to Order</span>
+                    </div>
                   </div>
                 </div>
               </Link>

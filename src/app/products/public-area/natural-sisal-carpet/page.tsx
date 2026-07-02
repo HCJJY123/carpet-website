@@ -3,6 +3,7 @@ import Link from "next/link";
 import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
+import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 
 const productId = "natural-sisal-carpet";
 const product = products.find((prod) => prod.id === productId);
@@ -171,15 +172,15 @@ export default function NaturalSisalCarpetPage() {
                   <span>Roll Width</span>
                   <span className="text-right font-bold">4m</span>
                 </div>
+                <div className="flex justify-between gap-6 text-xs uppercase">
+                  <span>Availability</span>
+                  <span className="text-right font-bold">In Stock / Made to Order</span>
+                </div>
               </div>
-              <div className="flex flex-col gap-4 sm:flex-row">
-                <Link href="/contact" className="btn-fox-orange flex-1 py-5 text-center text-sm uppercase tracking-[0.16em] shadow-lg">
-                  Request Technical Quote
-                </Link>
-                <Link href="/products/public-area" className="btn-fox-outline flex-1 py-5 text-center text-sm uppercase tracking-[0.16em]">
-                  Public Area Carpets
-                </Link>
-              </div>
+              <ProductConversionPanel product={p} />
+              <Link href="/products/public-area" className="mt-4 block w-full border border-border px-5 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-primary transition-all hover:border-primary hover:bg-surface">
+                Public Area Carpets
+              </Link>
             </div>
           </div>
         </div>
@@ -244,6 +245,8 @@ export default function NaturalSisalCarpetPage() {
           </div>
         </div>
       </section>
+
+      <BuyerReasons />
 
       <section className="section-padding">
         <div className="container-fox max-w-5xl">

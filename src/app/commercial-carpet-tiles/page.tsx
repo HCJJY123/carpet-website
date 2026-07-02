@@ -90,14 +90,23 @@ export default function CommercialCarpetTilesPage() {
             {tileProducts.map((product) => (
               <Link key={product.id} href={productPath(product.id)} className="group block">
                 <div className="aspect-square overflow-hidden rounded-lg mb-6 border border-border">
-                  <ProductImage src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <ProductImage src={product.image} alt={product.imageAlt || product.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 </div>
                 <h3 className="font-bold text-xl text-primary mb-2 group-hover:text-accent transition-colors">{product.name}</h3>
                 <p className="text-sm text-muted line-clamp-2 mb-4">{product.description}</p>
-                <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest text-accent">
-                  <span>Fire Rated</span>
-                  <span className="w-1 h-1 bg-border rounded-full"></span>
-                  <span>MOQ: 200 sqm</span>
+                <div className="space-y-2 border-t border-border pt-4 text-[10px] font-bold uppercase tracking-widest text-accent">
+                  <div className="flex justify-between gap-4">
+                    <span>FOB Price</span>
+                    <span className="text-right">{product.fobPrice?.display}</span>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <span>MOQ</span>
+                    <span className="text-right">{product.moq}</span>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <span>Availability</span>
+                    <span className="text-right">In Stock / Made to Order</span>
+                  </div>
                 </div>
               </Link>
             ))}

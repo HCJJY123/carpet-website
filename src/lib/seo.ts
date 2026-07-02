@@ -65,6 +65,7 @@ export function productJsonLd(product: Product) {
     additionalProperty: [
       { "@type": "PropertyValue", name: "Minimum Order Quantity", value: product.moq },
       { "@type": "PropertyValue", name: "Lead Time", value: product.leadTime },
+      { "@type": "PropertyValue", name: "Availability", value: "InStock" },
       ...(product.fobPrice
         ? [{ "@type": "PropertyValue", name: "FOB Price Range", value: product.fobPrice.display }]
         : []),
@@ -119,6 +120,10 @@ export function productItemListJsonLd({
           image: absoluteUrl(product.image),
           url: absoluteUrl(productPath(product.id)),
           category: categoryName(product.category),
+          additionalProperty: [
+            { "@type": "PropertyValue", name: "Minimum Order Quantity", value: product.moq },
+            { "@type": "PropertyValue", name: "Availability", value: "InStock" },
+          ],
           offers: product.fobPrice
             ? {
                 "@type": "AggregateOffer",

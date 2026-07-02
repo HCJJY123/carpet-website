@@ -127,6 +127,7 @@ export default function CommercialCarpetManufacturerPage() {
                   <span>MOQ: {product.moq}</span>
                   <span>Lead: {product.leadTime}</span>
                   {product.fobPrice && <span className="col-span-2 text-accent">{product.fobPrice.display}</span>}
+                  <span className="col-span-2 text-muted">Availability: In Stock / Made to Order</span>
                 </div>
               </Link>
             ))}

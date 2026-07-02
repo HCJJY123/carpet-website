@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 
 const siteUrl = "https://www.vishomecarpet.com";
 const canonicalPath = "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet";
@@ -107,8 +108,10 @@ export const metadata: Metadata = {
 const productJsonLd = {
   "@context": "https://schema.org/",
   "@type": "Product",
+  "@id": `${siteUrl}${canonicalPath}#product`,
   "name": "Glitter Hotel Corridor Broadloom Carpet",
   "image": product.mainImages.map((image) => `${siteUrl}${image.src}`),
+  "url": `${siteUrl}${canonicalPath}`,
   "description": "Custom blue and gold glitter-pattern wall-to-wall broadloom carpet for hotel corridors, lobbies, ballrooms, and luxury hospitality projects.",
   "brand": { "@type": "Brand", "name": "Vishomecarpet" },
   "category": "Wall-to-Wall Hotel Broadloom Carpet",
@@ -120,7 +123,8 @@ const productJsonLd = {
     "lowPrice": product.fobPrice.lowPrice,
     "highPrice": product.fobPrice.highPrice,
     "offerCount": "1",
-    "availability": "https://schema.org/InStock"
+    "availability": "https://schema.org/InStock",
+    "seller": { "@type": "Organization", "name": "Vishome Global Commercial Carpet Co. Ltd.", "url": siteUrl }
   },
   "manufacturer": {
     "@type": "Organization",
@@ -135,7 +139,8 @@ const productJsonLd = {
     { "@type": "PropertyValue", "name": "Roll Width", "value": "4m" },
     { "@type": "PropertyValue", "name": "FOB Price Range", "value": "US$4.20-8.60 / SQM" },
     { "@type": "PropertyValue", "name": "MOQ", "value": "300 SQM" },
-    { "@type": "PropertyValue", "name": "Lead Time", "value": "25-35 Days" }
+    { "@type": "PropertyValue", "name": "Lead Time", "value": "25-35 Days" },
+    { "@type": "PropertyValue", "name": "Availability", "value": "InStock" }
   ]
 };
 
@@ -220,8 +225,12 @@ export default function ProductDetailPage() {
                   <span>ROLL WIDTH</span>
                   <span className="font-bold">{product.technicalSpecs.rollWidth}</span>
                 </div>
+                <div className="flex justify-between uppercase text-xs gap-6">
+                  <span>AVAILABILITY</span>
+                  <span className="text-right font-bold">In Stock / Made to Order</span>
+                </div>
               </div>
-              <Link href="/contact" className="btn-fox-orange w-full py-5 text-center text-sm uppercase tracking-widest shadow-lg">Request Technical Quote</Link>
+              <ProductConversionPanel product={product} />
             </div>
           </div>
         </div>
@@ -295,6 +304,8 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
+
+      <BuyerReasons />
 
       <section className="py-24">
         <div className="container-fox">

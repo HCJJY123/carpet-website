@@ -114,12 +114,22 @@ export default function HotelCarpetPage() {
             {hotelProducts.map((product) => (
               <Link key={product.id} href={productPath(product.id)} className="group bg-primary-light border border-white/5 p-4 rounded-xl">
                 <div className="aspect-[4/3] overflow-hidden rounded-lg mb-6">
-                  <ProductImage src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
+                  <ProductImage src={product.image} alt={product.imageAlt || product.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
                 </div>
                 <h3 className="font-bold text-white text-lg mb-2 uppercase group-hover:text-accent transition-colors">{product.name}</h3>
-                <div className="flex justify-between items-center text-[10px] font-bold text-accent uppercase tracking-widest">
-                  <span>Axminster Grade</span>
-                  <span>Fire Rated</span>
+                <div className="space-y-2 border-t border-white/10 pt-4 text-[10px] font-bold text-accent uppercase tracking-widest">
+                  <div className="flex justify-between gap-4">
+                    <span>FOB Price</span>
+                    <span className="text-right">{product.fobPrice?.display}</span>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <span>MOQ</span>
+                    <span className="text-right">{product.moq}</span>
+                  </div>
+                  <div className="flex justify-between gap-4">
+                    <span>Availability</span>
+                    <span className="text-right">In Stock / Made to Order</span>
+                  </div>
                 </div>
               </Link>
             ))}

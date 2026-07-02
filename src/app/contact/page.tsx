@@ -68,19 +68,19 @@ export default function ContactPage() {
 
                   <div className="grid gap-5 md:grid-cols-2 md:gap-8">
                     <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Full Name *</label>
-                      <input name="name" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="John Doe" />
+                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Name *</label>
+                      <input name="name" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your name" />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Professional Email *</label>
+                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Email *</label>
                       <input name="email" type="email" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="john@company.com" />
                     </div>
                   </div>
 
                   <div className="grid gap-5 md:grid-cols-2 md:gap-8">
                     <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Company Name *</label>
-                      <input name="company" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Architecture / Hotel Group" />
+                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">WhatsApp</label>
+                      <input name="whatsapp" type="text" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="+1 000 000 0000" />
                     </div>
                     <div>
                       <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Country / Region *</label>
@@ -90,43 +90,18 @@ export default function ContactPage() {
 
                   <div className="grid gap-5 md:grid-cols-2 md:gap-8">
                     <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Project Type</label>
-                      <select name="projectType" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all text-sm font-bold text-primary">
-                        <option value="">Select Category</option>
-                        <option value="hotel">Hotel / Hospitality</option>
-                        <option value="office">Corporate Office</option>
-                        <option value="retail">Retail / Showroom</option>
-                        <option value="other">Other Commercial</option>
-                      </select>
+                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Product *</label>
+                      <input name="product" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="Carpet tiles, hotel carpet, sisal carpet..." />
                     </div>
                     <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Estimated Area (SQM)</label>
-                      <input name="quantity" type="number" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="e.g. 500" />
+                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Quantity</label>
+                      <input name="quantity" type="text" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="e.g. 500 SQM" />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-6">Technical Requirements</label>
-                    <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
-                      {[
-                        "ASTM E648 Fire Rating",
-                        "CRI Green Label Plus (Low VOC)",
-                        "Custom Pantone Matching",
-                        "Free Sample Swatches",
-                        "DDP Logistics Support",
-                        "Pattern Design Support"
-                      ].map((req) => (
-                        <label key={req} className="flex items-center gap-3 cursor-pointer group">
-                          <input name="requirements" value={req} type="checkbox" className="w-5 h-5 border-border rounded text-primary focus:ring-primary transition-all" />
-                          <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-muted transition-colors group-hover:text-primary md:text-xs md:tracking-widest">{req}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Project Brief *</label>
-                    <textarea name="message" rows={6} required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all resize-none" placeholder="Tell us about your installation timeline, specific pattern needs, or any technical questions..." />
+                    <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Message *</label>
+                    <textarea name="message" rows={6} required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all resize-none" placeholder="Tell us your project area, delivery country, timeline, design needs, or sample request..." />
                   </div>
 
                   <button
@@ -134,7 +109,7 @@ export default function ContactPage() {
                     disabled={state.submitting}
                     className="btn-fox-orange w-full py-5 text-sm tracking-[0.16em] hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 md:py-6 md:text-base md:tracking-[0.4em]"
                   >
-                    {state.submitting ? "SENDING INQUIRY..." : "SUBMIT FORMAL INQUIRY"}
+                    {state.submitting ? "SENDING INQUIRY..." : "REQUEST PROJECT QUOTE"}
                   </button>
                 </form>
               )}

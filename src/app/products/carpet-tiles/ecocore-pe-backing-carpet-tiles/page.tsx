@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { brandInfo, products } from "@/lib/data";
-import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
+import { products } from "@/lib/data";
+import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
+import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 
 const productId = "ecocore-pe-backing-carpet-tiles";
 const product = products.find((prod) => prod.id === productId);
@@ -10,22 +11,22 @@ const product = products.find((prod) => prod.id === productId);
 const productImages = {
   hero: "/images/products/ecocore-pe-backing/01-hero-white-background.png",
   gallery: [
-    { src: "/images/products/ecocore-pe-backing/02-perspective-hero-45-degree.png", title: "45-Degree Product View" },
-    { src: "/images/products/ecocore-pe-backing/03-tile-corner-detail-pe-backing.png", title: "Lifted Corner PE Backing Detail" },
-    { src: "/images/products/ecocore-pe-backing/06-tile-stack-pe-backing-layers.png", title: "Tile Stack and Backing Layers" },
+    { src: "/images/products/ecocore-pe-backing/02-perspective-hero-45-degree.png", title: "45-Degree Product View", alt: "Vishomecarpet EcoCore PVC-free PE backing carpet tile in 45-degree product view" },
+    { src: "/images/products/ecocore-pe-backing/03-tile-corner-detail-pe-backing.png", title: "Lifted Corner PE Backing Detail", alt: "Lifted corner detail of PVC-free PE backing commercial carpet tile" },
+    { src: "/images/products/ecocore-pe-backing/06-tile-stack-pe-backing-layers.png", title: "Tile Stack and Backing Layers", alt: "Stacked EcoCore PE backing modular carpet tiles showing layered construction" },
   ],
   details: [
-    { src: "/images/products/ecocore-pe-backing/07-texture-close-up-solution-dyed-nylon.png", title: "Solution-Dyed Loop Texture", text: "Dense loop pile surface supports color stability, commercial appearance retention, and daily office use." },
-    { src: "/images/products/ecocore-pe-backing/08-pe-backing-close-up.png", title: "PVC-Free PE Backing", text: "PE backing is specified for projects that require a more environmentally responsible modular carpet tile option." },
-    { src: "/images/products/ecocore-pe-backing/09-cross-section-layers.png", title: "Layered Construction", text: "The tile combines textile surface, primary backing, and PE backing support for stable commercial installation." },
-    { src: "/images/products/ecocore-pe-backing/10-sound-absorption.png", title: "Acoustic Comfort", text: "Soft textile flooring helps reduce footfall noise and improve workplace acoustic comfort." },
-    { src: "/images/products/ecocore-pe-backing/11-heavy-traffic-office.png", title: "Heavy Commercial Use", text: "Designed for open offices, corridors, meeting rooms, and high-frequency commercial areas." },
-    { src: "/images/products/ecocore-pe-backing/12-easy-replacement.png", title: "Easy Tile Replacement", text: "Individual tiles can be replaced without removing the entire flooring area, reducing lifecycle waste and downtime." },
-    { src: "/images/products/ecocore-pe-backing/13-raised-floor-system.png", title: "Raised Floor Friendly", text: "The modular format works well with access-floor commercial interiors and phased maintenance schedules." },
-    { src: "/images/products/ecocore-pe-backing/14-rolling-chair-test.png", title: "Office Chair Resistance", text: "Suitable for rolling-chair zones when selected with proper traffic specification and maintenance planning." },
-    { src: "/images/products/ecocore-pe-backing/15-eco-material-pvc-free-low-voc.png", title: "Green Building Ready", text: "A practical flooring option for low-VOC, PVC-free, and sustainability-oriented office projects." },
-    { src: "/images/products/ecocore-pe-backing/16-installation-process.png", title: "Modular Installation", text: "Compatible with quarter-turn, ashlar, brick, and monolithic layouts for different design effects." },
-    { src: "/images/products/ecocore-pe-backing/17-warehouse-packaging-export.png", title: "Export Packaging", text: "Project-based packaging and delivery support for international commercial flooring orders." },
+    { src: "/images/products/ecocore-pe-backing/07-texture-close-up-solution-dyed-nylon.png", title: "Solution-Dyed Loop Texture", alt: "Close-up of solution-dyed loop pile texture on EcoCore commercial carpet tile", text: "Dense loop pile surface supports color stability, commercial appearance retention, and daily office use." },
+    { src: "/images/products/ecocore-pe-backing/08-pe-backing-close-up.png", title: "PVC-Free PE Backing", alt: "Close-up of PVC-free PE backing on Vishomecarpet modular carpet tile", text: "PE backing is specified for projects that require a more environmentally responsible modular carpet tile option." },
+    { src: "/images/products/ecocore-pe-backing/09-cross-section-layers.png", title: "Layered Construction", alt: "Cross-section layers of EcoCore PE backing commercial carpet tile", text: "The tile combines textile surface, primary backing, and PE backing support for stable commercial installation." },
+    { src: "/images/products/ecocore-pe-backing/10-sound-absorption.png", title: "Acoustic Comfort", alt: "EcoCore carpet tile acoustic comfort detail for office flooring projects", text: "Soft textile flooring helps reduce footfall noise and improve workplace acoustic comfort." },
+    { src: "/images/products/ecocore-pe-backing/11-heavy-traffic-office.png", title: "Heavy Commercial Use", alt: "Heavy-traffic office application for EcoCore commercial modular carpet tiles", text: "Designed for open offices, corridors, meeting rooms, and high-frequency commercial areas." },
+    { src: "/images/products/ecocore-pe-backing/12-easy-replacement.png", title: "Easy Tile Replacement", alt: "Individual replacement of EcoCore 50x50cm modular carpet tiles", text: "Individual tiles can be replaced without removing the entire flooring area, reducing lifecycle waste and downtime." },
+    { src: "/images/products/ecocore-pe-backing/13-raised-floor-system.png", title: "Raised Floor Friendly", alt: "EcoCore modular carpet tiles installed on commercial raised floor system", text: "The modular format works well with access-floor commercial interiors and phased maintenance schedules." },
+    { src: "/images/products/ecocore-pe-backing/14-rolling-chair-test.png", title: "Office Chair Resistance", alt: "Rolling chair resistance detail for EcoCore office carpet tiles", text: "Suitable for rolling-chair zones when selected with proper traffic specification and maintenance planning." },
+    { src: "/images/products/ecocore-pe-backing/15-eco-material-pvc-free-low-voc.png", title: "Green Building Ready", alt: "PVC-free low-VOC EcoCore carpet tile material for green building projects", text: "A practical flooring option for low-VOC, PVC-free, and sustainability-oriented office projects." },
+    { src: "/images/products/ecocore-pe-backing/16-installation-process.png", title: "Modular Installation", alt: "Modular installation process for EcoCore PE backing carpet tiles", text: "Compatible with quarter-turn, ashlar, brick, and monolithic layouts for different design effects." },
+    { src: "/images/products/ecocore-pe-backing/17-warehouse-packaging-export.png", title: "Export Packaging", alt: "Export packaging for Vishomecarpet EcoCore commercial carpet tile orders", text: "Project-based packaging and delivery support for international commercial flooring orders." },
   ],
   banner: "/images/products/ecocore-pe-backing/18-office-application-wide-banner.png",
   office: "/images/products/ecocore-pe-backing/04-lifestyle-office.png",
@@ -69,44 +70,9 @@ export default function EcoCorePeBackingProductPage() {
   const p = products.find((prod) => prod.id === productId);
   if (!p) return <div>Product Not Found</div>;
 
-  const productJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: p.name,
-    brand: { "@type": "Brand", name: "Vishomecarpet" },
-    manufacturer: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
-    description: p.description,
-    image: [productImages.hero, ...productImages.gallery.map((item) => item.src)].map(absoluteUrl),
-    category: "Eco-friendly modular carpet tiles",
-    material: p.spec.material,
-    size: p.spec.size,
-    additionalProperty: [
-      ...Object.entries(p.technicalSpecs).map(([name, value]) => ({ "@type": "PropertyValue", name, value })),
-      { "@type": "PropertyValue", name: "Backing", value: "PVC-Free PE Backing" },
-      { "@type": "PropertyValue", name: "Application", value: "Office, Green Building, School, Coworking Space, Public Workspace" },
-      { "@type": "PropertyValue", name: "Installation", value: "Quarter Turn, Ashlar, Brick, Monolithic" },
-    ],
-    offers: {
-      "@type": "Offer",
-      url: absoluteUrl(productPath(p.id)),
-      availability: "https://schema.org/InStock",
-      priceCurrency: "USD",
-      price: p.fobPrice?.lowPrice,
-      highPrice: p.fobPrice?.highPrice,
-      seller: { "@type": "Organization", name: brandInfo.name },
-    },
-  };
+  const productSchemaJsonLd = productJsonLd(p);
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
-      { "@type": "ListItem", position: 2, name: "Products", item: absoluteUrl("/products") },
-      { "@type": "ListItem", position: 3, name: "Carpet Tiles", item: absoluteUrl("/products/carpet-tiles") },
-      { "@type": "ListItem", position: 4, name: p.name, item: absoluteUrl(productPath(p.id)) },
-    ],
-  };
+  const breadcrumbJsonLd = productBreadcrumbJsonLd(p);
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -132,7 +98,7 @@ export default function EcoCorePeBackingProductPage() {
 
   return (
     <div className="bg-white min-h-screen">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(productJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(productSchemaJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
 
@@ -149,12 +115,12 @@ export default function EcoCorePeBackingProductPage() {
           <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
             <div>
               <div className="aspect-square overflow-hidden rounded-2xl border border-border bg-white shadow-xl">
-                <ProductImage src={productImages.hero} alt={p.name} className="h-full w-full" fit="contain" />
+                <ProductImage src={productImages.hero} alt={p.imageAlt || p.name} className="h-full w-full" fit="contain" />
               </div>
               <div className="mt-5 grid grid-cols-3 gap-4">
                 {productImages.gallery.map((item) => (
                   <div key={item.src} className="aspect-square overflow-hidden rounded-xl border border-border bg-white">
-                    <ProductImage src={item.src} alt={item.title} className="h-full w-full" fit="contain" />
+                    <ProductImage src={item.src} alt={item.alt} className="h-full w-full" fit="contain" />
                   </div>
                 ))}
               </div>
@@ -194,15 +160,15 @@ export default function EcoCorePeBackingProductPage() {
                     <span className="text-right font-bold">{p.fobPrice.display}</span>
                   </div>
                 )}
+                <div className="flex justify-between gap-6 text-xs uppercase">
+                  <span>Availability</span>
+                  <span className="text-right font-bold">In Stock / Made to Order</span>
+                </div>
               </div>
-              <div className="flex flex-col gap-4 sm:flex-row">
-                <Link href="/contact" className="btn-fox-orange flex-1 py-5 text-center text-sm uppercase tracking-[0.16em] shadow-lg">
-                  Request Technical Quote
-                </Link>
-                <Link href="/projects" className="btn-fox-outline flex-1 py-5 text-center text-sm uppercase tracking-[0.16em]">
-                  View Project Cases
-                </Link>
-              </div>
+              <ProductConversionPanel product={p} />
+              <Link href="/projects" className="mt-4 block w-full border border-border px-5 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-primary transition-all hover:border-primary hover:bg-surface">
+                View Project Cases
+              </Link>
             </div>
           </div>
         </div>
@@ -235,7 +201,7 @@ export default function EcoCorePeBackingProductPage() {
             {productImages.details.map((item) => (
               <article key={item.src} className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
                 <div className="aspect-[4/3] bg-surface">
-                  <ProductImage src={item.src} alt={item.title} className="h-full w-full" fit="contain" />
+                  <ProductImage src={item.src} alt={item.alt} className="h-full w-full" fit="contain" />
                 </div>
                 <div className="p-6">
                   <h3 className="mb-3 text-lg font-black uppercase text-primary">{item.title}</h3>
@@ -266,6 +232,8 @@ export default function EcoCorePeBackingProductPage() {
           </div>
         </div>
       </section>
+
+      <BuyerReasons />
 
       <section className="section-padding">
         <div className="container-fox grid gap-8 lg:grid-cols-2">

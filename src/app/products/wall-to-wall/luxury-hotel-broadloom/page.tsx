@@ -3,6 +3,7 @@ import Link from "next/link";
 import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
+import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 
 const productId = "luxury-hotel-broadloom";
 const product = products.find((prod) => prod.id === productId);
@@ -69,7 +70,7 @@ export default function ProductDetailPage() {
           <div className="flex flex-col gap-10 lg:flex-row lg:gap-20">
             <div className="lg:w-3/5">
               <div className="aspect-[4/3] overflow-hidden rounded-sm border border-border shadow-xl md:aspect-square">
-                <ProductImage src={p.image} alt={p.name} className="h-full w-full object-cover" />
+                <ProductImage src={p.image} alt={p.imageAlt || p.name} className="h-full w-full object-cover" />
               </div>
             </div>
             <div className="flex flex-col justify-center lg:w-2/5">
@@ -92,10 +93,12 @@ export default function ProductDetailPage() {
                     <span className="text-right font-bold">{p.fobPrice.display}</span>
                   </div>
                 )}
+                <div className="flex justify-between gap-6 text-xs uppercase">
+                  <span>Availability</span>
+                  <span className="text-right font-bold">In Stock / Made to Order</span>
+                </div>
               </div>
-              <Link href="/contact" className="btn-fox-orange w-full py-5 text-center text-sm uppercase tracking-[0.16em] shadow-lg md:tracking-widest">
-                Request Technical Quote
-              </Link>
+              <ProductConversionPanel product={p} />
             </div>
           </div>
         </div>
@@ -119,6 +122,7 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
+      <BuyerReasons />
     </div>
   );
 }

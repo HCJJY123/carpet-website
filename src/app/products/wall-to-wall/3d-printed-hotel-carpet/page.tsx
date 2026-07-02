@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { brandInfo, products } from "@/lib/data";
-import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
+import { products } from "@/lib/data";
+import { absoluteUrl, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
+import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 
 const productId = "3d-printed-hotel-carpet";
 const canonicalPath = "/products/wall-to-wall/3d-printed-hotel-carpet";
@@ -72,48 +73,7 @@ export const metadata: Metadata = {
   }
 };
 
-const productJsonLd = {
-  "@context": "https://schema.org/",
-  "@type": "Product",
-  "name": "3D HD Printed Nylon Hotel Carpet",
-  "image": [
-    absoluteUrl("/images/3d-printed-hotel-carpet-corridor.jpg"),
-    absoluteUrl("/images/3d-printed-hotel-carpet-guestroom.jpg"),
-    absoluteUrl("/images/3d-printed-hotel-carpet.jpg")
-  ],
-  "description": "High-definition 3D-printed nylon broadloom carpet for hotel guestrooms, corridors, and lobbies. Fully custom patterns, Class I fire rating, 4m width, factory-direct from Vishomecarpet.",
-  "brand": { "@type": "Brand", "name": "Vishomecarpet" },
-  "category": "Wall-to-Wall Broadloom Carpet",
-  "material": "100% Nylon",
-  "manufacturer": {
-    "@type": "Organization",
-    "name": brandInfo.name,
-    "url": brandInfo.url
-  },
-  "offers": product?.fobPrice
-    ? {
-        "@type": "AggregateOffer",
-        "url": absoluteUrl(productPath(product.id)),
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": product.fobPrice.currency,
-        "lowPrice": product.fobPrice.lowPrice,
-        "highPrice": product.fobPrice.highPrice,
-        "offerCount": "1",
-        "seller": { "@type": "Organization", "name": brandInfo.name }
-      }
-    : undefined,
-  "additionalProperty": [
-    { "@type": "PropertyValue", "name": "Fire Rating", "value": "Class I (ASTM E648)" },
-    { "@type": "PropertyValue", "name": "Traffic Class", "value": "33" },
-    { "@type": "PropertyValue", "name": "Yarn System", "value": "100% Nylon (HD Printed)" },
-    { "@type": "PropertyValue", "name": "Backing", "value": "ActionBac (PP + Latex)" },
-    { "@type": "PropertyValue", "name": "Pile Weight", "value": "32oz" },
-    { "@type": "PropertyValue", "name": "Total Thickness", "value": "9mm" },
-    { "@type": "PropertyValue", "name": "Roll Width", "value": "4m" },
-    { "@type": "PropertyValue", "name": "Sound Insulation", "value": "25dB" },
-    { "@type": "PropertyValue", "name": "Antistatic", "value": "Permanent" }
-  ]
-};
+const productSchemaJsonLd = product ? productJsonLd(product) : null;
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -158,7 +118,7 @@ export default function ProductDetailPage() {
     <div className="bg-white min-h-screen">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: safeJsonLd(productJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(productSchemaJsonLd) }}
       />
       <script
         type="application/ld+json"
@@ -203,8 +163,12 @@ export default function ProductDetailPage() {
                     <span className="text-right font-bold">{product.fobPrice.display}</span>
                   </div>
                 )}
+                <div className="flex justify-between uppercase text-xs gap-6">
+                  <span>AVAILABILITY</span>
+                  <span className="text-right font-bold">In Stock / Made to Order</span>
+                </div>
               </div>
-              <Link href="/contact" className="btn-fox-orange w-full py-5 text-center text-sm uppercase tracking-widest shadow-lg">Request Technical Quote</Link>
+              <ProductConversionPanel product={product} />
             </div>
           </div>
         </div>
@@ -263,6 +227,8 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
+
+      <BuyerReasons />
 
       <section className="pb-24">
         <div className="container-fox">
