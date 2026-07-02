@@ -1,6 +1,7 @@
 export interface ProductColor { name: string; hex: string; }
 export interface TechnicalSpecs { fireRating: string; trafficClass: string; fiber?: string; yarnSystem: string; backing: string; pileWeight: string; totalThickness: string; rollWidth?: string; soundInsulation?: string; antistatic: string; }
-export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; leadTime: string; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
+export interface FobPriceRange { display: string; lowPrice: string; highPrice: string; currency: "USD"; unit: string; }
+export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; leadTime: string; fobPrice?: FobPriceRange; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
 export interface CaseSpecItem { label: string; value: string; }
 export interface CaseSection { title: string; paragraphs: string[]; image?: string; imageAlt?: string; imageCaption?: string; }
 export interface CaseCostItem { item: string; amount: string; }
@@ -8,9 +9,9 @@ export interface CaseStudy { id: string; title: string; subtitle?: string; categ
 
 export const brandInfo = {
   name: "Vishome Global Commercial Carpet Co., Ltd.",
-  shortName: "Vishome Carpet",
+  shortName: "Visfurn",
   url: "https://www.vishomecarpet.com",
-  email: "zara@visfurn.com",
+  email: "oilero@outlook.com",
   phone: "+86 152 2288 5400",
   whatsapp: "+86 152 2288 5400",
   address: "Cuihuangkou Town, Wuqing District, Tianjin 301700, China",
@@ -18,6 +19,38 @@ export const brandInfo = {
 };
 
 export const products: Product[] = [
+
+  {
+    id: "ecocore-pe-backing-carpet-tiles",
+    name: "Vishomecarpet EcoCore PVC-Free PE Backing Carpet Tiles",
+    category: "carpet-tiles",
+    description: "Eco-friendly 50x50cm modular carpet tiles with PVC-free PE backing for sustainable offices, green buildings, and heavy commercial interiors.",
+    longDescription: "Vishomecarpet EcoCore PE Backing Carpet Tiles are developed for B2B flooring projects where sustainability, modular flexibility, and commercial durability need to work together. The product combines a dense textured loop pile surface with a stable PVC-free PE backing structure, creating a practical flooring solution for office buildings, coworking spaces, education facilities, public workspaces, and LEED-oriented green building interiors.",
+    image: "/images/products/ecocore-pe-backing/01-hero-white-background.png",
+    moq: "Project-Based",
+    leadTime: "10-20 Days",
+    fobPrice: { display: "US$4.20-8.90 / SQM", lowPrice: "4.20", highPrice: "8.90", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "Solution-Dyed Nylon / Synthetic Fiber Option",
+      size: "50x50 cm",
+      colors: [
+        { name: "Carbon Gray", hex: "#4A4D4D" },
+        { name: "Warm Greige", hex: "#8B857A" },
+        { name: "Silver Ash", hex: "#A3A6A3" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I Option",
+      trafficClass: "Heavy Commercial Use",
+      yarnSystem: "Tufted Multi-Level Loop",
+      backing: "PVC-Free PE Backing",
+      pileWeight: "500-600 g/sqm",
+      totalThickness: "6.0-7.0mm",
+      soundInsulation: "Acoustic Comfort Option",
+      antistatic: "Low Static / Office Use"
+    },
+    features: ["PVC-Free PE Backing", "Low VOC", "Easy Replacement", "Green Building Ready"]
+  },
   {
     id: "commercial-nylon-tiles",
     name: "Premium Nylon 6.6 Commercial Carpet Tiles",
@@ -27,6 +60,7 @@ export const products: Product[] = [
     image: "/images/carpet-tile-premium.jpg",
     moq: "200 SQM",
     leadTime: "10-14 Days",
+    fobPrice: { display: "US$5.80-11.50 / SQM", lowPrice: "5.80", highPrice: "11.50", currency: "USD", unit: "SQM" },
     spec: { material: "100% Nylon 6.6", size: "50x50 cm", colors: [] },
     technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 33", yarnSystem: "Loop", backing: "Bitumen", pileWeight: "20oz", totalThickness: "6.5mm", soundInsulation: "24dB", antistatic: "Yes" },
     features: ["Stain Resistance"]
@@ -40,6 +74,7 @@ export const products: Product[] = [
     image: "/images/broadloom-premium.jpg",
     moq: "500 SQM",
     leadTime: "30 Days",
+    fobPrice: { display: "US$18.00-38.00 / SQM", lowPrice: "18.00", highPrice: "38.00", currency: "USD", unit: "SQM" },
     spec: { material: "80% Wool / 20% Nylon", size: "4m Width", colors: [] },
     technicalSpecs: { fireRating: "Class I", trafficClass: "32", yarnSystem: "Woven", backing: "Jute", pileWeight: "40oz", totalThickness: "11mm", soundInsulation: "28dB", antistatic: "Permanent" },
     features: ["Custom Pattern"]
@@ -63,6 +98,7 @@ export const products: Product[] = [
     ],
     moq: "300 SQM",
     leadTime: "25 Days",
+    fobPrice: { display: "US$3.50-7.80 / SQM", lowPrice: "3.50", highPrice: "7.80", currency: "USD", unit: "SQM" },
     spec: { material: "100% Nylon (HD Printed)", size: "4m Width", colors: [] },
     technicalSpecs: { fireRating: "Class I (ASTM E648)", trafficClass: "33", yarnSystem: "100% Nylon (HD Printed)", backing: "ActionBac (PP + Latex)", pileWeight: "32oz", totalThickness: "9mm", rollWidth: "4m", soundInsulation: "25dB", antistatic: "Permanent" },
     features: ["Custom Pattern", "HD Printed Nylon", "Hospitality Broadloom"]
@@ -89,6 +125,7 @@ export const products: Product[] = [
     ],
     moq: "300 SQM",
     leadTime: "25-35 Days",
+    fobPrice: { display: "US$4.20-8.60 / SQM", lowPrice: "4.20", highPrice: "8.60", currency: "USD", unit: "SQM" },
     spec: { material: "Commercial Synthetic Fiber", size: "4m Width", colors: [] },
     technicalSpecs: {
       fireRating: "Bfl-s1 (EN 13501-1)",
@@ -111,6 +148,7 @@ export const products: Product[] = [
     image: "/images/public-area-carpets.webp",
     moq: "300 SQM",
     leadTime: "20 Days",
+    fobPrice: { display: "US$4.80-9.80 / SQM", lowPrice: "4.80", highPrice: "9.80", currency: "USD", unit: "SQM" },
     spec: { material: "Solution-Dyed Nylon", size: "4m Width", colors: [] },
     technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 33", yarnSystem: "Tufted", backing: "Bitumen", pileWeight: "28oz", totalThickness: "8.5mm", soundInsulation: "22dB", antistatic: "< 2.0 kV" },
     features: ["Heavy Traffic"]
@@ -121,20 +159,20 @@ export const products: Product[] = [
     category: "public-area",
     description: "100% natural sisal carpet with a refined linen-weave texture for offices, retail, and hospitality public spaces.",
     longDescription: "Vishomecarpet's Natural Sisal Linen-Weave Commercial Carpet is a 100% plant-fiber flooring crafted from durable agave sisalana sisal, woven into a refined linen-look flatweave.",
-    image: "/images/natural-sisal-carpet.jpg",
-    imageAlt: "Natural sisal linen-weave commercial carpet swatch in warm wheat tone by Vishomecarpet",
-    gallery: [
-      { src: "/images/natural-sisal-carpet-roll.jpg", alt: "Natural sisal broadloom carpet roll, 4m width, with jute backing" },
-      { src: "/images/natural-sisal-carpet-office.jpg", alt: "Natural sisal carpet in a modern biophilic office reception" },
-      { src: "/images/natural-sisal-carpet-retail.jpg", alt: "Sisal commercial carpet flooring in an upscale boutique retail interior" },
-      { src: "/images/natural-sisal-carpet-lobby.jpg", alt: "Natural sisal broadloom in a hotel lobby and exhibition public area" },
-      { src: "/images/natural-sisal-carpet-macro.jpg", alt: "Macro close-up of woven natural sisal linen-weave fiber texture" },
-      { src: "/images/natural-sisal-carpet-backing.jpg", alt: "Non-slip natural latex and jute backing of sisal commercial carpet" },
-      { src: "/images/natural-sisal-carpet-colorways.jpg", alt: "Natural sisal carpet shown in four neutral colorways" }
-    ],
+    image: "/images/natural-sisal-carpet-office.jpg",
     moq: "300 SQM",
     leadTime: "30 Days",
-    spec: { material: "100% Natural Sisal", size: "4m Width", colors: [] },
+    fobPrice: { display: "US$6.50-14.80 / SQM", lowPrice: "6.50", highPrice: "14.80", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "100% Natural Sisal",
+      size: "4m Width",
+      colors: [
+        { name: "Wheat Beige", hex: "#C7A66A" },
+        { name: "Warm Greige", hex: "#9F9482" },
+        { name: "Taupe Brown", hex: "#806B55" },
+        { name: "Charcoal Grey", hex: "#4C4B47" }
+      ]
+    },
     technicalSpecs: {
       fireRating: "ASTM E648 Class I (FR-treated)",
       trafficClass: "Class 32",
@@ -151,7 +189,7 @@ export const products: Product[] = [
 ];
 
 export const productCategories = [
-  { id: "carpet-tiles", name: "Commercial Carpet Tiles", description: "Modular solutions.", image: "/images/category-tiles.jpg", slug: "carpet-tiles" },
+  { id: "carpet-tiles", name: "Commercial Carpet Tiles", description: "Modular solutions.", image: "/images/category-tiles.png", slug: "carpet-tiles" },
   { id: "wall-to-wall", name: "Wall-to-Wall Carpets", description: "Seamless broadloom.", image: "/images/category-broadloom.jpg", slug: "wall-to-wall" },
   { id: "public-area", name: "Public Area Carpets", description: "Heavy-duty specialized flooring.", image: "/images/public-area-carpets.webp", slug: "public-area" }
 ];
@@ -638,7 +676,43 @@ export const caseStudies: CaseStudy[] = [
       { label: "Format", value: "Modular workplace carpet system" },
       { label: "Design Strategy", value: "Light-to-dark floor progression for orientation and zoning" }
     ],
-    sections: [],
+    sections: [
+      {
+        title: "Workplace Rollout Brief",
+        paragraphs: [
+          "The client was upgrading eight office floors during an active occupancy cycle and needed a flooring strategy that could improve workplace quality without forcing long closures.",
+          "A modular carpet system was selected because it supported phased installation, easier future access, and better control of disruption than a single large broadloom replacement.",
+          "The design objective was not dramatic branding. It was to create a more coherent, professional office environment that could feel quieter and more intentional from floor to floor."
+        ]
+      },
+      {
+        title: "Color Progression as Orientation Tool",
+        paragraphs: [
+          "Instead of repeating one tone across all levels, the project used a controlled light-to-dark progression to help each floor feel related but distinct.",
+          "This created an easy orientation cue for staff and visitors while keeping the overall workplace palette disciplined enough for a corporate setting.",
+          "The tonal strategy also helped distribute wear visibility more intelligently, with deeper tones introduced in heavier-use zones where rolling chairs and circulation would be more demanding."
+        ],
+        image: "/images/blog-office-carpet.jpg",
+        imageAlt: "Office carpet zoning and tonal progression across workplace areas",
+        imageCaption: undefined
+      },
+      {
+        title: "Phased Installation in an Occupied Building",
+        paragraphs: [
+          "Installation sequencing was coordinated floor by floor so teams could work around occupancy, furniture moves, and business continuity requirements.",
+          "Because the format was modular, small zones could be completed and reopened faster, which reduced pressure on the client's internal relocation planning.",
+          "That phased approach turned carpet replacement into a manageable operational program rather than a disruptive one-time construction event."
+        ]
+      },
+      {
+        title: "Comfort and Long-Term Flexibility",
+        paragraphs: [
+          "Beyond appearance, the client valued the acoustic softening that carpet introduced compared with the previous harder-feeling office finish.",
+          "The modular system also gave the facilities team more freedom to handle future churn, workstation reconfiguration, or localized replacement without restarting a full-floor renovation.",
+          "This made the project commercially attractive not only at handover, but also in terms of long-term workplace management."
+        ]
+      }
+    ],
     technicalDetails: [
       "Tonal zoning by floor created a more structured occupant experience.",
       "Modular format supported phased installation and ongoing workspace flexibility.",
@@ -667,7 +741,43 @@ export const caseStudies: CaseStudy[] = [
       { label: "Use Type", value: "Airport terminal public circulation" },
       { label: "Priority", value: "Wayfinding support and phased replacement flexibility" }
     ],
-    sections: [],
+    sections: [
+      {
+        title: "Terminal Environment Brief",
+        paragraphs: [
+          "The airport operator needed a flooring system that could withstand continuous passenger movement while still supporting a more organized travel experience.",
+          "Unlike conventional commercial interiors, the terminal could not be shut down for large-scale flooring work, so the replacement strategy had to be compatible with live operation.",
+          "This pushed the project toward a modular public-area system with strong maintenance logic and clear wayfinding potential."
+        ]
+      },
+      {
+        title: "Patterning for Passenger Flow",
+        paragraphs: [
+          "The carpet pattern was developed to reinforce circulation rather than act as decoration alone. Directional movement, calmer waiting areas, and transition thresholds were treated as part of the visual planning brief.",
+          "This helped the floor contribute to orientation in subtle ways without competing with terminal signage or creating visual confusion.",
+          "For the operator, that meant the carpet could support both environment quality and practical passenger movement."
+        ],
+        image: "/images/public-area-raw.jpg",
+        imageAlt: "Public-area carpet patterning used to guide movement through a circulation zone",
+        imageCaption: undefined
+      },
+      {
+        title: "Replacement Logic in a Live Terminal",
+        paragraphs: [
+          "Modular construction was especially valuable because the airport needed to replace sections in tightly controlled windows rather than through extended shutdowns.",
+          "The format made it easier to isolate worn or damaged zones, complete overnight interventions, and reopen circulation routes quickly.",
+          "That maintenance flexibility was one of the strongest commercial reasons the system was selected."
+        ]
+      },
+      {
+        title: "Operational Outcome",
+        paragraphs: [
+          "The final result supported a cleaner circulation experience while giving the operator a more realistic long-term maintenance plan.",
+          "Because the flooring was no longer treated as a single all-or-nothing field, future refresh cycles became easier to budget and stage.",
+          "In a demanding transport environment, that combination of wayfinding value and service continuity was central to project success."
+        ]
+      }
+    ],
     technicalDetails: [
       "Modular format supported replacement without shutting down full terminal areas.",
       "Pattern logic contributed to passenger wayfinding."
@@ -693,7 +803,40 @@ export const caseStudies: CaseStudy[] = [
       { label: "Size", value: "600 m² across 6 units" },
       { label: "Design Focus", value: "Building identity and unit-level personalization" }
     ],
-    sections: [],
+    sections: [
+      {
+        title: "Luxury Residential Brief",
+        paragraphs: [
+          "The developer wanted the flooring to feel tailored to the identity of a premium high-rise rather than function as a generic soft finish.",
+          "Each residence needed to maintain a coherent luxury standard while also allowing some degree of unit-level individuality.",
+          "That made custom wall-to-wall carpet a better fit than a purely modular or standardized approach."
+        ]
+      },
+      {
+        title: "Unit-Level Identity Strategy",
+        paragraphs: [
+          "Decorative identity was introduced through controlled motif work and crest-related detailing that could signal exclusivity without overwhelming the interior scheme.",
+          "This allowed the carpet to reinforce the property's premium narrative while still giving each residence a subtle sense of distinction.",
+          "The project treated the floor as part of the interior brand language rather than as background material only."
+        ]
+      },
+      {
+        title: "Balancing Presentation and Practicality",
+        paragraphs: [
+          "Because these were high-end residences, visual continuity and softness of finish were prioritized over the replacement flexibility associated with tiles.",
+          "At the same time, specification choices still had to account for private-living maintenance expectations, traffic between entry and lounge zones, and long-term appearance retention.",
+          "The outcome was designed to feel refined in daily use rather than simply impressive at first installation."
+        ]
+      },
+      {
+        title: "Perceived Value After Handover",
+        paragraphs: [
+          "The finished carpet contributed to a stronger sense of crafted luxury across the project and helped the residences feel more individualized.",
+          "For the developer, this supported both market positioning and the perceived completeness of the interior package.",
+          "That perception of exclusivity was one of the main commercial goals behind the custom flooring strategy."
+        ]
+      }
+    ],
     technicalDetails: [
       "Custom visual integration supported premium unit differentiation.",
       "Luxury presentation outweighed modular maintenance flexibility."
@@ -719,7 +862,40 @@ export const caseStudies: CaseStudy[] = [
       { label: "Size", value: "4,200 m²" },
       { label: "Use Type", value: "Student center and campus social zones" }
     ],
-    sections: [],
+    sections: [
+      {
+        title: "Campus Social-Space Brief",
+        paragraphs: [
+          "The university wanted a flooring upgrade that could stand up to high daily student use while making the student center feel more connected to campus identity.",
+          "The environment had to support informal gathering, circulation, and public-facing activity without becoming visually tired too quickly.",
+          "That requirement made durability and branding equally important in the specification discussion."
+        ]
+      },
+      {
+        title: "Brand Integration for Shared Space",
+        paragraphs: [
+          "Rather than treating campus branding as signage only, the design integrated identity cues into the floor in a way that felt present but not overly promotional.",
+          "This helped the student center read as a more intentional shared environment and strengthened the sense of place for students using the space every day.",
+          "The carpet therefore contributed to culture and atmosphere as well as surface performance."
+        ]
+      },
+      {
+        title: "Durability for Daily Public Use",
+        paragraphs: [
+          "High footfall, backpacks, mobile furniture, and all-day occupation meant the material had to prioritize stable wear behavior and manageable maintenance.",
+          "The chosen system was designed to remain visually serviceable under repeated public use rather than rely on delicate finish quality.",
+          "That made it a practical fit for student circulation and social zones where durability always matters more than formal perfection."
+        ]
+      },
+      {
+        title: "Student Experience Outcome",
+        paragraphs: [
+          "After completion, the flooring helped the student center feel more finished, more welcoming, and more strongly tied to campus identity.",
+          "For the institution, that translated into both facility pride and a clearer sense that the space had been designed for student life rather than simple throughput.",
+          "This made the project successful on both practical and cultural terms."
+        ]
+      }
+    ],
     technicalDetails: [
       "Durable polypropylene suited to high student traffic.",
       "Brand integration supported stronger campus identity."
@@ -745,7 +921,40 @@ export const caseStudies: CaseStudy[] = [
       { label: "Size", value: "2,800 m² across 45 units" },
       { label: "Use Type", value: "Serviced apartments / extended-stay hospitality" }
     ],
-    sections: [],
+    sections: [
+      {
+        title: "Extended-Stay Operating Brief",
+        paragraphs: [
+          "The operator needed a flooring system suited to longer-duration guest occupancy, where units function more like temporary homes than short-stay hotel rooms.",
+          "That created a different maintenance profile from standard hospitality because localized wear, replacement convenience, and room-specific refresh planning all mattered more.",
+          "A modular hospitality solution offered the client a more adaptable long-term operating model."
+        ]
+      },
+      {
+        title: "Independent Unit Character",
+        paragraphs: [
+          "While the property still needed overall brand coherence, the operator wanted different unit types to feel slightly individualized rather than fully repetitive.",
+          "The carpet strategy supported this by allowing thematic variation within a controlled visual system, helping the environment feel more residential and less standardized.",
+          "That subtle differentiation was commercially relevant in an extended-stay positioning context."
+        ]
+      },
+      {
+        title: "Maintenance Strategy by Unit",
+        paragraphs: [
+          "One of the strongest operational advantages of the chosen format was the ability to refresh worn zones within individual units without triggering broad replacement scope.",
+          "This helped the operator plan maintenance around occupancy and turnover instead of waiting for full-area decline across many rooms at once.",
+          "In extended-stay properties, that flexibility can materially improve lifecycle planning and reduce service disruption."
+        ]
+      },
+      {
+        title: "Long-Term Hospitality Value",
+        paragraphs: [
+          "The completed project balanced guest comfort, unit identity, and practical maintenance in a way that suited the property's business model.",
+          "The client saw value not only in the initial presentation, but also in the ability to keep the rooms looking consistent over a longer operating horizon.",
+          "That long-run maintainability was central to the success of the flooring rollout."
+        ]
+      }
+    ],
     technicalDetails: [
       "Modular format supported unit-level refresh and simplified maintenance.",
       "Themed variation helped create a more differentiated long-stay environment."
@@ -771,7 +980,43 @@ export const caseStudies: CaseStudy[] = [
       { label: "Size", value: "1,500 m²" },
       { label: "Design Focus", value: "Luxury authenticity and brand-led pattern storytelling" }
     ],
-    sections: [],
+    sections: [
+      {
+        title: "Flagship Retail Brief",
+        paragraphs: [
+          "The Paris flagship required a floor that could support the brand's luxury narrative rather than sit quietly in the background.",
+          "Because the boutique relied heavily on atmosphere and presentation, the carpet was treated as part of the storytelling system alongside lighting, merchandising, and material finishes.",
+          "This made custom wall-to-wall design the natural direction for the project."
+        ]
+      },
+      {
+        title: "Pattern as Brand Language",
+        paragraphs: [
+          "The carpet design used controlled custom patterning and color detail to reinforce the boutique's sense of exclusivity and visual authorship.",
+          "Rather than applying obvious logos, the project translated brand cues into a more immersive floor expression that felt aligned with luxury retail standards.",
+          "That approach helped the space communicate identity without becoming overtly graphic."
+        ],
+        image: "/images/broadloom-patterned.jpg",
+        imageAlt: "Luxury patterned carpet reinforcing boutique brand identity",
+        imageCaption: undefined
+      },
+      {
+        title: "Supporting a Premium Shopping Environment",
+        paragraphs: [
+          "Visual continuity was important because interruptions or utilitarian-looking joints would have weakened the mood of the boutique.",
+          "The flooring therefore needed to maintain a polished, fashion-led feel while still supporting real retail traffic and daily operational use.",
+          "This balance between atmosphere and serviceability was key to the selection process."
+        ]
+      },
+      {
+        title: "Marketing and Experience Outcome",
+        paragraphs: [
+          "Once installed, the carpet became part of the flagship's broader image language and supported both in-person experience and visual marketing content.",
+          "The client treated the floor as a brand asset, not just a fit-out material, because it contributed directly to the boutique's premium emotional impact.",
+          "That made the project a strong example of carpet functioning as experiential retail design."
+        ]
+      }
+    ],
     technicalDetails: [
       "High-color-detail custom design suited to luxury boutique presentation.",
       "Aesthetic continuity treated as part of retail brand authenticity."

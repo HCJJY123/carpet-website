@@ -1,14 +1,19 @@
-import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
+import Link from "next/link";
 import { productCategories as categories, caseStudies, certifications } from "@/lib/data";
 import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://www.vishomecarpet.com" },
+};
 
 export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Section - B2B Manufacturer Style */}
-      <section className="relative bg-primary overflow-hidden min-h-[650px] flex items-center">
+      <section className="relative flex min-h-[560px] items-center overflow-hidden bg-primary md:min-h-[650px]">
         <div className="absolute inset-0 z-0">
           <ProductImage
             src="/images/hero-home.jpg"
@@ -25,21 +30,22 @@ export default function Home() {
             width={550}
             height={550}
             className="absolute right-[-80px] bottom-[-60px] w-[400px] md:w-[550px] h-auto opacity-[0.07] pointer-events-none select-none"
+            priority
           />
         </div>
 
-        <div className="container-fox relative z-10 py-24">
+        <div className="container-fox relative z-10 py-16 md:py-24">
           <div className="max-w-4xl">
             <span className="text-white/70 font-bold tracking-[0.3em] text-xs uppercase mb-6 block border-l-4 border-accent pl-4">
               Factory Direct Supply since 2005
             </span>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-8 leading-tight uppercase tracking-tight">
+            <h1 className="mb-6 text-4xl font-extrabold uppercase leading-tight tracking-tight text-white md:mb-8 md:text-6xl">
               Commercial Carpet Tiles & <br/>Custom Hotel Carpet Manufacturer
             </h1>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl opacity-90 leading-relaxed font-light">
+            <p className="mb-8 max-w-3xl text-base font-light leading-relaxed text-gray-300 opacity-90 md:mb-12 md:text-xl">
               We supply high-performance commercial carpet tiles, wall-to-wall rolls, and custom rugs for contractors, distributors, hotels, and office projects in North America, Europe, Australia and the Middle East.
             </p>
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap md:gap-6">
               <Link href="/contact" className="bg-white text-primary font-bold px-10 py-5 rounded-sm hover:bg-gray-100 transition-all text-sm uppercase tracking-widest shadow-xl">
                 Send Your Project Requirements
               </Link>
@@ -54,11 +60,11 @@ export default function Home() {
       {/* B2B Trust Bar - Market Focus */}
       <section className="bg-surface border-b border-border py-10">
         <div className="container-fox">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center md:gap-8">
             <p className="text-xs font-bold text-primary uppercase tracking-[0.2em]">
-              Primary Markets: USA / UK / Canada / Australia / UAE / Saudi Arabia
+              Primary Markets: USA / UK / Canada / Australia / Bulgaria / the Philippines / Malaysia, etc.
             </p>
-            <div className="flex flex-wrap items-center gap-8 opacity-60">
+            <div className="flex flex-wrap items-center gap-4 opacity-60 md:gap-8">
               {certifications.map((cert) => (
                 <span key={cert.name} className="text-[10px] font-black text-primary uppercase tracking-widest">{cert.name}</span>
               ))}
@@ -77,7 +83,7 @@ export default function Home() {
               Bulk Supply for Flooring Distributors & Contractors
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid gap-6 md:grid-cols-3 md:gap-10">
             {categories.map((cat, index) => (
               <Link
                 key={cat.id}
@@ -109,7 +115,7 @@ export default function Home() {
       {/* Vishome Global Strength - B2B Data Matrix */}
       <section className="section-padding bg-white">
         <div className="container-fox">
-          <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
+          <div className="grid items-center gap-10 mb-12 lg:grid-cols-2 lg:gap-20 md:mb-20">
             <div>
               <span className="text-primary font-black tracking-[0.3em] text-[10px] uppercase mb-4 block border-l-4 border-primary pl-4">
                 Corporate Profile
@@ -129,7 +135,7 @@ export default function Home() {
                 View Full Factory Capability
               </Link>
             </div>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
               {[
                 { label: "Factory Area", value: "50,000㎡", desc: "Production Facility" },
                 { label: "Skilled Staff", value: "900+", desc: "Experienced Workers" },
@@ -161,9 +167,9 @@ export default function Home() {
               View All Global Cases
             </Link>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {caseStudies.map((cs) => (
-              <div key={cs.id} className="group flex flex-col">
+              <Link key={cs.id} href={`/projects/${cs.id}`} className="group flex flex-col">
                 <div className="aspect-[4/3] overflow-hidden bg-surface mb-6">
                   <ProductImage
                     src={cs.image}
@@ -175,11 +181,11 @@ export default function Home() {
                   {cs.title}
                 </h3>
                 <div className="mt-auto">
-                  <Link href="/projects" className="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50 group-hover:text-primary transition-colors">
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50 group-hover:text-primary transition-colors">
                     Technical Overview →
-                  </Link>
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -194,7 +200,7 @@ export default function Home() {
               Technical Guides for International Buyers
             </p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-10">
+          <div className="grid gap-8 sm:grid-cols-3 md:gap-10">
             {blogPosts.slice(0, 3).map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group bg-white border border-border p-2 hover:shadow-xl transition-all">
                 <div className="aspect-video overflow-hidden mb-6">
@@ -213,13 +219,13 @@ export default function Home() {
       </section>
 
       {/* Final CTA - Professional Intake */}
-      <section className="py-24 bg-primary text-white">
+      <section className="bg-primary py-16 text-white md:py-24">
         <div className="container-fox text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest">Ready for Technical Assessment?</h2>
           <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg font-light leading-relaxed">
             Contact our factory for project-based customization, bulk pricing, and international fire-rating documentation.
           </p>
-          <Link href="/contact" className="bg-white text-primary font-bold px-16 py-6 rounded-sm hover:bg-gray-100 transition-all uppercase tracking-[0.3em] shadow-2xl inline-block text-sm">
+          <Link href="/contact" className="inline-block rounded-sm bg-white px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-primary shadow-2xl transition-all hover:bg-gray-100 md:px-16 md:py-6 md:tracking-[0.3em]">
             Contact Our Factory
           </Link>
         </div>

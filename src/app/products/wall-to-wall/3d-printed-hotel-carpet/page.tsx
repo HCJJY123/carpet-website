@@ -1,38 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { brandInfo, products } from "@/lib/data";
+import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 
-const siteUrl = "https://www.vishomecarpet.com";
+const productId = "3d-printed-hotel-carpet";
 const canonicalPath = "/products/wall-to-wall/3d-printed-hotel-carpet";
-
-const product = {
-  name: "3D HD Printed Nylon Hotel Carpet",
-  description: "High-definition 3D-printed nylon broadloom for hotel guestrooms, corridors, and lobbies - fully custom patterns, fast 25-day production.",
-  image: "/images/3d-printed-hotel-carpet.jpg",
-  imageAlt: "3D HD printed nylon hotel carpet swatch with elegant gold and burgundy pattern by Vishomecarpet",
-  moq: "300 SQM",
-  leadTime: "25 Days",
-  technicalSpecs: {
-    fireRating: "Class I (ASTM E648)",
-    trafficClass: "33",
-    yarnSystem: "100% Nylon (HD Printed)",
-    backing: "ActionBac (PP + Latex)",
-    pileWeight: "32oz",
-    totalThickness: "9mm",
-    rollWidth: "4m",
-    soundInsulation: "25dB",
-    antistatic: "Permanent"
-  },
-  gallery: [
-    { src: "/images/3d-printed-hotel-carpet-roll.jpg", alt: "Wall-to-wall printed hotel broadloom carpet roll, 4m width, Vishomecarpet" },
-    { src: "/images/3d-printed-hotel-carpet-guestroom.jpg", alt: "Printed nylon broadloom carpet installed in a luxury hotel guestroom" },
-    { src: "/images/3d-printed-hotel-carpet-corridor.jpg", alt: "Seamless wall-to-wall printed hotel corridor carpet with ornamental pattern" },
-    { src: "/images/3d-printed-hotel-carpet-ballroom.jpg", alt: "Large-scale printed broadloom carpet in a grand hotel lobby and ballroom" },
-    { src: "/images/3d-printed-hotel-carpet-macro.jpg", alt: "Close-up macro of dense printed nylon hotel carpet pile texture" },
-    { src: "/images/3d-printed-hotel-carpet-backing.jpg", alt: "ActionBac backing detail of printed nylon hotel broadloom carpet" },
-    { src: "/images/3d-printed-hotel-carpet-colorways.jpg", alt: "Hotel printed broadloom carpet pattern shown in four custom colorways" }
-  ]
-};
+const product = products.find((prod) => prod.id === productId);
 
 const descriptionParagraphs = [
   "Vishomecarpet's 3D HD Printed Nylon Hotel Carpet is a wall-to-wall broadloom flooring solution engineered for hospitality interiors. Using high-definition digital printing on a durable 100% nylon surface, it reproduces intricate, photo-realistic patterns and rich color depth that conventional dyed carpets cannot match - at a lower setup cost and faster lead time than woven Axminster or Wilton broadloom.",
@@ -81,10 +55,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "3D HD Printed Nylon Hotel Carpet | VISHOME",
     description: "High-definition 3D-printed nylon broadloom carpet for hotel guestrooms, corridors, and lobbies. Custom patterns, Class I fire rating, 4m width.",
-    url: `${siteUrl}${canonicalPath}`,
+    url: absoluteUrl(canonicalPath),
     images: [
       {
-        url: `${siteUrl}/images/3d-printed-hotel-carpet-corridor.jpg`,
+        url: absoluteUrl("/images/3d-printed-hotel-carpet-corridor.jpg"),
         alt: "3D HD Printed Nylon Hotel Carpet by Vishomecarpet"
       }
     ],
@@ -94,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "3D HD Printed Nylon Hotel Carpet | VISHOME",
     description: "High-definition 3D-printed nylon broadloom carpet for hotel guestrooms, corridors, and lobbies. Custom patterns, Class I fire rating, 4m width.",
-    images: [`${siteUrl}/images/3d-printed-hotel-carpet-corridor.jpg`]
+    images: [absoluteUrl("/images/3d-printed-hotel-carpet-corridor.jpg")]
   }
 };
 
@@ -103,9 +77,9 @@ const productJsonLd = {
   "@type": "Product",
   "name": "3D HD Printed Nylon Hotel Carpet",
   "image": [
-    `${siteUrl}/images/3d-printed-hotel-carpet-corridor.jpg`,
-    `${siteUrl}/images/3d-printed-hotel-carpet-guestroom.jpg`,
-    `${siteUrl}/images/3d-printed-hotel-carpet.jpg`
+    absoluteUrl("/images/3d-printed-hotel-carpet-corridor.jpg"),
+    absoluteUrl("/images/3d-printed-hotel-carpet-guestroom.jpg"),
+    absoluteUrl("/images/3d-printed-hotel-carpet.jpg")
   ],
   "description": "High-definition 3D-printed nylon broadloom carpet for hotel guestrooms, corridors, and lobbies. Fully custom patterns, Class I fire rating, 4m width, factory-direct from Vishomecarpet.",
   "brand": { "@type": "Brand", "name": "Vishomecarpet" },
@@ -113,9 +87,21 @@ const productJsonLd = {
   "material": "100% Nylon",
   "manufacturer": {
     "@type": "Organization",
-    "name": "Vishome Global Commercial Carpet Co. Ltd.",
-    "url": siteUrl
+    "name": brandInfo.name,
+    "url": brandInfo.url
   },
+  "offers": product?.fobPrice
+    ? {
+        "@type": "AggregateOffer",
+        "url": absoluteUrl(productPath(product.id)),
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": product.fobPrice.currency,
+        "lowPrice": product.fobPrice.lowPrice,
+        "highPrice": product.fobPrice.highPrice,
+        "offerCount": "1",
+        "seller": { "@type": "Organization", "name": brandInfo.name }
+      }
+    : undefined,
   "additionalProperty": [
     { "@type": "PropertyValue", "name": "Fire Rating", "value": "Class I (ASTM E648)" },
     { "@type": "PropertyValue", "name": "Traffic Class", "value": "33" },
@@ -127,6 +113,17 @@ const productJsonLd = {
     { "@type": "PropertyValue", "name": "Sound Insulation", "value": "25dB" },
     { "@type": "PropertyValue", "name": "Antistatic", "value": "Permanent" }
   ]
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+    { "@type": "ListItem", position: 2, name: "Products", item: absoluteUrl("/products") },
+    { "@type": "ListItem", position: 3, name: "Wall-to-Wall Carpets", item: absoluteUrl("/products/wall-to-wall") },
+    { "@type": "ListItem", position: 4, name: "3D HD Printed Nylon Hotel Carpet", item: absoluteUrl(productPath(productId)) },
+  ],
 };
 
 const faqJsonLd = {
@@ -155,15 +152,21 @@ const specLabels: Record<string, string> = {
 };
 
 export default function ProductDetailPage() {
+  if (!product) return <div>Product Not Found</div>;
+
   return (
     <div className="bg-white min-h-screen">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(productJsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }}
       />
 
       <nav className="bg-surface py-4 border-b border-border">
@@ -179,7 +182,7 @@ export default function ProductDetailPage() {
           <div className="flex flex-col lg:flex-row gap-16 xl:gap-20">
             <div className="lg:w-3/5">
               <div className="aspect-[3/2] rounded-sm overflow-hidden border border-border shadow-xl">
-                <ProductImage src={product.image} alt={product.imageAlt} className="w-full h-full object-cover" />
+                <ProductImage src={product.image} alt={product.imageAlt || product.name} className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="lg:w-2/5 flex flex-col justify-center">
@@ -194,6 +197,12 @@ export default function ProductDetailPage() {
                   <span>LEAD TIME</span>
                   <span className="font-bold">{product.leadTime}</span>
                 </div>
+                {product.fobPrice && (
+                  <div className="flex justify-between uppercase text-xs gap-6">
+                    <span>FOB PRICE</span>
+                    <span className="text-right font-bold">{product.fobPrice.display}</span>
+                  </div>
+                )}
               </div>
               <Link href="/contact" className="btn-fox-orange w-full py-5 text-center text-sm uppercase tracking-widest shadow-lg">Request Technical Quote</Link>
             </div>
@@ -230,7 +239,7 @@ export default function ProductDetailPage() {
         <div className="container-fox">
           <h2 className="text-3xl font-bold text-primary mb-12 uppercase text-center tracking-widest">Project Gallery</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {product.gallery.map((image) => (
+            {(product.gallery || []).map((image) => (
               <figure key={image.src} className="bg-white border border-border">
                 <div className="aspect-[3/2] overflow-hidden">
                   <ProductImage src={image.src} alt={image.alt} className="w-full h-full object-cover" />

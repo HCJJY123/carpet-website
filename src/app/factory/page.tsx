@@ -4,7 +4,8 @@ import Link from "next/link";
 export const metadata = {
   title: "Carpet Manufacturing Factory | Vishome Global Commercial Carpet",
   description: "Explore the 50,000 sqm Vishome manufacturing facility. Premium production lines for commercial carpet tiles and hotel broadloom with 900+ skilled staff.",
-  keywords: "carpet manufacturer China, commercial carpet factory, hotel carpet production, carpet tile manufacturing"
+  keywords: "carpet manufacturer China, commercial carpet factory, hotel carpet production, carpet tile manufacturing",
+  alternates: { canonical: "https://www.vishomecarpet.com/factory" },
 };
 
 export default function FactoryPage() {

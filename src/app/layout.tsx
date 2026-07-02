@@ -1,70 +1,64 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import WhatsAppFloating from "@/components/WhatsAppFloating";
 
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.vishomecarpet.com"),
-  applicationName: "Vishome Carpet",
-  title: {
-    default: "Custom Commercial Carpet Manufacturer | Vishome Carpet",
-    template: "%s | Vishome Carpet"
+  verification: {
+    google: "SNIrO_J6kr1i6I36kSlpbPwsNdu4NiF6jmI2IoAJWWo",
   },
+  title: "Vishome | Commercial Carpet Tiles & Hotel Broadloom Manufacturer",
   description:
-    "Vishome Carpet manufactures commercial carpet tiles, hotel broadloom carpet, public area carpet, and custom carpet solutions for B2B projects worldwide.",
-  keywords: [
-    "custom commercial carpet manufacturer",
-    "commercial carpet tiles supplier",
-    "hotel carpet manufacturer",
-    "wall to wall carpet factory",
-    "custom rug manufacturer",
-    "China carpet manufacturer",
-    "B2B carpet supplier"
-  ],
-  alternates: {
-    canonical: "/"
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1
-    }
-  },
+    "Vishome Global Commercial Carpet Co. Ltd. manufactures commercial carpet tiles, hotel broadloom carpets, and custom flooring solutions for global B2B projects.",
+  keywords:
+    "Vishome, carpet tiles, broadloom carpet, commercial carpet, hotel carpet, modular flooring, China carpet manufacturer",
   openGraph: {
-    title: "Vishome Carpet | Commercial Carpet & Custom Flooring Manufacturer",
-    description: "Tianjin-based manufacturer for commercial carpet tiles, hotel carpets, public area carpets, and custom B2B flooring projects.",
+    title: "Vishome | Premium Commercial Carpet & Flooring Solutions",
+    description: "Vishome Global Commercial Carpet Co. Ltd.: a Tianjin-based manufacturer for commercial carpet tiles, hotel carpets, and custom B2B flooring projects.",
     url: "https://www.vishomecarpet.com",
-    siteName: "Vishome Carpet",
+    siteName: "Vishome",
+    type: "website",
     images: [
       {
-        url: "/images/hero-home.jpg",
+        url: "https://www.vishomecarpet.com/images/og-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Vishome commercial carpet manufacturing and project flooring solutions"
-      }
+        alt: "Vishome Global Commercial Carpet Manufacturer",
+      },
+      {
+        url: "https://www.vishomecarpet.com/images/hero-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Vishome commercial carpet tiles and hotel flooring solutions",
+      },
     ],
-    locale: "en_US",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vishome Carpet | Commercial Carpet Manufacturer",
-    description: "Factory-direct commercial carpet tiles, hotel carpet, public area carpet, and custom B2B flooring solutions.",
-    images: ["/images/hero-home.jpg"]
+    site: "@VishomeCarpet",
+    creator: "@VishomeCarpet",
+    title: "Vishome | Premium Commercial Carpet & Flooring Solutions",
+    description: "B2B commercial carpet manufacturer in Tianjin, China. Carpet tiles, hotel broadloom, public area flooring for global projects.",
+    images: ["https://www.vishomecarpet.com/images/og-cover.jpg"],
   },
   icons: {
     icon: "/favicon.svg",
     apple: "/logo-mark.svg",
-  }
+  },
 };
-
 
 export default function RootLayout({
   children,
@@ -72,7 +66,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col font-sans">
         <JsonLd />
         <Header />

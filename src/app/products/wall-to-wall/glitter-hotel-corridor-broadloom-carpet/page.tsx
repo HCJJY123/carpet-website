@@ -12,6 +12,7 @@ const product = {
   imageAlt: "Blue and gold glitter hotel corridor broadloom carpet installed in a luxury hotel by Vishomecarpet",
   moq: "300 SQM",
   leadTime: "25-35 Days",
+  fobPrice: { display: "US$4.20-8.60 / SQM", lowPrice: "4.20", highPrice: "8.60", currency: "USD", unit: "SQM" },
   technicalSpecs: {
     fireRating: "Bfl-s1 (EN 13501-1)",
     trafficClass: "High-Traffic Commercial",
@@ -112,6 +113,15 @@ const productJsonLd = {
   "brand": { "@type": "Brand", "name": "Vishomecarpet" },
   "category": "Wall-to-Wall Hotel Broadloom Carpet",
   "material": "Commercial Synthetic Fiber",
+  "offers": {
+    "@type": "AggregateOffer",
+    "url": `${siteUrl}${canonicalPath}`,
+    "priceCurrency": product.fobPrice.currency,
+    "lowPrice": product.fobPrice.lowPrice,
+    "highPrice": product.fobPrice.highPrice,
+    "offerCount": "1",
+    "availability": "https://schema.org/InStock"
+  },
   "manufacturer": {
     "@type": "Organization",
     "name": "Vishome Global Commercial Carpet Co. Ltd.",
@@ -123,6 +133,7 @@ const productJsonLd = {
     { "@type": "PropertyValue", "name": "Yarn System", "value": "Patterned Tufted Broadloom" },
     { "@type": "PropertyValue", "name": "Backing", "value": "Commercial Woven Backing" },
     { "@type": "PropertyValue", "name": "Roll Width", "value": "4m" },
+    { "@type": "PropertyValue", "name": "FOB Price Range", "value": "US$4.20-8.60 / SQM" },
     { "@type": "PropertyValue", "name": "MOQ", "value": "300 SQM" },
     { "@type": "PropertyValue", "name": "Lead Time", "value": "25-35 Days" }
   ]
@@ -193,6 +204,10 @@ export default function ProductDetailPage() {
                 <div className="flex justify-between uppercase text-xs gap-6">
                   <span>LEAD TIME</span>
                   <span className="font-bold">{product.leadTime}</span>
+                </div>
+                <div className="flex justify-between uppercase text-xs gap-6">
+                  <span>FOB PRICE</span>
+                  <span className="text-right font-bold">{product.fobPrice.display}</span>
                 </div>
                 <div className="flex justify-between uppercase text-xs gap-6">
                   <span>ROLL WIDTH</span>
