@@ -274,7 +274,7 @@ export default function ProductDetailPage() {
             {product.detailImages.map((image) => (
               <figure key={image.src} className="bg-white border border-border">
                 <div className="aspect-[16/9] overflow-hidden bg-white">
-                  <ProductImage src={image.src} alt={image.alt} className="w-full h-full object-contain" />
+                  <ProductImage src={image.src} alt={image.alt} className="w-full h-full" fit="contain" />
                 </div>
               </figure>
             ))}
