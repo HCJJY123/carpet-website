@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import WhatsAppFloating from "@/components/WhatsAppFloating";
+import MarketingTracking from "@/components/MarketingTracking";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +19,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   verification: {
-    google: "SNIrO_J6kr1i6I36kSlpbPwsNdu4NiF6jmI2IoAJWWo",
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "SNIrO_J6kr1i6I36kSlpbPwsNdu4NiF6jmI2IoAJWWo",
   },
   title: "Vishome | Commercial Carpet Tiles & Hotel Broadloom Manufacturer",
   description:
@@ -72,6 +73,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans">
         <JsonLd />
+        <MarketingTracking />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

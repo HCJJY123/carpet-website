@@ -34,3 +34,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Marketing Tracking
+
+Set these environment variables in Vercel for production analytics and lead tracking:
+
+```bash
+NEXT_PUBLIC_GA4_MEASUREMENT_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_CLARITY_PROJECT_ID=xxxxxxxxxx
+NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=SNIrO_J6kr1i6I36kSlpbPwsNdu4NiF6jmI2IoAJWWo
+NEXT_PUBLIC_GOOGLE_ADS_FORM_CONVERSION_SEND_TO=AW-XXXXXXXXX/XXXXXXXXXXXX
+```
+
+Tracking behavior:
+
+- GA4 loads globally and records route-level page views.
+- Microsoft Clarity loads globally when `NEXT_PUBLIC_CLARITY_PROJECT_ID` is set.
+- Contact form success fires GA4 `generate_lead`.
+- Contact form success fires Clarity `contact_form_submit`.
+- If Google Ads conversion `send_to` is provided, form success also fires a Google Ads `conversion` event.

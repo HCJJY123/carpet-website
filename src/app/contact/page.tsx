@@ -4,6 +4,7 @@ import { useState } from "react";
 import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
+import { trackLeadConversion } from "@/lib/tracking";
 
 export default function ContactPage() {
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.contact);
@@ -30,6 +31,12 @@ export default function ContactPage() {
       });
 
       if (response.ok) {
+        trackLeadConversion({
+          formName: "contact_project_quote",
+          product: String(formData.get("product") || ""),
+          quantity: String(formData.get("quantity") || ""),
+          country: String(formData.get("country") || ""),
+        });
         setState({ submitting: false, submitted: true, error: null });
         form.reset();
       } else {
