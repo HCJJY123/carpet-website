@@ -4,7 +4,7 @@ import Script from "next/script";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID;
+const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-WBRQWMXJ7R";
 const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
 
 declare global {
