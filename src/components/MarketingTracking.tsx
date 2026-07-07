@@ -1,64 +1,103 @@
 "use client";
 
-import Script from "next/script";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Script from "next/script";
 
-const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-WBRQWMXJ7R";
-const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "xgg9z07tsm";
-
-declare global {
-  interface Window {
-    dataLayer?: unknown[];
-    gtag?: (...args: unknown[]) => void;
-    clarity?: (...args: unknown[]) => void;
-  }
-}
+// 你需要在这里填入你的 Google Ads ID (AW-XXXXX)
+const GOOGLE_ADS_ID = "AW-11537156958"; // 这里我先填入一个占位值，请核对
 
 export default function MarketingTracking() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (!ga4MeasurementId || typeof window.gtag !== "function") return;
+    // 1. 全站点击追踪 (WhatsApp, Email, Phone)
+    const handleGlobalClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest("a");
+      
+      if (!anchor) return;
 
-    window.gtag("config", ga4MeasurementId, {
-      page_path: `${pathname}${window.location.search}`,
-      page_location: window.location.href,
-      page_title: document.title,
-    });
+      const href = anchor.href || "";
+      const text = anchor.innerText.toLowerCase();
+
+      // WhatsApp 追踪
+      if (href.includes("wa.me") || href.includes("whatsapp.com") || text.includes("whatsapp")) {
+        window.gtag?.("event", "conversion", {
+          send_to: `${GOOGLE_ADS_ID}/whatsapp_click`, // 转换操作标签
+          event_category: "Engagement",
+          event_label: "WhatsApp Click",
+        });
+      }
+
+      // Email 追踪
+      if (href.startsWith("mailto:")) {
+        window.gtag?.("event", "conversion", {
+          send_to: `${GOOGLE_ADS_ID}/email_click`,
+          event_category: "Engagement",
+          event_label: "Email Click",
+        });
+      }
+
+      // 电话点击追踪
+      if (href.startsWith("tel:")) {
+        window.gtag?.("event", "conversion", {
+          send_to: `${GOOGLE_ADS_ID}/phone_click`,
+          event_category: "Engagement",
+          event_label: "Phone Click",
+        });
+      }
+
+      // 样品申请点击追踪
+      if (text.includes("sample") || text.includes("get sample")) {
+        window.gtag?.("event", "conversion", {
+          send_to: `${GOOGLE_ADS_ID}/sample_request_click`,
+          event_category: "Lead",
+          event_label: "Request Sample Click",
+        });
+      }
+    };
+
+    document.addEventListener("click", handleGlobalClick);
+    return () => document.removeEventListener("click", handleGlobalClick);
+  }, []);
+
+  useEffect(() => {
+    // 2. Thank You 页面浏览追踪 (核心转化)
+    if (pathname === "/thank-you") {
+      window.gtag?.("event", "conversion", {
+        send_to: `${GOOGLE_ADS_ID}/form_submission_success`, // 转换操作标签
+        value: 10.0,
+        currency: "USD",
+      });
+      console.log("GA4/Ads: Thank-you conversion tracked");
+    }
   }, [pathname]);
 
   return (
     <>
-      {ga4MeasurementId && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId}`}
-            strategy="afterInteractive"
-          />
-          <Script id="ga4-init" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              window.gtag = window.gtag || gtag;
-              gtag('js', new Date());
-              gtag('config', '${ga4MeasurementId}', { send_page_view: false });
-            `}
-          </Script>
-        </>
-      )}
-
-      {clarityProjectId && (
-        <Script id="microsoft-clarity" strategy="afterInteractive">
-          {`
-            (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "${clarityProjectId}");
-          `}
-        </Script>
-      )}
+      {/* Google Ads Global Site Tag */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GOOGLE_ADS_ID}', {
+            'linker': { 'domains': ['vishomecarpet.com'] }
+          });
+        `}
+      </Script>
     </>
   );
+}
+
+// 补充：为了让 TS 不报错
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
 }

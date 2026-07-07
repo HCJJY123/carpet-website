@@ -4,6 +4,7 @@ import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
+import RelatedCaseStudies from "@/components/RelatedCaseStudies";
 
 const productId = "natural-sisal-carpet";
 const product = products.find((prod) => prod.id === productId);
@@ -246,6 +247,7 @@ export default function NaturalSisalCarpetPage() {
         </div>
       </section>
 
+      <RelatedCaseStudies category={p.category} />
       <BuyerReasons />
 
       <section className="section-padding">

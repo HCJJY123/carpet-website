@@ -4,6 +4,7 @@ import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
+import RelatedCaseStudies from "@/components/RelatedCaseStudies";
 
 const productId = "commercial-nylon-tiles";
 const product = products.find((prod) => prod.id === productId);
@@ -122,6 +123,7 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
+      <RelatedCaseStudies category={p.category} />
       <BuyerReasons />
     </div>
   );

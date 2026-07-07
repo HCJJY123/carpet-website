@@ -4,6 +4,7 @@ import { products } from "@/lib/data";
 import { absoluteUrl, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
+import RelatedCaseStudies from "@/components/RelatedCaseStudies";
 
 const productId = "3d-printed-hotel-carpet";
 const canonicalPath = "/products/wall-to-wall/3d-printed-hotel-carpet";
@@ -244,6 +245,7 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
+      <RelatedCaseStudies category="wall-to-wall" />
     </div>
   );
 }

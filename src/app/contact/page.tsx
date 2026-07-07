@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 import { trackLeadConversion } from "@/lib/tracking";
 
 export default function ContactPage() {
+  const router = useRouter();
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.contact);
   const [state, setState] = useState({
     submitting: false,
@@ -39,6 +41,11 @@ export default function ContactPage() {
         });
         setState({ submitting: false, submitted: true, error: null });
         form.reset();
+        
+        // 延迟跳转，确保客户看到成功提示
+        setTimeout(() => {
+          router.push('/thank-you');
+        }, 1500);
       } else {
         throw new Error("Submission failed");
       }

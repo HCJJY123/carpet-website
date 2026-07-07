@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
+import RelatedCaseStudies from "@/components/RelatedCaseStudies";
 
 const siteUrl = "https://www.vishomecarpet.com";
 const canonicalPath = "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet";
@@ -321,6 +322,7 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
+      <RelatedCaseStudies category="wall-to-wall" />
     </div>
   );
 }

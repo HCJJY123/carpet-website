@@ -4,6 +4,7 @@ import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
+import RelatedCaseStudies from "@/components/RelatedCaseStudies";
 
 const productId = "ecocore-pe-backing-carpet-tiles";
 const product = products.find((prod) => prod.id === productId);
@@ -32,6 +33,8 @@ const productImages = {
   office: "/images/products/ecocore-pe-backing/04-lifestyle-office.png",
   green: "/images/products/ecocore-pe-backing/05-green-building-office.png",
 };
+
+import RelatedCaseStudies from "@/components/RelatedCaseStudies";
 
 export const metadata: Metadata = product
   ? {
@@ -233,6 +236,7 @@ export default function EcoCorePeBackingProductPage() {
         </div>
       </section>
 
+      <RelatedCaseStudies category={p.category} />
       <BuyerReasons />
 
       <section className="section-padding">
