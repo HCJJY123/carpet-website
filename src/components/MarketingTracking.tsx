@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Script from "next/script";
 
 // 你需要在这里填入你的 Google Ads ID (AW-XXXXX)
-const GOOGLE_ADS_ID = "AW-11537156958"; // 这里我先填入一个占位值，请核对
+const GOOGLE_ADS_ID = "AW-18306142236"; 
 
 export default function MarketingTracking() {
   const pathname = usePathname();
