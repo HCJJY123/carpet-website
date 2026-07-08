@@ -28,7 +28,9 @@ function conversionSendToFor(type: ClickConversionType) {
     whatsapp_click:
       process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_CONVERSION_SEND_TO ||
       "AW-18306142236/xCxVCMr9_8wcEJyghplE",
-    email_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_EMAIL_CONVERSION_SEND_TO,
+    email_click:
+      process.env.NEXT_PUBLIC_GOOGLE_ADS_EMAIL_CONVERSION_SEND_TO ||
+      "AW-18306142236/YUPmCKq-gc0cEJyghplE",
     phone_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_PHONE_CONVERSION_SEND_TO,
     request_sample_box_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_SAMPLE_BOX_CONVERSION_SEND_TO,
   };
