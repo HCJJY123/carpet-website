@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ProductImage from "@/components/ProductImage";
 import { products } from "@/lib/data";
 import { productPath } from "@/lib/seo";
@@ -14,20 +15,38 @@ export default function CommercialCarpetTilesPage() {
 
   return (
     <div className="bg-white">
-      {/* Targeted Hero */}
-      <section className="bg-primary-light py-24 border-b border-white/5">
-        <div className="container-fox">
+      {/* Targeted Hero with Background Image */}
+      <section className="relative min-h-[600px] flex items-center border-b border-white/5 overflow-hidden">
+        {/* Background Image Container */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/landing/hero-commercial-office.jpg" 
+            alt="Commercial office with premium carpet tiles" 
+            fill 
+            className="object-cover"
+            priority={true}
+          />
+          {/* Dark Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-secondary-900/60" />
+        </div>
+
+        <div className="container-fox relative z-10 py-24">
           <div className="max-w-4xl">
-            <span className="text-accent font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Engineered for Performance</span>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
-              High-Performance Commercial Carpet Tiles
+            <span className="text-accent font-black tracking-[0.4em] text-xs uppercase mb-6 block italic">Engineered for Performance</span>
+            <h1 className="text-4xl md:text-7xl font-black text-white mb-8 tracking-tighter uppercase italic leading-[0.9]">
+              High-Performance <br />
+              <span className="text-primary-500">Commercial</span> Carpet Tiles
             </h1>
-            <p className="text-xl text-gray-300 mb-12 opacity-90">
+            <p className="text-xl text-gray-200 mb-12 opacity-90 max-w-2xl font-medium leading-relaxed italic">
               The preferred choice for modern office fit-outs and high-traffic commercial interiors. Fire-rated (ASTM E648) and low-VOC for maximum safety and compliance.
             </p>
-            <div className="flex flex-wrap gap-6">
-              <Link href="/contact" className="btn-fox-orange">Get Project Quotation</Link>
-              <Link href="/contact" className="btn-fox-outline">Request Free Samples</Link>
+            <div className="flex flex-wrap gap-8">
+              <Link href="/contact" className="bg-primary-500 text-white font-black px-12 py-6 uppercase tracking-[0.2em] rounded-sm hover:bg-white hover:text-secondary-900 transition-all shadow-2xl">
+                Get Project Quotation
+              </Link>
+              <Link href="/contact" className="border-2 border-white text-white font-black px-12 py-6 uppercase tracking-[0.2em] rounded-sm hover:bg-white/10 transition-all">
+                Request Free Samples
+              </Link>
             </div>
           </div>
         </div>
