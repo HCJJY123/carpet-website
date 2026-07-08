@@ -27,7 +27,7 @@ function conversionSendToFor(type: ClickConversionType) {
       "AW-18306142236/MKQzCMXB_swcEJyghplF",
     whatsapp_click:
       process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_CONVERSION_SEND_TO ||
-      "AW-18306142236/xCxVCMr9_8wcEJyghplE",
+      "AW-18306142236/NqtSCK74gc0cEJyghplE",
     email_click:
       process.env.NEXT_PUBLIC_GOOGLE_ADS_EMAIL_CONVERSION_SEND_TO ||
       "AW-18306142236/YUPmCKq-gc0cEJyghplE",
