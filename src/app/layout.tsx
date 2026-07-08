@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import WhatsAppFloating from "@/components/WhatsAppFloating";
 import MarketingTracking from "@/components/MarketingTracking";
-import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,19 +72,6 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        {/* Google Analytics (GA4) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-WBRQWMXJ7R"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-WBRQWMXJ7R');
-          `}
-        </Script>
         <JsonLd />
         <MarketingTracking />
         <Header />

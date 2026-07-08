@@ -1,52 +1,15 @@
-"use client";
-
-import Link from "next/link";
-import { useState } from "react";
 import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
-import { trackLeadConversion } from "@/lib/tracking";
 
-export default function ContactPage() {
+interface ContactPageProps {
+  searchParams: Promise<{ product?: string }>;
+}
+
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const { product } = await searchParams;
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.contact);
-  const [state, setState] = useState({
-    submitting: false,
-    submitted: false,
-    error: null as string | null
-  });
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setState({ ...state, submitting: true });
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch("https://formspree.io/f/xlgkpkza", {
-        method: "POST",
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        trackLeadConversion({
-          formName: "contact_project_quote",
-          product: String(formData.get("product") || ""),
-          quantity: String(formData.get("quantity") || ""),
-          country: String(formData.get("country") || ""),
-        });
-        setState({ submitting: false, submitted: true, error: null });
-        form.reset();
-      } else {
-        throw new Error("Submission failed");
-      }
-    } catch {
-      setState({ submitting: false, submitted: false, error: "Oops! There was a problem with the submission. Please try again." });
-    }
-  }
 
   return (
     <div className="bg-white">
@@ -64,90 +27,12 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-3 lg:gap-16">
             {/* Form Column */}
             <div className="lg:col-span-2">
-              {state.submitted ? (
-                <div className="animate-in rounded-2xl border border-success/20 bg-success/5 p-8 text-center duration-500 zoom-in md:p-12">
-                  <div className="w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">✓</div>
-                  <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-widest">Inquiry Received</h3>
-                  <p className="text-muted text-lg font-medium">Thank you for choosing Vishome. Our technical sales team will review your requirements and provide a preliminary quote within 24 hours.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl border border-border bg-surface p-5 shadow-sm md:space-y-8 md:p-12">
-                  {state.error && <p className="text-red-600 font-bold text-center text-sm">{state.error}</p>}
-
-                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Name *</label>
-                      <input name="name" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your name" />
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Email *</label>
-                      <input name="email" type="email" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="john@company.com" />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">WhatsApp</label>
-                      <input name="whatsapp" type="text" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="+1 000 000 0000" />
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Country / Region *</label>
-                      <input name="country" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="United States, UK, etc." />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Project Type *</label>
-                      <input name="project_type" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="Hotel, office, retail, public area..." />
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Product *</label>
-                      <input name="product" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="Carpet tiles, hotel carpet, sisal carpet..." />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Quantity</label>
-                      <input name="quantity" type="text" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="e.g. 500 SQM" />
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Delivery Time</label>
-                      <input name="delivery_time" type="text" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="Target shipment or installation date" />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Need Samples?</label>
-                      <select name="need_samples" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all">
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Sample Box</label>
-                      <Link href="/request-sample-box" className="flex min-h-[56px] items-center justify-center border border-border bg-surface px-5 py-4 text-center text-[10px] font-black uppercase tracking-[0.16em] text-primary transition-all hover:border-primary hover:bg-white">
-                        Request Commercial Carpet Sample Box
-                      </Link>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Message *</label>
-                    <textarea name="message" rows={6} required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all resize-none" placeholder="Tell us your project area, delivery country, timeline, design needs, or sample request..." />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={state.submitting}
-                    className="btn-fox-orange w-full py-5 text-sm tracking-[0.16em] hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 md:py-6 md:text-base md:tracking-[0.4em]"
-                  >
-                    {state.submitting ? "SENDING INQUIRY..." : "REQUEST PROJECT QUOTE"}
-                  </button>
-                </form>
-              )}
+              <LeadCaptureForm
+                formName="contact_project_quote"
+                productDefault={product || ""}
+                submitLabel="REQUEST PROJECT QUOTE"
+                introText="Send your project area, carpet type, quantity, country, and target delivery date. We will reply with FOB price, sample options, technical data sheet, and production lead time."
+              />
             </div>
 
             {/* Info Column */}
@@ -161,11 +46,11 @@ export default function ContactPage() {
                   </p>
                   <p className="flex items-start gap-4">
                     <span className="text-accent font-bold">P</span>
-                    +86 152 2288 5400
+                    <a href="tel:+8615222885400" className="hover:text-primary transition-colors">+86 152 2288 5400</a>
                   </p>
                   <p className="flex items-start gap-4">
                     <span className="text-accent font-bold">E</span>
-                    oilero@outlook.com
+                    <a href="mailto:oilero@outlook.com" className="hover:text-primary transition-colors">oilero@outlook.com</a>
                   </p>
                 </div>
               </div>
@@ -195,7 +80,7 @@ export default function ContactPage() {
                   </a>
                   <div className="border-t border-white/10 pt-5">
                     <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/45">Direct Phone / WhatsApp</p>
-                    <div className="mt-2 text-2xl font-bold text-accent">+86 152 2288 5400</div>
+                    <a href="tel:+8615222885400" className="mt-2 block text-2xl font-bold text-accent hover:text-white transition-colors">+86 152 2288 5400</a>
                   </div>
                 </div>
               </div>

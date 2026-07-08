@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
@@ -10,7 +10,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/request-sample-box" },
 };
 
-export default function RequestSampleBoxPage() {
+interface RequestSampleBoxPageProps {
+  searchParams: Promise<{ product?: string }>;
+}
+
+export default async function RequestSampleBoxPage({ searchParams }: RequestSampleBoxPageProps) {
+  const { product } = await searchParams;
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.sampleBox);
 
   return (
@@ -54,21 +59,17 @@ export default function RequestSampleBoxPage() {
 
             <div className="border border-border bg-surface p-6 md:p-8">
               <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-accent">Quick Request</p>
-              <h3 className="mb-4 text-2xl font-black uppercase text-primary">Need a Sample Box Fast?</h3>
-              <p className="mb-6 text-sm leading-relaxed text-muted">
-                Send your carpet type, country, project type, and target delivery date. We will reply with sample options, courier method, lead time, and related technical data sheet support.
-              </p>
-              <div className="grid gap-3">
-                <Link href="/contact" className="flex min-h-12 items-center justify-center bg-primary px-5 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition-all hover:bg-black">
-                  Request Sample Box by Form
-                </Link>
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex min-h-12 items-center justify-center bg-[#25D366] px-5 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition-all hover:bg-[#1ebe5d]">
-                  WhatsApp Sample Support
-                </a>
-                <Link href="/products" className="flex min-h-12 items-center justify-center border border-border bg-white px-5 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-primary transition-all hover:border-primary hover:bg-surface">
-                  View Product Collections
-                </Link>
-              </div>
+              <h3 className="mb-6 text-2xl font-black uppercase text-primary">Need a Sample Box Fast?</h3>
+              <LeadCaptureForm
+                formName="request_sample_box"
+                submitLabel="REQUEST SAMPLE BOX"
+                productDefault={product || "Commercial carpet sample box"}
+                projectTypeDefault="Sample request"
+                introText="Send your carpet type, country, project type, and target delivery date. We will reply with sample options, courier method, lead time, and related technical data sheet support."
+              />
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-6 flex min-h-12 items-center justify-center bg-[#25D366] px-5 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition-all hover:bg-[#1ebe5d]">
+                WhatsApp Sample Support
+              </a>
             </div>
           </div>
         </div>

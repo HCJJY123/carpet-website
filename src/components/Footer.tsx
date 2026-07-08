@@ -61,11 +61,11 @@ export default function Footer() {
             <ul className="space-y-6">
               <li className="flex flex-col gap-1">
                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">Email Inquiry</span>
-                <span className="text-sm font-bold text-gray-200">oilero@outlook.com</span>
+                <a href="mailto:oilero@outlook.com" className="text-sm font-bold text-gray-200 hover:text-white transition-colors">oilero@outlook.com</a>
               </li>
               <li className="flex flex-col gap-1">
                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">B2B Hotline</span>
-                <span className="text-sm font-bold text-gray-200">+86 152 2288 5400</span>
+                <a href="tel:+8615222885400" className="text-sm font-bold text-gray-200 hover:text-white transition-colors">+86 152 2288 5400</a>
               </li>
             </ul>
           </div>
