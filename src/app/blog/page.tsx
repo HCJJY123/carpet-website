@@ -47,8 +47,8 @@ export default function BlogPage() {
                   <h2 className="text-xl font-bold text-primary mb-4 leading-tight group-hover:text-accent transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-sm text-muted line-clamp-3 leading-relaxed mb-6">
-                    {post.description}
+                  <p className="text-sm text-muted line-clamp-3 leading-relaxed mb-6 italic">
+                    {post.excerpt}
                   </p>
                   <div className="mt-auto pt-4 border-t border-border flex items-center justify-between">
                     <span className="text-xs font-bold text-primary uppercase tracking-widest">Read Article</span>
