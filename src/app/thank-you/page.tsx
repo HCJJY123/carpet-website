@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { trackInteractionConversion } from "@/lib/tracking";
 
 export default function ThankYouPage() {
   const router = useRouter();
@@ -17,6 +18,33 @@ export default function ThankYouPage() {
 
     setAllowed(true);
   }, [router]);
+
+  useEffect(() => {
+    if (!allowed) return;
+
+    const successRaw = sessionStorage.getItem("vishome_form_success");
+    if (!successRaw) return;
+
+    let success: { token?: number; formName?: string } = {};
+    try {
+      success = JSON.parse(successRaw) as { token?: number; formName?: string };
+    } catch {
+      success = {};
+    }
+
+    const token = String(success.token || "");
+    const trackedToken = sessionStorage.getItem("vishome_thank_you_tracked");
+    if (trackedToken && trackedToken === token) return;
+
+    trackInteractionConversion("thank_you_page_view", {
+      form_name: success.formName || "unknown",
+      page_path: window.location.pathname,
+    });
+
+    if (token) {
+      sessionStorage.setItem("vishome_thank_you_tracked", token);
+    }
+  }, [allowed]);
 
   if (!allowed) {
     return null;
