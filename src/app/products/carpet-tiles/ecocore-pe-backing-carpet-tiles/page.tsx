@@ -34,8 +34,6 @@ const productImages = {
   green: "/images/products/ecocore-pe-backing/05-green-building-office.png",
 };
 
-import RelatedCaseStudies from "@/components/RelatedCaseStudies";
-
 export const metadata: Metadata = product
   ? {
       title: "PVC-Free PE Backing Carpet Tiles for Sustainable Office Projects | Vishomecarpet",
