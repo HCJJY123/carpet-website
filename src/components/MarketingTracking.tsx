@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { trackInteractionConversion } from "@/lib/tracking";
 
 const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-WBRQWMXJ7R";
+const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-2168530488";
 const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "xgg9z07tsm";
 const gtmContainerId = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID;
 
@@ -21,13 +22,21 @@ export default function MarketingTracking() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (!ga4MeasurementId || typeof window.gtag !== "function") return;
+    if (typeof window.gtag !== "function") return;
 
-    window.gtag("config", ga4MeasurementId, {
+    const pageViewPayload = {
       page_path: `${pathname}${window.location.search}`,
       page_location: window.location.href,
       page_title: document.title,
-    });
+    };
+
+    if (ga4MeasurementId) {
+      window.gtag("config", ga4MeasurementId, pageViewPayload);
+    }
+
+    if (googleAdsId) {
+      window.gtag("config", googleAdsId, pageViewPayload);
+    }
   }, [pathname]);
 
   useEffect(() => {
@@ -121,10 +130,10 @@ export default function MarketingTracking() {
         </>
       ) : null}
 
-      {ga4MeasurementId && (
+      {(ga4MeasurementId || googleAdsId) && (
         <>
           <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId || googleAdsId}`}
             strategy="afterInteractive"
           />
           <Script id="ga4-init" strategy="afterInteractive">
@@ -133,7 +142,8 @@ export default function MarketingTracking() {
               function gtag(){dataLayer.push(arguments);}
               window.gtag = window.gtag || gtag;
               gtag('js', new Date());
-              gtag('config', '${ga4MeasurementId}', { send_page_view: false });
+              ${ga4MeasurementId ? `gtag('config', '${ga4MeasurementId}', { send_page_view: false });` : ""}
+              ${googleAdsId ? `gtag('config', '${googleAdsId}', { send_page_view: false });` : ""}
             `}
           </Script>
         </>
