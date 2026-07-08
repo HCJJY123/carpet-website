@@ -34,7 +34,7 @@ export default function Header() {
             </div>
           </Link>
 
-          <nav className="hidden -translate-x-8 items-center justify-center xl:flex 2xl:-translate-x-6" aria-label="Primary navigation">
+          <nav className="hidden -translate-x-16 items-center justify-center xl:flex 2xl:-translate-x-14" aria-label="Primary navigation">
             <div className="flex items-center gap-2 rounded-full border border-border/80 bg-white/85 px-2 py-1.5 shadow-[0_10px_30px_rgba(16,42,67,0.06)] backdrop-blur">
               {navLinks.map((link) => {
                 const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
