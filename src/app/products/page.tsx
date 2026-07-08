@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { productCategories as categories, products } from "@/lib/data";
-import { productItemListJsonLd, safeJsonLd } from "@/lib/seo";
+import { productCategories as categories } from "@/lib/data";
 import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
 
@@ -11,16 +10,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/products" },
 };
 export default function ProductsPage() {
-  const jsonLd = productItemListJsonLd({
-    name: "VISHOME Commercial Carpet Products",
-    description: "Commercial carpet tiles, hotel broadloom, and public-area carpet systems for global B2B flooring projects.",
-    url: "/products",
-    items: products,
-  });
-
   return (
     <div className="bg-white min-h-screen">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
       <PageHero
         title="Our Products"
         eyebrow="Commercial Carpet Systems"
