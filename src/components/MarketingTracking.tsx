@@ -5,7 +5,8 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { trackInteractionConversion } from "@/lib/tracking";
 
-const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-WBRQWMXJ7R";
+const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-T2VYHXTK1F";
+const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "GT-NMDDTW67";
 const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-2168530488";
 const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "xgg9z07tsm";
 const gtmContainerId = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID;
@@ -32,6 +33,10 @@ export default function MarketingTracking() {
 
     if (ga4MeasurementId) {
       window.gtag("config", ga4MeasurementId, pageViewPayload);
+    }
+
+    if (googleTagId) {
+      window.gtag("config", googleTagId, pageViewPayload);
     }
 
     if (googleAdsId) {
@@ -130,10 +135,10 @@ export default function MarketingTracking() {
         </>
       ) : null}
 
-      {(ga4MeasurementId || googleAdsId) && (
+      {(googleTagId || ga4MeasurementId || googleAdsId) && (
         <>
           <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId || googleAdsId}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId || ga4MeasurementId || googleAdsId}`}
             strategy="afterInteractive"
           />
           <Script id="ga4-init" strategy="afterInteractive">
@@ -142,6 +147,7 @@ export default function MarketingTracking() {
               function gtag(){dataLayer.push(arguments);}
               window.gtag = window.gtag || gtag;
               gtag('js', new Date());
+              ${googleTagId ? `gtag('config', '${googleTagId}', { send_page_view: false });` : ""}
               ${ga4MeasurementId ? `gtag('config', '${ga4MeasurementId}', { send_page_view: false });` : ""}
               ${googleAdsId ? `gtag('config', '${googleAdsId}', { send_page_view: false });` : ""}
             `}
