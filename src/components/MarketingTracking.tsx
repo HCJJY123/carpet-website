@@ -7,7 +7,7 @@ import { trackInteractionConversion } from "@/lib/tracking";
 
 const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-T2VYHXTK1F";
 const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "GT-NMDDTW67";
-const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-2168530488";
+const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18306142236";
 const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "xgg9z07tsm";
 const gtmContainerId = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID;
 

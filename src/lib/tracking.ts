@@ -22,8 +22,12 @@ declare global {
 
 function conversionSendToFor(type: ClickConversionType) {
   const map: Record<ClickConversionType, string | undefined> = {
-    thank_you_page_view: process.env.NEXT_PUBLIC_GOOGLE_ADS_THANK_YOU_CONVERSION_SEND_TO,
-    whatsapp_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_CONVERSION_SEND_TO,
+    thank_you_page_view:
+      process.env.NEXT_PUBLIC_GOOGLE_ADS_THANK_YOU_CONVERSION_SEND_TO ||
+      "AW-18306142236/MKQzCMXB_swcEJyghplF",
+    whatsapp_click:
+      process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_CONVERSION_SEND_TO ||
+      "AW-18306142236/xCxVCMr9_8wcEJyghplE",
     email_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_EMAIL_CONVERSION_SEND_TO,
     phone_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_PHONE_CONVERSION_SEND_TO,
     request_sample_box_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_SAMPLE_BOX_CONVERSION_SEND_TO,
