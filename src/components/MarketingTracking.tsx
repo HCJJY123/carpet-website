@@ -98,6 +98,6 @@ export default function MarketingTracking() {
 // 补充：为了让 TS 不报错
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
