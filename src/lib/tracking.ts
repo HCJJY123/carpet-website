@@ -34,7 +34,9 @@ function conversionSendToFor(type: ClickConversionType) {
     phone_click:
       process.env.NEXT_PUBLIC_GOOGLE_ADS_PHONE_CONVERSION_SEND_TO ||
       "AW-18306142236/9VJZCK7t_swcEJyghplE",
-    request_sample_box_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_SAMPLE_BOX_CONVERSION_SEND_TO,
+    request_sample_box_click:
+      process.env.NEXT_PUBLIC_GOOGLE_ADS_SAMPLE_BOX_CONVERSION_SEND_TO ||
+      "AW-18306142236/Co0OCK726MwcEJyghplE",
   };
 
   return map[type];
