@@ -12,7 +12,7 @@ export default function WhatsAppFloating() {
           WhatsApp Business
         </p>
         <p className="mt-1 text-xs font-semibold leading-relaxed text-white/85">
-          Fast quote support for samples, TDS, and project pricing.
+          Send one message to get price, sample options, MOQ, lead time, and TDS.
         </p>
       </div>
 

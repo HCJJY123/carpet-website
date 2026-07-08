@@ -1,4 +1,4 @@
-import { brandInfo, faqSections } from "@/lib/data";
+import { brandInfo } from "@/lib/data";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 
 export default function JsonLd() {
@@ -127,29 +127,12 @@ export default function JsonLd() {
     ],
   };
 
-  // Flatten all FAQs for FAQPage Schema (Critical for GEO/SEO)
-  const faqData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqSections.flatMap(section => 
-      section.questions.map(q => ({
-        "@type": "Question",
-        "name": q.q,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": q.a
-        }
-      }))
-    )
-  };
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(organizationData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(localBusinessData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(websiteData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbData) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqData) }} />
     </>
   );
 }

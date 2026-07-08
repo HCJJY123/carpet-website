@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${project.title} | Project Case Study | VISHOME`,
+    title: `${project.title} | Project Application Reference | VISHOME`,
     description: project.description,
     alternates: { canonical: `/projects/${project.id}` },
     openGraph: {
-      title: `${project.title} | VISHOME Project Case Study`,
+      title: `${project.title} | VISHOME Project Application Reference`,
       description: project.description,
       url: absoluteUrl(`/projects/${project.id}`),
       type: "article",
@@ -59,7 +59,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       },
     },
     mainEntityOfPage: absoluteUrl(`/projects/${project.id}`),
-    articleSection: "Project Case Study",
+    articleSection: "Project Application Reference",
     about: project.category,
   };
 
@@ -99,6 +99,11 @@ export default async function ProjectDetailPage({ params }: Props) {
           {project.subtitle ? (
             <p className="text-muted text-lg leading-relaxed max-w-4xl mb-10">{project.subtitle}</p>
           ) : null}
+          <div className="mb-8 border border-border bg-surface p-5">
+            <p className="text-sm leading-relaxed text-muted">
+              This page is presented as a project application reference for commercial flooring decision-making. It is intended to show specification logic, design direction, and procurement considerations for similar project types.
+            </p>
+          </div>
 
           <div className="aspect-[21/9] rounded-xl overflow-hidden shadow-2xl border border-border mb-10">
             <ProductImage src={project.image} alt={project.title} className="w-full h-full object-cover" />
@@ -183,7 +188,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           ) : null}
 
           <section className="mb-14 border border-border rounded-xl p-8 bg-surface">
-            <h3 className="text-xl font-black text-primary uppercase tracking-wider mb-6">Results & Feedback</h3>
+            <h3 className="text-xl font-black text-primary uppercase tracking-wider mb-6">Reference Outcomes</h3>
             <ul className="space-y-3">
               {project.results.map((item) => (
                 <li key={item} className="text-muted leading-relaxed">
@@ -194,7 +199,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           </section>
 
           <section className="bg-primary rounded-xl p-10 text-center text-white">
-            <h3 className="text-3xl font-black uppercase tracking-wider mb-4">Need a Similar Rollout?</h3>
+            <h3 className="text-3xl font-black uppercase tracking-wider mb-4">Need a Similar Project Solution?</h3>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
               Share your floor plan and timeline. We can build a solution package covering design, technical specification, and phased delivery strategy.
             </p>

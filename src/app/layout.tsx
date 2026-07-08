@@ -72,20 +72,6 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
-        {/* Google Ads Tag (AW-18306142236) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18306142236"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-18306142236');
-            `,
-          }}
-        />
-      </head>
       <body className="min-h-full flex flex-col font-sans">
         {/* Google Analytics (GA4) */}
         <Script

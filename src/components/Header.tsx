@@ -57,7 +57,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden translate-x-4 items-center justify-end gap-5 xl:flex 2xl:translate-x-6">
-            <Link href="/contact" className="whitespace-nowrap bg-[#102A43] text-white text-[11px] font-black px-6 py-3 rounded-sm hover:bg-black transition-all uppercase tracking-widest shadow-lg">Get a Quote</Link>
+            <Link href="/contact" className="whitespace-nowrap bg-[#102A43] text-white text-[11px] font-black px-6 py-3 rounded-sm hover:bg-black transition-all uppercase tracking-widest shadow-lg">Get Factory Quote</Link>
             <a
               href={whatsappUrl}
               target="_blank"
@@ -66,7 +66,7 @@ export default function Header() {
               aria-label="Contact VISHOME on WhatsApp Business"
             >
               <WhatsAppIcon className="flex h-5 w-5 items-center justify-center rounded-full bg-white p-1 text-[#25D366]" />
-              WhatsApp Business
+              WhatsApp Project Support
             </a>
           </div>
 
@@ -117,7 +117,7 @@ export default function Header() {
           </div>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             <Link href="/contact" onClick={() => setMenuOpen(false)} className="btn-fox-orange text-center">
-              Get a Quote
+              Get Factory Quote
             </Link>
             <a
               href={whatsappUrl}
@@ -126,7 +126,7 @@ export default function Header() {
               className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#25D366] px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-white shadow-lg"
             >
               <WhatsAppIcon className="h-4 w-4" />
-              WhatsApp Business
+              WhatsApp Support
             </a>
           </div>
         </nav>

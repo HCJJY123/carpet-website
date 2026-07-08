@@ -14,6 +14,7 @@ const urls = [
   `${BASE}/products/carpet-tiles`,
   `${BASE}/products/wall-to-wall`,
   `${BASE}/products/public-area`,
+  `${BASE}/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles`,
   `${BASE}/products/carpet-tiles/commercial-nylon-tiles`,
   `${BASE}/products/wall-to-wall/luxury-hotel-broadloom`,
   `${BASE}/products/public-area/public-area-heavy-duty`,
@@ -40,6 +41,7 @@ const urls = [
   `${BASE}/factory`,
   `${BASE}/faq`,
   `${BASE}/contact`,
+  `${BASE}/request-sample-box`,
   `${BASE}/solutions`,
   `${BASE}/solutions/hotel-hospitality`,
 ];

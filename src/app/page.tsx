@@ -4,12 +4,15 @@ import Link from "next/link";
 import { productCategories as categories, caseStudies, certifications } from "@/lib/data";
 import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
+import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://www.vishomecarpet.com" },
 };
 
 export default function Home() {
+  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header);
+
   return (
     <div className="bg-white">
       {/* Hero Section - B2B Manufacturer Style */}
@@ -40,19 +43,44 @@ export default function Home() {
               Factory Direct Supply since 2005
             </span>
             <h1 className="mb-6 text-4xl font-extrabold uppercase leading-tight tracking-tight text-white md:mb-8 md:text-6xl">
-              Commercial Carpet Tiles & <br/>Custom Hotel Carpet Manufacturer
+              Commercial Carpet Tiles & Hotel Carpet Manufacturer for Global Projects
             </h1>
             <p className="mb-8 max-w-3xl text-base font-light leading-relaxed text-gray-300 opacity-90 md:mb-12 md:text-xl">
-              We supply high-performance commercial carpet tiles, wall-to-wall rolls, and custom rugs for contractors, distributors, hotels, and office projects in North America, Europe, Australia and the Middle East.
+              Factory-direct carpet tiles, hotel broadloom, and custom printed carpets for contractors, distributors, hotels, offices, and commercial renovation projects.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap md:gap-6">
               <Link href="/contact" className="bg-white text-primary font-bold px-10 py-5 rounded-sm hover:bg-gray-100 transition-all text-sm uppercase tracking-widest shadow-xl">
-                Send Your Project Requirements
+                Get Factory Quote
               </Link>
-              <Link href="/products" className="border-2 border-white/30 text-white font-bold px-10 py-5 rounded-sm hover:bg-white/10 transition-all text-sm uppercase tracking-widest">
-                Explore Collections
+              <Link href="/request-sample-box" className="border-2 border-white/30 text-white font-bold px-10 py-5 rounded-sm hover:bg-white/10 transition-all text-sm uppercase tracking-widest">
+                Request Free Sample Box
               </Link>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white font-bold px-10 py-5 rounded-sm hover:bg-[#1ebe5d] transition-all text-sm uppercase tracking-widest shadow-xl">
+                WhatsApp Project Support
+              </a>
             </div>
+            <div className="mt-8 grid gap-3 text-[10px] font-black uppercase tracking-[0.18em] text-white/70 sm:grid-cols-3">
+              <div className="border border-white/15 bg-white/5 px-4 py-3">Factory Direct Pricing</div>
+              <div className="border border-white/15 bg-white/5 px-4 py-3">Sample Box Available</div>
+              <div className="border border-white/15 bg-white/5 px-4 py-3">Custom Project Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white border-b border-border">
+        <div className="container-fox py-5">
+          <div className="grid gap-3 md:grid-cols-4">
+            {[
+              "Factory-direct carpet manufacturer",
+              "Commercial project quotation support",
+              "Free sample box request available",
+              "Custom design and technical data support",
+            ].map((item) => (
+              <div key={item} className="border border-border bg-surface px-4 py-3 text-[10px] font-black uppercase tracking-[0.16em] text-primary">
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -131,7 +159,7 @@ export default function Home() {
                   Our main products include commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event carpets, stair runners, and customized rugs. Backed by a professional design and production team, we support custom sizes, colors, materials, patterns, and project-based flooring solutions for international B2B customers.
                 </p>
               </div>
-              <Link href="/products" className="btn-fox-orange inline-block">
+              <Link href="/factory" className="btn-fox-orange inline-block">
                 View Full Factory Capability
               </Link>
             </div>
@@ -158,13 +186,13 @@ export default function Home() {
         <div className="container-fox">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 uppercase">Project Case Studies</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 uppercase">Project Application References</h2>
               <p className="text-muted max-w-xl font-medium">
-                Proven experience in hotel renovations and commercial office fit-outs worldwide.
+                Application-oriented commercial flooring references for hotel, office, retail, airport, and public-area procurement planning.
               </p>
             </div>
             <Link href="/projects" className="text-primary font-bold text-sm uppercase tracking-widest border-b-2 border-primary pb-2 hover:text-muted hover:border-muted transition-all">
-              View All Global Cases
+              View All Reference Pages
             </Link>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
