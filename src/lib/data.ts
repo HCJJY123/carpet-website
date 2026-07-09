@@ -21,6 +21,51 @@ export const brandInfo = {
 export const products: Product[] = [
 
   {
+    id: "luxury-hotel-carpet-tile-50x50cm",
+    name: "Luxury Hotel Carpet Tile 50x50cm | Commercial Nylon Carpet Tiles",
+    category: "carpet-tiles",
+    description: "Vishomecarpet 50x50cm commercial carpet tiles for hotel carpet floors, office carpet, corridors, meeting rooms, and B2B modular flooring projects.",
+    longDescription: "Vishomecarpet Luxury Hotel Carpet Tile 50x50cm is a modular commercial carpet tile solution for hotel carpet floor renovation, office carpet projects, corridors, lobbies, meeting rooms, and global B2B flooring buyers. The tile carpet format supports easy installation, selective replacement, color coordination, and project-scale supply for contractors, distributors, hotels, offices, and commercial renovation teams.",
+    image: "/images/products/luxury-hotel-carpet-tile-50x50cm/01-main-carpet-tile-top-view.jpg",
+    imageAlt: "Vishomecarpet luxury hotel carpet tile 50x50cm commercial nylon carpet tiles for office and hotel carpet floor projects",
+    gallery: [
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/01-main-carpet-tile-top-view.jpg", alt: "Top view of Vishomecarpet 50x50cm commercial carpet tiles for hotel carpet floor and office carpet projects" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/02-close-up-pile-texture.jpg", alt: "Close-up pile texture of nylon carpet tiles for commercial carpet and tile floor carpet applications" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/03-hotel-corridor-installed-scene.jpg", alt: "Hotel corridor installed scene with tile carpet floor and modular commercial carpet tiles" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/04-carpet-tile-backing-underside.jpg", alt: "Backing underside detail of 50x50cm carpet tile for commercial office carpet installation" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/05-color-range-swatches.jpg", alt: "Color range swatches for Vishomecarpet tile decor carpet and office carpet projects" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/06-hotel-guest-room-application.jpg", alt: "Hotel guest room application with 50x50cm carpet tiles and comfortable floor carpets" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/07-hotel-lobby-corridor-application.jpg", alt: "Hotel lobby and corridor application using commercial carpet tiles for heavy traffic areas" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/08-conference-room-carpet-tiles.jpg", alt: "Conference room with tile office carpet and modular nylon carpet tiles" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/09-executive-office-carpet-tiles.jpg", alt: "Executive office carpet tiles for commercial office carpet and tile floor carpet projects" }
+    ],
+    moq: "1 Piece",
+    leadTime: "7-15 Days",
+    fobPrice: { display: "US$1.40-2.20 / Piece", lowPrice: "1.40", highPrice: "2.20", currency: "USD", unit: "Piece" },
+    spec: {
+      material: "Nylon / PP Option",
+      size: "50x50 cm",
+      colors: [
+        { name: "Textured Gray", hex: "#6D6A63" },
+        { name: "Charcoal", hex: "#353535" },
+        { name: "Warm Taupe", hex: "#8B8172" },
+        { name: "Soft Beige", hex: "#B9AD9A" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I Option",
+      trafficClass: "Heavy Commercial / Hotel Use",
+      fiber: "Nylon / PP Option",
+      yarnSystem: "Tufted Cut Pile / Multi-Level Loop Option",
+      backing: "PVC Cushion / Bitumen / PE Option",
+      pileWeight: "500-780 g/sqm",
+      totalThickness: "5.5-7.0mm",
+      soundInsulation: "Acoustic Comfort Option",
+      antistatic: "Low Static Office Use"
+    },
+    features: ["Hotel Carpet Floor", "Office Carpet", "Nylon Carpet Tiles", "Commercial Carpet Tiles"]
+  },
+  {
     id: "ecocore-pe-backing-carpet-tiles",
     name: "Vishomecarpet EcoCore PVC-Free PE Backing Carpet Tiles",
     category: "carpet-tiles",
