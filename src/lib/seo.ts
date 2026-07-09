@@ -29,21 +29,28 @@ function productImages(product: Product) {
 }
 
 export function productJsonLd(product: Product) {
+  const productUrl = absoluteUrl(productPath(product.id));
+  const priceValidUntil = new Date();
+  priceValidUntil.setFullYear(priceValidUntil.getFullYear() + 1);
+
   const offer = product.fobPrice
     ? {
         "@type": "AggregateOffer",
-        url: absoluteUrl(productPath(product.id)),
+        url: productUrl,
         availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
         priceCurrency: product.fobPrice.currency,
         lowPrice: product.fobPrice.lowPrice,
         highPrice: product.fobPrice.highPrice,
+        priceValidUntil: priceValidUntil.toISOString().slice(0, 10),
         offerCount: "1",
         seller: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
       }
     : {
         "@type": "Offer",
-        url: absoluteUrl(productPath(product.id)),
+        url: productUrl,
         availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
         priceCurrency: "USD",
         seller: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
       };
@@ -51,24 +58,32 @@ export function productJsonLd(product: Product) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
-    "@id": `${absoluteUrl(productPath(product.id))}#product`,
+    "@id": `${productUrl}#product`,
     name: product.name,
+    sku: product.id,
+    mpn: product.id,
     description: product.longDescription || product.description,
     image: productImages(product),
-    url: absoluteUrl(productPath(product.id)),
+    url: productUrl,
+    mainEntityOfPage: productUrl,
+    inLanguage: "en",
     brand: { "@type": "Brand", name: "Vishomecarpet" },
     manufacturer: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
     category: categoryName(product.category),
     material: product.spec.material,
     size: product.spec.size,
+    ...(product.spec.colors.length ? { color: product.spec.colors.map((color) => color.name).join(", ") } : {}),
     offers: offer,
     additionalProperty: [
       { "@type": "PropertyValue", name: "Minimum Order Quantity", value: product.moq },
       { "@type": "PropertyValue", name: "Lead Time", value: product.leadTime },
       { "@type": "PropertyValue", name: "Availability", value: "InStock" },
+      { "@type": "PropertyValue", name: "Product Category", value: categoryName(product.category) },
+      { "@type": "PropertyValue", name: "Target Buyer", value: "Contractors, distributors, hotels, offices, and commercial renovation projects" },
       ...(product.fobPrice
         ? [{ "@type": "PropertyValue", name: "FOB Price Range", value: product.fobPrice.display }]
         : []),
+      ...product.spec.colors.map((color) => ({ "@type": "PropertyValue", name: "Color Option", value: color.name })),
       ...Object.entries(product.technicalSpecs)
         .filter(([, value]) => Boolean(value))
         .map(([name, value]) => ({ "@type": "PropertyValue", name, value })),
@@ -127,10 +142,13 @@ export function productItemListJsonLd({
           offers: product.fobPrice
             ? {
                 "@type": "AggregateOffer",
+                url: absoluteUrl(productPath(product.id)),
                 priceCurrency: product.fobPrice.currency,
                 lowPrice: product.fobPrice.lowPrice,
                 highPrice: product.fobPrice.highPrice,
                 availability: "https://schema.org/InStock",
+                itemCondition: "https://schema.org/NewCondition",
+                seller: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
               }
             : undefined,
         },

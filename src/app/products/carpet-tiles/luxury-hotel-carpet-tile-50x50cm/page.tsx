@@ -81,6 +81,29 @@ const priceTiers = [
   { price: "US$1.40", quantity: ">=8,000 pieces" },
 ] as const;
 
+const procurementFaqs = [
+  {
+    question: "What are 50x50cm carpet tiles used for?",
+    answer:
+      "Vishomecarpet 50x50cm carpet tiles are used for hotel carpet floors, office carpet projects, corridors, lobbies, meeting rooms, and commercial renovation programs where modular replacement and project-scale supply are important.",
+  },
+  {
+    question: "How should buyers compare carpet tile price per piece and per square meter?",
+    answer:
+      "One 50x50cm carpet tile covers 0.25 square meters, so four pieces equal one square meter. The displayed US$1.40-2.20 price is a per-piece reference; final project quotes depend on quantity, material, backing, color, packaging, and shipping terms.",
+  },
+  {
+    question: "Can Vishomecarpet supply nylon carpet tiles and PP carpet tiles?",
+    answer:
+      "Yes. Vishomecarpet can supply nylon or PP carpet tile options with project-based color, backing, packaging, and sample support for contractors, distributors, hotels, offices, and commercial buyers.",
+  },
+  {
+    question: "Can I request samples before bulk order?",
+    answer:
+      "Yes. Sample support is available. Send project area, country, product type, target delivery date, and sample requirements to receive a factory quote package with price, sample options, MOQ, lead time, and technical data sheet.",
+  },
+] as const;
+
 const seoKeywords = [
   "hotel carpet floor",
   "hotel carpet",
@@ -132,32 +155,11 @@ export default function LuxuryHotelCarpetTileProductPage() {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What projects are these 50x50cm carpet tiles suitable for?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "They are suitable for hotel carpet floors, office carpet projects, corridors, lobbies, meeting rooms, and commercial renovation programs.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can Vishomecarpet supply nylon carpet tiles and PP carpet tiles?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Vishomecarpet can supply nylon or PP carpet tile options with project-based color, backing, packaging, and sample support.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can I request samples before bulk order?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Sample support is available. Send project area, country, product type, target delivery date, and sample requirements for a factory quote package.",
-        },
-      },
-    ],
+    mainEntity: procurementFaqs.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
   };
 
   return (
@@ -302,6 +304,19 @@ export default function LuxuryHotelCarpetTileProductPage() {
 
       <section className="section-padding border-y border-border bg-surface">
         <div className="container-fox">
+          <div className="mb-12 text-center">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-accent">Procurement Answers</p>
+            <h2 className="text-3xl font-black uppercase text-primary md:text-5xl">50x50 Carpet Tile Buying Guide</h2>
+          </div>
+          <div className="mb-16 grid gap-5 md:grid-cols-2">
+            {procurementFaqs.map((item) => (
+              <article key={item.question} className="border border-border bg-white p-6 shadow-sm">
+                <h3 className="mb-3 text-base font-black uppercase leading-snug text-primary">{item.question}</h3>
+                <p className="text-sm leading-relaxed text-muted">{item.answer}</p>
+              </article>
+            ))}
+          </div>
+
           <h2 className="mb-8 text-center text-2xl font-bold uppercase tracking-[0.08em] text-primary md:mb-12 md:text-3xl md:tracking-widest">
             Technical Specifications
           </h2>

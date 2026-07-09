@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-data";
+import { caseStudies, productCategories, products } from "@/lib/data";
+import { productPath } from "@/lib/seo";
 
 const BASE = "https://www.vishomecarpet.com";
 
@@ -7,34 +9,11 @@ const staticRoutes: { url: string; priority: number; changeFrequency: MetadataRo
   { url: "/", priority: 1.0, changeFrequency: "weekly" },
   { url: "/products", priority: 0.9, changeFrequency: "monthly" },
   { url: "/commercial-carpet-manufacturer", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/products/carpet-tiles", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/products/wall-to-wall", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/products/public-area", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/products/carpet-tiles/ecocore-pe-backing-carpet-tiles", priority: 0.85, changeFrequency: "monthly" },
-  { url: "/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/products/carpet-tiles/nylon-office-carpet-tile", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/products/public-area/natural-sisal-carpet", priority: 0.85, changeFrequency: "monthly" },
-  { url: "/products/public-area/gold-mining-carpet-mat", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/products/carpet-tiles/commercial-nylon-tiles", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/products/wall-to-wall/3d-printed-hotel-carpet", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/products/wall-to-wall/luxury-hotel-broadloom", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/products/public-area/public-area-heavy-duty", priority: 0.8, changeFrequency: "monthly" },
   { url: "/commercial-carpet-tiles", priority: 0.8, changeFrequency: "monthly" },
   { url: "/hotel-carpet", priority: 0.8, changeFrequency: "monthly" },
   { url: "/carpet-tiles-50x50", priority: 0.8, changeFrequency: "monthly" },
   { url: "/natural-sisal-carpet", priority: 0.8, changeFrequency: "monthly" },
   { url: "/projects", priority: 0.85, changeFrequency: "monthly" },
-  { url: "/projects/case-1", priority: 0.75, changeFrequency: "yearly" },
-  { url: "/projects/case-2", priority: 0.75, changeFrequency: "yearly" },
-  { url: "/projects/case-3", priority: 0.75, changeFrequency: "yearly" },
-  { url: "/projects/case-4", priority: 0.75, changeFrequency: "yearly" },
-  { url: "/projects/case-5", priority: 0.75, changeFrequency: "yearly" },
-  { url: "/projects/case-6", priority: 0.75, changeFrequency: "yearly" },
-  { url: "/projects/case-7", priority: 0.75, changeFrequency: "yearly" },
-  { url: "/projects/case-8", priority: 0.75, changeFrequency: "yearly" },
-  { url: "/projects/case-9", priority: 0.75, changeFrequency: "yearly" },
-  { url: "/projects/case-10", priority: 0.75, changeFrequency: "yearly" },
   { url: "/blog", priority: 0.85, changeFrequency: "weekly" },
   { url: "/about-us", priority: 0.8, changeFrequency: "monthly" },
   { url: "/factory", priority: 0.8, changeFrequency: "monthly" },
@@ -55,6 +34,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority,
   }));
 
+  const categoryEntries: MetadataRoute.Sitemap = productCategories.map((category) => ({
+    url: `${BASE}/products/${category.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.9,
+  }));
+
+  const productEntries: MetadataRoute.Sitemap = products.map((product) => ({
+    url: `${BASE}${productPath(product.id)}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: product.category === "carpet-tiles" ? 0.9 : 0.85,
+  }));
+
+  const projectEntries: MetadataRoute.Sitemap = caseStudies.map((project) => ({
+    url: `${BASE}/projects/${project.id}`,
+    lastModified: now,
+    changeFrequency: "yearly",
+    priority: 0.75,
+  }));
+
   const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${BASE}/blog/${post.slug}`,
     lastModified: new Date(post.dateModified ?? post.date),
@@ -62,5 +62,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.72,
   }));
 
-  return [...staticEntries, ...blogEntries];
+  return [...staticEntries, ...categoryEntries, ...productEntries, ...projectEntries, ...blogEntries];
 }

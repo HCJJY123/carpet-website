@@ -11,6 +11,7 @@ export const metadata = {
 
 export default function CommercialCarpetTilesPage() {
   const tileProducts = products.filter(p => p.category === "carpet-tiles");
+  const featuredTile = products.find((p) => p.id === "luxury-hotel-carpet-tile-50x50cm");
 
   return (
     <div className="bg-white">
@@ -88,6 +89,45 @@ export default function CommercialCarpetTilesPage() {
           </div>
         </div>
       </section>
+
+      {featuredTile && (
+        <section className="border-y border-border bg-white">
+          <div className="container-fox py-10 md:py-14">
+            <Link
+              href={productPath(featuredTile.id)}
+              className="group grid gap-8 overflow-hidden rounded-2xl border border-border bg-surface p-5 transition-all hover:border-accent hover:bg-white hover:shadow-2xl md:grid-cols-[0.9fr_1.1fr] md:p-8 lg:gap-12"
+            >
+              <div className="aspect-[4/3] overflow-hidden rounded-xl border border-border bg-white">
+                <ProductImage
+                  src={featuredTile.image}
+                  alt={featuredTile.imageAlt || featuredTile.name}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-col justify-center">
+                <p className="mb-3 text-[10px] font-black uppercase tracking-[0.22em] text-accent">
+                  Recommended 50x50 Commercial Carpet Tile
+                </p>
+                <h2 className="mb-4 text-2xl font-black uppercase leading-tight text-primary md:text-4xl">
+                  50x50 Carpet Tiles for Hotel Carpet Floor and Office Projects
+                </h2>
+                <p className="mb-6 text-sm leading-relaxed text-muted md:text-base">
+                  View Vishomecarpet 50x50 commercial carpet tiles with volume pricing, MOQ, sample support,
+                  technical data, and application images for hotel corridors, guest rooms, meeting rooms, and office carpet projects.
+                </p>
+                <div className="grid gap-3 text-[10px] font-black uppercase tracking-[0.14em] text-primary sm:grid-cols-3">
+                  <span className="border border-border bg-white px-4 py-3">US$1.40-2.20 / Piece</span>
+                  <span className="border border-border bg-white px-4 py-3">MOQ 1 Piece</span>
+                  <span className="border border-border bg-white px-4 py-3">Sample Available</span>
+                </div>
+                <span className="mt-6 text-xs font-black uppercase tracking-[0.18em] text-accent">
+                  View Product Details →
+                </span>
+              </div>
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* Product Grid */}
       <section className="section-padding">

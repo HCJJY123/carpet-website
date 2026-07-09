@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { Metadata } from "next";
 import Link from "next/link";
-import { productCategories as categories, caseStudies, certifications } from "@/lib/data";
+import { productCategories as categories, caseStudies, certifications, products } from "@/lib/data";
 import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
+import { productPath } from "@/lib/seo";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://www.vishomecarpet.com" },
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header);
+  const featuredTile = products.find((product) => product.id === "luxury-hotel-carpet-tile-50x50cm");
 
   return (
     <div className="bg-white">
@@ -139,6 +141,31 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {featuredTile && (
+        <section className="border-y border-border bg-surface">
+          <div className="container-fox py-10">
+            <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div>
+                <p className="mb-2 text-[10px] font-black uppercase tracking-[0.24em] text-accent">Featured Commercial Carpet Tile</p>
+                <h2 className="mb-3 text-2xl font-black uppercase leading-tight text-primary md:text-3xl">
+                  50x50 Carpet Tiles for Hotel Carpet Floor and Office Projects
+                </h2>
+                <p className="max-w-3xl text-sm leading-relaxed text-muted">
+                  Vishomecarpet 50x50 commercial carpet tiles support factory-direct project pricing, sample requests,
+                  and technical data for contractors, distributors, hotels, offices, and commercial renovation buyers.
+                </p>
+              </div>
+              <Link
+                href={productPath(featuredTile.id)}
+                className="inline-flex min-h-12 items-center justify-center bg-primary px-6 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition-all hover:bg-black"
+              >
+                View 50x50 Carpet Tiles
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Vishome Global Strength - B2B Data Matrix */}
       <section className="section-padding bg-white">
