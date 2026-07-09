@@ -446,9 +446,6 @@ export const caseStudies: CaseStudy[] = [
           "The design team wanted a carpet program that felt unmistakably luxury, but still practical for heavy luggage traffic, frequent housekeeping cycles, and round-the-clock guest movement in a warm-climate hospitality environment.",
           "Our role was to translate that brief into a production-ready Axminster program with clear pattern zoning, controlled repeat logic, and an installation sequence that could be executed in narrow overnight windows."
         ],
-        image: "/images/case-series/case-1/Case_1_Lobby_Grand_Reveal.jpg",
-        imageAlt: "Completed luxury hotel lobby carpet installation in Dubai",
-        imageCaption: undefined
       },
       {
         title: "Custom Design Development",
@@ -553,9 +550,6 @@ export const caseStudies: CaseStudy[] = [
           "Instead of treating carpet as background finish, the project team chose to make the floor itself part of the navigation system. Each department received its own primary color and supporting motif so customers could move through the store by reading the floor visually.",
           "This transformed the flooring package from a maintenance item into an experience and conversion tool. It also gave the retail brand a more ownable physical identity than conventional stock finishes would have provided."
         ],
-        image: "/images/case-series/case-2/Case_2_Store_Entrance.jpg",
-        imageAlt: "Department store entrance with color-coded carpet navigation system",
-        imageCaption: undefined
       },
       {
         title: "Department-Level Design Language",
@@ -663,9 +657,6 @@ export const caseStudies: CaseStudy[] = [
           "Rather than relying on flat decorative color, the project used a highly layered multicolor pattern system to create energy, depth, and visual continuity across the gaming floor. The design language was intended to feel premium without distracting from the tables, machines, and customer pathing.",
           "In casino environments, flooring is not passive decoration. It contributes directly to mood, dwell, and how polished the venue feels during continuous operation."
         ],
-        image: "/images/case-series/case-3/Case_3_Casino_Hall.jpg",
-        imageAlt: "Large casino gaming floor with custom patterned carpet",
-        imageCaption: undefined
       },
       {
         title: "Pattern Complexity as Performance Strategy",
@@ -763,9 +754,6 @@ export const caseStudies: CaseStudy[] = [
           "The selected carpet strategy focused on carefully controlled materials, antimicrobial treatment, and a visual design approach that maintained a clean and professional healthcare appearance.",
           "In this context, carpet was not being used to create luxury. It was being used to improve user comfort while respecting the operational seriousness of the medical setting."
         ],
-        image: "/images/case-series/case-4/Case_4_Hospital_Ward.jpg",
-        imageAlt: "Hospital ward with healthcare carpet installation",
-        imageCaption: undefined
       },
       {
         title: "Infection-Control Design Thinking",
