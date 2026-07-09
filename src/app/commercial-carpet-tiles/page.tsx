@@ -15,14 +15,20 @@ export default function CommercialCarpetTilesPage() {
   return (
     <div className="bg-white">
       {/* Targeted Hero */}
-      <section className="bg-primary-light py-24 border-b border-white/5">
-        <div className="container-fox">
+      <section className="relative overflow-hidden border-b border-white/5">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/commercial-carpet-tiles-office-hero.png')" }}
+        />
+        <div className="absolute inset-0 bg-[#15385d]/78" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#15385d]/90 via-[#15385d]/72 to-[#15385d]/38" />
+        <div className="container-fox relative py-24 md:py-32">
           <div className="max-w-4xl">
-            <span className="text-accent font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Engineered for Performance</span>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
+            <span className="mb-4 block text-sm font-bold uppercase tracking-[0.2em] text-accent">Engineered for Performance</span>
+            <h1 className="mb-8 text-4xl font-bold leading-tight text-white md:text-6xl">
               High-Performance Commercial Carpet Tiles
             </h1>
-            <p className="text-xl text-gray-300 mb-12 opacity-90">
+            <p className="mb-12 max-w-3xl text-xl text-gray-100/90">
               The preferred choice for modern office fit-outs and high-traffic commercial interiors. Fire-rated (ASTM E648) and low-VOC for maximum safety and compliance.
             </p>
             <div className="flex flex-wrap gap-6">
