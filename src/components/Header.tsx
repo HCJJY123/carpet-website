@@ -5,20 +5,85 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 
-const navLinks = [
+type NavChild = {
+  href: string;
+  label: string;
+};
+
+type NavItem = {
+  href: string;
+  label: string;
+  children?: NavChild[];
+};
+
+const navLinks: NavItem[] = [
   { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
-  { href: "/projects", label: "Projects" },
-  { href: "/about-us", label: "About Us" },
-  { href: "/blog", label: "Blog" },
+  {
+    href: "/products",
+    label: "Products",
+    children: [
+      { href: "/products/carpet-tiles", label: "Commercial Carpet Tiles" },
+      { href: "/commercial-carpet-tiles", label: "Office Carpet Tile Projects" },
+      { href: "/products/carpet-tiles/luxury-hotel-carpet-tile-50x50cm", label: "50x50 Carpet Tiles" },
+      { href: "/products/carpet-tiles/nylon-office-carpet-tile", label: "Nylon Office Carpet Tiles" },
+      { href: "/products/carpet-tiles/ecocore-pe-backing-carpet-tiles", label: "EcoCore PE Backing Tiles" },
+      { href: "/products/wall-to-wall", label: "Wall-to-Wall Carpets" },
+      { href: "/products/wall-to-wall/3d-printed-hotel-carpet", label: "Hotel Broadloom Carpet" },
+      { href: "/products/public-area", label: "Public Area Carpets" },
+      { href: "/products/public-area/natural-sisal-carpet", label: "Natural Sisal Carpet" },
+    ],
+  },
+  {
+    href: "/projects",
+    label: "Projects",
+    children: [
+      { href: "/projects", label: "Project References" },
+      { href: "/solutions/hotel-hospitality", label: "Hotel Flooring Solutions" },
+      { href: "/carpet-tiles-50x50", label: "50x50 Carpet Tile Guide" },
+      { href: "/hotel-carpet", label: "Hotel Carpet Applications" },
+      { href: "/natural-sisal-carpet", label: "Natural Sisal Applications" },
+    ],
+  },
+  {
+    href: "/about-us",
+    label: "About Us",
+    children: [
+      { href: "/about-us", label: "About Vishomecarpet" },
+      { href: "/factory", label: "Factory Capability" },
+      { href: "/commercial-carpet-manufacturer", label: "Carpet Manufacturer" },
+      { href: "/request-sample-box", label: "Request Sample Box" },
+      { href: "/contact", label: "Contact Sales Team" },
+    ],
+  },
+  {
+    href: "/blog",
+    label: "Blog",
+    children: [
+      { href: "/blog", label: "Blog Center" },
+      { href: "/blog/commercial-space-carpet-tiles-maintenance-cost-guide", label: "Carpet Tile Cost Guide" },
+      { href: "/blog/axminster-vs-wilton-vs-tufted-hospitality-guide", label: "Hospitality Carpet Guide" },
+      { href: "/blog/carpet-tile-specifications-high-traffic-durability-guide", label: "High-Traffic Spec Guide" },
+      { href: "/blog/carpet-printing-technology-design-to-installation-guide", label: "Printed Carpet Guide" },
+    ],
+  },
   { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "CONTACT US" },
+  {
+    href: "/contact",
+    label: "CONTACT US",
+    children: [
+      { href: "/contact", label: "Get Factory Quote" },
+      { href: "/request-sample-box", label: "Request Sample Box" },
+      { href: "/faq", label: "MOQ / Lead Time / Samples" },
+    ],
+  },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header);
+  const isActivePath = (href: string) => (href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`));
+  const isActiveNav = (link: NavItem) => isActivePath(link.href) || Boolean(link.children?.some((child) => isActivePath(child.href)));
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border shadow-sm">
@@ -35,22 +100,59 @@ export default function Header() {
           </Link>
 
           <nav className="hidden -translate-x-16 items-center justify-center xl:flex 2xl:-translate-x-14" aria-label="Primary navigation">
-            <div className="flex items-center gap-2 rounded-full border border-border/80 bg-white/85 px-2 py-1.5 shadow-[0_10px_30px_rgba(16,42,67,0.06)] backdrop-blur">
+            <div className="flex items-center gap-1.5 rounded-full border border-border/80 bg-white/85 px-2 py-1.5 shadow-[0_10px_30px_rgba(16,42,67,0.06)] backdrop-blur">
               {navLinks.map((link) => {
-                const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+                const active = isActiveNav(link);
+                const hasChildren = Boolean(link.children?.length);
 
                 return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`whitespace-nowrap rounded-full px-4 py-2 text-[10.5px] font-bold uppercase tracking-[0.15em] transition-all ${
-                      active
-                        ? "bg-[#102A43] text-white shadow-sm"
-                        : "text-[#102A43]/58 hover:bg-surface hover:text-[#102A43]"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
+                  <div key={link.href} className="group relative">
+                    <Link
+                      href={link.href}
+                      aria-haspopup={hasChildren ? "menu" : undefined}
+                      className={`flex items-center whitespace-nowrap rounded-full px-3.5 py-2 text-[10.5px] font-bold uppercase tracking-[0.15em] transition-all ${
+                        active
+                          ? "bg-[#102A43] text-white shadow-sm"
+                          : "text-[#102A43]/58 hover:bg-surface hover:text-[#102A43]"
+                      }`}
+                    >
+                      <span>{link.label}</span>
+                      {hasChildren ? (
+                        <span
+                          className={`ml-2 h-1.5 w-1.5 rotate-45 border-b border-r transition-transform group-hover:rotate-[225deg] ${
+                            active ? "border-white/80" : "border-[#102A43]/45"
+                          }`}
+                          aria-hidden="true"
+                        />
+                      ) : null}
+                    </Link>
+
+                    {hasChildren ? (
+                      <div
+                        className="invisible absolute left-1/2 top-full z-[70] mt-4 w-[310px] -translate-x-1/2 translate-y-1 bg-black py-3 opacity-0 shadow-[0_22px_55px_rgba(0,0,0,0.28)] transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100"
+                        role="menu"
+                      >
+                        <span className="absolute -top-4 left-0 h-4 w-full" aria-hidden="true" />
+                        <span className="absolute -top-2 left-1/2 h-4 w-4 -translate-x-1/2 rotate-45 bg-black" aria-hidden="true" />
+                        {link.children?.map((child) => {
+                          const childActive = isActivePath(child.href);
+
+                          return (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className={`block px-9 py-3.5 text-[14px] font-medium leading-tight transition-colors ${
+                                childActive ? "text-white" : "text-white/78 hover:bg-white/10 hover:text-white"
+                              }`}
+                              role="menuitem"
+                            >
+                              {child.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    ) : null}
+                  </div>
                 );
               })}
             </div>
@@ -100,19 +202,37 @@ export default function Header() {
 
       <div
         id="mobile-navigation"
-        className={`xl:hidden overflow-hidden border-t border-border bg-white transition-[max-height,opacity] duration-300 ${menuOpen ? "max-h-[520px] opacity-100" : "max-h-0 opacity-0"}`}
+        className={`xl:hidden overflow-hidden border-t border-border bg-white transition-[max-height,opacity] duration-300 ${menuOpen ? "max-h-[1100px] opacity-100" : "max-h-0 opacity-0"}`}
       >
         <nav className="container-fox py-4">
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid gap-2">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="rounded-lg border border-border bg-surface px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.16em] text-[#102A43]"
-              >
-                {link.label}
-              </Link>
+              <div key={link.href} className="overflow-hidden rounded-lg border border-border bg-surface">
+                <Link
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center justify-between px-4 py-3 text-[11px] font-black uppercase tracking-[0.16em] text-[#102A43]"
+                >
+                  {link.label}
+                  {link.children?.length ? (
+                    <span className="h-1.5 w-1.5 rotate-45 border-b border-r border-[#102A43]/45" aria-hidden="true" />
+                  ) : null}
+                </Link>
+                {link.children?.length ? (
+                  <div className="grid border-t border-border/70 bg-white">
+                    {link.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        onClick={() => setMenuOpen(false)}
+                        className="border-b border-border/60 px-5 py-2.5 text-[12px] font-semibold text-[#102A43]/70 last:border-b-0"
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
             ))}
           </div>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
