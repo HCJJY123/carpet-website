@@ -1,23 +1,20 @@
-import { products, faqItems } from "@/lib/data";
+import { products, faqSections, brandInfo } from "@/lib/data";
+import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 
 export default function JsonLd() {
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "CarpetPro",
-    "url": "https://carpet-website.vercel.app",
-    "logo": "https://carpet-website.vercel.app/logo.png",
+    "name": brandInfo.name,
+    "url": brandInfo.url,
+    "logo": absoluteUrl("/logo.svg"),
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+86-15222885400",
-      "contactType": "customer service",
+      "telephone": brandInfo.phone,
+      "contactType": "sales",
       "areaServed": "Worldwide",
       "availableLanguage": ["English", "Chinese"]
-    },
-    "sameAs": [
-      "https://twitter.com/carpetpro",
-      "https://www.linkedin.com/company/carpetpro"
-    ]
+    }
   };
 
   const productData = products.map((product) => ({
@@ -25,16 +22,15 @@ export default function JsonLd() {
     "@type": "Product",
     "name": product.name,
     "description": product.description,
-    "image": product.image.startsWith("http") ? product.image : `https://carpet-website.vercel.app${product.image}`,
+    "image": absoluteUrl(product.image),
     "brand": {
       "@type": "Brand",
-      "name": "CarpetPro"
+      "name": "Vishomecarpet"
     },
     "offers": {
       "@type": "AggregateOffer",
-      "offerCount": "1",
-      "lowPrice": "5.00",
-      "highPrice": "50.00",
+      "lowPrice": "3.50",
+      "highPrice": "28.00",
       "priceCurrency": "USD"
     }
   }));
@@ -42,33 +38,25 @@ export default function JsonLd() {
   const faqData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqItems.map((item) => ({
-      "@type": "Question",
-      "name": item.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.a
-      }
-    }))
+    "mainEntity": faqSections.flatMap(section => 
+      section.questions.map(q => ({
+        "@type": "Question",
+        "name": q.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": q.a
+        }
+      }))
+    )
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(organizationData) }} />
       {productData.map((data, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-        />
+        <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(data) }} />
       ))}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqData) }} />
     </>
   );
 }
