@@ -1,89 +1,69 @@
 import Link from "next/link";
-import { productCategories as categories, caseStudies, blogPosts, certifications, solutions, testimonials, processSteps } from "@/lib/data";
+import { productCategories as categories, caseStudies, blogPosts, certifications, solutions, processSteps } from "@/lib/data";
 import ProductImage from "@/components/ProductImage";
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-primary overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary opacity-95" />
-        <div className="absolute top-20 right-[-20%] w-[60%] h-[80%] rounded-full bg-accent/5 blur-3xl" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-          <div className="max-w-2xl">
-            <span className="inline-block text-accent text-sm font-semibold uppercase tracking-widest mb-4">
-              Since 2005 · Quality Flooring
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Premium Carpet Tiles &amp; Broadloom for Commercial Spaces
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
-              Professional manufacturer of commercial carpet tiles and hotel broadloom carpets.
-              Quality flooring solutions trusted by Hilton, Marriott, and Fortune 500 companies worldwide.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/products"
-                className="bg-accent text-white font-medium px-8 py-3.5 rounded-lg hover:bg-accent-light transition-colors text-sm"
-              >
-                Explore Products
-              </Link>
-              <Link
-                href="/contact"
-                className="border border-white/30 text-white font-medium px-8 py-3.5 rounded-lg hover:bg-white/10 transition-colors text-sm"
-              >
-                Get a Quote
-              </Link>
-            </div>
+      {/* Hero Section - Foxflor Style */}
+      <section className="bg-primary-light py-24 md:py-32">
+        <div className="container-fox text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight max-w-4xl mx-auto">
+            15+ Years Experience in Commercial Carpet Solutions
+          </h1>
+          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto opacity-90">
+            From design and production to global delivery. High-performance carpet tiles and hotel broadloom trusted by 500+ global brands.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link href="/products" className="btn-fox-orange">
+              Get A Free Quotation
+            </Link>
+            <Link href="/cases" className="btn-fox-outline">
+              View Our Projects
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Certification Bar */}
-      <section className="bg-white border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+      {/* Trust Badges - Foxflor Minimalist */}
+      <section className="bg-white border-b border-border py-8">
+        <div className="container-fox">
+          <div className="flex flex-wrap items-center justify-between gap-8 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
             {certifications.map((cert) => (
               <div key={cert.name} className="text-center">
-                <div className="text-sm font-semibold text-primary">{cert.name}</div>
-                <div className="text-xs text-muted">{cert.description}</div>
+                <span className="text-sm font-bold text-primary">{cert.name}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Product Categories */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Product Lines</h2>
-            <p className="text-muted max-w-2xl mx-auto">
-              Two comprehensive product ranges covering every commercial flooring need
-            </p>
+      {/* Main Categories - Foxflor Grid */}
+      <section className="section-padding bg-surface">
+        <div className="container-fox">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 uppercase">Our Collections</h2>
+            <div className="w-20 h-1.5 bg-accent mx-auto"></div>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-10">
             {categories.map((cat) => (
               <Link
                 key={cat.id}
                 href={`/products/${cat.slug}`}
-                className="group relative rounded-2xl overflow-hidden bg-gray-50 border border-border hover:border-accent/50 transition-all"
+                className="group relative block bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
               >
-                <div className="p-8 md:p-10">
-                  <span className="text-xs font-semibold text-accent uppercase tracking-wider">
-                    {cat.subtitle}
-                  </span>
-                  <h3 className="text-2xl font-bold text-primary mt-1 mb-3 group-hover:text-accent transition-colors">
-                    {cat.name}
-                  </h3>
-                  <p className="text-muted text-sm leading-relaxed mb-6">
-                    {cat.description}
-                  </p>
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-accent">
-                    View Products
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                <div className="aspect-[16/9] overflow-hidden">
+                  <ProductImage
+                    src={cat.image}
+                    alt={cat.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
+                <div className="p-8 border-t-4 border-transparent group-hover:border-accent transition-colors">
+                  <h3 className="text-2xl font-bold text-primary mb-3">{cat.name}</h3>
+                  <p className="text-muted text-sm mb-6 leading-relaxed">{cat.description}</p>
+                  <span className="text-accent font-bold text-sm inline-flex items-center gap-2">
+                    EXPLORE MORE <span className="text-xl">→</span>
                   </span>
                 </div>
               </Link>
@@ -92,43 +72,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Why Choose CarpetPro</h2>
-            <p className="text-muted max-w-2xl mx-auto">
-              We deliver more than just carpet - we deliver peace of mind
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      {/* Service Advantages - Foxflor 4-Column Grid */}
+      <section className="section-padding bg-white">
+        <div className="container-fox">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: "Factory Direct",
-                desc: "Own manufacturing facility with 15 years of export experience. Competitive pricing without middlemen.",
-                icon: "🏭",
-              },
-              {
-                title: "Quality Certified",
-                desc: "ISO 9001, CE, CRI Green Label Plus certified. Rigorous quality control at every production stage.",
-                icon: "✓",
-              },
-              {
-                title: "Custom Solutions",
-                desc: "Custom colors, patterns, and sizes available. Pantone matching and bespoke jacquard weaving.",
+                title: "CREATIVE DESIGN",
+                desc: "Our professional design team focus on being highly innovative to meet your unique needs.",
                 icon: "🎨",
               },
               {
-                title: "Global Shipping",
-                desc: "Reliable logistics network shipping to 40+ countries. FOB Shanghai, CIF, DDP options available.",
-                icon: "🌍",
+                title: "CUSTOM PRODUCTION",
+                desc: "State-of-the-art manufacturing facility in Tianjin Vishome factory with 15+ years experience.",
+                icon: "🏭",
+              },
+              {
+                title: "FAST DELIVERY",
+                desc: "Optimized logistics and stock management ensuring your project stays on schedule.",
+                icon: "🚚",
+              },
+              {
+                title: "QUALITY CONTROL",
+                desc: "Rigorous testing for fire rating, stain resistance, and durability at every stage.",
+                icon: "🛡️",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-6 border border-border hover:border-accent/30 hover:shadow-lg transition-all">
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-xl mb-4">
-                  {item.icon}
-                </div>
-                <h3 className="font-semibold text-primary mb-2">{item.title}</h3>
+              <div key={item.title} className="p-8 border border-border rounded-lg hover:border-success/30 hover:shadow-md transition-all">
+                <div className="text-4xl mb-6">{item.icon}</div>
+                <h3 className="font-bold text-primary mb-3 tracking-wide">{item.title}</h3>
                 <p className="text-sm text-muted leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -136,200 +108,93 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Solutions */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Carpet Solutions Tailored to Your Project</h2>
-            <p className="text-muted max-w-2xl mx-auto">
-              With more than 15 years of experience in commercial carpet production and export, we have helped
-              clients in 40+ countries with customized flooring solutions for diverse applications.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {solutions.map((sol) => (
-              <div key={sol.name} className="group bg-surface rounded-xl p-5 border border-border hover:border-accent/50 hover:shadow-md transition-all">
-                <span className="text-2xl block mb-3">{sol.icon}</span>
-                <h3 className="font-semibold text-primary mb-1.5 text-sm">{sol.name}</h3>
-                <p className="text-xs text-muted leading-relaxed">{sol.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Steps */}
-      <section className="py-16 md:py-24 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">8 Steps to Complete Your Project</h2>
-            <p className="text-muted max-w-2xl mx-auto">
-              From initial consultation to final delivery, our streamlined process ensures quality at every stage.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {processSteps.map((step) => (
-              <div key={step.step} className="bg-white rounded-xl p-6 border border-border hover:shadow-lg transition-all relative">
-                <span className="text-3xl font-bold text-accent/20 absolute top-3 right-4">{step.step}</span>
-                <h3 className="font-semibold text-primary mb-2 relative">{step.title}</h3>
-                <p className="text-sm text-muted leading-relaxed relative">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Projects */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-12">
+      {/* Featured Projects - Foxflor Case Grid */}
+      <section className="section-padding bg-primary">
+        <div className="container-fox">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Featured Projects</h2>
-              <p className="text-muted max-w-xl">
-                Real projects delivering quality flooring solutions worldwide
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 uppercase">Global Projects</h2>
+              <p className="text-gray-400 max-w-xl">
+                Supplying premium flooring solutions for luxury hotels, corporate offices, and commercial spaces worldwide.
               </p>
             </div>
-            <Link
-              href="/cases"
-              className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-light transition-colors"
-            >
-              View All Projects
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+            <Link href="/cases" className="btn-fox-outline whitespace-nowrap">
+              All Projects
             </Link>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {caseStudies.slice(0, 4).map((cs) => (
-              <div key={cs.id} className="group bg-surface rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all">
-                <ProductImage src={cs.image} alt={cs.client} className="h-44" />
-                <div className="p-5">
-                  <span className="text-xs text-accent font-semibold uppercase">{cs.category === "carpet-tiles" ? "Carpet Tiles" : "Broadloom"}</span>
-                  <h3 className="font-semibold text-primary mt-1 mb-2 group-hover:text-accent transition-colors">{cs.title}</h3>
-                  <p className="text-sm text-muted line-clamp-2">{cs.description}</p>
+            {caseStudies.map((cs) => (
+              <div key={cs.id} className="group bg-primary-light border border-white/5 overflow-hidden">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <ProductImage
+                    src={cs.image}
+                    alt={cs.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="text-xs text-accent font-bold uppercase tracking-widest block mb-2">
+                    {cs.category === "carpet-tiles" ? "Carpet Tiles" : "Broadloom"}
+                  </span>
+                  <h3 className="font-bold text-white text-lg group-hover:text-accent transition-colors">{cs.title}</h3>
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-8 text-center md:hidden">
-            <Link
-              href="/cases"
-              className="inline-flex items-center gap-2 text-sm font-medium text-accent"
-            >
-              View All Projects
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Latest Blog */}
-      <section className="py-16 md:py-24 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Latest Insights</h2>
-              <p className="text-muted max-w-xl">
-                Industry knowledge and product guides from our flooring experts
-              </p>
+      {/* Why Choose Us / Production - Foxflor Style */}
+      <section className="section-padding bg-white overflow-hidden">
+        <div className="container-fox">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="lg:w-1/2">
+              <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 uppercase leading-tight">
+                One-stop carpet solution provider from China
+              </h2>
+              <div className="space-y-6">
+                {[
+                  "Factory direct pricing for global B2B supply",
+                  "Professional OEM/ODM customization services",
+                  "CRI Green Label Plus & ISO 9001 certified",
+                  "Global logistics support to 40+ countries",
+                ].map((point) => (
+                  <div key={point} className="flex items-start gap-4">
+                    <span className="text-success text-xl font-bold">✓</span>
+                    <p className="text-muted font-medium">{point}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-12">
+                <Link href="/about" className="btn-fox-orange">
+                  Learn More About Our Factory
+                </Link>
+              </div>
             </div>
-            <Link
-              href="/blog"
-              className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-light transition-colors"
-            >
-              Read All Articles
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.slice(0, 3).map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group bg-white rounded-xl overflow-hidden border border-border hover:shadow-lg transition-all"
-              >
-                <ProductImage src={post.image} alt={post.title} className="h-44" />
-                <div className="p-5">
-                  <div className="flex items-center gap-2 text-xs text-muted mb-2">
-                    <span>{post.date}</span>
-                    <span>·</span>
-                    <span>{post.category}</span>
-                  </div>
-                  <h3 className="font-semibold text-primary group-hover:text-accent transition-colors mb-2">{post.title}</h3>
-                  <p className="text-sm text-muted line-clamp-2">{post.excerpt}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="mt-8 text-center md:hidden">
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-sm font-medium text-accent"
-            >
-              Read All Articles
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+            <div className="lg:w-1/2 relative">
+              <div className="absolute -inset-4 bg-accent/10 -rotate-3 rounded-2xl"></div>
+              <ProductImage
+                src="/images/blog-office-carpet.jpg"
+                alt="Production Line"
+                className="relative rounded-2xl shadow-2xl z-10"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Happy Clients</h2>
-            <p className="text-muted max-w-xl mx-auto">
-              Check out the feedback from our contented clients who have experienced the CarpetPro advantage.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-surface rounded-xl p-6 border border-border relative">
-                <svg className="w-8 h-8 text-accent/20 absolute top-4 left-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <div className="relative z-10">
-                  <p className="text-sm text-muted leading-relaxed mb-4 italic">"{t.quote}"</p>
-                  <div>
-                    <div className="font-semibold text-primary text-sm">{t.name}</div>
-                    <div className="text-xs text-muted">{t.role}, {t.location}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 md:py-24 bg-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Start Your Project?
+      {/* Final CTA */}
+      <section className="py-20 bg-accent">
+        <div className="container-fox text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 uppercase tracking-wide">
+            Ready to Start Your Commercial Project?
           </h2>
-          <p className="text-gray-300 max-w-xl mx-auto mb-8">
-            Get in touch with our team for a free consultation and quote. We respond within 24 hours.
+          <p className="text-white/80 mb-12 max-w-2xl mx-auto text-lg">
+            Consult with our experts today and get a tailored flooring solution for your space.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contact"
-              className="bg-accent text-white font-medium px-8 py-3.5 rounded-lg hover:bg-accent-light transition-colors text-sm"
-            >
-              Contact Us Now
-            </Link>
-            <Link
-              href="/faq"
-              className="border border-white/30 text-white font-medium px-8 py-3.5 rounded-lg hover:bg-white/10 transition-colors text-sm"
-            >
-              View FAQ
-            </Link>
-          </div>
+          <Link href="/contact" className="bg-white text-accent font-bold px-12 py-4 rounded-md hover:bg-gray-100 transition-all uppercase tracking-widest shadow-lg">
+            Contact Us Now
+          </Link>
         </div>
       </section>
     </>

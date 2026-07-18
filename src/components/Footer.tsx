@@ -6,16 +6,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-white text-xs font-bold">C</span>
-              </span>
-              <span className="text-lg font-bold text-white tracking-tight">
-                Carpet<span className="text-accent">Pro</span>
-              </span>
+            <div className="mb-6">
+              <img 
+                src="/logo.svg" 
+                alt="Vishome Global Commercial Carpet Co., Ltd." 
+                className="h-12 lg:h-16 w-auto brightness-0 invert" 
+              />
             </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Professional manufacturer and supplier of commercial carpet tiles and hotel broadloom carpets. Quality flooring solutions since 2005.
+            <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
+              Vishome Global Commercial Carpet Co., Ltd. is a premier B2B manufacturer specializing in high-performance flooring solutions since 2005.
             </p>
           </div>
 
@@ -77,7 +76,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm text-gray-300">
               <li>Email: info@carpetpro.com</li>
               <li>Phone: +86 21 6888 1234</li>
-              <li>Address: 1238 Huaihai Rd, Shanghai, China</li>
+              <li>Address: Tianjin Inflatables Industrial Zone, China</li>
               <li className="pt-2">
                 <Link
                   href="/contact"
