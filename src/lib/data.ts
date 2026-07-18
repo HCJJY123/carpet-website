@@ -117,6 +117,27 @@ export const products: Product[] = [
     features: ["Unlimited Colors", "Fast Production"]
   },
   {
+    id: "3d-printed-luxury-banquet-carpet",
+    name: "Premium Custom 3D Printed Banquet Hall Carpet",
+    category: "wall-to-wall",
+    description: "High-definition custom 3D printed hotel broadloom carpet designed for luxury banquet halls, hotel corridors, and high-traffic hospitality venues.",
+    longDescription: "Vishomecarpet presents the pinnacle of modern flooring technology with our Premium 3D Printed series. Utilizing advanced high-speed inkjet printing systems, this hotel broadloom carpet offers unlimited design flexibility with photo-realistic pattern precision. Unlike traditional woven carpets, our 3D printing process allows for low MOQs while maintaining the high durability required for heavy-traffic commercial areas like grand banquet halls and hospitality corridors. Engineered with premium nylon or synthetic fibers, it provides exceptional stain resistance, acoustic comfort, and is fully fire-rated to international commercial standards.",
+    image: "/images/products/3d-printed-banquet-carpet/01-guest-room-main.jpg",
+    imageAlt: "Premium custom 3D printed banquet hall carpet in luxury hotel guest room",
+    gallery: [
+      { src: "/images/products/3d-printed-banquet-carpet/01-guest-room-main.jpg", alt: "3D printed banquet carpet in luxury hotel guest room" },
+      { src: "/images/products/3d-printed-banquet-carpet/02-banquet-hall.jpg", alt: "Custom 3D printed carpet in grand banquet hall" },
+      { src: "/images/products/3d-printed-banquet-carpet/03-billiard-room.jpg", alt: "3D printed commercial carpet in billiard room" },
+      { src: "/images/products/3d-printed-banquet-carpet/04-corridor-detail.jpg", alt: "3D printed hotel corridor carpet pattern detail" },
+      { src: "/images/products/3d-printed-banquet-carpet/05-corridor-view.jpg", alt: "3D printed broadloom carpet hotel corridor view" }
+    ],
+    moq: "200 SQM",
+    leadTime: "15-25 Days",
+    spec: { material: "100% High-Density Nylon / Soft Synthetic Blend", size: "4m width roll", colors: [] },
+    technicalSpecs: { fireRating: "ASTM E648 Class I / Bfl-s1", trafficClass: "Class 33 Heavy Commercial", yarnSystem: "Cut Pile / High-Speed Tufted", backing: "ActionBac / Reinforced Jute", pileWeight: "32oz - 45oz", totalThickness: "9mm - 12mm", rollWidth: "4m", soundInsulation: "26dB+", antistatic: "Permanent" },
+    features: ["Custom Pattern Reproduction", "High Color Fastness", "Flame Retardant", "Eco-Friendly Materials", "Durable Under Heavy Traffic"]
+  },
+  {
     id: "glitter-hotel-corridor-broadloom-carpet",
     name: "Glitter Hotel Corridor Broadloom Carpet",
     category: "wall-to-wall",

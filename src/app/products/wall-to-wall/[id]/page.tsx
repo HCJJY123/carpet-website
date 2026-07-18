@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
-import ProductImage from "@/components/ProductImage";
+import ProductGallery from "@/components/ProductGallery";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 import RelatedCaseStudies from "@/components/RelatedCaseStudies";
 
@@ -39,9 +39,7 @@ export default async function ProductDetailPage({ params }: Props) {
         <div className="container-fox">
           <div className="grid lg:grid-cols-2 gap-20 items-start">
             <div className="space-y-8 sticky top-24">
-              <div className="aspect-square bg-white border-8 border-white rounded-sm overflow-hidden shadow-2xl">
-                <ProductImage src={p.image} alt={p.name} className="w-full h-full" fit="contain" />
-              </div>
+              <ProductGallery mainImage={p.image} gallery={p.gallery} productName={p.name} />
             </div>
             <div className="space-y-12 py-4">
               <div>
