@@ -118,10 +118,10 @@ export const products: Product[] = [
   },
   {
     id: "3d-printed-luxury-banquet-carpet",
-    name: "Premium Custom 3D Printed Banquet Hall Carpet",
+    name: "Custom 3D Printed Banquet Hall Carpet | Hotel Hospitality Wall to Wall Broadloom Carpet",
     category: "wall-to-wall",
-    description: "High-definition custom 3D printed hotel broadloom carpet designed for luxury banquet halls, hotel corridors, and high-traffic hospitality venues.",
-    longDescription: "Vishomecarpet presents the pinnacle of modern flooring technology with our Premium 3D Printed series. Utilizing advanced high-speed inkjet printing systems, this hotel broadloom carpet offers unlimited design flexibility with photo-realistic pattern precision. Unlike traditional woven carpets, our 3D printing process allows for low MOQs while maintaining the high durability required for heavy-traffic commercial areas like grand banquet halls and hospitality corridors. Engineered with premium nylon or synthetic fibers, it provides exceptional stain resistance, acoustic comfort, and is fully fire-rated to international commercial standards.",
+    description: "Vishomecarpet custom 3D printed banquet hall carpet — premium wall to wall broadloom for hotel hospitality, banquet rooms, and commercial flooring projects. Durable, fire-rated contract carpet manufacturer direct.",
+    longDescription: "Vishomecarpet is a leading commercial carpet manufacturer and wall to wall carpet factory specializing in custom 3D printed banquet hall carpet for the global hospitality industry. As a trusted hotel carpet supplier and contract carpet supplier, we utilize advanced high-speed inkjet printing systems to produce hospitality broadloom carpet with photo-realistic pattern precision and unlimited design flexibility. Unlike traditional woven carpets, our 3D printing process delivers low MOQs while maintaining Class 33 heavy commercial durability for banquet halls, hotel corridors, lobbies, ballrooms, and public areas. Each roll is engineered as a premium hospitality carpet supplier solution — offering stain resistance, acoustic comfort, permanent antistatic properties, and full fire rating to international commercial standards. Whether you need custom hotel carpet for a 5-star property, rolled carpet supplier for a large-scale project, or patterned broadloom carpet for a branded interior, Vishomecarpet delivers as a dedicated wall to wall carpet manufacturer and broadloom carpet factory with competitive wholesale pricing.",
     image: "/images/products/3d-printed-banquet-carpet/01-guest-room-main.jpg",
     imageAlt: "Premium custom 3D printed banquet hall carpet in luxury hotel guest room",
     gallery: [
@@ -133,6 +133,7 @@ export const products: Product[] = [
     ],
     moq: "200 SQM",
     leadTime: "15-25 Days",
+    fobPrice: { display: "US$4.50-9.80 / SQM", lowPrice: "4.50", highPrice: "9.80", currency: "USD", unit: "SQM" },
     spec: { material: "100% High-Density Nylon / Soft Synthetic Blend", size: "4m width roll", colors: [] },
     technicalSpecs: { fireRating: "ASTM E648 Class I / Bfl-s1", trafficClass: "Class 33 Heavy Commercial", yarnSystem: "Cut Pile / High-Speed Tufted", backing: "ActionBac / Reinforced Jute", pileWeight: "32oz - 45oz", totalThickness: "9mm - 12mm", rollWidth: "4m", soundInsulation: "26dB+", antistatic: "Permanent" },
     features: ["Custom Pattern Reproduction", "High Color Fastness", "Flame Retardant", "Eco-Friendly Materials", "Durable Under Heavy Traffic"]
