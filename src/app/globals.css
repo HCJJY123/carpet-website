@@ -79,6 +79,7 @@ body {
   background: var(--color-surface);
   color: #1a1a1a;
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  word-spacing: 0.15em;
 }
 
 @media (max-width: 767px) {

@@ -12,18 +12,22 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const p = products.find((item) => item.id === id);
+  const p = products.find((item) => item.id === id && item.category === "public-area");
   if (!p) return { title: "Product Not Found" };
   return {
     title: `${p.name} | VISHOME Commercial Carpet`,
     description: p.description,
-    alternates: { canonical: absoluteUrl(productPath(p.category, p.id)) },
+    alternates: { canonical: absoluteUrl(productPath(p.id)) },
   };
 }
 
-export default async function ProductPage({ params }: Props) {
+export function generateStaticParams() {
+  return products.filter((item) => item.category === "public-area").map((item) => ({ id: item.id }));
+}
+
+export default async function ProductDetailPage({ params }: Props) {
   const { id } = await params;
-  const p = products.find((item) => item.id === id);
+  const p = products.find((item) => item.id === id && item.category === "public-area");
   if (!p) notFound();
 
   return (
@@ -51,7 +55,7 @@ export default async function ProductPage({ params }: Props) {
                 <div className="space-y-1"><span className="text-[10px] font-black uppercase text-primary/30 tracking-widest block">MOQ</span><span className="text-accent font-bold">{p.moq}</span></div>
                 <div className="space-y-1"><span className="text-[10px] font-black uppercase text-primary/30 tracking-widest block">Lead Time</span><span className="text-primary font-bold">{p.leadTime}</span></div>
               </div>
-              <ProductConversionPanel product={{ name: p.name, category: p.category }} />
+              <ProductConversionPanel product={{ name: p.name }} />
             </div>
           </div>
         </div>
