@@ -105,11 +105,21 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     WhatsApp Project Support
                   </a>
                   <div className="border-t border-white/10 pt-5">
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/45">WeChat & Form Inquiry</p>
-                    <p className="mt-2 text-lg font-bold text-accent">WeChat ID: {brandInfo.wechat}</p>
-                    <p className="mt-2 text-xs leading-relaxed text-white/55">
-                      Prefer not to chat now? Use the project form and leave your email or WhatsApp. We will reply with price, samples, MOQ, and lead time.
-                    </p>
+                    <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-white/45">WeChat & Form Inquiry</p>
+                    <div className="flex items-center gap-4">
+                      <img
+                        src="/images/contact/wechat-qr-code.jpg"
+                        alt="Scan to add Vishomecarpet on WeChat"
+                        className="h-[76px] w-[76px] flex-shrink-0 rounded-sm bg-white p-1 shadow-md"
+                        loading="lazy"
+                      />
+                      <div className="flex-1">
+                        <p className="text-sm font-bold text-accent">Scan to Add on WeChat</p>
+                        <p className="mt-1 text-xs leading-relaxed text-white/55">
+                          Prefer not to chat now? Use the project form and leave your email or WhatsApp. We will reply with price, samples, MOQ, and lead time.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
