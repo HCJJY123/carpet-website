@@ -8,6 +8,45 @@ import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConver
 const productId = "luxury-hotel-broadloom";
 const product = products.find((prod) => prod.id === productId);
 
+const faqs = product
+  ? [
+      {
+        q: "What is the roll width and length for this broadloom carpet?",
+        a: "Standard roll width is 4m. For wall-to-wall broadloom, roll length is typically 22-33m (about 90-130 sqm per roll). Send us your room dimensions and we'll confirm the exact cutting plan to minimize waste."
+      },
+      {
+        q: "Can the Axminster density or pattern be customized?",
+        a: "Yes. Axminster weaving supports a range of density tiers and fully custom jacquard patterns — send us your project renderings, logo, or reference design and we'll recommend a density tier based on your traffic level and budget."
+      },
+      {
+        q: "What is the MOQ and production lead time?",
+        a: `MOQ for this style is ${product.moq}, with a production lead time of ${product.leadTime} from deposit confirmation.`
+      },
+      {
+        q: `What fire rating does the ${product.name} meet?`,
+        a: `This carpet meets ${product.technicalSpecs.fireRating} fire rating, with a ${product.technicalSpecs.backing} backing for dimensional stability, suitable for 5-star hotel guest rooms and corridors.`
+      },
+      {
+        q: "How long does shipping take?",
+        a: "Sea freight transit is about 30 days after the vessel departs. Including customs clearance and local delivery, please allow approximately 40-45 days door to door."
+      },
+      {
+        q: "Can you provide fire certification documents?",
+        a: "We can provide fire performance test reports on request. If your project requires a specific regional fire certificate (for example, a European standard), please tell us the exact standard required and we will confirm honestly whether we currently hold it or can arrange third-party testing."
+      }
+    ]
+  : [];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a }
+  }))
+};
+
 export const metadata: Metadata = product
   ? {
       title: `${product.name} | Commercial Carpet Product | VISHOME`,
@@ -57,6 +96,10 @@ export default function ProductDetailPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }}
       />
       <nav className="border-b border-border bg-surface py-3 md:py-4">
         <div className="container-fox">
@@ -117,6 +160,21 @@ export default function ProductDetailPage() {
                 <p className="text-sm font-black uppercase leading-relaxed text-primary group-hover:text-white">
                   {v}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section-padding">
+        <div className="container-fox max-w-4xl">
+          <h2 className="mb-10 text-center text-2xl font-bold uppercase tracking-[0.08em] text-primary md:text-3xl md:tracking-widest">
+            Buyer FAQ
+          </h2>
+          <div className="space-y-5">
+            {faqs.map((item) => (
+              <div key={item.q} className="border border-border bg-white p-6">
+                <h3 className="mb-3 text-base font-black uppercase tracking-wide text-primary">{item.q}</h3>
+                <p className="leading-relaxed text-muted">{item.a}</p>
               </div>
             ))}
           </div>

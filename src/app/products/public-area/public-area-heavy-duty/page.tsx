@@ -8,6 +8,45 @@ import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConver
 const productId = "public-area-heavy-duty";
 const product = products.find((prod) => prod.id === productId);
 
+const faqs = product
+  ? [
+      {
+        q: "What makes this carpet suitable for airports and exhibition centers?",
+        a: `Built with ${product.spec.material} and a ${product.technicalSpecs.backing} backing, this roll is engineered for continuous foot and luggage-wheel traffic, rated ${product.technicalSpecs.trafficClass} for extra-heavy commercial use.`
+      },
+      {
+        q: "What is the roll width and length?",
+        a: "Standard roll width is 4m. For wall-to-wall installation, roll length is typically 22-33m (about 90-130 sqm per roll). Share your floor plan and we'll confirm the cutting layout to minimize waste."
+      },
+      {
+        q: "What is the MOQ and production lead time?",
+        a: `MOQ for this style is ${product.moq}, with a production lead time of ${product.leadTime} from deposit confirmation.`
+      },
+      {
+        q: "What fire rating does it meet?",
+        a: `This carpet meets ${product.technicalSpecs.fireRating} fire rating, suitable for public-area projects such as airports, exhibition centers, and transit facilities where fire compliance is required.`
+      },
+      {
+        q: "How long does shipping take?",
+        a: "Sea freight transit is about 30 days after the vessel departs. Including customs clearance and local delivery, please allow approximately 40-45 days door to door. For smaller quantities, we can also advise on LCL (shared container) options."
+      },
+      {
+        q: "Can you provide fire certification documents?",
+        a: "We can provide ASTM E648 test reports on request. If your project requires a specific regional fire certificate, please tell us the exact standard required and we will confirm honestly whether we currently hold it or can arrange third-party testing."
+      }
+    ]
+  : [];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a }
+  }))
+};
+
 export const metadata: Metadata = product
   ? {
       title: `${product.name} | Commercial Carpet Product | VISHOME`,
@@ -57,6 +96,10 @@ export default function ProductDetailPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }}
       />
       <nav className="border-b border-border bg-surface py-3 md:py-4">
         <div className="container-fox">
@@ -117,6 +160,21 @@ export default function ProductDetailPage() {
                 <p className="text-sm font-black uppercase leading-relaxed text-primary group-hover:text-white">
                   {v}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section-padding">
+        <div className="container-fox max-w-4xl">
+          <h2 className="mb-10 text-center text-2xl font-bold uppercase tracking-[0.08em] text-primary md:text-3xl md:tracking-widest">
+            Buyer FAQ
+          </h2>
+          <div className="space-y-5">
+            {faqs.map((item) => (
+              <div key={item.q} className="border border-border bg-white p-6">
+                <h3 className="mb-3 text-base font-black uppercase tracking-wide text-primary">{item.q}</h3>
+                <p className="leading-relaxed text-muted">{item.a}</p>
               </div>
             ))}
           </div>
