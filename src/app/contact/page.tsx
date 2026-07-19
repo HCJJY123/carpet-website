@@ -51,8 +51,22 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     Cuihuangkou Town, Wuqing District, Tianjin 301700, China
                   </p>
                   <p className="flex items-start gap-4">
-                    <span className="text-accent font-bold">P</span>
-                    <a href="tel:+8615222885400" className="hover:text-primary transition-colors">+86 152 2288 5400</a>
+                    <span className="text-accent font-bold">W</span>
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-whatsapp-placement="contact_page_address_block"
+                      data-whatsapp-product={product || "Commercial carpet project"}
+                      data-whatsapp-intent="contact_project_quote"
+                      className="hover:text-primary transition-colors"
+                    >
+                      WhatsApp Business: {brandInfo.whatsapp}
+                    </a>
+                  </p>
+                  <p className="flex items-start gap-4">
+                    <span className="text-accent font-bold">WC</span>
+                    <span>WeChat ID: {brandInfo.wechat}</span>
                   </p>
                   <p className="flex items-start gap-4">
                     <span className="text-accent font-bold">E</span>
@@ -91,8 +105,11 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     WhatsApp Project Support
                   </a>
                   <div className="border-t border-white/10 pt-5">
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/45">Direct Phone / WhatsApp</p>
-                    <a href="tel:+8615222885400" className="mt-2 block text-2xl font-bold text-accent hover:text-white transition-colors">+86 152 2288 5400</a>
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/45">WeChat & Form Inquiry</p>
+                    <p className="mt-2 text-lg font-bold text-accent">WeChat ID: {brandInfo.wechat}</p>
+                    <p className="mt-2 text-xs leading-relaxed text-white/55">
+                      Prefer not to chat now? Use the project form and leave your email or WhatsApp. We will reply with price, samples, MOQ, and lead time.
+                    </p>
                   </div>
                 </div>
               </div>

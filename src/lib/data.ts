@@ -15,6 +15,7 @@ export const brandInfo = {
   backupEmail: "oilero@outlook.com",
   phone: "+86 152 2288 5400",
   whatsapp: "+86 152 2288 5400",
+  wechat: "8615222885400",
   address: "Cuihuangkou Town, Wuqing District, Tianjin 301700, China",
   stats: { area: "50,000㎡", employees: "900+", markets: "45+", experience: "15+ Years" }
 };

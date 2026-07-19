@@ -1,8 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { brandInfo } from "@/lib/data";
+import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
 
 export default function Footer() {
+  const footerWhatsAppUrl = getWhatsAppBusinessUrl(
+    "Hello VISHOME, I would like to share my commercial carpet project details. Please help with price, MOQ, samples, lead time, and technical documents.",
+    {
+      placement: "footer_support",
+      intent: "footer_project_inquiry",
+      pagePath: "footer",
+    }
+  );
+
   return (
     <footer className="bg-[#102A43] text-white mt-auto">
       <div className="max-w-[1200px] mx-auto px-4 py-16 lg:py-24">
@@ -67,9 +77,29 @@ export default function Footer() {
                 <a href={`mailto:${brandInfo.email}`} className="text-sm font-bold text-gray-200 hover:text-white transition-colors">{brandInfo.email}</a>
                 <a href={`mailto:${brandInfo.backupEmail}`} className="text-xs font-semibold text-gray-400 hover:text-white transition-colors">Backup: {brandInfo.backupEmail}</a>
               </li>
-              <li className="flex flex-col gap-1">
-                <span className="text-[10px] font-black text-accent uppercase tracking-widest">B2B Hotline</span>
-                <a href="tel:+8615222885400" className="text-sm font-bold text-gray-200 hover:text-white transition-colors">+86 152 2288 5400</a>
+              <li className="flex flex-col gap-3">
+                <span className="text-[10px] font-black text-accent uppercase tracking-widest">Chat & Project Inquiry</span>
+                <a
+                  href={footerWhatsAppUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-whatsapp-placement="footer_support"
+                  data-whatsapp-intent="footer_project_inquiry"
+                  className="inline-flex items-center justify-center rounded-sm bg-[#25D366] px-4 py-3 text-[11px] font-black uppercase tracking-[0.14em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
+                  aria-label="Send VISHOME your project details on WhatsApp"
+                >
+                  WhatsApp Project Support
+                </a>
+                <div className="rounded-sm border border-white/10 bg-white/5 px-4 py-3">
+                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-white/45">WeChat ID</p>
+                  <p className="mt-1 text-sm font-bold text-gray-200">{brandInfo.wechat}</p>
+                </div>
+                <Link href="/contact" className="text-xs font-bold uppercase tracking-[0.18em] text-gray-300 transition-colors hover:text-white">
+                  Leave project details →
+                </Link>
+                <p className="text-xs leading-relaxed text-gray-500">
+                  Send country, area, product type, and target delivery date for a faster quotation.
+                </p>
               </li>
             </ul>
           </div>
