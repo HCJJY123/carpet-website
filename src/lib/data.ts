@@ -279,6 +279,27 @@ export const products: Product[] = [
     features: ["Custom Pattern", "HD Printed Nylon", "Hospitality Broadloom"]
   },
   {
+    id: "3d-printed-banquet-hall-carpet",
+    name: "Custom 3D Printed Banquet Hall Carpet",
+    category: "wall-to-wall",
+    description: "Custom 3D printed banquet hall carpet - wall-to-wall hotel broadloom for ballrooms, banquet rooms, corridors, and hospitality projects, factory-direct with low MOQ.",
+    longDescription: "Vishomecarpet's Custom 3D Printed Banquet Hall Carpet brings high-definition inkjet printing to large-scale hospitality broadloom. Unlike traditional woven banquet room carpet, the 3D printing process reproduces photo-realistic custom patterns with unlimited colors at a low MOQ and a fast 15-25 day lead time, while premium high-density nylon pile keeps the durability, stain resistance, and Class I fire rating that banquet halls, hotel corridors, and event spaces demand.",
+    image: "/images/products/3d-printed-banquet-carpet/01-guest-room-main.jpg",
+    imageAlt: "Custom 3D printed banquet hall carpet in teal and gold installed as hotel wall-to-wall broadloom",
+    gallery: [
+      { src: "/images/products/3d-printed-banquet-carpet/01-guest-room-main.jpg", alt: "Custom 3D printed hotel broadloom carpet in a luxury guest room, teal with gold line pattern" },
+      { src: "/images/products/3d-printed-banquet-carpet/02-banquet-hall.jpg", alt: "3D printed banquet hall carpet in royal blue with gold geometric pattern in a hotel event space" },
+      { src: "/images/products/3d-printed-banquet-carpet/03-billiard-room.jpg", alt: "Printed commercial wall-to-wall carpet in a billiard club, blue pattern with custom motifs" },
+      { src: "/images/products/3d-printed-banquet-carpet/04-corridor-detail.jpg", alt: "Hotel corridor wall-to-wall carpet with 3D printed blue and gold wave pattern by Vishomecarpet" }
+    ],
+    moq: "200 SQM",
+    leadTime: "15-25 Days",
+    fobPrice: { display: "US$3.80-8.90 / SQM", lowPrice: "3.80", highPrice: "8.90", currency: "USD", unit: "SQM" },
+    spec: { material: "100% High-Density Nylon / Soft Synthetic Blend", size: "4m Width", colors: [] },
+    technicalSpecs: { fireRating: "Class I (ASTM E648) / Bfl-s1", trafficClass: "33 Heavy Commercial", yarnSystem: "Cut Pile (HD Printed)", backing: "ActionBac / Reinforced Jute", pileWeight: "32-45oz", totalThickness: "9-12mm", rollWidth: "4m", soundInsulation: "26dB+", antistatic: "Permanent" },
+    features: ["Custom Pattern Reproduction", "Banquet Hall Broadloom", "Flame Retardant"]
+  },
+  {
     id: "glitter-hotel-corridor-broadloom-carpet",
     name: "Glitter Hotel Corridor Broadloom Carpet",
     category: "wall-to-wall",
