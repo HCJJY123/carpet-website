@@ -90,10 +90,6 @@ export default function Footer() {
                 >
                   WhatsApp Project Support
                 </a>
-                <div className="rounded-sm border border-white/10 bg-white/5 px-4 py-3">
-                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-white/45">WeChat ID</p>
-                  <p className="mt-1 text-sm font-bold text-gray-200">{brandInfo.wechat}</p>
-                </div>
                 <Link href="/contact" className="text-xs font-bold uppercase tracking-[0.18em] text-gray-300 transition-colors hover:text-white">
                   Leave project details →
                 </Link>
