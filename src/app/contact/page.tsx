@@ -173,8 +173,18 @@ export default function ContactPage() {
                     Chat on WhatsApp Business
                   </a>
                   <div className="border-t border-white/10 pt-5">
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/45">Direct Phone / WhatsApp</p>
-                    <div className="mt-2 text-2xl font-bold text-accent">+86 152 2288 5400</div>
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/45 mb-2">Scan QR to WhatsApp</p>
+                    <div className="flex items-center gap-3">
+                      <img
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://wa.me/8615222885400"
+                        alt="WhatsApp QR Code"
+                        className="w-[90px] h-[90px] rounded-sm bg-white p-1 shadow-md"
+                        loading="lazy"
+                      />
+                      <p className="text-[11px] font-medium text-white/60 leading-relaxed flex-1">
+                        Scan to chat on WhatsApp Business for project quotes &amp; samples
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
