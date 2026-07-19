@@ -59,6 +59,10 @@ export default function LeadCaptureForm({
         JSON.stringify({
           token: Date.now(),
           formName,
+          name: String(formData.get("name") || ""),
+          product: String(formData.get("product") || ""),
+          quantity: String(formData.get("quantity") || ""),
+          country: String(formData.get("country") || ""),
         })
       );
 

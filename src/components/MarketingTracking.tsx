@@ -4,6 +4,7 @@ import Script from "next/script";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { trackInteractionConversion } from "@/lib/tracking";
+import { captureAttributionOnce } from "@/lib/attribution";
 
 const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-T2VYHXTK1F";
 const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "GT-NMDDTW67";
@@ -21,6 +22,10 @@ declare global {
 
 export default function MarketingTracking() {
   const pathname = usePathname();
+
+  useEffect(() => {
+    captureAttributionOnce();
+  }, []);
 
   useEffect(() => {
     if (typeof window.gtag !== "function") return;

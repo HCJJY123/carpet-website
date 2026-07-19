@@ -5,12 +5,17 @@ export interface WhatsAppContext {
   product?: string;
   intent?: string;
   pagePath?: string;
+  country?: string;
+  quantity?: string;
 }
 
 export function getWhatsAppBusinessUrl(message: string, context: WhatsAppContext = {}) {
   const phoneNumber = brandInfo.whatsapp.replace(/\D/g, "");
+
   const contextLines = [
     context.product ? `Product / Topic: ${context.product}` : "",
+    context.quantity ? `Quantity: ${context.quantity}` : "",
+    context.country ? `Country: ${context.country}` : "",
     context.intent ? `Inquiry Type: ${context.intent}` : "",
     context.pagePath ? `Source Page: ${context.pagePath}` : "",
     context.placement ? `Button: ${context.placement}` : "",

@@ -1,3 +1,5 @@
+import { getAttributionForEvent } from "@/lib/attribution";
+
 type LeadConversionPayload = {
   formName: string;
   product?: string;
@@ -57,6 +59,7 @@ export function trackLeadConversion({
   if (typeof window === "undefined") return;
 
   const conversionSendTo = process.env.NEXT_PUBLIC_GOOGLE_ADS_FORM_CONVERSION_SEND_TO;
+  const attribution = getAttributionForEvent();
 
   if (typeof window.gtag === "function") {
     window.gtag("event", "generate_lead", {
@@ -66,6 +69,7 @@ export function trackLeadConversion({
       product,
       quantity,
       country,
+      ...attribution,
     });
 
     if (conversionSendTo) {
@@ -82,6 +86,7 @@ export function trackLeadConversion({
     window.clarity("set", "lead_form", formName);
     if (product) window.clarity("set", "lead_product", product);
     if (country) window.clarity("set", "lead_country", country);
+    if (attribution.utm_source) window.clarity("set", "lead_utm_source", attribution.utm_source);
   }
 
   pushTrackingEvent("lead_form_submit_success", {
@@ -89,22 +94,25 @@ export function trackLeadConversion({
     product,
     quantity,
     country,
+    ...attribution,
   });
 }
 
 export function trackInteractionConversion(type: ClickConversionType, payload: Record<string, unknown> = {}) {
   if (typeof window === "undefined") return;
 
-  pushTrackingEvent(type, payload);
+  const fullPayload = { ...payload, ...getAttributionForEvent() };
+
+  pushTrackingEvent(type, fullPayload);
 
   if (typeof window.gtag === "function") {
-    window.gtag("event", type, payload);
+    window.gtag("event", type, fullPayload);
 
     const sendTo = conversionSendToFor(type);
     if (sendTo) {
       window.gtag("event", "conversion", {
         send_to: sendTo,
-        ...payload,
+        ...fullPayload,
       });
     }
   }
