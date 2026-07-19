@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 
 type NavChild = {
@@ -83,7 +83,12 @@ const navLinks: NavItem[] = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openSection, setOpenSection] = useState<string | null>(null);
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (!menuOpen) setOpenSection(null);
+  }, [menuOpen]);
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header, {
     placement: "header",
     intent: "project_support",
@@ -213,38 +218,66 @@ export default function Header() {
 
       <div
         id="mobile-navigation"
-        className={`xl:hidden overflow-hidden border-t border-border bg-white transition-[max-height,opacity] duration-300 ${menuOpen ? "max-h-[1100px] opacity-100" : "max-h-0 opacity-0"}`}
+        className={`xl:hidden border-t border-border bg-white overscroll-contain transition-[max-height,opacity] duration-300 ${
+          menuOpen ? "max-h-[calc(100vh-4rem)] overflow-y-auto opacity-100" : "max-h-0 overflow-hidden opacity-0"
+        }`}
       >
         <nav className="container-fox py-4">
           <div className="grid gap-2">
-            {navLinks.map((link) => (
-              <div key={link.href} className="overflow-hidden rounded-lg border border-border bg-surface">
-                <Link
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="flex items-center justify-between px-4 py-3 text-[11px] font-black uppercase tracking-[0.16em] text-[#102A43]"
-                >
-                  {link.label}
-                  {link.children?.length ? (
-                    <span className="h-1.5 w-1.5 rotate-45 border-b border-r border-[#102A43]/45" aria-hidden="true" />
-                  ) : null}
-                </Link>
-                {link.children?.length ? (
-                  <div className="grid border-t border-border/70 bg-white">
-                    {link.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        onClick={() => setMenuOpen(false)}
-                        className="border-b border-border/60 px-5 py-2.5 text-[12px] font-semibold text-[#102A43]/70 last:border-b-0"
+            {navLinks.map((link) => {
+              const sectionOpen = openSection === link.href;
+              return (
+                <div key={link.href} className="overflow-hidden rounded-lg border border-border bg-surface">
+                  <div className="flex items-stretch">
+                    <Link
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="flex flex-1 items-center px-4 py-3 text-[11px] font-black uppercase tracking-[0.16em] text-[#102A43]"
+                    >
+                      {link.label}
+                    </Link>
+                    {link.children?.length ? (
+                      <button
+                        type="button"
+                        onClick={() => setOpenSection((current) => (current === link.href ? null : link.href))}
+                        aria-expanded={sectionOpen}
+                        aria-controls={`mobile-section-${link.href}`}
+                        aria-label={`${sectionOpen ? "Collapse" : "Expand"} ${link.label} submenu`}
+                        className="flex w-12 items-center justify-center border-l border-border/70 text-[#102A43]/60"
                       >
-                        {child.label}
-                      </Link>
-                    ))}
+                        <span
+                          className={`h-1.5 w-1.5 rotate-45 border-b border-r border-[#102A43]/60 transition-transform ${
+                            sectionOpen ? "-translate-y-0.5 rotate-[225deg]" : ""
+                          }`}
+                          aria-hidden="true"
+                        />
+                      </button>
+                    ) : null}
                   </div>
-                ) : null}
-              </div>
-            ))}
+                  {link.children?.length ? (
+                    <div
+                      id={`mobile-section-${link.href}`}
+                      className={`grid overflow-hidden border-t border-border/70 bg-white transition-[grid-template-rows] duration-200 ${
+                        sectionOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                      }`}
+                    >
+                      <div className="min-h-0">
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            onClick={() => setMenuOpen(false)}
+                            className="block border-b border-border/60 px-5 py-2.5 text-[12px] font-semibold text-[#102A43]/70 last:border-b-0"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+              );
+            })}
           </div>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             <Link href="/contact" onClick={() => setMenuOpen(false)} className="btn-fox-orange text-center">
