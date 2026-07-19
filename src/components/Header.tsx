@@ -81,13 +81,15 @@ const navLinks: NavItem[] = [
   },
 ];
 
+const sectionsWithChildren = navLinks.filter((link) => link.children?.length).map((link) => link.href);
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openSection, setOpenSection] = useState<string | null>(null);
+  const [openSections, setOpenSections] = useState<Set<string>>(() => new Set(sectionsWithChildren));
   const pathname = usePathname();
 
   useEffect(() => {
-    if (!menuOpen) setOpenSection(null);
+    if (menuOpen) setOpenSections(new Set(sectionsWithChildren));
   }, [menuOpen]);
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header, {
     placement: "header",
@@ -225,7 +227,7 @@ export default function Header() {
         <nav className="container-fox py-4">
           <div className="grid gap-2">
             {navLinks.map((link) => {
-              const sectionOpen = openSection === link.href;
+              const sectionOpen = openSections.has(link.href);
               return (
                 <div key={link.href} className="overflow-hidden rounded-lg border border-border bg-surface">
                   <div className="flex items-stretch">
@@ -239,7 +241,14 @@ export default function Header() {
                     {link.children?.length ? (
                       <button
                         type="button"
-                        onClick={() => setOpenSection((current) => (current === link.href ? null : link.href))}
+                        onClick={() =>
+                          setOpenSections((current) => {
+                            const next = new Set(current);
+                            if (next.has(link.href)) next.delete(link.href);
+                            else next.add(link.href);
+                            return next;
+                          })
+                        }
                         aria-expanded={sectionOpen}
                         aria-controls={`mobile-section-${link.href}`}
                         aria-label={`${sectionOpen ? "Collapse" : "Expand"} ${link.label} submenu`}
