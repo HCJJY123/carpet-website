@@ -1,9 +1,15 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 
 export default function WhatsAppFloating() {
-  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.floating);
+  const pathname = usePathname();
+  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.floating, {
+    placement: "floating_whatsapp",
+    intent: "project_support",
+    pagePath: pathname,
+  });
 
   return (
     <div className="fixed bottom-5 right-4 md:bottom-8 md:right-8 z-[100] flex flex-col items-end gap-3 group">
@@ -20,6 +26,8 @@ export default function WhatsAppFloating() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
+        data-whatsapp-placement="floating_whatsapp"
+        data-whatsapp-intent="project_support"
         className="relative flex h-14 w-14 items-center justify-center rounded-[18px] bg-white shadow-[0_14px_36px_rgba(16,42,67,0.22)] ring-1 ring-[#25D366]/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(37,211,102,0.34)] md:h-[74px] md:w-[74px] md:rounded-[24px]"
         aria-label="Contact VISHOME on WhatsApp Business"
       >

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { brandInfo } from "@/lib/data";
 
 export default function Footer() {
   return (
@@ -47,6 +48,8 @@ export default function Footer() {
             <ul className="space-y-4">
               <li><Link href="/about-us" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">About Us</Link></li>
               <li><Link href="/commercial-carpet-manufacturer" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Manufacturer</Link></li>
+              <li><Link href="/solutions" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Solutions</Link></li>
+              <li><Link href="/solutions/hotel-carpet-manufacturer" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Hotel Carpet Manufacturer</Link></li>
               <li><Link href="/projects" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Case Studies</Link></li>
               <li><Link href="/blog" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">B2B Insights</Link></li>
               <li><Link href="/faq" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">FAQ</Link></li>
@@ -61,7 +64,8 @@ export default function Footer() {
             <ul className="space-y-6">
               <li className="flex flex-col gap-1">
                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">Email Inquiry</span>
-                <a href="mailto:oilero@outlook.com" className="text-sm font-bold text-gray-200 hover:text-white transition-colors">oilero@outlook.com</a>
+                <a href={`mailto:${brandInfo.email}`} className="text-sm font-bold text-gray-200 hover:text-white transition-colors">{brandInfo.email}</a>
+                <a href={`mailto:${brandInfo.backupEmail}`} className="text-xs font-semibold text-gray-400 hover:text-white transition-colors">Backup: {brandInfo.backupEmail}</a>
               </li>
               <li className="flex flex-col gap-1">
                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">B2B Hotline</span>

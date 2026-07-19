@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Hotel & Hospitality Carpet Solutions | Wall-to-Wall Broadloom | VISHOME",
@@ -98,6 +99,16 @@ const faqItems = [
 ];
 
 export default function HotelHospitalitySolutionPage() {
+  const whatsappUrl = getWhatsAppBusinessUrl(
+    "Hello, I am interested in hotel and hospitality commercial carpet solutions. Please help me with a project quote, sample options, MOQ, lead time, and technical data sheet.",
+    {
+      placement: "hotel_hospitality_cta",
+      product: "Hotel and hospitality carpet solutions",
+      intent: "hotel_project_quote",
+      pagePath: "/solutions/hotel-hospitality",
+    }
+  );
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -346,9 +357,12 @@ export default function HotelHospitalitySolutionPage() {
                 Contact Project Team
               </Link>
               <a
-                href="https://wa.me/8615222885400?text=Hello%20Zara%2C%20I%20am%20interested%20in%20your%20commercial%20carpet%20solutions.%20Could%20you%20help%20me%20with%20a%20project%20quote%3F"
+                href={whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
+                data-whatsapp-placement="hotel_hospitality_cta"
+                data-whatsapp-product="Hotel and hospitality carpet solutions"
+                data-whatsapp-intent="hotel_project_quote"
                 className="btn-fox-outline !border-white !text-white hover:!bg-white hover:!text-primary !px-10 !py-5"
               >
                 WhatsApp Direct

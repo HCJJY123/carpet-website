@@ -25,10 +25,26 @@ function specCards(product: ConversionProduct) {
 }
 
 export function ProductConversionPanel({ product }: { product: ConversionProduct }) {
-  const whatsappUrl = getWhatsAppBusinessUrl(productMessage(product, "I would like to discuss a project inquiry"));
-  const drawingUrl = getWhatsAppBusinessUrl(productMessage(product, "I want to send my project drawing or floor plan"));
-  const sampleUrl = getWhatsAppBusinessUrl(productMessage(product, "I want to get a sample before bulk order"));
-  const priceUrl = getWhatsAppBusinessUrl(productMessage(product, "I want to ask the factory price"));
+  const whatsappUrl = getWhatsAppBusinessUrl(productMessage(product, "I would like to discuss a project inquiry"), {
+    placement: "product_conversion_panel",
+    product: product.name,
+    intent: "project_quote",
+  });
+  const drawingUrl = getWhatsAppBusinessUrl(productMessage(product, "I want to send my project drawing or floor plan"), {
+    placement: "product_conversion_panel",
+    product: product.name,
+    intent: "send_project_drawing",
+  });
+  const sampleUrl = getWhatsAppBusinessUrl(productMessage(product, "I want to get a sample before bulk order"), {
+    placement: "product_conversion_panel",
+    product: product.name,
+    intent: "sample_request",
+  });
+  const priceUrl = getWhatsAppBusinessUrl(productMessage(product, "I want to ask the factory price"), {
+    placement: "product_conversion_panel",
+    product: product.name,
+    intent: "factory_price",
+  });
   const emailSubject = encodeURIComponent(`Project inquiry: ${product.name}`);
   const emailBody = encodeURIComponent(
     `Hello Vishomecarpet,\n\nI am interested in ${product.name}.\n\nName:\nCountry:\nWhatsApp:\nProduct:\nQuantity:\nProject details:\n`
@@ -51,6 +67,9 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          data-whatsapp-placement="product_conversion_panel"
+          data-whatsapp-product={product.name}
+          data-whatsapp-intent="project_quote"
           className="flex min-h-12 items-center justify-center rounded-sm bg-[#25D366] px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.12em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
         >
           WhatsApp
@@ -74,6 +93,9 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
           href={drawingUrl}
           target="_blank"
           rel="noopener noreferrer"
+          data-whatsapp-placement="product_conversion_panel"
+          data-whatsapp-product={product.name}
+          data-whatsapp-intent="send_project_drawing"
           className="border border-border bg-surface px-4 py-4 text-center text-[10px] font-black uppercase tracking-[0.12em] text-primary transition-all hover:border-accent hover:bg-white"
         >
           Send Your Project Drawing
@@ -82,6 +104,9 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
           href={sampleUrl}
           target="_blank"
           rel="noopener noreferrer"
+          data-whatsapp-placement="product_conversion_panel"
+          data-whatsapp-product={product.name}
+          data-whatsapp-intent="sample_request"
           className="border border-border bg-surface px-4 py-4 text-center text-[10px] font-black uppercase tracking-[0.12em] text-primary transition-all hover:border-accent hover:bg-white"
         >
           Get Sample
@@ -90,6 +115,9 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
           href={priceUrl}
           target="_blank"
           rel="noopener noreferrer"
+          data-whatsapp-placement="product_conversion_panel"
+          data-whatsapp-product={product.name}
+          data-whatsapp-intent="factory_price"
           className="border border-border bg-surface px-4 py-4 text-center text-[10px] font-black uppercase tracking-[0.12em] text-primary transition-all hover:border-accent hover:bg-white"
         >
           Ask Factory Price

@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-data";
 import { caseStudies, productCategories, products } from "@/lib/data";
 import { productPath } from "@/lib/seo";
+import { solutionPages } from "@/lib/solution-data";
 
 const BASE = "https://www.vishomecarpet.com";
 
@@ -55,6 +56,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  const solutionEntries: MetadataRoute.Sitemap = solutionPages.map((page) => ({
+    url: `${BASE}/solutions/${page.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.84,
+  }));
+
   const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${BASE}/blog/${post.slug}`,
     lastModified: new Date(post.dateModified ?? post.date),
@@ -62,5 +70,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.72,
   }));
 
-  return [...staticEntries, ...categoryEntries, ...productEntries, ...projectEntries, ...blogEntries];
+  return [...staticEntries, ...categoryEntries, ...productEntries, ...projectEntries, ...solutionEntries, ...blogEntries];
 }

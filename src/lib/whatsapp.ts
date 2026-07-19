@@ -1,8 +1,24 @@
 import { brandInfo } from "@/lib/data";
 
-export function getWhatsAppBusinessUrl(message: string) {
+export interface WhatsAppContext {
+  placement?: string;
+  product?: string;
+  intent?: string;
+  pagePath?: string;
+}
+
+export function getWhatsAppBusinessUrl(message: string, context: WhatsAppContext = {}) {
   const phoneNumber = brandInfo.whatsapp.replace(/\D/g, "");
-  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const contextLines = [
+    context.product ? `Product / Topic: ${context.product}` : "",
+    context.intent ? `Inquiry Type: ${context.intent}` : "",
+    context.pagePath ? `Source Page: ${context.pagePath}` : "",
+    context.placement ? `Button: ${context.placement}` : "",
+  ].filter(Boolean);
+
+  const fullMessage = contextLines.length ? `${message}\n\n${contextLines.join("\n")}` : message;
+
+  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
 }
 
 export const whatsappBusinessMessages = {

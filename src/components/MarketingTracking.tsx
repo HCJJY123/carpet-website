@@ -52,12 +52,18 @@ export default function MarketingTracking() {
 
       const href = anchor.getAttribute("href") || "";
       const text = anchor.textContent?.trim() || "";
+      const leadData = {
+        placement: anchor.dataset.whatsappPlacement,
+        product: anchor.dataset.whatsappProduct,
+        intent: anchor.dataset.whatsappIntent,
+      };
 
       if (href.startsWith("https://wa.me/") || href.includes("whatsapp")) {
         trackInteractionConversion("whatsapp_click", {
           href,
           link_text: text,
           page_path: window.location.pathname,
+          ...leadData,
         });
         return;
       }

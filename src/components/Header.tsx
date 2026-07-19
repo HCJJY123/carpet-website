@@ -38,7 +38,10 @@ const navLinks: NavItem[] = [
     label: "Projects",
     children: [
       { href: "/projects", label: "Project References" },
+      { href: "/solutions", label: "Solutions Center" },
       { href: "/solutions/hotel-hospitality", label: "Hotel Flooring Solutions" },
+      { href: "/solutions/office-carpet-tiles-supplier", label: "Office Carpet Tiles Supplier" },
+      { href: "/solutions/hotel-carpet-manufacturer", label: "Hotel Carpet Manufacturer" },
       { href: "/carpet-tiles-50x50", label: "50x50 Carpet Tile Guide" },
       { href: "/hotel-carpet", label: "Hotel Carpet Applications" },
       { href: "/natural-sisal-carpet", label: "Natural Sisal Applications" },
@@ -81,7 +84,11 @@ const navLinks: NavItem[] = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header);
+  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header, {
+    placement: "header",
+    intent: "project_support",
+    pagePath: pathname,
+  });
   const isActivePath = (href: string) => (href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`));
   const isActiveNav = (link: NavItem) => isActivePath(link.href) || Boolean(link.children?.some((child) => isActivePath(child.href)));
 
@@ -164,6 +171,8 @@ export default function Header() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              data-whatsapp-placement="header"
+              data-whatsapp-intent="project_support"
               className="group inline-flex whitespace-nowrap items-center gap-2 rounded-sm border border-[#25D366]/35 bg-[#25D366] px-5 py-3 text-[10px] font-black uppercase tracking-[0.18em] text-white shadow-lg shadow-[#25D366]/20 transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
               aria-label="Contact VISHOME on WhatsApp Business"
             >
@@ -177,6 +186,8 @@ export default function Header() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              data-whatsapp-placement="mobile_header"
+              data-whatsapp-intent="project_support"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg"
               aria-label="Contact VISHOME on WhatsApp Business"
             >

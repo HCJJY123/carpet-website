@@ -7,17 +7,16 @@ import { trackInteractionConversion } from "@/lib/tracking";
 
 export default function ThankYouPage() {
   const router = useRouter();
-  const [allowed, setAllowed] = useState(false);
+  const [allowed] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return Boolean(sessionStorage.getItem("vishome_form_success"));
+  });
 
   useEffect(() => {
-    const success = sessionStorage.getItem("vishome_form_success");
-    if (!success) {
+    if (!allowed) {
       router.replace("/contact");
-      return;
     }
-
-    setAllowed(true);
-  }, [router]);
+  }, [allowed, router]);
 
   useEffect(() => {
     if (!allowed) return;

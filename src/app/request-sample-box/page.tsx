@@ -16,7 +16,12 @@ interface RequestSampleBoxPageProps {
 
 export default async function RequestSampleBoxPage({ searchParams }: RequestSampleBoxPageProps) {
   const { product } = await searchParams;
-  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.sampleBox);
+  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.sampleBox, {
+    placement: "sample_box_page",
+    product: product || "Commercial carpet sample box",
+    intent: "sample_box_request",
+    pagePath: "/request-sample-box",
+  });
 
   return (
     <div className="bg-white min-h-screen">
@@ -67,7 +72,15 @@ export default async function RequestSampleBoxPage({ searchParams }: RequestSamp
                 projectTypeDefault="Sample request"
                 introText="Send your carpet type, country, project type, and target delivery date. We will reply with sample options, courier method, lead time, and related technical data sheet support."
               />
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-6 flex min-h-12 items-center justify-center bg-[#25D366] px-5 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition-all hover:bg-[#1ebe5d]">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-whatsapp-placement="sample_box_page"
+                data-whatsapp-product={product || "Commercial carpet sample box"}
+                data-whatsapp-intent="sample_box_request"
+                className="mt-6 flex min-h-12 items-center justify-center bg-[#25D366] px-5 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition-all hover:bg-[#1ebe5d]"
+              >
                 WhatsApp Sample Support
               </a>
             </div>

@@ -1,6 +1,7 @@
 import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { brandInfo } from "@/lib/data";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 
 interface ContactPageProps {
@@ -9,7 +10,12 @@ interface ContactPageProps {
 
 export default async function ContactPage({ searchParams }: ContactPageProps) {
   const { product } = await searchParams;
-  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.contact);
+  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.contact, {
+    placement: "contact_page_quote_card",
+    product: product || "Commercial carpet project",
+    intent: "contact_project_quote",
+    pagePath: "/contact",
+  });
 
   return (
     <div className="bg-white">
@@ -50,7 +56,10 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                   </p>
                   <p className="flex items-start gap-4">
                     <span className="text-accent font-bold">E</span>
-                    <a href="mailto:oilero@outlook.com" className="hover:text-primary transition-colors">oilero@outlook.com</a>
+                    <span className="flex flex-col gap-1">
+                      <a href={`mailto:${brandInfo.email}`} className="hover:text-primary transition-colors">{brandInfo.email}</a>
+                      <a href={`mailto:${brandInfo.backupEmail}`} className="text-sm text-muted/80 hover:text-primary transition-colors">Backup: {brandInfo.backupEmail}</a>
+                    </span>
                   </p>
                 </div>
               </div>
@@ -70,6 +79,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-whatsapp-placement="contact_page_quote_card"
+                    data-whatsapp-product={product || "Commercial carpet project"}
+                    data-whatsapp-intent="contact_project_quote"
                     className="mb-6 inline-flex w-full items-center justify-center gap-3 rounded-sm bg-[#25D366] px-4 py-4 text-[11px] font-black uppercase tracking-[0.12em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d] md:px-5 md:text-xs md:tracking-[0.2em]"
                     aria-label="Start WhatsApp Business chat with VISHOME"
                   >
