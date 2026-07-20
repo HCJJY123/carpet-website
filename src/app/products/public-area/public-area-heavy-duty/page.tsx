@@ -51,7 +51,14 @@ export const metadata: Metadata = product
   ? {
       title: `${product.name} | Commercial Carpet Product | VISHOME`,
       description: product.description,
-      alternates: { canonical: productPath(product.id) },
+      alternates: {
+        canonical: productPath(product.id),
+        languages: {
+          en: absoluteUrl(productPath(product.id)),
+          ru: absoluteUrl("/ru/products/public-area/public-area-heavy-duty"),
+          "x-default": absoluteUrl(productPath(product.id)),
+        },
+      },
       openGraph: {
         title: `${product.name} | VISHOME`,
         description: product.description,

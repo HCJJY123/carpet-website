@@ -58,7 +58,14 @@ export const metadata: Metadata = product
       title: "Nylon 50x50 Commercial Office Carpet Tile | Commercial Carpet Product | VISHOME",
       description: seoDescription,
       keywords: seoKeywords,
-      alternates: { canonical: productPath(product.id) },
+      alternates: {
+        canonical: productPath(product.id),
+        languages: {
+          en: absoluteUrl(productPath(product.id)),
+          ru: absoluteUrl("/ru/products/carpet-tiles/nylon-office-carpet-tile"),
+          "x-default": absoluteUrl(productPath(product.id)),
+        },
+      },
       openGraph: {
         title: "Nylon 50x50 Commercial Office Carpet Tile | VISHOME",
         description:

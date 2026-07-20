@@ -109,7 +109,14 @@ export const metadata: Metadata = product
         "river gold mining mat",
         "Vishomecarpet",
       ],
-      alternates: { canonical: productPath(product.id) },
+      alternates: {
+        canonical: productPath(product.id),
+        languages: {
+          en: absoluteUrl(productPath(product.id)),
+          ru: absoluteUrl("/ru/products/public-area/gold-mining-carpet-mat"),
+          "x-default": absoluteUrl(productPath(product.id)),
+        },
+      },
       openGraph: {
         title: "Gold Mining Carpet Mat for Sluice Box | Vishomecarpet",
         description: product.description,

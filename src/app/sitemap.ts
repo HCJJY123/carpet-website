@@ -23,6 +23,10 @@ const staticRoutes: { url: string; priority: number; changeFrequency: MetadataRo
   { url: "/request-sample-box", priority: 0.8, changeFrequency: "monthly" },
   { url: "/solutions", priority: 0.75, changeFrequency: "monthly" },
   { url: "/solutions/hotel-hospitality", priority: 0.75, changeFrequency: "monthly" },
+  { url: "/ru", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/ru/products/carpet-tiles/nylon-office-carpet-tile", priority: 0.85, changeFrequency: "monthly" },
+  { url: "/ru/products/public-area/public-area-heavy-duty", priority: 0.85, changeFrequency: "monthly" },
+  { url: "/ru/products/public-area/gold-mining-carpet-mat", priority: 0.85, changeFrequency: "monthly" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
