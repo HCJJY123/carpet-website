@@ -65,10 +65,6 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     </a>
                   </p>
                   <p className="flex items-start gap-4">
-                    <span className="text-accent font-bold">WC</span>
-                    <span>WeChat ID: {brandInfo.wechat}</span>
-                  </p>
-                  <p className="flex items-start gap-4">
                     <span className="text-accent font-bold">E</span>
                     <span className="flex flex-col gap-1">
                       <a href={`mailto:${brandInfo.email}`} className="hover:text-primary transition-colors">{brandInfo.email}</a>
