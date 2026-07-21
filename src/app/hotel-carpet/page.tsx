@@ -119,7 +119,7 @@ export default function HotelCarpetPage() {
                 <h3 className="font-bold text-white text-lg mb-2 uppercase group-hover:text-accent transition-colors">{product.name}</h3>
                 <div className="space-y-2 border-t border-white/10 pt-4 text-[10px] font-bold text-accent uppercase tracking-widest">
                   <div className="flex justify-between gap-4">
-                    <span>FOB Price</span>
+                    <span>{product.id === "custom-luxury-hotel-room-carpet" ? "Reference FOB Price" : "FOB Price"}</span>
                     <span className="text-right">{product.fobPrice?.display}</span>
                   </div>
                   <div className="flex justify-between gap-4">
@@ -128,7 +128,7 @@ export default function HotelCarpetPage() {
                   </div>
                   <div className="flex justify-between gap-4">
                     <span>Availability</span>
-                    <span className="text-right">In Stock / Made to Order</span>
+                    <span className="text-right">{product.id === "custom-luxury-hotel-room-carpet" ? "Made to Order" : "In Stock / Made to Order"}</span>
                   </div>
                 </div>
               </Link>

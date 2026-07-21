@@ -281,6 +281,50 @@ export const products: Product[] = [
     features: ["Custom Pattern", "HD Printed Nylon", "Hospitality Broadloom"]
   },
   {
+    id: "custom-luxury-hotel-room-carpet",
+    name: "Custom Luxury Hotel Room Carpet",
+    category: "wall-to-wall",
+    description: "Made-to-order wall-to-wall carpet for hotel guestrooms, suites and renovation projects.",
+    longDescription: "Made-to-order wall-to-wall carpet for hotel guestrooms, suites, corridors and hospitality renovation projects with customizable patterns, flexible material options and project-confirmed technical specifications.",
+    image: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/01-main-luxury-hotel-room-carpet.webp",
+    imageAlt: "Custom luxury wall-to-wall carpet installed in a five-star hotel guestroom",
+    gallery: [
+      { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/01-main-luxury-hotel-room-carpet.webp", alt: "Custom luxury wall-to-wall carpet installed in a five-star hotel guestroom" },
+      { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/02-hotel-suite-custom-carpet.webp", alt: "Custom wall-to-wall carpet for a luxury hotel suite and lounge area" },
+      { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/03-hotel-corridor-carpet.webp", alt: "Custom hospitality carpet installed in a luxury hotel corridor" },
+      { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/04-boutique-hotel-bedroom-carpet.webp", alt: "Made-to-order carpet for a boutique hotel bedroom renovation" },
+      { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/05-hospitality-carpet-roll.webp", alt: "Custom hotel room broadloom carpet roll with abstract pattern" },
+      { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/06-custom-carpet-pile-closeup.webp", alt: "Close-up texture of custom hotel room carpet pile and colors" }
+    ],
+    moq: "100 SQM",
+    leadTime: "Confirmed After Design and Specification Approval",
+    fobPrice: { display: "US$3.10-9.70 / SQM", lowPrice: "3.10", highPrice: "9.70", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "Project-specific nylon or wool-nylon options",
+      size: "Custom Roll and Cutting Plan",
+      colors: [
+        { name: "Warm Stone Beige", hex: "#B8A990" },
+        { name: "Deep Navy", hex: "#14385F" },
+        { name: "Muted Teal", hex: "#5F8588" },
+        { name: "Rust Red", hex: "#9D4A32" },
+        { name: "Champagne Gold", hex: "#C8A55B" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "Confirmed by Project Specification",
+      trafficClass: "Confirmed by Project Specification",
+      fiber: "Nylon or Wool-Nylon Project Options, Subject to Final Confirmation",
+      yarnSystem: "Machine-Made Cut-Pile Carpet, Final Construction Confirmed by Project",
+      backing: "Confirmed According to Project Requirement",
+      pileWeight: "Confirmed by Project Specification",
+      totalThickness: "Confirmed by Project Specification",
+      rollWidth: "Confirmed According to Project Requirement",
+      soundInsulation: "Confirmed by Project Specification",
+      antistatic: "Confirmed by Project Specification"
+    },
+    features: ["100 SQM Project MOQ", "Custom Guestroom Design", "Project-Based Specification", "B2B Export Support"]
+  },
+  {
     id: "3d-printed-banquet-hall-carpet",
     name: "Custom 3D Printed Banquet Hall Carpet",
     category: "wall-to-wall",

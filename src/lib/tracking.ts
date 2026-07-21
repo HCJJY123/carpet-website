@@ -50,6 +50,21 @@ export function pushTrackingEvent(event: string, payload: Record<string, unknown
   window.dataLayer.push({ event, ...payload });
 }
 
+export function trackAnalyticsEvent(event: string, payload: Record<string, unknown>) {
+  if (typeof window === "undefined") return;
+  const fullPayload = { ...payload, ...getAttributionForEvent() };
+
+  pushTrackingEvent(event, fullPayload);
+
+  if (typeof window.gtag === "function") {
+    window.gtag("event", event, fullPayload);
+  }
+
+  if (typeof window.clarity === "function") {
+    window.clarity("event", event);
+  }
+}
+
 export function trackLeadConversion({
   formName,
   product,

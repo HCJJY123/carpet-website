@@ -89,7 +89,9 @@ export default function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (menuOpen) setOpenSections(new Set(sectionsWithChildren));
+    if (!menuOpen) return;
+    const timer = window.setTimeout(() => setOpenSections(new Set(sectionsWithChildren)), 0);
+    return () => window.clearTimeout(timer);
   }, [menuOpen]);
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header, {
     placement: "header",

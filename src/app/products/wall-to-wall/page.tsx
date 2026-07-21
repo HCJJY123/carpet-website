@@ -34,14 +34,25 @@ export default function CategoryPage() {
         <div className="container-fox">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {categoryProducts.map((p) => (
-              <Link key={p.id} href={`/products/${categoryId}/${p.id}`} className="group block bg-white border border-border p-8 hover:shadow-2xl transition-all duration-500 rounded-sm">
+              <Link
+                key={p.id}
+                href={`/products/${categoryId}/${p.id}`}
+                className="group block bg-white border border-border p-8 hover:shadow-2xl transition-all duration-500 rounded-sm"
+                data-track-event={p.id === "custom-luxury-hotel-room-carpet" ? "select_item" : undefined}
+                data-item-id={p.id === "custom-luxury-hotel-room-carpet" ? "VHC-WTW-HRC-001" : undefined}
+                data-item-name={p.id === "custom-luxury-hotel-room-carpet" ? p.name : undefined}
+                data-item-category={p.id === "custom-luxury-hotel-room-carpet" ? "Wall-to-Wall Carpets" : undefined}
+              >
                 <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
                   <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                 </div>
                 <h3 className="font-bold text-xl text-primary uppercase mb-6 h-14 leading-tight group-hover:text-accent transition-colors">{p.name}</h3>
+                {p.id === "custom-luxury-hotel-room-carpet" && (
+                  <p className="mb-6 text-sm leading-relaxed text-muted">{p.description}</p>
+                )}
                 <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">
                   <div className="flex justify-between gap-4">
-                    <span className="text-muted">FOB Price</span>
+                    <span className="text-muted">{p.id === "custom-luxury-hotel-room-carpet" ? "Reference FOB Price" : "FOB Price"}</span>
                     <span className="text-right font-black text-primary">{p.fobPrice?.display}</span>
                   </div>
                   <div className="flex justify-between gap-4">
@@ -50,7 +61,7 @@ export default function CategoryPage() {
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Availability</span>
-                    <span className="text-right font-black text-primary">In Stock / Made to Order</span>
+                    <span className="text-right font-black text-primary">{p.id === "custom-luxury-hotel-room-carpet" ? "Made to Order" : "In Stock / Made to Order"}</span>
                   </div>
                 </div>
                 <div className="flex justify-between items-center text-[10px] font-black text-accent uppercase tracking-widest border-t border-border pt-6">

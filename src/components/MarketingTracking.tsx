@@ -3,7 +3,7 @@
 import Script from "next/script";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { trackInteractionConversion } from "@/lib/tracking";
+import { trackAnalyticsEvent, trackInteractionConversion } from "@/lib/tracking";
 import { captureAttributionOnce } from "@/lib/attribution";
 
 const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-T2VYHXTK1F";
@@ -62,6 +62,18 @@ export default function MarketingTracking() {
         product: anchor.dataset.whatsappProduct,
         intent: anchor.dataset.whatsappIntent,
       };
+      const trackEvent = anchor.dataset.trackEvent;
+
+      if (trackEvent) {
+        trackAnalyticsEvent(trackEvent, {
+          item_id: anchor.dataset.itemId,
+          item_name: anchor.dataset.itemName,
+          item_category: anchor.dataset.itemCategory,
+          href,
+          link_text: text,
+          page_path: window.location.pathname,
+        });
+      }
 
       if (href.startsWith("https://wa.me/") || href.includes("whatsapp")) {
         trackInteractionConversion("whatsapp_click", {
