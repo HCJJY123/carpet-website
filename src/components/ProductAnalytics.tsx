@@ -7,6 +7,8 @@ type ProductPayload = {
   item_id: string;
   item_name: string;
   item_category: string;
+  item_variant?: string;
+  price?: number;
   price_low?: number;
   price_high?: number;
   currency?: string;

@@ -71,6 +71,13 @@ export default function HotelCarpetPage() {
               </div>
             ))}
           </div>
+          <p className="mx-auto mt-10 max-w-3xl text-center text-sm leading-relaxed text-muted">
+            For controlled-traffic lobby seating zones, interior designers can also specify a loose-laid{" "}
+            <Link href="/products/public-area/custom-sculpted-wool-lobby-rug" className="font-bold text-accent hover:text-primary">
+              custom wool rug for hotel lobbies
+            </Link>{" "}
+            instead of continuous broadloom.
+          </p>
         </div>
       </section>
 

@@ -137,7 +137,7 @@ export function productItemListJsonLd({
           category: categoryName(product.category),
           additionalProperty: [
             { "@type": "PropertyValue", name: "Minimum Order Quantity", value: product.moq },
-            { "@type": "PropertyValue", name: "Availability", value: "InStock" },
+            { "@type": "PropertyValue", name: "Availability", value: product.id === "custom-sculpted-wool-lobby-rug" ? "Made to Order" : "InStock" },
           ],
           offers: product.fobPrice
             ? {
@@ -146,7 +146,7 @@ export function productItemListJsonLd({
                 priceCurrency: product.fobPrice.currency,
                 lowPrice: product.fobPrice.lowPrice,
                 highPrice: product.fobPrice.highPrice,
-                availability: "https://schema.org/InStock",
+                availability: product.id === "custom-sculpted-wool-lobby-rug" ? "https://schema.org/PreOrder" : "https://schema.org/InStock",
                 itemCondition: "https://schema.org/NewCondition",
                 seller: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
               }

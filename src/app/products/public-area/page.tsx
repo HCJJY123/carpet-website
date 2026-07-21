@@ -13,6 +13,7 @@ export default function CategoryPage() {
   const categoryId = "public-area";
   const currentCategory = productCategories.find((c) => c.id === categoryId);
   const categoryProducts = products.filter((p) => p.category === categoryId);
+  const customRugId = "custom-sculpted-wool-lobby-rug";
   const jsonLd = productItemListJsonLd({
     name: "Public Area Commercial Carpet",
     description: "Heavy-duty public area carpet systems for airports, exhibition centers, corridors, retail, and high-traffic commercial projects.",
@@ -33,15 +34,34 @@ export default function CategoryPage() {
       <section className="section-padding">
         <div className="container-fox">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {categoryProducts.map((p) => (
-              <Link key={p.id} href={`/products/${categoryId}/${p.id}`} className="group block bg-white border border-border p-8 hover:shadow-2xl transition-all duration-500 rounded-sm">
+            {categoryProducts.map((p) => {
+              const isCustomRug = p.id === customRugId;
+              return (
+              <Link
+                key={p.id}
+                href={`/products/${categoryId}/${p.id}`}
+                className="group block bg-white border border-border p-8 hover:shadow-2xl transition-all duration-500 rounded-sm"
+                data-track-event={isCustomRug ? "select_item" : undefined}
+                data-item-id={isCustomRug ? "VHC-PA-SWR-001" : undefined}
+                data-item-name={isCustomRug ? "Custom Sculpted Wool Lobby Rug" : undefined}
+                data-item-category={isCustomRug ? "Public Area Carpets" : undefined}
+                data-item-variant={isCustomRug ? "Sand Beige Concentric Square" : undefined}
+                data-price={isCustomRug ? "500" : undefined}
+                data-currency={isCustomRug ? "USD" : undefined}
+              >
                 <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
                    <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                 </div>
                 <h3 className="font-bold text-xl text-primary uppercase mb-6 h-14 leading-tight group-hover:text-accent transition-colors">{p.name}</h3>
+                <p className="mb-6 text-sm leading-relaxed text-muted">{p.description}</p>
+                {isCustomRug && (
+                  <p className="mb-4 inline-flex border border-accent/30 px-3 py-2 text-[10px] font-black uppercase tracking-[0.16em] text-accent">
+                    Decorative Area Rug
+                  </p>
+                )}
                 <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">
                   <div className="flex justify-between gap-4">
-                    <span className="text-muted">FOB Price</span>
+                    <span className="text-muted">{isCustomRug ? "Starting Price" : "FOB Price"}</span>
                     <span className="text-right font-black text-primary">{p.fobPrice?.display}</span>
                   </div>
                   <div className="flex justify-between gap-4">
@@ -50,7 +70,7 @@ export default function CategoryPage() {
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Availability</span>
-                    <span className="text-right font-black text-primary">In Stock / Made to Order</span>
+                    <span className="text-right font-black text-primary">{isCustomRug ? "Made to Order" : "In Stock / Made to Order"}</span>
                   </div>
                 </div>
                 <div className="flex justify-between items-center text-[10px] font-black text-accent uppercase tracking-widest border-t border-border pt-6">
@@ -58,7 +78,8 @@ export default function CategoryPage() {
                    <span>→</span>
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
           {categoryProducts.length === 0 && (
             <div className="text-center py-20 border-2 border-dashed border-border">
