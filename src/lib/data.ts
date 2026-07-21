@@ -205,6 +205,47 @@ export const products: Product[] = [
     spec: { material: "100% Natural Sisal", size: "4m Roll", colors: [] },
     technicalSpecs: { fireRating: "Class I (FR)", trafficClass: "Class 32", yarnSystem: "Flatweave", backing: "Natural Latex", pileWeight: "56oz", totalThickness: "7mm", rollWidth: "4m", antistatic: "Permanent" },
     features: ["Biophilic Design", "Natural Fiber"]
+  },
+  {
+    id: "custom-sculpted-wool-lobby-rug",
+    name: "Custom Sculpted Wool Lobby Rug",
+    category: "public-area",
+    description: "Made-to-order sculpted wool area rug for hotel lobbies, lounges and luxury reception spaces.",
+    longDescription: "Vishomecarpet Custom Sculpted Wool Lobby Rug is a made-to-order decorative area rug with a sand-beige concentric-square texture for hotel lobbies, executive lounges, reception areas, luxury clubs, villas and commercial showrooms. It is a loose-laid feature rug rather than wall-to-wall broadloom, and final material composition, construction, backing, fire-rating requirements and maintenance conditions must be confirmed before project approval.",
+    image: "/images/products/public-area/custom-sculpted-wool-lobby-rug/04-commercial-showroom-custom-rug.webp",
+    imageAlt: "Custom sculpted wool rug in a premium commercial showroom",
+    gallery: [
+      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/04-commercial-showroom-custom-rug.webp", alt: "Custom sculpted wool rug in a premium commercial showroom" },
+      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/01-main-hotel-lobby-wool-rug.webp", alt: "Custom sculpted wool lobby rug with sand beige concentric square pattern" },
+      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/02-executive-lounge-sculpted-rug.webp", alt: "Custom wool area rug for an executive hotel lounge" },
+      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/03-reception-area-geometric-wool-rug.webp", alt: "Geometric wool rug for a luxury commercial reception area" },
+      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/05-private-club-lounge-wool-rug.webp", alt: "Sand beige sculpted wool rug in a private club lounge" }
+    ],
+    moq: "10 Pieces",
+    leadTime: "Confirmed After Size and Specification Approval",
+    fobPrice: { display: "US$500 / Piece", lowPrice: "500", highPrice: "500", currency: "USD", unit: "Piece" },
+    spec: {
+      material: "Wool Material; Exact Fiber Composition Confirmed Before Order",
+      size: "Custom Dimensions",
+      colors: [
+        { name: "Sand Beige", hex: "#D6C6AA" },
+        { name: "Ivory Taupe", hex: "#E7DDCD" },
+        { name: "Warm Taupe", hex: "#B8A58C" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "Not Claimed Until Required Standard and Product Test Are Confirmed",
+      trafficClass: "Decorative Indoor Public Spaces; Traffic Rating Must Be Confirmed",
+      fiber: "Wool Material; Exact Fiber Composition Confirmed Before Order",
+      yarnSystem: "Final Production Construction Confirmed by Specification",
+      backing: "Confirmed According to Project Requirement",
+      pileWeight: "Confirmed by Project Specification",
+      totalThickness: "Confirmed by Project Specification",
+      rollWidth: "Custom Dimensions",
+      soundInsulation: "Available on Request",
+      antistatic: "Available on Request"
+    },
+    features: ["Wool Material", "Sculpted Geometric Texture", "Custom Size and Color", "MOQ 10 Pieces"]
   }
 ];
 

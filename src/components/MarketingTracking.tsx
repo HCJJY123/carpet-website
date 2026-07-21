@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
+import { trackAnalyticsEvent } from "@/lib/tracking";
 
 // 你需要在这里填入你的 Google Ads ID (AW-XXXXX)
 const GOOGLE_ADS_ID = "AW-18306142236"; 
@@ -20,6 +21,21 @@ export default function MarketingTracking() {
 
       const href = anchor.href || "";
       const text = anchor.innerText.toLowerCase();
+      const trackEvent = anchor.dataset.trackEvent;
+
+      if (trackEvent) {
+        trackAnalyticsEvent(trackEvent, {
+          item_id: anchor.dataset.itemId,
+          item_name: anchor.dataset.itemName,
+          item_category: anchor.dataset.itemCategory,
+          item_variant: anchor.dataset.itemVariant,
+          price: anchor.dataset.price ? Number(anchor.dataset.price) : undefined,
+          currency: anchor.dataset.currency,
+          href,
+          link_text: anchor.innerText,
+          page_path: window.location.pathname,
+        });
+      }
 
       // WhatsApp 追踪
       if (href.includes("wa.me") || href.includes("whatsapp.com") || text.includes("whatsapp")) {

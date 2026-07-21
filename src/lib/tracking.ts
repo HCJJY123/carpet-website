@@ -12,6 +12,18 @@ declare global {
   }
 }
 
+export function trackAnalyticsEvent(event: string, payload: Record<string, unknown>) {
+  if (typeof window === "undefined") return;
+
+  if (typeof window.gtag === "function") {
+    window.gtag("event", event, payload);
+  }
+
+  if (typeof window.clarity === "function") {
+    window.clarity("event", event);
+  }
+}
+
 export function trackLeadConversion({
   formName,
   product,
