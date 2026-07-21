@@ -97,10 +97,10 @@ const options = [
     cta: "View This Product",
   },
   {
-    title: "Axminster 80/20 Wool Blend Hotel Carpet",
-    description: "A premium woven wool-blend option for buyers requiring traditional Axminster construction, higher specifications and large hospitality projects.",
+    title: "Premium Wool-Blend Hotel Broadloom",
+    description: "A premium wool-blend broadloom option for buyers comparing higher hospitality specifications and larger project requirements.",
     href: "/products/wall-to-wall/luxury-hotel-broadloom",
-    cta: "View Woven Axminster Carpet",
+    cta: "View Hotel Broadloom Option",
   },
   {
     title: "3D HD Printed Nylon Hotel Carpet",
@@ -128,7 +128,7 @@ const advantages = [
   ["Custom Guestroom Design", "Adjust pattern scale, color direction and visual density for bedrooms and suites."],
   ["Project-Based Specification", "Material, backing, pile and construction are confirmed according to the actual project."],
   ["B2B Export Support", "Receive quotation preparation, cutting-plan coordination, packing and shipping support."],
-  ["Clear Product Selection", "Compare printed, custom and woven Axminster options before confirming the order."],
+  ["Clear Product Selection", "Compare printed, custom and premium broadloom options before confirming the order."],
 ];
 
 const faqs = [
@@ -136,7 +136,7 @@ const faqs = [
   ["Can Vishomecarpet match our hotel interior design?", "Yes. Buyers can send interior renderings, reference images, color palettes, CAD drawings or an existing carpet sample. The pattern scale and color direction can then be reviewed for the guestroom or suite layout."],
   ["What is the minimum order quantity?", "The reference minimum order quantity is 100 SQM. Final MOQ may depend on the selected material, construction and number of custom colorways."],
   ["What is the price of custom hotel room carpet?", "The reference FOB price is US$3.10-9.70 per square meter. Final pricing depends on the material, construction, pile specification, pattern complexity, quantity and packing requirements."],
-  ["Is this product a woven Axminster carpet?", "The final construction must be confirmed according to the selected project specification. Buyers who specifically require a traditional woven 80/20 wool-blend Axminster carpet should review Vishomecarpet's dedicated Axminster product or state that requirement when requesting a quotation."],
+  ["Is the construction fixed before quotation?", "No. The final construction must be confirmed according to the selected project specification. Buyers with a specific construction requirement should state it when requesting a quotation."],
   ["Which materials are available?", "Nylon and wool-nylon project options may be available. The final yarn composition should be confirmed together with the construction, application and project budget before ordering."],
   ["Can the carpet be used in hotel corridors?", "Yes. The pattern direction and scale can be adjusted for corridors, guestrooms, suites and connected hospitality spaces, subject to the selected technical specification."],
   ["What information is required for a quotation?", "Please provide the destination country, total carpet area, number of rooms, room dimensions, design reference, preferred material and target delivery date."],
@@ -411,7 +411,7 @@ export default function CustomLuxuryHotelRoomCarpetPage() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {[
               ["Wall-to-Wall Carpets", "/products/wall-to-wall"],
-              ["Axminster 80/20 Wool Blend Hotel Carpet", "/products/wall-to-wall/luxury-hotel-broadloom"],
+              ["Premium Wool-Blend Hotel Broadloom", "/products/wall-to-wall/luxury-hotel-broadloom"],
               ["3D HD Printed Nylon Hotel Carpet", "/products/wall-to-wall/3d-printed-hotel-carpet"],
               ["Custom Floral Printed Hotel Carpet", "/products/wall-to-wall/custom-floral-printed-hotel-carpet"],
               ["Hotel Carpet Solutions", "/hotel-carpet"],
