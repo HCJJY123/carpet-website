@@ -117,6 +117,29 @@ export const products: Product[] = [
     features: ["Unlimited Colors", "Fast Production"]
   },
   {
+    id: "custom-floral-printed-hotel-carpet",
+    name: "Custom Floral Printed Wall-to-Wall Hotel Carpet",
+    category: "wall-to-wall",
+    description: "Made-to-order floral printed broadloom for hotel and commercial interior projects.",
+    longDescription: "Made-to-order custom floral printed wall-to-wall carpet for hospitality and commercial interior projects.",
+    image: "/images/products/wall-to-wall/custom-floral-printed-hotel-carpet/01-main-custom-floral-hotel-corridor.webp",
+    imageAlt: "Custom floral printed wall-to-wall hotel carpet for corridor and hospitality projects",
+    gallery: [
+      { src: "/images/products/wall-to-wall/custom-floral-printed-hotel-carpet/01-main-custom-floral-hotel-corridor.webp", alt: "Custom floral printed wall-to-wall hotel carpet installed in a luxury corridor" },
+      { src: "/images/products/wall-to-wall/custom-floral-printed-hotel-carpet/02-banquet-hall-floral-carpet.webp", alt: "Custom floral printed broadloom carpet for a hotel banquet hall" },
+      { src: "/images/products/wall-to-wall/custom-floral-printed-hotel-carpet/03-hotel-guestroom-printed-carpet.webp", alt: "Floral printed wall-to-wall carpet in a luxury hotel guestroom" },
+      { src: "/images/products/wall-to-wall/custom-floral-printed-hotel-carpet/04-office-lobby-custom-carpet.webp", alt: "Custom printed commercial carpet for a premium reception space" },
+      { src: "/images/products/wall-to-wall/custom-floral-printed-hotel-carpet/05-banquet-hall-project-view.webp", alt: "Floral printed hotel carpet in a bright banquet and conference hall" },
+      { src: "/images/products/wall-to-wall/custom-floral-printed-hotel-carpet/06-hotel-corridor-project-view.webp", alt: "Custom printed broadloom carpet installed along a hotel guestroom corridor" }
+    ],
+    moq: "100 SQM",
+    leadTime: "Confirmed After Artwork and Specification Review",
+    fobPrice: { display: "US$3.60-6.40 / SQM", lowPrice: "3.60", highPrice: "6.40", currency: "USD", unit: "SQM" },
+    spec: { material: "Polypropylene, Nylon, Polyester or Wool-Blend Options", size: "Project Specification", colors: [] },
+    technicalSpecs: { fireRating: "Confirmed According to Project Specification", trafficClass: "Confirmed According to Project Specification", yarnSystem: "Printed Tufted Broadloom", backing: "Confirmed According to Project Specification", pileWeight: "Custom-Made", totalThickness: "Custom-Made", rollWidth: "Confirmed According to Project Specification", antistatic: "Confirmed According to Project Specification" },
+    features: ["Custom Floral Pattern", "Custom Colorways", "Multiple Material Options", "Custom Pile Height"]
+  },
+  {
     id: "3d-printed-luxury-banquet-carpet",
     name: "Custom 3D Printed Banquet Hall Carpet | Hotel Hospitality Wall to Wall Broadloom Carpet",
     category: "wall-to-wall",

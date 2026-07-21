@@ -31,6 +31,13 @@ export default function CategoryPage() {
                   <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                 </div>
                 <h3 className="font-bold text-xl text-primary uppercase mb-6 h-14 leading-tight group-hover:text-accent transition-colors">{p.name}</h3>
+                {p.fobPrice && (
+                  <div className="mb-6 grid grid-cols-2 gap-4 text-xs">
+                    <div><span className="block text-[9px] font-black uppercase tracking-widest text-primary/40">FOB Price</span><span className="font-bold text-primary">{p.fobPrice.display}</span></div>
+                    <div><span className="block text-[9px] font-black uppercase tracking-widest text-primary/40">MOQ</span><span className="font-bold text-primary">{p.moq}</span></div>
+                    {p.id === "custom-floral-printed-hotel-carpet" && <div className="col-span-2"><span className="block text-[9px] font-black uppercase tracking-widest text-primary/40">Availability</span><span className="font-bold text-primary">Made to Order</span></div>}
+                  </div>
+                )}
                 <div className="flex justify-between items-center text-[10px] font-black text-accent uppercase tracking-widest border-t border-border pt-6">
                   <span>Technical Details</span>
                   <span>→</span>
