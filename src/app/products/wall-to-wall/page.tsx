@@ -59,6 +59,18 @@ export default function CategoryPage() {
                 </div>
               </Link>
             ))}
+            <Link href="/products/wall-to-wall/custom-floral-printed-hotel-carpet" className="group block bg-white border border-border p-8 hover:shadow-2xl transition-all duration-500 rounded-sm">
+              <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
+                <ProductImage src="/images/products/wall-to-wall/custom-floral-printed-hotel-carpet/01-main-custom-floral-hotel-corridor.webp" alt="Custom floral printed wall-to-wall hotel carpet for corridor and hospitality projects" className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+              </div>
+              <h3 className="font-bold text-xl text-primary uppercase mb-6 h-14 leading-tight group-hover:text-accent transition-colors">Custom Floral Printed Wall-to-Wall Hotel Carpet</h3>
+              <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">
+                <div className="flex justify-between gap-4"><span className="text-muted">FOB Price</span><span className="text-right font-black text-primary">US$3.60-6.40 / SQM</span></div>
+                <div className="flex justify-between gap-4"><span className="text-muted">MOQ</span><span className="text-right font-black text-primary">100 SQM</span></div>
+                <div className="flex justify-between gap-4"><span className="text-muted">Availability</span><span className="text-right font-black text-primary">Made to Order</span></div>
+              </div>
+              <div className="flex justify-between items-center text-[10px] font-black text-accent uppercase tracking-widest border-t border-border pt-6"><span>Technical Details</span><span>→</span></div>
+            </Link>
           </div>
         </div>
       </section>
