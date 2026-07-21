@@ -99,8 +99,8 @@ export default function CommercialCarpetTilesPage() {
             >
               <div className="aspect-[4/3] overflow-hidden rounded-xl border border-border bg-white">
                 <ProductImage
-                  src={featuredTile.image}
-                  alt={featuredTile.imageAlt || featuredTile.name}
+                  src="/images/products/luxury-hotel-carpet-tile-50x50cm/03-hotel-corridor-installed-scene.jpg"
+                  alt="Hotel corridor installed with modular carpet tiles for commercial carpet floor projects"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
