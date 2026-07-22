@@ -27,7 +27,7 @@ export default function ProjectsPage() {
             {caseStudies.map((cs) => (
               <Link key={cs.id} href={`/projects/${cs.id}`} className="group block border-b border-border pb-10 md:pb-16">
                 <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-sm shadow-xl md:mb-10">
-                  <ProductImage src={cs.image} alt={cs.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <ProductImage src={cs.image} alt={cs.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]" sizes="(max-width: 768px) 100vw, 33vw" />
                   <div className="absolute top-6 left-6 bg-primary px-4 py-2 text-[10px] font-black text-white uppercase tracking-widest">
                     {cs.category === "carpet-tiles" ? "Modular" : "Hospitality"}
                   </div>
