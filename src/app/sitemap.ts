@@ -20,6 +20,7 @@ const staticRoutes: { url: string; priority: number; changeFrequency: MetadataRo
   { url: "/factory", priority: 0.8, changeFrequency: "monthly" },
   { url: "/faq", priority: 0.8, changeFrequency: "monthly" },
   { url: "/contact", priority: 0.7, changeFrequency: "yearly" },
+  { url: "/privacy-policy", priority: 0.6, changeFrequency: "yearly" },
   { url: "/request-sample-box", priority: 0.8, changeFrequency: "monthly" },
   { url: "/solutions", priority: 0.75, changeFrequency: "monthly" },
   { url: "/solutions/hotel-hospitality", priority: 0.75, changeFrequency: "monthly" },
