@@ -1,12 +1,34 @@
 import { brandInfo } from "@/lib/data";
 
-export function getWhatsAppBusinessUrl(message: string) {
+export interface WhatsAppContext {
+  placement?: string;
+  product?: string;
+  intent?: string;
+  pagePath?: string;
+  country?: string;
+  quantity?: string;
+}
+
+export function getWhatsAppBusinessUrl(message: string, context: WhatsAppContext = {}) {
   const phoneNumber = brandInfo.whatsapp.replace(/\D/g, "");
-  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  const contextLines = [
+    context.product ? `Product / Topic: ${context.product}` : "",
+    context.quantity ? `Quantity: ${context.quantity}` : "",
+    context.country ? `Country: ${context.country}` : "",
+    context.intent ? `Inquiry Type: ${context.intent}` : "",
+    context.pagePath ? `Source Page: ${context.pagePath}` : "",
+    context.placement ? `Button: ${context.placement}` : "",
+  ].filter(Boolean);
+
+  const fullMessage = contextLines.length ? `${message}\n\n${contextLines.join("\n")}` : message;
+
+  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
 }
 
 export const whatsappBusinessMessages = {
-  header: `Hello Zara, I am interested in your commercial carpet solutions. Could you help me with a project quote?`,
-  floating: `Hello Zara, I am interested in your commercial carpet solutions. Could you help me with a project quote?`,
-  contact: `Hello Zara, I am interested in your commercial carpet solutions. Could you help me with a project quote?`,
+  header: `Hello, I am interested in commercial carpet for a project. Please send me price, sample options, MOQ, lead time, and technical data sheet.`,
+  floating: `Hello, I am interested in commercial carpet for a project. Please send me price, sample options, MOQ, lead time, and technical data sheet.`,
+  contact: `Hello, I am interested in commercial carpet for a project. Please send me price, sample options, MOQ, lead time, and technical data sheet.`,
+  sampleBox: `Hello, I would like to request a commercial carpet sample box. Please send me sample options, preparation time, courier options, MOQ, price, and technical data sheet.`,
 };

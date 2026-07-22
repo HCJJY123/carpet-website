@@ -1,4 +1,4 @@
-import { brandInfo, faqSections } from "@/lib/data";
+import { brandInfo } from "@/lib/data";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 
 export default function JsonLd() {
@@ -11,7 +11,7 @@ export default function JsonLd() {
     url: brandInfo.url,
     logo: absoluteUrl("/logo.svg"),
     image: absoluteUrl("/images/og-cover.jpg"),
-    email: brandInfo.email,
+    email: [brandInfo.email, brandInfo.backupEmail],
     telephone: brandInfo.phone,
     address: {
       "@type": "PostalAddress",
@@ -20,14 +20,23 @@ export default function JsonLd() {
       postalCode: "301700",
       addressCountry: "CN",
     },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: brandInfo.phone,
-      contactType: "sales",
-      email: brandInfo.email,
-      areaServed: ["North America", "Europe", "Australia", "Asia", "Middle East"],
-      availableLanguage: ["English", "Chinese"],
-    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: brandInfo.phone,
+        contactType: "sales",
+        email: brandInfo.email,
+        areaServed: ["North America", "Europe", "Australia", "Asia", "Middle East"],
+        availableLanguage: ["English", "Chinese"],
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "backup sales",
+        email: brandInfo.backupEmail,
+        areaServed: ["North America", "Europe", "Australia", "Asia", "Middle East"],
+        availableLanguage: ["English", "Chinese"],
+      },
+    ],
     sameAs: [brandInfo.url],
   };
 
@@ -41,7 +50,7 @@ export default function JsonLd() {
       "Vishome Global Commercial Carpet Co., Ltd. is a Tianjin-based B2B manufacturer supplying carpet tiles, hotel broadloom, public-area carpet, and custom commercial flooring for export projects.",
     url: brandInfo.url,
     telephone: brandInfo.phone,
-    email: brandInfo.email,
+    email: [brandInfo.email, brandInfo.backupEmail],
     logo: absoluteUrl("/logo.svg"),
     image: [absoluteUrl("/images/og-cover.jpg"), absoluteUrl("/images/hero-home.jpg")],
     priceRange: "$$",
@@ -127,29 +136,12 @@ export default function JsonLd() {
     ],
   };
 
-  // Flatten all FAQs for FAQPage Schema (Critical for GEO/SEO)
-  const faqData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqSections.flatMap(section => 
-      section.questions.map(q => ({
-        "@type": "Question",
-        "name": q.q,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": q.a
-        }
-      }))
-    )
-  };
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(organizationData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(localBusinessData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(websiteData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbData) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqData) }} />
     </>
   );
 }

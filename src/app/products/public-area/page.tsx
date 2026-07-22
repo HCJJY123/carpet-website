@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 export default function CategoryPage() {
   const categoryId = "public-area";
   const currentCategory = productCategories.find((c) => c.id === categoryId);
-  // 获取该分类下的真实产品
   const categoryProducts = products.filter((p) => p.category === categoryId);
   const customRugId = "custom-sculpted-wool-lobby-rug";
   const jsonLd = productItemListJsonLd({

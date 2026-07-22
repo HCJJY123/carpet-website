@@ -11,241 +11,375 @@ export const brandInfo = {
   name: "Vishome Global Commercial Carpet Co., Ltd.",
   shortName: "Visfurn",
   url: "https://www.vishomecarpet.com",
-  email: "oilero@outlook.com",
+  email: "sales@vishomecarpet.com",
+  backupEmail: "oilero@outlook.com",
   phone: "+86 152 2288 5400",
   whatsapp: "+86 152 2288 5400",
+  wechat: "8615222885400",
   address: "Cuihuangkou Town, Wuqing District, Tianjin 301700, China",
   stats: { area: "50,000㎡", employees: "900+", markets: "45+", experience: "15+ Years" }
 };
 
 export const products: Product[] = [
-  // --- CARPET TILES SERIES ---
+
   {
-    id: "nylon-tiles-elite",
-    name: "Premium Nylon 6.6 Commercial Carpet Tiles",
+    id: "luxury-hotel-carpet-tile-50x50cm",
+    name: "Luxury Hotel Carpet Tile 50x50cm | Commercial Nylon Carpet Tiles",
     category: "carpet-tiles",
-    description: "Modular 50x50cm tiles engineered for high-traffic corporate offices and hotel corridors.",
-    longDescription: "Our Premium Nylon 6.6 series represents the pinnacle of modular flooring performance. Designed for global commercial standards.",
-    image: "/images/carpet-tile-premium.jpg",
-    moq: "200 SQM",
-    leadTime: "10-14 Days",
-    fobPrice: { display: "US$5.80-11.50 / SQM", lowPrice: "5.80", highPrice: "11.50", currency: "USD", unit: "SQM" },
-    spec: { material: "100% Nylon 6.6", size: "50x50 cm", colors: [] },
-    technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 33 Heavy Commercial", yarnSystem: "Multi-Level Loop", backing: "Bitumen with Glass Fiber", pileWeight: "20 oz/yd²", totalThickness: "6.5 mm", soundInsulation: "24dB", antistatic: "< 2.0 kV" },
-    features: ["Stain Resistance", "Dimensional Stability"]
+    description: "Vishomecarpet 50x50cm commercial carpet tiles for hotel carpet floors, office carpet, corridors, meeting rooms, and B2B modular flooring projects.",
+    longDescription: "Vishomecarpet Luxury Hotel Carpet Tile 50x50cm is a modular commercial carpet tile solution for hotel carpet floor renovation, office carpet projects, corridors, lobbies, meeting rooms, and global B2B flooring buyers. The tile carpet format supports easy installation, selective replacement, color coordination, and project-scale supply for contractors, distributors, hotels, offices, and commercial renovation teams.",
+    image: "/images/products/luxury-hotel-carpet-tile-50x50cm/01-main-carpet-tile-top-view.jpg",
+    imageAlt: "Vishomecarpet luxury hotel carpet tile 50x50cm commercial nylon carpet tiles for office and hotel carpet floor projects",
+    gallery: [
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/01-main-carpet-tile-top-view.jpg", alt: "Top view of Vishomecarpet 50x50cm commercial carpet tiles for hotel carpet floor and office carpet projects" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/02-close-up-pile-texture.jpg", alt: "Close-up pile texture of nylon carpet tiles for commercial carpet and tile floor carpet applications" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/03-hotel-corridor-installed-scene.jpg", alt: "Hotel corridor installed scene with tile carpet floor and modular commercial carpet tiles" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/04-carpet-tile-backing-underside.jpg", alt: "Backing underside detail of 50x50cm carpet tile for commercial office carpet installation" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/05-color-range-swatches.jpg", alt: "Color range swatches for Vishomecarpet tile decor carpet and office carpet projects" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/06-hotel-guest-room-application.jpg", alt: "Hotel guest room application with 50x50cm carpet tiles and comfortable floor carpets" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/07-hotel-lobby-corridor-application.jpg", alt: "Hotel lobby and corridor application using commercial carpet tiles for heavy traffic areas" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/08-conference-room-carpet-tiles.jpg", alt: "Conference room with tile office carpet and modular nylon carpet tiles" },
+      { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/09-executive-office-carpet-tiles.jpg", alt: "Executive office carpet tiles for commercial office carpet and tile floor carpet projects" }
+    ],
+    moq: "1 Piece",
+    leadTime: "7-15 Days",
+    fobPrice: { display: "US$1.40-2.20 / Piece", lowPrice: "1.40", highPrice: "2.20", currency: "USD", unit: "Piece" },
+    spec: {
+      material: "Nylon / PP Option",
+      size: "50x50 cm",
+      colors: [
+        { name: "Textured Gray", hex: "#6D6A63" },
+        { name: "Charcoal", hex: "#353535" },
+        { name: "Warm Taupe", hex: "#8B8172" },
+        { name: "Soft Beige", hex: "#B9AD9A" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I Option",
+      trafficClass: "Heavy Commercial / Hotel Use",
+      fiber: "Nylon / PP Option",
+      yarnSystem: "Tufted Cut Pile / Multi-Level Loop Option",
+      backing: "PVC Cushion / Bitumen / PE Option",
+      pileWeight: "500-780 g/sqm",
+      totalThickness: "5.5-7.0mm",
+      soundInsulation: "Acoustic Comfort Option",
+      antistatic: "Low Static Office Use"
+    },
+    features: ["Hotel Carpet Floor", "Office Carpet", "Nylon Carpet Tiles", "Commercial Carpet Tiles"]
   },
   {
     id: "ecocore-pe-backing-carpet-tiles",
     name: "Vishomecarpet EcoCore PVC-Free PE Backing Carpet Tiles",
     category: "carpet-tiles",
-    description: "Eco-friendly modular carpet tiles with PVC-free PE backing for sustainable green buildings.",
-    longDescription: "Developed for LEED-oriented projects where sustainability and durability are non-negotiable.",
+    description: "Eco-friendly 50x50cm modular carpet tiles with PVC-free PE backing for sustainable offices, green buildings, and heavy commercial interiors.",
+    longDescription: "Vishomecarpet EcoCore PE Backing Carpet Tiles are developed for B2B flooring projects where sustainability, modular flexibility, and commercial durability need to work together. The product combines a dense textured loop pile surface with a stable PVC-free PE backing structure, creating a practical flooring solution for office buildings, coworking spaces, education facilities, public workspaces, and LEED-oriented green building interiors.",
     image: "/images/products/ecocore-pe-backing/01-hero-white-background.png",
+    imageAlt: "Vishomecarpet EcoCore PVC-free PE backing 50x50cm commercial carpet tile for sustainable office flooring",
     moq: "Project-Based",
     leadTime: "10-20 Days",
     fobPrice: { display: "US$4.20-8.90 / SQM", lowPrice: "4.20", highPrice: "8.90", currency: "USD", unit: "SQM" },
-    spec: { material: "Solution-Dyed Nylon", size: "50x50 cm", colors: [] },
-    technicalSpecs: { fireRating: "Class I", trafficClass: "Heavy Commercial", yarnSystem: "Textured Loop", backing: "PVC-Free PE", pileWeight: "550 g/sqm", totalThickness: "6.5mm", soundInsulation: "22dB", antistatic: "Yes" },
-    features: ["PVC-Free", "100% Recyclable"]
+    spec: {
+      material: "Solution-Dyed Nylon / Synthetic Fiber Option",
+      size: "50x50 cm",
+      colors: [
+        { name: "Carbon Gray", hex: "#4A4D4D" },
+        { name: "Warm Greige", hex: "#8B857A" },
+        { name: "Silver Ash", hex: "#A3A6A3" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I Option",
+      trafficClass: "Heavy Commercial Use",
+      yarnSystem: "Tufted Multi-Level Loop",
+      backing: "PVC-Free PE Backing",
+      pileWeight: "500-600 g/sqm",
+      totalThickness: "6.0-7.0mm",
+      soundInsulation: "Acoustic Comfort Option",
+      antistatic: "Low Static / Office Use"
+    },
+    features: ["PVC-Free PE Backing", "Low VOC", "Easy Replacement", "Green Building Ready"]
   },
   {
-    id: "ct-premium",
-    name: "Elite Patterned Commercial Carpet Tiles",
+    id: "50x50-nylon-pp-office-carpet-tiles",
+    name: "50x50 Nylon PP Office Carpet Tiles",
     category: "carpet-tiles",
-    description: "Multi-level loop modular tiles for executive suites and designer office fit-outs.",
-    longDescription: "Intricate geometric patterns combined with high-performance backing for demanding commercial interiors.",
-    image: "/images/category-tiles.png",
-    moq: "500 SQM",
-    leadTime: "15-20 Days",
-    spec: { material: "Nylon 6.6", size: "50x50 cm", colors: [] },
-    technicalSpecs: { fireRating: "Class I", trafficClass: "Class 33", yarnSystem: "Patterned Loop", backing: "Reinforced Bitumen", pileWeight: "24oz", totalThickness: "7.0mm", soundInsulation: "26dB", antistatic: "Yes" },
-    features: ["Design Fidelity", "Acoustic Comfort"]
+    description: "Vishomecarpet 50x50 nylon PP office carpet tiles for commercial carpet tile floor projects, hotel carpet floors, offices, corridors, and modular flooring.",
+    longDescription: "Vishomecarpet 50x50 Nylon PP Office Carpet Tiles are modular commercial carpet tiles designed for B2B office carpet, hotel carpet floor, corridor, retail, and public workspace projects. The tile carpet floor format supports quick installation, easy replacement, flexible layout design, and factory custom options for buyers who need nylon carpet tiles, PP carpet tiles, tile office carpet, tile floor carpet, and interlocking carpet tiles for large commercial interiors.",
+    image: "/images/products/50x50-nylon-pp-office-carpet-tiles/01-hero-product.png",
+    imageAlt: "Vishomecarpet 50x50 nylon PP office carpet tiles for commercial carpet tile floor projects",
+    gallery: [
+      { src: "/images/products/50x50-nylon-pp-office-carpet-tiles/01-hero-product.png", alt: "50x50 nylon PP office carpet tiles color stack for commercial carpet projects" },
+      { src: "/images/products/50x50-nylon-pp-office-carpet-tiles/02-top-view.png", alt: "Top view of tile carpet floor pattern for office carpet and hotel carpet floor use" },
+      { src: "/images/products/50x50-nylon-pp-office-carpet-tiles/03-stack-display.png", alt: "Stack display of nylon carpet tiles and PP carpet tiles for commercial carpet flooring" },
+      { src: "/images/products/50x50-nylon-pp-office-carpet-tiles/04-texture-close-up.png", alt: "Texture close up of tile nylon carpet for office carpet and commercial carpet tiles" },
+      { src: "/images/products/50x50-nylon-pp-office-carpet-tiles/05-modern-office-application.png", alt: "Modern office application with 50x50 commercial carpet tiles and modular floor carpets" },
+      { src: "/images/products/50x50-nylon-pp-office-carpet-tiles/06-installation-demonstration.png", alt: "Installation demonstration of interlocking carpet tiles for tile office carpet projects" },
+      { src: "/images/products/50x50-nylon-pp-office-carpet-tiles/07-product-structure.png", alt: "Product structure of 50x50 nylon PP carpet tiles with backing layer for commercial carpet" },
+      { src: "/images/products/50x50-nylon-pp-office-carpet-tiles/08-wear-resistance.png", alt: "Wear resistance detail for nylon carpet tiles used in high traffic office carpet floors" },
+      { src: "/images/products/50x50-nylon-pp-office-carpet-tiles/09-oem-odm-custom-options.png", alt: "OEM ODM custom tile carpet options for office carpet and hotel carpet floor projects" },
+      { src: "/images/products/50x50-nylon-pp-office-carpet-tiles/10-factory-qc.png", alt: "Factory quality control for Vishomecarpet commercial carpet tiles and floor carpets" }
+    ],
+    moq: "200 SQM",
+    leadTime: "10-20 Days",
+    fobPrice: { display: "US$3.80-8.90 / SQM", lowPrice: "3.80", highPrice: "8.90", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "Nylon / PP Option",
+      size: "50x50 cm",
+      colors: [
+        { name: "Warm Beige", hex: "#B9A57C" },
+        { name: "Camel Brown", hex: "#9A7340" },
+        { name: "Charcoal", hex: "#2D3033" },
+        { name: "Graphite Gray", hex: "#55585D" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I Option",
+      trafficClass: "Commercial Office Use",
+      fiber: "Nylon / PP Option",
+      yarnSystem: "Tufted Loop / Multi-Level Loop",
+      backing: "PVC / Bitumen / PE Backing Option",
+      pileWeight: "450-650 g/sqm",
+      totalThickness: "5.5-7.0mm",
+      soundInsulation: "Office Acoustic Comfort Option",
+      antistatic: "Low Static Office Use"
+    },
+    features: ["50x50 Carpet Tiles", "Nylon / PP Option", "Office Carpet", "Interlocking Modular Floor"]
   },
   {
-    id: "ct-luxury",
-    name: "Luxury Shag Modular Carpet Tiles",
+    id: "nylon-office-carpet-tile",
+    name: "Nylon 50x50 Commercial Office Carpet Tile",
     category: "carpet-tiles",
-    description: "High-pile luxury tiles for premium boutique hotels and executive lounges.",
-    longDescription: "Modular convenience with the plush underfoot feel of high-end hotel guestroom carpeting.",
-    image: "/images/about/custom-design-support.webp",
+    description: "Heavy-duty 100% nylon modular carpet tiles in 50x50 cm for offices and high-traffic commercial interiors.",
+    longDescription: "Vishomecarpet Nylon 50x50 Commercial Office Carpet Tile is a heavy-duty modular flooring system built for demanding workplaces. Each 50x50 cm tile is tufted from resilient 100% nylon in a dense loop pile that resists crushing, matting, and abrasion, keeping open-plan offices, corridors, hotel carpet floors, and meeting rooms looking sharp under constant foot and chair-caster traffic.",
+    image: "/images/nylon-office-carpet-tile.jpg",
+    imageAlt: "Nylon 50x50 commercial office carpet tile by Vishomecarpet",
+    gallery: [
+      { src: "/images/products/nylon-office-carpet-tile/01-hero-commercial-office.png", alt: "Nylon 50x50 commercial office carpet tile in tonal grey loop pile by Vishomecarpet" },
+      { src: "/images/products/nylon-office-carpet-tile/02-corridor-gray-carpet-tiles.png", alt: "Nylon carpet tiles in quarter-turn modular layout showing checkerboard pile" },
+      { src: "/images/products/nylon-office-carpet-tile/03-office-hallway-blue-gray-carpet-tiles.png", alt: "Nylon carpet tiles installed in a modern office corridor and hallway" },
+      { src: "/images/products/nylon-office-carpet-tile/04-lobby-modular-carpet-tiles.png", alt: "Commercial nylon carpet tiles in an office lobby and meeting area" }
+    ],
     moq: "300 SQM",
-    leadTime: "20-25 Days",
-    spec: { material: "Polyamide", size: "50x50 cm", colors: [] },
-    technicalSpecs: { fireRating: "Class I", trafficClass: "Class 32", yarnSystem: "High Pile", backing: "PVC/Bitumen", pileWeight: "32oz", totalThickness: "9.5mm", soundInsulation: "28dB", antistatic: "Yes" },
-    features: ["Soft Texture", "Premium Aesthetic"]
+    leadTime: "25 Days",
+    fobPrice: { display: "US$5.10-6.30 / SQM", lowPrice: "5.10", highPrice: "6.30", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "100% Nylon",
+      size: "50x50 cm",
+      colors: [
+        { name: "Charcoal Gray", hex: "#3F4648" },
+        { name: "Slate Blue", hex: "#5F7F89" },
+        { name: "Soft Taupe", hex: "#A59A8A" },
+        { name: "Light Gray", hex: "#8B8E8D" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I",
+      trafficClass: "Class 33",
+      fiber: "100% Nylon",
+      yarnSystem: "Tufted Loop Pile",
+      backing: "Bitumen (PVC / cushion available)",
+      pileWeight: "24oz (680 g/sqm)",
+      totalThickness: "6.5mm",
+      antistatic: "< 2.0 kV"
+    },
+    features: ["100% Nylon", "50x50 Modular Tile", "Class 33 Heavy Commercial", "Replaceable Office Carpet"]
   },
   {
-    id: "ct-hexagonal",
-    name: "Geometric Hexagonal Modular Carpet Tiles",
+    id: "gray-line-nylon-office-hotel-carpet-tiles",
+    name: "Vishomecarpet Gray Line Nylon Carpet Tiles for Office and Hotel Carpet Floors",
     category: "carpet-tiles",
-    description: "Unique hexagonal format for creative workplace branding and modern office zoning.",
-    longDescription: "Supports complex color pathing and modern biophilic office design layouts.",
-    image: "/images/blog-office-carpet.jpg",
-    moq: "500 SQM",
-    leadTime: "25 Days",
-    spec: { material: "Solution-Dyed Nylon", size: "50x50cm Hex", colors: [] },
-    technicalSpecs: { fireRating: "Class I", trafficClass: "Class 33", yarnSystem: "Dense Loop", backing: "Glass Fiber PVC", pileWeight: "22oz", totalThickness: "6.8mm", soundInsulation: "24dB", antistatic: "Yes" },
-    features: ["Unique Shape", "Creative Freedom"]
+    description: "Gray textured nylon carpet tiles with subtle linear accents for office carpet, hotel carpet floor, commercial carpet, and modular tile carpet projects.",
+    longDescription: "Vishomecarpet Gray Line Nylon Carpet Tiles are designed for buyers sourcing durable, modern carpet tiles for office carpet, hotel carpet floor, meeting room, corridor, and commercial carpet projects. The gray textured tile carpet design uses subtle yellow-green line accents to create a clean architectural floor effect, while the modular tile carpet floor format supports fast installation, flexible layout direction, and easy replacement for large commercial interiors.",
+    image: "/images/products/gray-line-nylon-office-carpet-tiles/01-office-workspace-carpet-tiles.png",
+    imageAlt: "Vishomecarpet gray line nylon carpet tiles installed in modern office carpet and hotel carpet floor project",
+    gallery: [
+      { src: "/images/products/gray-line-nylon-office-carpet-tiles/01-office-workspace-carpet-tiles.png", alt: "Modern office workspace with gray line nylon carpet tiles and modular tile carpet floor" },
+      { src: "/images/products/gray-line-nylon-office-carpet-tiles/02-hotel-lounge-carpet-tiles.png", alt: "Hotel lounge and public area with commercial carpet tiles in gray textured pattern" },
+      { src: "/images/products/gray-line-nylon-office-carpet-tiles/03-open-office-carpet-tiles.png", alt: "Open office carpet using gray nylon carpet tiles with tile decor carpet accents" },
+      { src: "/images/products/gray-line-nylon-office-carpet-tiles/04-meeting-room-carpet-tiles.png", alt: "Meeting room tile floor carpet with gray modular office carpet tiles" },
+      { src: "/images/products/gray-line-nylon-office-carpet-tiles/05-commercial-office-detail.png", alt: "Commercial office detail image showing gray tile nylon carpet and office carpet floor" },
+      { src: "/images/products/gray-line-nylon-office-carpet-tiles/06-conference-room-detail.png", alt: "Conference room hotel carpet floor application with interlocking carpet tiles" }
+    ],
+    moq: "200 SQM",
+    leadTime: "10-20 Days",
+    fobPrice: { display: "US$3.80-8.90 / SQM", lowPrice: "3.80", highPrice: "8.90", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "Nylon / PP Option",
+      size: "50x50 cm",
+      colors: [
+        { name: "Textured Gray", hex: "#777A75" },
+        { name: "Charcoal", hex: "#3B3F3D" },
+        { name: "Lime Accent", hex: "#9AA63B" },
+        { name: "Blue Accent", hex: "#4E687E" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I Option",
+      trafficClass: "Commercial Office / Hotel Use",
+      fiber: "Nylon / PP Option",
+      yarnSystem: "Tufted Multi-Level Loop",
+      backing: "PVC / Bitumen / PE Backing Option",
+      pileWeight: "450-650 g/sqm",
+      totalThickness: "5.5-7.0mm",
+      soundInsulation: "Office Acoustic Comfort Option",
+      antistatic: "Low Static Office Use"
+    },
+    features: ["Nylon Carpet Tiles", "Office Carpet", "Hotel Carpet Floor", "Commercial Carpet"]
   },
-
-  // --- WALL-TO-WALL SERIES ---
+  {
+    id: "commercial-nylon-tiles",
+    name: "Premium Nylon 6.6 Commercial Carpet Tiles",
+    category: "carpet-tiles",
+    description: "Modular 50x50cm tiles engineered for high-traffic corporate offices and corridors.",
+    longDescription: "Our Premium Nylon 6.6 series represents the pinnacle of modular flooring performance.",
+    image: "/images/carpet-tile-premium.jpg",
+    imageAlt: "Premium Nylon 6.6 commercial carpet tiles for high-traffic office corridors by Vishomecarpet",
+    moq: "200 SQM",
+    leadTime: "10-14 Days",
+    fobPrice: { display: "US$5.80-11.50 / SQM", lowPrice: "5.80", highPrice: "11.50", currency: "USD", unit: "SQM" },
+    spec: { material: "100% Nylon 6.6", size: "50x50 cm", colors: [] },
+    technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 33", yarnSystem: "Loop", backing: "Bitumen", pileWeight: "20oz", totalThickness: "6.5mm", soundInsulation: "24dB", antistatic: "Yes" },
+    features: ["Stain Resistance"]
+  },
   {
     id: "luxury-hotel-broadloom",
     name: "Axminster 80/20 Wool Blend Hotel Carpet",
     category: "wall-to-wall",
-    description: "Custom jacquard woven broadloom specifically for luxury hotel guest rooms.",
-    longDescription: "The gold standard for hospitality flooring, combining the luxury of wool with nylon's durability.",
+    description: "Custom jacquard woven broadloom specifically designed for 5-star hotel rooms.",
+    longDescription: "Visfurn Axminster collections offer the ultimate luxury and durability.",
     image: "/images/broadloom-premium.jpg",
+    imageAlt: "Axminster 80/20 wool blend wall-to-wall broadloom hotel carpet for luxury hospitality projects",
     moq: "500 SQM",
-    leadTime: "25-35 Days",
-    spec: { material: "80% Wool / 20% Nylon", size: "4m Roll", colors: [] },
-    technicalSpecs: { fireRating: "Class I", trafficClass: "Class 32", yarnSystem: "Jacquard Woven", backing: "Jute/Cotton", pileWeight: "40oz", totalThickness: "11mm", soundInsulation: "28dB", antistatic: "Permanent" },
-    features: ["Bespoke Patterns", "Wool Luxury"]
+    leadTime: "30 Days",
+    fobPrice: { display: "US$18.00-38.00 / SQM", lowPrice: "18.00", highPrice: "38.00", currency: "USD", unit: "SQM" },
+    spec: { material: "80% Wool / 20% Nylon", size: "4m Width", colors: [] },
+    technicalSpecs: { fireRating: "Class I", trafficClass: "32", yarnSystem: "Woven", backing: "Jute", pileWeight: "40oz", totalThickness: "11mm", soundInsulation: "28dB", antistatic: "Permanent" },
+    features: ["Custom Pattern"]
   },
   {
     id: "3d-printed-hotel-carpet",
     name: "3D HD Printed Nylon Hotel Carpet",
     category: "wall-to-wall",
-    description: "High-definition printed nylon broadloom for hotel corridors and lobbies.",
-    longDescription: "Photo-realistic patterns and rich color depth at a faster lead time than traditional weaving.",
+    description: "High-definition 3D-printed nylon broadloom for hotel guestrooms, corridors, and lobbies - fully custom patterns, fast 25-day production.",
+    longDescription: "Vishomecarpet's 3D HD Printed Nylon Hotel Carpet is a wall-to-wall broadloom flooring solution engineered for hospitality interiors. Using high-definition digital printing on a durable 100% nylon surface, it reproduces intricate, photo-realistic patterns and rich color depth that conventional dyed carpets cannot match - at a lower setup cost and faster lead time than woven Axminster or Wilton broadloom.",
     image: "/images/3d-printed-hotel-carpet-corridor.jpg",
+    imageAlt: "Seamless wall-to-wall printed hotel corridor carpet with ornamental pattern",
+    gallery: [
+      { src: "/images/3d-printed-hotel-carpet-roll.jpg", alt: "Wall-to-wall printed hotel broadloom carpet roll, 4m width, Vishomecarpet" },
+      { src: "/images/3d-printed-hotel-carpet-guestroom.jpg", alt: "Printed nylon broadloom carpet installed in a luxury hotel guestroom" },
+      { src: "/images/3d-printed-hotel-carpet.jpg", alt: "3D HD printed nylon hotel carpet swatch with elegant gold and burgundy pattern by Vishomecarpet" },
+      { src: "/images/3d-printed-hotel-carpet-ballroom.jpg", alt: "Large-scale printed broadloom carpet in a grand hotel lobby and ballroom" },
+      { src: "/images/3d-printed-hotel-carpet-macro.jpg", alt: "Close-up macro of dense printed nylon hotel carpet pile texture" },
+      { src: "/images/3d-printed-hotel-carpet-backing.jpg", alt: "ActionBac backing detail of printed nylon hotel broadloom carpet" },
+      { src: "/images/3d-printed-hotel-carpet-colorways.jpg", alt: "Hotel printed broadloom carpet pattern shown in four custom colorways" }
+    ],
     moq: "300 SQM",
     leadTime: "25 Days",
     fobPrice: { display: "US$3.50-7.80 / SQM", lowPrice: "3.50", highPrice: "7.80", currency: "USD", unit: "SQM" },
-    spec: { material: "HD Printed Nylon", size: "4m Roll", colors: [] },
-    technicalSpecs: { fireRating: "Class I", trafficClass: "33", yarnSystem: "HD Digital Print", backing: "ActionBac", pileWeight: "32oz", totalThickness: "9mm", rollWidth: "4m", soundInsulation: "25dB", antistatic: "Permanent" },
-    features: ["Unlimited Colors", "Fast Production"]
+    spec: { material: "100% Nylon (HD Printed)", size: "4m Width", colors: [] },
+    technicalSpecs: { fireRating: "Class I (ASTM E648)", trafficClass: "33", yarnSystem: "100% Nylon (HD Printed)", backing: "ActionBac (PP + Latex)", pileWeight: "32oz", totalThickness: "9mm", rollWidth: "4m", soundInsulation: "25dB", antistatic: "Permanent" },
+    features: ["Custom Pattern", "HD Printed Nylon", "Hospitality Broadloom"]
   },
   {
-    id: "3d-printed-luxury-banquet-carpet",
-    name: "Custom 3D Printed Banquet Hall Carpet | Hotel Hospitality Wall to Wall Broadloom Carpet",
+    id: "custom-luxury-hotel-room-carpet",
+    name: "Custom Luxury Hotel Room Carpet",
     category: "wall-to-wall",
-    description: "Vishomecarpet custom 3D printed banquet hall carpet — premium wall to wall broadloom for hotel hospitality, banquet rooms, and commercial flooring projects. Durable, fire-rated contract carpet manufacturer direct.",
-    longDescription: "Vishomecarpet is a leading commercial carpet manufacturer and wall to wall carpet factory specializing in custom 3D printed banquet hall carpet for the global hospitality industry. As a trusted hotel carpet supplier and contract carpet supplier, we utilize advanced high-speed inkjet printing systems to produce hospitality broadloom carpet with photo-realistic pattern precision and unlimited design flexibility. Unlike traditional woven carpets, our 3D printing process delivers low MOQs while maintaining Class 33 heavy commercial durability for banquet halls, hotel corridors, lobbies, ballrooms, and public areas. Each roll is engineered as a premium hospitality carpet supplier solution — offering stain resistance, acoustic comfort, permanent antistatic properties, and full fire rating to international commercial standards. Whether you need custom hotel carpet for a 5-star property, rolled carpet supplier for a large-scale project, or patterned broadloom carpet for a branded interior, Vishomecarpet delivers as a dedicated wall to wall carpet manufacturer and broadloom carpet factory with competitive wholesale pricing.",
-    image: "/images/products/3d-printed-banquet-carpet/01-guest-room-main.jpg",
-    imageAlt: "Premium custom 3D printed banquet hall carpet in luxury hotel guest room",
+    description: "Made-to-order wall-to-wall carpet for hotel guestrooms, suites and renovation projects.",
+    longDescription: "Made-to-order wall-to-wall carpet for hotel guestrooms, suites, corridors and hospitality renovation projects with customizable patterns, flexible material options and project-confirmed technical specifications.",
+    image: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/01-main-luxury-hotel-room-carpet.webp",
+    imageAlt: "Custom luxury wall-to-wall carpet installed in a five-star hotel guestroom",
     gallery: [
-      { src: "/images/products/3d-printed-banquet-carpet/01-guest-room-main.jpg", alt: "3D printed banquet carpet in luxury hotel guest room" },
-      { src: "/images/products/3d-printed-banquet-carpet/02-banquet-hall.jpg", alt: "Custom 3D printed carpet in grand banquet hall" },
-      { src: "/images/products/3d-printed-banquet-carpet/03-billiard-room.jpg", alt: "3D printed commercial carpet in billiard room" },
-      { src: "/images/products/3d-printed-banquet-carpet/04-corridor-detail.jpg", alt: "3D printed hotel corridor carpet pattern detail" },
-      { src: "/images/products/3d-printed-banquet-carpet/05-corridor-view.jpg", alt: "3D printed broadloom carpet hotel corridor view" }
+      { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/01-main-luxury-hotel-room-carpet.webp", alt: "Custom luxury wall-to-wall carpet installed in a five-star hotel guestroom" },
+      { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/02-hotel-suite-custom-carpet.webp", alt: "Custom wall-to-wall carpet for a luxury hotel suite and lounge area" },
+      { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/03-hotel-corridor-carpet.webp", alt: "Custom hospitality carpet installed in a luxury hotel corridor" },
+      { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/04-boutique-hotel-bedroom-carpet.webp", alt: "Made-to-order carpet for a boutique hotel bedroom renovation" },
+      { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/05-hospitality-carpet-roll.webp", alt: "Custom hotel room broadloom carpet roll with abstract pattern" },
+      { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/06-custom-carpet-pile-closeup.webp", alt: "Close-up texture of custom hotel room carpet pile and colors" }
+    ],
+    moq: "100 SQM",
+    leadTime: "Confirmed After Design and Specification Approval",
+    fobPrice: { display: "US$3.10-9.70 / SQM", lowPrice: "3.10", highPrice: "9.70", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "Project-specific nylon or wool-nylon options",
+      size: "Custom Roll and Cutting Plan",
+      colors: [
+        { name: "Warm Stone Beige", hex: "#B8A990" },
+        { name: "Deep Navy", hex: "#14385F" },
+        { name: "Muted Teal", hex: "#5F8588" },
+        { name: "Rust Red", hex: "#9D4A32" },
+        { name: "Champagne Gold", hex: "#C8A55B" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "Confirmed by Project Specification",
+      trafficClass: "Confirmed by Project Specification",
+      fiber: "Nylon or Wool-Nylon Project Options, Subject to Final Confirmation",
+      yarnSystem: "Machine-Made Cut-Pile Carpet, Final Construction Confirmed by Project",
+      backing: "Confirmed According to Project Requirement",
+      pileWeight: "Confirmed by Project Specification",
+      totalThickness: "Confirmed by Project Specification",
+      rollWidth: "Confirmed According to Project Requirement",
+      soundInsulation: "Confirmed by Project Specification",
+      antistatic: "Confirmed by Project Specification"
+    },
+    features: ["100 SQM Project MOQ", "Custom Guestroom Design", "Project-Based Specification", "B2B Export Support"]
+  },
+  {
+    id: "3d-printed-banquet-hall-carpet",
+    name: "Custom 3D Printed Banquet Hall Carpet",
+    category: "wall-to-wall",
+    description: "Custom 3D printed banquet hall carpet - wall-to-wall hotel broadloom for ballrooms, banquet rooms, corridors, and hospitality projects, factory-direct with low MOQ.",
+    longDescription: "Vishomecarpet's Custom 3D Printed Banquet Hall Carpet brings high-definition inkjet printing to large-scale hospitality broadloom. Unlike traditional woven banquet room carpet, the 3D printing process reproduces photo-realistic custom patterns with unlimited colors at a low MOQ and a fast 15-25 day lead time, while premium high-density nylon pile keeps the durability, stain resistance, and Class I fire rating that banquet halls, hotel corridors, and event spaces demand.",
+    image: "/images/products/3d-printed-banquet-carpet/01-guest-room-main.jpg",
+    imageAlt: "Custom 3D printed banquet hall carpet in teal and gold installed as hotel wall-to-wall broadloom",
+    gallery: [
+      { src: "/images/products/3d-printed-banquet-carpet/01-guest-room-main.jpg", alt: "Custom 3D printed hotel broadloom carpet in a luxury guest room, teal with gold line pattern" },
+      { src: "/images/products/3d-printed-banquet-carpet/02-banquet-hall.jpg", alt: "3D printed banquet hall carpet in royal blue with gold geometric pattern in a hotel event space" },
+      { src: "/images/products/3d-printed-banquet-carpet/03-billiard-room.jpg", alt: "Printed commercial wall-to-wall carpet in a billiard club, blue pattern with custom motifs" },
+      { src: "/images/products/3d-printed-banquet-carpet/04-corridor-detail.jpg", alt: "Hotel corridor wall-to-wall carpet with 3D printed blue and gold wave pattern by Vishomecarpet" }
     ],
     moq: "200 SQM",
     leadTime: "15-25 Days",
-    fobPrice: { display: "US$4.50-9.80 / SQM", lowPrice: "4.50", highPrice: "9.80", currency: "USD", unit: "SQM" },
-    spec: { material: "100% High-Density Nylon / Soft Synthetic Blend", size: "4m width roll", colors: [] },
-    technicalSpecs: { fireRating: "ASTM E648 Class I / Bfl-s1", trafficClass: "Class 33 Heavy Commercial", yarnSystem: "Cut Pile / High-Speed Tufted", backing: "ActionBac / Reinforced Jute", pileWeight: "32oz - 45oz", totalThickness: "9mm - 12mm", rollWidth: "4m", soundInsulation: "26dB+", antistatic: "Permanent" },
-    features: ["Custom Pattern Reproduction", "High Color Fastness", "Flame Retardant", "Eco-Friendly Materials", "Durable Under Heavy Traffic"]
+    fobPrice: { display: "US$3.80-8.90 / SQM", lowPrice: "3.80", highPrice: "8.90", currency: "USD", unit: "SQM" },
+    spec: { material: "100% High-Density Nylon / Soft Synthetic Blend", size: "4m Width", colors: [] },
+    technicalSpecs: { fireRating: "Class I (ASTM E648) / Bfl-s1", trafficClass: "33 Heavy Commercial", yarnSystem: "Cut Pile (HD Printed)", backing: "ActionBac / Reinforced Jute", pileWeight: "32-45oz", totalThickness: "9-12mm", rollWidth: "4m", soundInsulation: "26dB+", antistatic: "Permanent" },
+    features: ["Custom Pattern Reproduction", "Banquet Hall Broadloom", "Flame Retardant"]
   },
   {
     id: "glitter-hotel-corridor-broadloom-carpet",
     name: "Glitter Hotel Corridor Broadloom Carpet",
     category: "wall-to-wall",
-    description: "Blue and gold glitter-pattern broadloom for high-end hospitality corridors.",
-    longDescription: "Features a deep navy field with specialized gold glitter effect for memorable interiors.",
+    description: "Blue and gold glitter-pattern wall-to-wall broadloom carpet for hotel corridors, lobbies, ballrooms, and luxury hospitality projects.",
+    longDescription: "Vishomecarpet's Glitter Hotel Corridor Broadloom Carpet is a custom wall-to-wall hotel carpet designed for memorable hospitality interiors. The deep navy field, gold glitter effect, and flowing corridor pattern help hotels create a premium arrival path while supporting commercial project requirements such as high-traffic durability, dimensional stability, stain resistance options, and custom roll production.",
     image: "/images/products/hotel-glitter-broadloom/1.jpg",
+    imageAlt: "Blue and gold glitter hotel corridor broadloom carpet installed in a luxury hotel by Vishomecarpet",
+    gallery: [
+      { src: "/images/products/hotel-glitter-broadloom/1.jpg", alt: "Luxury hotel corridor with blue and gold glitter wall-to-wall broadloom carpet" },
+      { src: "/images/products/hotel-glitter-broadloom/2.jpg", alt: "Hotel lobby corridor carpet with glitter gold pattern and navy background" },
+      { src: "/images/products/hotel-glitter-broadloom/3.jpg", alt: "Custom hospitality broadloom carpet design in blue and gold glitter style" },
+      { src: "/images/products/hotel-glitter-broadloom/4.jpg", alt: "Wall-to-wall hotel carpet main view for corridor and public area projects" },
+      { src: "/images/products/hotel-glitter-broadloom/5.jpg", alt: "Glitter hotel carpet roll detail showing pile texture and backing" },
+      { src: "/images/products/hotel-glitter-broadloom/6.jpg", alt: "Close-up of blue gold hotel broadloom carpet texture and pattern" },
+      { src: "/images/products/hotel-glitter-broadloom/7.jpg", alt: "Hospitality carpet detail image for custom corridor broadloom project" },
+      { src: "/images/products/hotel-glitter-broadloom/8.jpg", alt: "Hotel carpet detail page image showing pattern color and project use" },
+      { src: "/images/products/hotel-glitter-broadloom/9.jpg", alt: "Commercial wall-to-wall carpet detail for hotel corridor and lobby flooring" },
+      { src: "/images/products/hotel-glitter-broadloom/10.jpg", alt: "Hotel carpet testing and durability detail image for high-traffic projects" }
+    ],
     moq: "300 SQM",
     leadTime: "25-35 Days",
-    spec: { material: "Polyamide/Glitter", size: "4m Roll", colors: [] },
-    technicalSpecs: { fireRating: "Bfl-s1", trafficClass: "Heavy Commercial", yarnSystem: "Patterned Tufted", backing: "Woven", pileWeight: "30oz", totalThickness: "8.5mm", rollWidth: "4m", antistatic: "Yes" },
-    features: ["Glitter Effect", "Custom Pattern"]
-  },
-  {
-    id: "bl-premium",
-    name: "Premium Broadloom Solution-Dyed Nylon",
-    category: "wall-to-wall",
-    description: "High-density broadloom for premium offices and commercial passageways.",
-    longDescription: "Engineered for appearance retention in heavy-use public commercial spaces.",
-    image: "/images/category-broadloom.jpg",
-    moq: "500 SQM",
-    leadTime: "20 Days",
-    spec: { material: "Solution-Dyed Nylon", size: "4m Roll", colors: [] },
-    technicalSpecs: { fireRating: "Class I", trafficClass: "33", yarnSystem: "Dense Tufted", backing: "ActionBac", pileWeight: "28oz", totalThickness: "8.5mm", soundInsulation: "24dB", antistatic: "Yes" },
-    features: ["High Durability", "Stain Protection"]
-  },
-  {
-    id: "bl-patterned",
-    name: "Patterned Commercial Broadloom Carpet",
-    category: "wall-to-wall",
-    description: "Textured broadloom for hotel ballrooms, offices, and conference centers.",
-    longDescription: "A versatile series offering balanced aesthetics and heavy-duty performance.",
-    image: "/images/blog-material-comparison.jpg",
-    moq: "300 SQM",
-    leadTime: "25 Days",
-    spec: { material: "Nylon/Synthetic", size: "4m Roll", colors: [] },
-    technicalSpecs: { fireRating: "Class I", trafficClass: "32", yarnSystem: "Textured Loop", backing: "PVC/Latex", pileWeight: "26oz", totalThickness: "8.0mm", soundInsulation: "22dB", antistatic: "Yes" },
-    features: ["Visual Interest", "Versatile Style"]
-  },
-
-  // --- PUBLIC AREA SERIES ---
-  {
-    id: "public-area-heavy-duty",
-    name: "High-Traffic Public Area Corridor Carpet",
-    category: "public-area",
-    description: "Extra-durable broadloom rolls for airports, exhibition centers, and terminals.",
-    longDescription: "Designed to withstand intense luggage wheels and high-volume pedestrian traffic.",
-    image: "/images/public-area-carpets.webp",
-    moq: "300 SQM",
-    leadTime: "15-20 Days",
-    spec: { material: "Solution-Dyed Nylon", size: "4m Roll", colors: [] },
-    technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 33 Extra Heavy", yarnSystem: "Dense Tufted", backing: "Bitumen/PVC", pileWeight: "28 oz/yd²", totalThickness: "8.5 mm", soundInsulation: "22dB", antistatic: "< 2.0 kV" },
-    features: ["Wheel Resistance", "Non-slip"]
-  },
-  {
-    id: "natural-sisal-carpet",
-    name: "Natural Sisal Linen-Weave Commercial Carpet",
-    category: "public-area",
-    description: "100% natural plant-fiber sisal carpet for sustainable biophilic office interiors.",
-    longDescription: "Woven into a refined linen-look flatweave for sustainable, professional commercial spaces.",
-    image: "/images/natural-sisal-carpet-office.jpg",
-    moq: "300 SQM",
-    leadTime: "30 Days",
-    fobPrice: { display: "US$6.50-14.80 / SQM", lowPrice: "6.50", highPrice: "14.80", currency: "USD", unit: "SQM" },
-    spec: { material: "100% Natural Sisal", size: "4m Roll", colors: [] },
-    technicalSpecs: { fireRating: "Class I (FR)", trafficClass: "Class 32", yarnSystem: "Flatweave", backing: "Natural Latex", pileWeight: "56oz", totalThickness: "7mm", rollWidth: "4m", antistatic: "Permanent" },
-    features: ["Biophilic Design", "Natural Fiber"]
-  },
-  {
-    id: "custom-sculpted-wool-lobby-rug",
-    name: "Custom Sculpted Wool Lobby Rug",
-    category: "public-area",
-    description: "Made-to-order sculpted wool area rug for hotel lobbies, lounges and luxury reception spaces.",
-    longDescription: "Vishomecarpet Custom Sculpted Wool Lobby Rug is a made-to-order decorative area rug with a sand-beige concentric-square texture for hotel lobbies, executive lounges, reception areas, luxury clubs, villas and commercial showrooms. It is a loose-laid feature rug rather than wall-to-wall broadloom, and final material composition, construction, backing, fire-rating requirements and maintenance conditions must be confirmed before project approval.",
-    image: "/images/products/public-area/custom-sculpted-wool-lobby-rug/04-commercial-showroom-custom-rug.webp",
-    imageAlt: "Custom sculpted wool rug in a premium commercial showroom",
-    gallery: [
-      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/04-commercial-showroom-custom-rug.webp", alt: "Custom sculpted wool rug in a premium commercial showroom" },
-      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/01-main-hotel-lobby-wool-rug.webp", alt: "Custom sculpted wool lobby rug with sand beige concentric square pattern" },
-      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/02-executive-lounge-sculpted-rug.webp", alt: "Custom wool area rug for an executive hotel lounge" },
-      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/03-reception-area-geometric-wool-rug.webp", alt: "Geometric wool rug for a luxury commercial reception area" },
-      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/05-private-club-lounge-wool-rug.webp", alt: "Sand beige sculpted wool rug in a private club lounge" }
-    ],
-    moq: "10 Pieces",
-    leadTime: "Confirmed After Size and Specification Approval",
-    fobPrice: { display: "US$500 / Piece", lowPrice: "500", highPrice: "500", currency: "USD", unit: "Piece" },
-    spec: {
-      material: "Wool Material; Exact Fiber Composition Confirmed Before Order",
-      size: "Custom Dimensions",
-      colors: [
-        { name: "Sand Beige", hex: "#D6C6AA" },
-        { name: "Ivory Taupe", hex: "#E7DDCD" },
-        { name: "Warm Taupe", hex: "#B8A58C" }
-      ]
-    },
+    fobPrice: { display: "US$4.20-8.60 / SQM", lowPrice: "4.20", highPrice: "8.60", currency: "USD", unit: "SQM" },
+    spec: { material: "Commercial Synthetic Fiber", size: "4m Width", colors: [] },
     technicalSpecs: {
-      fireRating: "Not Claimed Until Required Standard and Product Test Are Confirmed",
-      trafficClass: "Decorative Indoor Public Spaces; Traffic Rating Must Be Confirmed",
-      fiber: "Wool Material; Exact Fiber Composition Confirmed Before Order",
-      yarnSystem: "Final Production Construction Confirmed by Specification",
-      backing: "Confirmed According to Project Requirement",
-      pileWeight: "Confirmed by Project Specification",
-      totalThickness: "Confirmed by Project Specification",
-      rollWidth: "Custom Dimensions",
-      soundInsulation: "Available on Request",
+      fireRating: "Bfl-s1 (EN 13501-1)",
+      trafficClass: "High-Traffic Commercial",
+      yarnSystem: "Patterned Tufted Broadloom",
+      backing: "Commercial Woven Backing",
+      pileWeight: "Customizable by Project",
+      totalThickness: "Customizable by Project",
+      rollWidth: "4m",
       antistatic: "Available on Request"
     },
-    features: ["Wool Material", "Sculpted Geometric Texture", "Custom Size and Color", "MOQ 10 Pieces"]
+    features: ["Glitter Hotel Carpet", "Custom Corridor Pattern", "Wall-to-Wall Broadloom"]
   },
   {
     id: "gold-mining-carpet-mat",
@@ -291,12 +425,102 @@ export const products: Product[] = [
       antistatic: "Not Applicable"
     },
     features: ["High Recovery Rate", "PVC Miners Moss", "Sluice Box Matting", "OEM/ODM Custom Roll"]
+  },
+  {
+    id: "public-area-heavy-duty",
+    name: "High-Traffic Public Area Corridor Carpet",
+    category: "public-area",
+    description: "Extra-durable broadloom rolls for airports and exhibition centers.",
+    longDescription: "Engineered for maximum durability in high-traffic public areas.",
+    image: "/images/public-area-carpets.webp",
+    imageAlt: "High-traffic public area corridor carpet roll for airports exhibition centers and commercial buildings",
+    moq: "300 SQM",
+    leadTime: "20 Days",
+    fobPrice: { display: "US$4.80-9.80 / SQM", lowPrice: "4.80", highPrice: "9.80", currency: "USD", unit: "SQM" },
+    spec: { material: "Solution-Dyed Nylon", size: "4m Width", colors: [] },
+    technicalSpecs: { fireRating: "ASTM E648 Class I", trafficClass: "Class 33", yarnSystem: "Tufted", backing: "Bitumen", pileWeight: "28oz", totalThickness: "8.5mm", soundInsulation: "22dB", antistatic: "< 2.0 kV" },
+    features: ["Heavy Traffic"]
+  },
+  {
+    id: "natural-sisal-carpet",
+    name: "Natural Sisal Linen-Weave Commercial Carpet",
+    category: "public-area",
+    description: "100% natural sisal carpet with a refined linen-weave texture for offices, retail, and hospitality public spaces.",
+    longDescription: "Vishomecarpet's Natural Sisal Linen-Weave Commercial Carpet is a 100% plant-fiber flooring crafted from durable agave sisalana sisal, woven into a refined linen-look flatweave.",
+    image: "/images/natural-sisal-carpet-office.jpg",
+    imageAlt: "Natural sisal linen-weave commercial carpet installed in office reception public area by Vishomecarpet",
+    moq: "300 SQM",
+    leadTime: "30 Days",
+    fobPrice: { display: "US$6.50-14.80 / SQM", lowPrice: "6.50", highPrice: "14.80", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "100% Natural Sisal",
+      size: "4m Width",
+      colors: [
+        { name: "Wheat Beige", hex: "#C7A66A" },
+        { name: "Warm Greige", hex: "#9F9482" },
+        { name: "Taupe Brown", hex: "#806B55" },
+        { name: "Charcoal Grey", hex: "#4C4B47" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I (FR-treated)",
+      trafficClass: "Class 32",
+      fiber: "100% Natural Sisal",
+      yarnSystem: "Woven Flatweave",
+      backing: "Natural Latex + Jute (Non-Slip)",
+      pileWeight: "56oz (≈1,900 g/m²)",
+      totalThickness: "7mm",
+      rollWidth: "4m",
+      antistatic: "Permanent (Natural Fiber)"
+    },
+    features: ["Natural Sisal", "Linen-Weave Texture", "Biophilic Commercial Flooring"]
+  },
+  {
+    id: "custom-sculpted-wool-lobby-rug",
+    name: "Custom Sculpted Wool Lobby Rug",
+    category: "public-area",
+    description: "Made-to-order sculpted wool area rug for hotel lobbies, lounges and luxury reception spaces.",
+    longDescription: "Vishomecarpet Custom Sculpted Wool Lobby Rug is a made-to-order decorative area rug with a sand-beige concentric-square texture for hotel lobbies, executive lounges, reception areas, luxury clubs, villas and commercial showrooms. It is a loose-laid feature rug rather than wall-to-wall broadloom, and final material composition, construction, backing, fire-rating requirements and maintenance conditions must be confirmed before project approval.",
+    image: "/images/products/public-area/custom-sculpted-wool-lobby-rug/04-commercial-showroom-custom-rug.webp",
+    imageAlt: "Custom sculpted wool rug in a premium commercial showroom",
+    gallery: [
+      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/04-commercial-showroom-custom-rug.webp", alt: "Custom sculpted wool rug in a premium commercial showroom" },
+      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/01-main-hotel-lobby-wool-rug.webp", alt: "Custom sculpted wool lobby rug with sand beige concentric square pattern" },
+      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/02-executive-lounge-sculpted-rug.webp", alt: "Custom wool area rug for an executive hotel lounge" },
+      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/03-reception-area-geometric-wool-rug.webp", alt: "Geometric wool rug for a luxury commercial reception area" },
+      { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/05-private-club-lounge-wool-rug.webp", alt: "Sand beige sculpted wool rug in a private club lounge" }
+    ],
+    moq: "10 Pieces",
+    leadTime: "Confirmed After Size and Specification Approval",
+    fobPrice: { display: "US$500 / Piece", lowPrice: "500", highPrice: "500", currency: "USD", unit: "Piece" },
+    spec: {
+      material: "Wool Material; Exact Fiber Composition Confirmed Before Order",
+      size: "Custom Dimensions",
+      colors: [
+        { name: "Sand Beige", hex: "#D6C6AA" },
+        { name: "Ivory Taupe", hex: "#E7DDCD" },
+        { name: "Warm Taupe", hex: "#B8A58C" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "Not Claimed Until Required Standard and Product Test Are Confirmed",
+      trafficClass: "Decorative Indoor Public Spaces; Traffic Rating Must Be Confirmed",
+      fiber: "Wool Material; Exact Fiber Composition Confirmed Before Order",
+      yarnSystem: "Final Production Construction Confirmed by Specification",
+      backing: "Confirmed According to Project Requirement",
+      pileWeight: "Confirmed by Project Specification",
+      totalThickness: "Confirmed by Project Specification",
+      rollWidth: "Custom Dimensions",
+      soundInsulation: "Available on Request",
+      antistatic: "Available on Request"
+    },
+    features: ["Wool Material", "Sculpted Geometric Texture", "Custom Size and Color", "MOQ 10 Pieces"]
   }
 ];
 
 export const productCategories = [
-  { id: "carpet-tiles", name: "Commercial Carpet Tiles", description: "Modular solutions for offices.", image: "/images/category-tiles.png", slug: "carpet-tiles" },
-  { id: "wall-to-wall", name: "Wall-to-Wall Carpets", description: "Seamless broadloom for hospitality.", image: "/images/category-broadloom.jpg", slug: "wall-to-wall" },
+  { id: "carpet-tiles", name: "Commercial Carpet Tiles", description: "Modular solutions.", image: "/images/category-tiles.png", slug: "carpet-tiles" },
+  { id: "wall-to-wall", name: "Wall-to-Wall Carpets", description: "Seamless broadloom.", image: "/images/category-broadloom.jpg", slug: "wall-to-wall" },
   { id: "public-area", name: "Public Area Carpets", description: "Heavy-duty specialized flooring.", image: "/images/public-area-carpets.webp", slug: "public-area" }
 ];
 
@@ -349,16 +573,16 @@ export const faqSections = [
   }
 ];
 
-export const certifications = [{ name: "ASTM E648", description: "Fire Rating" }, { name: "CRI Green Label Plus", description: "Indoor Air Quality" }];
+export const certifications = [{ name: "ASTM E648", description: "US Fire Rating" }, { name: "CRI Green Label Plus", description: "Indoor Air Quality" }];
 
 export const caseStudies: CaseStudy[] = [
   {
     id: "case-1",
-    title: "Luxury Hotel Lobby Transformation — Dubai Property",
-    subtitle: "A custom Axminster hospitality program that combined brand expression, fire-compliant performance, and phased overnight installation for a five-star lobby and corridor upgrade.",
+    title: "Hotel Lobby Carpet Design Concept - Dubai Reference",
+    subtitle: "A hospitality flooring reference showing how a custom Axminster program can combine brand expression, fire-compliant performance, and phased installation planning for a luxury lobby and corridor upgrade.",
     category: "wall-to-wall",
     image: "/images/case-series/case-1/Case_1_Lobby_Grand_Reveal.jpg",
-    description: "Delivered a 5,000+ sqm custom Axminster broadloom solution for a luxury Dubai hotel, aligning art-deco design language, ASTM E648 Class I fire requirements, and guest-area installation windows without disrupting live operations.",
+    description: "A 5,000+ sqm hospitality flooring reference built around custom Axminster broadloom, art-deco design language, ASTM E648 Class I fire requirements, and phased installation planning for live hotel operations.",
     projectSpecs: [
       { label: "Location", value: "Dubai, UAE" },
       { label: "Project Scope", value: "Lobby, arrival corridor, elevator hall, and VIP transition zones" },
@@ -375,9 +599,6 @@ export const caseStudies: CaseStudy[] = [
           "The design team wanted a carpet program that felt unmistakably luxury, but still practical for heavy luggage traffic, frequent housekeeping cycles, and round-the-clock guest movement in a warm-climate hospitality environment.",
           "Our role was to translate that brief into a production-ready Axminster program with clear pattern zoning, controlled repeat logic, and an installation sequence that could be executed in narrow overnight windows."
         ],
-        image: "/images/case-series/case-1/Case_1_Lobby_Grand_Reveal.jpg",
-        imageAlt: "Completed luxury hotel lobby carpet installation in Dubai",
-        imageCaption: undefined
       },
       {
         title: "Custom Design Development",
@@ -461,11 +682,11 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-2",
-    title: "Retail Department Store Color-Coded Navigation — India, Multi-Department",
-    subtitle: "A four-store retail carpet program that turned flooring into a wayfinding system, using digitally printed color zones and modular installation to support navigation, branding, and continued trading during fit-out.",
+    title: "Retail Flooring Solution Example - India Department Store Reference",
+    subtitle: "A retail flooring reference showing how a multi-store carpet program can use color zoning and modular installation to support navigation, branding, and continued trading during fit-out.",
     category: "carpet-tiles",
     image: "/images/case-series/case-2/Case_2_Store_Entrance.jpg",
-    description: "Developed a 4,800 m² color-coded modular carpet system for a premium Indian department store chain, using digitally printed department zoning to improve wayfinding, strengthen brand identity, and support phased installation with no full-store closure.",
+    description: "A 4,800 m² modular carpet reference using digitally printed department zoning to improve wayfinding, strengthen brand identity, and support phased installation planning.",
     projectSpecs: [
       { label: "Project Type", value: "Premium retail department store navigation system" },
       { label: "Country/Region", value: "India — Bangalore flagship with rollouts in Mumbai, Delhi, and Hyderabad" },
@@ -482,9 +703,6 @@ export const caseStudies: CaseStudy[] = [
           "Instead of treating carpet as background finish, the project team chose to make the floor itself part of the navigation system. Each department received its own primary color and supporting motif so customers could move through the store by reading the floor visually.",
           "This transformed the flooring package from a maintenance item into an experience and conversion tool. It also gave the retail brand a more ownable physical identity than conventional stock finishes would have provided."
         ],
-        image: "/images/case-series/case-2/Case_2_Store_Entrance.jpg",
-        imageAlt: "Department store entrance with color-coded carpet navigation system",
-        imageCaption: undefined
       },
       {
         title: "Department-Level Design Language",
@@ -571,11 +789,11 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-3",
-    title: "Casino Gaming Floor — Las Vegas, USA",
-    subtitle: "A high-traffic gaming floor carpet program designed to combine strong pattern identity, stain concealment, and long visual life in a continuous entertainment environment.",
+    title: "Casino Carpet Application Guide - Las Vegas Reference",
+    subtitle: "A gaming-floor flooring reference showing how strong pattern identity, stain concealment, and long visual life can work together in a continuous entertainment environment.",
     category: "wall-to-wall",
     image: "/images/case-series/case-3/Case_3_Casino_Hall.jpg",
-    description: "Supplied a 3,500 m² patterned casino carpet package for a Las Vegas gaming hall, using dense Nylon 6,6 construction and complex multicolor patterning to improve appearance retention and player-environment immersion.",
+    description: "A 3,500 m² patterned casino carpet reference using dense Nylon 6,6 construction and complex multicolor patterning to improve appearance retention and player-environment immersion.",
     projectSpecs: [
       { label: "Location", value: "Las Vegas, USA" },
       { label: "Project Type", value: "Casino gaming floor and customer circulation zones" },
@@ -592,9 +810,6 @@ export const caseStudies: CaseStudy[] = [
           "Rather than relying on flat decorative color, the project used a highly layered multicolor pattern system to create energy, depth, and visual continuity across the gaming floor. The design language was intended to feel premium without distracting from the tables, machines, and customer pathing.",
           "In casino environments, flooring is not passive decoration. It contributes directly to mood, dwell, and how polished the venue feels during continuous operation."
         ],
-        image: "/images/case-series/case-3/Case_3_Casino_Hall.jpg",
-        imageAlt: "Large casino gaming floor with custom patterned carpet",
-        imageCaption: undefined
       },
       {
         title: "Pattern Complexity as Performance Strategy",
@@ -671,7 +886,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-4",
-    title: "Medical Facility — Singapore Hospital Wing",
+    title: "Healthcare Flooring Reference - Singapore Hospital Wing",
     subtitle: "A healthcare flooring program designed around infection-control priorities, cleanability, and stable long-term performance in a medically sensitive environment.",
     category: "public-area",
     image: "/images/case-series/case-4/Case_4_Hospital_Ward.jpg",
@@ -692,9 +907,6 @@ export const caseStudies: CaseStudy[] = [
           "The selected carpet strategy focused on carefully controlled materials, antimicrobial treatment, and a visual design approach that maintained a clean and professional healthcare appearance.",
           "In this context, carpet was not being used to create luxury. It was being used to improve user comfort while respecting the operational seriousness of the medical setting."
         ],
-        image: "/images/case-series/case-4/Case_4_Hospital_Ward.jpg",
-        imageAlt: "Hospital ward with healthcare carpet installation",
-        imageCaption: undefined
       },
       {
         title: "Infection-Control Design Thinking",
@@ -771,7 +983,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-5",
-    title: "Corporate Office Space — Tokyo, Multi-Floor",
+    title: "Office Carpet Planning Reference - Tokyo Multi-Floor Workplace",
     subtitle: "A multi-floor office carpet rollout using color progression, acoustic thinking, and phased delivery to improve workplace coherence.",
     category: "carpet-tiles",
     image: "/images/case-techpark.jpg",
@@ -836,7 +1048,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-6",
-    title: "Airport Terminal — Singapore Changi",
+    title: "Airport Terminal Flooring Application Guide - Singapore Reference",
     subtitle: "A wayfinding-oriented modular carpet program designed for phased replacement in a live airport environment.",
     category: "public-area",
     image: "/images/public-area-carpets.webp",
@@ -899,7 +1111,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-7",
-    title: "Luxury Residential — Mumbai High-Rise",
+    title: "Luxury Residential Carpet Concept - Mumbai High-Rise Reference",
     subtitle: "A multi-unit luxury residential carpet program using individualized brand and crest integration for premium presentation.",
     category: "wall-to-wall",
     image: "/images/case-resort.jpg",
@@ -958,7 +1170,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-8",
-    title: "Educational Institution — University Campus, Australia",
+    title: "University Campus Flooring Reference - Australia",
     subtitle: "A branded student-center carpet program designed for durability, campus identity, and daily public use.",
     category: "carpet-tiles",
     image: "/images/case-wework.jpg",
@@ -1017,7 +1229,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-9",
-    title: "Extended-Stay Hospitality — South Korea Serviced Apartments",
+    title: "Extended-Stay Hospitality Flooring Reference - South Korea",
     subtitle: "A modular hospitality floor system designed to support independent unit theming and easier long-term maintenance.",
     category: "carpet-tiles",
     image: "/images/case-hilton.jpg",
@@ -1076,7 +1288,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-10",
-    title: "Retail Flagship — Paris Luxury Fashion Boutique",
+    title: "Luxury Retail Carpet Design Reference - Paris Flagship",
     subtitle: "A custom-dyed fashion retail carpet installation using high-color-detail patterning to strengthen luxury brand storytelling.",
     category: "wall-to-wall",
     image: "/images/case-resort.jpg",

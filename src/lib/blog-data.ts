@@ -10,381 +10,373 @@ export interface BlogPost {
   slug: string;
   title: string;
   subtitle: string;
+  painPoint: string;
+  seoTitle: string;
+  description: string;
+  keywords: string[];
   date: string;
+  dateModified?: string;
   author: string;
   category: string;
   image: string;
-  imageAlt: string;
-  excerpt: string;
-  seoTitle: string;
-  seoDescription: string;
-  content: BlogSection[];
+  h1Image?: string;
+  h1ImageAlt?: string;
+  h1ImageCaption?: string;
+  sections: BlogSection[];
+  suggestedLinks: { label: string; href: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
   {
     slug: "commercial-space-carpet-tiles-maintenance-cost-guide",
     title: "Transform Your Commercial Space: How Premium Carpet Tiles Cut Maintenance Costs by 40%",
-    subtitle: "Strategic flooring solutions for hotels, offices, and retail environments",
-    date: "2026-06-25",
+    subtitle: "Strategic flooring solutions for hotels, offices, and retail environments.",
+    painPoint: "High maintenance budgets, frequent replacement needs, and downtime costs.",
+    seoTitle: "Premium Carpet Tiles Maintenance Cost Guide | VISHOME",
+    description: "How modular carpet tiles reduce maintenance scope, replacement waste, and lifecycle cost in commercial spaces.",
+    keywords: ["carpet tiles", "maintenance cost", "commercial flooring", "hospitality carpet ROI"],
+    date: "2026-06-23",
     author: "Vishome Technical Team",
-    category: "Cost Management",
-    image: "/images/blog/carpet-tiles-maintenance.jpg",
-    imageAlt: "Commercial office space with modular carpet tiles showing maintenance efficiency",
-    excerpt: "Commercial property managers face a critical challenge: maintaining aesthetic appeal while managing escalating maintenance budgets. Our advanced carpet tiles offer a solution.",
-    seoTitle: "Reduce Commercial Carpet Maintenance Costs by 40% | VISHOME",
-    seoDescription: "Learn how modular carpet tiles reduce lifecycle costs, downtime, and replacement waste for hotels and offices. B2B technical flooring guide.",
-    content: [
+    category: "Cost & ROI",
+    image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.png",
+    h1Image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.png",
+    h1ImageAlt: "Blog 1 hotel lobby before and after comparison",
+    sections: [
       {
-        title: "The Financial Reality of Modern Flooring",
+        title: "The Financial Reality",
         paragraphs: [
           "Commercial property managers face a difficult balance: preserving premium visual standards while controlling maintenance budgets and downtime.",
           "Traditional broadloom often forces full-area replacement when damage is localized, which drives unnecessary material waste and labor cost.",
-          "Our advanced <a href=\"/products/carpet-tiles\" class=\"text-primary-500 font-bold hover:underline\">Commercial Carpet Tiles</a> shift the maintenance model by allowing selective replacement in high-wear zones.",
+          "Modular carpet tiles shift the maintenance model by allowing selective replacement in high-wear zones.",
           "In practical operations, this reduces disruption windows and improves lifecycle budget predictability for hotels, offices, and retail chains."
         ]
       },
       {
-        title: "ROI Calculation for Hospitality",
+        title: "Installation Advantages",
         paragraphs: [
-          "9mm-12mm thickness tiles withstand 200,000+ foot traffic cycles, significantly outlasting residential-grade alternatives.",
-          "Average hospitality properties report saving $15,000-$25,000 annually on maintenance after switching to modular systems.",
-          "The payback period for a 1,000 sqm space is typically between 18 to 24 months through reduced deep-cleaning and spot repair costs."
-        ]
+          "Modern carpet tiles integrate with HVAC access routes, cable systems, and phased renovation schedules without requiring full-site shutdown.",
+          "The 50x50 modular format supports faster logistics handling and staged installation by functional zone.",
+          "For active sites, teams can often complete section-based replacement within short operational windows.",
+          "This is especially valuable for facilities that cannot tolerate prolonged closure or full-floor shutdown."
+        ],
+        image: "/images/blog-series/blog-1/Blog_1_Installation_Process.png",
+        imageAlt: "Blog 1 installation process",
+      },
+      {
+        title: "ROI Calculation",
+        paragraphs: [
+          "A practical ROI model should include installation cost, replacement cycle, deep-cleaning frequency, and operational downtime.",
+          "For a 1,000 m² project, 5-year savings often come from reduced replacement scope rather than lower upfront price alone.",
+          "Higher-grade tiles can outperform low-cost options when measured against real operating conditions.",
+          "For B2B buyers, total ownership cost is the decision metric that matters most—not unit price in isolation."
+        ],
+        image: "/images/blog-series/blog-1/Blog_1_Durability_Infographic.png",
+        imageAlt: "Blog 1 durability and maintenance infographic",
       }
+    ],
+    suggestedLinks: [
+      { label: "Carpet Tile Products", href: "/products/carpet-tiles" },
+      { label: "Request Quote", href: "/contact" }
     ]
   },
   {
     slug: "axminster-vs-wilton-vs-tufted-hospitality-guide",
-    title: "Axminster vs Wilton vs Tufted Carpets: What Hospitality Groups Must Know",
-    subtitle: "Technical specifications that determine durability and customer satisfaction",
-    date: "2026-06-24",
-    author: "Zara Chen",
+    title: "Axminster vs Wilton vs Tufted Carpets: What Indian Hospitality Groups Must Know",
+    subtitle: "Technical specifications that determine durability, appearance, and customer satisfaction.",
+    painPoint: "Specification confusion, quality compromise, and warranty disputes.",
+    seoTitle: "Axminster vs Wilton vs Tufted Hospitality Guide | VISHOME",
+    description: "A technical comparison of three major carpet constructions for hospitality procurement decisions.",
+    keywords: ["axminster", "wilton", "tufted", "hospitality carpet", "technical comparison"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
     category: "Technical Guide",
-    image: "/images/blog/carpet-manufacturing-types.jpg",
-    imageAlt: "Comparison of Axminster and Wilton weaving processes",
-    excerpt: "Indian and global hospitality operators must understand technical carpet classifications to avoid quality compromises and warranty disputes.",
-    seoTitle: "Axminster vs Wilton vs Tufted: Hotel Carpet Selection Guide",
-    seoDescription: "A technical comparison of Axminster, Wilton, and Tufted carpets for hotel projects. Choosing the right durability and aesthetic for guest zones.",
-    content: [
+    image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.png",
+    sections: [
       {
-        title: "Axminster Carpets: The Premium Choice",
+        title: "Technical Specifications",
         paragraphs: [
           "Hospitality operators managing multi-property portfolios need clear construction logic to avoid costly specification mistakes.",
-          "Our custom-woven <a href=\"/projects/case-1\" class=\"text-primary-500 font-bold hover:underline\">Axminster broadloom</a> supports rich multi-color design and high pattern fidelity, making it strong for premium guest-facing zones like luxury hotel lobbies.",
-          "The Jacquard loom technology allows up to 36 colors in a single design with ±0mm variance over 50-meter runs.",
-          "Costing between $18-28/sqm wholesale, it offers a lifespan of 15+ years in high-traffic hospitality environments."
-        ]
+          "Axminster supports rich multi-color design and high pattern fidelity, making it strong for premium guest-facing zones.",
+          "Wilton offers dense woven performance and consistent heritage aesthetics in executive corridors and formal spaces.",
+          "Tufted systems deliver faster output and flexible cost control for large-volume rooms and general commercial areas."
+        ],
+        image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.png",
+        imageAlt: "Blog 2 manufacturing process comparison",
       },
       {
-        title: "Tufted Carpets: High-Volume Solution",
+        title: "Comparison Table",
         paragraphs: [
-          "Modern tufting dominates 80% of global production due to its manufacturing speed—often 10x faster than Axminster.",
-          "Suitable for bedrooms and general offices, these systems deliver flexible cost control for large-volume procurement.",
-          "Quality varies from entry-level to luxury grades, requiring careful pile weight specification to meet commercial durability targets."
-        ]
+          "Comparison should go beyond marketing claims and include tuft density, pattern precision, lead time, seam behavior, and maintenance profile.",
+          "A durable system with poor seam quality can still fail visual expectations in premium hospitality environments.",
+          "Likewise, premium pattern capability without lifecycle planning can create budget pressure in high-volume projects.",
+          "A structured comparison framework helps procurement teams justify decisions to operations, design, and finance stakeholders."
+        ],
+        image: "/images/blog-series/blog-2/Blog_2_Durability_Chart.png",
+        imageAlt: "Blog 2 durability comparison chart",
+      },
+      {
+        title: "Seam Quality",
+        paragraphs: [
+          "Seaming is often the hidden cost driver and visual risk point in hospitality carpet delivery.",
+          "Luxury environments demand minimal seam visibility and strict color continuity at junction lines.",
+          "Installation QA should include seam direction planning, pattern registration checks, and post-install visual audits.",
+          "Where seaming discipline is weak, guest-facing perception declines even if material specification appears strong on paper."
+        ],
+        image: "/images/blog-series/blog-2/Blog_2_Seam_Quality_Macro.png",
+        imageAlt: "Blog 2 seam quality macro comparison",
       }
+    ],
+    suggestedLinks: [
+      { label: "Wall-to-Wall Carpet", href: "/products/wall-to-wall" },
+      { label: "Hospitality Solutions", href: "/projects" }
     ]
   },
   {
     slug: "carpet-printing-technology-design-to-installation-guide",
     title: "Carpet Printing Technology: From Digital Design to On-Floor Installation",
-    subtitle: "How advanced printing methods create bespoke designs at competitive prices",
-    date: "2026-06-22",
-    author: "Design Dept",
-    category: "Technology",
-    image: "/images/blog/digital-carpet-printing.jpg",
-    imageAlt: "High-definition digital inkjet printer for commercial carpet",
-    excerpt: "Modern digital printing transforms carpet specifications from luxury to accessible. Learn how to achieve photographic precision on floors.",
-    seoTitle: "Digital Carpet Printing Technology for Custom Designs | VISHOME",
-    seoDescription: "Explore how digital inkjet printing enables unlimited colors and bespoke designs for hospitality and retail carpet projects with low MOQs.",
-    content: [
+    subtitle: "How advanced printing methods create bespoke designs at competitive prices.",
+    painPoint: "High custom design cost, unpredictable lead time, and quality inconsistency.",
+    seoTitle: "Carpet Printing Technology Guide | VISHOME",
+    description: "How digital carpet printing improves flexibility, revision speed, and production control for custom projects.",
+    keywords: ["carpet printing", "digital inkjet carpet", "custom pattern carpet", "color precision"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
+    category: "Design & Production",
+    image: "/images/blog-series/blog-3/Blog_3_Printing_Process.png",
+    sections: [
       {
-        title: "The Evolution of Digital Ink-Jet",
+        title: "Technology Comparison",
         paragraphs: [
           "Modern digital printing has reduced entry barriers for custom carpet programs once limited to large-scale budgets.",
-          "Unlike traditional screen-based workflows, our <a href=\"/products/wall-to-wall/3d-printed-hotel-carpet\" class=\"text-primary-500 font-bold hover:underline\">3D HD Printed Nylon</a> pipelines reduce setup friction and allow faster design iteration.",
-          "This technology achieves photographic precision with ΔE (color difference) <2 units—imperceptible to the human eye.",
+          "Unlike traditional screen-based workflows, digital pipelines reduce setup friction and allow faster design iteration.",
+          "This is particularly useful for medium-volume hospitality, retail, and branded commercial interiors.",
           "For project teams, faster revision loops significantly improve alignment between design intent and factory output."
-        ]
+        ],
+        image: "/images/blog-series/blog-3/Blog_3_Printing_Process.png",
+        imageAlt: "Blog 3 printing process flow",
+      },
+      {
+        title: "Application Examples",
+        paragraphs: [
+          "Digital print applications now span hotel branding, retail wayfinding, casino pattern systems, and themed commercial zones.",
+          "Design intent can be adapted by zone function without restarting full production tooling.",
+          "This flexibility enables stronger brand coherence across multi-space programs.",
+          "Application context—not just unit price—should determine which print route is selected."
+        ],
+        image: "/images/blog-series/blog-3/Blog_3_Custom_Designs_Gallery.png",
+        imageAlt: "Blog 3 custom design showcase",
+      },
+      {
+        title: "Quality Control",
+        paragraphs: [
+          "Color precision and registration tolerance must be validated before bulk production release.",
+          "QA should include spectrophotometric checks, repeat alignment control, and batch consistency verification.",
+          "Lighting-condition review is also essential to prevent on-site color mismatch disputes.",
+          "A disciplined QC protocol protects both visual consistency and downstream installation quality."
+        ],
+        image: "/images/blog-series/blog-3/Blog_3_Color_Precision.png",
+        imageAlt: "Blog 3 color precision and registration",
       }
+    ],
+    suggestedLinks: [
+      { label: "Custom Project Inquiry", href: "/contact" },
+      { label: "Project Cases", href: "/projects" }
     ]
   },
   {
     slug: "carpet-tile-specifications-high-traffic-durability-guide",
-    title: "Carpet Tile Specifications for High-Traffic Zones: The Science of Durability",
-    subtitle: "Technical parameters that determine performance in demanding environments",
-    date: "2026-06-20",
-    author: "QC Lab",
-    category: "Specifications",
-    image: "/images/blog/carpet-specifications.jpg",
-    imageAlt: "Technical cross-section of a commercial carpet tile",
-    excerpt: "A seemingly minor specification change impacts durability dramatically. Understanding pile density and backing systems is critical.",
-    seoTitle: "Commercial Carpet Tile Specifications & Durability Guide",
-    seoDescription: "Technical guide on carpet pile height, density, and backing systems for high-traffic commercial zones. ASTM D6836 standards explained.",
-    content: [
+    title: "Carpet Tile Specifications for High-Traffic Commercial Zones: The Science Behind Durability",
+    subtitle: "Technical parameters that determine performance in demanding environments.",
+    painPoint: "Premature wear patterns, visible damage in 2-3 years, and warranty disputes.",
+    seoTitle: "High-Traffic Carpet Tile Specification Guide | VISHOME",
+    description: "A technical guide to pile, density, backing, and moisture metrics for high-traffic commercial carpet systems.",
+    keywords: ["carpet tile specs", "high traffic durability", "tuft density", "moisture management"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
+    category: "Technical Guide",
+    image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.png",
+    sections: [
       {
-        title: "Pile Height and Density",
+        title: "Specification Details",
         paragraphs: [
-          "Premium hospitality standards require 9-10mm heights and 1400-1600 tufts per square meter.",
-          "Standard tests like ASTM D6836 determine crush resistance and appearance retention over a 10-year lifecycle.",
-          "Selecting the right material, such as <a href=\"/products/carpet-tiles/commercial-nylon-tiles\" class=\"text-primary-500 font-bold hover:underline\">Nylon 6.6</a>, ensures 200,000+ foot cycles before visible wear occurs."
-        ]
+          "Pile height, tuft density, and backing system stability are core determinants of durability in high-traffic commercial zones.",
+          "Specification decisions should follow traffic profile, cleaning method, and functional zoning requirements.",
+          "Aesthetics alone cannot predict lifecycle performance under rolling loads, repeated cleaning, and climate variation.",
+          "The right technical baseline reduces early wear complaints and warranty conflict."
+        ],
+        image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.png",
+        imageAlt: "Blog 4 carpet tile cross-section",
+      },
+      {
+        title: "Wear Comparison",
+        paragraphs: [
+          "Wear should be evaluated across lifecycle checkpoints rather than judged from first-install appearance.",
+          "Early-stage visual quality can hide structural weaknesses that appear under sustained traffic cycles.",
+          "Progressive wear comparison gives procurement teams a clearer decision basis than catalog claims.",
+          "This helps avoid false savings from low-grade products that fail early in operation."
+        ],
+        image: "/images/blog-series/blog-4/Blog_4_Traffic_Durability_Progression.png",
+        imageAlt: "Blog 4 traffic durability progression",
+      },
+      {
+        title: "Climate Adaptation",
+        paragraphs: [
+          "Climate behavior is critical in monsoon and mixed-humidity regions where moisture stress can alter carpet stability.",
+          "Backing composition, antimicrobial treatment, and vapor-management behavior should be included in technical review.",
+          "Moisture adaptation is a procurement-stage decision, not a late installation workaround.",
+          "Projects that ignore climate variables often face dimensional movement, odor risk, and higher maintenance frequency."
+        ],
+        image: "/images/blog-series/blog-4/Blog_4_Moisture_Management.png",
+        imageAlt: "Blog 4 moisture management infographic",
       }
+    ],
+    suggestedLinks: [
+      { label: "Technical Consultation", href: "/contact" },
+      { label: "Carpet Tile Collection", href: "/products/carpet-tiles" }
     ]
   },
   {
     slug: "hidden-cost-of-cheap-carpets-hospitality-roi-guide",
-    title: "The Hidden Cost of Cheap Carpets: Why Low Initial Price Destroys Hospitality ROI",
-    subtitle: "Financial modeling for long-term property asset management",
-    date: "2026-06-18",
-    author: "Finance Dept",
-    category: "Cost Management",
-    image: "/images/blog/carpet-roi-analysis.jpg",
-    imageAlt: "Cost comparison chart between cheap and premium commercial carpet",
-    excerpt: "Low unit pricing can be misleading when replacement cycles are short and operational disruption is frequent. Lifecycle modeling is the key.",
-    seoTitle: "Hospitality Carpet ROI: Hidden Costs of Cheap Flooring",
-    seoDescription: "B2B financial analysis on commercial carpet procurement. Why premium flooring delivers better ROI through reduced replacement cycles.",
-    content: [
+    title: "The Hidden Cost of Cheap Carpets: Why Replacing Floor Coverings After 3 Years Destroys Hospitality ROI",
+    subtitle: "Lifecycle economics behind flooring decisions in hospitality assets.",
+    painPoint: "Low upfront price but high replacement frequency and service disruption.",
+    seoTitle: "Hidden Cost of Cheap Hospitality Carpets | VISHOME",
+    description: "Why low-cost carpet choices can damage hospitality ROI over a 10-year operating horizon.",
+    keywords: ["hospitality ROI", "carpet lifecycle cost", "cheap carpet risk", "replacement strategy"],
+    date: "2026-06-23",
+    author: "Vishome Technical Team",
+    category: "Cost & ROI",
+    image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.png",
+    sections: [
       {
-        title: "Lifecycle Modeling vs. Initial Cost",
+        title: "Financial Analysis",
         paragraphs: [
           "Low unit pricing can be misleading when replacement cycles are short and operational disruption is frequent.",
           "Lifecycle modeling should include reinstall labor, downtime, disposal, and turnover impact.",
-          "Over a 10-year horizon, <a href=\"/projects/case-2\" class=\"text-primary-500 font-bold hover:underline\">high-quality modular systems</a> often outperform initial purchase savings from cheap broadloom alternatives.",
+          "Over a 10-year horizon, repeated replacement often outweighs initial purchase savings.",
           "Hospitality assets benefit more from predictable performance than from short-term material cost reductions."
-        ]
+        ],
+        image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.png",
+        imageAlt: "Blog 5 ten-year cost comparison",
+      },
+      {
+        title: "Brand Impact",
+        paragraphs: [
+          "Guest-facing flooring condition directly shapes perceived quality and review sentiment.",
+          "Visible wear in lobbies and corridors can undermine premium positioning even when service standards remain high.",
+          "Carpet performance is therefore part of brand delivery—not a hidden back-of-house expense.",
+          "This link between surface condition and customer trust should be reflected in procurement criteria."
+        ],
+        image: "/images/blog-series/blog-5/Blog_5_Customer_Experience_Timeline.png",
+        imageAlt: "Blog 5 customer experience timeline",
+      },
+      {
+        title: "Cost Breakdown",
+        paragraphs: [
+          "A robust cost model should combine material, labor, maintenance, disruption, customer-impact, and equipment-wear factors.",
+          "Category-level breakdown makes trade-offs visible to finance, procurement, and operations teams.",
+          "This enables more defensible tender decisions and better capex planning.",
+          "In hospitality procurement, cost transparency is often the strongest defense against low-price, high-risk options."
+        ],
+        image: "/images/blog-series/blog-5/Blog_5_Cost_Breakdown.png",
+        imageAlt: "Blog 5 cost breakdown visualization",
       }
+    ],
+    suggestedLinks: [
+      { label: "Hospitality Solutions", href: "/projects" },
+      { label: "Request Project Costing", href: "/contact" }
     ]
   },
   {
     slug: "shipping-optimization-5000sqm-mumbai-14days",
-    title: "Shipping Optimization: Moving 5,000 Sq Meters of Carpet to Mumbai in 14 Days",
-    subtitle: "Logistics planning that prevents installation delays and manages costs",
-    date: "2026-06-16",
-    author: "Logistics Team",
+    title: "Shipping Optimization: How to Move 5,000 Sq Meters of Carpet to Mumbai in 14 Days",
+    subtitle: "Logistics playbook for accelerated international carpet programs.",
+    painPoint: "Uncertain shipping windows, damage risk, and schedule overruns.",
+    seoTitle: "Carpet Shipping Optimization to Mumbai in 14 Days | VISHOME",
+    description: "How to plan route, packaging, and timeline controls for fast 5,000 sqm carpet delivery to Mumbai.",
+    keywords: ["shipping optimization", "mumbai carpet delivery", "carpet logistics", "project lead time"],
+    date: "2026-06-24",
+    author: "Vishome Export Team",
     category: "Logistics",
-    image: "/images/blog/carpet-shipping-logistics.jpg",
-    imageAlt: "Carpet rolls being loaded into a shipping container with export packaging",
-    excerpt: "Global carpet shipping creates unique challenges. Learn how a hybrid ocean-air solution delivers large volumes on tight schedules.",
-    seoTitle: "Carpet Export Logistics: 14-Day Delivery Optimization",
-    seoDescription: "Case study on optimizing carpet shipping from China to India. Hybrid ocean-air solutions for urgent B2B commercial flooring projects.",
-    content: [
+    image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.png",
+    sections: [
       {
-        title: "Hybrid Logistics Solution",
+        title: "Logistics Optimization",
         paragraphs: [
-          "Carpet density demands precision logistics. 1,000 sqm of 10mm carpet weighs approx 2.8 tons, requiring specialized handling.",
-          "For urgent projects, an expedited ocean-to-Dubai and air-to-Mumbai hybrid route delivers in 12-15 days at 50% of the cost of full air freight.",
-          "Proper <a href=\"/factory\" class=\"text-primary-500 font-bold hover:underline\">export packaging</a> with heavy-duty wrap and wooden pallets is essential to prevent moisture damage during monsoon transit."
-        ]
+          "Route planning should compare standard ocean, expedited ocean, and hybrid multimodal options against deadline certainty.",
+          "For time-sensitive openings, schedule reliability often outweighs lowest freight rate."
+        ],
+        image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.png",
+        imageAlt: "Blog 6 shipping routes map",
+      },
+      {
+        title: "Damage Prevention",
+        paragraphs: [
+          "Packaging sequence—barrier wrap, palletization, labeling, and shrink protection—directly reduces transit-loss exposure.",
+          "Protection standards should be defined per handling stage, not only at factory dispatch."
+        ],
+        image: "/images/blog-series/blog-6/Blog_6_Packaging_Process.png",
+        imageAlt: "Blog 6 packaging protection workflow",
+      },
+      {
+        title: "Timeline Management",
+        paragraphs: [
+          "A day-by-day execution model with customs buffers and handover checkpoints keeps fast-track delivery realistic.",
+          "Transparent cost phasing helps procurement and logistics teams align decisions under time pressure."
+        ],
+        image: "/images/blog-series/blog-6/Blog_6_Timeline_Cost_Breakdown.png",
+        imageAlt: "Blog 6 timeline and cost breakdown",
       }
+    ],
+    suggestedLinks: [
+      { label: "View Project Cases", href: "/projects" },
+      { label: "Contact Export Team", href: "/contact" }
     ]
   },
   {
     slug: "climate-control-carpet-installation-stability-guide",
-    title: "Climate Control in Carpet Installation: Preventing Wrinkles and Mold",
-    subtitle: "Technical specifications for humidity management during project execution",
-    date: "2026-06-14",
-    author: "Installation Support",
-    category: "Technical Guide",
-    image: "/images/blog/carpet-installation-climate.jpg",
-    imageAlt: "Technician monitoring humidity during commercial carpet installation",
-    excerpt: "Fiber dimensional stability depends on humidity. Learn the strict climate control protocols required for successful commercial installation.",
-    seoTitle: "Carpet Installation Humidity & Climate Control Guide",
-    seoDescription: "Technical requirements for temperature and humidity during carpet installation. Preventing buckling, mold, and adhesion failure in tropical climates.",
-    content: [
-      {
-        title: "The Science of Dimensional Stability",
-        paragraphs: [
-          "Natural and synthetic fibers expand with humidity. At 85% relative humidity, a 1,000 sqm area can expand up to 1.5%, causing severe buckling.",
-          "Target conditions of 20-25°C and 40-55% humidity must be maintained 48 hours before, during, and 7 days after installation.",
-          "Documented evidence of climate monitoring is often required for <a href=\"/faq\" class=\"text-primary-500 font-bold hover:underline\">warranty compliance</a> on major commercial projects."
-        ]
-      }
-    ]
-  },
-  {
-    slug: "stain-resistance-technology-scotchgard-vs-alternatives",
-    title: "Stain Resistance Technology: Scotchgard vs. Alternative Treatments",
-    subtitle: "How to ensure long-term protection for commercial high-traffic carpets",
-    date: "2026-06-12",
-    author: "Lab Team",
-    category: "Maintenance",
-    image: "/images/blog/carpet-stain-resistance.jpg",
-    imageAlt: "Molecular level view of stain resistant coating on carpet fibers",
-    excerpt: "Permanent stains are the primary reason for early carpet replacement. Explore the technology behind modern stain protection.",
-    seoTitle: "Commercial Carpet Stain Resistance Technology Guide",
-    seoDescription: "Comparing Scotchgard and solution-dyed fibers for stain protection. How to extend carpet life in busy retail and hotel environments.",
-    content: [
-      {
-        title: "Molecular Protection Barriers",
-        paragraphs: [
-          "Modern protection involves molecular-level polymer coatings that prevent liquid penetration into the fiber core.",
-          "Our <a href=\"/products/carpet-tiles/commercial-nylon-tiles\" class=\"text-primary-500 font-bold hover:underline\">Commercial Nylon Tiles</a> utilize built-in stain-resist technology that remains effective through 50+ deep cleaning cycles.",
-          "For hospitality assets, this technology reduces replacement frequency and ensures consistent visual standards for guests."
-        ]
-      }
-    ]
-  },
-  {
-    slug: "acoustic-properties-carpet-sound-absorption-offices",
-    title: "Acoustic Properties of Carpet: Sound Absorption for Open-Plan Offices",
-    subtitle: "Improving workplace productivity through textile flooring solutions",
-    date: "2026-06-10",
-    author: "Zara Chen",
-    category: "Technical Guide",
-    image: "/images/blog/carpet-acoustics.jpg",
-    imageAlt: "Acoustic testing of commercial carpet in a quiet office environment",
-    excerpt: "Noise is the #1 complaint in open-plan offices. Learn how specific carpet backings deliver up to 28dB of sound reduction.",
-    seoTitle: "Office Carpet Acoustic Performance & Sound Absorption Guide",
-    seoDescription: "Technical guide on carpet NRC ratings and sound insulation. How textile flooring improves productivity in corporate and retail spaces.",
-    content: [
-      {
-        title: "NRC Ratings and Productivity",
-        paragraphs: [
-          "Commercial carpet can absorb up to 10x more airborne noise than hard flooring, with Noise Reduction Coefficients (NRC) reaching 0.35.",
-          "In projects like our <a href=\"/projects/case-5\" class=\"text-primary-500 font-bold hover:underline\">Tokyo Corporate Office</a>, acoustic-optimized tiles reduced ambient noise by 24dB.",
-          "Choosing reinforced backings further enhances low-frequency sound insulation, critical for multi-floor commercial buildings."
-        ]
-      }
-    ]
-  },
-  {
-    slug: "color-fastness-uv-resistance-fading-prevention",
-    title: "Color Fastness & UV Resistance: Preventing Fading in High-Light Areas",
-    subtitle: "Technical specifications for carpets exposed to intense sunlight",
-    date: "2026-06-08",
-    author: "QC Lab",
-    category: "Quality Control",
-    image: "/images/blog/carpet-uv-resistance.jpg",
-    imageAlt: "Carpet fading test under intense UV light simulation",
-    excerpt: "Intense sunlight through floor-to-ceiling windows can cause visible fading within months. Specify UV-resistant fibers for longevity.",
-    seoTitle: "UV Resistant Commercial Carpet | Color Fastness Guide",
-    seoDescription: "Understanding ASTM D4157 ratings and solution-dyed fiber advantages for carpets in high-light environments like airports and lobbies.",
-    content: [
-      {
-        title: "The Advantage of Solution-Dyeing",
-        paragraphs: [
-          "Solution-dyed fibers have color integrated throughout the fiber, not just on the surface, offering superior UV resistance.",
-          "In high-light projects like <a href=\"/projects/case-6\" class=\"text-primary-500 font-bold hover:underline\">Singapore Changi Airport</a>, UV-stabilized carpets maintain color integrity for 10+ years.",
-          "ASTM D4157 ratings of 4.0 or higher are recommended for any commercial space with significant glass exposure."
-        ]
-      }
-    ]
-  },
-  {
-    slug: "modular-carpet-tiles-vs-broadloom-property-decision-framework",
-    title: "Modular Carpet Tiles vs. Broadloom: Decision Framework for B2B Projects",
-    subtitle: "Choosing the right format based on installation risk and cost of ownership",
-    date: "2026-06-06",
+    title: "Climate Control in Carpet Installation: Preventing Wrinkles, Mold, and Dimensional Instability",
+    subtitle: "Temperature and humidity controls for stable commercial carpet installation.",
+    painPoint: "Post-install wrinkling, mold risk, and dimensional movement in humid climates.",
+    seoTitle: "Climate Control Carpet Installation Stability Guide | VISHOME",
+    description: "How controlled installation climate reduces deformation, cure defects, and post-handover failures.",
+    keywords: ["climate control", "carpet installation", "humidity", "dimensional stability", "mold prevention"],
+    date: "2026-06-24",
     author: "Vishome Technical Team",
-    category: "Technical Guide",
-    image: "/images/blog/modular-vs-broadloom.jpg",
-    imageAlt: "Side by side comparison of carpet tile and broadloom installation",
-    excerpt: "Uncertainty about format choice leads to installation risks. This framework helps architects and contractors decide with confidence.",
-    seoTitle: "Carpet Tiles vs Broadloom: B2B Procurement Framework",
-    seoDescription: "Comparative analysis of modular carpet tiles and broadloom carpet for commercial projects. Cost, installation, and maintenance trade-offs.",
-    content: [
+    category: "Installation",
+    image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.png",
+    sections: [
       {
-        title: "Strategic Selection Framework",
+        title: "Scientific Principle",
         paragraphs: [
-          "Carpet tiles offer unmatched flexibility for access floors, while broadloom provides the seamless luxury required for grand hospitality.",
-          "Our <a href=\"/products/carpet-tiles/ecocore-pe-backing-carpet-tiles\" class=\"text-primary-500 font-bold hover:underline\">EcoCore PE Backing</a> series represents the future of modular systems with 100% recyclable components.",
-          "Property types with frequent layout changes should prioritize tiles, while 5-star hotel lobbies remain the stronghold of premium broadloom."
-        ]
-      }
-    ]
-  },
-  {
-    slug: "seaming-excellence-invisible-commercial-carpet-seams-guide",
-    title: "Seaming Excellence: How to Achieve Invisible Seams Guests Never Notice",
-    subtitle: "Precision techniques that protect design integrity in large spaces",
-    date: "2026-06-04",
-    author: "Installation Support",
-    category: "Technical Guide",
-    image: "/images/blog/carpet-seaming-detail.jpg",
-    imageAlt: "Installer performing precision seaming on a hotel corridor carpet",
-    excerpt: "Visible seams are the first thing a guest notices. Learn how ±0mm accuracy creates a truly seamless hospitality environment.",
-    seoTitle: "Invisible Carpet Seaming Techniques for Luxury Hotels",
-    seoDescription: "Professional guide on invisible seaming for commercial broadloom. How to maintain pattern alignment and color consistency across large areas.",
-    content: [
+          "Fiber and backing systems respond to humidity shifts. Excessive expansion during cure phase can trigger wrinkling and alignment drift.",
+          "Environmental targets should be treated as installation specs, not optional site recommendations."
+        ],
+        image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.png",
+        imageAlt: "Blog 7 humidity expansion visualization",
+      },
       {
-        title: "Achieving ±0mm Pattern Matching",
+        title: "Equipment Setup",
         paragraphs: [
-          "Invisible seaming is a combination of high-precision factory cutting and expert on-site heat-bonding techniques.",
-          "In our <a href=\"/projects/case-1\" class=\"text-primary-500 font-bold hover:underline\">Dubai Hotel Lobby</a> project, over 2,500 sqm were installed with zero detected seam lines.",
-          "Using reinforced seaming tape and moisture-resistant adhesives prevents seam separation over the carpet's 15-year service life."
-        ]
-      }
-    ]
-  },
-  {
-    slug: "sustainability-carpet-manufacturing-eco-friendly-options",
-    title: "Sustainability in Carpet Manufacturing: Eco-Friendly Options for Projects",
-    subtitle: "Meeting environmental standards without compromising commercial performance",
-    date: "2026-06-02",
-    author: "Zara Chen",
-    category: "Sustainability",
-    image: "/images/blog/sustainable-carpet-manufacturing.jpg",
-    imageAlt: "Recycled materials used in commercial carpet tile backing",
-    excerpt: "Environmental responsibility is no longer optional. Explore recycled content and low-VOC certifications for your next project.",
-    seoTitle: "Sustainable Commercial Carpet | Eco-Friendly Flooring Guide",
-    seoDescription: "Guide to recycled fibers, PVC-free backings, and green certifications in carpet manufacturing. Sustainable solutions for modern offices.",
-    content: [
+          "HVAC, dehumidifiers, and sensor layout must be coordinated at floor-plan level to maintain uniform climate zones.",
+          "Localized imbalance can compromise seam stability even when average room conditions appear acceptable."
+        ],
+        image: "/images/blog-series/blog-7/Blog_7_HVAC_Equipment_Layout.png",
+        imageAlt: "Blog 7 HVAC equipment layout",
+      },
       {
-        title: "Recycled Content and PVC-Free Backings",
+        title: "Project Management",
         paragraphs: [
-          "Modern sustainability focus centers on recycled yarn systems (ECONYL) and PVC-free, low-VOC backing structures.",
-          "Our <a href=\"/products/carpet-tiles/ecocore-pe-backing-carpet-tiles\" class=\"text-primary-500 font-bold hover:underline\">EcoCore PE Backing</a> tiles are designed for 100% recyclability at end-of-life.",
-          "These systems help projects achieve LEED and CRI Green Label Plus certification while maintaining heavy-commercial performance."
-        ]
+          "A phased timeline should include pre-conditioning, controlled install, cure stabilization, and gradual normalization.",
+          "This method reduces post-handover defect probability in monsoon and high-humidity regions."
+        ],
+        image: "/images/blog-series/blog-7/Blog_7_Installation_Timeline_Climate.png",
+        imageAlt: "Blog 7 climate-phase installation timeline",
       }
-    ]
-  },
-  {
-    slug: "underfloor-heating-integration-carpet-installation-guide",
-    title: "Underfloor Heating Integration: Installing Carpet Over Heated Floors",
-    subtitle: "Technical constraints and optimal specifications for thermal efficiency",
-    date: "2026-05-30",
-    author: "Installation Support",
-    category: "Technical Guide",
-    image: "/images/blog/carpet-underfloor-heating.jpg",
-    imageAlt: "Infrared view of heat distribution through commercial carpet",
-    excerpt: "Can you install carpet over heated floors? Yes, but only with the right thermal conductivity and backing specifications.",
-    seoTitle: "Carpet Installation Over Underfloor Heating | Technical Guide",
-    seoDescription: "Optimal carpet specifications for heated floors. Managing thermal resistance (R-value) for efficiency in hotel and residential projects.",
-    content: [
-      {
-        title: "Thermal Resistance and R-Values",
-        paragraphs: [
-          "Carpets for heated floors must have a combined tog rating (carpet + underlay) of less than 2.5 to ensure heating efficiency.",
-          "Our specialized <a href=\"/solutions/hotel-hospitality\" class=\"text-primary-500 font-bold hover:underline\">Hotel Hospitality</a> solutions include low-tog broadloom options for guest rooms with subfloor heating.",
-          "Maintaining surface temperatures below 27°C prevents adhesive degradation and ensures long-term dimensional stability."
-        ]
-      }
-    ]
-  },
-  {
-    slug: "custom-design-services-concept-to-installation-process",
-    title: "Custom Design Services: From Concept to Installation—The Complete Process",
-    subtitle: "Eliminating design complexity and lead time uncertainty for buyers",
-    date: "2026-05-28",
-    author: "Design Dept",
-    category: "Design",
-    image: "/images/blog/custom-carpet-design-process.jpg",
-    imageAlt: "Architect and designer reviewing custom carpet pattern proofs",
-    excerpt: "Fear of design complexity often stops projects. Our 5-step process ensures your vision is delivered factory-direct on time.",
-    seoTitle: "Custom Carpet Design Process | From Concept to Factory",
-    seoDescription: "Learn the 5-step process for custom carpet design. Consultation, digital proofing, and factory production for B2B commercial projects.",
-    content: [
-      {
-        title: "The 5-Step Custom Workflow",
-        paragraphs: [
-          "Our process begins with design consultation and Pantone color matching to align with project brand standards.",
-          "Utilizing <a href=\"/products/wall-to-wall/3d-printed-hotel-carpet\" class=\"text-primary-500 font-bold hover:underline\">3D HD Printing</a>, we can deliver physical pattern proofs within 5-7 working days for global review.",
-          "This rapid iteration ensures that architects and contractors receive exactly what was specified in the original design intent."
-        ]
-      }
+    ],
+    suggestedLinks: [
+      { label: "Installation Support", href: "/contact" },
+      { label: "Hotel & Hospitality Solutions", href: "/projects" }
     ]
   }
 ];

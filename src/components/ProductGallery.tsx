@@ -17,30 +17,27 @@ interface ProductGalleryProps {
 export default function ProductGallery({ mainImage, gallery = [], productName }: ProductGalleryProps) {
   const allImages = gallery.length > 0 ? gallery : [{ src: mainImage, alt: productName }];
   const [activeImage, setActiveImage] = useState(allImages[0]);
+  const thumbnails = allImages.filter((img) => img.src !== activeImage.src).slice(0, 3);
 
   return (
     <div className="space-y-6">
-      {/* 1 张大图 */}
-      <div className="relative aspect-square bg-white border-8 border-white rounded-sm overflow-hidden shadow-2xl transition-all duration-500">
+      <div className="aspect-[3/2] rounded-sm overflow-hidden border border-border shadow-xl bg-white">
         <ProductImage
           src={activeImage.src}
           alt={activeImage.alt || productName}
-          className="w-full h-full"
-          fit="contain"
+          className="w-full h-full object-cover"
         />
       </div>
 
-      {/* 下方缩略图模式 (最多显示4张，包含主图) */}
-      <div className="grid grid-cols-4 gap-4">
-        {allImages.slice(0, 4).map((img, idx) => (
+      <div className="grid grid-cols-3 gap-4">
+        {thumbnails.map((img) => (
           <button
-            key={idx}
+            key={img.src}
+            type="button"
             onClick={() => setActiveImage(img)}
-            className={`relative aspect-square border-2 rounded-sm overflow-hidden transition-all ${
-              activeImage === img ? "border-accent shadow-md scale-95" : "border-border hover:border-primary/30"
-            }`}
+            className="relative aspect-[3/2] border border-border rounded-sm overflow-hidden transition-all hover:border-primary/40 hover:shadow-md"
           >
-            <ProductImage src={img.src} alt={img.alt || `${productName} thumbnail ${idx + 1}`} className="w-full h-full" fit="cover" />
+            <ProductImage src={img.src} alt={img.alt || productName} className="w-full h-full object-cover" />
           </button>
         ))}
       </div>

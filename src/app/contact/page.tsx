@@ -1,58 +1,21 @@
-"use client";
-
-import { useState } from "react";
-import { useRouter } from "next/navigation";
 import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { brandInfo } from "@/lib/data";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
-import { trackLeadConversion } from "@/lib/tracking";
 
-export default function ContactPage() {
-  const router = useRouter();
-  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.contact);
-  const [state, setState] = useState({
-    submitting: false,
-    submitted: false,
-    error: null as string | null
+interface ContactPageProps {
+  searchParams: Promise<{ product?: string }>;
+}
+
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const { product } = await searchParams;
+  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.contact, {
+    placement: "contact_page_quote_card",
+    product: product || "Commercial carpet project",
+    intent: "contact_project_quote",
+    pagePath: "/contact",
   });
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setState({ ...state, submitting: true });
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch("https://formspree.io/f/xlgkpkza", {
-        method: "POST",
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        trackLeadConversion({
-          formName: "contact_project_quote",
-          product: String(formData.get("product") || ""),
-          quantity: String(formData.get("quantity") || ""),
-          country: String(formData.get("country") || ""),
-        });
-        setState({ submitting: false, submitted: true, error: null });
-        form.reset();
-        
-        // 延迟跳转，确保客户看到成功提示
-        setTimeout(() => {
-          router.push('/thank-you');
-        }, 1500);
-      } else {
-        throw new Error("Submission failed");
-      }
-    } catch {
-      setState({ submitting: false, submitted: false, error: "Oops! There was a problem with the submission. Please try again." });
-    }
-  }
 
   return (
     <div className="bg-white">
@@ -70,63 +33,12 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-3 lg:gap-16">
             {/* Form Column */}
             <div className="lg:col-span-2">
-              {state.submitted ? (
-                <div className="animate-in rounded-2xl border border-success/20 bg-success/5 p-8 text-center duration-500 zoom-in md:p-12">
-                  <div className="w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">✓</div>
-                  <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-widest">Inquiry Received</h3>
-                  <p className="text-muted text-lg font-medium">Thank you for choosing Vishome. Our technical sales team will review your requirements and provide a preliminary quote within 24 hours.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl border border-border bg-surface p-5 shadow-sm md:space-y-8 md:p-12">
-                  {state.error && <p className="text-red-600 font-bold text-center text-sm">{state.error}</p>}
-
-                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Name *</label>
-                      <input name="name" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your name" />
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Email *</label>
-                      <input name="email" type="email" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="john@company.com" />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">WhatsApp</label>
-                      <input name="whatsapp" type="text" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="+1 000 000 0000" />
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Country / Region *</label>
-                      <input name="country" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="United States, UK, etc." />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-5 md:grid-cols-2 md:gap-8">
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Product *</label>
-                      <input name="product" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="Carpet tiles, hotel carpet, sisal carpet..." />
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Quantity</label>
-                      <input name="quantity" type="text" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="e.g. 500 SQM" />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Message *</label>
-                    <textarea name="message" rows={6} required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all resize-none" placeholder="Tell us your project area, delivery country, timeline, design needs, or sample request..." />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={state.submitting}
-                    className="btn-fox-orange w-full py-5 text-sm tracking-[0.16em] hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 md:py-6 md:text-base md:tracking-[0.4em]"
-                  >
-                    {state.submitting ? "SENDING INQUIRY..." : "REQUEST PROJECT QUOTE"}
-                  </button>
-                </form>
-              )}
+              <LeadCaptureForm
+                formName="contact_project_quote"
+                productDefault={product || ""}
+                submitLabel="REQUEST PROJECT QUOTE"
+                introText="Send your project area, carpet type, quantity, country, and target delivery date. We will reply with FOB price, sample options, technical data sheet, and production lead time."
+              />
             </div>
 
             {/* Info Column */}
@@ -135,16 +47,43 @@ export default function ContactPage() {
                 <h3 className="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-6">Headquarters</h3>
                 <div className="space-y-4 text-muted">
                   <p className="flex items-start gap-4">
-                    <span className="text-accent font-bold">A</span>
+                    <span className="mt-0.5 h-5 w-5 shrink-0 text-accent">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                    </span>
                     Cuihuangkou Town, Wuqing District, Tianjin 301700, China
                   </p>
                   <p className="flex items-start gap-4">
-                    <span className="text-accent font-bold">P</span>
-                    +86 152 2288 5400
+                    <span className="mt-0.5 h-5 w-5 shrink-0 text-accent">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.353-.883-.788-1.48-1.766-1.653-2.063-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.128.571-.075 1.758-.717 2.009-1.412.25-.694.25-1.288.175-1.412-.075-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-2.578l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.87 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                      </svg>
+                    </span>
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-whatsapp-placement="contact_page_address_block"
+                      data-whatsapp-product={product || "Commercial carpet project"}
+                      data-whatsapp-intent="contact_project_quote"
+                      className="hover:text-primary transition-colors"
+                    >
+                      WhatsApp Business: {brandInfo.whatsapp}
+                    </a>
                   </p>
                   <p className="flex items-start gap-4">
-                    <span className="text-accent font-bold">E</span>
-                    oilero@outlook.com
+                    <span className="mt-0.5 h-5 w-5 shrink-0 text-accent">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="m3 7 9 6 9-6" />
+                      </svg>
+                    </span>
+                    <span className="flex flex-col gap-1">
+                      <a href={`mailto:${brandInfo.email}`} className="hover:text-primary transition-colors">{brandInfo.email}</a>
+                      <a href={`mailto:${brandInfo.backupEmail}`} className="hover:text-primary transition-colors">Backup: {brandInfo.backupEmail}</a>
+                    </span>
                   </p>
                 </div>
               </div>
@@ -158,32 +97,38 @@ export default function ContactPage() {
                   </div>
                   <h3 className="font-bold text-xl mb-4 uppercase tracking-widest">Fast Project Quote</h3>
                   <p className="text-sm text-gray-300 mb-6 leading-relaxed">
-                    Send your area, carpet type, timeline, or floor plan via WhatsApp Business. Our sales team can reply with sample, TDS, and quotation guidance faster than email.
+                    Send your project area, carpet type, quantity, country, and target delivery date. Our sales team can reply with FOB price, sample options, technical data sheet, and lead time.
                   </p>
                   <a
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-whatsapp-placement="contact_page_quote_card"
+                    data-whatsapp-product={product || "Commercial carpet project"}
+                    data-whatsapp-intent="contact_project_quote"
                     className="mb-6 inline-flex w-full items-center justify-center gap-3 rounded-sm bg-[#25D366] px-4 py-4 text-[11px] font-black uppercase tracking-[0.12em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d] md:px-5 md:text-xs md:tracking-[0.2em]"
                     aria-label="Start WhatsApp Business chat with VISHOME"
                   >
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.353-.883-.788-1.48-1.766-1.653-2.063-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.128.571-.075 1.758-.717 2.009-1.412.25-.694.25-1.288.175-1.412-.075-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-2.578l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.87 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                     </svg>
-                    Chat on WhatsApp Business
+                    WhatsApp Project Support
                   </a>
                   <div className="border-t border-white/10 pt-5">
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/45 mb-2">Scan QR to WhatsApp</p>
-                    <div className="flex items-center gap-3">
+                    <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-white/45">WeChat & Form Inquiry</p>
+                    <div className="flex items-center gap-4">
                       <img
-                        src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://wa.me/8615222885400"
-                        alt="WhatsApp QR Code"
-                        className="w-[90px] h-[90px] rounded-sm bg-white p-1 shadow-md"
+                        src="/images/contact/wechat-qr-code.jpg"
+                        alt="Scan to add Vishomecarpet on WeChat"
+                        className="h-[76px] w-[76px] flex-shrink-0 rounded-sm bg-white p-1 shadow-md"
                         loading="lazy"
                       />
-                      <p className="text-[11px] font-medium text-white/60 leading-relaxed flex-1">
-                        Scan to chat on WhatsApp Business for project quotes &amp; samples
-                      </p>
+                      <div className="flex-1">
+                        <p className="text-sm font-bold text-accent">Scan to Add on WeChat</p>
+                        <p className="mt-1 text-xs leading-relaxed text-white/55">
+                          Prefer not to chat now? Use the project form and leave your email or WhatsApp. We will reply with price, samples, MOQ, and lead time.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

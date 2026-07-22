@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import ProductImage from "@/components/ProductImage";
 import { products } from "@/lib/data";
 import { productPath } from "@/lib/seo";
@@ -12,41 +11,30 @@ export const metadata = {
 
 export default function CommercialCarpetTilesPage() {
   const tileProducts = products.filter(p => p.category === "carpet-tiles");
+  const featuredTile = products.find((p) => p.id === "luxury-hotel-carpet-tile-50x50cm");
 
   return (
     <div className="bg-white">
-      {/* Targeted Hero with Background Image */}
-      <section className="relative min-h-[600px] flex items-center border-b border-white/5 overflow-hidden">
-        {/* Background Image Container */}
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/images/landing/hero-commercial-office.jpg" 
-            alt="Commercial office with premium carpet tiles" 
-            fill 
-            className="object-cover"
-            priority={true}
-          />
-          {/* Dark Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-secondary-900/60" />
-        </div>
-
-        <div className="container-fox relative z-10 py-24">
+      {/* Targeted Hero */}
+      <section className="relative overflow-hidden border-b border-white/5">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/commercial-carpet-tiles-office-hero.png')" }}
+        />
+        <div className="absolute inset-0 bg-[#15385d]/78" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#15385d]/90 via-[#15385d]/72 to-[#15385d]/38" />
+        <div className="container-fox relative py-24 md:py-32">
           <div className="max-w-4xl">
-            <span className="text-accent font-black tracking-[0.4em] text-xs uppercase mb-6 block italic">Engineered for Performance</span>
-            <h1 className="text-4xl md:text-7xl font-black text-white mb-8 tracking-tighter uppercase italic leading-[0.9]">
-              High-Performance <br />
-              <span className="text-primary-500">Commercial</span> Carpet Tiles
+            <span className="mb-4 block text-sm font-bold uppercase tracking-[0.2em] text-accent">Engineered for Performance</span>
+            <h1 className="mb-8 text-4xl font-bold leading-tight text-white md:text-6xl">
+              High-Performance Commercial Carpet Tiles
             </h1>
-            <p className="text-xl text-gray-200 mb-12 opacity-90 max-w-2xl font-medium leading-relaxed italic">
+            <p className="mb-12 max-w-3xl text-xl text-gray-100/90">
               The preferred choice for modern office fit-outs and high-traffic commercial interiors. Fire-rated (ASTM E648) and low-VOC for maximum safety and compliance.
             </p>
-            <div className="flex flex-wrap gap-8">
-              <Link href="/contact" className="bg-primary-500 text-white font-black px-12 py-6 uppercase tracking-[0.2em] rounded-sm hover:bg-white hover:text-secondary-900 transition-all shadow-2xl">
-                Get Project Quotation
-              </Link>
-              <Link href="/contact" className="border-2 border-white text-white font-black px-12 py-6 uppercase tracking-[0.2em] rounded-sm hover:bg-white/10 transition-all">
-                Request Free Samples
-              </Link>
+            <div className="flex flex-wrap gap-6">
+              <Link href="/contact" className="btn-fox-orange">Get Project Quotation</Link>
+              <Link href="/contact" className="btn-fox-outline">Request Free Samples</Link>
             </div>
           </div>
         </div>
@@ -101,6 +89,45 @@ export default function CommercialCarpetTilesPage() {
           </div>
         </div>
       </section>
+
+      {featuredTile && (
+        <section className="border-y border-border bg-white">
+          <div className="container-fox py-10 md:py-14">
+            <Link
+              href={productPath(featuredTile.id)}
+              className="group grid gap-8 overflow-hidden rounded-2xl border border-border bg-surface p-5 transition-all hover:border-accent hover:bg-white hover:shadow-2xl md:grid-cols-[0.9fr_1.1fr] md:p-8 lg:gap-12"
+            >
+              <div className="aspect-[4/3] overflow-hidden rounded-xl border border-border bg-white">
+                <ProductImage
+                  src="/images/products/luxury-hotel-carpet-tile-50x50cm/10-featured-commercial-carpet-tile-office-stack.jpg"
+                  alt="Gray commercial carpet tile stack and office floor samples for hotel and office projects"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-col justify-center">
+                <p className="mb-3 text-[10px] font-black uppercase tracking-[0.22em] text-accent">
+                  Recommended 50x50 Commercial Carpet Tile
+                </p>
+                <h2 className="mb-4 text-2xl font-black uppercase leading-tight text-primary md:text-4xl">
+                  50x50 Carpet Tiles for Hotel Carpet Floor and Office Projects
+                </h2>
+                <p className="mb-6 text-sm leading-relaxed text-muted md:text-base">
+                  View Vishomecarpet 50x50 commercial carpet tiles with volume pricing, MOQ, sample support,
+                  technical data, and application images for hotel corridors, guest rooms, meeting rooms, and office carpet projects.
+                </p>
+                <div className="grid gap-3 text-[10px] font-black uppercase tracking-[0.14em] text-primary sm:grid-cols-3">
+                  <span className="border border-border bg-white px-4 py-3">US$1.40-2.20 / Piece</span>
+                  <span className="border border-border bg-white px-4 py-3">MOQ 1 Piece</span>
+                  <span className="border border-border bg-white px-4 py-3">Sample Available</span>
+                </div>
+                <span className="mt-6 text-xs font-black uppercase tracking-[0.18em] text-accent">
+                  View Product Details →
+                </span>
+              </div>
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* Product Grid */}
       <section className="section-padding">

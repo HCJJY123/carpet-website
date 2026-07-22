@@ -20,14 +20,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: post.seoTitle,
-    description: post.seoDescription,
-    alternates: { canonical: `https://www.vishomecarpet.com/blog/${post.slug}` },
+    description: post.description,
+    keywords: post.keywords,
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.title,
-      description: post.seoDescription,
+      description: post.description,
       url: absoluteUrl(`/blog/${post.slug}`),
       type: "article",
       publishedTime: post.date,
+      modifiedTime: post.dateModified ?? post.date,
       authors: [post.author],
       images: [{ url: absoluteUrl(post.image), alt: post.title }],
     },
@@ -46,9 +48,10 @@ export default async function BlogPostPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
-    description: post.seoDescription,
+    description: post.description,
     image: absoluteUrl(post.image),
     datePublished: post.date,
+    dateModified: post.dateModified ?? post.date,
     author: {
       "@type": "Organization",
       name: post.author || brandInfo.name,
@@ -64,6 +67,11 @@ export default async function BlogPostPage({ params }: Props) {
     },
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
     articleSection: post.category,
+    keywords: post.keywords.join(", "),
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["article h1", ".article-summary", ".article-section h2"],
+    },
   };
 
   const breadcrumbJsonLd = {
@@ -94,34 +102,44 @@ export default async function BlogPostPage({ params }: Props) {
           <h1 className="text-3xl md:text-5xl text-white font-black uppercase tracking-wider leading-tight">
             {post.title}
           </h1>
-          <p className="article-summary text-gray-300 mt-6 max-w-3xl mx-auto text-base leading-relaxed italic">
+          <p className="article-summary text-gray-300 mt-6 max-w-3xl mx-auto text-base leading-relaxed">
             {post.subtitle}
           </p>
         </div>
       </header>
 
       <div className="max-w-[1000px] mx-auto px-4 -mt-16 pb-24">
-        <figure className="mb-8">
-          <div className="aspect-[16/9] rounded-xl overflow-hidden bg-white shadow-2xl border-8 border-white">
-            <ProductImage src={post.image} alt={post.imageAlt || post.title} className="w-full h-full" fit="cover" />
-          </div>
-        </figure>
+        {post.h1Image ? (
+          <figure className="mb-8">
+            <div className="aspect-[16/9] rounded-xl overflow-hidden bg-white shadow-2xl border-8 border-white">
+              <ProductImage src={post.h1Image} alt={post.h1ImageAlt || post.title} className="w-full h-full" fit="contain" />
+            </div>
+            {post.h1ImageCaption ? (
+              <figcaption className="text-xs text-muted mt-3 uppercase tracking-wider font-semibold">
+                {post.h1ImageCaption}
+              </figcaption>
+            ) : null}
+          </figure>
+        ) : null}
 
-        <div className="mt-12 space-y-16">
-          {post.content.map((section, idx) => (
-            <section key={idx} className="article-section border-b border-border pb-12 last:border-0">
-              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 uppercase tracking-tight">{section.title}</h2>
-              <div className="space-y-6">
-                {section.paragraphs.map((paragraph, pIdx) => (
-                  <p 
-                    key={pIdx} 
-                    className="text-muted text-lg leading-relaxed font-medium"
-                    dangerouslySetInnerHTML={{ __html: paragraph }}
-                  />
+        <div className="bg-surface border border-border rounded-xl p-6 md:p-8 mt-8">
+          <p className="text-[10px] font-black uppercase tracking-[0.25em] text-primary/60 mb-2">Pain Point Addressed</p>
+          <p className="text-muted leading-relaxed">{post.painPoint}</p>
+        </div>
+
+        <div className="mt-10 space-y-12">
+          {post.sections.map((section) => (
+            <section key={section.title} className="article-section border-b border-border pb-10">
+              <h2 className="text-2xl font-bold text-primary mb-5 uppercase tracking-tight">{section.title}</h2>
+              <div className="space-y-4">
+                {section.paragraphs.map((paragraph, index) => (
+                  <p key={`${section.title}-${index}`} className="text-muted text-lg leading-relaxed">
+                    {paragraph}
+                  </p>
                 ))}
               </div>
               {section.image ? (
-                <figure className="mt-10">
+                <figure className="mt-8">
                   <div className="rounded-xl overflow-hidden border border-border bg-white shadow-md">
                     <ProductImage src={section.image} alt={section.imageAlt || section.title} className="w-full aspect-[16/10]" fit="contain" />
                   </div>
@@ -136,18 +154,14 @@ export default async function BlogPostPage({ params }: Props) {
           ))}
         </div>
 
-        <section className="mt-16 bg-surface border border-border rounded-2xl p-8 md:p-12 text-center">
-          <span className="text-accent font-black tracking-[0.4em] text-[10px] uppercase mb-4 block italic">Ready to Upgrade Your Flooring?</span>
-          <h3 className="text-2xl md:text-3xl font-black text-primary uppercase tracking-tight mb-8">
-            Expert Solution for Your Next Project
-          </h3>
-          <div className="flex flex-wrap justify-center gap-6">
-            <Link href="/contact" className="bg-primary text-white font-black px-12 py-5 uppercase tracking-[0.2em] text-[10px] hover:bg-primary-hover transition-all">
-              Request Technical Quote
-            </Link>
-            <Link href="/projects" className="border-2 border-primary text-primary font-black px-12 py-5 uppercase tracking-[0.2em] text-[10px] hover:bg-white transition-all">
-              View Case Studies
-            </Link>
+        <section className="mt-12 bg-primary rounded-xl p-8 md:p-10">
+          <h3 className="text-xl font-black text-white uppercase tracking-wider mb-6">Related Next Steps</h3>
+          <div className="flex flex-wrap gap-4">
+            {post.suggestedLinks.map((item) => (
+              <Link key={item.href} href={item.href} className="btn-fox-orange !text-xs !tracking-[0.2em] !px-8 !py-4">
+                {item.label}
+              </Link>
+            ))}
           </div>
         </section>
       </div>
