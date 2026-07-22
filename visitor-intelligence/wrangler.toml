@@ -5,11 +5,11 @@ compatibility_date = "2026-07-22"
 [[d1_databases]]
 binding = "DB"
 database_name = "vishome_visitors"
-database_id = "<replace-with-cloudflare-d1-database-id>"
+database_id = "6cc70fed-f04b-4cf9-8d31-1b6190649279"
 
 [[kv_namespaces]]
 binding = "CACHE"
-id = "<replace-with-cloudflare-kv-namespace-id>"
+id = "5cb4456b929241fd9868e7f010c4cc1c"
 
 [vars]
 ALLOWED_ORIGINS = "https://www.vishomecarpet.com,https://vishomecarpet.com"
