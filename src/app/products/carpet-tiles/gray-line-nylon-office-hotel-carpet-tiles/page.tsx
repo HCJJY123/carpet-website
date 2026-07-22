@@ -63,26 +63,34 @@ const seoKeywords = [
   "tile carpet floor",
   "interlocking carpet tiles",
   "floor carpets",
+  "gray carpet tiles",
+  "grey carpet tiles",
+  "patterned carpet tiles",
+  "modern carpet tiles",
+  "blue carpet tiles",
+  "navy carpet tiles",
+  "black carpet tiles",
+  "beige carpet tiles",
 ];
 
 export const metadata: Metadata = product
   ? {
-      title: "Gray Line Nylon Carpet Tiles for Office and Hotel Carpet Floors",
+      title: "Gray Patterned Carpet Tiles for Office & Hotel | VISHOME",
       description:
-        "Vishomecarpet gray line nylon carpet tiles for office carpet, hotel carpet floor, commercial carpet, tile office carpet, and modular carpet tile projects.",
+        "Modern gray patterned nylon carpet tiles with charcoal, blue, navy, black, beige, or custom accents for office, hotel, and commercial floors.",
       keywords: seoKeywords,
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "Gray Line Nylon Carpet Tiles | Vishomecarpet",
-        description: product.description,
+        title: "Gray Patterned Carpet Tiles for Office & Hotel | VISHOME",
+        description: "Modern gray patterned nylon carpet tiles with charcoal, blue, navy, black, beige, or custom accents for office, hotel, and commercial floors.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
         images: [{ url: absoluteUrl(mainImages[0].src), alt: mainImages[0].alt }],
       },
       twitter: {
         card: "summary_large_image",
-        title: "Gray Line Nylon Carpet Tiles | Vishomecarpet",
-        description: product.description,
+        title: "Gray Patterned Carpet Tiles for Office & Hotel | VISHOME",
+        description: "Modern gray patterned nylon carpet tiles with charcoal, blue, navy, black, beige, or custom accents for office, hotel, and commercial floors.",
         images: [absoluteUrl(mainImages[0].src)],
       },
     }
@@ -210,7 +218,7 @@ export default function GrayLineNylonCarpetTilesPage() {
           <div>
             <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Commercial Tile Carpet</p>
             <h2 className="mb-6 text-3xl font-black uppercase leading-tight md:text-5xl">
-              Modular Carpet Tiles for Offices, Hotels and Public Spaces
+              Gray & Patterned Carpet Tiles for Office and Hotel Floors
             </h2>
             <p className="leading-relaxed text-white/70">
               Built for buyers comparing nylon carpet tiles, tile nylon carpet, tile office carpet, tile floor carpet, tile carpet floor, commercial carpet, floor carpets, and interlocking carpet tiles for modern B2B interiors.

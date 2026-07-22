@@ -89,26 +89,31 @@ const seoKeywords = [
   "floor carpets",
   "50x50 carpet tiles",
   "PP carpet tiles",
+  "polypropylene carpet tiles",
+  "square carpet tiles",
+  "office carpet squares",
+  "wholesale carpet tiles",
+  "bulk carpet tiles",
 ];
 
 export const metadata: Metadata = product
   ? {
-      title: "50x50 Nylon PP Office Carpet Tiles | Commercial Carpet Tiles",
+      title: "50x50 Nylon & Polypropylene Office Carpet Tiles | VISHOME",
       description:
-        "Vishomecarpet 50x50 nylon PP office carpet tiles for commercial carpet, hotel carpet floor, tile office carpet, interlocking carpet tiles, and B2B modular flooring projects.",
+        "Source 50x50 nylon or polypropylene office carpet tiles for commercial floors, corridors, retail, hotels, and wholesale modular carpet projects.",
       keywords: seoKeywords,
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "50x50 Nylon PP Office Carpet Tiles | Vishomecarpet",
-        description: product.description,
+        title: "50x50 Nylon & Polypropylene Office Carpet Tiles | VISHOME",
+        description: "50x50 nylon or polypropylene office carpet tiles for commercial floors, corridors, retail, hotels, and wholesale modular carpet projects.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
         images: [{ url: absoluteUrl(mainImages[0].src), alt: mainImages[0].alt }],
       },
       twitter: {
         card: "summary_large_image",
-        title: "50x50 Nylon PP Office Carpet Tiles | Vishomecarpet",
-        description: product.description,
+        title: "50x50 Nylon & Polypropylene Office Carpet Tiles | VISHOME",
+        description: "50x50 nylon or polypropylene office carpet tiles for commercial floors, corridors, retail, hotels, and wholesale modular carpet projects.",
         images: [absoluteUrl(mainImages[0].src)],
       },
     }
@@ -236,7 +241,7 @@ export default function OfficeCarpetTilesProductPage() {
           <div>
             <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Commercial Tile Carpet</p>
             <h2 className="mb-6 text-3xl font-black uppercase leading-tight md:text-5xl">
-              Modular Flooring for Offices, Hotels and Public Spaces
+              50x50 Nylon & Polypropylene Carpet Squares
             </h2>
             <p className="text-white/70 leading-relaxed">
               A practical carpet tile floor solution for buyers searching for office carpet, commercial carpet, nylon carpet tiles, tile nylon carpet, tile office carpet, tile floor carpet, tile decor carpet, and interlocking carpet tiles.

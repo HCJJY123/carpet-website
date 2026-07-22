@@ -35,9 +35,9 @@ const productImages = {
 
 export const metadata: Metadata = product
   ? {
-      title: "PVC-Free PE Backing Carpet Tiles for Sustainable Office Projects | Vishomecarpet",
+      title: "Green Carpet Tiles | PVC-Free PE Backing 50x50 | VISHOME",
       description:
-        "Vishomecarpet eco-friendly PE backing modular carpet tiles for offices, green buildings, and heavy commercial interiors. PVC-free backing, low VOC option, solution-dyed surface, and easy replacement.",
+        "PVC-free PE backing 50x50 carpet tiles for green offices, raised floors, acoustic comfort, schools, and sustainability-led commercial projects.",
       keywords: [
         "PE backing carpet tiles",
         "PVC free carpet tiles",
@@ -48,19 +48,24 @@ export const metadata: Metadata = product
         "modular carpet tiles",
         "solution dyed nylon carpet tiles",
         "commercial office carpet tiles",
+        "green carpet tiles",
+        "raised floor carpet tiles",
+        "acoustic carpet tiles",
+        "school carpet tiles",
+        "removable carpet tiles",
       ],
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "PVC-Free PE Backing Carpet Tiles | Vishomecarpet",
-        description: product.description,
+        title: "Green Carpet Tiles | PVC-Free PE Backing 50x50 | VISHOME",
+        description: "PVC-free PE backing 50x50 carpet tiles for green offices, raised floors, acoustic comfort, schools, and sustainable commercial interiors.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
         images: [{ url: absoluteUrl(productImages.hero), alt: product.name }],
       },
       twitter: {
         card: "summary_large_image",
-        title: "PVC-Free PE Backing Carpet Tiles | Vishomecarpet",
-        description: product.description,
+        title: "Green Carpet Tiles | PVC-Free PE Backing 50x50 | VISHOME",
+        description: "PVC-free PE backing 50x50 carpet tiles for green offices, raised floors, acoustic comfort, schools, and sustainable commercial interiors.",
         images: [absoluteUrl(productImages.hero)],
       },
     }
@@ -179,7 +184,7 @@ export default function EcoCorePeBackingProductPage() {
           <div>
             <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Office + Green Building</p>
             <h2 className="mb-6 text-3xl font-black uppercase leading-tight md:text-5xl">
-              Built for Sustainable Commercial Interiors
+              Green Carpet Tiles for Raised Floors & Acoustic Offices
             </h2>
             <p className="text-white/70 leading-relaxed">
               EcoCore is positioned for buyers searching for eco friendly carpet tiles, PVC free carpet tiles, PE backing carpet tiles, low VOC office flooring, and modular carpet tiles for green building projects.

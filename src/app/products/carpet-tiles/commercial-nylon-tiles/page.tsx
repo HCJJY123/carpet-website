@@ -33,6 +33,10 @@ const faqs = product
       {
         q: "Can you provide fire certification documents?",
         a: "We can provide ASTM E648 test reports on request. If your project requires a specific regional fire certificate (for example, a European standard), please tell us the exact standard required and we will confirm honestly whether we currently hold it or can arrange third-party testing."
+      },
+      {
+        q: "Can distributors request wholesale or bulk carpet tile pricing?",
+        a: "Yes. Send the project area, destination, backing requirement, installation schedule, and target quantity. We will confirm the applicable MOQ, commercial specification, sample options, and factory quotation."
       }
     ]
   : [];
@@ -49,15 +53,32 @@ const faqJsonLd = {
 
 export const metadata: Metadata = product
   ? {
-      title: `${product.name} | Commercial Carpet Product | VISHOME`,
-      description: product.description,
+      title: "Nylon 6.6 Heavy-Duty Commercial Carpet Tiles | VISHOME",
+      description: "Nylon 6.6 heavy-duty commercial carpet tiles with Class 33 performance and bitumen backing for offices, corridors, schools, airports, and contract floors.",
+      keywords: [
+        "nylon carpet tiles",
+        "heavy duty commercial carpet tiles",
+        "commercial grade carpet tiles",
+        "bitumen backed carpet tiles",
+        "contract carpet tiles",
+        "commercial carpet tiles wholesale",
+        "wholesale commercial carpet tiles",
+        "airport carpet tiles",
+        "school carpet tiles",
+      ],
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: `${product.name} | VISHOME`,
-        description: product.description,
+        title: "Nylon 6.6 Heavy-Duty Commercial Carpet Tiles | VISHOME",
+        description: "Nylon 6.6 heavy-duty commercial carpet tiles with Class 33 performance and bitumen backing for offices, corridors, schools, airports, and contract floors.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
         images: [{ url: absoluteUrl(product.image), alt: product.name }],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Nylon 6.6 Heavy-Duty Commercial Carpet Tiles | VISHOME",
+        description: "Nylon 6.6 heavy-duty commercial carpet tiles with Class 33 performance and bitumen backing for offices, corridors, schools, airports, and contract floors.",
+        images: [absoluteUrl(product.image)],
       },
     }
   : { title: "Commercial Carpet Product | VISHOME" };
@@ -103,7 +124,7 @@ export default function ProductDetailPage() {
       />
       <nav className="border-b border-border bg-surface py-3 md:py-4">
         <div className="container-fox">
-          <Link href="/products" className="text-[10px] font-bold uppercase tracking-[0.16em] text-muted hover:text-primary">
+          <Link href="/products/carpet-tiles" className="text-[10px] font-bold uppercase tracking-[0.16em] text-muted hover:text-primary">
             ← Back to Products
           </Link>
         </div>
@@ -143,6 +164,20 @@ export default function ProductDetailPage() {
               </div>
               <ProductConversionPanel product={p} />
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="section-padding bg-primary text-white">
+        <div className="container-fox grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Contract Flooring Specification</p>
+            <h2 className="text-3xl font-black uppercase leading-tight md:text-5xl">
+              Nylon 6.6 Heavy-Duty Commercial Carpet Tiles
+            </h2>
+          </div>
+          <div className="space-y-5 text-base leading-relaxed text-white/75">
+            <p>Premium Nylon 6.6 carpet tiles are designed for commercial buyers comparing heavy-duty carpet tiles, commercial grade carpet tiles, and contract carpet for busy offices, corridors, schools, airports, and hospitality circulation areas.</p>
+            <p>The 50x50cm modular format and dimensionally stable bitumen backing support phased installation and individual tile replacement. Distributors, contractors, and project buyers can request wholesale commercial carpet tile pricing, samples, fire documents, packing details, and delivery planning.</p>
           </div>
         </div>
       </section>

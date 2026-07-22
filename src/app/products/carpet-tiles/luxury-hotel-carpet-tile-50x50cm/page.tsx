@@ -121,26 +121,29 @@ const seoKeywords = [
   "floor carpets",
   "50x50 carpet tiles",
   "commercial nylon carpet tiles",
+  "hotel carpet tiles",
+  "luxury carpet tiles",
+  "commercial grade carpet tiles",
 ];
 
 export const metadata: Metadata = product
   ? {
-      title: "Luxury Hotel Carpet Tile 50x50cm | Commercial Nylon Carpet Tiles",
+      title: "Luxury Hotel Carpet Tiles 50x50 | Nylon Modular | VISHOME",
       description:
-        "Vishomecarpet luxury hotel carpet tile 50x50cm for hotel carpet floor, office carpet, nylon carpet tiles, commercial carpet, and B2B modular flooring projects.",
+        "Source luxury 50x50 hotel carpet tiles in nylon or PP options for guestrooms, corridors, lobbies, meeting rooms, and wholesale modular projects.",
       keywords: seoKeywords,
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "Luxury Hotel Carpet Tile 50x50cm | Vishomecarpet",
-        description: product.description,
+        title: "Luxury Hotel Carpet Tiles 50x50 | Nylon Modular | VISHOME",
+        description: "Luxury 50x50 hotel carpet tiles in nylon or PP options for guestrooms, corridors, lobbies, meeting rooms, and modular flooring projects.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
         images: [{ url: absoluteUrl(mainImages[0].src), alt: mainImages[0].alt }],
       },
       twitter: {
         card: "summary_large_image",
-        title: "Luxury Hotel Carpet Tile 50x50cm | Vishomecarpet",
-        description: product.description,
+        title: "Luxury Hotel Carpet Tiles 50x50 | Nylon Modular | VISHOME",
+        description: "Luxury 50x50 hotel carpet tiles in nylon or PP options for guestrooms, corridors, lobbies, meeting rooms, and modular flooring projects.",
         images: [absoluteUrl(mainImages[0].src)],
       },
     }
@@ -267,7 +270,7 @@ export default function LuxuryHotelCarpetTileProductPage() {
           <div>
             <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Hotel and Office Carpet Tiles</p>
             <h2 className="mb-6 text-3xl font-black uppercase leading-tight md:text-5xl">
-              Modular Flooring for Contractors, Hotels and Offices
+              Luxury 50x50 Hotel Carpet Tiles for Modular Projects
             </h2>
             <p className="text-white/70 leading-relaxed">
               Built for buyers searching for hotel carpet, office carpet, nylon carpet tiles, commercial carpet, tile carpet floor,

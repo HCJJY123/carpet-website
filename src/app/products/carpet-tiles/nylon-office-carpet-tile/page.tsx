@@ -28,7 +28,7 @@ const galleryImages = [
 ];
 
 const seoDescription =
-  "Heavy-duty 100% nylon commercial carpet tiles in 50x50 cm modular format for offices, corridors, and high-traffic spaces. Bitumen-backed, Class I fire-rated, custom colors, factory-direct.";
+  "Heavy-duty 100% nylon office carpet tiles in 50x50 format with Class 33 traffic rating, bitumen backing, antistatic protection, and custom colors.";
 
 const seoKeywords = [
   "nylon carpet tiles",
@@ -50,12 +50,17 @@ const seoKeywords = [
   "tile carpet floor",
   "interlocking carpet tiles",
   "floor carpets",
+  "heavy duty carpet tiles",
+  "commercial office carpet tiles",
+  "anti static carpet tiles",
+  "stain resistant carpet tiles",
+  "bitumen backed carpet tiles",
   "Vishomecarpet",
 ];
 
 export const metadata: Metadata = product
   ? {
-      title: "Nylon 50x50 Commercial Office Carpet Tile | Commercial Carpet Product | VISHOME",
+      title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VISHOME",
       description: seoDescription,
       keywords: seoKeywords,
       alternates: {
@@ -67,9 +72,8 @@ export const metadata: Metadata = product
         },
       },
       openGraph: {
-        title: "Nylon 50x50 Commercial Office Carpet Tile | VISHOME",
-        description:
-          "Heavy-duty 100% nylon commercial carpet tiles in 50x50 cm modular format for offices, corridors, and high-traffic spaces. Bitumen-backed, Class I fire-rated.",
+        title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VISHOME",
+        description: seoDescription,
         url: absoluteUrl(productPath(product.id)),
         type: "website",
         images: [
@@ -81,9 +85,8 @@ export const metadata: Metadata = product
       },
       twitter: {
         card: "summary_large_image",
-        title: "Nylon 50x50 Commercial Office Carpet Tile | VISHOME",
-        description:
-          "Heavy-duty 100% nylon commercial carpet tiles in 50x50 cm modular format for offices, corridors, and high-traffic spaces. Bitumen-backed, Class I fire-rated.",
+        title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VISHOME",
+        description: seoDescription,
         images: [absoluteUrl("/images/nylon-office-carpet-tile.webp")],
       },
     }
@@ -291,7 +294,7 @@ export default function NylonOfficeCarpetTilePage() {
             ))}
           </div>
           <p className="mt-5 text-sm leading-relaxed text-muted">
-            Reference price is based on comparable Alibaba market pricing for 50x50 cm nylon commercial carpet tiles. Final factory quotation depends on color, backing, quantity, packing, and delivery terms.
+            Reference pricing is provided for comparable 50x50 cm nylon commercial carpet tile specifications. Final factory quotation depends on color, backing, quantity, packing, and delivery terms.
           </p>
         </div>
       </section>
@@ -301,7 +304,7 @@ export default function NylonOfficeCarpetTilePage() {
           <div>
             <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Commercial Modular Carpet</p>
             <h2 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
-              Office Carpet Tiles Built for High-Traffic Interiors
+              Heavy-Duty Anti-Static Nylon Office Carpet Tiles
             </h2>
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted">
