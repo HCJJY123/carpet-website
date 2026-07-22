@@ -12,8 +12,9 @@ export default function WhatsAppFloating() {
   });
 
   return (
-    <div className="fixed bottom-5 right-4 md:bottom-8 md:right-8 z-[100] flex flex-col items-end gap-3 group">
-      <div className="pointer-events-none hidden max-w-[220px] rounded-2xl bg-[#102A43] px-4 py-3 text-right text-white shadow-2xl opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 md:block">
+    <div className="fixed bottom-5 right-4 z-[100] group md:bottom-8 md:right-8">
+      <div className="pointer-events-none absolute bottom-2 right-[calc(100%+14px)] hidden w-[224px] rounded-2xl bg-[#102A43] px-4 py-3 text-right text-white opacity-0 shadow-2xl translate-x-2 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 md:block">
+        <span className="absolute bottom-6 -right-2 h-4 w-4 rotate-45 bg-[#102A43]" aria-hidden="true" />
         <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#25D366]">
           WhatsApp Business
         </p>
