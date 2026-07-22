@@ -1057,7 +1057,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Airport Terminal Flooring Application Guide - Singapore Reference",
     subtitle: "A wayfinding-oriented modular carpet program designed for phased replacement in a live airport environment.",
     category: "public-area",
-    image: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp",
+    image: "/images/public-area-carpets.webp",
     description: "An 8,000 m² airport carpet system integrating circulation logic and modular maintenance strategy for high-traffic terminal use.",
     projectSpecs: [
       { label: "Location", value: "Singapore" },
