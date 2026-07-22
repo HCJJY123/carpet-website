@@ -1,0 +1,22 @@
+name = "vishome-visitor-intelligence"
+main = "src/index.js"
+compatibility_date = "2026-07-22"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "vishome_visitors"
+database_id = "<replace-with-cloudflare-d1-database-id>"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "<replace-with-cloudflare-kv-namespace-id>"
+
+[vars]
+ALLOWED_ORIGINS = "https://www.vishomecarpet.com,https://vishomecarpet.com"
+DROP_COUNTRIES = "CN"
+MIN_DURATION_SECONDS = "5"
+MAX_BODY_BYTES = "4096"
+
+# Secrets:
+# wrangler secret put IPINFO_TOKEN
+# wrangler secret put VISITOR_HASH_SALT

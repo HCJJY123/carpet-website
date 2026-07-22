@@ -31,6 +31,7 @@ const sections = [
     body: [
       "When you contact Vishome Carpet through our website, request a quotation, submit a sample request, or complete a Google Ads lead form, we may collect your name, company name, email address, phone number, country or region, project requirements, product interests, message content, and other details you choose to provide.",
       "We may also collect basic technical information such as browser type, device information, referring page, IP address, approximate location, form submission time, and website usage activity for security, analytics, and service improvement purposes.",
+      "For business analytics, we may process IP-derived organization information such as ASN, organization name, country, and company domain where available. We use hashed IP values for visit grouping and do not use this data to identify individual people.",
     ],
   },
   {
@@ -51,6 +52,7 @@ const sections = [
     title: "Third-party Services",
     body: [
       "We may use third-party services such as Google Ads, Google Analytics, website hosting providers, form processing tools, email systems, and communication platforms to operate the website, process inquiries, analyze traffic, and manage marketing campaigns.",
+      "We may also use Cloudflare and IPinfo Lite to help understand company-level website traffic, filter non-business traffic, protect the website, and improve B2B sales follow-up.",
       "These third-party services may process information according to their own privacy policies. We do not sell your personal information to third parties.",
     ],
   },
