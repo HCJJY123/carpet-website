@@ -18,7 +18,7 @@ export const solutionPages: SolutionPageData[] = [
     seoTitle: "Hotel Carpet Manufacturer | Custom Broadloom & Carpet Tiles | VISHOME",
     description:
       "China hotel carpet manufacturer for guestrooms, corridors, lobbies, ballrooms, banquet halls, and hospitality renovation projects.",
-    image: "/images/3d-printed-hotel-carpet-corridor.jpg",
+    image: "/images/3d-printed-hotel-carpet-corridor.webp",
     buyerIntent: "For hotel owners, interior designers, contractors, and procurement teams comparing custom hotel carpet suppliers.",
     painPoints: [
       "Custom patterns and color matching for different hotel zones.",
@@ -48,7 +48,7 @@ export const solutionPages: SolutionPageData[] = [
     seoTitle: "Office Carpet Tiles Supplier | 50x50 Modular Carpet Tiles | VISHOME",
     description:
       "Office carpet tiles supplier for corporate offices, coworking spaces, raised floors, meeting rooms, and rolling-chair traffic areas.",
-    image: "/images/products/nylon-office-carpet-tile/01-hero-commercial-office.png",
+    image: "/images/products/nylon-office-carpet-tile/01-hero-commercial-office.webp",
     buyerIntent: "For office fit-out contractors, facility managers, distributors, and commercial flooring buyers.",
     painPoints: [
       "50x50 modular flooring that is easy to replace after local damage.",
@@ -108,7 +108,7 @@ export const solutionPages: SolutionPageData[] = [
     seoTitle: "Casino Carpet Supplier | Custom Printed & Broadloom Carpet | VISHOME",
     description:
       "Casino carpet supplier for gaming floors, hotel corridors, VIP rooms, restaurants, and entertainment public areas.",
-    image: "/images/products/3d-printed-banquet-carpet/02-banquet-hall.jpg",
+    image: "/images/products/3d-printed-banquet-carpet/02-banquet-hall.webp",
     buyerIntent: "For casino developers, hospitality designers, and contractors needing custom pattern carpet with commercial durability.",
     painPoints: [
       "Dramatic custom designs without losing durability.",

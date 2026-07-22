@@ -259,12 +259,12 @@ export default function CustomLuxuryHotelRoomCarpetPage() {
         <div className="container-fox grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div className="space-y-4">
             <div className="relative aspect-square overflow-hidden border-8 border-white bg-white shadow-2xl">
-              <Image src={images[0].src} alt={images[0].alt} fill priority sizes="(max-width: 1024px) 100vw, 52vw" className="object-cover" />
+              <Image src={images[0].src} alt={images[0].alt} fill priority quality={82} sizes="(max-width: 1024px) 100vw, 52vw" className="object-cover" />
             </div>
             <div className="grid grid-cols-3 gap-4">
               {images.slice(1, 4).map((image) => (
                 <figure key={image.src} className="relative aspect-square overflow-hidden border border-border bg-white shadow-sm">
-                  <Image src={image.src} alt={image.alt} fill loading="lazy" sizes="(max-width: 1024px) 33vw, 16vw" className="object-cover" />
+                  <Image src={image.src} alt={image.alt} fill loading="lazy" quality={82} sizes="(max-width: 1024px) 33vw, 16vw" className="object-cover" />
                 </figure>
               ))}
             </div>
@@ -364,7 +364,7 @@ export default function CustomLuxuryHotelRoomCarpetPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {images.slice(1).map((image) => (
               <figure key={image.src} className="relative aspect-square overflow-hidden bg-white">
-                <Image src={image.src} alt={image.alt} fill loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+                <Image src={image.src} alt={image.alt} fill loading="lazy" quality={82} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </figure>
             ))}
           </div>

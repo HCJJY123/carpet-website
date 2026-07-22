@@ -12,22 +12,22 @@ const imageBase = "/images/products/50x50-nylon-pp-office-carpet-tiles";
 
 const mainImages = [
   {
-    src: `${imageBase}/01-hero-product.png`,
+    src: `${imageBase}/01-hero-product.webp`,
     title: "Color Stack",
     alt: "Vishomecarpet 50x50 nylon PP office carpet tiles for commercial carpet tile floor projects",
   },
   {
-    src: `${imageBase}/02-top-view.png`,
+    src: `${imageBase}/02-top-view.webp`,
     title: "Top View",
     alt: "Top view tile carpet floor pattern for office carpet and hotel carpet floor projects",
   },
   {
-    src: `${imageBase}/03-stack-display.png`,
+    src: `${imageBase}/03-stack-display.webp`,
     title: "Stack Display",
     alt: "Stack display of nylon carpet tiles and PP carpet tiles for commercial carpet flooring",
   },
   {
-    src: `${imageBase}/04-texture-close-up.png`,
+    src: `${imageBase}/04-texture-close-up.webp`,
     title: "Texture Close-up",
     alt: "Texture close up of tile nylon carpet for office carpet and commercial carpet tiles",
   },
@@ -35,37 +35,37 @@ const mainImages = [
 
 const detailImages = [
   {
-    src: `${imageBase}/05-modern-office-application.png`,
+    src: `${imageBase}/05-modern-office-application.webp`,
     title: "Modern Office Application",
     alt: "Modern office application with 50x50 commercial carpet tiles and modular floor carpets",
     text: "Designed for open offices, meeting rooms, corridors, retail stores, and hotel carpet floor renovation projects.",
   },
   {
-    src: `${imageBase}/06-installation-demonstration.png`,
+    src: `${imageBase}/06-installation-demonstration.webp`,
     title: "Fast Modular Installation",
     alt: "Installation demonstration of interlocking carpet tiles for tile office carpet projects",
     text: "The 50x50cm tile format supports quarter-turn, ashlar, brick, and monolithic layouts for efficient commercial installation.",
   },
   {
-    src: `${imageBase}/07-product-structure.png`,
+    src: `${imageBase}/07-product-structure.webp`,
     title: "Stable Tile Structure",
     alt: "Product structure of 50x50 nylon PP carpet tiles with backing layer for commercial carpet",
     text: "Available with nylon or PP surface options and project backing choices including PVC, bitumen, or PE backing.",
   },
   {
-    src: `${imageBase}/08-wear-resistance.png`,
+    src: `${imageBase}/08-wear-resistance.webp`,
     title: "Commercial Wear Resistance",
     alt: "Wear resistance detail for nylon carpet tiles used in high traffic office carpet floors",
     text: "Built for daily office traffic, rolling chair zones, corridors, and B2B buyers who need durable commercial carpet tiles.",
   },
   {
-    src: `${imageBase}/09-oem-odm-custom-options.png`,
+    src: `${imageBase}/09-oem-odm-custom-options.webp`,
     title: "OEM / ODM Options",
     alt: "OEM ODM custom tile carpet options for office carpet and hotel carpet floor projects",
     text: "Custom colors, backing, packaging, logo support, and project specification matching are available for wholesale orders.",
   },
   {
-    src: `${imageBase}/10-factory-qc.png`,
+    src: `${imageBase}/10-factory-qc.webp`,
     title: "Factory QC Support",
     alt: "Factory quality control for Vishomecarpet commercial carpet tiles and floor carpets",
     text: "Factory supply with QC inspection, sample support, and export packaging for contractors, distributors, and project buyers.",
@@ -170,7 +170,7 @@ export default function OfficeCarpetTilesProductPage() {
           <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
             <div>
               <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-white shadow-xl">
-                <ProductImage src={mainImages[0].src} alt={mainImages[0].alt} className="h-full w-full" fit="contain" />
+                <ProductImage src={mainImages[0].src} alt={mainImages[0].alt} className="h-full w-full" fit="contain" priority sizes="(max-width: 1024px) 100vw, 55vw" />
               </div>
               <div className="mt-5 grid grid-cols-3 gap-4">
                 {mainImages.slice(1).map((item) => (

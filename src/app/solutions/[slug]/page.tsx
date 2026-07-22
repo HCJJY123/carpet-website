@@ -106,7 +106,7 @@ export default async function SolutionDetailPage({ params }: Props) {
 
       <section className="relative overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 opacity-30">
-          <ProductImage src={page.image} alt={page.title} className="h-full w-full object-cover" />
+          <ProductImage src={page.image} alt={page.title} className="h-full w-full object-cover" priority sizes="100vw" />
         </div>
         <div className="absolute inset-0 bg-primary/86" />
         <div className="container-fox relative py-16 md:py-24">

@@ -306,6 +306,7 @@ export default function CustomSculptedWoolLobbyRugPage() {
                 alt={images[0].alt}
                 fill
                 priority
+                quality={82}
                 sizes="(max-width: 1024px) 100vw, 52vw"
                 className="object-cover"
               />

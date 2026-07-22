@@ -124,6 +124,7 @@ export default function ImageProtection() {
           src={lightboxImage.src}
           alt={lightboxImage.alt}
           fill
+          quality={90}
           sizes="94vw"
           className="object-contain"
           draggable={false}

@@ -25,7 +25,7 @@ export default function ProductsPage() {
         title="Our Products"
         eyebrow="Commercial Carpet Systems"
         description="Explore modular carpet tiles, wall-to-wall broadloom, and heavy-duty public area carpet systems for global B2B projects."
-        image="/images/carpet-tile-premium.jpg"
+        image="/images/carpet-tile-premium.webp"
         imageAlt="Commercial carpet tiles product background"
         objectPosition="center 58%"
       />
@@ -34,7 +34,7 @@ export default function ProductsPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {categories.map((cat) => (
               <Link key={cat.id} href={`/products/${cat.id}`} className="group relative block bg-surface rounded-xl overflow-hidden border border-border hover:shadow-2xl transition-all duration-500">
-                <div className="aspect-[4/5] overflow-hidden"><ProductImage src={cat.image} alt={cat.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" /></div>
+                <div className="aspect-[4/5] overflow-hidden"><ProductImage src={cat.image} alt={cat.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw" /></div>
                 <div className="p-8"><h2 className="text-2xl font-bold uppercase">{cat.name}</h2></div>
               </Link>
             ))}

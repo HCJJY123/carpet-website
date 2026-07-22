@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "100% natural sisal linen-weave carpet for offices, retail, galleries, hotel public areas, and biophilic commercial interiors.",
     url: absoluteUrl("/natural-sisal-carpet"),
-    images: [{ url: absoluteUrl("/images/natural-sisal-carpet-office.jpg"), alt: "Natural sisal carpet in a modern office reception" }],
+    images: [{ url: absoluteUrl("/images/natural-sisal-carpet-office.webp"), alt: "Natural sisal carpet in a modern office reception" }],
     type: "website",
   },
 };
@@ -88,7 +88,7 @@ export default function NaturalSisalCarpetLandingPage() {
               <Link href="/contact" className="btn-fox-outline">Request Sisal Samples</Link>
             </div>
           </div>
-          <ProductImage src="/images/natural-sisal-carpet-office.jpg" alt="Natural sisal carpet installed in a modern office reception" className="aspect-[4/3] rounded-sm border border-white/10 shadow-2xl" />
+          <ProductImage src="/images/natural-sisal-carpet-office.webp" alt="Natural sisal carpet installed in a modern office reception" className="aspect-[4/3] rounded-sm border border-white/10 shadow-2xl" priority sizes="(max-width: 1024px) 100vw, 50vw" />
         </div>
       </section>
 
@@ -118,10 +118,10 @@ export default function NaturalSisalCarpetLandingPage() {
             </p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
-            <ProductImage src="/images/natural-sisal-carpet.jpg" alt="Natural sisal linen-weave carpet swatch" className="aspect-square border border-border" />
-            <ProductImage src="/images/natural-sisal-carpet-roll.jpg" alt="Natural sisal broadloom carpet roll" className="aspect-square border border-border" />
-            <ProductImage src="/images/natural-sisal-carpet-retail.jpg" alt="Natural sisal carpet in boutique retail interior" className="aspect-square border border-border" />
-            <ProductImage src="/images/natural-sisal-carpet-macro.jpg" alt="Close-up macro of natural sisal woven texture" className="aspect-square border border-border" />
+            <ProductImage src="/images/natural-sisal-carpet.webp" alt="Natural sisal linen-weave carpet swatch" className="aspect-square border border-border" />
+            <ProductImage src="/images/natural-sisal-carpet-roll.webp" alt="Natural sisal broadloom carpet roll" className="aspect-square border border-border" />
+            <ProductImage src="/images/natural-sisal-carpet-retail.webp" alt="Natural sisal carpet in boutique retail interior" className="aspect-square border border-border" />
+            <ProductImage src="/images/natural-sisal-carpet-macro.webp" alt="Close-up macro of natural sisal woven texture" className="aspect-square border border-border" />
           </div>
         </div>
       </section>

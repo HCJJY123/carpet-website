@@ -138,7 +138,7 @@ export default function CaseSixPage() {
           </div>
 
           <div className="aspect-[21/9] rounded-xl overflow-hidden shadow-2xl border border-border mb-10">
-            <ProductImage src={pageImages[0].src} alt={pageImages[0].alt} className="w-full h-full object-cover" />
+            <ProductImage src={pageImages[0].src} alt={pageImages[0].alt} className="w-full h-full object-cover" priority sizes="100vw" />
           </div>
 
           <div className="grid lg:grid-cols-3 gap-10 mb-14">

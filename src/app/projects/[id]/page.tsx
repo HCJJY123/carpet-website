@@ -106,7 +106,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           </div>
 
           <div className="aspect-[21/9] rounded-xl overflow-hidden shadow-2xl border border-border mb-10">
-            <ProductImage src={project.image} alt={project.title} className="w-full h-full object-cover" />
+            <ProductImage src={project.image} alt={project.title} className="w-full h-full object-cover" priority sizes="100vw" />
           </div>
 
           <div className="grid lg:grid-cols-3 gap-10 mb-14">

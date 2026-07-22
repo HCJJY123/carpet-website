@@ -26,7 +26,7 @@ export default function FactoryPage() {
         <div className="container-fox">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-square">
-              <ProductImage src="/images/factory-showroom.jpg" alt="Vishome high-tech production line" className="w-full h-full object-cover rounded shadow-2xl" />
+              <ProductImage src="/images/factory-showroom.webp" alt="Vishome high-tech production line" className="w-full h-full object-cover rounded shadow-2xl" priority sizes="(max-width: 1024px) 100vw, 50vw" />
               <div className="absolute -bottom-8 -right-8 bg-primary p-10 text-white hidden md:block">
                 <p className="text-4xl font-black mb-1">900+</p>
                 <p className="text-[10px] font-bold uppercase tracking-widest">Skilled Craftsmen</p>

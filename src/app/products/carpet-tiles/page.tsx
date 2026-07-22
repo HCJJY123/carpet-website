@@ -35,7 +35,7 @@ export default function CategoryPage() {
             {categoryProducts.map((p) => (
               <Link key={p.id} href={`/products/${categoryId}/${p.id}`} className="group block bg-white border border-border p-8 hover:shadow-2xl transition-all duration-500 rounded-sm">
                 <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
-                   <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                   <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <h3 className="font-bold text-xl text-primary uppercase mb-6 h-14 leading-tight group-hover:text-accent transition-colors">{p.name}</h3>
                 <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">

@@ -29,7 +29,7 @@ export default async function RequestSampleBoxPage({ searchParams }: RequestSamp
         title="Request Commercial Carpet Sample Box"
         eyebrow="Sample Support"
         description="Commercial carpet tile and hotel broadloom sample support for project buyers, distributors, contractors, and design teams."
-        image="/images/samples-box.jpg"
+        image="/images/samples-box.webp"
         imageAlt="Commercial carpet sample box for project procurement"
         objectPosition="center 50%"
       />

@@ -51,7 +51,7 @@ const featuredSystems = [
     gauge: "1/10",
     fire: "ASTM E648 Class I",
     use: "Lobby / Corridor",
-    image: "/images/broadloom-commercial.jpg",
+    image: "/images/broadloom-commercial.webp",
   },
   {
     name: "Hospitality Pattern Broadloom",
@@ -59,7 +59,7 @@ const featuredSystems = [
     gauge: "1/12",
     fire: "EN 13501 Bfl-s1",
     use: "Guestroom / Ballroom",
-    image: "/images/broadloom-patterned.jpg",
+    image: "/images/broadloom-patterned.webp",
   },
   {
     name: "Modular Transition Carpet Tile",
@@ -67,7 +67,7 @@ const featuredSystems = [
     gauge: "1/10",
     fire: "ASTM E648 Class I",
     use: "Back-of-House / Service Areas",
-    image: "/images/carpet-tile-premium.jpg",
+    image: "/images/carpet-tile-premium.webp",
   },
 ];
 
@@ -176,9 +176,11 @@ export default function HotelHospitalitySolutionPage() {
       <section className="relative py-24 md:py-32 bg-primary overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <ProductImage
-            src="/images/blog-hotel-carpet.jpg"
+            src="/images/blog-hotel-carpet.webp"
             alt="Hotel hospitality carpet background"
             className="w-full h-full object-cover"
+            priority
+            sizes="100vw"
           />
         </div>
         <div className="container-fox relative z-10">

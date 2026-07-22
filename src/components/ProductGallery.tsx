@@ -26,6 +26,8 @@ export default function ProductGallery({ mainImage, gallery = [], productName }:
           src={activeImage.src}
           alt={activeImage.alt || productName}
           className="w-full h-full object-cover"
+          priority
+          sizes="(max-width: 1024px) 100vw, 60vw"
         />
       </div>
 
@@ -37,7 +39,7 @@ export default function ProductGallery({ mainImage, gallery = [], productName }:
             onClick={() => setActiveImage(img)}
             className="relative aspect-[3/2] border border-border rounded-sm overflow-hidden transition-all hover:border-primary/40 hover:shadow-md"
           >
-            <ProductImage src={img.src} alt={img.alt || productName} className="w-full h-full object-cover" />
+            <ProductImage src={img.src} alt={img.alt || productName} className="w-full h-full object-cover" sizes="(max-width: 1024px) 33vw, 18vw" />
           </button>
         ))}
       </div>

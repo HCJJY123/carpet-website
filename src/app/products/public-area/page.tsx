@@ -50,7 +50,7 @@ export default function CategoryPage() {
                 data-currency={isCustomRug ? "USD" : undefined}
               >
                 <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
-                   <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                   <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <h3 className="font-bold text-xl text-primary uppercase mb-6 h-14 leading-tight group-hover:text-accent transition-colors">{p.name}</h3>
                 <p className="mb-6 text-sm leading-relaxed text-muted">{p.description}</p>

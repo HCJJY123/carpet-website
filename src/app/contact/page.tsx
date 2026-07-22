@@ -24,7 +24,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         title="Start Your Procurement"
         eyebrow="Factory Direct Project Support"
         description="Request pricing, technical certificates, or professional sample matching for your commercial flooring project."
-        image="/images/contact-hero.jpg"
+        image="/images/contact-hero.webp"
         imageAlt="Commercial carpet procurement consultation background"
         objectPosition="center 42%"
       />
@@ -119,10 +119,11 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-white/45">WeChat & Form Inquiry</p>
                     <div className="flex items-center gap-4">
                       <Image
-                        src="/images/contact/wechat-qr-code.jpg"
+                        src="/images/contact/wechat-qr-code.webp"
                         alt="Scan to add Vishomecarpet on WeChat"
                         width={76}
                         height={76}
+                        unoptimized
                         className="h-[76px] w-[76px] flex-shrink-0 rounded-sm bg-white p-1 shadow-md"
                       />
                       <div className="flex-1">
@@ -137,7 +138,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               </div>
 
               <div className="space-y-6">
-                <ProductImage src="/images/samples-box.jpg" alt="Carpet Sample Box" className="rounded-lg shadow-md border border-border" />
+                <ProductImage src="/images/samples-box.webp" alt="Carpet Sample Box" className="rounded-lg shadow-md border border-border" />
                 <p className="text-xs text-muted leading-relaxed uppercase tracking-wider font-semibold italic text-center">
                   Professional Sample Boxes shipped globally within 3-5 days.
                 </p>

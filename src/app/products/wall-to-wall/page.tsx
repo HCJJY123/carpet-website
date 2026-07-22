@@ -44,7 +44,7 @@ export default function CategoryPage() {
                 data-item-category={p.id === "custom-luxury-hotel-room-carpet" ? "Wall-to-Wall Carpets" : undefined}
               >
                 <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
-                  <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                  <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <h3 className="font-bold text-xl text-primary uppercase mb-6 h-14 leading-tight group-hover:text-accent transition-colors">{p.name}</h3>
                 {p.id === "custom-luxury-hotel-room-carpet" && (
@@ -72,7 +72,7 @@ export default function CategoryPage() {
             ))}
             <Link href="/products/wall-to-wall/custom-floral-printed-hotel-carpet" className="group block bg-white border border-border p-8 hover:shadow-2xl transition-all duration-500 rounded-sm">
               <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
-                <ProductImage src="/images/products/wall-to-wall/custom-floral-printed-hotel-carpet/01-main-custom-floral-hotel-corridor.webp" alt="Custom floral printed wall-to-wall hotel carpet for corridor and hospitality projects" className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                <ProductImage src="/images/products/wall-to-wall/custom-floral-printed-hotel-carpet/01-main-custom-floral-hotel-corridor.webp" alt="Custom floral printed wall-to-wall hotel carpet for corridor and hospitality projects" className="w-full h-full object-cover transition-transform group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
               <h3 className="font-bold text-xl text-primary uppercase mb-6 h-14 leading-tight group-hover:text-accent transition-colors">Custom Floral Printed Wall-to-Wall Hotel Carpet</h3>
               <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">

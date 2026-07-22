@@ -11,25 +11,25 @@ const imageBase = "/images/products/luxury-hotel-carpet-tile-50x50cm";
 
 const mainImages = [
   {
-    src: `${imageBase}/01-main-carpet-tile-top-view.jpg`,
+    src: `${imageBase}/01-main-carpet-tile-top-view.webp`,
     title: "Top View",
     alt: "Vishomecarpet luxury hotel carpet tile 50x50cm commercial nylon carpet tiles top view",
     fit: "contain",
   },
   {
-    src: `${imageBase}/02-close-up-pile-texture.jpg`,
+    src: `${imageBase}/02-close-up-pile-texture.webp`,
     title: "Pile Texture",
     alt: "Close-up pile texture of commercial nylon carpet tiles for office carpet and hotel carpet floor projects",
     fit: "cover",
   },
   {
-    src: `${imageBase}/03-hotel-corridor-installed-scene.jpg`,
+    src: `${imageBase}/03-hotel-corridor-installed-scene.webp`,
     title: "Hotel Corridor",
     alt: "Hotel corridor installed with modular carpet tiles for commercial carpet floor projects",
     fit: "cover",
   },
   {
-    src: `${imageBase}/04-carpet-tile-backing-underside.jpg`,
+    src: `${imageBase}/04-carpet-tile-backing-underside.webp`,
     title: "Backing Detail",
     alt: "Backing underside detail of 50x50cm commercial carpet tile for modular flooring projects",
     fit: "contain",
@@ -38,35 +38,35 @@ const mainImages = [
 
 const detailImages = [
   {
-    src: `${imageBase}/05-color-range-swatches.jpg`,
+    src: `${imageBase}/05-color-range-swatches.webp`,
     title: "Color Range for Project Matching",
     alt: "Color range swatches for tile decor carpet and commercial carpet tile projects",
     text: "Neutral gray, taupe, charcoal, and custom color options support hotel, office, and distributor flooring programs.",
     fit: "cover",
   },
   {
-    src: `${imageBase}/06-hotel-guest-room-application.jpg`,
+    src: `${imageBase}/06-hotel-guest-room-application.webp`,
     title: "Hotel Guest Room Flooring",
     alt: "Hotel guest room with Vishomecarpet 50x50cm modular carpet tiles",
     text: "A practical hotel carpet floor option for guest rooms that need comfort, easy maintenance, and repeatable supply.",
     fit: "cover",
   },
   {
-    src: `${imageBase}/07-hotel-lobby-corridor-application.jpg`,
+    src: `${imageBase}/07-hotel-lobby-corridor-application.webp`,
     title: "Lobby and Corridor Use",
     alt: "Hotel lobby and corridor application using commercial carpet tiles for heavy traffic areas",
     text: "Heavy commercial tile carpet floor design for corridors, elevator landings, reception areas, and public circulation zones.",
     fit: "cover",
   },
   {
-    src: `${imageBase}/08-conference-room-carpet-tiles.jpg`,
+    src: `${imageBase}/08-conference-room-carpet-tiles.webp`,
     title: "Meeting Room Office Carpet",
     alt: "Conference room tile office carpet with modular commercial carpet tiles",
     text: "The modular tile format works well for meeting rooms, corporate floors, coworking spaces, and phased renovations.",
     fit: "cover",
   },
   {
-    src: `${imageBase}/09-executive-office-carpet-tiles.jpg`,
+    src: `${imageBase}/09-executive-office-carpet-tiles.webp`,
     title: "Executive Office Application",
     alt: "Executive office carpet tiles for commercial office carpet projects",
     text: "Refined office carpet appearance with project-based options for backing, color, quantity, samples, and export packaging.",
@@ -181,7 +181,7 @@ export default function LuxuryHotelCarpetTileProductPage() {
           <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
             <div>
               <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-white shadow-xl">
-                <ProductImage src={mainImages[0].src} alt={mainImages[0].alt} className="h-full w-full" fit={mainImages[0].fit} />
+                <ProductImage src={mainImages[0].src} alt={mainImages[0].alt} className="h-full w-full" fit={mainImages[0].fit} priority sizes="(max-width: 1024px) 100vw, 55vw" />
               </div>
               <div className="mt-5 grid grid-cols-3 gap-4">
                 {mainImages.slice(1).map((item) => (

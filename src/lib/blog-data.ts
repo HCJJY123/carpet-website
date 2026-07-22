@@ -38,8 +38,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-23",
     author: "Vishome Technical Team",
     category: "Cost & ROI",
-    image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.png",
-    h1Image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.png",
+    image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.webp",
+    h1Image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.webp",
     h1ImageAlt: "Blog 1 hotel lobby before and after comparison",
     sections: [
       {
@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
           "For active sites, teams can often complete section-based replacement within short operational windows.",
           "This is especially valuable for facilities that cannot tolerate prolonged closure or full-floor shutdown."
         ],
-        image: "/images/blog-series/blog-1/Blog_1_Installation_Process.png",
+        image: "/images/blog-series/blog-1/Blog_1_Installation_Process.webp",
         imageAlt: "Blog 1 installation process",
       },
       {
@@ -70,7 +70,7 @@ export const blogPosts: BlogPost[] = [
           "Higher-grade tiles can outperform low-cost options when measured against real operating conditions.",
           "For B2B buyers, total ownership cost is the decision metric that matters most—not unit price in isolation."
         ],
-        image: "/images/blog-series/blog-1/Blog_1_Durability_Infographic.png",
+        image: "/images/blog-series/blog-1/Blog_1_Durability_Infographic.webp",
         imageAlt: "Blog 1 durability and maintenance infographic",
       }
     ],
@@ -90,7 +90,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-23",
     author: "Vishome Technical Team",
     category: "Technical Guide",
-    image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.png",
+    image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.webp",
     sections: [
       {
         title: "Technical Specifications",
@@ -100,7 +100,7 @@ export const blogPosts: BlogPost[] = [
           "Wilton offers dense woven performance and consistent heritage aesthetics in executive corridors and formal spaces.",
           "Tufted systems deliver faster output and flexible cost control for large-volume rooms and general commercial areas."
         ],
-        image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.png",
+        image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.webp",
         imageAlt: "Blog 2 manufacturing process comparison",
       },
       {
@@ -111,7 +111,7 @@ export const blogPosts: BlogPost[] = [
           "Likewise, premium pattern capability without lifecycle planning can create budget pressure in high-volume projects.",
           "A structured comparison framework helps procurement teams justify decisions to operations, design, and finance stakeholders."
         ],
-        image: "/images/blog-series/blog-2/Blog_2_Durability_Chart.png",
+        image: "/images/blog-series/blog-2/Blog_2_Durability_Chart.webp",
         imageAlt: "Blog 2 durability comparison chart",
       },
       {
@@ -122,7 +122,7 @@ export const blogPosts: BlogPost[] = [
           "Installation QA should include seam direction planning, pattern registration checks, and post-install visual audits.",
           "Where seaming discipline is weak, guest-facing perception declines even if material specification appears strong on paper."
         ],
-        image: "/images/blog-series/blog-2/Blog_2_Seam_Quality_Macro.png",
+        image: "/images/blog-series/blog-2/Blog_2_Seam_Quality_Macro.webp",
         imageAlt: "Blog 2 seam quality macro comparison",
       }
     ],
@@ -142,7 +142,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-23",
     author: "Vishome Technical Team",
     category: "Design & Production",
-    image: "/images/blog-series/blog-3/Blog_3_Printing_Process.png",
+    image: "/images/blog-series/blog-3/Blog_3_Printing_Process.webp",
     sections: [
       {
         title: "Technology Comparison",
@@ -152,7 +152,7 @@ export const blogPosts: BlogPost[] = [
           "This is particularly useful for medium-volume hospitality, retail, and branded commercial interiors.",
           "For project teams, faster revision loops significantly improve alignment between design intent and factory output."
         ],
-        image: "/images/blog-series/blog-3/Blog_3_Printing_Process.png",
+        image: "/images/blog-series/blog-3/Blog_3_Printing_Process.webp",
         imageAlt: "Blog 3 printing process flow",
       },
       {
@@ -163,7 +163,7 @@ export const blogPosts: BlogPost[] = [
           "This flexibility enables stronger brand coherence across multi-space programs.",
           "Application context—not just unit price—should determine which print route is selected."
         ],
-        image: "/images/blog-series/blog-3/Blog_3_Custom_Designs_Gallery.png",
+        image: "/images/blog-series/blog-3/Blog_3_Custom_Designs_Gallery.webp",
         imageAlt: "Blog 3 custom design showcase",
       },
       {
@@ -174,7 +174,7 @@ export const blogPosts: BlogPost[] = [
           "Lighting-condition review is also essential to prevent on-site color mismatch disputes.",
           "A disciplined QC protocol protects both visual consistency and downstream installation quality."
         ],
-        image: "/images/blog-series/blog-3/Blog_3_Color_Precision.png",
+        image: "/images/blog-series/blog-3/Blog_3_Color_Precision.webp",
         imageAlt: "Blog 3 color precision and registration",
       }
     ],
@@ -194,7 +194,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-23",
     author: "Vishome Technical Team",
     category: "Technical Guide",
-    image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.png",
+    image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.webp",
     sections: [
       {
         title: "Specification Details",
@@ -204,7 +204,7 @@ export const blogPosts: BlogPost[] = [
           "Aesthetics alone cannot predict lifecycle performance under rolling loads, repeated cleaning, and climate variation.",
           "The right technical baseline reduces early wear complaints and warranty conflict."
         ],
-        image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.png",
+        image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.webp",
         imageAlt: "Blog 4 carpet tile cross-section",
       },
       {
@@ -215,7 +215,7 @@ export const blogPosts: BlogPost[] = [
           "Progressive wear comparison gives procurement teams a clearer decision basis than catalog claims.",
           "This helps avoid false savings from low-grade products that fail early in operation."
         ],
-        image: "/images/blog-series/blog-4/Blog_4_Traffic_Durability_Progression.png",
+        image: "/images/blog-series/blog-4/Blog_4_Traffic_Durability_Progression.webp",
         imageAlt: "Blog 4 traffic durability progression",
       },
       {
@@ -226,7 +226,7 @@ export const blogPosts: BlogPost[] = [
           "Moisture adaptation is a procurement-stage decision, not a late installation workaround.",
           "Projects that ignore climate variables often face dimensional movement, odor risk, and higher maintenance frequency."
         ],
-        image: "/images/blog-series/blog-4/Blog_4_Moisture_Management.png",
+        image: "/images/blog-series/blog-4/Blog_4_Moisture_Management.webp",
         imageAlt: "Blog 4 moisture management infographic",
       }
     ],
@@ -246,7 +246,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-23",
     author: "Vishome Technical Team",
     category: "Cost & ROI",
-    image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.png",
+    image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.webp",
     sections: [
       {
         title: "Financial Analysis",
@@ -256,7 +256,7 @@ export const blogPosts: BlogPost[] = [
           "Over a 10-year horizon, repeated replacement often outweighs initial purchase savings.",
           "Hospitality assets benefit more from predictable performance than from short-term material cost reductions."
         ],
-        image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.png",
+        image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.webp",
         imageAlt: "Blog 5 ten-year cost comparison",
       },
       {
@@ -267,7 +267,7 @@ export const blogPosts: BlogPost[] = [
           "Carpet performance is therefore part of brand delivery—not a hidden back-of-house expense.",
           "This link between surface condition and customer trust should be reflected in procurement criteria."
         ],
-        image: "/images/blog-series/blog-5/Blog_5_Customer_Experience_Timeline.png",
+        image: "/images/blog-series/blog-5/Blog_5_Customer_Experience_Timeline.webp",
         imageAlt: "Blog 5 customer experience timeline",
       },
       {
@@ -278,7 +278,7 @@ export const blogPosts: BlogPost[] = [
           "This enables more defensible tender decisions and better capex planning.",
           "In hospitality procurement, cost transparency is often the strongest defense against low-price, high-risk options."
         ],
-        image: "/images/blog-series/blog-5/Blog_5_Cost_Breakdown.png",
+        image: "/images/blog-series/blog-5/Blog_5_Cost_Breakdown.webp",
         imageAlt: "Blog 5 cost breakdown visualization",
       }
     ],
@@ -298,7 +298,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-24",
     author: "Vishome Export Team",
     category: "Logistics",
-    image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.png",
+    image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.webp",
     sections: [
       {
         title: "Logistics Optimization",
@@ -306,7 +306,7 @@ export const blogPosts: BlogPost[] = [
           "Route planning should compare standard ocean, expedited ocean, and hybrid multimodal options against deadline certainty.",
           "For time-sensitive openings, schedule reliability often outweighs lowest freight rate."
         ],
-        image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.png",
+        image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.webp",
         imageAlt: "Blog 6 shipping routes map",
       },
       {
@@ -315,7 +315,7 @@ export const blogPosts: BlogPost[] = [
           "Packaging sequence—barrier wrap, palletization, labeling, and shrink protection—directly reduces transit-loss exposure.",
           "Protection standards should be defined per handling stage, not only at factory dispatch."
         ],
-        image: "/images/blog-series/blog-6/Blog_6_Packaging_Process.png",
+        image: "/images/blog-series/blog-6/Blog_6_Packaging_Process.webp",
         imageAlt: "Blog 6 packaging protection workflow",
       },
       {
@@ -324,7 +324,7 @@ export const blogPosts: BlogPost[] = [
           "A day-by-day execution model with customs buffers and handover checkpoints keeps fast-track delivery realistic.",
           "Transparent cost phasing helps procurement and logistics teams align decisions under time pressure."
         ],
-        image: "/images/blog-series/blog-6/Blog_6_Timeline_Cost_Breakdown.png",
+        image: "/images/blog-series/blog-6/Blog_6_Timeline_Cost_Breakdown.webp",
         imageAlt: "Blog 6 timeline and cost breakdown",
       }
     ],
@@ -344,7 +344,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-24",
     author: "Vishome Technical Team",
     category: "Installation",
-    image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.png",
+    image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.webp",
     sections: [
       {
         title: "Scientific Principle",
@@ -352,7 +352,7 @@ export const blogPosts: BlogPost[] = [
           "Fiber and backing systems respond to humidity shifts. Excessive expansion during cure phase can trigger wrinkling and alignment drift.",
           "Environmental targets should be treated as installation specs, not optional site recommendations."
         ],
-        image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.png",
+        image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.webp",
         imageAlt: "Blog 7 humidity expansion visualization",
       },
       {
@@ -361,7 +361,7 @@ export const blogPosts: BlogPost[] = [
           "HVAC, dehumidifiers, and sensor layout must be coordinated at floor-plan level to maintain uniform climate zones.",
           "Localized imbalance can compromise seam stability even when average room conditions appear acceptable."
         ],
-        image: "/images/blog-series/blog-7/Blog_7_HVAC_Equipment_Layout.png",
+        image: "/images/blog-series/blog-7/Blog_7_HVAC_Equipment_Layout.webp",
         imageAlt: "Blog 7 HVAC equipment layout",
       },
       {
@@ -370,7 +370,7 @@ export const blogPosts: BlogPost[] = [
           "A phased timeline should include pre-conditioning, controlled install, cure stabilization, and gradual normalization.",
           "This method reduces post-handover defect probability in monsoon and high-humidity regions."
         ],
-        image: "/images/blog-series/blog-7/Blog_7_Installation_Timeline_Climate.png",
+        image: "/images/blog-series/blog-7/Blog_7_Installation_Timeline_Climate.webp",
         imageAlt: "Blog 7 climate-phase installation timeline",
       }
     ],

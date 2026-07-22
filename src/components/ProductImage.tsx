@@ -9,7 +9,7 @@ export default function ProductImage({
   className = "",
   fit = "cover",
   priority = false,
-  quality,
+  quality = 82,
   sizes = "(max-width: 768px) 100vw, 50vw",
   unoptimized = false,
 }: {
@@ -22,21 +22,28 @@ export default function ProductImage({
   sizes?: string;
   unoptimized?: boolean;
 }) {
-  const [imageError, setImageError] = useState(false);
+  const [loadState, setLoadState] = useState<{
+    src: string;
+    mode: "optimized" | "direct" | "failed";
+  }>({ src, mode: "optimized" });
+  const loadMode = loadState.src === src ? loadState.mode : "optimized";
+  const useDirectImage = unoptimized || loadMode === "direct";
 
-  if (!imageError) {
+  if (loadMode !== "failed") {
     return (
       <div className={`relative overflow-hidden ${className}`}>
         <Image
+          key={`${src}-${useDirectImage ? "direct" : "optimized"}`}
           src={src}
           alt={alt}
           fill
           className={fit === "contain" ? "object-contain" : "object-cover"}
           sizes={sizes}
           priority={priority}
+          loading={priority ? "eager" : "lazy"}
           quality={quality}
-          unoptimized={unoptimized}
-          onError={() => setImageError(true)}
+          unoptimized={useDirectImage}
+          onError={() => setLoadState({ src, mode: useDirectImage ? "failed" : "direct" })}
         />
       </div>
     );

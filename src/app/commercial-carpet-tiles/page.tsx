@@ -19,7 +19,7 @@ export default function CommercialCarpetTilesPage() {
       <section className="relative overflow-hidden border-b border-white/5">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/commercial-carpet-tiles-office-hero.png')" }}
+          style={{ backgroundImage: "url('/images/commercial-carpet-tiles-office-hero.webp')" }}
         />
         <div className="absolute inset-0 bg-[#15385d]/78" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#15385d]/90 via-[#15385d]/72 to-[#15385d]/38" />
@@ -99,7 +99,7 @@ export default function CommercialCarpetTilesPage() {
             >
               <div className="aspect-[4/3] overflow-hidden rounded-xl border border-border bg-white">
                 <ProductImage
-                  src="/images/products/luxury-hotel-carpet-tile-50x50cm/10-featured-commercial-carpet-tile-office-stack.jpg"
+                  src="/images/products/luxury-hotel-carpet-tile-50x50cm/10-featured-commercial-carpet-tile-office-stack.webp"
                   alt="Gray commercial carpet tile stack and office floor samples for hotel and office projects"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />

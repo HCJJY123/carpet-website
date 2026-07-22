@@ -33,7 +33,7 @@ export default function HotelCarpetPage() {
             </div>
             <div className="lg:w-2/5 relative">
               <div className="absolute -inset-4 bg-accent/20 blur-2xl rounded-full"></div>
-              <ProductImage src="/images/case-hilton.jpg" alt="Hotel luxury scene" className="relative rounded-2xl shadow-2xl z-10 border border-white/10" />
+              <ProductImage src="/images/case-hilton.webp" alt="Hotel luxury scene" className="relative rounded-2xl shadow-2xl z-10 border border-white/10" priority sizes="(max-width: 1024px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function HotelCarpetPage() {
         <div className="container-fox">
           <div className="flex flex-col lg:flex-row items-center gap-20">
             <div className="lg:w-1/2">
-              <ProductImage src="/images/blog-hotel-carpet.jpg" alt="Custom design process" className="rounded-2xl shadow-2xl" />
+              <ProductImage src="/images/blog-hotel-carpet.webp" alt="Custom design process" className="rounded-2xl shadow-2xl" />
             </div>
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-5xl font-bold text-primary mb-10 uppercase leading-tight">Bespoke Pattern Development</h2>

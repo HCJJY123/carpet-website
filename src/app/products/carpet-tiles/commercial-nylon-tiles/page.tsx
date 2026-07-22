@@ -113,7 +113,7 @@ export default function ProductDetailPage() {
           <div className="flex flex-col gap-10 lg:flex-row lg:gap-20">
             <div className="lg:w-3/5">
               <div className="aspect-[4/3] overflow-hidden rounded-sm border border-border shadow-xl md:aspect-square">
-                <ProductImage src={p.image} alt={p.imageAlt || p.name} className="h-full w-full object-cover" />
+                <ProductImage src={p.image} alt={p.imageAlt || p.name} className="h-full w-full object-cover" priority sizes="(max-width: 1024px) 100vw, 55vw" />
               </div>
             </div>
             <div className="flex flex-col justify-center lg:w-2/5">

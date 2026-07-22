@@ -10,19 +10,19 @@ const product = products.find((prod) => prod.id === productId);
 
 const galleryImages = [
   {
-    src: "/images/nylon-office-carpet-tile.jpg",
+    src: "/images/nylon-office-carpet-tile.webp",
     alt: "Nylon 50x50 commercial office carpet tile by Vishomecarpet",
   },
   {
-    src: "/images/products/nylon-office-carpet-tile/02-corridor-gray-carpet-tiles.png",
+    src: "/images/products/nylon-office-carpet-tile/02-corridor-gray-carpet-tiles.webp",
     alt: "Nylon carpet tiles in quarter-turn modular layout showing checkerboard pile",
   },
   {
-    src: "/images/products/nylon-office-carpet-tile/03-office-hallway-blue-gray-carpet-tiles.png",
+    src: "/images/products/nylon-office-carpet-tile/03-office-hallway-blue-gray-carpet-tiles.webp",
     alt: "Nylon carpet tiles installed in a modern office corridor and hallway",
   },
   {
-    src: "/images/products/nylon-office-carpet-tile/04-lobby-modular-carpet-tiles.png",
+    src: "/images/products/nylon-office-carpet-tile/04-lobby-modular-carpet-tiles.webp",
     alt: "Commercial nylon carpet tiles in an office lobby and meeting area",
   },
 ];
@@ -74,7 +74,7 @@ export const metadata: Metadata = product
         type: "website",
         images: [
           {
-            url: absoluteUrl("/images/nylon-office-carpet-tile.jpg"),
+            url: absoluteUrl("/images/nylon-office-carpet-tile.webp"),
             alt: "Nylon 50x50 commercial office carpet tile by Vishomecarpet",
           },
         ],
@@ -84,7 +84,7 @@ export const metadata: Metadata = product
         title: "Nylon 50x50 Commercial Office Carpet Tile | VISHOME",
         description:
           "Heavy-duty 100% nylon commercial carpet tiles in 50x50 cm modular format for offices, corridors, and high-traffic spaces. Bitumen-backed, Class I fire-rated.",
-        images: [absoluteUrl("/images/nylon-office-carpet-tile.jpg")],
+        images: [absoluteUrl("/images/nylon-office-carpet-tile.webp")],
       },
     }
   : { title: "Nylon 50x50 Commercial Office Carpet Tile | VISHOME" };
@@ -211,7 +211,7 @@ export default function NylonOfficeCarpetTilePage() {
           <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
             <div>
               <div className="aspect-[4/3] overflow-hidden rounded-sm border border-border bg-white shadow-xl">
-                <ProductImage src={galleryImages[0].src} alt={galleryImages[0].alt} className="h-full w-full" fit="cover" />
+                <ProductImage src={galleryImages[0].src} alt={galleryImages[0].alt} className="h-full w-full" fit="cover" priority sizes="(max-width: 1024px) 100vw, 55vw" />
               </div>
               <div className="mt-5 grid grid-cols-3 gap-4">
                 {galleryImages.slice(1).map((item) => (

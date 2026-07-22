@@ -82,7 +82,7 @@ export default function CarpetTiles50x50Page() {
               </div>
             </div>
             <div className="lg:w-1/2">
-              <ProductImage src="/images/carpet-tile-premium.jpg" alt="Installation patterns" className="rounded-xl shadow-2xl" />
+              <ProductImage src="/images/carpet-tile-premium.webp" alt="Installation patterns" className="rounded-xl shadow-2xl" />
             </div>
           </div>
         </div>

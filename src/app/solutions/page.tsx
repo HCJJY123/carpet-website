@@ -67,6 +67,8 @@ export default function SolutionsPage() {
             src="/images/about/commercial-project-application.webp"
             alt="Commercial carpet applications for hotels offices airports and retail projects"
             className="h-full w-full object-cover"
+            priority
+            sizes="100vw"
           />
         </div>
         <div className="absolute inset-0 bg-primary/86" />

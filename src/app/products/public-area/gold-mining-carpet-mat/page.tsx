@@ -10,51 +10,51 @@ const product = products.find((prod) => prod.id === productId);
 
 const mainImages = [
   {
-    src: "/images/products/gold-mining-carpet-mat/01-hero-45-degree.png",
+    src: "/images/products/gold-mining-carpet-mat/01-hero-45-degree.webp",
     alt: "Vishomecarpet gold mining carpet mat PVC miners moss for sluice box gold recovery",
   },
   {
-    src: "/images/products/gold-mining-carpet-mat/02-full-texture-top-view.png",
+    src: "/images/products/gold-mining-carpet-mat/02-full-texture-top-view.webp",
     alt: "Gold panning mat full texture top view for gold washing carpet and mining carpet",
   },
   {
-    src: "/images/products/gold-mining-carpet-mat/03-rolled-edge-thickness-backing.png",
+    src: "/images/products/gold-mining-carpet-mat/03-rolled-edge-thickness-backing.webp",
     alt: "Rolled edge gold mining carpet mat showing thickness backing and PVC ribbed structure",
   },
   {
-    src: "/images/products/gold-mining-carpet-mat/04-pvc-ribbed-miners-moss-texture.png",
+    src: "/images/products/gold-mining-carpet-mat/04-pvc-ribbed-miners-moss-texture.webp",
     alt: "PVC ribbed miners moss texture close up for high recovery rate gold carpet",
   },
 ];
 
 const detailImages = [
   {
-    src: "/images/products/gold-mining-carpet-mat/05-product-overview-detail.png",
+    src: "/images/products/gold-mining-carpet-mat/05-product-overview-detail.webp",
     title: "Gold Recovery Mat Overview",
     alt: "Gold mining mat moss product overview for sluice box matting and gold recovery",
   },
   {
-    src: "/images/products/gold-mining-carpet-mat/06-layer-structure-drainage-groove.png",
+    src: "/images/products/gold-mining-carpet-mat/06-layer-structure-drainage-groove.webp",
     title: "Layer Structure and Drainage Groove",
     alt: "Gold mining rubber mat layer structure with drainage groove for sand discharge",
   },
   {
-    src: "/images/products/gold-mining-carpet-mat/07-oem-odm-custom-size-logo-package.png",
+    src: "/images/products/gold-mining-carpet-mat/07-oem-odm-custom-size-logo-package.webp",
     title: "OEM and ODM Custom Options",
     alt: "OEM ODM custom gold mining carpet mat size logo color and package options",
   },
   {
-    src: "/images/products/gold-mining-carpet-mat/08-pvc-ribbed-wear-resistant-anti-slip.png",
+    src: "/images/products/gold-mining-carpet-mat/08-pvc-ribbed-wear-resistant-anti-slip.webp",
     title: "PVC Ribbed Miners Moss Texture",
     alt: "PVC miners moss gold washing mat wear resistant anti slip ribbed texture",
   },
   {
-    src: "/images/products/gold-mining-carpet-mat/09-wash-cleaning-sand-discharge.png",
+    src: "/images/products/gold-mining-carpet-mat/09-wash-cleaning-sand-discharge.webp",
     title: "Wash Cleaning and Sand Discharge",
     alt: "Gold washing carpet cleaning and sand discharge performance for mining use",
   },
   {
-    src: "/images/products/gold-mining-carpet-mat/10-gold-washing-mining-site-application.png",
+    src: "/images/products/gold-mining-carpet-mat/10-gold-washing-mining-site-application.webp",
     title: "River Gold Mining Application",
     alt: "Gold mining carpet applied in river gold washing and placer gold recovery site",
   },
@@ -168,7 +168,7 @@ export default function GoldMiningCarpetMatPage() {
           <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
             <div>
               <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-white shadow-xl">
-                <ProductImage src={mainImages[0].src} alt={mainImages[0].alt} className="h-full w-full" fit="contain" />
+                <ProductImage src={mainImages[0].src} alt={mainImages[0].alt} className="h-full w-full" fit="contain" priority sizes="(max-width: 1024px) 100vw, 55vw" />
               </div>
               <div className="mt-5 grid grid-cols-3 gap-4">
                 {mainImages.slice(1).map((image) => (
@@ -238,7 +238,7 @@ export default function GoldMiningCarpetMatPage() {
             </div>
           </div>
           <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl">
-            <ProductImage src="/images/products/gold-mining-carpet-mat/02-full-texture-top-view.png" alt="Gold mining carpet mat full texture for sluice box and gold washing carpet" className="h-full w-full" fit="contain" />
+            <ProductImage src="/images/products/gold-mining-carpet-mat/02-full-texture-top-view.webp" alt="Gold mining carpet mat full texture for sluice box and gold washing carpet" className="h-full w-full" fit="contain" />
           </div>
         </div>
       </section>

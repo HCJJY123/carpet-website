@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     url: absoluteUrl(canonicalPath),
     images: [
       {
-        url: absoluteUrl("/images/3d-printed-hotel-carpet-corridor.jpg"),
+        url: absoluteUrl("/images/3d-printed-hotel-carpet-corridor.webp"),
         alt: "3D HD Printed Nylon Hotel Carpet by Vishomecarpet"
       }
     ],
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "3D HD Printed Nylon Hotel Carpet | VISHOME",
     description: "High-definition 3D-printed nylon broadloom carpet for hotel guestrooms, corridors, and lobbies. Custom patterns, Class I fire rating, 4m width.",
-    images: [absoluteUrl("/images/3d-printed-hotel-carpet-corridor.jpg")]
+    images: [absoluteUrl("/images/3d-printed-hotel-carpet-corridor.webp")]
   }
 };
 
@@ -143,7 +143,7 @@ export default function ProductDetailPage() {
           <div className="flex flex-col lg:flex-row gap-16 xl:gap-20">
             <div className="lg:w-3/5">
               <div className="aspect-[3/2] rounded-sm overflow-hidden border border-border shadow-xl">
-                <ProductImage src={product.image} alt={product.imageAlt || product.name} className="w-full h-full object-cover" />
+                <ProductImage src={product.image} alt={product.imageAlt || product.name} className="w-full h-full object-cover" priority sizes="(max-width: 1024px) 100vw, 60vw" />
               </div>
               {heroGallery.length ? (
                 <div className="mt-5 grid grid-cols-3 gap-4">

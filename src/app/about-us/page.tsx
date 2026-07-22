@@ -19,6 +19,8 @@ export default function AboutUsPage() {
             src="/images/about/about-us-hero-banner.webp"
             alt="Commercial carpet manufacturing factory interior"
             className="w-full h-full object-cover"
+            priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-[#0B2E4A]/45"></div>
         </div>
@@ -114,7 +116,7 @@ export default function AboutUsPage() {
             </div>
             <div className="lg:w-1/2">
               <ProductImage
-                src="/images/about/our-story-export-logistics.jpg"
+                src="/images/about/our-story-export-logistics.webp"
                 alt="Export logistics loading of commercial carpets at Vishome factory"
                 className="rounded-[24px] shadow-xl w-full aspect-[4/3] object-cover border border-border"
               />

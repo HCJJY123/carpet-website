@@ -59,7 +59,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="absolute inset-4 border-2 border-primary/10 translate-x-4 translate-y-4"></div>
               <ProductImage
-                src="/images/category-broadloom.jpg"
+                src="/images/category-broadloom.webp"
                 alt="Vishome Headquarters and Showroom"
                 className="relative z-10 shadow-2xl rounded-sm"
               />

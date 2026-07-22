@@ -11,7 +11,7 @@ const canonicalPath = "/products/wall-to-wall/3d-printed-banquet-hall-carpet";
 const product = products.find((prod) => prod.id === productId);
 
 const detailImage = {
-  src: "/images/products/3d-printed-banquet-carpet/05-corridor-view.jpg",
+  src: "/images/products/3d-printed-banquet-carpet/05-corridor-view.webp",
   alt: "Custom 3D printed wall-to-wall hotel corridor carpet in teal with gold line pattern, project detail view"
 };
 
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     url: absoluteUrl(canonicalPath),
     images: [
       {
-        url: absoluteUrl("/images/products/3d-printed-banquet-carpet/02-banquet-hall.jpg"),
+        url: absoluteUrl("/images/products/3d-printed-banquet-carpet/02-banquet-hall.webp"),
         alt: "Custom 3D Printed Banquet Hall Carpet by Vishomecarpet"
       }
     ],
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Custom 3D Printed Banquet Hall Carpet | VISHOME",
     description: "Custom 3D printed wall-to-wall banquet hall carpet for ballrooms, banquet rooms, and hotel corridors. Class I fire rating, 4m width, low MOQ, factory-direct.",
-    images: [absoluteUrl("/images/products/3d-printed-banquet-carpet/02-banquet-hall.jpg")]
+    images: [absoluteUrl("/images/products/3d-printed-banquet-carpet/02-banquet-hall.webp")]
   }
 };
 

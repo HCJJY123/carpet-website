@@ -12,22 +12,22 @@ const imageBase = "/images/products/gray-line-nylon-office-carpet-tiles";
 
 const mainImages = [
   {
-    src: `${imageBase}/01-office-workspace-carpet-tiles.png`,
+    src: `${imageBase}/01-office-workspace-carpet-tiles.webp`,
     title: "Office Workspace",
     alt: "Vishomecarpet gray line nylon carpet tiles installed in modern office carpet and hotel carpet floor project",
   },
   {
-    src: `${imageBase}/02-hotel-lounge-carpet-tiles.png`,
+    src: `${imageBase}/02-hotel-lounge-carpet-tiles.webp`,
     title: "Hotel Lounge",
     alt: "Hotel lounge and public area with commercial carpet tiles in gray textured pattern",
   },
   {
-    src: `${imageBase}/03-open-office-carpet-tiles.png`,
+    src: `${imageBase}/03-open-office-carpet-tiles.webp`,
     title: "Open Office",
     alt: "Open office carpet using gray nylon carpet tiles with tile decor carpet accents",
   },
   {
-    src: `${imageBase}/04-meeting-room-carpet-tiles.png`,
+    src: `${imageBase}/04-meeting-room-carpet-tiles.webp`,
     title: "Meeting Room",
     alt: "Meeting room tile floor carpet with gray modular office carpet tiles",
   },
@@ -35,13 +35,13 @@ const mainImages = [
 
 const detailImages = [
   {
-    src: `${imageBase}/05-commercial-office-detail.png`,
+    src: `${imageBase}/05-commercial-office-detail.webp`,
     title: "Commercial Office Application",
     alt: "Commercial office detail image showing gray tile nylon carpet and office carpet floor",
     text: "A practical floor carpets solution for workstations, reception areas, corridors, and daily rolling-chair traffic zones.",
   },
   {
-    src: `${imageBase}/06-conference-room-detail.png`,
+    src: `${imageBase}/06-conference-room-detail.webp`,
     title: "Hotel and Conference Flooring",
     alt: "Conference room hotel carpet floor application with interlocking carpet tiles",
     text: "The gray modular pattern gives hotel carpet floor, conference room, and tile office carpet projects a calm professional look.",
@@ -144,7 +144,7 @@ export default function GrayLineNylonCarpetTilesPage() {
           <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
             <div>
               <div className="aspect-[4/3] overflow-hidden border border-border bg-white shadow-xl">
-                <ProductImage src={mainImages[0].src} alt={mainImages[0].alt} className="h-full w-full" />
+                <ProductImage src={mainImages[0].src} alt={mainImages[0].alt} className="h-full w-full" priority sizes="(max-width: 1024px) 100vw, 55vw" />
               </div>
               <div className="mt-5 grid grid-cols-3 gap-4">
                 {mainImages.slice(1).map((item) => (

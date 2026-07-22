@@ -9,15 +9,15 @@ const productId = "natural-sisal-carpet";
 const product = products.find((prod) => prod.id === productId);
 
 const productImages = {
-  hero: "/images/natural-sisal-carpet-office.jpg",
+  hero: "/images/natural-sisal-carpet-office.webp",
   gallery: [
-    { src: "/images/natural-sisal-carpet-roll.jpg", alt: "Natural sisal broadloom carpet roll, 4m width, with jute backing", title: "Broadloom Roll" },
-    { src: "/images/natural-sisal-carpet.jpg", alt: "Natural sisal linen-weave commercial carpet swatch in warm wheat tone by Vishomecarpet", title: "Linen-Weave Swatch" },
-    { src: "/images/natural-sisal-carpet-retail.jpg", alt: "Sisal commercial carpet flooring in an upscale boutique retail interior", title: "Boutique Retail" },
-    { src: "/images/natural-sisal-carpet-lobby.jpg", alt: "Natural sisal broadloom in a hotel lobby and exhibition public area", title: "Lobby and Exhibition" },
-    { src: "/images/natural-sisal-carpet-macro.jpg", alt: "Macro close-up of woven natural sisal linen-weave fiber texture", title: "Linen-Weave Macro" },
-    { src: "/images/natural-sisal-carpet-backing.jpg", alt: "Non-slip natural latex and jute backing of sisal commercial carpet", title: "Latex and Jute Backing" },
-    { src: "/images/natural-sisal-carpet-colorways.jpg", alt: "Natural sisal carpet shown in four neutral colorways", title: "Neutral Colorways" },
+    { src: "/images/natural-sisal-carpet-roll.webp", alt: "Natural sisal broadloom carpet roll, 4m width, with jute backing", title: "Broadloom Roll" },
+    { src: "/images/natural-sisal-carpet.webp", alt: "Natural sisal linen-weave commercial carpet swatch in warm wheat tone by Vishomecarpet", title: "Linen-Weave Swatch" },
+    { src: "/images/natural-sisal-carpet-retail.webp", alt: "Sisal commercial carpet flooring in an upscale boutique retail interior", title: "Boutique Retail" },
+    { src: "/images/natural-sisal-carpet-lobby.webp", alt: "Natural sisal broadloom in a hotel lobby and exhibition public area", title: "Lobby and Exhibition" },
+    { src: "/images/natural-sisal-carpet-macro.webp", alt: "Macro close-up of woven natural sisal linen-weave fiber texture", title: "Linen-Weave Macro" },
+    { src: "/images/natural-sisal-carpet-backing.webp", alt: "Non-slip natural latex and jute backing of sisal commercial carpet", title: "Latex and Jute Backing" },
+    { src: "/images/natural-sisal-carpet-colorways.webp", alt: "Natural sisal carpet shown in four neutral colorways", title: "Neutral Colorways" },
   ],
 };
 
@@ -129,6 +129,8 @@ export default function NaturalSisalCarpetPage() {
                   src={productImages.hero}
                   alt="Natural sisal carpet in a modern biophilic office reception"
                   className="h-full w-full"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 55vw"
                 />
               </div>
               <div className="mt-5 grid grid-cols-3 gap-4">
@@ -202,7 +204,7 @@ export default function NaturalSisalCarpetPage() {
             </div>
           </div>
           <div className="aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
-            <ProductImage src="/images/natural-sisal-carpet-office.jpg" alt="Natural sisal carpet in a modern biophilic office reception" className="h-full w-full" />
+            <ProductImage src="/images/natural-sisal-carpet-office.webp" alt="Natural sisal carpet in a modern biophilic office reception" className="h-full w-full" />
           </div>
         </div>
       </section>

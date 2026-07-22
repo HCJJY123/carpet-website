@@ -101,12 +101,12 @@ export default function CustomFloralPrintedHotelCarpetPage() {
         <div className="container-fox grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="space-y-4">
             <div className="relative aspect-square overflow-hidden border-8 border-white bg-white shadow-2xl">
-              <Image src={images[0].src} alt={images[0].alt} fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+              <Image src={images[0].src} alt={images[0].alt} fill priority quality={82} sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
             </div>
             <div className="grid grid-cols-3 gap-4">
               {images.slice(1, 4).map((image) => (
                 <figure key={image.src} className="relative aspect-square overflow-hidden border border-border bg-white shadow-sm">
-                  <Image src={image.src} alt={image.alt} fill loading="lazy" sizes="(max-width: 1024px) 33vw, 16vw" className="object-cover" />
+                  <Image src={image.src} alt={image.alt} fill loading="lazy" quality={82} sizes="(max-width: 1024px) 33vw, 16vw" className="object-cover" />
                 </figure>
               ))}
             </div>
@@ -138,7 +138,7 @@ export default function CustomFloralPrintedHotelCarpetPage() {
 
       <section className="section-padding"><div className="container-fox"><h2 className="mb-9 text-3xl font-black uppercase">Recommended Applications</h2><div className="grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">{["Hotel corridors", "Hotel guestrooms", "Banquet halls", "Hotel lobbies", "Serviced apartments", "Executive offices", "Commercial reception areas", "Hospitality renovation projects"].map((item) => <div key={item} className="bg-white p-6 text-sm font-black uppercase tracking-wider">{item}</div>)}</div></div></section>
 
-      <section className="section-padding bg-surface"><div className="container-fox"><h2 className="mb-10 text-3xl font-black uppercase md:text-5xl">Project Gallery</h2><div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{images.slice(1).map((image) => <figure key={image.src} className="relative aspect-square overflow-hidden bg-white"><Image src={image.src} alt={image.alt} fill loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" /></figure>)}</div></div></section>
+      <section className="section-padding bg-surface"><div className="container-fox"><h2 className="mb-10 text-3xl font-black uppercase md:text-5xl">Project Gallery</h2><div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{images.slice(1).map((image) => <figure key={image.src} className="relative aspect-square overflow-hidden bg-white"><Image src={image.src} alt={image.alt} fill loading="lazy" quality={82} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" /></figure>)}</div></div></section>
 
       <section className="section-padding border-y border-border"><div className="container-fox"><p className="mb-3 text-xs font-black uppercase tracking-[0.25em] text-accent">Why buyers choose Vishomecarpet</p><h2 className="mb-10 text-3xl font-black uppercase md:text-5xl">Built for Flexible Custom Carpet Procurement</h2><div className="grid gap-px border border-border bg-border md:grid-cols-4">{[["Low Project MOQ", "Start custom floral printed carpet projects from 100 SQM."], ["Custom Pattern Development", "Adjust pattern scale, direction and colors to match interior drawings."], ["Multiple Material Options", "Select PP, nylon, polyester or wool-blend options according to the project."], ["B2B Project Support", "Receive specification review, quotation support and export coordination."]].map(([title, text]) => <div key={title} className="bg-white p-7"><h3 className="mb-3 text-sm font-black uppercase">{title}</h3><p className="text-sm leading-relaxed text-muted">{text}</p></div>)}</div></div></section>
 

@@ -10,7 +10,7 @@ export default function JsonLd() {
     alternateName: [brandInfo.shortName, "Vishomecarpet"],
     url: brandInfo.url,
     logo: absoluteUrl("/logo.svg"),
-    image: absoluteUrl("/images/og-cover.jpg"),
+    image: absoluteUrl("/images/og-cover.webp"),
     email: [brandInfo.email, brandInfo.backupEmail],
     telephone: brandInfo.phone,
     address: {
@@ -61,7 +61,7 @@ export default function JsonLd() {
     telephone: brandInfo.phone,
     email: [brandInfo.email, brandInfo.backupEmail],
     logo: absoluteUrl("/logo.svg"),
-    image: [absoluteUrl("/images/og-cover.jpg"), absoluteUrl("/images/hero-home.jpg")],
+    image: [absoluteUrl("/images/og-cover.webp"), absoluteUrl("/images/hero-home.webp")],
     priceRange: "$$",
     currenciesAccepted: "USD, EUR, CNY",
     paymentAccepted: "T/T, L/C",

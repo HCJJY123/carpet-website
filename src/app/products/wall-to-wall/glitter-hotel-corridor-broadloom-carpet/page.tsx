@@ -9,7 +9,7 @@ const canonicalPath = "/products/wall-to-wall/glitter-hotel-corridor-broadloom-c
 const product = {
   name: "Glitter Hotel Corridor Broadloom Carpet",
   description: "Blue and gold glitter-pattern wall-to-wall broadloom carpet for hotel corridors, lobbies, ballrooms, and luxury hospitality projects.",
-  image: "/images/products/hotel-glitter-broadloom/1.jpg",
+  image: "/images/products/hotel-glitter-broadloom/1.webp",
   imageAlt: "Blue and gold glitter hotel corridor broadloom carpet installed in a luxury hotel by Vishomecarpet",
   moq: "300 SQM",
   leadTime: "25-35 Days",
@@ -26,18 +26,18 @@ const product = {
     antistatic: "Available on Request"
   },
   mainImages: [
-    { src: "/images/products/hotel-glitter-broadloom/1.jpg", alt: "Luxury hotel corridor with blue and gold glitter wall-to-wall broadloom carpet" },
-    { src: "/images/products/hotel-glitter-broadloom/2.jpg", alt: "Hotel lobby corridor carpet with glitter gold pattern and navy background" },
-    { src: "/images/products/hotel-glitter-broadloom/3.jpg", alt: "Custom hospitality broadloom carpet design in blue and gold glitter style" },
-    { src: "/images/products/hotel-glitter-broadloom/4.jpg", alt: "Wall-to-wall hotel carpet main view for corridor and public area projects" }
+    { src: "/images/products/hotel-glitter-broadloom/1.webp", alt: "Luxury hotel corridor with blue and gold glitter wall-to-wall broadloom carpet" },
+    { src: "/images/products/hotel-glitter-broadloom/2.webp", alt: "Hotel lobby corridor carpet with glitter gold pattern and navy background" },
+    { src: "/images/products/hotel-glitter-broadloom/3.webp", alt: "Custom hospitality broadloom carpet design in blue and gold glitter style" },
+    { src: "/images/products/hotel-glitter-broadloom/4.webp", alt: "Wall-to-wall hotel carpet main view for corridor and public area projects" }
   ],
   detailImages: [
-    { src: "/images/products/hotel-glitter-broadloom/5.jpg", alt: "Glitter hotel carpet roll detail showing pile texture and backing" },
-    { src: "/images/products/hotel-glitter-broadloom/6.jpg", alt: "Close-up of blue gold hotel broadloom carpet texture and pattern" },
-    { src: "/images/products/hotel-glitter-broadloom/7.jpg", alt: "Hospitality carpet detail image for custom corridor broadloom project" },
-    { src: "/images/products/hotel-glitter-broadloom/8.jpg", alt: "Hotel carpet detail page image showing pattern color and project use" },
-    { src: "/images/products/hotel-glitter-broadloom/9.jpg", alt: "Commercial wall-to-wall carpet detail for hotel corridor and lobby flooring" },
-    { src: "/images/products/hotel-glitter-broadloom/10.jpg", alt: "Hotel carpet testing and durability detail image for high-traffic projects" }
+    { src: "/images/products/hotel-glitter-broadloom/5.webp", alt: "Glitter hotel carpet roll detail showing pile texture and backing" },
+    { src: "/images/products/hotel-glitter-broadloom/6.webp", alt: "Close-up of blue gold hotel broadloom carpet texture and pattern" },
+    { src: "/images/products/hotel-glitter-broadloom/7.webp", alt: "Hospitality carpet detail image for custom corridor broadloom project" },
+    { src: "/images/products/hotel-glitter-broadloom/8.webp", alt: "Hotel carpet detail page image showing pattern color and project use" },
+    { src: "/images/products/hotel-glitter-broadloom/9.webp", alt: "Commercial wall-to-wall carpet detail for hotel corridor and lobby flooring" },
+    { src: "/images/products/hotel-glitter-broadloom/10.webp", alt: "Hotel carpet testing and durability detail image for high-traffic projects" }
   ]
 };
 
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}${canonicalPath}`,
     images: [
       {
-        url: `${siteUrl}/images/products/hotel-glitter-broadloom/1.jpg`,
+        url: `${siteUrl}/images/products/hotel-glitter-broadloom/1.webp`,
         alt: "Glitter Hotel Corridor Broadloom Carpet by Vishomecarpet"
       }
     ],
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Glitter Hotel Corridor Broadloom Carpet | Vishomecarpet",
     description: "Custom blue and gold wall-to-wall broadloom carpet for hotel corridors, lobbies, and hospitality projects.",
-    images: [`${siteUrl}/images/products/hotel-glitter-broadloom/1.jpg`]
+    images: [`${siteUrl}/images/products/hotel-glitter-broadloom/1.webp`]
   }
 };
 
@@ -194,7 +194,7 @@ export default function ProductDetailPage() {
           <div className="flex flex-col lg:flex-row gap-16 xl:gap-20">
             <div className="lg:w-3/5">
               <div className="aspect-[3/2] rounded-sm overflow-hidden border border-border shadow-xl">
-                <ProductImage src={product.image} alt={product.imageAlt} className="w-full h-full object-cover" />
+                <ProductImage src={product.image} alt={product.imageAlt} className="w-full h-full object-cover" priority sizes="(max-width: 1024px) 100vw, 60vw" />
               </div>
               <div className="mt-5 grid grid-cols-3 gap-4">
                 {product.mainImages.slice(1).map((image) => (

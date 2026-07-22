@@ -16,7 +16,7 @@ export default function BlogPage() {
         title="B2B Sourcing Insights"
         eyebrow="Commercial Carpet Knowledge"
         description="Professional guides on carpet specifications, fire ratings, logistics, and procurement strategies for global projects."
-        image="/images/blog-material-comparison.jpg"
+        image="/images/blog-material-comparison.webp"
         imageAlt="Commercial carpet material comparison background"
         objectPosition="center 50%"
       />
@@ -36,6 +36,7 @@ export default function BlogPage() {
                     src={post.image}
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-8 flex-1 flex flex-col">

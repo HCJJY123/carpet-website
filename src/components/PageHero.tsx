@@ -28,6 +28,8 @@ export default function PageHero({
         alt={imageAlt}
         fill
         priority
+        loading="eager"
+        quality={82}
         sizes="100vw"
         className="-z-20 object-cover scale-105"
         style={{ objectPosition }}

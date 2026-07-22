@@ -32,7 +32,6 @@ export default function Home() {
             className="w-full h-full object-cover"
             priority
             sizes="100vw"
-            unoptimized
           />
          {/* Professional Deep Blue Overlay */}
          <div className="absolute inset-0 bg-[#102A43]/65"></div>
@@ -135,7 +134,6 @@ export default function Home() {
                     alt={cat.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    unoptimized
                   />
                   <div className="absolute inset-0 bg-primary/10 group-hover:bg-primary/40 transition-colors"></div>
                   <div className="absolute inset-x-0 bottom-0 p-8 text-white">
