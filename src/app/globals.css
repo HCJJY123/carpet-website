@@ -81,6 +81,24 @@ body {
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
 
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+body[data-image-zoom-enabled="true"] main img {
+  cursor: zoom-in;
+}
+
+body[data-image-zoom-enabled="true"] header img,
+body[data-image-zoom-enabled="true"] footer img,
+body[data-image-zoom-enabled="true"] nav img,
+body[data-image-zoom-enabled="true"] a img,
+body[data-image-zoom-enabled="true"] button img {
+  cursor: inherit;
+}
+
 @media (max-width: 767px) {
   .container-fox {
     padding-left: 1.25rem;
