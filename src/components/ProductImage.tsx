@@ -8,11 +8,19 @@ export default function ProductImage({
   alt,
   className = "",
   fit = "cover",
+  priority = false,
+  quality,
+  sizes = "(max-width: 768px) 100vw, 50vw",
+  unoptimized = false,
 }: {
   src: string;
   alt: string;
   className?: string;
   fit?: "cover" | "contain";
+  priority?: boolean;
+  quality?: number;
+  sizes?: string;
+  unoptimized?: boolean;
 }) {
   const [imageError, setImageError] = useState(false);
 
@@ -24,7 +32,10 @@ export default function ProductImage({
           alt={alt}
           fill
           className={fit === "contain" ? "object-contain" : "object-cover"}
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes={sizes}
+          priority={priority}
+          quality={quality}
+          unoptimized={unoptimized}
           onError={() => setImageError(true)}
         />
       </div>

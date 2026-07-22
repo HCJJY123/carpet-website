@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.vishomecarpet.com" },
 };
 
+const homeCategoryImages: Record<string, string> = {
+  "carpet-tiles": "/images/home/category-tiles.jpg",
+  "wall-to-wall": "/images/home/category-broadloom.jpg",
+  "public-area": "/images/home/category-public-area.jpg",
+};
+
 export default function Home() {
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header);
   const featuredTile = products.find((product) => product.id === "luxury-hotel-carpet-tile-50x50cm");
@@ -21,12 +27,15 @@ export default function Home() {
       <section className="relative flex min-h-[560px] items-center overflow-hidden bg-primary md:min-h-[650px]">
         <div className="absolute inset-0 z-0">
           <ProductImage
-            src="/images/hero-home.jpg"
+            src="/images/home/hero-home.jpg"
             alt="Commercial carpet tiles manufacturer for international projects"
             className="w-full h-full object-cover"
+            priority
+            sizes="100vw"
+            unoptimized
           />
          {/* Professional Deep Blue Overlay */}
-         <div className="absolute inset-0 bg-[#102A43]/85"></div>
+         <div className="absolute inset-0 bg-[#102A43]/65"></div>
 
           {/* Brand Watermark Decor */}
           <Image
@@ -122,9 +131,11 @@ export default function Home() {
               >
                 <div className="aspect-[4/5] overflow-hidden">
                   <ProductImage
-                    src={cat.image}
+                    src={homeCategoryImages[cat.id] ?? cat.image}
                     alt={cat.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    unoptimized
                   />
                   <div className="absolute inset-0 bg-primary/10 group-hover:bg-primary/40 transition-colors"></div>
                   <div className="absolute inset-x-0 bottom-0 p-8 text-white">
