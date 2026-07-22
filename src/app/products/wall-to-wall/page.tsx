@@ -1,37 +1,142 @@
 import type { Metadata } from "next";
-import { products, productCategories } from "@/lib/data";
+import { products } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
-import { productItemListJsonLd, safeJsonLd } from "@/lib/seo";
+import { absoluteUrl, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
+
+const categoryPath = "/products/wall-to-wall";
+
+const categoryFaqs = [
+  {
+    question: "What commercial wall-to-wall carpet does Vishomecarpet supply?",
+    answer: "Vishomecarpet supplies project-based commercial broadloom carpet for hotels, corridors, guestrooms, ballrooms, banquet rooms, casinos, restaurants, conference rooms, clubs, cinemas, theatres, showrooms, offices, churches, and mosques. Construction and compliance requirements are confirmed for each contract carpet project."
+  },
+  {
+    question: "Are you a wall-to-wall carpet manufacturer and supplier?",
+    answer: "Yes. Vishomecarpet is a commercial carpet manufacturer and export supplier supporting custom design, specification review, samples, production, export packing, and international delivery for hotel and contract flooring projects."
+  },
+  {
+    question: "What is the wall-to-wall carpet price?",
+    answer: "The six products on this page currently show reference FOB prices from US$3.10 to US$38.00 per square meter. Final commercial carpet price depends on yarn, construction, pile weight, pattern, quantity, backing, testing, and delivery requirements."
+  },
+  {
+    question: "Which carpet is suitable for hotel rooms and corridors?",
+    answer: "Hotel room carpet usually uses a quieter custom pattern and comfortable cut-pile or wool-blend construction. Hotel corridor carpet needs stronger appearance retention, directional pattern planning, stain-resistance options, and a roll plan designed for long circulation areas."
+  },
+  {
+    question: "What is the difference between Axminster, Wilton, and printed broadloom carpet?",
+    answer: "Axminster carpet is a woven construction commonly specified as an 80% wool and 20% nylon blend for premium hospitality projects. Wilton carpet is also woven but uses a different yarn and pattern structure. Printed broadloom applies custom artwork to a tufted surface and is often selected for lower setup cost, detailed patterns, and faster production."
+  },
+  {
+    question: "Can I order custom hotel carpet or patterned wall-to-wall carpet?",
+    answer: "Yes. Send your floor plan, total area, application, artwork, color references, destination country, and required date. The team can review custom printed carpet, patterned broadloom carpet, wool-blend carpet, and project-specific hotel carpet options before quoting."
+  },
+  {
+    question: "Do you supply carpet for exhibitions, trade shows, or temporary events?",
+    answer: "These uses often require a different construction from permanent hotel broadloom. Share the expected service life, installation method, fire standard, and quantity so Vishomecarpet can confirm whether exhibition carpet flooring, trade show carpet, expo carpet, event carpet, or red carpet for events is suitable."
+  }
+];
+
+const constructionOptions = [
+  {
+    title: "Axminster Wool-Blend Carpet",
+    text: "Woven 80% wool and 20% nylon broadloom for five-star hotels, luxury corridors, casino areas, and premium hospitality interiors.",
+    href: "/products/wall-to-wall/luxury-hotel-broadloom"
+  },
+  {
+    title: "Custom Printed Nylon Carpet",
+    text: "High-definition patterned wall-to-wall carpet for hotel lobbies, guestrooms, restaurants, corridors, and branded commercial interiors.",
+    href: "/products/wall-to-wall/3d-printed-hotel-carpet"
+  },
+  {
+    title: "Hotel Room Cut-Pile Carpet",
+    text: "Made-to-order hotel carpet flooring with project-specific nylon or wool-nylon options for guestrooms, suites, and renovation phases.",
+    href: "/products/wall-to-wall/custom-luxury-hotel-room-carpet"
+  },
+  {
+    title: "Banquet and Ballroom Carpet",
+    text: "Heavy-commercial printed broadloom for banquet halls, ballrooms, conference rooms, event venues, and hospitality public areas.",
+    href: "/products/wall-to-wall/3d-printed-banquet-hall-carpet"
+  },
+  {
+    title: "Hotel Corridor Broadloom",
+    text: "Patterned commercial carpet rolls for hotel hallways, elevator lobbies, long corridors, and high-traffic guest circulation.",
+    href: "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet"
+  },
+  {
+    title: "Custom Floral Printed Carpet",
+    text: "Low-MOQ custom printed carpet for corridors, guestrooms, banquet halls, hotel lobbies, offices, and reception spaces.",
+    href: "/products/wall-to-wall/custom-floral-printed-hotel-carpet"
+  }
+];
 
 export const metadata: Metadata = {
-  title: "Wall-to-Wall Hotel Broadloom Carpet | Hospitality Carpet Supplier | VISHOME",
-  description: "Wall-to-wall broadloom carpet systems for hotel guestrooms, corridors, lobbies, and hospitality projects with custom pattern and export support.",
-  alternates: { canonical: "/products/wall-to-wall" },
+  title: "Wall-to-Wall Carpet & Hotel Broadloom Supplier | VISHOME",
+  description: "Custom commercial wall-to-wall carpet from a hotel carpet manufacturer. Compare Axminster, wool-blend and printed broadloom prices, MOQ and specifications.",
+  keywords: [
+    "wall to wall carpet",
+    "hotel carpet",
+    "commercial carpet",
+    "wall to wall carpet supplier",
+    "wall to wall carpet manufacturer",
+    "broadloom carpet supplier",
+    "commercial broadloom carpet",
+    "hotel carpet manufacturer",
+    "hospitality carpet supplier",
+    "contract carpet supplier"
+  ],
+  alternates: { canonical: categoryPath },
+  openGraph: {
+    title: "Wall-to-Wall Carpet & Hotel Broadloom Supplier | VISHOME",
+    description: "Compare six custom commercial broadloom carpets for hotel rooms, corridors, ballrooms, lobbies, and contract projects.",
+    url: absoluteUrl(categoryPath),
+    type: "website",
+    images: [{ url: absoluteUrl("/images/category-broadloom.webp"), alt: "Commercial wall-to-wall hotel broadloom carpet by Vishomecarpet" }]
+  }
 };
 
 export default function CategoryPage() {
   const categoryId = "wall-to-wall";
-  const currentCategory = productCategories.find((c) => c.id === categoryId);
   const categoryProducts = products.filter((p) => p.category === categoryId);
   const jsonLd = productItemListJsonLd({
-    name: "Wall-to-Wall Hotel Broadloom Carpet",
-    description: "Wall-to-wall broadloom carpet systems for hotel guestrooms, corridors, lobbies, and hospitality projects.",
-    url: "/products/wall-to-wall",
+    name: "Commercial Wall-to-Wall Carpet and Hotel Broadloom",
+    description: "Custom commercial broadloom carpet for hotel guestrooms, corridors, lobbies, ballrooms, banquet halls, and contract flooring projects.",
+    url: categoryPath,
     items: categoryProducts,
   });
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: categoryFaqs.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer }
+    }))
+  };
 
   return (
     <div className="bg-white min-h-screen font-sans">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
-      <section className="bg-[#102A43] py-24 text-center">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
+      <section className="bg-[#102A43] py-20 text-center md:py-24">
         <div className="container-fox">
-          <h1 className="text-4xl md:text-6xl font-black text-white uppercase tracking-widest">{currentCategory?.name}</h1>
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-sm font-bold uppercase tracking-widest">{currentCategory?.description}</p>
+          <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Commercial Carpet Manufacturer & Export Supplier</p>
+          <h1 className="text-4xl font-black uppercase text-white md:text-6xl">Wall-to-Wall Carpet & Hotel Broadloom</h1>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">
+            Custom commercial wall-to-wall carpet for hotel rooms, corridors, lobbies, ballrooms, casinos, restaurants, and contract interiors. Compare construction, FOB price, MOQ, and lead time across six project-ready broadloom options.
+          </p>
+          <div className="mt-9 flex flex-wrap justify-center gap-4">
+            <Link href="/contact?product=Wall-to-Wall%20Carpet#quote-form" className="btn-fox-orange">Request Project Quote</Link>
+            <Link href="#wall-to-wall-products" className="inline-flex min-h-12 items-center justify-center border border-white/40 px-7 py-3 text-xs font-black uppercase tracking-widest text-white transition-colors hover:border-white">Compare Products</Link>
+          </div>
         </div>
       </section>
-      <section className="section-padding">
+      <section id="wall-to-wall-products" className="section-padding scroll-mt-24">
         <div className="container-fox">
+          <div className="mb-12 max-w-3xl">
+            <h2 className="mb-4 text-3xl font-black uppercase text-primary md:text-4xl">Six Commercial Broadloom Carpet Options</h2>
+            <p className="leading-relaxed text-muted">Select a product by construction and application. Each page includes reference pricing, minimum order quantity, technical data, project images, and a direct inquiry form.</p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {categoryProducts.map((p) => (
               <Link
@@ -46,13 +151,11 @@ export default function CategoryPage() {
                 <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
                   <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
-                <h3 className="font-bold text-xl text-primary uppercase mb-6 h-14 leading-tight group-hover:text-accent transition-colors">{p.name}</h3>
-                {p.id === "custom-luxury-hotel-room-carpet" && (
-                  <p className="mb-6 text-sm leading-relaxed text-muted">{p.description}</p>
-                )}
+                <h3 className="mb-6 min-h-20 text-xl font-bold uppercase leading-tight text-primary transition-colors group-hover:text-accent">{p.name}</h3>
+                <p className="mb-6 min-h-20 text-sm leading-relaxed text-muted">{p.description}</p>
                 <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">
                   <div className="flex justify-between gap-4">
-                    <span className="text-muted">{p.id === "custom-luxury-hotel-room-carpet" ? "Reference FOB Price" : "FOB Price"}</span>
+                    <span className="text-muted">{["custom-luxury-hotel-room-carpet", "custom-floral-printed-hotel-carpet"].includes(p.id) ? "Reference FOB Price" : "FOB Price"}</span>
                     <span className="text-right font-black text-primary">{p.fobPrice?.display}</span>
                   </div>
                   <div className="flex justify-between gap-4">
@@ -61,7 +164,7 @@ export default function CategoryPage() {
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Availability</span>
-                    <span className="text-right font-black text-primary">{p.id === "custom-luxury-hotel-room-carpet" ? "Made to Order" : "In Stock / Made to Order"}</span>
+                    <span className="text-right font-black text-primary">{["custom-luxury-hotel-room-carpet", "custom-floral-printed-hotel-carpet"].includes(p.id) ? "Made to Order" : "In Stock / Made to Order"}</span>
                   </div>
                 </div>
                 <div className="flex justify-between items-center text-[10px] font-black text-accent uppercase tracking-widest border-t border-border pt-6">
@@ -70,19 +173,74 @@ export default function CategoryPage() {
                 </div>
               </Link>
             ))}
-            <Link href="/products/wall-to-wall/custom-floral-printed-hotel-carpet" className="group block bg-white border border-border p-8 hover:shadow-2xl transition-all duration-500 rounded-sm">
-              <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
-                <ProductImage src="/images/products/wall-to-wall/custom-floral-printed-hotel-carpet/01-main-custom-floral-hotel-corridor.webp" alt="Custom floral printed wall-to-wall hotel carpet for corridor and hospitality projects" className="w-full h-full object-cover transition-transform group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
-              </div>
-              <h3 className="font-bold text-xl text-primary uppercase mb-6 h-14 leading-tight group-hover:text-accent transition-colors">Custom Floral Printed Wall-to-Wall Hotel Carpet</h3>
-              <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">
-                <div className="flex justify-between gap-4"><span className="text-muted">FOB Price</span><span className="text-right font-black text-primary">US$3.60-6.40 / SQM</span></div>
-                <div className="flex justify-between gap-4"><span className="text-muted">MOQ</span><span className="text-right font-black text-primary">100 SQM</span></div>
-                <div className="flex justify-between gap-4"><span className="text-muted">Availability</span><span className="text-right font-black text-primary">Made to Order</span></div>
-              </div>
-              <div className="flex justify-between items-center text-[10px] font-black text-accent uppercase tracking-widest border-t border-border pt-6"><span>Technical Details</span><span>→</span></div>
-            </Link>
           </div>
+        </div>
+      </section>
+      <section className="section-padding border-y border-border bg-surface">
+        <div className="container-fox">
+          <div className="max-w-4xl">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Contract Carpet Buying Guide</p>
+            <h2 className="mb-7 text-3xl font-black uppercase text-primary md:text-5xl">Commercial Wall-to-Wall Carpet Supplier for Project Buyers</h2>
+            <div className="space-y-5 text-base leading-8 text-muted">
+              <p>Vishomecarpet manufactures and supplies commercial carpet rolls for hospitality and contract projects. The collection covers woven Axminster carpet, 80 wool 20 nylon carpet, custom printed carpet, patterned broadloom carpet, machine-tufted hotel room carpet, and high-traffic corridor carpet.</p>
+              <p>Project applications include carpet for hotel rooms, hotel hallway carpet, hotel lobby carpet, banquet room carpet, ballroom carpet, casino style carpet, restaurant carpet, conference room carpet, club carpet, cinema carpet, theatre carpet, showroom carpet, office carpet rolls, church carpet, mosque carpet, and mosque carpet rolls. Final construction, fire performance, and installation requirements must be confirmed for the intended building.</p>
+              <p>For Wilton carpet, solution dyed nylon carpet, Saxony carpet rolls, machine tufted carpet, cut pile carpet rolls, polyester carpet rolls, wool carpet wholesale, exhibition carpet flooring, needle punch carpet, marine carpet rolls, or another construction not shown in the six products, send the exact specification. The factory will confirm feasibility rather than substituting a different product without approval.</p>
+              <p>Vishomecarpet supports wholesale hotel carpet orders as a commercial carpet manufacturer, broadloom carpet manufacturer, hospitality carpet manufacturer, and export supplier. Buyers comparing commercial carpet suppliers or hotel carpet suppliers can review product-level prices and specifications before requesting a factory quotation.</p>
+            </div>
+          </div>
+          <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+            {constructionOptions.map((option) => (
+              <Link key={option.href} href={option.href} className="group bg-white p-7 transition-colors hover:bg-primary">
+                <h3 className="mb-3 text-base font-black uppercase text-primary group-hover:text-white">{option.title}</h3>
+                <p className="text-sm leading-relaxed text-muted group-hover:text-white/75">{option.text}</p>
+                <span className="mt-5 inline-block text-[10px] font-black uppercase tracking-widest text-accent">View Product →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section-padding">
+        <div className="container-fox grid gap-12 lg:grid-cols-[1fr_1.1fr]">
+          <div>
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Transparent Buying Information</p>
+            <h2 className="mb-6 text-3xl font-black uppercase text-primary md:text-5xl">Wall-to-Wall Carpet Price & Quote Requirements</h2>
+            <p className="leading-8 text-muted">Reference FOB prices across the six products range from US$3.10 to US$38.00 per square meter. Send the information below for an accurate commercial carpet quotation and cutting plan.</p>
+          </div>
+          <dl className="grid gap-px border border-border bg-border sm:grid-cols-2">
+            {[
+              ["Project Area", "Total SQM, room count, and floor plans"],
+              ["Application", "Guestroom, corridor, ballroom, lobby, or other space"],
+              ["Construction", "Axminster, printed, tufted, wool-blend, or specified alternative"],
+              ["Performance", "Traffic class, fire standard, stain resistance, and antistatic needs"],
+              ["Design", "Artwork, pattern repeat, colors, and brand references"],
+              ["Delivery", "Destination country, target date, and packing requirements"]
+            ].map(([term, detail]) => (
+              <div key={term} className="bg-white p-6">
+                <dt className="mb-2 text-xs font-black uppercase text-primary">{term}</dt>
+                <dd className="text-sm leading-relaxed text-muted">{detail}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+      <section className="section-padding border-y border-border bg-surface">
+        <div className="container-fox max-w-5xl">
+          <h2 className="mb-10 text-3xl font-black uppercase text-primary md:text-5xl">Wall-to-Wall Carpet FAQ</h2>
+          <div className="grid gap-5 lg:grid-cols-2">
+            {categoryFaqs.map((item) => (
+              <details key={item.question} className="border border-border bg-white p-6">
+                <summary className="cursor-pointer font-black text-primary">{item.question}</summary>
+                <p className="mt-4 leading-relaxed text-muted">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-primary py-16 text-center">
+        <div className="container-fox">
+          <h2 className="text-2xl font-black uppercase text-white md:text-4xl">Request a Contract Carpet Quotation</h2>
+          <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-white/70">Send your carpet area, application, construction, destination, and required date for a product recommendation and project price.</p>
+          <Link href="/contact?product=Wall-to-Wall%20Carpet#quote-form" className="btn-fox-orange mt-8">Send Inquiry</Link>
         </div>
       </section>
     </div>

@@ -8,6 +8,12 @@ import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConver
 const productId = "luxury-hotel-broadloom";
 const product = products.find((prod) => prod.id === productId);
 
+const descriptionParagraphs = [
+  "This Axminster carpet uses an 80% wool and 20% nylon blend in a woven broadloom construction for luxury hotel and contract interiors. The wool supports a premium surface appearance, while nylon contributes resilience for guestrooms, corridors, ballrooms, casino areas, and other high-use hospitality spaces.",
+  "Unlike a printed carpet, Axminster woven carpet places the custom pattern into the carpet structure during production. Buyers can submit hotel carpet designs, color references, logos, or interior renderings for a project-specific jacquard pattern and coordinated wall-to-wall cutting plan.",
+  "The reference FOB price is US$18.00-38.00 per square meter with a 500 SQM MOQ. Final wool broadloom carpet pricing depends on density, pile weight, pattern complexity, quantity, backing, testing requirements, and export packing."
+];
+
 const faqs = product
   ? [
       {
@@ -17,6 +23,10 @@ const faqs = product
       {
         q: "Can the Axminster density or pattern be customized?",
         a: "Yes. Axminster weaving supports a range of density tiers and fully custom jacquard patterns — send us your project renderings, logo, or reference design and we'll recommend a density tier based on your traffic level and budget."
+      },
+      {
+        q: "Is Axminster carpet the same as Wilton carpet?",
+        a: "No. Both are woven broadloom constructions, but Axminster carpet and Wilton carpet use different yarn placement and pattern-forming methods. This product is an Axminster 80% wool 20% nylon carpet; buyers requiring Wilton woven carpet should send the exact construction and density specification for separate confirmation."
       },
       {
         q: "What is the MOQ and production lead time?",
@@ -49,12 +59,22 @@ const faqJsonLd = {
 
 export const metadata: Metadata = product
   ? {
-      title: `${product.name} | Commercial Carpet Product | VISHOME`,
-      description: product.description,
+      title: "Axminster 80/20 Wool Blend Hotel Carpet | VISHOME",
+      description: "Axminster woven 80% wool 20% nylon wall-to-wall carpet for five-star hotels, corridors, ballrooms and casinos. Custom pattern, MOQ 500 SQM.",
+      keywords: [
+        "axminster carpet",
+        "axminster woven carpet",
+        "80 wool 20 nylon carpet",
+        "wool blend carpet",
+        "wool broadloom carpet",
+        "wool carpet roll",
+        "5 star hotel carpet",
+        "luxury hotel carpet"
+      ],
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: `${product.name} | VISHOME`,
-        description: product.description,
+        title: "Axminster 80/20 Wool Blend Hotel Carpet | VISHOME",
+        description: "Custom woven wool-blend broadloom for luxury hotel rooms, corridors, ballrooms, casinos, and contract interiors.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
         images: [{ url: absoluteUrl(product.image), alt: product.name }],
@@ -171,6 +191,16 @@ export default function ProductDetailPage() {
                   {v}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section-padding">
+        <div className="container-fox max-w-5xl">
+          <h2 className="mb-8 text-3xl font-black uppercase text-primary md:text-4xl">Axminster 80/20 Wool Blend Wall-to-Wall Carpet</h2>
+          <div className="space-y-5">
+            {descriptionParagraphs.map((paragraph) => (
+              <p key={paragraph.slice(0, 48)} className="text-lg leading-relaxed text-muted">{paragraph}</p>
             ))}
           </div>
         </div>

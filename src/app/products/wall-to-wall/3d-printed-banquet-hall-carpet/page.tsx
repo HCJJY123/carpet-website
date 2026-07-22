@@ -16,7 +16,7 @@ const detailImage = {
 };
 
 const descriptionParagraphs = [
-  "Vishomecarpet's Custom 3D Printed Banquet Hall Carpet is a wall-to-wall hospitality broadloom engineered for banquet rooms, ballrooms, hotel corridors, and event venues. Advanced high-speed inkjet printing reproduces photo-realistic custom patterns with virtually unlimited colors - so designers can match brand artwork, murals, or bespoke motifs with a precision that traditional woven banquet carpet cannot reach, at a fraction of the setup cost and lead time.",
+  "Vishomecarpet's Custom 3D Printed Banquet Hall Carpet is a commercial wall-to-wall broadloom engineered for banquet rooms, ballrooms, conference rooms, hotel halls, and event venues. Advanced high-speed inkjet printing reproduces photo-realistic custom patterns with virtually unlimited colors - so designers can match brand artwork, murals, or bespoke motifs with a precision that traditional woven banquet carpet cannot reach, at a fraction of the setup cost and lead time.",
   "As a commercial carpet manufacturer supplying contract and hospitality projects worldwide, we build this printed broadloom on premium high-density nylon or soft synthetic blend pile with reinforced ActionBac or jute backing. It carries a Class I fire rating (ASTM E648 / Bfl-s1), a Class 33 heavy-commercial traffic rating, and permanent antistatic protection - the specification package banquet halls, casinos, and conference centers require. Standard 4 m roll width enables seamless wall-to-wall installation across large floor plates.",
   "Factory-direct from our Tianjin facility, the program supports a low 200 SQM MOQ, 15-25 day production, custom pile weight from 32 oz to 45 oz, and full design service: send your floor plan and artwork, and our studio returns a printed pattern proof before mass production. Export packing, documentation, and worldwide shipping are handled in-house, making Vishomecarpet a single-source hotel carpet supplier for multi-property rollouts."
 ];
@@ -55,13 +55,22 @@ const relatedLinks = [
 ];
 
 export const metadata: Metadata = {
-  title: "Custom 3D Printed Banquet Hall Carpet | Hotel Broadloom Wall-to-Wall | VISHOME",
-  description: "Custom 3D printed banquet hall carpet from a hospitality carpet manufacturer: wall-to-wall broadloom for ballrooms, banquet rooms & hotel corridors. Class I fire rating, 4m width, MOQ 200 SQM, factory-direct.",
-  keywords: "banquet hall carpet, banquet room carpet, banquet carpet, hotel broadloom carpet, wall to wall carpet, custom broadloom carpet, hospitality carpet manufacturer, commercial broadloom carpet, hotel carpet supplier, 3D printed carpet, Vishomecarpet",
+  title: "Banquet Hall Carpet | Custom Hotel Broadloom | VISHOME",
+  description: "Custom banquet hall and ballroom carpet for hotel events, conference rooms and banquet spaces. Printed 4m commercial broadloom, MOQ 200 SQM.",
+  keywords: [
+    "banquet hall carpet",
+    "banquet room carpet",
+    "banquet carpet",
+    "ballroom carpet",
+    "hall carpet",
+    "conference room carpet",
+    "event carpet",
+    "commercial broadloom carpet"
+  ],
   alternates: { canonical: canonicalPath },
   openGraph: {
-    title: "Custom 3D Printed Banquet Hall Carpet | VISHOME",
-    description: "Custom 3D printed wall-to-wall banquet hall carpet for ballrooms, banquet rooms, and hotel corridors. Class I fire rating, 4m width, low MOQ, factory-direct.",
+    title: "Banquet Hall Carpet | Custom Hotel Broadloom | VISHOME",
+    description: "Custom banquet hall and ballroom carpet for hotel events, conference rooms, and banquet spaces. Printed 4m commercial broadloom.",
     url: absoluteUrl(canonicalPath),
     images: [
       {
@@ -73,8 +82,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom 3D Printed Banquet Hall Carpet | VISHOME",
-    description: "Custom 3D printed wall-to-wall banquet hall carpet for ballrooms, banquet rooms, and hotel corridors. Class I fire rating, 4m width, low MOQ, factory-direct.",
+    title: "Banquet Hall Carpet | Custom Hotel Broadloom | VISHOME",
+    description: "Custom banquet hall and ballroom carpet for hotel events, conference rooms, and banquet spaces.",
     images: [absoluteUrl("/images/products/3d-printed-banquet-carpet/02-banquet-hall.webp")]
   }
 };
@@ -194,7 +203,7 @@ export default function ProductDetailPage() {
 
       <section className="section-padding">
         <div className="container-fox max-w-5xl">
-          <h2 className="text-3xl font-black text-primary uppercase tracking-widest mb-8">Banquet Hall Broadloom Built for Custom Hospitality Projects</h2>
+          <h2 className="text-3xl font-black text-primary uppercase tracking-widest mb-8">Banquet Hall & Ballroom Carpet for Commercial Events</h2>
           <div className="space-y-5">
             {descriptionParagraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 42)} className="text-muted text-lg leading-relaxed">{paragraph}</p>

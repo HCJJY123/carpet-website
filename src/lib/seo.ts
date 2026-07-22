@@ -24,6 +24,12 @@ export function categoryName(categoryId: Product["category"]) {
   return productCategories.find((item) => item.id === categoryId)?.name ?? categoryId;
 }
 
+function productAvailability(productId: string) {
+  return ["custom-luxury-hotel-room-carpet", "custom-floral-printed-hotel-carpet", "custom-sculpted-wool-lobby-rug"].includes(productId)
+    ? "https://schema.org/PreOrder"
+    : "https://schema.org/InStock";
+}
+
 function productImages(product: Product) {
   return [product.image, ...(product.gallery?.map((item) => item.src) ?? [])].map(absoluteUrl);
 }
@@ -37,7 +43,7 @@ export function productJsonLd(product: Product) {
     ? {
         "@type": "AggregateOffer",
         url: productUrl,
-        availability: "https://schema.org/InStock",
+        availability: productAvailability(product.id),
         itemCondition: "https://schema.org/NewCondition",
         priceCurrency: product.fobPrice.currency,
         lowPrice: product.fobPrice.lowPrice,
@@ -49,7 +55,7 @@ export function productJsonLd(product: Product) {
     : {
         "@type": "Offer",
         url: productUrl,
-        availability: "https://schema.org/InStock",
+        availability: productAvailability(product.id),
         itemCondition: "https://schema.org/NewCondition",
         priceCurrency: "USD",
         seller: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
@@ -77,7 +83,7 @@ export function productJsonLd(product: Product) {
     additionalProperty: [
       { "@type": "PropertyValue", name: "Minimum Order Quantity", value: product.moq },
       { "@type": "PropertyValue", name: "Lead Time", value: product.leadTime },
-      { "@type": "PropertyValue", name: "Availability", value: "InStock" },
+      { "@type": "PropertyValue", name: "Availability", value: productAvailability(product.id).endsWith("PreOrder") ? "Made to Order" : "InStock" },
       { "@type": "PropertyValue", name: "Product Category", value: categoryName(product.category) },
       { "@type": "PropertyValue", name: "Target Buyer", value: "Contractors, distributors, hotels, offices, and commercial renovation projects" },
       ...(product.fobPrice
@@ -137,7 +143,7 @@ export function productItemListJsonLd({
           category: categoryName(product.category),
           additionalProperty: [
             { "@type": "PropertyValue", name: "Minimum Order Quantity", value: product.moq },
-            { "@type": "PropertyValue", name: "Availability", value: product.id === "custom-sculpted-wool-lobby-rug" ? "Made to Order" : "InStock" },
+            { "@type": "PropertyValue", name: "Availability", value: productAvailability(product.id).endsWith("PreOrder") ? "Made to Order" : "InStock" },
           ],
           offers: product.fobPrice
             ? {
@@ -146,7 +152,7 @@ export function productItemListJsonLd({
                 priceCurrency: product.fobPrice.currency,
                 lowPrice: product.fobPrice.lowPrice,
                 highPrice: product.fobPrice.highPrice,
-                availability: product.id === "custom-sculpted-wool-lobby-rug" ? "https://schema.org/PreOrder" : "https://schema.org/InStock",
+                availability: productAvailability(product.id),
                 itemCondition: "https://schema.org/NewCondition",
                 seller: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
               }

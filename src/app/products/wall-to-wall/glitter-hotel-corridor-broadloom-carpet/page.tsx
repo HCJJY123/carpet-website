@@ -42,9 +42,9 @@ const product = {
 };
 
 const descriptionParagraphs = [
-  "Vishomecarpet's Glitter Hotel Corridor Broadloom Carpet is designed for hospitality buyers who need a floor finish that photographs well, guides guest movement, and still works for daily commercial traffic. The navy base, gold glitter effect, and flowing directional pattern create a premium corridor experience for hotels, serviced apartments, casinos, banquet halls, and high-end public spaces.",
+  "Vishomecarpet's Glitter Hotel Corridor Broadloom Carpet is a patterned hotel hallway carpet for hospitality buyers who need a floor finish that guides guest movement and supports daily commercial traffic. The navy base, gold effect, and flowing directional pattern create a premium corridor experience for hotels, serviced apartments, casinos, banquet halls, and high-end public spaces.",
   "The product is supplied as wall-to-wall broadloom carpet for seamless installation in long corridors and large hospitality zones. Pattern, color direction, roll length, pile specification, backing, and edge finishing can be adjusted for project drawings, brand palettes, and procurement budgets.",
-  "For buyers comparing Alibaba-style hotel carpet glitter products, this Vishomecarpet version keeps the same luxury blue-gold visual demand while positioning the page around the terms customers actually search: glitter hotel carpet, hotel corridor carpet, wall-to-wall broadloom carpet, custom hospitality carpet, and China carpet factory supply."
+  "The commercial carpet roll is suited to hotel corridors, elevator halls, lobbies, and connected public areas. Optional stain-resistance treatment can be reviewed with the required traffic level, fire standard, antistatic performance, and cleaning plan before quotation."
 ];
 
 const faqs = [
@@ -81,13 +81,22 @@ const relatedLinks = [
 ];
 
 export const metadata: Metadata = {
-  title: "Glitter Hotel Corridor Carpet | Vishomecarpet Factory",
-  description: "Custom blue and gold glitter hotel corridor broadloom carpet by Vishomecarpet. Wall-to-wall carpet for hotels, lobbies, ballrooms, and hospitality projects.",
-  keywords: "glitter hotel carpet, hotel corridor carpet, wall-to-wall broadloom carpet, custom hotel carpet, hotel carpet glitter, China carpet factory, Vishomecarpet",
+  title: "Hotel Corridor Carpet | Patterned Broadloom | VISHOME",
+  description: "Patterned hotel corridor and hallway carpet in blue and gold. Custom 4m wall-to-wall broadloom for lobbies and high-traffic hospitality projects.",
+  keywords: [
+    "hotel corridor carpet",
+    "corridor carpet",
+    "hotel hallway carpet",
+    "carpet for corridor",
+    "patterned broadloom carpet",
+    "commercial carpet roll",
+    "stain resistant carpet",
+    "glitter hotel carpet"
+  ],
   alternates: { canonical: canonicalPath },
   openGraph: {
-    title: "Glitter Hotel Corridor Broadloom Carpet | Vishomecarpet",
-    description: "Custom blue and gold glitter hotel corridor broadloom carpet for luxury hospitality projects.",
+    title: "Hotel Corridor Carpet | Patterned Broadloom | VISHOME",
+    description: "Patterned blue and gold hotel hallway carpet for corridors, elevator lobbies, and high-traffic hospitality projects.",
     url: `${siteUrl}${canonicalPath}`,
     images: [
       {
@@ -99,8 +108,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Glitter Hotel Corridor Broadloom Carpet | Vishomecarpet",
-    description: "Custom blue and gold wall-to-wall broadloom carpet for hotel corridors, lobbies, and hospitality projects.",
+    title: "Hotel Corridor Carpet | Patterned Broadloom | VISHOME",
+    description: "Patterned blue and gold wall-to-wall broadloom for hotel corridors, lobbies, and hospitality projects.",
     images: [`${siteUrl}/images/products/hotel-glitter-broadloom/1.webp`]
   }
 };
@@ -252,7 +261,7 @@ export default function ProductDetailPage() {
 
       <section className="section-padding">
         <div className="container-fox max-w-5xl">
-          <h2 className="text-3xl font-black text-primary uppercase tracking-widest mb-8">Luxury Hotel Carpet Glitter Design for Commercial Projects</h2>
+          <h2 className="text-3xl font-black text-primary uppercase tracking-widest mb-8">Patterned Hotel Corridor & Hallway Carpet</h2>
           <div className="space-y-5">
             {descriptionParagraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 42)} className="text-muted text-lg leading-relaxed">{paragraph}</p>

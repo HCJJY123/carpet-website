@@ -45,13 +45,23 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Custom Floral Printed Wall-to-Wall Hotel Carpet | Vishomecarpet",
-  description: "Custom floral printed wall-to-wall carpet for hotel corridors, guestrooms, banquet halls and offices. MOQ 100 sqm. Custom patterns from Vishomecarpet.",
+  title: "Custom Printed Carpet | Floral Hotel Broadloom | VISHOME",
+  description: "Custom floral printed carpet for hotel lobbies, corridors, guestrooms, restaurants and offices. Patterned wall-to-wall broadloom, MOQ 100 SQM.",
+  keywords: [
+    "custom printed carpet",
+    "printed carpet",
+    "patterned wall to wall carpet",
+    "patterned broadloom carpet",
+    "hotel lobby carpet",
+    "restaurant carpet",
+    "showroom carpet",
+    "office carpet roll"
+  ],
   alternates: { canonical: absoluteUrl(path) },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Custom Floral Printed Hotel Carpet | Vishomecarpet",
-    description: "Made-to-order floral printed broadloom carpet for hotel, banquet hall, corridor, lobby and office projects. Custom colors, materials and pile height.",
+    title: "Custom Printed Carpet | Floral Hotel Broadloom | VISHOME",
+    description: "Made-to-order floral patterned broadloom for hotel lobbies, corridors, guestrooms, restaurants, showrooms, and offices.",
     url: absoluteUrl(path),
     images: [{ url: absoluteUrl(images[0].src), width: 1000, height: 1000, alt: images[0].alt }],
   },
@@ -74,7 +84,7 @@ export default function CustomFloralPrintedHotelCarpetPage() {
     brand: { "@type": "Brand", name: "Vishomecarpet" }, category: "Wall-to-Wall Carpet",
     description: "Made-to-order custom floral printed wall-to-wall carpet for hotel corridors, guestrooms, banquet halls, lobbies and office projects.",
     material: "Polypropylene, nylon, polyester or wool-blend options", url: absoluteUrl(path), image: images.map((item) => absoluteUrl(item.src)),
-    offers: { "@type": "AggregateOffer", priceCurrency: "USD", lowPrice: "3.60", highPrice: "6.40", offerCount: "1", availability: "https://schema.org/InStock", seller: { "@type": "Organization", name: "Vishomecarpet" } },
+    offers: { "@type": "AggregateOffer", priceCurrency: "USD", lowPrice: "3.60", highPrice: "6.40", offerCount: "1", availability: "https://schema.org/PreOrder", seller: { "@type": "Organization", name: "Vishomecarpet" } },
   };
   const breadcrumbJsonLd = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
@@ -114,7 +124,7 @@ export default function CustomFloralPrintedHotelCarpetPage() {
           <div className="space-y-8 py-2">
             <div><p className="mb-4 text-[10px] font-black uppercase tracking-[0.3em] text-accent">Vishomecarpet Custom Printed Broadloom</p>
               <h1 className="mb-7 text-4xl font-black uppercase leading-tight md:text-6xl">{name}</h1>
-              <p className="text-lg leading-relaxed text-muted">Made-to-order printed broadloom carpet with customizable floral patterns, colors, material options and pile height for hotel corridors, guestrooms, banquet halls, lobbies and office projects.</p>
+              <p className="text-lg leading-relaxed text-muted">Made-to-order custom printed carpet with floral patterns, project colorways, material options, and adjustable pile height for hotel lobbies, corridors, guestrooms, banquet halls, restaurants, showrooms, and offices.</p>
             </div>
             <dl className="grid grid-cols-2 gap-px border border-border bg-border">
               {[["MOQ", "100 SQM"], ["FOB Price", "US$3.60-6.40 / SQM"], ["Availability", "Made to Order"], ["Sample", "Sample Option Available on Request"], ["Lead Time", "Confirmed After Artwork and Specification Review"], ["Customization", "Pattern, Color, Material and Pile Height"]].map(([label, value]) => <div key={label} className="bg-white p-5"><dt className="mb-2 text-[10px] font-black uppercase tracking-widest text-primary/40">{label}</dt><dd className="text-sm font-bold">{value}</dd></div>)}
@@ -131,7 +141,7 @@ export default function CustomFloralPrintedHotelCarpetPage() {
       </div><div className="container-fox mt-10"><InquiryActions /></div></section>
 
       <section className="section-padding bg-surface"><div className="container-fox max-w-5xl space-y-14">
-        <article><h2 className="mb-6 text-3xl font-black uppercase">Custom Printed Broadloom for Hospitality and Commercial Interiors</h2><div className="space-y-5 text-base leading-8 text-muted"><p>Vishomecarpet Custom Floral Printed Wall-to-Wall Hotel Carpet is developed for hospitality and commercial buyers who require a distinctive floor design without committing to a woven pattern program. The printed surface supports floral motifs, decorative linework and project-specific color combinations for hotel corridors, guestrooms, banquet halls, lobbies, serviced apartments and office interiors.</p><p>The product is supplied as made-to-order tufted broadloom. Buyers can select from polypropylene, nylon, polyester or wool-blend material options according to the required appearance, budget and application. Pile height, pattern scale and colorway can also be adjusted after the project requirements have been reviewed.</p><p>With an MOQ of 100 square meters, this program is suitable for individual hotel renovations, sample commercial spaces, smaller banquet projects and trial orders before a larger rollout. Final pricing depends on material, pile specification, total quantity, pattern complexity and required finishing.</p></div></article>
+        <article><h2 className="mb-6 text-3xl font-black uppercase">Custom Printed Wall-to-Wall Carpet for Commercial Interiors</h2><div className="space-y-5 text-base leading-8 text-muted"><p>Vishomecarpet Custom Floral Printed Wall-to-Wall Hotel Carpet is developed for hospitality and commercial buyers who require a distinctive floor design without committing to a woven pattern program. The patterned broadloom surface supports floral motifs, decorative linework and project-specific color combinations for hotel corridors, guestrooms, banquet halls, lobbies, restaurants, showrooms and office interiors.</p><p>The product is supplied as made-to-order tufted broadloom. Buyers can select from polypropylene, nylon, polyester or wool-blend material options according to the required appearance, budget and application. Pile height, pattern scale and colorway can also be adjusted after the project requirements have been reviewed.</p><p>With an MOQ of 100 square meters, this custom printed carpet program is suitable for individual hotel renovations, sample commercial spaces, smaller banquet projects and trial orders before a larger rollout. Final pricing depends on material, pile specification, total quantity, pattern complexity and required finishing.</p></div></article>
         <article><h2 className="mb-6 text-3xl font-black uppercase">Custom Pattern and Color Development</h2><div className="space-y-5 text-base leading-8 text-muted"><p>Send Vishomecarpet a reference image, interior rendering, color palette or original artwork. The design team will review the pattern repeat, visual scale, color balance and installation direction before confirming production specifications.</p><p>For corridor projects, the pattern can be adjusted to create a directional layout that visually guides movement through the space. For guestrooms and offices, the design scale can be reduced to create a quieter and more balanced interior. Banquet halls and lobbies can use larger floral elements and stronger color contrast to create a more decorative public-area appearance.</p><p>Pattern approval, material selection and final color confirmation should be completed before mass production. Buyers should provide the total floor area, room dimensions and installation drawings whenever available.</p></div></article>
         <article><h2 className="mb-6 text-3xl font-black uppercase">Designed for Project-Based B2B Procurement</h2><div className="space-y-5 text-base leading-8 text-muted"><p>This product is intended for professional carpet distributors, hotel purchasing teams, commercial flooring contractors and interior design companies. Vishomecarpet can support specification review, pattern adjustment, quotation preparation, export packing and shipping coordination.</p><p>For an accurate quotation, provide the destination country, total required area, preferred material, application space, target delivery date and any pattern reference. The sales team will then confirm the suitable product specification, MOQ, price range and production schedule.</p></div></article>
       </div></section>
@@ -144,7 +154,7 @@ export default function CustomFloralPrintedHotelCarpetPage() {
 
       <section className="section-padding bg-surface"><div className="container-fox"><h2 className="mb-10 text-3xl font-black uppercase md:text-5xl">Frequently Asked Questions</h2><div className="grid gap-5 lg:grid-cols-2">{faqs.map(([question, answer]) => <details key={question} className="border border-border bg-white p-6"><summary className="cursor-pointer font-black">{question}</summary><p className="mt-4 leading-relaxed text-muted">{answer}</p></details>)}</div></div></section>
 
-      <section className="section-padding"><div className="container-fox"><h2 className="mb-8 text-3xl font-black uppercase">Related Products and Resources</h2><div className="grid gap-4 md:grid-cols-2">{[["Wall-to-Wall Carpets", "/products/wall-to-wall"], ["3D HD Printed Nylon Hotel Carpet", "/products/wall-to-wall/3d-printed-hotel-carpet"], ["Custom 3D Printed Banquet Hall Carpet", "/products/wall-to-wall/3d-printed-luxury-banquet-carpet"], ["Carpet Printing Technology Guide", "/blog/carpet-printing-technology-design-to-installation-guide"]].map(([label, href]) => <Link key={href} href={href} className="border border-border p-6 font-black uppercase transition-colors hover:border-accent hover:text-accent">{label} <span aria-hidden="true">→</span></Link>)}</div><div className="mt-12"><InquiryActions /></div><p className="mt-6 text-center text-sm text-muted">Include your country, total area, application, material preference, pattern reference and target delivery date.</p></div></section>
+      <section className="section-padding"><div className="container-fox"><h2 className="mb-8 text-3xl font-black uppercase">Related Products and Resources</h2><div className="grid gap-4 md:grid-cols-2">{[["Wall-to-Wall Carpets", "/products/wall-to-wall"], ["3D HD Printed Nylon Hotel Carpet", "/products/wall-to-wall/3d-printed-hotel-carpet"], ["Custom 3D Printed Banquet Hall Carpet", "/products/wall-to-wall/3d-printed-banquet-hall-carpet"], ["Carpet Printing Technology Guide", "/blog/carpet-printing-technology-design-to-installation-guide"]].map(([label, href]) => <Link key={href} href={href} className="border border-border p-6 font-black uppercase transition-colors hover:border-accent hover:text-accent">{label} <span aria-hidden="true">→</span></Link>)}</div><div className="mt-12"><InquiryActions /></div><p className="mt-6 text-center text-sm text-muted">Include your country, total area, application, material preference, pattern reference and target delivery date.</p></div></section>
     </main>
   );
 }

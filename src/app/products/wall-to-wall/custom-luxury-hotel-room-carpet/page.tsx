@@ -57,9 +57,9 @@ const tds = [
 
 const contentSections = [
   {
-    heading: "Custom Carpet Designed Around the Hotel Guest Experience",
+    heading: "Custom Wall-to-Wall Carpet for Hotel Rooms",
     paragraphs: [
-      "Vishomecarpet Custom Luxury Hotel Room Carpet is developed for guestrooms, suites and hospitality renovation projects that require a coordinated floor design without relying on a standard stock pattern. The pattern scale, colors and visual direction can be adjusted to match the room layout, furniture palette and overall hotel design concept.",
+      "Vishomecarpet Custom Luxury Hotel Room Carpet is made for buyers sourcing carpet for hotel rooms, suites, and hospitality renovation projects. This luxury wall-to-wall carpet program can be coordinated with the room layout, furniture palette, and five-star hotel carpet design concept instead of relying on a standard stock pattern.",
       "Hotel guestroom carpet normally requires a more balanced visual scale than carpet used in ballrooms or large public areas. The design can therefore use softer transitions, controlled contrast and smaller pattern repeats to create a comfortable interior while helping conceal everyday marks between cleaning cycles.",
       "This made-to-order program is suitable for hotel owners, hospitality purchasing companies, interior designers, flooring contractors, carpet distributors and project sourcing teams.",
     ],
@@ -151,7 +151,7 @@ const productJsonLd = {
   sku,
   brand: { "@type": "Brand", name: "Vishomecarpet" },
   category: "Wall-to-Wall Hotel Carpet",
-  description: "Made-to-order wall-to-wall carpet for hotel guestrooms, suites, corridors and hospitality renovation projects.",
+  description: "Made-to-order luxury wall-to-wall hotel room carpet for guestrooms, suites, corridors, serviced apartments, and hospitality renovation projects.",
   url: absoluteUrl(path),
   image: images.map((item) => absoluteUrl(item.src)),
   material: "Project-specific nylon or wool-nylon options",
@@ -194,21 +194,30 @@ const faqJsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: "Custom Luxury Hotel Room Carpet | Vishomecarpet",
-  description: "Custom wall-to-wall carpet for hotel guestrooms, suites and corridors. Personalized patterns, flexible material options and MOQ from 100 sqm.",
-  keywords: null,
+  title: "Custom Hotel Room Carpet | Luxury Wall-to-Wall | VISHOME",
+  description: "Custom wall-to-wall carpet for hotel rooms, suites and corridors. Luxury patterns, nylon or wool-nylon options, MOQ from 100 SQM.",
+  keywords: [
+    "hotel room carpet",
+    "carpet for hotel rooms",
+    "custom hotel carpet",
+    "luxury wall to wall carpet",
+    "5 star hotel carpet",
+    "hotel carpet flooring",
+    "carpet for hotel",
+    "hotel carpet wholesale"
+  ],
   alternates: { canonical: absoluteUrl(path) },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Custom Luxury Hotel Room Carpet | Vishomecarpet",
-    description: "Made-to-order wall-to-wall carpet for hotel guestrooms, suites, corridors and hospitality renovation projects. MOQ from 100 SQM.",
+    title: "Custom Hotel Room Carpet | Luxury Wall-to-Wall | VISHOME",
+    description: "Made-to-order wall-to-wall hotel room carpet for guestrooms, suites, corridors, and hospitality renovation projects. MOQ from 100 SQM.",
     url: absoluteUrl(path),
     images: [{ url: absoluteUrl(images[0].src), width: 1000, height: 1000, alt: images[0].alt }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Luxury Hotel Room Carpet | Vishomecarpet",
-    description: "Custom wall-to-wall carpet for hotel guestrooms, suites and corridors. Personalized patterns, flexible material options and MOQ from 100 sqm.",
+    title: "Custom Hotel Room Carpet | Luxury Wall-to-Wall | VISHOME",
+    description: "Custom wall-to-wall carpet for hotel rooms, suites, and corridors with flexible material and pattern options.",
     images: [absoluteUrl(images[0].src)],
   },
 };
