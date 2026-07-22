@@ -7,6 +7,20 @@ import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConver
 
 const productId = "public-area-heavy-duty";
 const product = products.find((prod) => prod.id === productId);
+const pageImages = [
+  {
+    src: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp",
+    alt: "High-traffic public area carpet main view",
+  },
+  {
+    src: "/images/products/public-area/public-area-heavy-duty/02-public-area-heavy-duty-installation.webp",
+    alt: "Heavy-duty public area carpet installed in a commercial space",
+  },
+  {
+    src: "/images/products/public-area/public-area-heavy-duty/03-public-area-heavy-duty-detail.webp",
+    alt: "Public area heavy-duty carpet detail view",
+  },
+];
 
 const faqs = product
   ? [
@@ -64,7 +78,7 @@ export const metadata: Metadata = product
         description: product.description,
         url: absoluteUrl(productPath(product.id)),
         type: "website",
-        images: [{ url: absoluteUrl(product.image), alt: product.name }],
+        images: [{ url: absoluteUrl(pageImages[0].src), alt: pageImages[0].alt }],
       },
     }
   : { title: "Commercial Carpet Product | VISHOME" };
@@ -74,7 +88,8 @@ export default function ProductDetailPage() {
   const p = products.find((prod) => prod.id === productId);
   if (!p) return <div>Product Not Found</div>;
 
-  const jsonLd = productJsonLd(p);
+  const productForJsonLd = { ...p, image: pageImages[0].src, imageAlt: pageImages[0].alt, gallery: pageImages.slice(1) };
+  const jsonLd = productJsonLd(productForJsonLd);
 
   const productWebPageJsonLd = {
     "@context": "https://schema.org",
@@ -88,7 +103,7 @@ export default function ProductDetailPage() {
     },
   };
 
-  const breadcrumbJsonLd = productBreadcrumbJsonLd(p);
+  const breadcrumbJsonLd = productBreadcrumbJsonLd(productForJsonLd);
 
   return (
     <div className="bg-white min-h-screen">
@@ -120,7 +135,14 @@ export default function ProductDetailPage() {
           <div className="flex flex-col gap-10 lg:flex-row lg:gap-20">
             <div className="lg:w-3/5">
               <div className="aspect-[4/3] overflow-hidden rounded-sm border border-border shadow-xl md:aspect-square">
-                <ProductImage src={p.image} alt={p.imageAlt || p.name} className="h-full w-full object-cover" />
+                <ProductImage src={pageImages[0].src} alt={pageImages[0].alt} className="h-full w-full object-cover" />
+              </div>
+              <div className="mt-5 grid grid-cols-2 gap-5">
+                {pageImages.slice(1).map((image) => (
+                  <div key={image.src} className="aspect-square overflow-hidden rounded-sm border border-border bg-white shadow-md">
+                    <ProductImage src={image.src} alt={image.alt} className="h-full w-full object-cover" />
+                  </div>
+                ))}
               </div>
             </div>
             <div className="flex flex-col justify-center lg:w-2/5">
