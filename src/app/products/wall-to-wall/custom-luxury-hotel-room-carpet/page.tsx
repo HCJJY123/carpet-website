@@ -220,8 +220,8 @@ function InquiryButtons({ compact = false }: { compact?: boolean }) {
 
   return (
     <div className={`grid gap-3 ${compact ? "md:grid-cols-3" : "sm:grid-cols-3"}`}>
-      <ProductTrackedLink href={`/contact?product=${encodeURIComponent(name)}`} event="generate_lead" payload={leadPayload} className={`${buttonBase} bg-primary text-white hover:bg-black`}>
-        Get Factory Quote
+      <ProductTrackedLink href={`/contact?product=${encodeURIComponent(name)}#quote-form`} event="generate_lead" payload={leadPayload} className={`${buttonBase} bg-[#d9480f] text-white hover:bg-[#b83a08]`}>
+        Send Inquiry
       </ProductTrackedLink>
       <ProductTrackedLink href={whatsappHref} event="contact" payload={{ ...contactPayload, contact_method: "whatsapp" }} target="_blank" rel="noopener noreferrer" className={`${buttonBase} border border-border bg-white text-primary hover:border-accent hover:text-accent`}>
         Send Your Hotel Design
@@ -257,8 +257,17 @@ export default function CustomLuxuryHotelRoomCarpetPage() {
 
       <section className="border-b border-border bg-slate-50 py-14 md:py-24">
         <div className="container-fox grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-          <div className="relative aspect-square overflow-hidden border-8 border-white bg-white shadow-2xl">
-            <Image src={images[0].src} alt={images[0].alt} fill priority sizes="(max-width: 1024px) 100vw, 52vw" className="object-cover" />
+          <div className="space-y-4">
+            <div className="relative aspect-square overflow-hidden border-8 border-white bg-white shadow-2xl">
+              <Image src={images[0].src} alt={images[0].alt} fill priority sizes="(max-width: 1024px) 100vw, 52vw" className="object-cover" />
+            </div>
+            <div className="grid grid-cols-3 gap-4">
+              {images.slice(1, 4).map((image) => (
+                <figure key={image.src} className="relative aspect-square overflow-hidden border border-border bg-white shadow-sm">
+                  <Image src={image.src} alt={image.alt} fill loading="lazy" sizes="(max-width: 1024px) 33vw, 16vw" className="object-cover" />
+                </figure>
+              ))}
+            </div>
           </div>
           <div className="space-y-8">
             <div>

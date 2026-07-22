@@ -113,6 +113,7 @@ const specLabels: Record<string, string> = {
 
 export default function ProductDetailPage() {
   if (!product) return <div>Product Not Found</div>;
+  const heroGallery = (product.gallery || []).slice(0, 3);
 
   return (
     <div className="bg-white min-h-screen">
@@ -144,6 +145,15 @@ export default function ProductDetailPage() {
               <div className="aspect-[3/2] rounded-sm overflow-hidden border border-border shadow-xl">
                 <ProductImage src={product.image} alt={product.imageAlt || product.name} className="w-full h-full object-cover" />
               </div>
+              {heroGallery.length ? (
+                <div className="mt-5 grid grid-cols-3 gap-4">
+                  {heroGallery.map((image) => (
+                    <div key={image.src} className="aspect-square overflow-hidden rounded-sm border border-border bg-white shadow-sm">
+                      <ProductImage src={image.src} alt={image.alt} className="h-full w-full object-cover" />
+                    </div>
+                  ))}
+                </div>
+              ) : null}
             </div>
             <div className="lg:w-2/5 flex flex-col justify-center">
               <h1 className="text-3xl md:text-5xl font-black text-primary mb-6 uppercase leading-tight">{product.name}</h1>

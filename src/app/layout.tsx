@@ -7,6 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import WhatsAppFloating from "@/components/WhatsAppFloating";
 import MarketingTracking from "@/components/MarketingTracking";
 import ImageProtection from "@/components/ImageProtection";
+import SendInquiryFloating from "@/components/SendInquiryFloating";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -78,6 +79,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <SendInquiryFloating />
         <WhatsAppFloating />
         <ImageProtection />
       </body>

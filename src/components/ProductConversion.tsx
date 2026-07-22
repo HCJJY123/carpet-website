@@ -63,6 +63,12 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">
+        <Link
+          href={`/contact?product=${encodeURIComponent(product.name)}#quote-form`}
+          className="flex min-h-12 items-center justify-center rounded-sm bg-[#d9480f] px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.12em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[#b83a08]"
+        >
+          Request Quote
+        </Link>
         <a
           href={whatsappUrl}
           target="_blank"
@@ -80,12 +86,6 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
         >
           Email
         </a>
-        <Link
-          href={`/contact?product=${encodeURIComponent(product.name)}`}
-          className="flex min-h-12 items-center justify-center rounded-sm bg-primary px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.12em] text-white shadow-md transition-all hover:bg-black"
-        >
-          Request Quote
-        </Link>
       </div>
 
       <div className="grid gap-3 md:grid-cols-3">
@@ -187,10 +187,10 @@ export function BuyerReasons({ product }: { product?: ConversionProduct } = {}) 
             </div>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
               <Link
-                href={`/contact${product ? `?product=${encodeURIComponent(product.name)}` : ""}`}
-                className="flex min-h-12 items-center justify-center bg-primary px-5 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition-all hover:bg-black"
+                href={`/contact${product ? `?product=${encodeURIComponent(product.name)}` : ""}#quote-form`}
+                className="flex min-h-12 items-center justify-center bg-[#d9480f] px-5 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition-all hover:bg-[#b83a08]"
               >
-                Get Factory Quote
+                Send Inquiry
               </Link>
               <Link
                 href={`/request-sample-box${product ? `?product=${encodeURIComponent(product.name)}` : ""}`}

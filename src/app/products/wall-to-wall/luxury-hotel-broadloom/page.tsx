@@ -68,7 +68,7 @@ export default function ProductDetailPage() {
   if (!p) return <div>Product Not Found</div>;
 
   const jsonLd = productJsonLd(p);
-  const galleryImages = p.gallery ?? [];
+  const galleryImages = (p.gallery ?? []).slice(0, 3);
 
   const productWebPageJsonLd = {
     "@context": "https://schema.org",

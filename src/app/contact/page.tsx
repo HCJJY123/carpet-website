@@ -28,7 +28,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         objectPosition="center 42%"
       />
 
-      <section className="section-padding">
+      <section id="quote-form" className="section-padding scroll-mt-28">
         <div className="container-fox">
           <div className="grid gap-10 lg:grid-cols-3 lg:gap-16">
             {/* Form Column */}

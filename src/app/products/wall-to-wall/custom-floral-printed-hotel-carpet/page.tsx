@@ -61,7 +61,7 @@ function InquiryActions() {
   const message = (request: string) => getWhatsAppBusinessUrl(`Hello Zara, I am interested in ${name}. ${request}. My country, total area, application, material preference, pattern reference and target delivery date are:`);
   return (
     <div className="grid gap-3 sm:grid-cols-3">
-      <Link href={`/contact?product=${encodeURIComponent(name)}`} className="flex min-h-12 items-center justify-center bg-primary px-4 py-3 text-center text-[11px] font-black uppercase tracking-wider text-white transition-colors hover:bg-black">Get Factory Quote</Link>
+      <Link href={`/contact?product=${encodeURIComponent(name)}#quote-form`} className="flex min-h-12 items-center justify-center bg-[#d9480f] px-4 py-3 text-center text-[11px] font-black uppercase tracking-wider text-white transition-colors hover:bg-[#b83a08]">Send Inquiry</Link>
       <a href={message("I want to send my design or pattern reference")} target="_blank" rel="noopener noreferrer" className="flex min-h-12 items-center justify-center border border-border bg-white px-4 py-3 text-center text-[11px] font-black uppercase tracking-wider transition-colors hover:border-accent">Send Your Design</a>
       <a href={message("Please recommend suitable material options for my project")} target="_blank" rel="noopener noreferrer" className="flex min-h-12 items-center justify-center border border-border bg-white px-4 py-3 text-center text-[11px] font-black uppercase tracking-wider transition-colors hover:border-accent">Request Material Options</a>
     </div>
@@ -99,8 +99,17 @@ export default function CustomFloralPrintedHotelCarpetPage() {
 
       <section className="border-b border-border bg-slate-50 py-16 md:py-24">
         <div className="container-fox grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="relative aspect-square overflow-hidden border-8 border-white bg-white shadow-2xl">
-            <Image src={images[0].src} alt={images[0].alt} fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+          <div className="space-y-4">
+            <div className="relative aspect-square overflow-hidden border-8 border-white bg-white shadow-2xl">
+              <Image src={images[0].src} alt={images[0].alt} fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+            </div>
+            <div className="grid grid-cols-3 gap-4">
+              {images.slice(1, 4).map((image) => (
+                <figure key={image.src} className="relative aspect-square overflow-hidden border border-border bg-white shadow-sm">
+                  <Image src={image.src} alt={image.alt} fill loading="lazy" sizes="(max-width: 1024px) 33vw, 16vw" className="object-cover" />
+                </figure>
+              ))}
+            </div>
           </div>
           <div className="space-y-8 py-2">
             <div><p className="mb-4 text-[10px] font-black uppercase tracking-[0.3em] text-accent">Vishomecarpet Custom Printed Broadloom</p>
