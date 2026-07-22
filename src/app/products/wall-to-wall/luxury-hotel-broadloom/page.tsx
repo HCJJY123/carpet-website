@@ -68,6 +68,7 @@ export default function ProductDetailPage() {
   if (!p) return <div>Product Not Found</div>;
 
   const jsonLd = productJsonLd(p);
+  const galleryImages = p.gallery ?? [];
 
   const productWebPageJsonLd = {
     "@context": "https://schema.org",
@@ -115,6 +116,15 @@ export default function ProductDetailPage() {
               <div className="aspect-[4/3] overflow-hidden rounded-sm border border-border shadow-xl md:aspect-square">
                 <ProductImage src={p.image} alt={p.imageAlt || p.name} className="h-full w-full object-cover" />
               </div>
+              {galleryImages.length ? (
+                <div className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-4">
+                  {galleryImages.map((image) => (
+                    <div key={image.src} className="aspect-square overflow-hidden rounded-sm border border-border bg-white shadow-sm">
+                      <ProductImage src={image.src} alt={image.alt || p.name} className="h-full w-full object-cover" />
+                    </div>
+                  ))}
+                </div>
+              ) : null}
             </div>
             <div className="flex flex-col justify-center lg:w-2/5">
               <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:mb-8 md:text-5xl">

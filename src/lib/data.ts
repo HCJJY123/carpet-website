@@ -249,6 +249,12 @@ export const products: Product[] = [
     longDescription: "Visfurn Axminster collections offer the ultimate luxury and durability.",
     image: "/images/broadloom-premium.jpg",
     imageAlt: "Axminster 80/20 wool blend wall-to-wall broadloom hotel carpet for luxury hospitality projects",
+    gallery: [
+      { src: "/images/products/wall-to-wall/luxury-hotel-broadloom/02-axminster-hotel-corridor-application.webp", alt: "Axminster 80/20 wool blend broadloom carpet installed in a luxury hotel corridor" },
+      { src: "/images/products/wall-to-wall/luxury-hotel-broadloom/03-wool-blend-carpet-pattern-closeup.webp", alt: "Close-up of blue and gold Axminster wool blend carpet pattern for hospitality projects" },
+      { src: "/images/products/wall-to-wall/luxury-hotel-broadloom/04-wall-to-wall-broadloom-edge-detail.webp", alt: "Wall-to-wall woven broadloom carpet edge and corridor installation detail" },
+      { src: "/images/products/wall-to-wall/luxury-hotel-broadloom/05-luxury-hospitality-corridor-finish.webp", alt: "Luxury hotel corridor finish with custom Axminster wool blend carpet" }
+    ],
     moq: "500 SQM",
     leadTime: "30 Days",
     fobPrice: { display: "US$18.00-38.00 / SQM", lowPrice: "18.00", highPrice: "38.00", currency: "USD", unit: "SQM" },
