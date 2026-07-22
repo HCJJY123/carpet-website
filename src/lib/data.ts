@@ -246,6 +246,51 @@ export const products: Product[] = [
       antistatic: "Available on Request"
     },
     features: ["Wool Material", "Sculpted Geometric Texture", "Custom Size and Color", "MOQ 10 Pieces"]
+  },
+  {
+    id: "gold-mining-carpet-mat",
+    name: "Gold Mining Carpet Mat for Sluice Box",
+    category: "public-area",
+    description: "PVC miners moss gold mining carpet mat for sluice boxes, river gold washing, placer gold recovery, and alluvial gold mining equipment.",
+    longDescription: "Vishomecarpet Gold Mining Carpet Mat for Sluice Box is a PVC miners moss and ribbed gold recovery mat designed for placer gold recovery, river gold mining, gold panning, sluice box matting, and gold washing equipment. The mat surface helps trap fine gold particles while allowing sand, mud, and water to pass through during washing. It is supplied for mining equipment manufacturers, gold washing plants, distributors, and field users who need roll-format mining carpet with custom thickness, width, color, and packaging options.",
+    image: "/images/products/gold-mining-carpet-mat/01-hero-45-degree.png",
+    imageAlt: "Vishomecarpet gold mining carpet mat PVC miners moss for sluice box gold recovery",
+    gallery: [
+      { src: "/images/products/gold-mining-carpet-mat/01-hero-45-degree.png", alt: "Gold mining carpet mat PVC miners moss 45 degree product view for sluice box" },
+      { src: "/images/products/gold-mining-carpet-mat/02-full-texture-top-view.png", alt: "Gold panning mat full texture top view for gold washing carpet and mining carpet" },
+      { src: "/images/products/gold-mining-carpet-mat/03-rolled-edge-thickness-backing.png", alt: "Rolled edge gold mining carpet mat showing thickness backing and PVC ribbed structure" },
+      { src: "/images/products/gold-mining-carpet-mat/04-pvc-ribbed-miners-moss-texture.png", alt: "PVC ribbed miners moss texture close up for high recovery rate gold carpet" },
+      { src: "/images/products/gold-mining-carpet-mat/05-product-overview-detail.png", alt: "Gold mining mat moss product overview for sluice box matting and gold recovery" },
+      { src: "/images/products/gold-mining-carpet-mat/06-layer-structure-drainage-groove.png", alt: "Gold mining rubber mat layer structure with drainage groove for sand discharge" },
+      { src: "/images/products/gold-mining-carpet-mat/07-oem-odm-custom-size-logo-package.png", alt: "OEM ODM custom gold mining carpet mat size logo color and package options" },
+      { src: "/images/products/gold-mining-carpet-mat/08-pvc-ribbed-wear-resistant-anti-slip.png", alt: "PVC miners moss gold washing mat wear resistant anti slip ribbed texture" },
+      { src: "/images/products/gold-mining-carpet-mat/09-wash-cleaning-sand-discharge.png", alt: "Gold washing carpet cleaning and sand discharge performance for mining use" },
+      { src: "/images/products/gold-mining-carpet-mat/10-gold-washing-mining-site-application.png", alt: "Gold mining carpet applied in river gold washing and placer gold recovery site" }
+    ],
+    moq: "100 Rolls",
+    leadTime: "15-25 Days",
+    fobPrice: { display: "US$18.00-45.00 / Roll", lowPrice: "18.00", highPrice: "45.00", currency: "USD", unit: "Roll" },
+    spec: {
+      material: "PVC / Vinyl Miners Moss",
+      size: "1m x 15m Roll; 10mm / 15mm / 20mm options",
+      colors: [
+        { name: "Gold", hex: "#C99A2E" },
+        { name: "Black", hex: "#1F2933" },
+        { name: "Green", hex: "#2F6F4E" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "Industrial Non-Fire-Rated Mat",
+      trafficClass: "Mining and Outdoor Washing Use",
+      yarnSystem: "PVC Ribbed / Coil Miners Moss",
+      backing: "Unbacked Vinyl / Custom Rubber Backing Option",
+      pileWeight: "Customizable by Thickness",
+      totalThickness: "10mm / 15mm / 20mm",
+      rollWidth: "1m Standard",
+      soundInsulation: "Not Applicable",
+      antistatic: "Not Applicable"
+    },
+    features: ["High Recovery Rate", "PVC Miners Moss", "Sluice Box Matting", "OEM/ODM Custom Roll"]
   }
 ];
 
