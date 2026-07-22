@@ -29,7 +29,6 @@ export default async function ProductDetailPage({ params }: Props) {
   const { id } = await params;
   const p = products.find((item) => item.id === id && item.category === "public-area");
   if (!p) notFound();
-  const supportingImages = p.id === "public-area-heavy-duty" ? (p.gallery ?? []) : [];
 
   return (
     <div className="bg-white min-h-screen font-sans">
@@ -43,15 +42,6 @@ export default async function ProductDetailPage({ params }: Props) {
               <div className="aspect-square bg-white border-8 border-white rounded-sm overflow-hidden shadow-2xl">
                 <ProductImage src={p.image} alt={p.name} className="w-full h-full" fit="contain" />
               </div>
-              {supportingImages.length ? (
-                <div className="grid grid-cols-2 gap-4">
-                  {supportingImages.map((image) => (
-                    <div key={image.src} className="aspect-square overflow-hidden rounded-sm border border-border bg-white shadow-sm">
-                      <ProductImage src={image.src} alt={image.alt} className="h-full w-full" fit="cover" />
-                    </div>
-                  ))}
-                </div>
-              ) : null}
             </div>
             <div className="space-y-12 py-4">
               <div>

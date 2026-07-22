@@ -185,12 +185,7 @@ export const products: Product[] = [
     category: "public-area",
     description: "Extra-durable broadloom rolls for airports, exhibition centers, and terminals.",
     longDescription: "Designed to withstand intense luggage wheels and high-volume pedestrian traffic.",
-    image: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp",
-    imageAlt: "High-traffic public area corridor carpet main view",
-    gallery: [
-      { src: "/images/products/public-area/public-area-heavy-duty/02-public-area-heavy-duty-installation.webp", alt: "Heavy-duty public area carpet installed in a commercial corridor" },
-      { src: "/images/products/public-area/public-area-heavy-duty/03-public-area-heavy-duty-detail.webp", alt: "Public area heavy-duty carpet detail view" }
-    ],
+    image: "/images/public-area-carpets.webp",
     moq: "300 SQM",
     leadTime: "15-20 Days",
     spec: { material: "Solution-Dyed Nylon", size: "4m Roll", colors: [] },
@@ -844,7 +839,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Airport Terminal — Singapore Changi",
     subtitle: "A wayfinding-oriented modular carpet program designed for phased replacement in a live airport environment.",
     category: "public-area",
-    image: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp",
+    image: "/images/public-area-carpets.webp",
     description: "An 8,000 m² airport carpet system integrating circulation logic and modular maintenance strategy for high-traffic terminal use.",
     projectSpecs: [
       { label: "Location", value: "Singapore" },
@@ -868,7 +863,7 @@ export const caseStudies: CaseStudy[] = [
           "This helped the floor contribute to orientation in subtle ways without competing with terminal signage or creating visual confusion.",
           "For the operator, that meant the carpet could support both environment quality and practical passenger movement."
         ],
-        image: "/images/products/public-area/public-area-heavy-duty/02-public-area-heavy-duty-installation.webp",
+        image: "/images/public-area-raw.jpg",
         imageAlt: "Public-area carpet patterning used to guide movement through a circulation zone",
         imageCaption: undefined
       },
@@ -878,10 +873,7 @@ export const caseStudies: CaseStudy[] = [
           "Modular construction was especially valuable because the airport needed to replace sections in tightly controlled windows rather than through extended shutdowns.",
           "The format made it easier to isolate worn or damaged zones, complete overnight interventions, and reopen circulation routes quickly.",
           "That maintenance flexibility was one of the strongest commercial reasons the system was selected."
-        ],
-        image: "/images/products/public-area/public-area-heavy-duty/03-public-area-heavy-duty-detail.webp",
-        imageAlt: "Heavy-duty public area carpet detail used for modular replacement planning",
-        imageCaption: undefined
+        ]
       },
       {
         title: "Operational Outcome",
