@@ -28,7 +28,7 @@ export default function ThankYouPage() {
         </p>
 
         <div className="bg-surface border border-border p-8 mb-12 text-left rounded-sm">
-          <h2 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-6 border-b border-border pb-4">What's Next?</h2>
+          <h2 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-6 border-b border-border pb-4">What&apos;s Next?</h2>
           <ul className="space-y-4">
             <li className="flex items-start gap-4">
               <span className="w-6 h-6 rounded-full bg-primary text-white text-[10px] flex items-center justify-center flex-shrink-0 font-bold">01</span>
