@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
@@ -117,11 +118,12 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                   <div className="border-t border-white/10 pt-5">
                     <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-white/45">WeChat & Form Inquiry</p>
                     <div className="flex items-center gap-4">
-                      <img
+                      <Image
                         src="/images/contact/wechat-qr-code.jpg"
                         alt="Scan to add Vishomecarpet on WeChat"
+                        width={76}
+                        height={76}
                         className="h-[76px] w-[76px] flex-shrink-0 rounded-sm bg-white p-1 shadow-md"
-                        loading="lazy"
                       />
                       <div className="flex-1">
                         <p className="text-sm font-bold text-accent">Scan to Add on WeChat</p>

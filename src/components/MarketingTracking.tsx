@@ -78,6 +78,14 @@ export default function MarketingTracking() {
         });
       }
 
+      if (href === "#quote-form" || href.startsWith("/contact")) {
+        trackAnalyticsEvent("quote_form_click", {
+          href,
+          link_text: text,
+          page_path: window.location.pathname,
+        });
+      }
+
       if (href.startsWith("https://wa.me/") || href.includes("whatsapp")) {
         trackInteractionConversion("whatsapp_click", {
           href,

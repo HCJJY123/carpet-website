@@ -1,6 +1,14 @@
 import ProductImage from "@/components/ProductImage";
 import { certifications } from "@/lib/data";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Company Profile | VISHOME Commercial Carpet Manufacturer",
+  description: "Company profile for Vishome Global Commercial Carpet Co., Ltd., a Tianjin commercial carpet manufacturer serving global B2B projects.",
+  alternates: { canonical: "/about-us" },
+  robots: { index: false, follow: true },
+};
 
 export default function AboutPage() {
   return (

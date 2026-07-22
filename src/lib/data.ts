@@ -9,7 +9,7 @@ export interface CaseStudy { id: string; title: string; subtitle?: string; categ
 
 export const brandInfo = {
   name: "Vishome Global Commercial Carpet Co., Ltd.",
-  shortName: "Visfurn",
+  shortName: "VISHOME",
   url: "https://www.vishomecarpet.com",
   email: "sales@vishomecarpet.com",
   backupEmail: "oilero@outlook.com",
@@ -246,7 +246,7 @@ export const products: Product[] = [
     name: "Axminster 80/20 Wool Blend Hotel Carpet",
     category: "wall-to-wall",
     description: "Custom jacquard woven broadloom specifically designed for 5-star hotel rooms.",
-    longDescription: "Visfurn Axminster collections offer the ultimate luxury and durability.",
+    longDescription: "Vishomecarpet Axminster collections offer premium durability for luxury hospitality projects.",
     image: "/images/broadloom-premium.jpg",
     imageAlt: "Axminster 80/20 wool blend wall-to-wall broadloom hotel carpet for luxury hospitality projects",
     gallery: [

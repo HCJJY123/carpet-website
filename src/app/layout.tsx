@@ -21,6 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.vishomecarpet.com"),
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "SNIrO_J6kr1i6I36kSlpbPwsNdu4NiF6jmI2IoAJWWo",
   },

@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { trackLeadConversion } from "@/lib/tracking";
+import { useRef, useState } from "react";
+import { getAttributionForEvent } from "@/lib/attribution";
+import { trackAnalyticsEvent, trackLeadConversion } from "@/lib/tracking";
 
 type LeadCaptureFormProps = {
   formName: string;
@@ -21,6 +22,7 @@ export default function LeadCaptureForm({
   introText,
 }: LeadCaptureFormProps) {
   const router = useRouter();
+  const formStarted = useRef(false);
   const [state, setState] = useState({
     submitting: false,
     error: null as string | null,
@@ -33,6 +35,14 @@ export default function LeadCaptureForm({
     const form = e.currentTarget;
     const formData = new FormData(form);
     formData.set("form_name", formName);
+    formData.set("page_url", window.location.href);
+    formData.set("page_path", window.location.pathname);
+    formData.set("submitted_at", new Date().toISOString());
+    formData.set("privacy_policy", "Acknowledged at submission");
+
+    Object.entries(getAttributionForEvent()).forEach(([key, value]) => {
+      if (value) formData.set(key, value);
+    });
 
     try {
       const response = await fetch("https://formspree.io/f/xlgkpkza", {
@@ -75,30 +85,41 @@ export default function LeadCaptureForm({
     }
   }
 
+  function handleFormStart() {
+    if (formStarted.current) return;
+    formStarted.current = true;
+    trackAnalyticsEvent("form_start", {
+      form_name: formName,
+      product: productDefault,
+      page_path: window.location.pathname,
+    });
+  }
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl border border-border bg-surface p-5 shadow-sm md:space-y-8 md:p-12">
+    <form onSubmit={handleSubmit} onFocusCapture={handleFormStart} className="space-y-6 rounded-2xl border border-border bg-surface p-5 shadow-sm md:space-y-8 md:p-12">
+      <input name="_gotcha" type="text" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       {introText ? <p className="text-sm leading-relaxed text-muted">{introText}</p> : null}
-      {state.error ? <p className="text-red-600 font-bold text-center text-sm">{state.error}</p> : null}
+      {state.error ? <p className="text-red-600 font-bold text-center text-sm" role="alert" aria-live="polite">{state.error}</p> : null}
 
       <div className="grid gap-5 md:grid-cols-2 md:gap-8">
         <div>
           <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Name *</label>
-          <input name="name" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your name" />
+          <input name="name" type="text" required autoComplete="name" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your name" />
         </div>
         <div>
           <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Email *</label>
-          <input name="email" type="email" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="john@company.com" />
+          <input name="email" type="email" required autoComplete="email" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="john@company.com" />
         </div>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2 md:gap-8">
         <div>
           <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">WhatsApp</label>
-          <input name="whatsapp" type="text" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="+1 000 000 0000" />
+          <input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="+1 000 000 0000" />
         </div>
         <div>
           <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Country / Region *</label>
-          <input name="country" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="United States, UK, etc." />
+          <input name="country" type="text" required autoComplete="country-name" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="United States, UK, etc." />
         </div>
       </div>
 
@@ -128,6 +149,7 @@ export default function LeadCaptureForm({
         <div>
           <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Need Samples?</label>
           <select name="need_samples" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all">
+            <option value="Not specified">Not specified</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
           </select>
@@ -152,6 +174,13 @@ export default function LeadCaptureForm({
       >
         {state.submitting ? "SENDING INQUIRY..." : submitLabel}
       </button>
+      <p className="text-center text-xs leading-relaxed text-muted">
+        By submitting, you acknowledge our{" "}
+        <Link href="/privacy-policy" className="font-bold text-primary underline underline-offset-2">
+          Privacy Policy
+        </Link>{" "}
+        and agree that our export team may contact you about this request.
+      </p>
     </form>
   );
 }

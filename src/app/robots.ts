@@ -9,12 +9,26 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/admin/"],
       },
       {
-        // Allow AI crawlers explicitly
-        userAgent: ["GPTBot", "ChatGPT-User", "PerplexityBot", "ClaudeBot", "Googlebot", "Bingbot"],
+        // Search and answer-engine crawlers that may surface Vishome content.
+        userAgent: [
+          "Googlebot",
+          "Googlebot-Image",
+          "Bingbot",
+          "OAI-SearchBot",
+          "ChatGPT-User",
+          "GPTBot",
+          "PerplexityBot",
+          "ClaudeBot",
+          "Claude-SearchBot",
+          "Claude-User",
+          "Applebot",
+          "Applebot-Extended",
+          "Google-Extended",
+        ],
         allow: "/",
       },
     ],
     sitemap: "https://www.vishomecarpet.com/sitemap.xml",
-    host: "https://www.vishomecarpet.com",
+    host: "www.vishomecarpet.com",
   };
 }

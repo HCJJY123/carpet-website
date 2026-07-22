@@ -20,6 +20,7 @@ const staticRoutes: { url: string; priority: number; changeFrequency: MetadataRo
   { url: "/factory", priority: 0.8, changeFrequency: "monthly" },
   { url: "/faq", priority: 0.8, changeFrequency: "monthly" },
   { url: "/contact", priority: 0.7, changeFrequency: "yearly" },
+  { url: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" },
   { url: "/request-sample-box", priority: 0.8, changeFrequency: "monthly" },
   { url: "/solutions", priority: 0.75, changeFrequency: "monthly" },
   { url: "/solutions/hotel-hospitality", priority: 0.75, changeFrequency: "monthly" },
@@ -31,6 +32,10 @@ const staticRoutes: { url: string; priority: number; changeFrequency: MetadataRo
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const imageUrl = (path: string) => (path.startsWith("http") ? path : `${BASE}${path}`);
+  const uniqueImages = (images: Array<string | undefined>) => [
+    ...new Set(images.filter((image): image is string => Boolean(image)).map(imageUrl)),
+  ];
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map(({ url, priority, changeFrequency }) => ({
     url: `${BASE}${url}`,
@@ -44,6 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.9,
+    images: uniqueImages([category.image]),
   }));
 
   const productEntries: MetadataRoute.Sitemap = products.map((product) => ({
@@ -51,6 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "monthly",
     priority: product.category === "carpet-tiles" ? 0.9 : 0.85,
+    images: uniqueImages([product.image, ...(product.gallery?.map((image) => image.src) ?? [])]),
   }));
 
   const projectEntries: MetadataRoute.Sitemap = caseStudies.map((project) => ({
@@ -58,6 +65,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "yearly",
     priority: 0.75,
+    images: uniqueImages([
+      project.image,
+      ...project.sections.map((section) => section.image),
+      ...(project.gallery ?? []),
+    ]),
   }));
 
   const solutionEntries: MetadataRoute.Sitemap = solutionPages.map((page) => ({
@@ -72,6 +84,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(post.dateModified ?? post.date),
     changeFrequency: "monthly" as const,
     priority: 0.72,
+    images: uniqueImages([
+      post.image,
+      post.h1Image,
+      ...post.sections.map((section) => section.image),
+    ]),
   }));
 
   return [...staticEntries, ...categoryEntries, ...productEntries, ...projectEntries, ...solutionEntries, ...blogEntries];

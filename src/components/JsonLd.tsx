@@ -7,7 +7,7 @@ export default function JsonLd() {
     "@type": "Organization",
     "@id": `${brandInfo.url}/#organization`,
     name: brandInfo.name,
-    alternateName: brandInfo.shortName,
+    alternateName: [brandInfo.shortName, "Vishomecarpet"],
     url: brandInfo.url,
     logo: absoluteUrl("/logo.svg"),
     image: absoluteUrl("/images/og-cover.jpg"),
@@ -26,6 +26,7 @@ export default function JsonLd() {
         telephone: brandInfo.phone,
         contactType: "sales",
         email: brandInfo.email,
+        url: absoluteUrl("/contact"),
         areaServed: ["North America", "Europe", "Australia", "Asia", "Middle East"],
         availableLanguage: ["English", "Chinese"],
       },
@@ -33,11 +34,19 @@ export default function JsonLd() {
         "@type": "ContactPoint",
         contactType: "backup sales",
         email: brandInfo.backupEmail,
+        url: absoluteUrl("/contact"),
         areaServed: ["North America", "Europe", "Australia", "Asia", "Middle East"],
         availableLanguage: ["English", "Chinese"],
       },
     ],
-    sameAs: [brandInfo.url],
+    knowsAbout: [
+      "Commercial carpet tiles",
+      "Hotel broadloom carpet",
+      "Custom printed carpet",
+      "Public area carpet",
+      "Natural sisal carpet",
+      "Commercial carpet project procurement",
+    ],
   };
 
   const localBusinessData = {
@@ -45,7 +54,7 @@ export default function JsonLd() {
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": `${brandInfo.url}/#business`,
     name: brandInfo.name,
-    alternateName: brandInfo.shortName,
+    alternateName: [brandInfo.shortName, "Vishomecarpet"],
     description:
       "Vishome Global Commercial Carpet Co., Ltd. is a Tianjin-based B2B manufacturer supplying carpet tiles, hotel broadloom, public-area carpet, and custom commercial flooring for export projects.",
     url: brandInfo.url,
@@ -101,7 +110,6 @@ export default function JsonLd() {
     parentOrganization: {
       "@id": `${brandInfo.url}/#organization`,
     },
-    sameAs: [brandInfo.url],
   };
 
   const websiteData = {
@@ -109,31 +117,14 @@ export default function JsonLd() {
     "@type": "WebSite",
     "@id": `${brandInfo.url}/#website`,
     name: brandInfo.shortName,
-    alternateName: brandInfo.name,
+    alternateName: ["Vishomecarpet", brandInfo.name],
     url: brandInfo.url,
+    description:
+      "Official website of VISHOME, a commercial carpet manufacturer supplying carpet tiles, hotel broadloom, public-area carpet, and custom flooring for global B2B projects.",
     publisher: {
       "@id": `${brandInfo.url}/#organization`,
     },
     inLanguage: "en",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${brandInfo.url}/blog?search={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
-  };
-
-  const breadcrumbData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
-      { "@type": "ListItem", position: 2, name: "Products", item: absoluteUrl("/products") },
-      { "@type": "ListItem", position: 3, name: "Projects", item: absoluteUrl("/projects") },
-      { "@type": "ListItem", position: 4, name: "Blog", item: absoluteUrl("/blog") },
-      { "@type": "ListItem", position: 5, name: "About Us", item: absoluteUrl("/about-us") },
-      { "@type": "ListItem", position: 6, name: "FAQ", item: absoluteUrl("/faq") },
-      { "@type": "ListItem", position: 7, name: "Contact", item: absoluteUrl("/contact") },
-    ],
   };
 
   return (
@@ -141,7 +132,6 @@ export default function JsonLd() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(organizationData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(localBusinessData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(websiteData) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbData) }} />
     </>
   );
 }
