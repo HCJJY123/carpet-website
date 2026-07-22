@@ -30,6 +30,8 @@ const navLinks: NavItem[] = [
       { href: "/products/wall-to-wall", label: "Wall-to-Wall Carpets" },
       { href: "/products/wall-to-wall/3d-printed-hotel-carpet", label: "Hotel Broadloom Carpet" },
       { href: "/products/public-area", label: "Public Area Carpets" },
+      { href: "/products/public-area/gold-mining-carpet-mat", label: "Gold Mining Carpets" },
+      { href: "/products/public-area/custom-sculpted-wool-lobby-rug", label: "Wool Carpets" },
       { href: "/products/public-area/natural-sisal-carpet", label: "Natural Sisal Carpet" },
     ],
   },
