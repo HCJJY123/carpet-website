@@ -14,10 +14,10 @@ const imageBase = "/images/products/public-area/custom-sculpted-wool-lobby-rug";
 const sku = "VHC-PA-SWR-001";
 
 const images = [
+  { src: `${imageBase}/04-commercial-showroom-custom-rug.webp`, alt: "Custom sculpted wool rug in a premium commercial showroom", title: "Commercial Showroom" },
   { src: `${imageBase}/01-main-hotel-lobby-wool-rug.webp`, alt: "Custom sculpted wool lobby rug with sand beige concentric square pattern", title: "Hotel Lobby Feature Rug" },
   { src: `${imageBase}/02-executive-lounge-sculpted-rug.webp`, alt: "Custom wool area rug for an executive hotel lounge", title: "Executive Lounge" },
   { src: `${imageBase}/03-reception-area-geometric-wool-rug.webp`, alt: "Geometric wool rug for a luxury commercial reception area", title: "Reception Area" },
-  { src: `${imageBase}/04-commercial-showroom-custom-rug.webp`, alt: "Custom sculpted wool rug in a premium commercial showroom", title: "Commercial Showroom" },
   { src: `${imageBase}/05-private-club-lounge-wool-rug.webp`, alt: "Sand beige sculpted wool rug in a private club lounge", title: "Private Club Lounge" },
 ];
 
