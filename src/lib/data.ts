@@ -432,7 +432,7 @@ export const products: Product[] = [
     category: "public-area",
     description: "Extra-durable broadloom rolls for airports and exhibition centers.",
     longDescription: "Engineered for maximum durability in high-traffic public areas.",
-    image: "/images/public-area-carpets.webp",
+    image: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp",
     imageAlt: "High-traffic public area corridor carpet roll for airports exhibition centers and commercial buildings",
     moq: "300 SQM",
     leadTime: "20 Days",
@@ -521,7 +521,7 @@ export const products: Product[] = [
 export const productCategories = [
   { id: "carpet-tiles", name: "Commercial Carpet Tiles", description: "Modular solutions.", image: "/images/category-tiles.png", slug: "carpet-tiles" },
   { id: "wall-to-wall", name: "Wall-to-Wall Carpets", description: "Seamless broadloom.", image: "/images/category-broadloom.jpg", slug: "wall-to-wall" },
-  { id: "public-area", name: "Public Area Carpets", description: "Heavy-duty specialized flooring.", image: "/images/public-area-carpets.webp", slug: "public-area" }
+  { id: "public-area", name: "Public Area Carpets", description: "Heavy-duty specialized flooring.", image: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp", slug: "public-area" }
 ];
 
 export const faqSections = [
