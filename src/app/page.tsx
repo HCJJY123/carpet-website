@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 const homeCategoryImages: Record<string, string> = {
-  "carpet-tiles": "/images/home/category-tiles.jpg",
-  "wall-to-wall": "/images/home/category-broadloom.jpg",
-  "public-area": "/images/home/category-public-area.jpg",
+  "carpet-tiles": "/images/home/category-tiles.webp",
+  "wall-to-wall": "/images/home/category-broadloom.webp",
+  "public-area": "/images/home/category-public-area.webp",
 };
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
       <section className="relative flex min-h-[560px] items-center overflow-hidden bg-primary md:min-h-[650px]">
         <div className="absolute inset-0 z-0">
           <ProductImage
-            src="/images/home/hero-home.jpg"
+            src="/images/home/hero-home.webp"
             alt="Commercial carpet tiles manufacturer for international projects"
             className="w-full h-full object-cover"
             priority
