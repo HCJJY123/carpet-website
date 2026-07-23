@@ -58,8 +58,12 @@ export const metadata: Metadata = {
     images: ["https://www.vishomecarpet.com/images/og-cover.webp"],
   },
   icons: {
-    icon: "/favicon.svg",
-    apple: "/logo-mark.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 

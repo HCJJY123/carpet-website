@@ -292,7 +292,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden translate-x-4 items-center justify-end gap-5 xl:flex 2xl:translate-x-6">
-            <Link href="/contact#quote-form" className="whitespace-nowrap rounded-lg bg-[rgba(217,72,15,0.8)] px-6 py-3 text-[11px] font-black uppercase tracking-widest text-white shadow-lg shadow-[#d9480f]/25 transition-all hover:-translate-y-0.5 hover:bg-[#b83a08]">Send Inquiry</Link>
+            <Link href="/contact#quote-form" className="whitespace-nowrap rounded-lg bg-[#C8752A] px-6 py-3 text-[11px] font-black uppercase tracking-widest text-white shadow-[0_3px_10px_rgba(72,43,18,0.16)] transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_5px_14px_rgba(72,43,18,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2">Send Inquiry</Link>
             <a
               href={whatsappUrl}
               target="_blank"
