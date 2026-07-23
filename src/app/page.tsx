@@ -68,7 +68,7 @@ export default function Home() {
               Factory-direct carpet tiles, hotel broadloom, and custom printed carpets for contractors, distributors, hotels, offices, and commercial renovation projects.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center md:gap-4">
-              <Link href="/contact#quote-form" className="inline-flex min-h-14 items-center justify-center rounded-sm bg-[#C8752A] px-8 py-4 text-center text-sm font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#AD6424]">
+              <Link href="/contact#quote-form" data-home-primary-inquiry className="inline-flex min-h-14 items-center justify-center rounded-sm bg-[#C8752A] px-8 py-4 text-center text-sm font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#AD6424]">
                 Send Project Inquiry
               </Link>
               <Link href="/request-sample-box" className="inline-flex min-h-14 items-center justify-center rounded-sm border border-white/55 px-8 py-4 text-center text-xs font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-white hover:text-primary">

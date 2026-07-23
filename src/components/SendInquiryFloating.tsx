@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { isLocalizedCampaignPath } from "@/lib/localized-paths";
 
 export default function SendInquiryFloating() {
@@ -15,10 +16,36 @@ export default function SendInquiryFloating() {
 
   if (pagesWithInlineForms.includes(pathname) || isLocalizedCampaignPath(pathname)) return null;
 
+  if (pathname === "/") return <HomeInquiryFloating />;
+
+  return <InquiryFloatingLink showOnMobile />;
+}
+
+function HomeInquiryFloating() {
+  const [primaryInquiryVisible, setPrimaryInquiryVisible] = useState(true);
+
+  useEffect(() => {
+    const primaryInquiry = document.querySelector("[data-home-primary-inquiry]");
+    if (!primaryInquiry) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setPrimaryInquiryVisible(entry.isIntersecting),
+      { threshold: 0.05 }
+    );
+    observer.observe(primaryInquiry);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return <InquiryFloatingLink showOnMobile={!primaryInquiryVisible} />;
+}
+
+function InquiryFloatingLink({ showOnMobile }: { showOnMobile: boolean }) {
+
   return (
     <Link
       href="/contact#quote-form"
-      className="group fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-4 z-[99] flex h-12 w-[148px] items-center gap-2 rounded-lg border border-white/15 bg-[#C8752A] px-2.5 text-white shadow-[0_4px_14px_rgba(72,43,18,0.18)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_6px_18px_rgba(72,43,18,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2 motion-reduce:transform-none md:bottom-36 md:left-auto md:right-8 md:h-14 md:w-[210px] md:gap-3 md:px-3"
+      className={`group fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-4 z-[99] h-12 w-[148px] items-center gap-2 rounded-lg border border-white/15 bg-[#C8752A] px-2.5 text-white shadow-[0_4px_14px_rgba(72,43,18,0.18)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_6px_18px_rgba(72,43,18,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2 motion-reduce:transform-none md:bottom-36 md:left-auto md:right-8 md:flex md:h-14 md:w-[210px] md:gap-3 md:px-3 ${showOnMobile ? "flex" : "hidden"}`}
       aria-label="Send inquiry and submit project quote form"
     >
       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#C8752A] shadow-[inset_0_0_0_1px_rgba(200,117,42,0.12)] md:h-9 md:w-9">
