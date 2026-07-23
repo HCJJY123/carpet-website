@@ -23,7 +23,7 @@ const factoryFacts = [
   ["Factory Location", brandInfo.address],
   ["Factory Area", brandInfo.stats.area],
   ["Team Size", brandInfo.stats.employees],
-  ["Export Markets", `${brandInfo.stats.markets} countries`],
+  ["Export Markets", "Philippines / Malaysia / Bulgaria / Australia / New Zealand / South Africa / UAE"],
   ["Core Products", "Commercial carpet tiles, hotel broadloom, public-area carpet, custom printed carpet"],
   ["Project Support", "Samples, specification advice, custom colors, export packing, shipment coordination"],
 ];
