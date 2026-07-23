@@ -36,41 +36,46 @@ export default async function RequestSampleBoxPage({ searchParams }: RequestSamp
 
       <section className="section-padding">
         <div className="container-fox">
-          <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
-            <div>
-              <h2 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
-                Commercial Carpet Samples Built for Faster Specification Decisions
+          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-14">
+            <div className="order-2 lg:order-1">
+              <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-accent">Before We Dispatch</p>
+              <h2 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-4xl">
+                Know the Sample Cost and Timing Before You Commit
               </h2>
               <p className="mb-8 text-base leading-relaxed text-muted">
-                Request a sample box for carpet tile projects, hotel carpet programs, office renovations, public-area flooring, and custom project matching. We prepare sample support so buyers can compare texture, color, backing, and specification direction before bulk quotation.
+                Choose the carpet family first. Our export team then confirms available colors, courier charge, technical documents, and preparation time before anything is dispatched.
               </p>
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="divide-y divide-border border-y border-border">
                 {[
-                  "Carpet tile samples",
-                  "Hotel broadloom samples",
-                  "Custom color matching",
-                  "Backing options",
-                  "Fire-rating / TDS support",
-                  "3-5 days sample preparation",
-                  "DHL / FedEx / UPS available",
-                  "Project quotation support",
-                ].map((item) => (
-                  <div key={item} className="border border-border bg-surface px-4 py-4 text-sm font-black uppercase tracking-[0.08em] text-primary">
-                    {item}
+                  ["1", "Select sample family", "Carpet tiles, hotel broadloom, or a mixed commercial set"],
+                  ["2", "Confirm availability", "We match current colors, backing, fire-rating, and TDS options"],
+                  ["3", "Approve courier cost", "DHL, FedEx, or UPS is confirmed for your delivery country"],
+                  ["4", "Prepare and dispatch", "Typical preparation is 3-5 days for available samples"],
+                ].map(([step, title, detail]) => (
+                  <div key={step} className="grid grid-cols-[2.5rem_1fr] gap-4 py-5">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-xs font-black text-white">{step}</span>
+                    <div>
+                      <h3 className="text-sm font-black uppercase tracking-[0.08em] text-primary">{title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-muted">{detail}</p>
+                    </div>
                   </div>
                 ))}
               </div>
+              <p className="mt-6 border-l-4 border-accent pl-4 text-sm leading-relaxed text-muted">
+                Available standard samples may be free; the buyer normally covers international courier cost. Custom-developed samples are quoted separately before production.
+              </p>
             </div>
 
-            <div className="border border-border bg-surface p-6 md:p-8">
-              <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-accent">Quick Request</p>
-              <h3 className="mb-6 text-2xl font-black uppercase text-primary">Need a Sample Box Fast?</h3>
+            <div id="sample-request-form" className="order-1 scroll-mt-28 lg:order-2">
+              <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-accent">Short Sample Request</p>
+              <h3 className="mb-3 text-2xl font-black uppercase text-primary md:text-3xl">Choose Samples and Delivery Country</h3>
+              <p className="mb-6 text-sm leading-relaxed text-muted">Only name, business email, and destination are required. Project details remain optional.</p>
               <LeadCaptureForm
                 formName="request_sample_box"
-                submitLabel="REQUEST SAMPLE BOX"
+                submitLabel="REQUEST SAMPLE OPTIONS"
                 productDefault={product || "Commercial carpet sample box"}
                 projectTypeDefault="Sample request"
-                introText="Send your carpet type, country, project type, and target delivery date. We will reply with sample options, courier method, lead time, and related technical data sheet support."
+                variant="sample"
               />
               <a
                 href={whatsappUrl}
@@ -79,9 +84,9 @@ export default async function RequestSampleBoxPage({ searchParams }: RequestSamp
                 data-whatsapp-placement="sample_box_page"
                 data-whatsapp-product={product || "Commercial carpet sample box"}
                 data-whatsapp-intent="sample_box_request"
-                className="mt-6 flex min-h-12 items-center justify-center bg-[#25D366] px-5 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition-all hover:bg-[#1ebe5d]"
+                className="mt-4 flex min-h-11 items-center justify-center rounded-sm border border-[#25D366]/35 bg-white px-5 py-3 text-center text-[10px] font-black uppercase tracking-[0.12em] text-[#168B43] transition-colors hover:bg-[#25D366]/10"
               >
-                WhatsApp Sample Support
+                Ask a Sample Question on WhatsApp
               </a>
             </div>
           </div>

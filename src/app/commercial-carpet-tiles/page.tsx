@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { products } from "@/lib/data";
 import { productPath } from "@/lib/seo";
 
@@ -21,22 +22,65 @@ export default function CommercialCarpetTilesPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/commercial-carpet-tiles-office-hero.webp')" }}
         />
-        <div className="absolute inset-0 bg-[#15385d]/78" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#15385d]/90 via-[#15385d]/72 to-[#15385d]/38" />
-        <div className="container-fox relative py-24 md:py-32">
+        <div className="absolute inset-0 bg-[#15385d]/82" />
+        <div className="container-fox relative py-20 md:py-28">
           <div className="max-w-4xl">
             <span className="mb-4 block text-sm font-bold uppercase tracking-[0.2em] text-accent">Engineered for Performance</span>
             <h1 className="mb-8 text-4xl font-bold leading-tight text-white md:text-6xl">
               High-Performance Commercial Carpet Tiles
             </h1>
-            <p className="mb-12 max-w-3xl text-xl text-gray-100/90">
-              The preferred choice for modern office fit-outs and high-traffic commercial interiors. Fire-rated (ASTM E648) and low-VOC for maximum safety and compliance.
+            <p className="mb-9 max-w-3xl text-lg leading-relaxed text-gray-100/90 md:text-xl">
+              Factory-direct 50x50 modular carpet tiles for offices, hotels, retail, schools, and commercial fit-outs. Compare nylon or polypropylene fiber, backing, fire-rating, MOQ, and delivery terms before ordering.
             </p>
-            <div className="flex flex-wrap gap-6">
-              <Link href="/contact" className="btn-fox-orange">Get Project Quotation</Link>
-              <Link href="/contact" className="btn-fox-outline">Request Free Samples</Link>
+            <div className="flex flex-wrap gap-4">
+              <Link href="#quick-quote" className="btn-fox-orange">Get Factory Quote</Link>
+              <Link href="/request-sample-box?product=Commercial%20Carpet%20Tiles" className="inline-flex min-h-12 items-center justify-center rounded-sm border border-white/55 px-6 py-3 text-xs font-black uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-primary">Request Samples</Link>
+            </div>
+            <div className="mt-8 grid gap-px border border-white/20 bg-white/20 text-white sm:grid-cols-4">
+              {[
+                ["Reference Price", "From US$3.80 / SQM"],
+                ["Typical MOQ", "200-500 SQM"],
+                ["Production", "7-25 Days"],
+                ["Trade Terms", "FOB / CIF / DAP"],
+              ].map(([label, value]) => (
+                <div key={label} className="bg-[#15385d]/85 px-4 py-4">
+                  <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-white/60">{label}</p>
+                  <p className="mt-1 text-xs font-black uppercase tracking-[0.06em]">{value}</p>
+                </div>
+              ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="quick-quote" className="scroll-mt-24 border-b border-border bg-white py-12 md:py-16" data-funnel-section="carpet_tile_quick_quote">
+        <div className="container-fox grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-14">
+          <div className="lg:sticky lg:top-28">
+            <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-accent">Factory Quote Without Leaving This Page</p>
+            <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-4xl">Get Price, MOQ, Sample and Lead Time</h2>
+            <p className="mt-5 leading-relaxed text-muted">Send the destination and estimated area. The export team will match a suitable fiber and backing, then reply with comparable project pricing.</p>
+            <dl className="mt-8 divide-y divide-border border-y border-border">
+              {[
+                ["What to send", "Area, application, destination, and required date"],
+                ["What you receive", "Recommended construction, price range, MOQ, and lead time"],
+                ["Sample support", "Available color and backing samples with courier confirmation"],
+                ["Response", "Export sales review within one business day"],
+              ].map(([term, detail]) => (
+                <div key={term} className="py-4">
+                  <dt className="text-[10px] font-black uppercase tracking-[0.14em] text-primary">{term}</dt>
+                  <dd className="mt-1 text-sm leading-relaxed text-muted">{detail}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <LeadCaptureForm
+            formName="carpet_tiles_quick_quote"
+            productDefault="Commercial Carpet Tiles"
+            projectTypeDefault="Office / commercial carpet tile project"
+            submitLabel="GET FACTORY QUOTE"
+            introText="Only contact details and destination are required. Quantity and buying stage can be added when available."
+            variant="quick"
+          />
         </div>
       </section>
 
@@ -134,7 +178,7 @@ export default function CommercialCarpetTilesPage() {
         <div className="container-fox">
           <div className="grid md:grid-cols-3 gap-8">
             {tileProducts.map((product) => (
-              <Link key={product.id} href={productPath(product.id)} className="group block">
+              <Link key={product.id} href={productPath(product.id)} className="group flex h-full flex-col rounded-lg border border-border bg-white p-5 transition-all hover:border-accent hover:shadow-xl">
                 <div className="aspect-square overflow-hidden rounded-lg mb-6 border border-border">
                   <ProductImage src={product.image} alt={product.imageAlt || product.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 </div>
@@ -154,6 +198,9 @@ export default function CommercialCarpetTilesPage() {
                     <span className="text-right">In Stock / Made to Order</span>
                   </div>
                 </div>
+                <span className="mt-5 flex min-h-11 items-center justify-between rounded-sm bg-primary px-4 py-3 text-[10px] font-black uppercase tracking-[0.12em] text-white transition-colors group-hover:bg-[#C8752A]">
+                  View Product & Pricing <span aria-hidden="true">→</span>
+                </span>
               </Link>
             ))}
           </div>

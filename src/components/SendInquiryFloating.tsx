@@ -7,7 +7,13 @@ import { isLocalizedCampaignPath } from "@/lib/localized-paths";
 export default function SendInquiryFloating() {
   const pathname = usePathname();
 
-  if (pathname === "/contact" || isLocalizedCampaignPath(pathname)) return null;
+  const pagesWithInlineForms = [
+    "/contact",
+    "/commercial-carpet-tiles",
+    "/request-sample-box",
+  ];
+
+  if (pagesWithInlineForms.includes(pathname) || isLocalizedCampaignPath(pathname)) return null;
 
   return (
     <Link

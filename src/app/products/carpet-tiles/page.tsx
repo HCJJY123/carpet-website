@@ -143,7 +143,7 @@ export default function CategoryPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {categoryProducts.map((p) => (
-              <Link key={p.id} href={`/products/${categoryId}/${p.id}`} className="group block bg-white border border-border p-8 hover:shadow-2xl transition-all duration-500 rounded-sm">
+              <Link key={p.id} href={`/products/${categoryId}/${p.id}`} className="group flex h-full flex-col rounded-lg border border-border bg-white p-6 transition-all duration-300 hover:border-accent hover:shadow-xl">
                 <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
                    <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
@@ -163,8 +163,8 @@ export default function CategoryPage() {
                     <span className="text-right font-black text-primary">In Stock / Made to Order</span>
                   </div>
                 </div>
-                <div className="flex justify-between items-center text-[10px] font-black text-accent uppercase tracking-widest border-t border-border pt-6">
-                   <span>Technical Details</span>
+                <div className="mt-auto flex min-h-11 items-center justify-between rounded-sm bg-primary px-4 py-3 text-[10px] font-black uppercase tracking-[0.12em] text-white transition-colors group-hover:bg-[#C8752A]">
+                   <span>View Product & Pricing</span>
                    <span>→</span>
                 </div>
               </Link>

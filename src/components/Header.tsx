@@ -291,7 +291,7 @@ export default function Header() {
             </div>
           </nav>
 
-          <div className="hidden translate-x-4 items-center justify-end gap-5 xl:flex 2xl:translate-x-6">
+          <div className="hidden translate-x-4 items-center justify-end gap-3 xl:flex 2xl:translate-x-6">
             <Link href="/contact#quote-form" className="whitespace-nowrap rounded-lg bg-[#C8752A] px-6 py-3 text-[11px] font-black uppercase tracking-widest text-white shadow-[0_3px_10px_rgba(72,43,18,0.16)] transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_5px_14px_rgba(72,43,18,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2">Send Inquiry</Link>
             <a
               href={whatsappUrl}
@@ -299,11 +299,11 @@ export default function Header() {
               rel="noopener noreferrer"
               data-whatsapp-placement="header"
               data-whatsapp-intent="project_support"
-              className="group inline-flex items-center gap-2 whitespace-nowrap rounded-lg border border-[#25D366]/45 bg-white px-5 py-3 text-[10px] font-black uppercase tracking-[0.18em] text-[#168a42] shadow-sm transition-all hover:-translate-y-0.5 hover:bg-[#25D366] hover:text-white"
+              className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#25D366]/30 bg-white px-3 py-2 text-[9px] font-bold uppercase tracking-[0.1em] text-[#168a42] transition-colors hover:border-[#25D366]/55 hover:bg-[#25D366]/[0.06]"
               aria-label="Contact VISHOME on WhatsApp Business"
             >
-              <WhatsAppIcon className="flex h-5 w-5 items-center justify-center rounded-full bg-[#25D366] p-1 text-white" />
-              WhatsApp Project Support
+              <WhatsAppIcon className="h-3.5 w-3.5" />
+              WhatsApp
             </a>
           </div>
 
@@ -314,10 +314,10 @@ export default function Header() {
               rel="noopener noreferrer"
               data-whatsapp-placement="mobile_header"
               data-whatsapp-intent="project_support"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#25D366]/35 bg-white text-[#168a42]"
               aria-label="Contact VISHOME on WhatsApp Business"
             >
-              <WhatsAppIcon className="h-5 w-5" />
+              <WhatsAppIcon className="h-4 w-4" />
             </a>
             <div className="relative" data-language-switcher>
               <LanguageButton
@@ -456,10 +456,10 @@ export default function Header() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#25D366] px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-white shadow-lg"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#25D366]/35 bg-white px-5 py-3 text-xs font-bold uppercase tracking-[0.1em] text-[#168a42]"
             >
               <WhatsAppIcon className="h-4 w-4" />
-              WhatsApp Support
+              Ask on WhatsApp
             </a>
           </div>
         </nav>

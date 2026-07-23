@@ -19,7 +19,16 @@ const homeCategoryImages: Record<string, string> = {
 
 export default function Home() {
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header);
-  const featuredTile = products.find((product) => product.id === "luxury-hotel-carpet-tile-50x50cm");
+  const featuredProduct = products.find((product) => product.id === "3d-printed-hotel-carpet");
+  const categoryPriority = ["wall-to-wall", "public-area", "carpet-tiles"];
+  const prioritizedCategories = categoryPriority
+    .map((id) => categories.find((category) => category.id === id))
+    .filter((category): category is (typeof categories)[number] => Boolean(category));
+  const casePriority = ["case-5", "case-6", "case-12", "case-11"];
+  const prioritizedCases = [
+    ...casePriority.map((id) => caseStudies.find((item) => item.id === id)).filter((item): item is (typeof caseStudies)[number] => Boolean(item)),
+    ...caseStudies.filter((item) => !casePriority.includes(item.id)),
+  ];
 
   return (
     <div className="bg-white">
@@ -58,15 +67,15 @@ export default function Home() {
             <p className="mb-8 max-w-3xl text-base font-light leading-relaxed text-gray-300 opacity-90 md:mb-12 md:text-xl">
               Factory-direct carpet tiles, hotel broadloom, and custom printed carpets for contractors, distributors, hotels, offices, and commercial renovation projects.
             </p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap md:gap-6">
-              <Link href="/contact" className="bg-white text-primary font-bold px-10 py-5 rounded-sm hover:bg-gray-100 transition-all text-sm uppercase tracking-widest shadow-xl">
-                Get Factory Quote
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center md:gap-4">
+              <Link href="/contact#quote-form" className="inline-flex min-h-14 items-center justify-center rounded-sm bg-[#C8752A] px-8 py-4 text-center text-sm font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#AD6424]">
+                Send Project Inquiry
               </Link>
-              <Link href="/request-sample-box" className="border-2 border-white/30 text-white font-bold px-10 py-5 rounded-sm hover:bg-white/10 transition-all text-sm uppercase tracking-widest">
-                Request Free Sample Box
+              <Link href="/request-sample-box" className="inline-flex min-h-14 items-center justify-center rounded-sm border border-white/55 px-8 py-4 text-center text-xs font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-white hover:text-primary">
+                Request Sample Options
               </Link>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white font-bold px-10 py-5 rounded-sm hover:bg-[#1ebe5d] transition-all text-sm uppercase tracking-widest shadow-xl">
-                WhatsApp Project Support
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center px-3 text-center text-[10px] font-black uppercase tracking-[0.1em] text-white/80 underline decoration-white/35 underline-offset-4 transition-colors hover:text-white">
+                Quick Question on WhatsApp
               </a>
             </div>
             <div className="mt-8 grid gap-3 text-[10px] font-black uppercase tracking-[0.18em] text-white/70 sm:grid-cols-3">
@@ -122,7 +131,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3 md:gap-10">
-            {categories.map((cat, index) => (
+            {prioritizedCategories.map((cat, index) => (
               <Link
                 key={cat.id}
                 href={`/products/${cat.id}`}
@@ -151,25 +160,24 @@ export default function Home() {
         </div>
       </section>
 
-      {featuredTile && (
+      {featuredProduct && (
         <section className="border-y border-border bg-surface">
           <div className="container-fox py-10">
             <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
-                <p className="mb-2 text-[10px] font-black uppercase tracking-[0.24em] text-accent">Featured Commercial Carpet Tile</p>
+                <p className="mb-2 text-[10px] font-black uppercase tracking-[0.24em] text-accent">High-Intent Hospitality Product</p>
                 <h2 className="mb-3 text-2xl font-black uppercase leading-tight text-primary md:text-3xl">
-                  50x50 Carpet Tiles for Hotel Carpet Floor and Office Projects
+                  3D Printed Nylon Carpet for Hotel Projects
                 </h2>
                 <p className="max-w-3xl text-sm leading-relaxed text-muted">
-                  Vishomecarpet 50x50 commercial carpet tiles support factory-direct project pricing, sample requests,
-                  and technical data for contractors, distributors, hotels, offices, and commercial renovation buyers.
+                  Review project images, custom pattern capability, MOQ, technical construction, and factory-direct quotation support for guest rooms, corridors, and hospitality public areas.
                 </p>
               </div>
               <Link
-                href={productPath(featuredTile.id)}
+                href={productPath(featuredProduct.id)}
                 className="inline-flex min-h-12 items-center justify-center bg-primary px-6 py-4 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition-all hover:bg-black"
               >
-                View 50x50 Carpet Tiles
+                View Hotel Carpet Details
               </Link>
             </div>
           </div>
@@ -232,7 +240,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {caseStudies.map((cs) => (
+            {prioritizedCases.map((cs) => (
               <Link key={cs.id} href={`/projects/${cs.id}`} className="group flex flex-col">
                 <div className="aspect-[4/3] overflow-hidden bg-surface mb-6">
                   <ProductImage

@@ -30,6 +30,10 @@ export default function CategoryPage() {
         <div className="container-fox">
           <h1 className="text-4xl md:text-6xl font-black text-white uppercase tracking-widest">{currentCategory?.name || "Public Area Carpets"}</h1>
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-sm font-bold uppercase tracking-widest">{currentCategory?.description || "Heavy-duty specialized flooring for public areas."}</p>
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link href="/contact?product=Public%20Area%20Carpet#quote-form" className="btn-fox-orange">Request Project Quote</Link>
+            <Link href="/request-sample-box?product=Public%20Area%20Carpet" className="inline-flex min-h-12 items-center justify-center rounded-sm border border-white/45 px-6 py-3 text-xs font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-white hover:text-primary">Request Samples</Link>
+          </div>
         </div>
       </section>
 
@@ -42,7 +46,7 @@ export default function CategoryPage() {
               <Link
                 key={p.id}
                 href={`/products/${categoryId}/${p.id}`}
-                className="group block bg-white border border-border p-8 hover:shadow-2xl transition-all duration-500 rounded-sm"
+                className="group flex h-full flex-col rounded-lg border border-border bg-white p-6 transition-all duration-300 hover:border-accent hover:shadow-xl"
                 data-track-event={isCustomRug ? "select_item" : undefined}
                 data-item-id={isCustomRug ? "VHC-PA-SWR-001" : undefined}
                 data-item-name={isCustomRug ? "Custom Sculpted Wool Lobby Rug" : undefined}
@@ -75,8 +79,8 @@ export default function CategoryPage() {
                     <span className="text-right font-black text-primary">{isCustomRug ? "Made to Order" : "In Stock / Made to Order"}</span>
                   </div>
                 </div>
-                <div className="flex justify-between items-center text-[10px] font-black text-accent uppercase tracking-widest border-t border-border pt-6">
-                   <span>Technical Details</span>
+                <div className="mt-auto flex min-h-11 items-center justify-between rounded-sm bg-primary px-4 py-3 text-[10px] font-black uppercase tracking-[0.12em] text-white transition-colors group-hover:bg-[#C8752A]">
+                   <span>View Product & Pricing</span>
                    <span>→</span>
                 </div>
               </Link>
