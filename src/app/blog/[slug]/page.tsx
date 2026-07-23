@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog-data";
-import { brandInfo } from "@/lib/data";
-import { absoluteUrl, safeJsonLd } from "@/lib/seo";
+import { brandInfo, products } from "@/lib/data";
+import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 
 interface Props {
@@ -43,6 +43,12 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
+  const relatedProducts = post.relatedProductIds
+    .map((id) => products.find((product) => product.id === id))
+    .filter((product): product is NonNullable<typeof product> => Boolean(product));
+  const relatedProductPaths = new Set(relatedProducts.map((product) => productPath(product.id)));
+  const nextStepLinks = post.suggestedLinks.filter((item) => !relatedProductPaths.has(item.href));
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -66,6 +72,12 @@ export default async function BlogPostPage({ params }: Props) {
     },
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
     articleSection: post.category,
+    mentions: relatedProducts.map((product) => ({
+      "@type": "Product",
+      name: product.name,
+      url: absoluteUrl(productPath(product.id)),
+      image: absoluteUrl(product.image),
+    })),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["article h1", ".article-summary", ".article-section h2"],
@@ -152,10 +164,42 @@ export default async function BlogPostPage({ params }: Props) {
           ))}
         </div>
 
+        <section className="mt-12" aria-labelledby="related-products-heading">
+          <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-accent">Continue Your Specification</p>
+          <h2 id="related-products-heading" className="mb-6 text-2xl font-black uppercase tracking-tight text-primary md:text-3xl">
+            Related Products
+          </h2>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedProducts.map((product) => (
+              <Link
+                key={product.id}
+                href={productPath(product.id)}
+                className="group overflow-hidden rounded-lg border border-border bg-white transition-all hover:border-accent hover:shadow-lg"
+              >
+                <div className="aspect-square overflow-hidden bg-surface">
+                  <ProductImage
+                    src={product.image}
+                    alt={product.imageAlt || product.name}
+                    className="h-full w-full transition-transform duration-500 group-hover:scale-105"
+                    fit="cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-base font-black uppercase leading-snug text-primary transition-colors group-hover:text-accent">
+                    {product.name}
+                  </h3>
+                  <p className="mt-4 text-xs font-black uppercase tracking-[0.16em] text-accent">View Product →</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section className="mt-12 bg-primary rounded-xl p-8 md:p-10">
           <h3 className="text-xl font-black text-white uppercase tracking-wider mb-6">Related Next Steps</h3>
           <div className="flex flex-wrap gap-4">
-            {post.suggestedLinks.map((item) => (
+            {nextStepLinks.map((item) => (
               <Link key={item.href} href={item.href} className="btn-fox-orange !text-xs !tracking-[0.2em] !px-8 !py-4">
                 {item.label}
               </Link>

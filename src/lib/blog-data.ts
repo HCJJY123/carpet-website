@@ -23,6 +23,7 @@ export interface BlogPost {
   h1ImageAlt?: string;
   h1ImageCaption?: string;
   sections: BlogSection[];
+  relatedProductIds: string[];
   suggestedLinks: { label: string; href: string }[];
 }
 
@@ -39,6 +40,11 @@ export const blogPosts: BlogPost[] = [
     author: "Vishome Technical Team",
     category: "Cost & ROI",
     image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.webp",
+    relatedProductIds: [
+      "luxury-hotel-carpet-tile-50x50cm",
+      "commercial-nylon-tiles",
+      "nylon-office-carpet-tile",
+    ],
     h1Image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.webp",
     h1ImageAlt: "Blog 1 hotel lobby before and after comparison",
     sections: [
@@ -93,6 +99,11 @@ export const blogPosts: BlogPost[] = [
     author: "Vishome Technical Team",
     category: "Technical Guide",
     image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.webp",
+    relatedProductIds: [
+      "luxury-hotel-broadloom",
+      "3d-printed-hotel-carpet",
+      "custom-luxury-hotel-room-carpet",
+    ],
     sections: [
       {
         title: "Technical Specifications",
@@ -147,6 +158,11 @@ export const blogPosts: BlogPost[] = [
     author: "Vishome Technical Team",
     category: "Design & Production",
     image: "/images/blog-series/blog-3/Blog_3_Printing_Process.webp",
+    relatedProductIds: [
+      "custom-floral-printed-hotel-carpet",
+      "3d-printed-banquet-hall-carpet",
+      "3d-printed-hotel-carpet",
+    ],
     sections: [
       {
         title: "Technology Comparison",
@@ -201,6 +217,11 @@ export const blogPosts: BlogPost[] = [
     author: "Vishome Technical Team",
     category: "Technical Guide",
     image: "/images/blog-series/blog-4/Blog_4_Carpet_Tile_Crosssection.webp",
+    relatedProductIds: [
+      "nylon-office-carpet-tile",
+      "ecocore-pe-backing-carpet-tiles",
+      "commercial-nylon-tiles",
+    ],
     sections: [
       {
         title: "Specification Details",
@@ -255,6 +276,11 @@ export const blogPosts: BlogPost[] = [
     author: "Vishome Technical Team",
     category: "Cost & ROI",
     image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.webp",
+    relatedProductIds: [
+      "luxury-hotel-broadloom",
+      "custom-luxury-hotel-room-carpet",
+      "glitter-hotel-corridor-broadloom-carpet",
+    ],
     sections: [
       {
         title: "Financial Analysis",
@@ -309,6 +335,11 @@ export const blogPosts: BlogPost[] = [
     author: "Vishome Export Team",
     category: "Logistics",
     image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.webp",
+    relatedProductIds: [
+      "commercial-nylon-tiles",
+      "3d-printed-hotel-carpet",
+      "public-area-heavy-duty",
+    ],
     sections: [
       {
         title: "Logistics Optimization",
@@ -357,6 +388,11 @@ export const blogPosts: BlogPost[] = [
     author: "Vishome Technical Team",
     category: "Installation",
     image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.webp",
+    relatedProductIds: [
+      "public-area-heavy-duty",
+      "natural-sisal-carpet",
+      "ecocore-pe-backing-carpet-tiles",
+    ],
     sections: [
       {
         title: "Scientific Principle",
