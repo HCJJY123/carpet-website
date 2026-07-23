@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -204,8 +205,15 @@ export default function Header() {
         <div className="grid h-16 grid-cols-[1fr_auto] items-center md:h-20 xl:h-24 xl:grid-cols-[310px_minmax(620px,1fr)_390px]">
           <div className="flex min-w-0 items-center gap-2 xl:-translate-x-8 2xl:-translate-x-12">
             <Link href="/" className="flex min-w-0 items-center gap-2" onClick={closeMenus}>
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#102A43] md:h-10 md:w-10">
-                <span className="text-lg font-black italic text-white">V</span>
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-sm md:h-10 md:w-10">
+                <Image
+                  src="/logo-footer.svg"
+                  alt=""
+                  width={256}
+                  height={256}
+                  className="h-full w-full max-w-none scale-[1.422]"
+                  priority
+                />
               </span>
               <div className="flex min-w-0 flex-col">
                 <span className="truncate text-lg font-black leading-none tracking-tighter text-[#102A43] md:text-xl">VISHOME</span>
