@@ -210,7 +210,7 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
 
 export function ProductSpecCards({ product }: { product: ConversionProduct }) {
   return (
-    <div className="grid gap-3 sm:grid-cols-2">
+    <div className="grid gap-3 sm:grid-cols-2" data-funnel-section="procurement_facts">
       {specCards(product).map((item) => (
         <div key={item.label} className="border border-border bg-white p-4 shadow-sm">
           <p className="mb-2 text-[10px] font-black uppercase tracking-[0.18em] text-muted">{item.label}</p>

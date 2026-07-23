@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { products } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+import ProcurementSnapshot from "@/components/ProcurementSnapshot";
 import { absoluteUrl, categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 const categoryPath = "/products/carpet-tiles";
@@ -122,6 +123,18 @@ export default function CategoryPage() {
           </div>
         </div>
       </section>
+      <ProcurementSnapshot
+        title="Commercial Carpet Tile Buying Facts"
+        facts={[
+          { label: "MOQ", value: "200-500 SQM", detail: "Selected constructions are quoted on a project basis." },
+          { label: "Production", value: "7-25 Days", detail: "Timing depends on fiber, backing, color, and quantity." },
+          { label: "Samples", value: "Available", detail: "Confirm surface, backing, color, and specification before bulk order." },
+          { label: "Trade Terms", value: "FOB / CIF / DAP", detail: "Freight is calculated from destination and order volume." },
+        ]}
+        quoteHref="/contact?product=Commercial%20Carpet%20Tiles#quote-form"
+        downloadHref="/downloads/commercial-carpet-procurement-checklist.pdf"
+        downloadName="Commercial Carpet Procurement Checklist"
+      />
       <section id="carpet-tile-products" className="section-padding scroll-mt-24">
         <div className="container-fox">
           <div className="mb-12 max-w-3xl">
@@ -181,7 +194,7 @@ export default function CategoryPage() {
           </div>
         </div>
       </section>
-      <section className="section-padding">
+      <section className="section-padding" data-funnel-section="quote_requirements">
         <div className="container-fox grid gap-12 lg:grid-cols-[1fr_1.1fr]">
           <div>
             <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Wholesale Buying Information</p>

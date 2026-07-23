@@ -5,6 +5,13 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { trackAnalyticsEvent, trackInteractionConversion } from "@/lib/tracking";
 import { captureAttributionOnce } from "@/lib/attribution";
+import {
+  getFunnelSessionSignals,
+  markFunnelEventOnce,
+  recordEngagedSeconds,
+  recordProductView,
+  recordSectionView,
+} from "@/lib/funnel";
 
 const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-T2VYHXTK1F";
 const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "GT-NMDDTW67";
@@ -47,6 +54,105 @@ export default function MarketingTracking() {
     if (googleAdsId) {
       window.gtag("config", googleAdsId, pageViewPayload);
     }
+  }, [pathname]);
+
+  useEffect(() => {
+    const productMatch = pathname.match(/^\/(?:[a-z]{2}\/)?products\/([^/]+)\/([^/]+)$/);
+
+    function maybeTrackHighIntentSession() {
+      const signals = getFunnelSessionSignals();
+      const highIntent =
+        signals.productViewCount >= 2 &&
+        (signals.maxEngagedSeconds >= 60 || signals.sectionViewCount > 0);
+
+      if (!highIntent || !markFunnelEventOnce("high_intent_session")) return;
+      trackAnalyticsEvent("high_intent_session", {
+        page_path: pathname,
+        product_view_count: signals.productViewCount,
+        max_engaged_seconds: signals.maxEngagedSeconds,
+        section_view_count: signals.sectionViewCount,
+      });
+    }
+
+    if (productMatch) {
+      const [, category, productId] = productMatch;
+      const result = recordProductView(pathname);
+
+      if (result.isNew) {
+        trackAnalyticsEvent("product_detail_view", {
+          item_id: productId,
+          item_category: category,
+          page_path: pathname,
+          product_view_count: result.signals.productViewCount,
+        });
+      }
+
+      for (const threshold of [2, 3]) {
+        if (
+          result.signals.productViewCount >= threshold &&
+          markFunnelEventOnce(`view_${threshold}_products`)
+        ) {
+          trackAnalyticsEvent(`view_${threshold}_products`, {
+            page_path: pathname,
+            product_view_count: result.signals.productViewCount,
+          });
+        }
+      }
+
+      maybeTrackHighIntentSession();
+    }
+
+    let visibleSeconds = 0;
+    const engagementTimer = window.setInterval(() => {
+      if (document.visibilityState !== "visible") return;
+      visibleSeconds += 1;
+
+      if (visibleSeconds === 30 || visibleSeconds === 60) {
+        const signals = recordEngagedSeconds(visibleSeconds);
+        const eventName = `engaged_${visibleSeconds}s`;
+        if (markFunnelEventOnce(`${eventName}:${pathname}`)) {
+          trackAnalyticsEvent(eventName, {
+            page_path: pathname,
+            engaged_seconds: visibleSeconds,
+            product_view_count: signals.productViewCount,
+          });
+        }
+        maybeTrackHighIntentSession();
+      }
+    }, 1000);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const element = entry.target as HTMLElement;
+          const sectionName = element.dataset.funnelSection;
+          if (!sectionName) return;
+
+          const sectionKey = `${pathname}:${sectionName}`;
+          const result = recordSectionView(sectionKey);
+          if (result.isNew) {
+            trackAnalyticsEvent(`${sectionName}_view`, {
+              page_path: pathname,
+              section_name: sectionName,
+              product_view_count: result.signals.productViewCount,
+            });
+          }
+          observer.unobserve(element);
+          maybeTrackHighIntentSession();
+        });
+      },
+      { threshold: 0.45 }
+    );
+
+    document.querySelectorAll<HTMLElement>("[data-funnel-section]").forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      window.clearInterval(engagementTimer);
+      observer.disconnect();
+    };
   }, [pathname]);
 
   useEffect(() => {

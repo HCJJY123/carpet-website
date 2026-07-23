@@ -4,6 +4,7 @@ import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
+import ProcurementSnapshot from "@/components/ProcurementSnapshot";
 
 const productId = "gold-mining-carpet-mat";
 const product = products.find((prod) => prod.id === productId);
@@ -230,6 +231,19 @@ export default function GoldMiningCarpetMatPage() {
         </div>
       </section>
 
+      <ProcurementSnapshot
+        title="Gold Mining Mat Wholesale Facts"
+        facts={[
+          { label: "MOQ", value: "100 Rolls", detail: "Trial samples and wholesale production are confirmed separately." },
+          { label: "Production", value: "15-25 Days", detail: "Final timing follows size, thickness, packaging, and quantity." },
+          { label: "Standard Roll", value: "1m x 15m", detail: "10mm, 15mm, and 20mm thickness options are available." },
+          { label: "OEM Supply", value: "Size / Logo / Pack", detail: "Custom color, width, roll length, logo, and packing by order." },
+        ]}
+        quoteHref="/contact?product=Gold%20Mining%20Carpet%20Mat#quote-form"
+        downloadHref="/downloads/gold-mining-mat-rfq-checklist.pdf"
+        downloadName="Gold Mining Mat RFQ Checklist"
+      />
+
       <section className="section-padding bg-primary text-white">
         <div className="container-fox grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
@@ -273,7 +287,7 @@ export default function GoldMiningCarpetMatPage() {
         </div>
       </section>
 
-      <section className="section-padding border-y border-border bg-surface">
+      <section className="section-padding border-y border-border bg-surface" data-funnel-section="quote_requirements">
         <div className="container-fox grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Factory Quote Checklist</p>
@@ -295,7 +309,7 @@ export default function GoldMiningCarpetMatPage() {
         </div>
       </section>
 
-      <section className="section-padding border-y border-border bg-surface">
+      <section className="section-padding border-y border-border bg-surface" data-funnel-section="technical_specs">
         <div className="container-fox">
           <h2 className="mb-8 text-center text-2xl font-bold uppercase tracking-[0.08em] text-primary md:mb-12 md:text-3xl md:tracking-widest">
             Technical Data Sheet (TDS)

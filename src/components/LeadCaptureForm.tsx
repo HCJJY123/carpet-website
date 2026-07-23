@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { getAttributionForEvent } from "@/lib/attribution";
+import { getFunnelSessionSignals, scoreLead } from "@/lib/funnel";
 import { trackAnalyticsEvent, trackLeadConversion } from "@/lib/tracking";
 
 type LeadCaptureFormProps = {
@@ -44,13 +45,28 @@ export default function LeadCaptureForm({
       if (value) formData.set(key, value);
     });
 
+    const signals = getFunnelSessionSignals();
+    const qualification = scoreLead({
+      company: String(formData.get("company") || ""),
+      email: String(formData.get("email") || ""),
+      whatsapp: String(formData.get("whatsapp") || ""),
+      quantity: String(formData.get("quantity") || ""),
+      projectStage: String(formData.get("project_stage") || ""),
+      purchaseTimeframe: String(formData.get("purchase_timeframe") || ""),
+      needSamples: String(formData.get("need_samples") || ""),
+    }, signals);
+    formData.set("lead_score", String(qualification.score));
+    formData.set("lead_grade", qualification.grade);
+    formData.set("lead_score_reasons", qualification.reasons.join("; "));
+    formData.set("session_product_views", String(signals.productViewCount));
+    formData.set("session_max_engaged_seconds", String(signals.maxEngagedSeconds));
+    formData.set("session_section_views", String(signals.sectionViewCount));
+
     try {
-      const response = await fetch("https://formspree.io/f/xlgkpkza", {
+      const response = await fetch("/api/lead", {
         method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
+        body: JSON.stringify(Object.fromEntries(formData.entries())),
+        headers: { "Content-Type": "application/json" },
       });
 
       if (!response.ok) {
@@ -62,6 +78,14 @@ export default function LeadCaptureForm({
         product: String(formData.get("product") || ""),
         quantity: String(formData.get("quantity") || ""),
         country: String(formData.get("country") || ""),
+        company: String(formData.get("company") || ""),
+        projectStage: String(formData.get("project_stage") || ""),
+        purchaseTimeframe: String(formData.get("purchase_timeframe") || ""),
+        needSamples: String(formData.get("need_samples") || ""),
+        leadScore: qualification.score,
+        leadGrade: qualification.grade,
+        productViewCount: signals.productViewCount,
+        maxEngagedSeconds: signals.maxEngagedSeconds,
       });
 
       sessionStorage.setItem(
@@ -107,17 +131,21 @@ export default function LeadCaptureForm({
           <input name="name" type="text" required autoComplete="name" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your name" />
         </div>
         <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Email *</label>
-          <input name="email" type="email" required autoComplete="email" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="john@company.com" />
+          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Company Name</label>
+          <input name="company" type="text" autoComplete="organization" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your company or organization" />
         </div>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2 md:gap-8">
         <div>
+          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Email *</label>
+          <input name="email" type="email" required autoComplete="email" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="john@company.com" />
+        </div>
+        <div>
           <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">WhatsApp</label>
           <input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="+1 000 000 0000" />
         </div>
-        <div>
+        <div className="md:col-span-2">
           <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Country / Region *</label>
           <input name="country" type="text" required autoComplete="country-name" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="United States, UK, etc." />
         </div>
@@ -131,6 +159,32 @@ export default function LeadCaptureForm({
         <div>
           <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Product Type *</label>
           <input name="product" type="text" required defaultValue={productDefault} className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="Carpet tiles, hotel carpet, sisal carpet..." />
+        </div>
+      </div>
+
+      <div className="grid gap-5 md:grid-cols-2 md:gap-8">
+        <div>
+          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Purchase Stage *</label>
+          <select name="project_stage" required defaultValue="" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all">
+            <option value="" disabled>Select your current stage</option>
+            <option value="Ready to order">Ready to order</option>
+            <option value="Requesting quotation">Requesting quotation</option>
+            <option value="Sample evaluation">Sample evaluation</option>
+            <option value="Tender / specification">Tender / specification</option>
+            <option value="Comparing suppliers">Comparing suppliers</option>
+            <option value="General research">General research</option>
+          </select>
+        </div>
+        <div>
+          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Purchase Timeframe *</label>
+          <select name="purchase_timeframe" required defaultValue="" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all">
+            <option value="" disabled>Select expected purchase timing</option>
+            <option value="Within 30 days">Within 30 days</option>
+            <option value="1-3 months">1-3 months</option>
+            <option value="3-6 months">3-6 months</option>
+            <option value="More than 6 months">More than 6 months</option>
+            <option value="Not decided">Not decided</option>
+          </select>
         </div>
       </div>
 

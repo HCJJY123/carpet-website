@@ -24,8 +24,14 @@ const NOISE = new RegExp([
 
 const BOT_UA = /bot|crawl|spider|slurp|headless|lighthouse|pingdom|uptime|monitor|preview|curl|wget|python-requests|axios/i;
 
-export default {
+const worker = {
   async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+
+    if (request.method === "POST" && url.pathname === "/lead") {
+      return recordLead(request, env);
+    }
+
     const origin = request.headers.get("Origin") || "";
     const allowedOrigins = parseList(env.ALLOWED_ORIGINS, DEFAULT_ALLOWED_ORIGINS);
     const allowedOrigin = allowedOrigins.includes(origin) ? origin : "";
@@ -51,6 +57,93 @@ export default {
     return new Response(null, { status: 204, headers: cors });
   },
 };
+
+export default worker;
+
+async function recordLead(request, env) {
+  const authorization = request.headers.get("Authorization") || "";
+  if (!env.LEAD_INGEST_SECRET || authorization !== `Bearer ${env.LEAD_INGEST_SECRET}`) {
+    return Response.json({ ok: false, error: "Unauthorized" }, { status: 401 });
+  }
+
+  const maxBodyBytes = 48_000;
+  const contentLength = Number(request.headers.get("Content-Length") || 0);
+  if (contentLength > maxBodyBytes) {
+    return Response.json({ ok: false, error: "Request too large" }, { status: 413 });
+  }
+
+  const raw = await request.text();
+  if (!raw || raw.length > maxBodyBytes) {
+    return Response.json({ ok: false, error: "Invalid request" }, { status: 400 });
+  }
+
+  let lead;
+  try {
+    lead = JSON.parse(raw);
+  } catch {
+    return Response.json({ ok: false, error: "Invalid JSON" }, { status: 400 });
+  }
+
+  const leadId = safeText(lead.lead_id, 80);
+  const submittedAt = safeText(lead.submitted_at, 40) || new Date().toISOString();
+  if (!leadId || !safeText(lead.email, 320) || !safeText(lead.product, 500)) {
+    return Response.json({ ok: false, error: "Missing required fields" }, { status: 400 });
+  }
+
+  const grade = ["A", "B", "C"].includes(lead.lead_grade) ? lead.lead_grade : "C";
+
+  await env.DB.prepare(
+    `INSERT INTO leads (
+      lead_id, submitted_at, form_name, language, name, company, email, whatsapp,
+      country, project_type, product, quantity, delivery_time, project_stage,
+      purchase_timeframe, need_samples, dap_destination, message, page_url, page_path,
+      landing_page, referrer, utm_source, utm_medium, utm_campaign, utm_term,
+      utm_content, gclid, fbclid, lead_score, lead_grade, lead_score_reasons,
+      session_product_views, session_max_engaged_seconds, session_section_views
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+  ).bind(
+    leadId,
+    submittedAt,
+    safeText(lead.form_name, 160),
+    safeText(lead.language, 20),
+    safeText(lead.name, 200),
+    safeText(lead.company, 300),
+    safeText(lead.email, 320),
+    safeText(lead.whatsapp, 100),
+    safeText(lead.country, 160),
+    safeText(lead.project_type, 300),
+    safeText(lead.product, 500),
+    safeText(lead.quantity, 160),
+    safeText(lead.delivery_time, 200),
+    safeText(lead.project_stage, 160),
+    safeText(lead.purchase_timeframe, 100),
+    safeText(lead.need_samples, 40),
+    safeText(lead.dap_destination, 160),
+    safeText(lead.message, 8000),
+    safeText(lead.page_url, 1000),
+    safeText(lead.page_path, 500),
+    safeText(lead.landing_page, 1000),
+    safeText(lead.referrer, 1000),
+    safeText(lead.utm_source, 300),
+    safeText(lead.utm_medium, 300),
+    safeText(lead.utm_campaign, 500),
+    safeText(lead.utm_term, 500),
+    safeText(lead.utm_content, 500),
+    safeText(lead.gclid, 500),
+    safeText(lead.fbclid, 500),
+    safeInteger(lead.lead_score, 0, 100),
+    grade,
+    safeText(lead.lead_score_reasons, 2000),
+    safeInteger(lead.session_product_views, 0, 1000),
+    safeInteger(lead.session_max_engaged_seconds, 0, 86400),
+    safeInteger(lead.session_section_views, 0, 1000)
+  ).run();
+
+  return Response.json(
+    { ok: true, lead_id: leadId },
+    { status: 201, headers: { "Cache-Control": "no-store" } }
+  );
+}
 
 async function recordVisit(request, env, allowedOrigins) {
   const origin = request.headers.get("Origin") || "";
@@ -181,6 +274,11 @@ function clampNumber(value, min, max, fallback) {
 
 function safeText(value, maxLength) {
   return String(value || "").replace(/\s+/g, " ").trim().slice(0, maxLength);
+}
+
+function safeInteger(value, min, max) {
+  const parsed = Math.round(Number(value) || 0);
+  return Math.min(Math.max(parsed, min), max);
 }
 
 async function sha256(value) {

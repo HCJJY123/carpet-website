@@ -5,6 +5,14 @@ type LeadConversionPayload = {
   product?: string;
   quantity?: string;
   country?: string;
+  company?: string;
+  projectStage?: string;
+  purchaseTimeframe?: string;
+  needSamples?: string;
+  leadScore?: number;
+  leadGrade?: "A" | "B" | "C";
+  productViewCount?: number;
+  maxEngagedSeconds?: number;
 };
 
 type ClickConversionType =
@@ -70,22 +78,39 @@ export function trackLeadConversion({
   product,
   quantity,
   country,
+  company,
+  projectStage,
+  purchaseTimeframe,
+  needSamples,
+  leadScore,
+  leadGrade,
+  productViewCount,
+  maxEngagedSeconds,
 }: LeadConversionPayload) {
   if (typeof window === "undefined") return;
 
   const conversionSendTo = process.env.NEXT_PUBLIC_GOOGLE_ADS_FORM_CONVERSION_SEND_TO;
   const attribution = getAttributionForEvent();
+  const leadPayload = {
+    event_category: "lead",
+    event_label: formName,
+    form_name: formName,
+    product,
+    quantity,
+    country,
+    company_provided: Boolean(company),
+    project_stage: projectStage,
+    purchase_timeframe: purchaseTimeframe,
+    need_samples: needSamples,
+    lead_score: leadScore,
+    lead_grade: leadGrade,
+    product_view_count: productViewCount,
+    max_engaged_seconds: maxEngagedSeconds,
+    ...attribution,
+  };
 
   if (typeof window.gtag === "function") {
-    window.gtag("event", "generate_lead", {
-      event_category: "lead",
-      event_label: formName,
-      form_name: formName,
-      product,
-      quantity,
-      country,
-      ...attribution,
-    });
+    window.gtag("event", "generate_lead", leadPayload);
 
     if (conversionSendTo) {
       window.gtag("event", "conversion", {
@@ -94,6 +119,10 @@ export function trackLeadConversion({
         event_label: formName,
       });
     }
+
+    if (leadGrade === "A") {
+      window.gtag("event", "high_intent_lead", leadPayload);
+    }
   }
 
   if (typeof window.clarity === "function") {
@@ -101,16 +130,13 @@ export function trackLeadConversion({
     window.clarity("set", "lead_form", formName);
     if (product) window.clarity("set", "lead_product", product);
     if (country) window.clarity("set", "lead_country", country);
+    if (leadGrade) window.clarity("set", "lead_grade", leadGrade);
+    if (typeof leadScore === "number") window.clarity("set", "lead_score", String(leadScore));
     if (attribution.utm_source) window.clarity("set", "lead_utm_source", attribution.utm_source);
   }
 
-  pushTrackingEvent("lead_form_submit_success", {
-    form_name: formName,
-    product,
-    quantity,
-    country,
-    ...attribution,
-  });
+  pushTrackingEvent("lead_form_submit_success", leadPayload);
+  if (leadGrade === "A") pushTrackingEvent("high_intent_lead", leadPayload);
 }
 
 export function trackInteractionConversion(type: ClickConversionType, payload: Record<string, unknown> = {}) {

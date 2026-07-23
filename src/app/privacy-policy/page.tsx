@@ -39,6 +39,7 @@ const sections = [
     body: [
       "We use the information you provide to respond to inquiries, prepare quotations, arrange sample support, communicate about commercial carpet projects, provide product information, improve our website, and support customer service and sales follow-up.",
       "We may also use submitted information to understand lead quality, measure marketing performance, prevent spam or abuse, and maintain business records related to project communication.",
+      "Project inquiry data may be assigned an internal lead score based on the information submitted and non-sensitive website engagement signals. This score helps our sales team prioritize relevant B2B requests; it does not produce legal or similarly significant automated decisions.",
     ],
   },
   {
@@ -53,6 +54,7 @@ const sections = [
     body: [
       "We may use third-party services such as Google Ads, Google Analytics, website hosting providers, form processing tools, email systems, and communication platforms to operate the website, process inquiries, analyze traffic, and manage marketing campaigns.",
       "We may also use Cloudflare and IPinfo Lite to help understand company-level website traffic, filter non-business traffic, protect the website, and improve B2B sales follow-up.",
+      "Website inquiry details are delivered through Formspree and may also be stored in Vishome's access-controlled Cloudflare D1 database so our team can manage quotations, follow-up status, lead quality, and advertising attribution in one record.",
       "These third-party services may process information according to their own privacy policies. We do not sell your personal information to third parties.",
     ],
   },

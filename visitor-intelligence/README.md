@@ -34,6 +34,7 @@ Create secrets:
 ```bash
 wrangler secret put IPINFO_TOKEN
 wrangler secret put VISITOR_HASH_SALT
+wrangler secret put LEAD_INGEST_SECRET
 ```
 
 Deploy:
@@ -51,6 +52,15 @@ NEXT_PUBLIC_VISITOR_BEACON_URL=https://vishome-visitor-intelligence.<your-subdom
 ```
 
 The website integration is already in `src/components/VisitorBeacon.tsx` and `src/app/layout.tsx`. If the env var is empty, no beacon is sent.
+
+The inquiry archive also needs these server-only Vercel variables:
+
+```bash
+LEAD_INGEST_URL=https://vishome-visitor-intelligence.<your-subdomain>.workers.dev/lead
+LEAD_INGEST_SECRET=<same random value stored in the Worker secret>
+```
+
+The browser posts to Vishome's same-origin `/api/lead` route. That route sends the inquiry to Formspree and archives it in D1 using the private Worker secret; the secret is never exposed to the browser.
 
 ## 3. Test
 
@@ -90,6 +100,35 @@ weekly_leads.xlsx
 ```
 
 The report ranks companies by visit days, page depth, time on site, contact/product page intent, and return visits.
+
+## 5. Unified Lead Export and Google Ads
+
+Export all form leads to a ranked Excel workbook and prepare the eligible Google Ads offline-conversion CSV:
+
+```bash
+./scripts/export_leads.sh
+```
+
+The files are written to `~/Downloads/Vishome-Lead-Reports/<date>/`:
+
+```text
+vishome_leads.xlsx
+google_ads_qualified_leads.csv
+```
+
+Automatic A/B/C scoring prioritizes follow-up, but it does not by itself qualify a lead for Google Ads. After sales confirms a real opportunity, update the D1 record:
+
+```bash
+wrangler d1 execute vishome_visitors --remote --command \
+  "UPDATE leads SET lead_status='qualified', qualified_at=CURRENT_TIMESTAMP, conversion_value=1 WHERE lead_id='<lead-id>'"
+```
+
+Only leads with a GCLID, an empty `google_ads_uploaded_at`, and a sales-confirmed status of `qualified`, `quoted`, `sample_sent`, or `won` enter the Google Ads CSV. After a successful Google Ads import, mark the row to prevent a duplicate upload:
+
+```bash
+wrangler d1 execute vishome_visitors --remote --command \
+  "UPDATE leads SET google_ads_uploaded_at=CURRENT_TIMESTAMP WHERE lead_id='<lead-id>'"
+```
 
 ## Notes
 

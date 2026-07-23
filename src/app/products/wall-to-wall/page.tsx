@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { products } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+import ProcurementSnapshot from "@/components/ProcurementSnapshot";
 import { absoluteUrl, categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 const categoryPath = "/products/wall-to-wall";
@@ -121,6 +122,18 @@ export default function CategoryPage() {
           </div>
         </div>
       </section>
+      <ProcurementSnapshot
+        title="Hotel Broadloom Buying Facts"
+        facts={[
+          { label: "MOQ", value: "100-500 SQM", detail: "MOQ varies by printed, tufted, or woven construction." },
+          { label: "Production", value: "15-35 Days", detail: "Custom artwork and specification approval affect timing." },
+          { label: "Samples", value: "Sample / Strike-Off", detail: "Color, pattern scale, pile, and backing are confirmed by project." },
+          { label: "Trade Terms", value: "FOB / CIF / DAP", detail: "Roll plan, packing, and freight depend on destination." },
+        ]}
+        quoteHref="/contact?product=Wall-to-Wall%20Carpet#quote-form"
+        downloadHref="/downloads/commercial-carpet-procurement-checklist.pdf"
+        downloadName="Commercial Carpet Procurement Checklist"
+      />
       <section id="wall-to-wall-products" className="section-padding scroll-mt-24">
         <div className="container-fox">
           <div className="mb-12 max-w-3xl">
@@ -189,7 +202,7 @@ export default function CategoryPage() {
           </div>
         </div>
       </section>
-      <section className="section-padding">
+      <section className="section-padding" data-funnel-section="quote_requirements">
         <div className="container-fox grid gap-12 lg:grid-cols-[1fr_1.1fr]">
           <div>
             <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Transparent Buying Information</p>
