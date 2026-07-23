@@ -103,9 +103,12 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/5 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] font-black text-white/30 uppercase tracking-[0.3em]">
-            &copy; {new Date().getFullYear()} Vishome Global Commercial Carpet Co. Ltd. <span className="mx-2">|</span> Since 2005
-          </p>
+          <div className="text-center md:text-left">
+            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30">
+              &copy; {new Date().getFullYear()} Vishome Global Commercial Carpet Co. Ltd.
+            </p>
+            <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">Established 2005</p>
+          </div>
           <div className="flex gap-10 opacity-30">
              <span className="text-[10px] font-black text-white uppercase tracking-widest">Tianjin Factory Direct</span>
              <span className="text-[10px] font-black text-white uppercase tracking-widest">ASTM E648 Certified</span>
