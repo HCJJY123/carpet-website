@@ -179,11 +179,27 @@ export default async function ProjectDetailPage({ params }: Props) {
                   {section.title}
                 </h2>
                 <div className="space-y-4">
-                  {section.paragraphs.map((paragraph, index) => (
-                    <p key={`${section.title}-${index}`} className="text-lg text-muted leading-relaxed">
-                      {paragraph}
-                    </p>
-                  ))}
+                  {section.blocks
+                    ? section.blocks.map((block, index) =>
+                        block.type === "paragraph" ? (
+                          <p key={`${section.title}-paragraph-${index}`} className="text-lg text-muted leading-relaxed">
+                            {block.text}
+                          </p>
+                        ) : (
+                          <ul key={`${section.title}-list-${index}`} className="space-y-3 pl-6 text-lg leading-relaxed text-muted">
+                            {block.items.map((item) => (
+                              <li key={item.label} className="list-disc">
+                                <strong className="text-primary">{item.label}</strong> — {item.text}
+                              </li>
+                            ))}
+                          </ul>
+                        )
+                      )
+                    : section.paragraphs.map((paragraph, index) => (
+                        <p key={`${section.title}-${index}`} className="text-lg text-muted leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
                 </div>
                 {section.image ? (
                   <figure className="mt-8">

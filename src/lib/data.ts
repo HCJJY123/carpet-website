@@ -3,7 +3,10 @@ export interface TechnicalSpecs { fireRating: string; trafficClass: string; fibe
 export interface FobPriceRange { display: string; lowPrice: string; highPrice: string; currency: "USD"; unit: string; }
 export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; leadTime: string; fobPrice?: FobPriceRange; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
 export interface CaseSpecItem { label: string; value: string; }
-export interface CaseSection { title: string; paragraphs: string[]; image?: string; imageAlt?: string; imageCaption?: string; }
+export type CaseSectionBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "list"; items: { label: string; text: string }[] };
+export interface CaseSection { title: string; paragraphs: string[]; blocks?: CaseSectionBlock[]; image?: string; imageAlt?: string; imageCaption?: string; }
 export interface CaseCostItem { item: string; amount: string; }
 export interface CaseStudy { id: string; title: string; metadataTitle?: string; h1?: string; tag?: string; subtitle?: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; image: string; imageAlt?: string; description: string; specificationTitle?: string; projectSpecs: CaseSpecItem[]; sections: CaseSection[]; technicalDetails: string[]; designHighlights: string[]; results: string[]; gallery?: string[]; costAnalysis?: CaseCostItem[]; faqs?: { question: string; answer: string; }[]; recommendedProductIds?: string[]; }
 
@@ -1488,5 +1491,132 @@ export const caseStudies: CaseStudy[] = [
       }
     ],
     recommendedProductIds: []
+  },
+  {
+    id: "case-12",
+    title: "Gold Mining Sluice Carpet Application Reference — Madre de Dios, Peru",
+    metadataTitle: "Gold Mining Sluice Carpet Application Reference — Madre de Dios, Peru",
+    h1: "Gold Sluice Mat & Mining Carpet: Roll Specification and Container Planning",
+    tag: "Technical Overview · Mining & Industrial",
+    category: "public-area",
+    image: "/images/projects/case-12/gold-sluice-carpet-alluvial-mining-reference.webp",
+    imageAlt: "Reference scene of gold sluice carpet used in an alluvial mining wash channel",
+    description: "Gold sluice carpet specification for alluvial mining operations: pile weight, roll dimensions, container loading, and FOB quotation for bulk distributors.",
+    specificationTitle: "Specification Table",
+    projectSpecs: [
+      { label: "Application", value: "Alluvial gold sluice box · Highbanker · Trommel" },
+      { label: "Fibre", value: "100% Polyester" },
+      { label: "Weight Options", value: "1400 / 1700 / 1850 (custom) / 2100 g/m²" },
+      { label: "Thickness", value: "12–16 mm" },
+      { label: "Standard Roll", value: "2 m × 35 m (70 m² per roll)" },
+      { label: "Custom Roll", value: "2 m × 24 m and other custom lengths" },
+      { label: "Colour", value: "Grey · Green · Black" },
+      { label: "Backing", value: "Reinforced anti-tear" },
+      { label: "Sample Lead Time", value: "Stocked weights immediate; custom weight approx. 16 days" },
+      { label: "Bulk Lead Time", value: "Confirmed on order for 40HC quantities" },
+      { label: "Quotation Terms", value: "FOB · CIF available" }
+    ],
+    sections: [
+      {
+        title: "What Sluice Carpet Does",
+        paragraphs: [
+          "Sluice carpet performs a mechanical function rather than a decorative one. Laid beneath the riffle bars of a sluice box, highbanker, or trommel discharge, it creates a zone of reduced flow velocity at the floor of the run. Denser particles carried in the slurry drop out of suspension in this zone and are held in the fibre structure, while lighter sand and gravel continue downstream.",
+          "Because the mechanism depends on flow behaviour rather than surface appearance, the specification criteria have almost nothing in common with commercial carpet. Fibre weight, pile density, and resistance to continuous wet abrasion are the variables that matter. Colour, pattern, and stain resistance are irrelevant.",
+          "This distinction matters commercially as well. Buyers in this category are usually equipment distributors or mining supply wholesalers rather than end operators, and they purchase in container quantities against a defined regional demand."
+        ]
+      },
+      {
+        title: "Weight and Pile Structure",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Fibre weight is the primary specification decision, and it is a trade-off rather than a case of heavier being better."
+          },
+          {
+            type: "paragraph",
+            text: "A carpet that is too light presents a shallow fibre layer. Flow passes close to the base, and finer particles are more easily lifted back into the stream and lost downstream. A carpet that is too heavy presents the opposite problem: the fibre bed restricts flow, coarse material packs into the pile, and cleaning cycles become more frequent, which means more downtime and more handling of a wet, heavy roll."
+          },
+          {
+            type: "paragraph",
+            text: "Four weights cover most alluvial applications:"
+          },
+          {
+            type: "list",
+            items: [
+              { label: "1400 g/m²", text: "lighter material loads, higher flow rates" },
+              { label: "1700 g/m²", text: "general purpose, the most commonly stocked option" },
+              { label: "1850 g/m²", text: "an intermediate specification produced to order" },
+              { label: "2100 g/m²", text: "heavier feed, coarser material, lower flow velocity" }
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Selection should follow the particle size distribution of the local material and the flow rate of the equipment in use, not a general assumption that a heavier mat recovers more."
+          }
+        ],
+        image: "/images/projects/case-12/gold-mining-carpet-fibre-backing-detail.webp",
+        imageAlt: "Close-up reference view of grey gold mining carpet fibre and reinforced backing over sluice riffles"
+      },
+      {
+        title: "Roll Dimensions and Sluice Box Fit",
+        paragraphs: [
+          "The standard production roll is 2 m wide by 35 m long, giving 70 m² per roll. This suits distributors supplying a range of equipment sizes, since operators cut to fit on site.",
+          "Custom roll lengths are also available — 2 m by 24 m is a frequently requested alternative. The reason to specify a custom length is waste reduction: when roll length is set as a multiple of the sluice run being supplied, off-cuts at the end of each roll are reduced or eliminated. For a distributor supplying a regional market where most operators run similar equipment, matching roll length to the dominant sluice dimension is a straightforward way to improve yield per container.",
+          "Thickness for these weights typically falls between 12 and 16 mm."
+        ]
+      },
+      {
+        title: "Material Durability in Field Conditions",
+        paragraphs: [
+          "Alluvial operations subject the material to continuous immersion, abrasive sediment, repeated lifting for cleaning, and sustained UV exposure in open-pit and riverbank settings.",
+          "100% polyester is specified for this application because it retains fibre structure under prolonged wet conditions and does not absorb water into the filament in a way that adds significant weight during handling. The backing carries the mechanical load: repeated lifting of a saturated mat full of trapped sediment places high stress on the fibre-to-backing bond, and a reinforced anti-tear backing is what determines whether the mat survives a full season of cleaning cycles rather than the fibre face itself."
+        ],
+        image: "/images/projects/case-12/gold-sluice-mat-field-operation-reference.webp",
+        imageAlt: "Reference scene showing black gold sluice matting in an alluvial mining wash operation"
+      },
+      {
+        title: "Container Planning and FOB Quotation",
+        paragraphs: [
+          "Orders in this category are typically placed at 40HC container scale.",
+          "Loaded volume depends on rolled diameter, which in turn varies with weight and roll length, so the number of rolls per container is confirmed against the exact specification at quotation rather than assumed from a general figure. Where roll length is customised, this calculation should be run before the order is fixed, since a small change in roll length can change how efficiently rolls stack in the container.",
+          "FOB is the standard quotation basis. A clear FOB quotation should state fibre composition, weight in g/m², thickness, roll dimensions, square metres per roll, total square metres, and colour, so that the buyer can calculate landed cost against local freight and duty. Distributors reselling into a regional market generally need this level of detail to price their own offer, and requesting it explicitly at enquiry avoids a second round of clarification."
+        ]
+      },
+      {
+        title: "Sampling Before a Bulk Order",
+        paragraphs: [
+          "Samples in stocked weights — 1400, 1700, and 2100 g/m² — can be dispatched from existing inventory, with only courier costs applying.",
+          "A non-standard weight such as 1850 g/m² requires a dedicated production run to sample. This carries a lead time of approximately 16 days and a custom sampling charge of around USD 460, reflecting the machine setup involved.",
+          "For that reason the practical sequence for a first order is to evaluate stocked weights first. The fibre structure, backing, and general construction are consistent across the range, so a stocked sample answers most questions about build quality and field suitability. A custom weight can then be committed to with confidence, rather than paying setup costs to answer questions a stocked sample would have resolved."
+        ]
+      }
+    ],
+    technicalDetails: [],
+    designHighlights: [],
+    results: [],
+    faqs: [
+      {
+        question: "Which carpet weight gives the best gold recovery rate?",
+        answer: "There is no single best weight. A lighter mat suits finer material and higher flow rates; a heavier mat suits coarser feed and lower velocity. Too light and fine particles are more readily carried downstream; too heavy and the pile packs with coarse material, increasing cleaning frequency. Selection should follow the particle size and flow rate of the specific operation."
+      },
+      {
+        question: "Can you produce custom roll lengths to match my sluice box?",
+        answer: "Yes. The standard roll is 2 m × 35 m, and custom lengths such as 2 m × 24 m are produced to order. Matching roll length to the dominant equipment size in your market reduces off-cut waste per roll."
+      },
+      {
+        question: "How many square metres fit in a 40HC container?",
+        answer: "Loading depends on rolled diameter, which varies with weight and roll length. The figure is confirmed against your exact specification at quotation, particularly where custom roll lengths are involved."
+      },
+      {
+        question: "Do you provide free samples before a bulk order?",
+        answer: "Samples in stocked weights of 1400, 1700, and 2100 g/m² are provided free, with courier charges payable by the buyer. A non-standard weight requires a dedicated production run, with a lead time of approximately 16 days and a custom sampling charge of around USD 460."
+      },
+      {
+        question: "Is the material resistant to continuous water immersion and UV exposure?",
+        answer: "100% polyester is specified for this application because it holds fibre structure under prolonged immersion and outdoor exposure. The reinforced anti-tear backing carries the mechanical stress of repeated lifting when the mat is saturated and loaded with sediment."
+      }
+    ],
+    recommendedProductIds: ["gold-mining-carpet-mat"]
   }
 ];
