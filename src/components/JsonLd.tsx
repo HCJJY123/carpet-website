@@ -102,7 +102,7 @@ export default function JsonLd() {
         { "@type": "Offer", itemOffered: { "@type": "Product", name: "Commercial Carpet Tiles", url: absoluteUrl("/products/carpet-tiles") } },
         { "@type": "Offer", itemOffered: { "@type": "Product", name: "Hotel Broadloom Carpet", url: absoluteUrl("/products/wall-to-wall") } },
         { "@type": "Offer", itemOffered: { "@type": "Product", name: "Public Area Carpet", url: absoluteUrl("/products/public-area") } },
-        { "@type": "Offer", itemOffered: { "@type": "Product", name: "Custom Printed Carpet", url: absoluteUrl("/contact") } },
+        { "@type": "Offer", itemOffered: { "@type": "Product", name: "Custom Printed Carpet", url: absoluteUrl("/products/wall-to-wall/custom-floral-printed-hotel-carpet") } },
       ],
     },
     parentOrganization: {
