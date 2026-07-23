@@ -292,7 +292,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden translate-x-4 items-center justify-end gap-5 xl:flex 2xl:translate-x-6">
-            <Link href="/contact#quote-form" className="whitespace-nowrap rounded-lg bg-[rgba(217,72,15,0.75)] px-6 py-3 text-[11px] font-black uppercase tracking-widest text-white shadow-lg shadow-[#d9480f]/25 transition-all hover:-translate-y-0.5 hover:bg-[#b83a08]">Send Inquiry</Link>
+            <Link href="/contact#quote-form" className="whitespace-nowrap rounded-lg bg-[rgba(217,72,15,0.8)] px-6 py-3 text-[11px] font-black uppercase tracking-widest text-white shadow-lg shadow-[#d9480f]/25 transition-all hover:-translate-y-0.5 hover:bg-[#b83a08]">Send Inquiry</Link>
             <a
               href={whatsappUrl}
               target="_blank"
