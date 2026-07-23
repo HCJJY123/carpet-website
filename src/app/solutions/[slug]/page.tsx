@@ -65,19 +65,17 @@ export default async function SolutionDetailPage({ params }: Props) {
     ],
   };
 
-  const serviceJsonLd = {
+  const productListJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    name: page.title,
-    description: page.description,
-    url: pageUrl,
-    provider: {
-      "@type": "Organization",
-      name: "Vishome Global Commercial Carpet Co., Ltd.",
-      url: "https://www.vishomecarpet.com",
-    },
-    areaServed: ["United States", "United Kingdom", "Australia", "Europe", "Middle East", "Asia"],
-    serviceType: "Commercial carpet supply and project specification",
+    "@type": "ItemList",
+    name: `Recommended Products for ${page.title}`,
+    itemListElement: page.recommendedProducts.map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: product.name,
+      description: product.fit,
+      url: absoluteUrl(product.href),
+    })),
   };
 
   const faqJsonLd = {
@@ -93,7 +91,7 @@ export default async function SolutionDetailPage({ params }: Props) {
   return (
     <div className="bg-white min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(productListJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
 
       <section className="relative overflow-hidden bg-primary text-white">

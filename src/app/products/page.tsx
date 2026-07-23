@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { productCategories as categories, products } from "@/lib/data";
-import { productItemListJsonLd, safeJsonLd } from "@/lib/seo";
+import { productCategories as categories } from "@/lib/data";
+import { collectionItemListJsonLd, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
 
@@ -11,11 +11,15 @@ export const metadata: Metadata = {
   alternates: { canonical: "/products" },
 };
 export default function ProductsPage() {
-  const jsonLd = productItemListJsonLd({
+  const jsonLd = collectionItemListJsonLd({
     name: "VISHOME Commercial Carpet Products",
     description: "Commercial carpet tiles, hotel broadloom, and public-area carpet systems for global B2B flooring projects.",
     url: "/products",
-    items: products,
+    items: categories.map((category) => ({
+      name: category.name,
+      description: category.description,
+      url: `/products/${category.id}`,
+    })),
   });
 
   return (

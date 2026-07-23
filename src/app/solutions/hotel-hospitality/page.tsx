@@ -132,28 +132,15 @@ export default function HotelHospitalitySolutionPage() {
     ],
   };
 
-  const serviceJsonLd = {
+  const productSystemListJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Hotel & Hospitality Carpet Solution",
-    provider: {
-      "@type": "Organization",
-      name: "Vishome Global Commercial Carpet Co., Ltd.",
-      url: "https://www.vishomecarpet.com",
-    },
-    areaServed: ["North America", "Europe", "Australia", "Middle East", "Asia"],
-    serviceType: "Commercial hospitality carpet solution and supply",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Hospitality Carpet Systems",
-      itemListElement: featuredSystems.map((item) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Product",
-          name: item.name,
-        },
-      })),
-    },
+    "@type": "ItemList",
+    name: "Hospitality Carpet Systems",
+    itemListElement: featuredSystems.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+    })),
   };
 
   return (
@@ -167,7 +154,7 @@ export default function HotelHospitalitySolutionPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceJsonLd).replace(/</g, "\\u003c"),
+          __html: JSON.stringify(productSystemListJsonLd).replace(/</g, "\\u003c"),
         }}
       />
 

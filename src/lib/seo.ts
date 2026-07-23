@@ -134,30 +134,38 @@ export function productItemListJsonLd({
         "@type": "ListItem",
         position: index + 1,
         url: absoluteUrl(productPath(product.id)),
-        item: {
-          "@type": "Product",
-          name: product.name,
-          description: product.description,
-          image: absoluteUrl(product.image),
-          url: absoluteUrl(productPath(product.id)),
-          category: categoryName(product.category),
-          additionalProperty: [
-            { "@type": "PropertyValue", name: "Minimum Order Quantity", value: product.moq },
-            { "@type": "PropertyValue", name: "Availability", value: productAvailability(product.id).endsWith("PreOrder") ? "Made to Order" : "InStock" },
-          ],
-          offers: product.fobPrice
-            ? {
-                "@type": "AggregateOffer",
-                url: absoluteUrl(productPath(product.id)),
-                priceCurrency: product.fobPrice.currency,
-                lowPrice: product.fobPrice.lowPrice,
-                highPrice: product.fobPrice.highPrice,
-                availability: productAvailability(product.id),
-                itemCondition: "https://schema.org/NewCondition",
-                seller: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
-              }
-            : undefined,
-        },
+        name: product.name,
+        description: product.description,
+      })),
+    },
+  };
+}
+
+export function collectionItemListJsonLd({
+  name,
+  description,
+  url,
+  items,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  items: { name: string; description?: string; url: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name,
+    description,
+    url: absoluteUrl(url),
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        url: absoluteUrl(item.url),
+        ...(item.description ? { description: item.description } : {}),
       })),
     },
   };
