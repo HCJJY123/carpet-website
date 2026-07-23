@@ -81,8 +81,14 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                         <path d="m3 7 9 6 9-6" />
                       </svg>
                     </span>
-                    <span className="flex flex-col gap-1">
-                      <a href={`mailto:${brandInfo.email}`} className="hover:text-primary transition-colors">{brandInfo.email}</a>
+                    <span className="min-w-0 flex-1">
+                      <a
+                        href={`mailto:${brandInfo.email}`}
+                        className="inline-flex w-fit max-w-full items-center rounded-md border border-accent/30 bg-accent/10 px-4 py-3 text-base font-black text-primary shadow-sm transition-all hover:-translate-y-0.5 hover:border-accent hover:bg-accent hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent md:text-lg"
+                        aria-label={`Email the VISHOME sales team at ${brandInfo.email}`}
+                      >
+                        <span className="break-all">{brandInfo.email}</span>
+                      </a>
                     </span>
                   </p>
                 </div>

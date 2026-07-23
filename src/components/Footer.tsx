@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#102A43] text-white mt-auto">
       <div className="max-w-[1200px] mx-auto px-4 py-16 lg:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-[1fr_1fr_1fr_1.3fr] xl:gap-12">
           {/* Logo & Intro - FIXED VERSION WITH REAL LOGO */}
           <div className="col-span-1 lg:col-span-1">
             <div className="mb-8 flex items-center gap-4">
@@ -72,9 +72,15 @@ export default function Footer() {
               Technical Support
             </h3>
             <ul className="space-y-6">
-              <li className="flex flex-col gap-1">
+              <li className="flex flex-col gap-2">
                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">Email Inquiry</span>
-                <a href={`mailto:${brandInfo.email}`} className="text-sm font-bold text-gray-200 hover:text-white transition-colors">{brandInfo.email}</a>
+                <a
+                  href={`mailto:${brandInfo.email}`}
+                  className="inline-flex w-fit max-w-full items-center rounded-md border border-accent/50 bg-white/10 px-4 py-3 text-base font-black text-white shadow-md transition-all hover:-translate-y-0.5 hover:border-accent hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:text-lg"
+                  aria-label={`Email the VISHOME sales team at ${brandInfo.email}`}
+                >
+                  <span className="break-all">{brandInfo.email}</span>
+                </a>
               </li>
               <li className="flex flex-col gap-3">
                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">Chat & Project Inquiry</span>
