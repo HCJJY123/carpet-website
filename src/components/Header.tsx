@@ -203,12 +203,14 @@ export default function Header() {
               </div>
             </Link>
 
-            <div className="relative hidden xl:block" data-language-switcher>
+            <div className="relative hidden xl:block min-[1900px]:!hidden" data-language-switcher>
               <LanguageButton
                 code={currentLanguage.code}
+                name={currentLanguage.name}
                 open={languageOpen}
                 controls="desktop-language-menu"
                 onClick={toggleLanguageMenu}
+                variant="compact"
               />
               <LanguageMenuPanel
                 id="desktop-language-menu"
@@ -310,9 +312,11 @@ export default function Header() {
             <div className="relative" data-language-switcher>
               <LanguageButton
                 code={currentLanguage.code}
+                name={currentLanguage.name}
                 open={languageOpen}
                 controls="mobile-language-menu"
                 onClick={toggleLanguageMenu}
+                variant="compact"
               />
               <LanguageMenuPanel
                 id="mobile-language-menu"
@@ -341,6 +345,27 @@ export default function Header() {
             </button>
           </div>
         </div>
+      </div>
+
+      <div
+        className="absolute right-6 top-1/2 hidden -translate-y-1/2 min-[1900px]:block"
+        data-language-switcher
+      >
+        <LanguageButton
+          code={currentLanguage.code}
+          name={currentLanguage.name}
+          open={languageOpen}
+          controls="wide-language-menu"
+          onClick={toggleLanguageMenu}
+          variant="wide"
+        />
+        <LanguageMenuPanel
+          id="wide-language-menu"
+          open={languageOpen}
+          pathname={pathname}
+          onNavigate={closeMenus}
+          variant="wide"
+        />
       </div>
 
       <div
@@ -435,31 +460,61 @@ export default function Header() {
 
 function LanguageButton({
   code,
+  name,
   open,
   controls,
   onClick,
+  variant,
 }: {
   code: string;
+  name: string;
   open: boolean;
   controls: string;
   onClick: () => void;
+  variant: "compact" | "wide";
 }) {
+  const chevron = (
+    <span
+      className={`h-1.5 w-1.5 rotate-45 border-b border-r border-current transition-transform ${open ? "rotate-[225deg]" : ""}`}
+      aria-hidden="true"
+    />
+  );
+
   return (
     <button
       type="button"
       onClick={onClick}
-      className="flex h-10 min-w-10 items-center justify-center gap-1 rounded-sm border border-border bg-white px-2 text-[10px] font-black text-[#102A43] shadow-sm transition-colors hover:border-[#c8963e] hover:text-[#9a6a16]"
+      className={
+        variant === "wide"
+          ? "flex h-14 w-[196px] items-center gap-3 rounded-md border border-[#c8963e]/55 bg-white px-3 text-[#102A43] shadow-[0_8px_24px_rgba(16,42,67,0.1)] transition-all hover:-translate-y-0.5 hover:border-[#c8963e] hover:shadow-[0_12px_30px_rgba(16,42,67,0.16)]"
+          : "flex h-11 w-[58px] flex-col items-center justify-center rounded-sm border border-[#c8963e]/60 bg-white text-[#102A43] shadow-sm transition-colors hover:border-[#c8963e] hover:text-[#9a6a16]"
+      }
       aria-expanded={open}
       aria-controls={controls}
       aria-haspopup="menu"
-      aria-label={`Languages, current language ${code}`}
-      title="Languages"
+      aria-label={`Website language, current language ${name} (${code})`}
+      title="Change website language"
     >
-      {code}
-      <span
-        className={`h-1.5 w-1.5 rotate-45 border-b border-r border-current transition-transform ${open ? "rotate-[225deg]" : ""}`}
-        aria-hidden="true"
-      />
+      {variant === "wide" ? (
+        <>
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#102A43] text-[9px] font-black text-white">
+            A/文
+          </span>
+          <span className="min-w-0 flex-1 text-left">
+            <span className="block text-[8px] font-black uppercase text-[#9a6a16]">Website Language</span>
+            <span className="mt-1 block truncate text-xs font-black" dir="auto">{name} ({code})</span>
+          </span>
+          {chevron}
+        </>
+      ) : (
+        <>
+          <span className="text-[7px] font-black uppercase text-[#9a6a16]">Language</span>
+          <span className="mt-0.5 flex items-center gap-1 text-[10px] font-black">
+            {code}
+            {chevron}
+          </span>
+        </>
+      )}
     </button>
   );
 }
@@ -475,12 +530,14 @@ function LanguageMenuPanel({
   open: boolean;
   pathname: string;
   onNavigate: () => void;
-  variant: "desktop" | "mobile";
+  variant: "desktop" | "mobile" | "wide";
 }) {
   const placement =
     variant === "desktop"
       ? "absolute left-0 top-full mt-3 w-[680px]"
-      : "fixed left-4 right-4 top-16 w-auto md:top-20";
+      : variant === "wide"
+        ? "absolute right-0 top-full mt-3 w-[680px]"
+        : "fixed left-4 right-4 top-16 w-auto md:top-20";
 
   return (
     <div
