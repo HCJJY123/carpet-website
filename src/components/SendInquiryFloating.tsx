@@ -12,7 +12,7 @@ export default function SendInquiryFloating() {
   return (
     <Link
       href="/contact#quote-form"
-      className="group fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-4 z-[99] flex h-12 w-[148px] items-center gap-2 rounded-md border border-white/20 bg-[rgba(230,70,18,0.8)] px-2.5 text-white shadow-[0_10px_28px_rgba(230,70,18,0.3)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#cf3d0e] hover:shadow-[0_14px_34px_rgba(230,70,18,0.36)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e64612] focus-visible:ring-offset-2 motion-reduce:transform-none md:bottom-36 md:left-auto md:right-8 md:h-14 md:w-[210px] md:gap-3 md:px-3"
+      className="group fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-4 z-[99] flex h-12 w-[148px] items-center gap-2 rounded-md border border-white/20 bg-[rgba(230,70,18,0.75)] px-2.5 text-white shadow-[0_10px_28px_rgba(230,70,18,0.3)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#cf3d0e] hover:shadow-[0_14px_34px_rgba(230,70,18,0.36)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#e64612] focus-visible:ring-offset-2 motion-reduce:transform-none md:bottom-36 md:left-auto md:right-8 md:h-14 md:w-[210px] md:gap-3 md:px-3"
       aria-label="Send inquiry and submit project quote form"
     >
       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#e64612] shadow-[inset_0_0_0_1px_rgba(230,70,18,0.08)] md:h-9 md:w-9">
