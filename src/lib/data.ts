@@ -1151,7 +1151,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Luxury Residential Carpet Concept - Mumbai High-Rise Reference",
     subtitle: "A multi-unit luxury residential carpet program using individualized brand and crest integration for premium presentation.",
     category: "wall-to-wall",
-    image: "/images/case-resort.webp",
+    image: "/images/projects/case-7/main-mumbai-luxury-residential-carpet.webp",
     description: "A 600 m² premium residential carpet package across six units, using tailored decorative identity to enhance exclusivity.",
     projectSpecs: [
       { label: "Location", value: "Mumbai, India" },
@@ -1173,7 +1173,10 @@ export const caseStudies: CaseStudy[] = [
           "Decorative identity was introduced through controlled motif work and crest-related detailing that could signal exclusivity without overwhelming the interior scheme.",
           "This allowed the carpet to reinforce the property's premium narrative while still giving each residence a subtle sense of distinction.",
           "The project treated the floor as part of the interior brand language rather than as background material only."
-        ]
+        ],
+        image: "/images/projects/case-7/detail-custom-crest-carpet.webp",
+        imageAlt: "Close-up of custom crest border carpet in a Mumbai luxury high-rise residence",
+        imageCaption: "Custom border and crest detailing used to reinforce the residential identity concept."
       },
       {
         title: "Balancing Presentation and Practicality",
