@@ -16,6 +16,60 @@ type NavItem = {
   children?: NavChild[];
 };
 
+type LanguageGroup = {
+  code: string;
+  name: string;
+  links: NavChild[];
+};
+
+const languageGroups: LanguageGroup[] = [
+  {
+    code: "EN",
+    name: "English",
+    links: [{ href: "/", label: "Main website" }],
+  },
+  {
+    code: "FR",
+    name: "Français",
+    links: [
+      { href: "/fr/moquette-hotel-sur-mesure", label: "Moquette d'hôtel" },
+      { href: "/fr/dalles-moquette-commerciales", label: "Dalles de moquette" },
+      { href: "/fr/tapis-recuperation-or", label: "Tapis de récupération d'or" },
+    ],
+  },
+  {
+    code: "ES",
+    name: "Español",
+    links: [
+      { href: "/es/alfombra-mineria-oro", label: "Alfombra para minería de oro" },
+      { href: "/es/losetas-alfombra-comerciales", label: "Losetas de alfombra comerciales" },
+    ],
+  },
+  {
+    code: "AR",
+    name: "العربية",
+    links: [
+      { href: "/ar/sajad-fanadi-mukhasas", label: "سجاد الفنادق المخصص" },
+      { href: "/ar/balat-sajad-tijari", label: "بلاط السجاد التجاري" },
+    ],
+  },
+  {
+    code: "DE",
+    name: "Deutsch",
+    links: [{ href: "/de/hotel-teppichboden", label: "Hotel-Teppichboden" }],
+  },
+  {
+    code: "PT",
+    name: "Português",
+    links: [{ href: "/pt/tapetes-personalizados-hotel", label: "Tapetes personalizados para hotel" }],
+  },
+  {
+    code: "RU",
+    name: "Русский",
+    links: [{ href: "/ru/hotelnyy-kovrolin", label: "Гостиничный ковролин" }],
+  },
+];
+
 const navLinks: NavItem[] = [
   { href: "/", label: "Home" },
   {
@@ -87,6 +141,7 @@ const sectionsWithChildren = navLinks.filter((link) => link.children?.length).ma
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [languageOpen, setLanguageOpen] = useState(false);
   const [openSections, setOpenSections] = useState<Set<string>>(() => new Set(sectionsWithChildren));
   const pathname = usePathname();
 
@@ -95,6 +150,24 @@ export default function Header() {
     const timer = window.setTimeout(() => setOpenSections(new Set(sectionsWithChildren)), 0);
     return () => window.clearTimeout(timer);
   }, [menuOpen]);
+
+  useEffect(() => {
+    const closeLanguageMenu = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest("[data-language-switcher]")) setLanguageOpen(false);
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setLanguageOpen(false);
+    };
+
+    document.addEventListener("mousedown", closeLanguageMenu);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("mousedown", closeLanguageMenu);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, []);
+
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header, {
     placement: "header",
     intent: "project_support",
@@ -102,20 +175,50 @@ export default function Header() {
   });
   const isActivePath = (href: string) => (href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`));
   const isActiveNav = (link: NavItem) => isActivePath(link.href) || Boolean(link.children?.some((child) => isActivePath(child.href)));
+  const routeLanguageCode = pathname.split("/")[1]?.toUpperCase();
+  const currentLanguage = languageGroups.find((group) => group.code === routeLanguageCode) || languageGroups[0];
+
+  const toggleLanguageMenu = () => {
+    setLanguageOpen((open) => !open);
+    setMenuOpen(false);
+  };
+
+  const closeMenus = () => {
+    setLanguageOpen(false);
+    setMenuOpen(false);
+  };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border shadow-sm">
+    <header className={`sticky top-0 bg-white/95 backdrop-blur border-b border-border shadow-sm ${languageOpen ? "z-[110]" : "z-50"}`}>
       <div className="mx-auto max-w-[1480px] px-4 sm:px-6 xl:px-6">
         <div className="grid h-16 grid-cols-[1fr_auto] items-center md:h-20 xl:h-24 xl:grid-cols-[310px_minmax(620px,1fr)_390px]">
-          <Link href="/" className="flex min-w-0 items-center gap-2 xl:-translate-x-8 2xl:-translate-x-12" onClick={() => setMenuOpen(false)}>
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#102A43] md:h-10 md:w-10">
-              <span className="text-lg font-black italic text-white">V</span>
-            </span>
-            <div className="flex min-w-0 flex-col">
-              <span className="truncate text-lg font-black leading-none tracking-tighter text-[#102A43] md:text-xl">VISHOME</span>
-              <span className="mt-1 truncate text-[7px] font-bold uppercase leading-none tracking-[0.24em] text-[#627D98] md:text-[8px] md:tracking-[0.3em]">Global Commercial Carpet</span>
+          <div className="flex min-w-0 items-center gap-2 xl:-translate-x-8 2xl:-translate-x-12">
+            <Link href="/" className="flex min-w-0 items-center gap-2" onClick={closeMenus}>
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#102A43] md:h-10 md:w-10">
+                <span className="text-lg font-black italic text-white">V</span>
+              </span>
+              <div className="flex min-w-0 flex-col">
+                <span className="truncate text-lg font-black leading-none tracking-tighter text-[#102A43] md:text-xl">VISHOME</span>
+                <span className="mt-1 truncate text-[7px] font-bold uppercase leading-none tracking-[0.24em] text-[#627D98] md:text-[8px] md:tracking-[0.3em]">Global Commercial Carpet</span>
+              </div>
+            </Link>
+
+            <div className="relative hidden xl:block" data-language-switcher>
+              <LanguageButton
+                code={currentLanguage.code}
+                open={languageOpen}
+                controls="desktop-language-menu"
+                onClick={toggleLanguageMenu}
+              />
+              <LanguageMenuPanel
+                id="desktop-language-menu"
+                open={languageOpen}
+                pathname={pathname}
+                onNavigate={closeMenus}
+                variant="desktop"
+              />
             </div>
-          </Link>
+          </div>
 
           <nav className="hidden -translate-x-16 items-center justify-center xl:flex 2xl:-translate-x-14" aria-label="Primary navigation">
             <div className="flex items-center gap-1.5 rounded-full border border-border/80 bg-white/85 px-2 py-1.5 shadow-[0_10px_30px_rgba(16,42,67,0.06)] backdrop-blur">
@@ -204,9 +307,27 @@ export default function Header() {
             >
               <WhatsAppIcon className="h-5 w-5" />
             </a>
+            <div className="relative" data-language-switcher>
+              <LanguageButton
+                code={currentLanguage.code}
+                open={languageOpen}
+                controls="mobile-language-menu"
+                onClick={toggleLanguageMenu}
+              />
+              <LanguageMenuPanel
+                id="mobile-language-menu"
+                open={languageOpen}
+                pathname={pathname}
+                onNavigate={closeMenus}
+                variant="mobile"
+              />
+            </div>
             <button
               type="button"
-              onClick={() => setMenuOpen((open) => !open)}
+              onClick={() => {
+                setLanguageOpen(false);
+                setMenuOpen((open) => !open);
+              }}
               className="flex h-10 w-10 items-center justify-center rounded-sm border border-border bg-white text-[#102A43] shadow-sm"
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
@@ -309,6 +430,103 @@ export default function Header() {
         </nav>
       </div>
     </header>
+  );
+}
+
+function LanguageButton({
+  code,
+  open,
+  controls,
+  onClick,
+}: {
+  code: string;
+  open: boolean;
+  controls: string;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="flex h-10 min-w-10 items-center justify-center gap-1 rounded-sm border border-border bg-white px-2 text-[10px] font-black text-[#102A43] shadow-sm transition-colors hover:border-[#c8963e] hover:text-[#9a6a16]"
+      aria-expanded={open}
+      aria-controls={controls}
+      aria-haspopup="menu"
+      aria-label={`Languages, current language ${code}`}
+      title="Languages"
+    >
+      {code}
+      <span
+        className={`h-1.5 w-1.5 rotate-45 border-b border-r border-current transition-transform ${open ? "rotate-[225deg]" : ""}`}
+        aria-hidden="true"
+      />
+    </button>
+  );
+}
+
+function LanguageMenuPanel({
+  id,
+  open,
+  pathname,
+  onNavigate,
+  variant,
+}: {
+  id: string;
+  open: boolean;
+  pathname: string;
+  onNavigate: () => void;
+  variant: "desktop" | "mobile";
+}) {
+  const placement =
+    variant === "desktop"
+      ? "absolute left-0 top-full mt-3 w-[680px]"
+      : "fixed left-4 right-4 top-16 w-auto md:top-20";
+
+  return (
+    <div
+      id={id}
+      role="menu"
+      aria-hidden={!open}
+      hidden={!open}
+      className={`${placement} z-[90] max-h-[calc(100vh-6rem)] overflow-y-auto rounded-md border border-border bg-white p-2 shadow-[0_24px_60px_rgba(16,42,67,0.24)] transition-all duration-200 ${
+        open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-1 opacity-0"
+      }`}
+    >
+      <div className="grid sm:grid-cols-2">
+        {languageGroups.map((group) => {
+          const activeGroup = group.code === (pathname.split("/")[1]?.toUpperCase() || "EN");
+
+          return (
+            <section key={group.code} className="border-b border-border/80 px-4 py-3 sm:odd:border-r">
+              <div className="flex items-baseline gap-2">
+                <span className={`text-[10px] font-black ${activeGroup ? "text-[#d9480f]" : "text-[#c8963e]"}`}>{group.code}</span>
+                <h2 className="text-sm font-black text-[#102A43]" dir="auto">{group.name}</h2>
+              </div>
+              <div className="mt-2 grid gap-1">
+                {group.links.map((link) => {
+                  const active = pathname === link.href;
+
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={onNavigate}
+                      className={`rounded-sm px-2 py-2 text-xs font-semibold leading-5 transition-colors ${
+                        active ? "bg-[#102A43] text-white" : "text-[#627D98] hover:bg-surface hover:text-[#102A43]"
+                      }`}
+                      dir="auto"
+                      role="menuitem"
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
+              </div>
+            </section>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
