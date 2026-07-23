@@ -420,10 +420,10 @@ export const products: Product[] = [
   },
   {
     id: "gold-mining-carpet-mat",
-    name: "Gold Mining Carpet Mat for Sluice Box",
+    name: "Sluice Box Matting & Gold Mining Carpet",
     category: "public-area",
-    description: "PVC miners moss gold mining carpet mat for sluice boxes, river gold washing, placer gold recovery, and alluvial gold mining equipment.",
-    longDescription: "Vishomecarpet Gold Mining Carpet Mat for Sluice Box is a PVC miners moss and ribbed gold recovery mat designed for placer gold recovery, river gold mining, gold panning, sluice box matting, and gold washing equipment. The mat surface helps trap fine gold particles while allowing sand, mud, and water to pass through during washing. It is supplied for mining equipment manufacturers, gold washing plants, distributors, and field users who need roll-format mining carpet with custom thickness, width, color, and packaging options.",
+    description: "PVC miners moss sluice mat and sluice box matting rolls for gold recovery, placer mining, dredges, trommels, concentrators, and wash plants.",
+    longDescription: "Vishomecarpet Sluice Box Matting and Gold Mining Carpet is a PVC/vinyl coil miners moss mat for placer recovery, prospecting, gold washing, dredges, trommels, concentrators, and separator systems. The ribbed surface helps retain fine particles while allowing water, sand, and mud to continue through the channel. Factory supply includes 1m x 15m rolls, 10mm, 15mm, and 20mm options, samples, custom dimensions, OEM packaging, and wholesale support for equipment manufacturers and distributors.",
     image: "/images/products/gold-mining-carpet-mat/01-hero-45-degree.webp",
     imageAlt: "Vishomecarpet gold mining carpet mat PVC miners moss for sluice box gold recovery",
     gallery: [

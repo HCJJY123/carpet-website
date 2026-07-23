@@ -30,41 +30,56 @@ const mainImages = [
 const detailImages = [
   {
     src: "/images/products/gold-mining-carpet-mat/05-product-overview-detail.webp",
-    title: "Gold Recovery Mat Overview",
+    title: "Sluice Box Matting and Gold Recovery Carpet",
     alt: "Gold mining mat moss product overview for sluice box matting and gold recovery",
+    text: "PVC miners moss works as sluice box matting, gold sluice box carpet, gold sluice box mat, gold recovery carpet, and gold recovery sluice mat by creating a dense capture surface for fine particles during water flow.",
   },
   {
     src: "/images/products/gold-mining-carpet-mat/06-layer-structure-drainage-groove.webp",
-    title: "Layer Structure and Drainage Groove",
+    title: "Riffle Mat and Drainage Structure",
     alt: "Gold mining rubber mat layer structure with drainage groove for sand discharge",
+    text: "Buyers comparing a riffle mat, rubber sluice mat, gold sluice rubber mat, or gold recovery rubber mat should confirm the required profile and backing. This range uses PVC/vinyl coil structure with custom rubber backing available by project.",
   },
   {
     src: "/images/products/gold-mining-carpet-mat/07-oem-odm-custom-size-logo-package.webp",
-    title: "OEM and ODM Custom Options",
+    title: "Manufacturer, Supplier and Wholesale Support",
     alt: "OEM ODM custom gold mining carpet mat size logo color and package options",
+    text: "Gold mining carpet factory support covers wholesale orders, private labels, custom rolls, packaging, gold mining carpet samples, and distributor supply. Send the quantity and destination for an exact quotation.",
   },
   {
     src: "/images/products/gold-mining-carpet-mat/08-pvc-ribbed-wear-resistant-anti-slip.webp",
-    title: "PVC Ribbed Miners Moss Texture",
+    title: "PVC Coil and Miners Moss Matting",
     alt: "PVC miners moss gold washing mat wear resistant anti slip ribbed texture",
+    text: "The vinyl sluice mat surface is also sourced as PVC coil mat gold mining carpet, miners moss matting, gold mining grass carpet, or loofah mat gold mining material. Texture and thickness are confirmed before bulk production.",
   },
   {
     src: "/images/products/gold-mining-carpet-mat/09-wash-cleaning-sand-discharge.webp",
-    title: "Wash Cleaning and Sand Discharge",
+    title: "Gold Wash Mat Cleaning and Sand Discharge",
     alt: "Gold washing carpet cleaning and sand discharge performance for mining use",
+    text: "The open structure supports rinsing and sediment discharge for gold wash mat, gold washing mat, gold trap mat, gold trap carpet, gold mining trap mat, gold catching mat, mining recovery carpet, and gold recovery equipment mat applications.",
   },
   {
     src: "/images/products/gold-mining-carpet-mat/10-gold-washing-mining-site-application.webp",
-    title: "River Gold Mining Application",
+    title: "Placer, Dredge and Trommel Applications",
     alt: "Gold mining carpet applied in river gold washing and placer gold recovery site",
+    text: "Suitable specifications can be selected for alluvial gold mining carpet, placer mining carpet, placer mining mat, placer gold mat, gold dredge mat, trommel matting, gold concentrator mat, gold separator mat, and gold separator carpet systems.",
   },
 ];
 
 const descriptionParagraphs = [
-  "Vishomecarpet Gold Mining Carpet Mat for Sluice Box is designed for gold panning, river gold mining, placer gold recovery, and alluvial gold washing equipment. The PVC ribbed miners moss surface helps catch fine gold particles while water flow carries away sand and mud.",
-  "The product is supplied as roll-format mining carpet for sluice boxes, gold washing machines, recovery trays, and field washing systems. Standard options include 1m x 15m rolls with 10mm, 15mm, and 20mm thickness choices, while color, width, package, and logo service can be customized for distributors and equipment manufacturers.",
-  "For buyers comparing gold mining mat moss, gold recovery mat, miners moss, gold mining carpet, and sluice box matting, this page provides factory-direct specifications, MOQ, lead time, pricing guidance, and fast quote channels from Vishomecarpet.",
+  "Vishomecarpet supplies PVC miners moss sluice matting for gold sluice boxes, placer recovery, prospecting, and alluvial washing systems. The ribbed coil surface works as gold sluice matting, a gold mining sluice mat, gold prospecting mat, gold sluice carpet, gold recovery carpet, gold carpet for mining, and carpet for gold mining by helping retain fine particles while sand, mud, and water continue through the channel.",
+  "The product is supplied as a gold mining carpet roll for sluice box carpet, gold wash carpet, mining sluice carpet, mining sluice mat, recovery trays, dredges, trommels, and separator systems. Standard options include a 1m x 15m roll and 10mm, 15mm, or 20mm thickness; color, width, backing, roll length, logo, and packaging can be customized after technical confirmation.",
+  "As a China-based gold mining carpet manufacturer, gold mining mat manufacturer and supplier, and sluice mat supplier, Vishomecarpet supports equipment manufacturers, distributors, and gold mining equipment suppliers with bulk gold mining carpet, wholesale pricing, samples, and OEM packing. Send the application, size, quantity, and destination to compare gold mining carpet price per roll; per-meter supply depends on cut length and MOQ.",
 ];
+
+const quoteRequirements = [
+  ["Equipment", "Sluice box, dredge, trommel, concentrator, separator, or wash plant"],
+  ["Mat Profile", "PVC coil, miners moss, riffle profile, or custom rubber-backed option"],
+  ["Size", "Width, roll length, thickness, channel dimensions, and cutting requirement"],
+  ["Quantity", "Sample request, trial order, wholesale volume, and repeat-order forecast"],
+  ["Material Flow", "Water flow, sediment size, feed rate, and target recovery stage"],
+  ["Delivery", "Destination country, required date, packaging, logo, and trade terms"],
+] as const;
 
 const faqs = [
   {
@@ -73,11 +88,11 @@ const faqs = [
   },
   {
     q: "Is this the same as miners moss or sluice box matting?",
-    a: "Yes. Buyers also search this product as PVC miners moss, gold mining mat moss, gold sluice mat, gold recovery mat, gold washing carpet, and mining carpet.",
+    a: "These are common buyer terms for related capture mat products. This product is a PVC/vinyl coil miners moss mat used as sluice matting, sluice box mat, gold sluice box carpet, gold recovery mat, mining carpet, and gold capture matting. Confirm the required profile against your sluice or equipment drawing.",
   },
   {
     q: "What sizes and thicknesses are available?",
-    a: "Common roll size is 1m x 15m, with 10mm, 15mm, and 20mm thickness options. Width, roll length, color, and backing can be customized for project orders.",
+    a: "Common roll size is 1m x 15m, so the standard gold mining carpet 1m width is easy to specify for many channels. Available thicknesses include 10mm, 15mm, and 20mm. A 10mm sluice mat is a standard option. Requests for 18mm gold carpet, 3D gold mining mat, custom riffle matting, width, color, or backing require separate feasibility confirmation.",
   },
   {
     q: "Can Vishomecarpet provide OEM or ODM service?",
@@ -87,26 +102,41 @@ const faqs = [
     q: "What is the MOQ and lead time?",
     a: "Typical MOQ is 100 rolls, with normal production lead time around 15-25 days after order confirmation and packaging details.",
   },
+  {
+    q: "How do I request gold mining carpet price, samples, or per-meter supply?",
+    a: "Send the mat profile, width, thickness, roll length, quantity, destination, and equipment application. We will quote the gold mining carpet price by roll and confirm sample availability. Gold mining carpet per meter or cut-length supply depends on the requested size and MOQ.",
+  },
+  {
+    q: "Do you supply complete gold sluice equipment?",
+    a: "This page offers the sluice mat and mining carpet component, not a complete machine. Gold sluice equipment manufacturers and gold mining equipment suppliers can source the mat for integration into sluice boxes, dredges, trommels, concentrators, and recovery systems.",
+  },
 ];
 
 export const metadata: Metadata = product
   ? {
-      title: "Gold Mining Carpet Mat | PVC Miners Moss Sluice Box Matting",
+      title: "Sluice Box Matting & Gold Mining Carpet | VISHOME",
       description:
-        "Vishomecarpet gold mining carpet mat for sluice box, gold panning, miners moss, placer gold recovery, river gold washing, and gold mining equipment.",
+        "PVC miners moss sluice mat and sluice box matting for gold recovery. Compare 10/15/20mm carpet rolls, wholesale price, samples and OEM supply.",
       keywords: [
-        "gold mining carpet mat",
-        "gold mining mat moss",
-        "gold panning mat",
+        "sluice mat",
+        "sluice matting",
         "sluice box matting",
+        "sluice box mat",
+        "gold sluice mat",
+        "gold sluice carpet",
+        "gold mining carpet",
+        "gold mining carpet mat",
+        "gold recovery carpet",
         "gold recovery mat",
-        "miners moss",
-        "PVC miners moss",
-        "gold washing carpet",
-        "gold mining sluice mat",
-        "gold mining rubber mat",
-        "placer gold recovery matting",
-        "river gold mining mat",
+        "miners moss matting",
+        "rubber sluice mat",
+        "riffle mat",
+        "gold dredge mat",
+        "gold mining carpet supplier",
+        "gold mining carpet manufacturer",
+        "gold mining carpet wholesale",
+        "sluice mat supplier",
+        "sluice matting wholesale",
         "Vishomecarpet",
       ],
       alternates: {
@@ -118,16 +148,16 @@ export const metadata: Metadata = product
         },
       },
       openGraph: {
-        title: "Gold Mining Carpet Mat for Sluice Box | Vishomecarpet",
-        description: product.description,
+        title: "Sluice Box Matting & Gold Mining Carpet | VISHOME",
+        description: "PVC miners moss sluice mat and sluice box matting for gold recovery. Compare 10/15/20mm rolls, wholesale price, samples, and OEM supply.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
         images: [{ url: absoluteUrl(product.image), alt: product.imageAlt || product.name }],
       },
       twitter: {
         card: "summary_large_image",
-        title: "Gold Mining Carpet Mat for Sluice Box | Vishomecarpet",
-        description: product.description,
+        title: "Sluice Box Matting & Gold Mining Carpet | VISHOME",
+        description: "PVC miners moss sluice mat and sluice box matting for gold recovery. Compare 10/15/20mm rolls, wholesale price, samples, and OEM supply.",
         images: [absoluteUrl(product.image)],
       },
     }
@@ -180,9 +210,9 @@ export default function GoldMiningCarpetMatPage() {
             </div>
 
             <div className="flex flex-col justify-center">
-              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Vishomecarpet Gold Recovery Matting</p>
+              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Sluice Mat Manufacturer & Wholesale Supplier</p>
               <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
-                Gold Mining Carpet Mat for Sluice Box
+                Sluice Box Matting & Gold Mining Carpet
               </h1>
               <p className="product-summary mb-8 text-lg leading-relaxed text-muted">{p.description}</p>
               <div className="mb-8 grid gap-3 sm:grid-cols-2">
@@ -225,9 +255,9 @@ export default function GoldMiningCarpetMatPage() {
       <section className="section-padding bg-primary text-white">
         <div className="container-fox grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Mining Carpet and Miners Moss</p>
+            <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Sluice Matting and Miners Moss</p>
             <h2 className="mb-6 text-3xl font-black uppercase leading-tight md:text-5xl">
-              Built for Gold Washing, Sluice Boxes and Placer Recovery
+              Gold Recovery Carpet for Sluice, Dredge and Trommel Systems
             </h2>
             <div className="space-y-5 text-white/72">
               {descriptionParagraphs.map((paragraph) => (
@@ -246,8 +276,8 @@ export default function GoldMiningCarpetMatPage() {
       <section className="section-padding">
         <div className="container-fox">
           <div className="mb-12 text-center">
-            <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-accent">Product Detail Images</p>
-            <h2 className="text-3xl font-black uppercase text-primary md:text-5xl">Structure, Texture, Cleaning and Application</h2>
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-accent">Six Product Details</p>
+            <h2 className="text-3xl font-black uppercase text-primary md:text-5xl">Sluice Mat Structure, Supply and Applications</h2>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {detailImages.map((item) => (
@@ -256,11 +286,34 @@ export default function GoldMiningCarpetMatPage() {
                   <ProductImage src={item.src} alt={item.alt} className="h-full w-full" fit="contain" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-black uppercase text-primary">{item.title}</h3>
+                  <h3 className="mb-3 text-lg font-black uppercase text-primary">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted">{item.text}</p>
                 </div>
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section-padding border-y border-border bg-surface">
+        <div className="container-fox grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Factory Quote Checklist</p>
+            <h2 className="mb-6 text-3xl font-black uppercase text-primary md:text-5xl">Gold Mining Carpet Price, Samples & Wholesale Orders</h2>
+            <p className="leading-8 text-muted">Gold mining mat price depends on profile, material, thickness, width, roll length, quantity, packaging, and destination. Provide these six details for an accurate sluice matting wholesale quotation and product recommendation.</p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link href="/contact?product=Gold%20Mining%20Carpet%20Mat#quote-form" className="btn-fox-orange">Request Wholesale Quote</Link>
+              <Link href="/request-sample-box" className="inline-flex min-h-12 items-center justify-center border border-primary px-7 py-3 text-xs font-black uppercase tracking-widest text-primary transition-colors hover:bg-primary hover:text-white">Request Samples</Link>
+            </div>
+          </div>
+          <dl className="grid gap-px border border-border bg-border sm:grid-cols-2">
+            {quoteRequirements.map(([term, detail]) => (
+              <div key={term} className="bg-white p-6">
+                <dt className="mb-2 text-xs font-black uppercase text-primary">{term}</dt>
+                <dd className="text-sm leading-relaxed text-muted">{detail}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
@@ -284,7 +337,7 @@ export default function GoldMiningCarpetMatPage() {
 
       <section className="section-padding">
         <div className="container-fox max-w-5xl">
-          <h2 className="mb-10 text-center text-3xl font-black uppercase text-primary md:text-5xl">FAQ</h2>
+          <h2 className="mb-10 text-center text-3xl font-black uppercase text-primary md:text-5xl">Sluice Mat & Gold Mining Carpet FAQ</h2>
           <div className="space-y-5">
             {faqs.map((item) => (
               <div key={item.q} className="rounded-xl border border-border bg-white p-6 shadow-sm">
