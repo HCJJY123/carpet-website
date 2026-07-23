@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { products } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
-import { absoluteUrl, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
+import { absoluteUrl, categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 const categoryPath = "/products/carpet-tiles";
 
@@ -95,6 +95,7 @@ export default function CategoryPage() {
     url: categoryPath,
     items: categoryProducts,
   });
+  const breadcrumbJsonLd = categoryBreadcrumbJsonLd(categoryId);
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -108,6 +109,7 @@ export default function CategoryPage() {
   return (
     <div className="bg-white min-h-screen font-sans">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
       <section className="bg-[#102A43] py-20 text-center md:py-24">
         <div className="container-fox">

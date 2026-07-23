@@ -111,6 +111,18 @@ export function productBreadcrumbJsonLd(product: Product) {
   };
 }
 
+export function categoryBreadcrumbJsonLd(categoryId: Product["category"]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Products", item: absoluteUrl("/products") },
+      { "@type": "ListItem", position: 3, name: categoryName(categoryId), item: absoluteUrl(categoryPath(categoryId)) },
+    ],
+  };
+}
+
 export function productItemListJsonLd({
   name,
   description,
