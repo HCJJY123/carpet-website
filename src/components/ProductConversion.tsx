@@ -1,15 +1,89 @@
 import Link from "next/link";
-import { brandInfo } from "@/lib/data";
+import ProductImage from "@/components/ProductImage";
+import { blogPosts } from "@/lib/blog-data";
+import { brandInfo, products } from "@/lib/data";
+import { productPath } from "@/lib/seo";
 import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
 
 type ConversionProduct = {
+  id?: string;
   name: string;
+  category?: "carpet-tiles" | "wall-to-wall" | "public-area";
+  image?: string;
+  imageAlt?: string;
   moq?: string;
   leadTime?: string;
   technicalSpecs?: {
     fireRating?: string;
   };
 };
+
+const guideSlugs = {
+  "carpet-tiles": [
+    "commercial-space-carpet-tiles-maintenance-cost-guide",
+    "carpet-tile-specifications-high-traffic-durability-guide",
+  ],
+  "wall-to-wall": [
+    "axminster-vs-wilton-vs-tufted-hospitality-guide",
+    "carpet-printing-technology-design-to-installation-guide",
+  ],
+  "public-area": [
+    "climate-control-carpet-installation-stability-guide",
+    "hidden-cost-of-cheap-carpets-hospitality-roi-guide",
+  ],
+} as const;
+
+function RelatedProductContent({ product }: { product: ConversionProduct }) {
+  const current = product.id
+    ? products.find((item) => item.id === product.id)
+    : products.find((item) => item.name === product.name);
+
+  if (!current) return null;
+
+  const relatedProducts = products
+    .filter((item) => item.category === current.category && item.id !== current.id)
+    .slice(0, 3);
+  const guides = guideSlugs[current.category]
+    .map((slug) => blogPosts.find((post) => post.slug === slug))
+    .filter((post): post is NonNullable<typeof post> => Boolean(post));
+
+  return (
+    <section className="section-padding bg-white">
+      <div className="container-fox">
+        <div className="mb-10 max-w-3xl">
+          <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-accent">Continue Your Specification</p>
+          <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-5xl">Related Products & Technical Guides</h2>
+        </div>
+        <div className="grid gap-10 lg:grid-cols-[1.5fr_0.8fr]">
+          <div>
+            <h3 className="mb-5 text-sm font-black uppercase tracking-[0.16em] text-primary">Related Products</h3>
+            <div className="grid gap-5 sm:grid-cols-3">
+              {relatedProducts.map((item) => (
+                <Link key={item.id} href={productPath(item.id)} className="group border border-border bg-white p-4 transition-all hover:border-accent hover:shadow-lg">
+                  <div className="mb-4 aspect-square overflow-hidden bg-surface">
+                    <ProductImage src={item.image} alt={item.imageAlt || item.name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <p className="text-sm font-black uppercase leading-snug text-primary group-hover:text-accent">{item.name}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="mb-5 text-sm font-black uppercase tracking-[0.16em] text-primary">Technical Guides</h3>
+            <div className="space-y-4">
+              {guides.map((post) => (
+                <Link key={post.slug} href={`/blog/${post.slug}`} className="block border border-border bg-surface p-5 transition-all hover:border-accent hover:bg-white">
+                  <p className="mb-2 text-[10px] font-black uppercase tracking-[0.16em] text-accent">{post.category}</p>
+                  <p className="text-sm font-black leading-snug text-primary">{post.title}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function productMessage(product: ConversionProduct, action: string) {
   return `Hello, I am interested in ${product.name} for a project. ${action}. Please send me price, sample options, MOQ, lead time, and technical data sheet.`;
@@ -157,7 +231,9 @@ export function BuyerReasons({ product }: { product?: ConversionProduct } = {}) 
   ];
 
   return (
-    <section className="section-padding border-y border-border bg-surface">
+    <>
+      {product ? <RelatedProductContent product={product} /> : null}
+      <section className="section-padding border-y border-border bg-surface">
       <div className="container-fox">
         <div className="mb-10 max-w-3xl">
           <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-accent">Why buyers choose Vishomecarpet</p>
@@ -202,6 +278,7 @@ export function BuyerReasons({ product }: { product?: ConversionProduct } = {}) 
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }

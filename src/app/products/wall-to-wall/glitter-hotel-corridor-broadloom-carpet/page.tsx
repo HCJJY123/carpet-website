@@ -83,16 +83,6 @@ const relatedLinks = [
 export const metadata: Metadata = {
   title: "Hotel Corridor Carpet | Patterned Broadloom | VISHOME",
   description: "Patterned hotel corridor and hallway carpet in blue and gold. Custom 4m wall-to-wall broadloom for lobbies and high-traffic hospitality projects.",
-  keywords: [
-    "hotel corridor carpet",
-    "corridor carpet",
-    "hotel hallway carpet",
-    "carpet for corridor",
-    "patterned broadloom carpet",
-    "commercial carpet roll",
-    "stain resistant carpet",
-    "glitter hotel carpet"
-  ],
   alternates: { canonical: canonicalPath },
   openGraph: {
     title: "Hotel Corridor Carpet | Patterned Broadloom | VISHOME",
@@ -314,7 +304,7 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
-      <BuyerReasons />
+      <BuyerReasons product={product} />
 
       <section className="py-24">
         <div className="container-fox">

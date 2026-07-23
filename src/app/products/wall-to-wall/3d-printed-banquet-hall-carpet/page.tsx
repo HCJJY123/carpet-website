@@ -57,16 +57,6 @@ const relatedLinks = [
 export const metadata: Metadata = {
   title: "Banquet Hall Carpet | Custom Hotel Broadloom | VISHOME",
   description: "Custom banquet hall and ballroom carpet for hotel events, conference rooms and banquet spaces. Printed 4m commercial broadloom, MOQ 200 SQM.",
-  keywords: [
-    "banquet hall carpet",
-    "banquet room carpet",
-    "banquet carpet",
-    "ballroom carpet",
-    "hall carpet",
-    "conference room carpet",
-    "event carpet",
-    "commercial broadloom carpet"
-  ],
   alternates: { canonical: canonicalPath },
   openGraph: {
     title: "Banquet Hall Carpet | Custom Hotel Broadloom | VISHOME",
@@ -234,7 +224,7 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
-      <BuyerReasons />
+      <BuyerReasons product={product} />
 
       <section className="pb-24">
         <div className="container-fox">

@@ -47,16 +47,6 @@ const faqs = [
 export const metadata: Metadata = {
   title: "Custom Printed Carpet | Floral Hotel Broadloom | VISHOME",
   description: "Custom floral printed carpet for hotel lobbies, corridors, guestrooms, restaurants and offices. Patterned wall-to-wall broadloom, MOQ 100 SQM.",
-  keywords: [
-    "custom printed carpet",
-    "printed carpet",
-    "patterned wall to wall carpet",
-    "patterned broadloom carpet",
-    "hotel lobby carpet",
-    "restaurant carpet",
-    "showroom carpet",
-    "office carpet roll"
-  ],
   alternates: { canonical: absoluteUrl(path) },
   robots: { index: true, follow: true },
   openGraph: {
@@ -154,7 +144,7 @@ export default function CustomFloralPrintedHotelCarpetPage() {
 
       <section className="section-padding bg-surface"><div className="container-fox"><h2 className="mb-10 text-3xl font-black uppercase md:text-5xl">Frequently Asked Questions</h2><div className="grid gap-5 lg:grid-cols-2">{faqs.map(([question, answer]) => <details key={question} className="border border-border bg-white p-6"><summary className="cursor-pointer font-black">{question}</summary><p className="mt-4 leading-relaxed text-muted">{answer}</p></details>)}</div></div></section>
 
-      <section className="section-padding"><div className="container-fox"><h2 className="mb-8 text-3xl font-black uppercase">Related Products and Resources</h2><div className="grid gap-4 md:grid-cols-2">{[["Wall-to-Wall Carpets", "/products/wall-to-wall"], ["3D HD Printed Nylon Hotel Carpet", "/products/wall-to-wall/3d-printed-hotel-carpet"], ["Custom 3D Printed Banquet Hall Carpet", "/products/wall-to-wall/3d-printed-banquet-hall-carpet"], ["Carpet Printing Technology Guide", "/blog/carpet-printing-technology-design-to-installation-guide"]].map(([label, href]) => <Link key={href} href={href} className="border border-border p-6 font-black uppercase transition-colors hover:border-accent hover:text-accent">{label} <span aria-hidden="true">→</span></Link>)}</div><div className="mt-12"><InquiryActions /></div><p className="mt-6 text-center text-sm text-muted">Include your country, total area, application, material preference, pattern reference and target delivery date.</p></div></section>
+      <section className="section-padding"><div className="container-fox"><h2 className="mb-8 text-3xl font-black uppercase">Related Products and Resources</h2><div className="grid gap-4 md:grid-cols-2">{[["Wall-to-Wall Carpets", "/products/wall-to-wall"], ["3D HD Printed Nylon Hotel Carpet", "/products/wall-to-wall/3d-printed-hotel-carpet"], ["Custom 3D Printed Banquet Hall Carpet", "/products/wall-to-wall/3d-printed-banquet-hall-carpet"], ["Custom Luxury Hotel Room Carpet", "/products/wall-to-wall/custom-luxury-hotel-room-carpet"], ["Carpet Printing Technology Guide", "/blog/carpet-printing-technology-design-to-installation-guide"], ["Hospitality Carpet Construction Guide", "/blog/axminster-vs-wilton-vs-tufted-hospitality-guide"]].map(([label, href]) => <Link key={href} href={href} className="border border-border p-6 font-black uppercase transition-colors hover:border-accent hover:text-accent">{label} <span aria-hidden="true">→</span></Link>)}</div><div className="mt-12"><InquiryActions /></div><p className="mt-6 text-center text-sm text-muted">Include your country, total area, application, material preference, pattern reference and target delivery date.</p></div></section>
     </main>
   );
 }

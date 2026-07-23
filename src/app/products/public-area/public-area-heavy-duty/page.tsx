@@ -209,7 +209,7 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
-      <BuyerReasons />
+      <BuyerReasons product={p} />
     </div>
   );
 }

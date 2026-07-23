@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { brandInfo, caseStudies } from "@/lib/data";
-import { absoluteUrl, safeJsonLd } from "@/lib/seo";
+import { brandInfo, caseStudies, products } from "@/lib/data";
+import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 
 interface Props {
@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${project.title} | Project Application Reference | VISHOME`,
+    title: `${project.title} | Commercial Carpet Guide | VISHOME`,
     description: project.description,
     alternates: { canonical: `/projects/${project.id}` },
     openGraph: {
-      title: `${project.title} | VISHOME Project Application Reference`,
+      title: `${project.title} | VISHOME Commercial Carpet Guide`,
       description: project.description,
       url: absoluteUrl(`/projects/${project.id}`),
       type: "article",
@@ -38,6 +38,8 @@ export default async function ProjectDetailPage({ params }: Props) {
   if (!project) {
     notFound();
   }
+
+  const recommendedProducts = products.filter((item) => item.category === project.category).slice(0, 3);
 
   const caseJsonLd = {
     "@context": "https://schema.org",
@@ -59,7 +61,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       },
     },
     mainEntityOfPage: absoluteUrl(`/projects/${project.id}`),
-    articleSection: "Project Application Reference",
+    articleSection: "Commercial Carpet Specification Guide",
     about: project.category,
   };
 
@@ -101,7 +103,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           ) : null}
           <div className="mb-8 border border-border bg-surface p-5">
             <p className="text-sm leading-relaxed text-muted">
-              This page is presented as a project application reference for commercial flooring decision-making. It is intended to show specification logic, design direction, and procurement considerations for similar project types.
+              This guide explains specification logic, design direction, and procurement considerations for similar commercial flooring projects. Confirm final construction, testing, and installation details against your own project requirements.
             </p>
           </div>
 
@@ -188,7 +190,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           ) : null}
 
           <section className="mb-14 border border-border rounded-xl p-8 bg-surface">
-            <h3 className="text-xl font-black text-primary uppercase tracking-wider mb-6">Reference Outcomes</h3>
+            <h3 className="text-xl font-black text-primary uppercase tracking-wider mb-6">Planning Outcomes</h3>
             <ul className="space-y-3">
               {project.results.map((item) => (
                 <li key={item} className="text-muted leading-relaxed">
@@ -196,6 +198,20 @@ export default async function ProjectDetailPage({ params }: Props) {
                 </li>
               ))}
             </ul>
+          </section>
+
+          <section className="mb-14">
+            <h3 className="mb-6 text-xl font-black uppercase tracking-wider text-primary">Products for Similar Projects</h3>
+            <div className="grid gap-6 sm:grid-cols-3">
+              {recommendedProducts.map((item) => (
+                <Link key={item.id} href={productPath(item.id)} className="group border border-border bg-white p-4 transition-all hover:border-accent hover:shadow-lg">
+                  <div className="mb-4 aspect-square overflow-hidden bg-surface">
+                    <ProductImage src={item.image} alt={item.imageAlt || item.name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <p className="text-sm font-black uppercase leading-snug text-primary group-hover:text-accent">{item.name}</p>
+                </Link>
+              ))}
+            </div>
           </section>
 
           <section className="bg-primary rounded-xl p-10 text-center text-white">

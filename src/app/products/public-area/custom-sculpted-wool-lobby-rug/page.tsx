@@ -213,7 +213,6 @@ function cta(location: string) {
 export const metadata: Metadata = {
   title: "Custom Sculpted Wool Lobby Rug | Vishomecarpet",
   description: "Custom sand-beige wool lobby rug with sculpted concentric-square texture for hotels, lounges and reception areas. Custom size and color, MOQ 10 pieces.",
-  keywords: null,
   robots: { index: true, follow: true },
   alternates: { canonical },
   openGraph: {
@@ -501,8 +500,9 @@ export default function CustomSculptedWoolLobbyRugPage() {
               ["Public Area Carpets", "/products/public-area"],
               ["High-Traffic Public Area Corridor Carpet", "/products/public-area/public-area-heavy-duty"],
               ["Natural Sisal Commercial Carpet", "/products/public-area/natural-sisal-carpet"],
-              ["Wall-to-Wall Carpets", "/products/wall-to-wall"],
-              ["Commercial Carpet Project References", "/projects"],
+              ["Gold Mining Carpet Mat", "/products/public-area/gold-mining-carpet-mat"],
+              ["Hospitality Carpet Lifecycle Guide", "/blog/hidden-cost-of-cheap-carpets-hospitality-roi-guide"],
+              ["Carpet Installation Climate Guide", "/blog/climate-control-carpet-installation-stability-guide"],
             ].map(([label, href]) => (
               <Link key={href} href={href} className="border border-border bg-white p-6 font-black uppercase transition-colors hover:border-accent hover:text-accent">{label} <span aria-hidden="true">→</span></Link>
             ))}

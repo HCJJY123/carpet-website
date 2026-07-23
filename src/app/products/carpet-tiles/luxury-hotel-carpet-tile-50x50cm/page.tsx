@@ -75,8 +75,8 @@ const detailImages = [
 ] as const;
 
 const priceTiers = [
-  { price: "US$2.20", quantity: "1-899 pieces" },
-  { price: "US$1.80", quantity: "900-3,999 pieces" },
+  { price: "US$2.20", quantity: "200-1,999 pieces (trial order)" },
+  { price: "US$1.80", quantity: "2,000-3,999 pieces" },
   { price: "US$1.60", quantity: "4,000-7,999 pieces" },
   { price: "US$1.40", quantity: ">=8,000 pieces" },
 ] as const;
@@ -100,38 +100,20 @@ const procurementFaqs = [
   {
     question: "Can I request samples before bulk order?",
     answer:
-      "Yes. Sample support is available. Send project area, country, product type, target delivery date, and sample requirements to receive a factory quote package with price, sample options, MOQ, lead time, and technical data sheet.",
+      "Yes. A 1-3 piece sample set is available, with a free sample box option. Trial orders start from 200 pieces (50 SQM), while custom colors and patterns normally start from a 500 SQM project MOQ.",
+  },
+  {
+    question: "What are the trial order and custom project minimums?",
+    answer:
+      "The trial order starts from 200 pieces, equal to 50 SQM for 50x50cm tiles. The standard project MOQ is 500 SQM when custom color or pattern development is required.",
   },
 ] as const;
-
-const seoKeywords = [
-  "hotel carpet floor",
-  "hotel carpet",
-  "tile decor carpet",
-  "tile carpet",
-  "office carpet",
-  "nylon carpet tiles",
-  "commercial carpet",
-  "carpet tiles",
-  "tile nylon carpet",
-  "tile office carpet",
-  "tile floor carpet",
-  "tile carpet floor",
-  "interlocking carpet tiles",
-  "floor carpets",
-  "50x50 carpet tiles",
-  "commercial nylon carpet tiles",
-  "hotel carpet tiles",
-  "luxury carpet tiles",
-  "commercial grade carpet tiles",
-];
 
 export const metadata: Metadata = product
   ? {
       title: "Luxury Hotel Carpet Tiles 50x50 | Nylon Modular | VISHOME",
       description:
         "Source luxury 50x50 hotel carpet tiles in nylon or PP options for guestrooms, corridors, lobbies, meeting rooms, and wholesale modular projects.",
-      keywords: seoKeywords,
       alternates: { canonical: productPath(product.id) },
       openGraph: {
         title: "Luxury Hotel Carpet Tiles 50x50 | Nylon Modular | VISHOME",
@@ -240,7 +222,15 @@ export default function LuxuryHotelCarpetTileProductPage() {
                   <span className="text-right font-bold">{p.spec.material}</span>
                 </div>
                 <div className="flex justify-between gap-6 text-xs uppercase">
-                  <span>MOQ</span>
+                  <span>Sample</span>
+                  <span className="text-right font-bold">1-3 pcs (Free Sample Box)</span>
+                </div>
+                <div className="flex justify-between gap-6 text-xs uppercase">
+                  <span>Trial Order</span>
+                  <span className="text-right font-bold">200 pcs / 50 SQM</span>
+                </div>
+                <div className="flex justify-between gap-6 text-xs uppercase">
+                  <span>Project MOQ</span>
                   <span className="text-right font-bold">{p.moq}</span>
                 </div>
                 <div className="flex justify-between gap-6 text-xs uppercase">
@@ -253,10 +243,6 @@ export default function LuxuryHotelCarpetTileProductPage() {
                     <span className="text-right font-bold">{p.fobPrice.display}</span>
                   </div>
                 )}
-                <div className="flex justify-between gap-6 text-xs uppercase">
-                  <span>Sample</span>
-                  <span className="text-right font-bold">Free Sample Available</span>
-                </div>
               </div>
 
               <ProductConversionPanel product={p} />
@@ -273,8 +259,7 @@ export default function LuxuryHotelCarpetTileProductPage() {
               Luxury 50x50 Hotel Carpet Tiles for Modular Projects
             </h2>
             <p className="text-white/70 leading-relaxed">
-              Built for buyers searching for hotel carpet, office carpet, nylon carpet tiles, commercial carpet, tile carpet floor,
-              tile office carpet, tile floor carpet, floor carpets, and interlocking carpet tiles for project installation.
+              Specified for hotel guestrooms, corridors, lobbies, meeting rooms, and phased office renovations where modular replacement and repeatable supply matter.
             </p>
           </div>
           <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl">

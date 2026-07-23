@@ -112,7 +112,7 @@ export default function AboutPage() {
                 </div>
                 <div className="p-4 bg-surface border-l-4 border-primary">
                   <p className="text-xs font-bold text-primary uppercase mb-1">Target Markets</p>
-                  <p className="text-sm text-muted">North America, Europe, Australia, Middle East, Asia, and Africa.</p>
+                  <p className="text-sm text-muted">Philippines, Malaysia, Bulgaria, Australia, New Zealand, South Africa, and UAE.</p>
                 </div>
                 <div className="p-4 bg-surface border-l-4 border-primary">
                   <p className="text-xs font-bold text-primary uppercase mb-1">B2B Support</p>

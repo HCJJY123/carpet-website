@@ -23,14 +23,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: page.seoTitle,
     description: page.description,
-    keywords: [
-      page.title,
-      "commercial carpet supplier",
-      "commercial carpet manufacturer China",
-      "carpet tiles MOQ",
-      "hotel carpet samples",
-      "B2B carpet procurement",
-    ],
     alternates: { canonical: absoluteUrl(`/solutions/${page.slug}`) },
     openGraph: {
       title: page.seoTitle,

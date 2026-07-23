@@ -10,15 +10,7 @@ export const metadata: Metadata = {
   title: "Natural Sisal Carpet for Offices, Retail & Public Areas | VISHOME",
   description:
     "Natural sisal carpet supplier for offices, retail, galleries, hospitality public areas, and sustainable commercial interiors. Linen-weave texture, 4m width, MOQ 300 SQM.",
-  keywords: [
-    "natural sisal carpet",
-    "sisal carpet supplier",
-    "commercial sisal carpet",
-    "sisal office carpet",
-    "natural fiber carpet",
-    "linen weave sisal carpet",
-  ],
-  alternates: { canonical: "/natural-sisal-carpet" },
+  alternates: { canonical: "/products/public-area/natural-sisal-carpet" },
   openGraph: {
     title: "Natural Sisal Carpet for Commercial Interiors | VISHOME",
     description:

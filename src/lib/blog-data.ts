@@ -76,6 +76,8 @@ export const blogPosts: BlogPost[] = [
     ],
     suggestedLinks: [
       { label: "Carpet Tile Products", href: "/products/carpet-tiles" },
+      { label: "Luxury 50x50 Hotel Carpet Tiles", href: "/products/carpet-tiles/luxury-hotel-carpet-tile-50x50cm" },
+      { label: "Heavy-Duty Nylon Carpet Tiles", href: "/products/carpet-tiles/commercial-nylon-tiles" },
       { label: "Request Quote", href: "/contact" }
     ]
   },
@@ -128,6 +130,8 @@ export const blogPosts: BlogPost[] = [
     ],
     suggestedLinks: [
       { label: "Wall-to-Wall Carpet", href: "/products/wall-to-wall" },
+      { label: "Wool-Blend Hotel Broadloom", href: "/products/wall-to-wall/luxury-hotel-broadloom" },
+      { label: "3D Printed Hotel Carpet", href: "/products/wall-to-wall/3d-printed-hotel-carpet" },
       { label: "Hospitality Solutions", href: "/projects" }
     ]
   },
@@ -179,6 +183,8 @@ export const blogPosts: BlogPost[] = [
       }
     ],
     suggestedLinks: [
+      { label: "Custom Floral Printed Hotel Carpet", href: "/products/wall-to-wall/custom-floral-printed-hotel-carpet" },
+      { label: "3D Printed Banquet Hall Carpet", href: "/products/wall-to-wall/3d-printed-banquet-hall-carpet" },
       { label: "Custom Project Inquiry", href: "/contact" },
       { label: "Project Cases", href: "/projects" }
     ]
@@ -231,6 +237,8 @@ export const blogPosts: BlogPost[] = [
       }
     ],
     suggestedLinks: [
+      { label: "Heavy-Duty Nylon Carpet Tiles", href: "/products/carpet-tiles/nylon-office-carpet-tile" },
+      { label: "PVC-Free PE Backing Carpet Tiles", href: "/products/carpet-tiles/ecocore-pe-backing-carpet-tiles" },
       { label: "Technical Consultation", href: "/contact" },
       { label: "Carpet Tile Collection", href: "/products/carpet-tiles" }
     ]
@@ -283,6 +291,8 @@ export const blogPosts: BlogPost[] = [
       }
     ],
     suggestedLinks: [
+      { label: "Wool-Blend Hotel Broadloom", href: "/products/wall-to-wall/luxury-hotel-broadloom" },
+      { label: "Custom Hotel Room Carpet", href: "/products/wall-to-wall/custom-luxury-hotel-room-carpet" },
       { label: "Hospitality Solutions", href: "/projects" },
       { label: "Request Project Costing", href: "/contact" }
     ]
@@ -329,6 +339,8 @@ export const blogPosts: BlogPost[] = [
       }
     ],
     suggestedLinks: [
+      { label: "Commercial Carpet Tiles", href: "/products/carpet-tiles/commercial-nylon-tiles" },
+      { label: "Custom Printed Hotel Carpet", href: "/products/wall-to-wall/3d-printed-hotel-carpet" },
       { label: "View Project Cases", href: "/projects" },
       { label: "Contact Export Team", href: "/contact" }
     ]
@@ -375,6 +387,8 @@ export const blogPosts: BlogPost[] = [
       }
     ],
     suggestedLinks: [
+      { label: "Heavy-Duty Public Area Carpet", href: "/products/public-area/public-area-heavy-duty" },
+      { label: "Natural Sisal Commercial Carpet", href: "/products/public-area/natural-sisal-carpet" },
       { label: "Installation Support", href: "/contact" },
       { label: "Hotel & Hospitality Solutions", href: "/projects" }
     ]

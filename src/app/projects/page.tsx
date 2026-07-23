@@ -5,17 +5,17 @@ import PageHero from "@/components/PageHero";
 import { caseStudies } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Project References | Hotel, Retail & Office Application Pages | VISHOME",
-  description: "Review VISHOME commercial carpet project reference pages for hotel, retail, office, public area, and multi-site B2B flooring applications across global markets.",
+  title: "Commercial Carpet Planning Guides | Hotel, Retail & Office | VISHOME",
+  description: "Review commercial carpet specification and planning guides for hotel, retail, office, airport, public-area, and multi-site B2B flooring applications.",
   alternates: { canonical: "/projects" },
 };
 export default function ProjectsPage() {
   return (
     <div className="bg-white min-h-screen">
       <PageHero
-        title="Project Application References"
-        eyebrow="Commercial Flooring Solution Examples"
-        description="Specification-oriented reference pages for hotel, retail, office, airport, and public-area commercial carpet applications."
+        title="Commercial Carpet Planning Guides"
+        eyebrow="Flooring Specification by Application"
+        description="Specification and procurement guides for hotel, retail, office, airport, and public-area commercial carpet applications."
         image="/images/case-series/case-1/Case_1_Lobby_Grand_Reveal.webp"
         imageAlt="Luxury hotel lobby carpet project background"
         objectPosition="center 48%"
@@ -40,7 +40,7 @@ export default function ProjectsPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 uppercase tracking-tight group-hover:text-accent transition-colors">{cs.title}</h2>
               <p className="mb-6 text-base leading-relaxed text-muted md:mb-10 md:h-24 md:overflow-hidden md:text-lg">{cs.description}</p>
               <div className="flex items-center gap-4 text-xs font-black text-primary uppercase tracking-[0.2em]">
-                   View Application Reference <span className="text-accent">→</span>
+                   View Specification Guide <span className="text-accent">→</span>
                 </div>
               </Link>
             ))}

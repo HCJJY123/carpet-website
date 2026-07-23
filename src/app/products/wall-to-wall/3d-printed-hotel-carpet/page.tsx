@@ -52,16 +52,6 @@ const relatedLinks = [
 export const metadata: Metadata = {
   title: "Custom Printed Nylon Hotel Carpet | Wall-to-Wall | VISHOME",
   description: "Custom printed nylon wall-to-wall hotel carpet for guestrooms, corridors, lobbies, casinos and restaurants. 4m broadloom, MOQ 300 SQM.",
-  keywords: [
-    "custom printed carpet",
-    "printed carpet",
-    "printed nylon carpet",
-    "patterned wall to wall carpet",
-    "patterned broadloom carpet",
-    "commercial hotel carpet",
-    "hotel carpet design",
-    "hospitality carpet"
-  ],
   alternates: { canonical: canonicalPath },
   openGraph: {
     title: "Custom Printed Nylon Hotel Carpet | VISHOME",
@@ -248,7 +238,7 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
-      <BuyerReasons />
+      <BuyerReasons product={product} />
 
       <section className="pb-24">
         <div className="container-fox">

@@ -4,9 +4,9 @@ import { products } from "@/lib/data";
 import { productPath } from "@/lib/seo";
 
 export const metadata = {
-  title: "50x50 Carpet Tiles | Standard Modular Flooring | Vishome",
-  description: "Standardized 50x50cm commercial carpet tiles. Easy installation, rapid shipping, and superior durability for office and hotel projects.",
-  keywords: "50x50 carpet tiles, carpet tiles 50x50, 50x50cm carpet tile supplier, standardized flooring"
+  title: "50x50 Carpet Tile Specification & Installation Guide | Vishome",
+  description: "A technical guide to 50x50cm carpet tile coverage, carton planning, layout methods, installation waste, and modular replacement for commercial projects.",
+  alternates: { canonical: "/carpet-tiles-50x50" },
 };
 
 export default function CarpetTiles50x50Page() {
@@ -19,12 +19,12 @@ export default function CarpetTiles50x50Page() {
         <div className="container-fox">
           <span className="text-accent font-bold tracking-[0.2em] text-sm uppercase mb-4 block">The Global Standard</span>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase leading-tight max-w-4xl mx-auto">
-            50x50 cm Standardized Carpet Tiles
+            50x50 Carpet Tile Specification & Installation Guide
           </h1>
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto opacity-90">
             Maximizing installation efficiency and minimizing waste. Our 50x50 modular tiles are the industry standard for durability and design flexibility.
           </p>
-          <Link href="/contact" className="btn-fox-orange">Check Ready-to-Ship Inventory</Link>
+          <Link href="/products/carpet-tiles/luxury-hotel-carpet-tile-50x50cm" className="btn-fox-orange">View 50x50 Product Specs</Link>
         </div>
       </section>
 

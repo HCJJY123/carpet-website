@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   title: "Hotel & Hospitality Carpet Solutions | Wall-to-Wall Broadloom | VISHOME",
   description:
     "End-to-end hotel carpet solutions for lobby, corridor, guestroom, and ballroom projects. ASTM/EN compliant broadloom and carpet tile systems with custom pattern development and global delivery support.",
-  keywords:
-    "hotel carpet solution, hospitality carpet supplier, wall to wall hotel carpet, broadloom carpet manufacturer, hotel corridor carpet, ballroom carpet, custom hospitality carpet",
   alternates: {
     canonical: "/solutions/hotel-hospitality",
   },

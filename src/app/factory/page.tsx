@@ -4,7 +4,6 @@ import Link from "next/link";
 export const metadata = {
   title: "Carpet Manufacturing Factory | Vishome Global Commercial Carpet",
   description: "Explore the 50,000 sqm Vishome manufacturing facility. Premium production lines for commercial carpet tiles and hotel broadloom with 900+ skilled staff.",
-  keywords: "carpet manufacturer China, commercial carpet factory, hotel carpet production, carpet tile manufacturing",
   alternates: { canonical: "https://www.vishomecarpet.com/factory" },
 };
 
@@ -63,7 +62,7 @@ export default function FactoryPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "45+ COUNTRIES", desc: "Regular supply to North America, Europe, Australia, and the Middle East.", icon: "🌍" },
+              { title: "45+ COUNTRIES", desc: "Priority support for the Philippines, Malaysia, Bulgaria, Australia, New Zealand, South Africa, and the UAE.", icon: "🌍" },
               { title: "EXPORT PACKAGING", desc: "Heavy-duty protection ensuring project safety during long-haul sea freight.", icon: "📦" },
               { title: "DDP SUPPORT", desc: "Dedicated logistics team for door-to-door delivery and customs support.", icon: "🚢" }
             ].map((cap) => (

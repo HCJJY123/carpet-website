@@ -6,7 +6,7 @@ import { productPath } from "@/lib/seo";
 export const metadata = {
   title: "Commercial Carpet Tiles | Global B2B Supplier | Vishome",
   description: "High-performance commercial carpet tiles for offices, hotels, and retail. Fire-rated, stain-resistant, and low-VOC modular flooring solutions from China.",
-  keywords: "commercial carpet tiles, modular carpet tiles, office carpet flooring, China carpet tile supplier"
+  alternates: { canonical: "/products/carpet-tiles" },
 };
 
 export default function CommercialCarpetTilesPage() {
@@ -117,8 +117,8 @@ export default function CommercialCarpetTilesPage() {
                 </p>
                 <div className="grid gap-3 text-[10px] font-black uppercase tracking-[0.14em] text-primary sm:grid-cols-3">
                   <span className="border border-border bg-white px-4 py-3">US$1.40-2.20 / Piece</span>
-                  <span className="border border-border bg-white px-4 py-3">MOQ 1 Piece</span>
-                  <span className="border border-border bg-white px-4 py-3">Sample Available</span>
+                  <span className="border border-border bg-white px-4 py-3">Trial Order 200 Pieces</span>
+                  <span className="border border-border bg-white px-4 py-3">Free Sample Box</span>
                 </div>
                 <span className="mt-6 text-xs font-black uppercase tracking-[0.18em] text-accent">
                   View Product Details →

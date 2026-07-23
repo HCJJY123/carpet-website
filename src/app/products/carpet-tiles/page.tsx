@@ -77,18 +77,6 @@ const productOptions = [
 export const metadata: Metadata = {
   title: "Commercial Carpet Tiles Manufacturer & Wholesale | VISHOME",
   description: "50x50 nylon and polypropylene modular carpet tiles for offices and hotels. Compare wholesale prices, backing, thickness, MOQ and specifications.",
-  keywords: [
-    "carpet tiles",
-    "commercial carpet tiles",
-    "nylon carpet tiles",
-    "office carpet tiles",
-    "modular carpet tiles",
-    "carpet tile manufacturer",
-    "carpet tile supplier",
-    "wholesale carpet tiles",
-    "commercial grade carpet tiles",
-    "50x50 carpet tiles"
-  ],
   alternates: { canonical: categoryPath },
   openGraph: {
     title: "Commercial Carpet Tiles Manufacturer & Wholesale | VISHOME",

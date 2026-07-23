@@ -41,7 +41,7 @@ export const products: Product[] = [
       { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/08-conference-room-carpet-tiles.webp", alt: "Conference room with tile office carpet and modular nylon carpet tiles" },
       { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/09-executive-office-carpet-tiles.webp", alt: "Executive office carpet tiles for commercial office carpet and tile floor carpet projects" }
     ],
-    moq: "1 Piece",
+    moq: "500 SQM (Custom Project)",
     leadTime: "7-15 Days",
     fobPrice: { display: "US$1.40-2.20 / Piece", lowPrice: "1.40", highPrice: "2.20", currency: "USD", unit: "Piece" },
     spec: {
@@ -615,11 +615,11 @@ export const certifications = [{ name: "ASTM E648", description: "US Fire Rating
 export const caseStudies: CaseStudy[] = [
   {
     id: "case-1",
-    title: "Hotel Lobby Carpet Design Concept - Dubai Reference",
-    subtitle: "A hospitality flooring reference showing how a custom Axminster program can combine brand expression, fire-compliant performance, and phased installation planning for a luxury lobby and corridor upgrade.",
+    title: "Hotel Lobby Carpet Specification Guide - Dubai Climate",
+    subtitle: "A hospitality flooring guide showing how a custom Axminster program can combine brand expression, fire-compliant performance, and phased installation planning for a luxury lobby and corridor upgrade.",
     category: "wall-to-wall",
     image: "/images/case-series/case-1/Case_1_Lobby_Grand_Reveal.webp",
-    description: "A 5,000+ sqm hospitality flooring reference built around custom Axminster broadloom, art-deco design language, ASTM E648 Class I fire requirements, and phased installation planning for live hotel operations.",
+    description: "A 5,000+ sqm hospitality flooring planning scenario built around custom Axminster broadloom, art-deco design language, ASTM E648 Class I fire requirements, and phased installation planning for live hotel operations.",
     projectSpecs: [
       { label: "Location", value: "Dubai, UAE" },
       { label: "Project Scope", value: "Lobby, arrival corridor, elevator hall, and VIP transition zones" },
@@ -719,11 +719,11 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-2",
-    title: "Retail Flooring Solution Example - India Department Store Reference",
-    subtitle: "A retail flooring reference showing how a multi-store carpet program can use color zoning and modular installation to support navigation, branding, and continued trading during fit-out.",
+    title: "Department Store Carpet Specification Guide - India",
+    subtitle: "A retail flooring guide showing how a multi-store carpet program can use color zoning and modular installation to support navigation, branding, and continued trading during fit-out.",
     category: "carpet-tiles",
     image: "/images/case-series/case-2/Case_2_Store_Entrance.webp",
-    description: "A 4,800 m² modular carpet reference using digitally printed department zoning to improve wayfinding, strengthen brand identity, and support phased installation planning.",
+    description: "A 4,800 sqm modular carpet planning scenario using digitally printed department zoning to improve wayfinding, strengthen brand identity, and support phased installation planning.",
     projectSpecs: [
       { label: "Project Type", value: "Premium retail department store navigation system" },
       { label: "Country/Region", value: "India — Bangalore flagship with rollouts in Mumbai, Delhi, and Hyderabad" },
@@ -826,11 +826,11 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-3",
-    title: "Casino Carpet Application Guide - Las Vegas Reference",
-    subtitle: "A gaming-floor flooring reference showing how strong pattern identity, stain concealment, and long visual life can work together in a continuous entertainment environment.",
+    title: "Casino Carpet Specification Guide - Las Vegas",
+    subtitle: "A gaming-floor specification guide showing how strong pattern identity, stain concealment, and long visual life can work together in a continuous entertainment environment.",
     category: "wall-to-wall",
     image: "/images/case-series/case-3/Case_3_Casino_Hall.webp",
-    description: "A 3,500 m² patterned casino carpet reference using dense Nylon 6,6 construction and complex multicolor patterning to improve appearance retention and player-environment immersion.",
+    description: "A 3,500 sqm patterned casino carpet planning scenario using dense Nylon 6,6 construction and complex multicolor patterning to improve appearance retention and player-environment immersion.",
     projectSpecs: [
       { label: "Location", value: "Las Vegas, USA" },
       { label: "Project Type", value: "Casino gaming floor and customer circulation zones" },
@@ -923,7 +923,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-4",
-    title: "Healthcare Flooring Reference - Singapore Hospital Wing",
+    title: "Healthcare Carpet Specification Guide - Singapore",
     subtitle: "A healthcare flooring program designed around infection-control priorities, cleanability, and stable long-term performance in a medically sensitive environment.",
     category: "public-area",
     image: "/images/case-series/case-4/Case_4_Hospital_Ward.webp",
@@ -1020,7 +1020,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-5",
-    title: "Office Carpet Planning Reference - Tokyo Multi-Floor Workplace",
+    title: "Multi-Floor Office Carpet Planning Guide - Tokyo",
     subtitle: "A multi-floor office carpet rollout using color progression, acoustic thinking, and phased delivery to improve workplace coherence.",
     category: "carpet-tiles",
     image: "/images/case-techpark.webp",
@@ -1085,7 +1085,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-6",
-    title: "Airport Terminal Flooring Application Guide - Singapore Reference",
+    title: "Airport Terminal Carpet Specification Guide - Singapore",
     subtitle: "A wayfinding-oriented modular carpet program designed for phased replacement in a live airport environment.",
     category: "public-area",
     image: "/images/public-area-carpets.webp",
@@ -1148,7 +1148,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-7",
-    title: "Luxury Residential Carpet Concept - Mumbai High-Rise Reference",
+    title: "Luxury Residential Carpet Planning Guide - Mumbai High-Rise",
     subtitle: "A multi-unit luxury residential carpet program using individualized brand and crest integration for premium presentation.",
     category: "wall-to-wall",
     image: "/images/projects/case-7/main-mumbai-luxury-residential-carpet.webp",
@@ -1210,7 +1210,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-8",
-    title: "University Campus Flooring Reference - Australia",
+    title: "University Campus Carpet Specification Guide - Australia",
     subtitle: "A branded student-center carpet program designed for durability, campus identity, and daily public use.",
     category: "carpet-tiles",
     image: "/images/case-wework.webp",
@@ -1269,7 +1269,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-9",
-    title: "Extended-Stay Hospitality Flooring Reference - South Korea",
+    title: "Extended-Stay Hospitality Carpet Planning Guide - South Korea",
     subtitle: "A modular hospitality floor system designed to support independent unit theming and easier long-term maintenance.",
     category: "carpet-tiles",
     image: "/images/case-hilton.webp",
@@ -1328,7 +1328,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-10",
-    title: "Luxury Retail Carpet Design Reference - Paris Flagship",
+    title: "Luxury Retail Carpet Specification Guide - Paris Flagship",
     subtitle: "A custom-dyed fashion retail carpet installation using high-color-detail patterning to strengthen luxury brand storytelling.",
     category: "wall-to-wall",
     image: "/images/case-resort.webp",

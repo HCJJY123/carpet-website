@@ -8,14 +8,6 @@ export const metadata: Metadata = {
   title: "Commercial Carpet Manufacturer in China | Carpet Tiles & Hotel Carpet | VISHOME",
   description:
     "VISHOME is a Tianjin commercial carpet manufacturer supplying carpet tiles, hotel broadloom, public-area carpet, custom patterns, samples, FOB pricing, and export packaging for B2B projects.",
-  keywords: [
-    "commercial carpet manufacturer",
-    "commercial carpet supplier China",
-    "carpet tiles manufacturer",
-    "hotel carpet manufacturer",
-    "B2B carpet factory",
-    "Vishomecarpet",
-  ],
   alternates: { canonical: "/commercial-carpet-manufacturer" },
   openGraph: {
     title: "Commercial Carpet Manufacturer in China | VISHOME",

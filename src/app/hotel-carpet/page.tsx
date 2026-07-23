@@ -4,9 +4,9 @@ import { products } from "@/lib/data";
 import { productPath } from "@/lib/seo";
 
 export const metadata = {
-  title: "Hotel Carpet Supplier | Luxury Hospitality Flooring | Vishome",
-  description: "Premier supplier of luxury hotel carpets, guest room broadloom, and corridor carpets. Custom Axminster and jacquard designs with international fire ratings.",
-  keywords: "hotel carpet, hotel carpet supplier, hospitality flooring, guest room carpet, Axminster carpet China"
+  title: "Hotel Carpet Selection Guide by Guest Area | Vishome",
+  description: "Compare carpet specifications for hotel guestrooms, corridors, lobbies, banquet halls, and restaurants, including material, traffic, acoustics, and maintenance priorities.",
+  alternates: { canonical: "/hotel-carpet" },
 };
 
 export default function HotelCarpetPage() {
@@ -21,13 +21,13 @@ export default function HotelCarpetPage() {
             <div className="lg:w-3/5">
               <span className="text-accent font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Elevating Guest Experience</span>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase leading-tight">
-                Premium Hotel & Hospitality Carpet
+                Hotel Carpet Selection by Guest Area
               </h1>
               <p className="text-xl text-gray-300 mb-12 opacity-90 leading-relaxed">
                 From luxury guest suites to high-traffic corridors and grand banquet halls. We provide fire-rated, bespoke flooring solutions trusted by 5-star hotel chains globally.
               </p>
               <div className="flex flex-wrap gap-6">
-                <Link href="/contact" className="btn-fox-orange">Request Design Proposal</Link>
+                <Link href="/products/wall-to-wall" className="btn-fox-orange">Compare Hotel Carpet Products</Link>
                 <Link href="/projects" className="btn-fox-outline">View Hotel Projects</Link>
               </div>
             </div>

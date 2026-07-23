@@ -61,16 +61,6 @@ export const metadata: Metadata = product
   ? {
       title: "Axminster 80/20 Wool Blend Hotel Carpet | VISHOME",
       description: "Axminster woven 80% wool 20% nylon wall-to-wall carpet for five-star hotels, corridors, ballrooms and casinos. Custom pattern, MOQ 500 SQM.",
-      keywords: [
-        "axminster carpet",
-        "axminster woven carpet",
-        "80 wool 20 nylon carpet",
-        "wool blend carpet",
-        "wool broadloom carpet",
-        "wool carpet roll",
-        "5 star hotel carpet",
-        "luxury hotel carpet"
-      ],
       alternates: { canonical: productPath(product.id) },
       openGraph: {
         title: "Axminster 80/20 Wool Blend Hotel Carpet | VISHOME",
@@ -220,7 +210,7 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
-      <BuyerReasons />
+      <BuyerReasons product={p} />
     </div>
   );
 }

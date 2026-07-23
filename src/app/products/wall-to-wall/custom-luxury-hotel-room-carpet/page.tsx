@@ -196,16 +196,6 @@ const faqJsonLd = {
 export const metadata: Metadata = {
   title: "Custom Hotel Room Carpet | Luxury Wall-to-Wall | VISHOME",
   description: "Custom wall-to-wall carpet for hotel rooms, suites and corridors. Luxury patterns, nylon or wool-nylon options, MOQ from 100 SQM.",
-  keywords: [
-    "hotel room carpet",
-    "carpet for hotel rooms",
-    "custom hotel carpet",
-    "luxury wall to wall carpet",
-    "5 star hotel carpet",
-    "hotel carpet flooring",
-    "carpet for hotel",
-    "hotel carpet wholesale"
-  ],
   alternates: { canonical: absoluteUrl(path) },
   robots: { index: true, follow: true },
   openGraph: {
@@ -434,6 +424,7 @@ export default function CustomLuxuryHotelRoomCarpetPage() {
               ["Custom Floral Printed Hotel Carpet", "/products/wall-to-wall/custom-floral-printed-hotel-carpet"],
               ["Hotel Carpet Solutions", "/hotel-carpet"],
               ["Hospitality Carpet Construction Guide", "/blog/axminster-vs-wilton-vs-tufted-hospitality-guide"],
+              ["Hospitality Carpet Lifecycle Guide", "/blog/hidden-cost-of-cheap-carpets-hospitality-roi-guide"],
             ].map(([label, href]) => (
               <Link key={href} href={href} className="border border-border p-6 font-black uppercase transition-colors hover:border-accent hover:text-accent">{label} <span aria-hidden="true">→</span></Link>
             ))}

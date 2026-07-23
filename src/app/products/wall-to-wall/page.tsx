@@ -73,18 +73,6 @@ const constructionOptions = [
 export const metadata: Metadata = {
   title: "Wall-to-Wall Carpet & Hotel Broadloom Supplier | VISHOME",
   description: "Custom commercial wall-to-wall carpet from a hotel carpet manufacturer. Compare Axminster, wool-blend and printed broadloom prices, MOQ and specifications.",
-  keywords: [
-    "wall to wall carpet",
-    "hotel carpet",
-    "commercial carpet",
-    "wall to wall carpet supplier",
-    "wall to wall carpet manufacturer",
-    "broadloom carpet supplier",
-    "commercial broadloom carpet",
-    "hotel carpet manufacturer",
-    "hospitality carpet supplier",
-    "contract carpet supplier"
-  ],
   alternates: { canonical: categoryPath },
   openGraph: {
     title: "Wall-to-Wall Carpet & Hotel Broadloom Supplier | VISHOME",

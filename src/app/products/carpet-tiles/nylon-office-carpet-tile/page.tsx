@@ -30,39 +30,10 @@ const galleryImages = [
 const seoDescription =
   "Heavy-duty 100% nylon office carpet tiles in 50x50 format with Class 33 traffic rating, bitumen backing, antistatic protection, and custom colors.";
 
-const seoKeywords = [
-  "nylon carpet tiles",
-  "commercial carpet tiles",
-  "office carpet tiles",
-  "50x50 carpet tiles",
-  "modular carpet tiles",
-  "loop pile carpet tile",
-  "carpet squares",
-  "hotel carpet floor",
-  "hotel carpet",
-  "tile decor carpet",
-  "tile carpet",
-  "office carpet",
-  "commercial carpet",
-  "tile nylon carpet",
-  "tile office carpet",
-  "tile floor carpet",
-  "tile carpet floor",
-  "interlocking carpet tiles",
-  "floor carpets",
-  "heavy duty carpet tiles",
-  "commercial office carpet tiles",
-  "anti static carpet tiles",
-  "stain resistant carpet tiles",
-  "bitumen backed carpet tiles",
-  "Vishomecarpet",
-];
-
 export const metadata: Metadata = product
   ? {
       title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VISHOME",
       description: seoDescription,
-      keywords: seoKeywords,
       alternates: {
         canonical: productPath(product.id),
         languages: {
@@ -369,7 +340,7 @@ export default function NylonOfficeCarpetTilePage() {
         </div>
       </section>
 
-      <BuyerReasons />
+      <BuyerReasons product={p} />
     </div>
   );
 }

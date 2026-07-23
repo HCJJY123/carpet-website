@@ -21,7 +21,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.seoTitle,
     description: post.description,
-    keywords: post.keywords,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.title,
@@ -67,7 +66,6 @@ export default async function BlogPostPage({ params }: Props) {
     },
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
     articleSection: post.category,
-    keywords: post.keywords.join(", "),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["article h1", ".article-summary", ".article-section h2"],

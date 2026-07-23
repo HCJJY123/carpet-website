@@ -5,7 +5,6 @@ import ProductImage from "@/components/ProductImage";
 export const metadata: Metadata = {
   title: "About Vishome Global Commercial Carpet Co. Ltd. | Commercial Carpet Manufacturer",
   description: "Vishome Global Commercial Carpet Co. Ltd. is a professional commercial carpet manufacturer with a 50,000-square-meter factory, 900+ employees, and exports to over 45 countries and regions. We supply commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event carpets, and custom carpet solutions for global B2B projects.",
-  keywords: "commercial carpet manufacturer, commercial carpet tiles manufacturer, hotel carpet supplier, custom carpet manufacturer, wall to wall carpet supplier, office carpet tiles, commercial carpet tiles, custom carpet solutions, carpet supplier for contractors, carpet for flooring distributors, hotel carpet project supplier",
   alternates: { canonical: "https://www.vishomecarpet.com/about-us" },
 };
 
@@ -110,7 +109,7 @@ export default function AboutUsPage() {
                     <span className="text-white text-[8px] font-black">Now</span>
                   </span>
                   <h4 className="text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-1">Global Reach</h4>
-                  <p className="text-sm text-muted leading-relaxed">900+ employees, serving B2B customers in 45+ countries across North America, Europe, Australia, Middle East, Asia, and Africa.</p>
+                  <p className="text-sm text-muted leading-relaxed">900+ employees, serving B2B customers in 45+ countries, with priority support for the Philippines, Malaysia, Bulgaria, Australia, New Zealand, South Africa, and the UAE.</p>
                 </div>
               </div>
             </div>
@@ -271,11 +270,11 @@ export default function AboutUsPage() {
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 uppercase tracking-tight">Global Export Markets</h2>
               <p className="text-muted text-lg mb-10 leading-relaxed font-medium">
-                Our carpets have been exported to more than 45 countries and regions, serving customers in North America, Europe, Australia, the Middle East, Asia, and Africa.
+                Our carpets have been exported to more than 45 countries and regions. Current priority markets include Southeast Asia, Europe, Oceania, Southern Africa, and the Middle East.
               </p>
               <div className="p-6 bg-white border border-border rounded-lg shadow-sm">
                 <p className="text-sm text-muted italic leading-relaxed text-center uppercase tracking-widest font-bold">
-                  USA, Canada, Australia, UK, Saudi Arabia, UAE, Germany, France, Philippines
+                  Philippines, Malaysia, Bulgaria, Australia, New Zealand, South Africa, UAE
                 </p>
               </div>
             </div>

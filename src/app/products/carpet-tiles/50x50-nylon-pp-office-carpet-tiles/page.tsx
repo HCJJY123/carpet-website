@@ -72,36 +72,11 @@ const detailImages = [
   },
 ];
 
-const seoKeywords = [
-  "hotel carpet floor",
-  "hotel carpet",
-  "tile decor carpet",
-  "tile carpet",
-  "office carpet",
-  "nylon carpet tiles",
-  "commercial carpet",
-  "carpet tiles",
-  "tile nylon carpet",
-  "tile office carpet",
-  "tile floor carpet",
-  "tile carpet floor",
-  "interlocking carpet tiles",
-  "floor carpets",
-  "50x50 carpet tiles",
-  "PP carpet tiles",
-  "polypropylene carpet tiles",
-  "square carpet tiles",
-  "office carpet squares",
-  "wholesale carpet tiles",
-  "bulk carpet tiles",
-];
-
 export const metadata: Metadata = product
   ? {
       title: "50x50 Nylon & Polypropylene Office Carpet Tiles | VISHOME",
       description:
         "Source 50x50 nylon or polypropylene office carpet tiles for commercial floors, corridors, retail, hotels, and wholesale modular carpet projects.",
-      keywords: seoKeywords,
       alternates: { canonical: productPath(product.id) },
       openGraph: {
         title: "50x50 Nylon & Polypropylene Office Carpet Tiles | VISHOME",
@@ -293,7 +268,7 @@ export default function OfficeCarpetTilesProductPage() {
         </div>
       </section>
 
-      <BuyerReasons />
+      <BuyerReasons product={p} />
     </div>
   );
 }

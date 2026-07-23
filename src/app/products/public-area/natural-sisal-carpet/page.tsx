@@ -59,16 +59,6 @@ export const metadata: Metadata = product
       title: "Natural Sisal Linen-Weave Commercial Carpet | Commercial Carpet Product | VISHOME",
       description:
         "Natural 100% sisal commercial carpet with a linen-weave texture for offices, retail, exhibitions, and hotel public areas. Eco-friendly, custom widths, factory-direct.",
-      keywords: [
-        "natural sisal carpet",
-        "sisal commercial carpet",
-        "sisal look carpet",
-        "linen weave carpet",
-        "natural fiber carpet",
-        "eco friendly carpet",
-        "sisal broadloom",
-        "Vishomecarpet",
-      ],
       alternates: { canonical: productPath(product.id) },
       openGraph: {
         title: "Natural Sisal Linen-Weave Commercial Carpet | VISHOME",
@@ -248,7 +238,7 @@ export default function NaturalSisalCarpetPage() {
         </div>
       </section>
 
-      <BuyerReasons />
+      <BuyerReasons product={p} />
 
       <section className="section-padding">
         <div className="container-fox max-w-5xl">

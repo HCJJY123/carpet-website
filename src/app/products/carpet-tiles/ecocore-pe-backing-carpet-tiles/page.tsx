@@ -38,22 +38,6 @@ export const metadata: Metadata = product
       title: "Green Carpet Tiles | PVC-Free PE Backing 50x50 | VISHOME",
       description:
         "PVC-free PE backing 50x50 carpet tiles for green offices, raised floors, acoustic comfort, schools, and sustainability-led commercial projects.",
-      keywords: [
-        "PE backing carpet tiles",
-        "PVC free carpet tiles",
-        "eco friendly carpet tiles",
-        "sustainable office carpet",
-        "green building flooring",
-        "low VOC carpet tiles",
-        "modular carpet tiles",
-        "solution dyed nylon carpet tiles",
-        "commercial office carpet tiles",
-        "green carpet tiles",
-        "raised floor carpet tiles",
-        "acoustic carpet tiles",
-        "school carpet tiles",
-        "removable carpet tiles",
-      ],
       alternates: { canonical: productPath(product.id) },
       openGraph: {
         title: "Green Carpet Tiles | PVC-Free PE Backing 50x50 | VISHOME",
@@ -238,7 +222,7 @@ export default function EcoCorePeBackingProductPage() {
         </div>
       </section>
 
-      <BuyerReasons />
+      <BuyerReasons product={p} />
 
       <section className="section-padding">
         <div className="container-fox grid gap-8 lg:grid-cols-2">

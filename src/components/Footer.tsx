@@ -104,7 +104,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/5 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] font-black text-white/30 uppercase tracking-[0.3em]">
-            &copy; 2005 Vishome Global Commercial Carpet Co. Ltd.
+            &copy; {new Date().getFullYear()} Vishome Global Commercial Carpet Co. Ltd. <span className="mx-2">|</span> Since 2005
           </p>
           <div className="flex gap-10 opacity-30">
              <span className="text-[10px] font-black text-white uppercase tracking-widest">Tianjin Factory Direct</span>

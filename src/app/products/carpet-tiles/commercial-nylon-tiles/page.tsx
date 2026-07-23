@@ -55,17 +55,6 @@ export const metadata: Metadata = product
   ? {
       title: "Nylon 6.6 Heavy-Duty Commercial Carpet Tiles | VISHOME",
       description: "Nylon 6.6 heavy-duty commercial carpet tiles with Class 33 performance and bitumen backing for offices, corridors, schools, airports, and contract floors.",
-      keywords: [
-        "nylon carpet tiles",
-        "heavy duty commercial carpet tiles",
-        "commercial grade carpet tiles",
-        "bitumen backed carpet tiles",
-        "contract carpet tiles",
-        "commercial carpet tiles wholesale",
-        "wholesale commercial carpet tiles",
-        "airport carpet tiles",
-        "school carpet tiles",
-      ],
       alternates: { canonical: productPath(product.id) },
       openGraph: {
         title: "Nylon 6.6 Heavy-Duty Commercial Carpet Tiles | VISHOME",
@@ -215,7 +204,7 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
-      <BuyerReasons />
+      <BuyerReasons product={p} />
     </div>
   );
 }

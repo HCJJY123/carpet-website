@@ -117,28 +117,6 @@ export const metadata: Metadata = product
       title: "Sluice Box Matting & Gold Mining Carpet | VISHOME",
       description:
         "PVC miners moss sluice mat and sluice box matting for gold recovery. Compare 10/15/20mm carpet rolls, wholesale price, samples and OEM supply.",
-      keywords: [
-        "sluice mat",
-        "sluice matting",
-        "sluice box matting",
-        "sluice box mat",
-        "gold sluice mat",
-        "gold sluice carpet",
-        "gold mining carpet",
-        "gold mining carpet mat",
-        "gold recovery carpet",
-        "gold recovery mat",
-        "miners moss matting",
-        "rubber sluice mat",
-        "riffle mat",
-        "gold dredge mat",
-        "gold mining carpet supplier",
-        "gold mining carpet manufacturer",
-        "gold mining carpet wholesale",
-        "sluice mat supplier",
-        "sluice matting wholesale",
-        "Vishomecarpet",
-      ],
       alternates: {
         canonical: productPath(product.id),
         languages: {
@@ -349,7 +327,7 @@ export default function GoldMiningCarpetMatPage() {
         </div>
       </section>
 
-      <BuyerReasons />
+      <BuyerReasons product={p} />
     </div>
   );
 }

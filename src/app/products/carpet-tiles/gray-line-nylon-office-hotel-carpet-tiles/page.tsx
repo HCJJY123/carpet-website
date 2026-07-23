@@ -48,37 +48,11 @@ const detailImages = [
   },
 ];
 
-const seoKeywords = [
-  "hotel carpet floor",
-  "hotel carpet",
-  "tile decor carpet",
-  "tile carpet",
-  "office carpet",
-  "nylon carpet tiles",
-  "commercial carpet",
-  "carpet tiles",
-  "tile nylon carpet",
-  "tile office carpet",
-  "tile floor carpet",
-  "tile carpet floor",
-  "interlocking carpet tiles",
-  "floor carpets",
-  "gray carpet tiles",
-  "grey carpet tiles",
-  "patterned carpet tiles",
-  "modern carpet tiles",
-  "blue carpet tiles",
-  "navy carpet tiles",
-  "black carpet tiles",
-  "beige carpet tiles",
-];
-
 export const metadata: Metadata = product
   ? {
       title: "Gray Patterned Carpet Tiles for Office & Hotel | VISHOME",
       description:
         "Modern gray patterned nylon carpet tiles with charcoal, blue, navy, black, beige, or custom accents for office, hotel, and commercial floors.",
-      keywords: seoKeywords,
       alternates: { canonical: productPath(product.id) },
       openGraph: {
         title: "Gray Patterned Carpet Tiles for Office & Hotel | VISHOME",
@@ -270,7 +244,7 @@ export default function GrayLineNylonCarpetTilesPage() {
         </div>
       </section>
 
-      <BuyerReasons />
+      <BuyerReasons product={p} />
     </div>
   );
 }

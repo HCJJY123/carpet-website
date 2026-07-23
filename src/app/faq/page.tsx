@@ -7,7 +7,6 @@ import PageHero from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "B2B Carpet Sourcing FAQ | Project & Technical Support | VISHOME",
   description: "Expert answers on commercial carpet types, custom design matching, project lead times, fire ratings (ASTM E648), and global logistics for hotel and office contractors.",
-  keywords: "carpet tile FAQ, hotel carpet sourcing guide, commercial flooring technical support, custom carpet design process, carpet fire rating certification",
   alternates: { canonical: "https://www.vishomecarpet.com/faq" },
 };
 
