@@ -29,6 +29,21 @@ const languageGroups: LanguageGroup[] = [
     links: [{ href: "/", label: "Main website" }],
   },
   {
+    code: "RU",
+    name: "Русский",
+    links: [{ href: "/ru/hotelnyy-kovrolin", label: "Гостиничный ковролин" }],
+  },
+  {
+    code: "JA",
+    name: "日本語",
+    links: [{ href: "/ja/custom-commercial-carpet", label: "業務用オーダーカーペット" }],
+  },
+  {
+    code: "KO",
+    name: "한국어",
+    links: [{ href: "/ko/commercial-carpet-tile", label: "상업용 카펫 타일" }],
+  },
+  {
     code: "FR",
     name: "Français",
     links: [
@@ -62,11 +77,6 @@ const languageGroups: LanguageGroup[] = [
     code: "PT",
     name: "Português",
     links: [{ href: "/pt/tapetes-personalizados-hotel", label: "Tapetes personalizados para hotel" }],
-  },
-  {
-    code: "RU",
-    name: "Русский",
-    links: [{ href: "/ru/hotelnyy-kovrolin", label: "Гостиничный ковролин" }],
   },
 ];
 

@@ -46,6 +46,7 @@ export function localizedLandingMetadata(page: LocalizedLanding): Metadata {
 
 export default function LocalizedLandingPage({ page }: { page: LocalizedLanding }) {
   const labels = localizedLandingLabels[page.locale];
+  const usesCompactMobileHeroType = page.locale === "ja" || page.locale === "ko";
   const resolvedProducts = resolveProducts(page);
   const heroProduct = products.find((product) => product.id === page.primaryProductId);
   const quoteHref = `/contact?product=${encodeURIComponent(page.quoteProduct)}#quote-form`;
@@ -126,7 +127,13 @@ export default function LocalizedLandingPage({ page }: { page: LocalizedLanding 
         <div className="container-fox relative z-10 w-full py-20">
           <div className={`max-w-4xl ${page.direction === "rtl" ? "ml-auto" : ""}`}>
             <p className="mb-5 text-xs font-black text-accent">{page.eyebrow}</p>
-            <h1 className="max-w-4xl text-4xl font-black leading-tight md:text-6xl">{page.title}</h1>
+            <h1
+              className={`max-w-4xl font-black md:text-6xl ${
+                usesCompactMobileHeroType ? "text-[28px] leading-[1.35]" : "text-4xl leading-tight"
+              }`}
+            >
+              {page.title}
+            </h1>
             <p className="mt-7 max-w-3xl text-base leading-8 text-white/85 md:text-lg">{page.introduction}</p>
             <p className="mt-6 max-w-3xl border-s-2 border-accent ps-4 text-sm leading-6 text-white/70">
               <strong className="text-white">{labels.targetMarkets}:</strong> {page.targetMarkets}
