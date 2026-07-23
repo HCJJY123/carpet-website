@@ -99,7 +99,7 @@ Output:
 weekly_leads.xlsx
 ```
 
-The report ranks companies by visit days, page depth, time on site, contact/product page intent, and return visits.
+The report excludes China and the United States for market analysis, ranks companies by visit days, page depth, time on site, contact/product page intent, and return visits, and includes a `Page Performance` sheet showing which VishomeCarpet pages attract the most company-level interest.
 
 ## 5. Unified Lead Export and Google Ads
 
@@ -115,6 +115,8 @@ The files are written to `~/Downloads/Vishome-Lead-Reports/<date>/`:
 vishome_leads.xlsx
 google_ads_qualified_leads.csv
 ```
+
+The lead workbook includes `Source Performance` and `Landing Pages` sheets. They compare lead volume, A-grade leads, average intent score, and sales-confirmed qualification rate by traffic source and landing page.
 
 Automatic A/B/C scoring prioritizes follow-up, but it does not by itself qualify a lead for Google Ads. After sales confirms a real opportunity, update the D1 record:
 

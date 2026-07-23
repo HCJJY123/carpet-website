@@ -292,12 +292,12 @@ export default function LeadCaptureForm({
 
       <div className="grid gap-5 md:grid-cols-2 md:gap-8">
         <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Name *</label>
-          <input name="name" type="text" required autoComplete="name" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your name" />
+          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Name</label>
+          <input name="name" type="text" autoComplete="name" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your name" />
         </div>
         <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Company Name</label>
-          <input name="company" type="text" autoComplete="organization" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your company or organization" />
+          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Company Name *</label>
+          <input name="company" type="text" required autoComplete="organization" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your company or organization" />
         </div>
       </div>
 
@@ -311,15 +311,15 @@ export default function LeadCaptureForm({
           <input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="+1 000 000 0000" />
         </div>
         <div className="md:col-span-2">
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Country / Region *</label>
-          <input name="country" type="text" required autoComplete="country-name" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="United States, UK, etc." />
+          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Country / Region</label>
+          <input name="country" type="text" autoComplete="country-name" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="United States, UK, etc." />
         </div>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2 md:gap-8">
         <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Project Type *</label>
-          <input name="project_type" type="text" required defaultValue={projectTypeDefault} className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="Hotel, office, retail, public area..." />
+          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Project Type</label>
+          <input name="project_type" type="text" defaultValue={projectTypeDefault} className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="Hotel, office, retail, public area..." />
         </div>
         <div>
           <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Product Type *</label>
@@ -355,8 +355,8 @@ export default function LeadCaptureForm({
 
       <div className="grid gap-5 md:grid-cols-2 md:gap-8">
         <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Quantity / Area</label>
-          <input name="quantity" type="text" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="e.g. 500 SQM" />
+          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Quantity / Area *</label>
+          <input name="quantity" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="e.g. 500 SQM" />
         </div>
         <div>
           <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Delivery Time</label>
@@ -382,8 +382,8 @@ export default function LeadCaptureForm({
       </div>
 
       <div>
-        <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Message *</label>
-        <textarea name="message" rows={6} required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all resize-none" placeholder="Tell us your project area, delivery country, timeline, design needs, or sample request..." />
+        <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Message</label>
+        <textarea name="message" rows={6} className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all resize-none" placeholder="Tell us your project area, delivery country, timeline, design needs, or sample request..." />
       </div>
 
       <button

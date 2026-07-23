@@ -32,6 +32,8 @@ HOT_WEIGHTS = {
     "/hotel-carpet": 5,
 }
 
+EXCLUDED_COUNTRIES = {"CN", "US"}
+
 
 def load_rows(path: str) -> pd.DataFrame:
     with open(path, encoding="utf-8") as file:
@@ -61,9 +63,15 @@ def load_rows(path: str) -> pd.DataFrame:
         "screen",
         "ts",
     ):
-        frame[column] = frame.get(column, "").fillna("").astype(str)
+        if column not in frame:
+            frame[column] = ""
+        else:
+            frame[column] = frame[column].fillna("").astype(str)
 
-    frame["duration"] = pd.to_numeric(frame.get("duration"), errors="coerce").fillna(0).astype(int)
+    if "duration" not in frame:
+        frame["duration"] = 0
+    else:
+        frame["duration"] = pd.to_numeric(frame["duration"], errors="coerce").fillna(0).astype(int)
     return frame
 
 
@@ -110,8 +118,10 @@ def outreach_angle(paths: list[str]) -> str:
 
 def main(input_path: str) -> None:
     frame = load_rows(input_path)
+    if not frame.empty:
+        frame = frame[~frame["country"].str.upper().isin(EXCLUDED_COUNTRIES)].copy()
     if frame.empty:
-        print("No company visitors found in the exported period.")
+        print("No company visitors found after excluding China and the United States.")
         return
 
     leads = []
@@ -142,12 +152,42 @@ def main(input_path: str) -> None:
         ascending=[True, False, False, False],
     ).reset_index(drop=True)
 
+    page_frame = (
+        frame.groupby("path", dropna=False)
+        .agg(
+            Pageviews=("path", "size"),
+            Unique_Companies=("org", "nunique"),
+            Countries=("country", "nunique"),
+            Total_Duration_Seconds=("duration", "sum"),
+            Average_Duration_Seconds=("duration", "mean"),
+        )
+        .reset_index()
+        .rename(columns={"path": "Page"})
+    )
+    page_frame["Intent Weight"] = page_frame["Page"].map(page_weight)
+    page_frame["Total Duration (min)"] = (page_frame.pop("Total_Duration_Seconds") / 60).round(1)
+    page_frame["Average Duration (sec)"] = page_frame.pop("Average_Duration_Seconds").round(1)
+    page_frame["Attraction Score"] = (
+        page_frame["Unique_Companies"] * 5
+        + page_frame["Pageviews"] * 2
+        + page_frame["Average Duration (sec)"].clip(upper=180) / 30
+        + page_frame["Intent Weight"]
+    ).round(1)
+    page_frame = page_frame.rename(columns={
+        "Unique_Companies": "Unique Companies",
+        "Countries": "Country Count",
+    }).sort_values(
+        ["Attraction Score", "Unique Companies", "Pageviews"],
+        ascending=[False, False, False],
+    ).reset_index(drop=True)
+
     output = Path("weekly_leads.xlsx")
     with pd.ExcelWriter(output) as writer:
         lead_frame.to_excel(writer, sheet_name="Leads", index=False)
+        page_frame.to_excel(writer, sheet_name="Page Performance", index=False)
         frame.sort_values("ts", ascending=False).to_excel(writer, sheet_name="Raw Visits", index=False)
 
-    print(f"Exported {len(lead_frame)} company leads to {output}")
+    print(f"Exported {len(lead_frame)} company leads and {len(page_frame)} page summaries to {output}")
     print(lead_frame.head(20).to_string(index=False))
 
 

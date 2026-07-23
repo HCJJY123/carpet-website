@@ -82,7 +82,9 @@ export async function POST(request: NextRequest) {
     lead[field] = text(raw[field], field === "message" ? 8_000 : 1_000);
   }
 
-  const required = ["name", "email", "country", "project_type", "product", "message"];
+  const required = lead.form_name === "contact_project_quote"
+    ? ["company", "email", "product", "quantity"]
+    : ["name", "email", "country", "project_type", "product", "message"];
   if (required.some((field) => !lead[field])) {
     return NextResponse.json({ ok: false, error: "Please complete all required fields" }, { status: 400 });
   }
