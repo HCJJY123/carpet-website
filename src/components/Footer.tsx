@@ -75,7 +75,6 @@ export default function Footer() {
               <li className="flex flex-col gap-1">
                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">Email Inquiry</span>
                 <a href={`mailto:${brandInfo.email}`} className="text-sm font-bold text-gray-200 hover:text-white transition-colors">{brandInfo.email}</a>
-                <a href={`mailto:${brandInfo.backupEmail}`} className="text-xs font-semibold text-gray-400 hover:text-white transition-colors">Backup: {brandInfo.backupEmail}</a>
               </li>
               <li className="flex flex-col gap-3">
                 <span className="text-[10px] font-black text-accent uppercase tracking-widest">Chat & Project Inquiry</span>

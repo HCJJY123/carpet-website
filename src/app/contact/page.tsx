@@ -83,7 +83,6 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     </span>
                     <span className="flex flex-col gap-1">
                       <a href={`mailto:${brandInfo.email}`} className="hover:text-primary transition-colors">{brandInfo.email}</a>
-                      <a href={`mailto:${brandInfo.backupEmail}`} className="hover:text-primary transition-colors">Backup: {brandInfo.backupEmail}</a>
                     </span>
                   </p>
                 </div>

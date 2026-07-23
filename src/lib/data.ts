@@ -15,7 +15,6 @@ export const brandInfo = {
   shortName: "VISHOME",
   url: "https://www.vishomecarpet.com",
   email: "sales@vishomecarpet.com",
-  backupEmail: "oilero@outlook.com",
   phone: "+86 152 2288 5400",
   whatsapp: "+86 152 2288 5400",
   wechat: "8615222885400",
