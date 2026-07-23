@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { isLocalizedCampaignPath } from "@/lib/localized-paths";
 
 export default function SendInquiryFloating() {
   const pathname = usePathname();
 
-  if (pathname === "/contact") return null;
+  if (pathname === "/contact" || isLocalizedCampaignPath(pathname)) return null;
 
   return (
     <Link

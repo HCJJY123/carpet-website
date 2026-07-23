@@ -1,10 +1,14 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { isLocalizedCampaignPath } from "@/lib/localized-paths";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 
 export default function WhatsAppFloating() {
   const pathname = usePathname();
+
+  if (isLocalizedCampaignPath(pathname)) return null;
+
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.floating, {
     placement: "floating_whatsapp",
     intent: "project_support",

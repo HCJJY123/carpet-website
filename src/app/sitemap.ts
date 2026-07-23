@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-data";
 import { caseStudies, productCategories, products } from "@/lib/data";
+import { localizedLandings } from "@/lib/localized-landings";
 import { productPath } from "@/lib/seo";
 import { solutionPages } from "@/lib/solution-data";
 
@@ -91,5 +92,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ]),
   }));
 
-  return [...staticEntries, ...categoryEntries, ...productEntries, ...projectEntries, ...solutionEntries, ...blogEntries];
+  const localizedLandingEntries: MetadataRoute.Sitemap = localizedLandings.map((page) => {
+    const product = products.find((item) => item.id === page.primaryProductId);
+
+    return {
+      url: `${BASE}${page.path}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.82,
+      images: product ? uniqueImages([product.image]) : undefined,
+    };
+  });
+
+  return [...staticEntries, ...categoryEntries, ...productEntries, ...projectEntries, ...solutionEntries, ...blogEntries, ...localizedLandingEntries];
 }

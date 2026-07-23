@@ -23,12 +23,18 @@ const ruPages = [
     description: "ПВХ-коврик miners moss для шлюзовых лотков и промывки золотоносного песка.",
     productId: "gold-mining-carpet-mat",
   },
+  {
+    href: "/ru/hotelnyy-kovrolin",
+    title: "Гостиничный ковролин",
+    description: "Axminster и печатный ковролин на заказ для номеров, коридоров, лобби и банкетных залов.",
+    productId: "luxury-hotel-broadloom",
+  },
 ];
 
 export const metadata: Metadata = {
-  title: "Коммерческие ковровые покрытия из Китая | Поставка DAP Алматы/Ташкент | VISHOME",
+  title: "Коммерческие и гостиничные ковровые покрытия из Китая | VISHOME",
   description:
-    "Ковровая плитка, коммерческий ковролин и коврики для золотодобычи от фабрики Vishomecarpet. Прямые поставки на условиях DAP в Алматы (Казахстан) и Ташкент (Узбекистан).",
+    "Ковровая плитка, гостиничный и коммерческий ковролин, а также коврики для золотодобычи от фабрики Vishomecarpet. Поставки в Казахстан, Узбекистан и страны СНГ.",
   alternates: {
     canonical: absoluteUrl("/ru"),
     languages: {
@@ -39,7 +45,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Коммерческие ковровые покрытия из Китая | VISHOME",
-    description: "Ковровая плитка, ковролин и коврики для золотодобычи. Поставка DAP Алматы/Ташкент.",
+    description: "Ковровая плитка, гостиничный ковролин и коврики для золотодобычи с поставкой в страны СНГ.",
     url: absoluteUrl("/ru"),
     type: "website",
     locale: "ru_RU",
@@ -56,13 +62,13 @@ export default function RuHubPage() {
             Коммерческие ковровые покрытия для Казахстана и Узбекистана
           </h1>
           <p className="max-w-2xl text-white/80 leading-relaxed">
-            Фабрика Vishomecarpet поставляет ковровую плитку, коммерческий ковролин в рулонах и коврики для золотодобычи. Поддерживаем поставку на условиях DAP до Алматы и Ташкента.
+            Фабрика Vishomecarpet поставляет ковровую плитку, коммерческий и гостиничный ковролин в рулонах, а также коврики для золотодобычи. Поддерживаем экспортные поставки в Казахстан, Узбекистан и другие страны СНГ.
           </p>
         </div>
       </section>
 
       <section className="section-padding">
-        <div className="container-fox grid gap-8 md:grid-cols-3">
+        <div className="container-fox grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {ruPages.map((page) => {
             const product = products.find((p) => p.id === page.productId);
             return (
