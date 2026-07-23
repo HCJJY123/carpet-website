@@ -8,60 +8,46 @@ const KEY = "47ce845ea2794869a16a0b4abad37110";
 const HOST = "www.vishomecarpet.com";
 const BASE = `https://${HOST}`;
 
-const urls = [
-  `${BASE}/`,
-  `${BASE}/products`,
-  `${BASE}/products/carpet-tiles`,
-  `${BASE}/products/wall-to-wall`,
-  `${BASE}/products/public-area`,
-  `${BASE}/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles`,
-  `${BASE}/products/carpet-tiles/commercial-nylon-tiles`,
-  `${BASE}/products/wall-to-wall/luxury-hotel-broadloom`,
-  `${BASE}/products/public-area/public-area-heavy-duty`,
-  `${BASE}/projects`,
-  `${BASE}/projects/case-1`,
-  `${BASE}/projects/case-2`,
-  `${BASE}/projects/case-3`,
-  `${BASE}/projects/case-4`,
-  `${BASE}/projects/case-5`,
-  `${BASE}/projects/case-6`,
-  `${BASE}/projects/case-7`,
-  `${BASE}/projects/case-8`,
-  `${BASE}/projects/case-9`,
-  `${BASE}/projects/case-10`,
-  `${BASE}/blog`,
-  `${BASE}/blog/commercial-space-carpet-tiles-maintenance-cost-guide`,
-  `${BASE}/blog/axminster-vs-wilton-vs-tufted-hospitality-guide`,
-  `${BASE}/blog/carpet-printing-technology-design-to-installation-guide`,
-  `${BASE}/blog/carpet-tile-specifications-high-traffic-durability-guide`,
-  `${BASE}/blog/hidden-cost-of-cheap-carpets-hospitality-roi-guide`,
-  `${BASE}/blog/shipping-optimization-5000sqm-mumbai-14days`,
-  `${BASE}/blog/climate-control-carpet-installation-stability-guide`,
-  `${BASE}/about-us`,
-  `${BASE}/factory`,
-  `${BASE}/faq`,
-  `${BASE}/contact`,
-  `${BASE}/request-sample-box`,
-  `${BASE}/solutions`,
-  `${BASE}/solutions/hotel-hospitality`,
-];
+async function loadSitemapUrls() {
+  const response = await fetch(`${BASE}/sitemap.xml`, {
+    headers: { "User-Agent": "VishomeCarpet-IndexNow/1.0" },
+  });
+  if (!response.ok) {
+    throw new Error(`Unable to load sitemap: HTTP ${response.status}`);
+  }
 
-const payload = {
-  host: HOST,
-  key: KEY,
-  keyLocation: `${BASE}/${KEY}.txt`,
-  urlList: urls,
-};
+  const xml = await response.text();
+  const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
+  const validUrls = [...new Set(urls.filter((url) => url.startsWith(`${BASE}/`)))];
 
-async function submit(endpoint) {
+  if (validUrls.length === 0) {
+    throw new Error("No Vishome URLs found in sitemap.xml");
+  }
+
+  return validUrls;
+}
+
+async function submit(endpoint, urls) {
+  const payload = {
+    host: HOST,
+    key: KEY,
+    keyLocation: `${BASE}/${KEY}.txt`,
+    urlList: urls,
+  };
   const res = await fetch(endpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json; charset=utf-8" },
     body: JSON.stringify(payload),
   });
-  console.log(`[${endpoint}] → ${res.status} ${res.statusText}`);
+  if (![200, 202].includes(res.status)) {
+    const message = await res.text();
+    throw new Error(`${endpoint} returned HTTP ${res.status}: ${message}`);
+  }
+  console.log(`[${endpoint}] -> ${res.status} ${res.statusText} (${urls.length} URLs)`);
+  return urls.length;
 }
 
-await submit("https://api.indexnow.org/indexnow");
-await submit("https://www.bing.com/indexnow");
-console.log(`✅ IndexNow submitted ${urls.length} URLs`);
+const urls = await loadSitemapUrls();
+const indexNowCount = await submit("https://api.indexnow.org/indexnow", urls);
+const bingCount = await submit("https://www.bing.com/indexnow", urls);
+console.log(`IndexNow and Bing accepted ${Math.min(indexNowCount, bingCount)} sitemap URLs.`);
