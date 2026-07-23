@@ -322,10 +322,10 @@ export default function Header() {
               rel="noopener noreferrer"
               data-whatsapp-placement="mobile_header"
               data-whatsapp-intent="project_support"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#25D366]/35 bg-white text-[#168a42]"
               aria-label="Contact VISHOME on WhatsApp Business"
             >
-              <WhatsAppIcon className="h-5 w-5" />
+              <WhatsAppIcon className="h-4 w-4" />
             </a>
             <div className="relative" data-language-switcher>
               <LanguageButton
