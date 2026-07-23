@@ -5,7 +5,7 @@ export interface Product { id: string; name: string; category: "carpet-tiles" | 
 export interface CaseSpecItem { label: string; value: string; }
 export interface CaseSection { title: string; paragraphs: string[]; image?: string; imageAlt?: string; imageCaption?: string; }
 export interface CaseCostItem { item: string; amount: string; }
-export interface CaseStudy { id: string; title: string; subtitle?: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; image: string; description: string; projectSpecs: CaseSpecItem[]; sections: CaseSection[]; technicalDetails: string[]; designHighlights: string[]; results: string[]; gallery?: string[]; costAnalysis?: CaseCostItem[]; }
+export interface CaseStudy { id: string; title: string; metadataTitle?: string; h1?: string; tag?: string; subtitle?: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; image: string; imageAlt?: string; description: string; specificationTitle?: string; projectSpecs: CaseSpecItem[]; sections: CaseSection[]; technicalDetails: string[]; designHighlights: string[]; results: string[]; gallery?: string[]; costAnalysis?: CaseCostItem[]; faqs?: { question: string; answer: string; }[]; recommendedProductIds?: string[]; }
 
 export const brandInfo = {
   name: "Vishome Global Commercial Carpet Co., Ltd.",
@@ -1387,5 +1387,106 @@ export const caseStudies: CaseStudy[] = [
       "The carpet contributed directly to the flagship's premium brand experience.",
       "The design was incorporated into broader visual marketing content."
     ]
+  },
+  {
+    id: "case-11",
+    title: "Exhibition & Expo Booth Carpet Application Guide — Johannesburg Convention Reference",
+    metadataTitle: "Exhibition & Expo Booth Carpet Application Guide — Johannesburg Convention Reference",
+    h1: "Exhibition & Expo Booth Carpet: Multi-Show Reusable Specification Guide",
+    tag: "Technical Overview · Events & Exhibitions",
+    category: "public-area",
+    image: "/images/projects/case-11/exhibition-booth-light-grey-carpet.webp",
+    imageAlt: "Reference scene of a trade show booth finished with low-pile light grey exhibition carpet",
+    description: "Needle-punched exhibition carpet specification for expo booths and convention halls: low-pile profile, latex backing, fire rating, and multi-show reuse.",
+    specificationTitle: "Specification Table",
+    projectSpecs: [
+      { label: "Construction", value: "Needle-punched" },
+      { label: "Fibre", value: "100% Polyester / PP" },
+      { label: "Pile Height", value: "2.5–4.0 mm (booth) / 5–8 mm (aisle)" },
+      { label: "Weight", value: "250–600 g/m²" },
+      { label: "Backing", value: "Latex / Rubber / Gel" },
+      { label: "Roll Width", value: "2 m / 4 m" },
+      { label: "Fire Rating", value: "ASTM E648 · EN 13501-1 Bfl-s1" },
+      { label: "Reuse Cycles", value: "Single-use 1 show / Reusable 5–8 shows" },
+      { label: "Standard Colours", value: "Light Grey · Dark Grey · Black · Red · Blue" },
+      { label: "Custom Print", value: "Available, digital print" }
+    ],
+    sections: [
+      {
+        title: "Application Context",
+        paragraphs: [
+          "Exhibition carpet is measured in shows, not years. A booth floor covering may be installed and lifted a dozen times in the life of a single roll, and each cycle involves folding, transport, storage, and re-laying — usually by different crews under time pressure. This changes what matters in the specification. Abrasion resistance over a ten-year service life, the benchmark that governs office and hospitality carpet, is largely irrelevant here. Edge tear strength, dimensional recovery after rolling, and backing adhesion under repeated lifting are what determine whether a roll survives its fourth show.",
+          "Buyers in this category also purchase differently. A single booth may need only 80 to 100 square metres, which reads as a small order against commercial project volumes. But exhibition contractors and stand builders return several times a year, and the decision on the first order tends to set the supplier relationship for the whole show calendar."
+        ]
+      },
+      {
+        title: "Why Pile Height Governs Booth Carpet",
+        paragraphs: [
+          "Pile height is the most frequently underestimated variable in booth carpet, and the most common reason a sample is rejected.",
+          "A high-pile surface creates three practical problems on a stand. Truss feet and display podiums sit unevenly, which becomes visible once shelving is loaded. Wheeled cases and product crates meet noticeable resistance when being dragged into position during build-up. And a thicker pile increases rolled diameter, which raises both storage volume and freight cost across a multi-city show circuit.",
+          "For booth flooring, a compressed profile in the range of 2.5 to 4.0 mm gives a flat, stable surface that still reads as finished underfoot. Aisle and walkway areas, which take heavier foot traffic and less equipment loading, can move up to 5 to 8 mm. Specifying pile height explicitly at enquiry stage saves a sampling round, since two carpets of identical weight and fibre can differ substantially in profile."
+        ],
+        image: "/images/projects/case-11/exhibition-carpet-pile-latex-backing-detail.webp",
+        imageAlt: "Close-up reference view of low-pile light grey exhibition carpet with black latex backing"
+      },
+      {
+        title: "One-Time Use versus Multi-Show Reuse",
+        paragraphs: [
+          "Two distinct product routes serve this market, and the cost logic separates them clearly.",
+          "Single-use exhibition carpet uses a lighter needle-punched construction with a thin latex coat. It delivers the lowest cost per show for a one-off event and is discarded at teardown. For organisers covering large hall areas for a single occasion, this remains the rational choice.",
+          "Reusable exhibition carpet uses a heavier latex or gel backing with reinforced edge stability. The unit cost is higher, but the cost per show falls with each reuse. In practice the crossover sits around the third installation, after which the reusable specification is the cheaper option on a per-show basis. Contractors running a fixed annual circuit of shows generally reach that threshold within one season.",
+          "The variable that decides actual service life is handling discipline rather than the carpet itself. Rolled storage rather than folded, dry conditions between shows, and consistent roll direction will extend a reusable specification to the upper end of its range."
+        ],
+        image: "/images/projects/case-11/reusable-exhibition-carpet-rolls-container-loading.webp",
+        imageAlt: "Reference scene showing reusable light grey exhibition carpet rolls, warehouse storage, and container planning"
+      },
+      {
+        title: "Fire Rating Compliance",
+        paragraphs: [
+          "Most international convention centres require floor coverings to hold a recognised reaction-to-fire classification before a stand will pass inspection. The two standards most often requested are ASTM E648 and EN 13501-1, with Bfl-s1 the usual minimum for exhibition halls.",
+          "Certification should be treated as a document supply question, not only a material question. Venue approval typically requires the test report to accompany the shipment or to be submitted ahead of build-up, and a delay in paperwork can hold a stand at the loading dock as effectively as a delay in the carpet itself. Confirm which standard the venue recognises at the quotation stage, since a report issued to one standard is not automatically accepted against the other."
+        ]
+      },
+      {
+        title: "Colour and Print Options",
+        paragraphs: [
+          "Light grey, dark grey, black, red, and blue account for the majority of exhibition carpet demand. Light grey is the most frequently requested, largely because it sits neutrally against branded stand graphics without competing with them.",
+          "Digitally printed exhibition carpet is available for stands that need floor-level branding or wayfinding. Print work carries a longer production window than stock colours and a higher minimum order, so it should be raised early in the planning cycle rather than added late."
+        ]
+      },
+      {
+        title: "Planning Around a Fixed Show Date",
+        paragraphs: [
+          "Exhibition dates do not move. Working backwards from build-up day rather than forwards from order date is the safer planning method: allow for production, ocean or air freight, customs clearance, and local delivery to the venue, then add contingency ahead of the build-up window rather than against the show opening.",
+          "For first-time orders, requesting a sample of the exact pile height and colour before committing to the full quantity removes the single most common cause of late-stage substitution."
+        ]
+      }
+    ],
+    technicalDetails: [],
+    designHighlights: [],
+    results: [],
+    faqs: [
+      {
+        question: "What is the difference between one-time and reusable exhibition carpet?",
+        answer: "Single-use carpet has a lighter needle-punched body and a thin latex coat, giving the lowest cost for one event. Reusable carpet uses a heavier latex or gel backing with reinforced edge stability, costs more per square metre, and is intended to be lifted and relaid across multiple shows."
+      },
+      {
+        question: "Can exhibition carpet be reused across multiple trade shows?",
+        answer: "Yes, provided the reusable specification is ordered rather than the single-use construction. Service life depends heavily on handling: storing rolls rolled rather than folded, keeping them dry between events, and maintaining consistent roll direction all extend the number of usable cycles."
+      },
+      {
+        question: "Do you provide fire certification documents for convention centre approval?",
+        answer: "Yes. Test reports can be issued to ASTM E648 or EN 13501-1. Confirm which standard your venue recognises when requesting a quotation, as acceptance is not interchangeable between the two."
+      },
+      {
+        question: "What is the minimum order quantity for a single booth project?",
+        answer: "Booth-scale orders are accepted. Smaller quantities are commonly requested in this category, and a single-stand requirement does not need to be aggregated into a larger project before enquiry."
+      },
+      {
+        question: "How long does production and shipping take for a fixed exhibition date?",
+        answer: "Lead time depends on colour availability, whether printing is involved, and the shipping route. Plan backwards from build-up day rather than from the show opening, and confirm the timeline at quotation stage so contingency can be built in before the venue access window."
+      }
+    ],
+    recommendedProductIds: []
   }
 ];

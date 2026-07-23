@@ -29,12 +29,12 @@ export default function ProjectsPage() {
                 <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-sm shadow-xl md:mb-10">
                   <ProductImage
                     src={cs.id === "case-6" ? "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp" : cs.image}
-                    alt={cs.title}
+                    alt={cs.imageAlt ?? cs.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute top-6 left-6 bg-primary px-4 py-2 text-[10px] font-black text-white uppercase tracking-widest">
-                    {cs.category === "carpet-tiles" ? "Modular" : "Hospitality"}
+                    {cs.tag ? cs.tag.split(" · ").at(-1) : cs.category === "carpet-tiles" ? "Modular" : "Hospitality"}
                   </div>
                 </div>
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 uppercase tracking-tight group-hover:text-accent transition-colors">{cs.title}</h2>

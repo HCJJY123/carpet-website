@@ -237,7 +237,7 @@ export default function Home() {
                 <div className="aspect-[4/3] overflow-hidden bg-surface mb-6">
                   <ProductImage
                     src={cs.id === "case-6" ? "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp" : cs.image}
-                    alt={cs.title}
+                    alt={cs.imageAlt ?? cs.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                   />
                 </div>
