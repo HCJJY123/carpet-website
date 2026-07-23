@@ -74,8 +74,8 @@ export default function Home() {
               <Link href="/request-sample-box" className="inline-flex min-h-14 items-center justify-center rounded-sm border border-white/55 px-8 py-4 text-center text-xs font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-white hover:text-primary">
                 Request Sample Options
               </Link>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center px-3 text-center text-[10px] font-black uppercase tracking-[0.1em] text-white/80 underline decoration-white/35 underline-offset-4 transition-colors hover:text-white">
-                Quick Question on WhatsApp
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-sm bg-[#25D366] px-8 py-4 text-center text-sm font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#1ebe5d]">
+                WhatsApp Project Support
               </a>
             </div>
             <div className="mt-8 grid gap-3 text-[10px] font-black uppercase tracking-[0.18em] text-white/70 sm:grid-cols-3">
