@@ -69,6 +69,33 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const productJsonLd = product
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Коврик miners moss для золотодобычи",
+      description: "ПВХ-коврик miners moss для шлюзовых лотков, промывки россыпного золота и старательских установок.",
+      image: [absoluteUrl(product.image)],
+      sku: product.id,
+      brand: { "@type": "Brand", name: "VISHOME" },
+      manufacturer: { "@type": "Organization", name: "VISHOME" },
+      material: "ПВХ / винил",
+      size: "1 м × 15 м; толщина 10 / 15 / 20 мм",
+      audience: { "@type": "BusinessAudience", audienceType: "Золотодобывающие компании, дистрибьюторы и поставщики оборудования" },
+      offers: product.fobPrice
+        ? {
+            "@type": "AggregateOffer",
+            url: absoluteUrl(ruPath),
+            priceCurrency: product.fobPrice.currency,
+            lowPrice: product.fobPrice.lowPrice,
+            highPrice: product.fobPrice.highPrice,
+            offerCount: 1,
+            availability: "https://schema.org/InStock",
+          }
+        : undefined,
+    }
+  : null;
+
 export const metadata: Metadata = product
   ? {
       title: "Коврик для золотодобычи (miners moss) для шлюзовых лотков | Поставка DAP Алматы | VISHOME",
@@ -105,6 +132,7 @@ export default function GoldMiningRuPage() {
     <div className="bg-white min-h-screen" lang="ru">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }} />
+      {productJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(productJsonLd) }} />}
 
       <nav className="border-b border-border bg-surface py-3 md:py-4">
         <div className="container-fox">
@@ -163,11 +191,17 @@ export default function GoldMiningRuPage() {
                 </a>
                 <a
                   href="#ru-inquiry-form"
+                  data-track-event="quote_cta_click"
+                  data-item-name="Коврик miners moss для золотодобычи"
+                  data-item-category="gold_mining_mat"
                   className="flex min-h-12 items-center justify-center rounded-sm bg-primary px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.12em] text-white shadow-md transition-all hover:bg-black"
                 >
-                  Оставить заявку
+                  Получить цену и доставку
                 </a>
               </div>
+              <p className="mt-4 text-center text-xs font-bold leading-relaxed text-primary sm:text-left">
+                Ответ специалиста в течение 24 часов. Рассчитаем FOB, DAP до Казахстана и поставку в другие страны Центральной Азии.
+              </p>
             </div>
           </div>
         </div>
