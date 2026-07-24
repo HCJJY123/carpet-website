@@ -4,6 +4,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { isLocalizedCampaignPath } from "@/lib/localized-paths";
+import { getPathLocale, type SiteLocale } from "@/lib/site-locales";
+
+const quoteLabels: Record<SiteLocale, string> = {
+  en: "Get Quote",
+  fr: "Devis",
+  es: "Cotizar",
+  ar: "طلب عرض",
+  de: "Angebot",
+  pt: "Cotação",
+  ru: "Запрос цены",
+  ja: "見積依頼",
+  ko: "견적 요청",
+};
 
 export default function SendInquiryFloating() {
   const pathname = usePathname();
@@ -41,12 +54,14 @@ function HomeInquiryFloating() {
 }
 
 function InquiryFloatingLink({ showOnMobile }: { showOnMobile: boolean }) {
+  const pathname = usePathname();
+  const locale = getPathLocale(pathname) ?? "en";
 
   return (
     <Link
       href="/contact#quote-form"
-      className={`group fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-4 z-[99] h-12 w-[148px] items-center gap-2 rounded-lg border border-white/15 bg-[#C8752A] px-2.5 text-white shadow-[0_4px_14px_rgba(72,43,18,0.18)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_6px_18px_rgba(72,43,18,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2 motion-reduce:transform-none md:bottom-36 md:left-auto md:right-8 md:flex md:h-14 md:w-[210px] md:gap-3 md:px-3 ${showOnMobile ? "flex" : "hidden"}`}
-      aria-label="Send inquiry and submit project quote form"
+      className={`group fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-4 z-[99] h-12 w-[132px] items-center gap-2 rounded-lg border border-white/15 bg-[#C8752A] px-2.5 text-white shadow-[0_4px_14px_rgba(72,43,18,0.18)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_6px_18px_rgba(72,43,18,0.22)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2 motion-reduce:transform-none md:bottom-36 md:left-auto md:right-8 md:flex md:h-14 md:w-[164px] md:gap-3 md:px-3 ${showOnMobile ? "flex" : "hidden"}`}
+      aria-label="Open project quote form"
     >
       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#C8752A] shadow-[inset_0_0_0_1px_rgba(200,117,42,0.12)] md:h-9 md:w-9">
         <svg
@@ -65,30 +80,12 @@ function InquiryFloatingLink({ showOnMobile }: { showOnMobile: boolean }) {
           <path d="M8 12h5" />
         </svg>
       </span>
-      <span className="min-w-0 flex-1">
-        <span className="block whitespace-nowrap text-[10px] font-black uppercase leading-none tracking-[0.1em] md:text-[11px]">
-          Send Inquiry
-        </span>
-        <span className="mt-1 block whitespace-nowrap text-[8px] font-bold uppercase leading-none tracking-[0.08em] text-white/85 md:text-[9px]">
-          <span className="md:hidden">Get a Quote</span>
-          <span className="hidden md:inline">Submit Quote Form</span>
-        </span>
-      </span>
-      <svg
-        viewBox="0 0 20 20"
-        width="14"
-        height="14"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="hidden shrink-0 opacity-80 transition-transform duration-200 group-hover:translate-x-0.5 md:block"
-        aria-hidden="true"
+      <span
+        className="notranslate min-w-0 flex-1 whitespace-nowrap text-[10px] font-black uppercase leading-none tracking-[0.1em] md:text-[11px]"
+        translate="no"
       >
-        <path d="M4 10h11" />
-        <path d="m11 6 4 4-4 4" />
-      </svg>
+        {quoteLabels[locale]}
+      </span>
     </Link>
   );
 }
