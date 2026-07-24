@@ -38,6 +38,9 @@ const ALLOWED_FIELDS = [
   "session_product_views",
   "session_max_engaged_seconds",
   "session_section_views",
+  "visitor_id",
+  "session_id",
+  "visitor_label",
   "privacy_policy",
 ] as const;
 

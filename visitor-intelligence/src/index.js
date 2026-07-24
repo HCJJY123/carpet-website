@@ -3,7 +3,7 @@ const DEFAULT_ALLOWED_ORIGINS = [
   "https://vishomecarpet.com",
 ];
 
-const NOISE = new RegExp([
+const ISP_NETWORK = new RegExp([
   "telecom|telekom|telefonica|telenor|telia|telstra|telus|t-mobile|tmobile",
   "comcast|charter|spectrum|cox communi|centurylink|frontier|windstream|altice|optimum",
   "verizon|at&t|att internet|sprint|us cellular|lumen",
@@ -15,10 +15,16 @@ const NOISE = new RegExp([
   "chinanet|china unicom|china mobile|china telecom|cnc group",
   "broadband|cablecom|cable ?one|wireless|cellular|mobil|isp\\b|internet service",
   "fibre|fiber to the|dsl|residential|home network|consumer",
+].join("|"), "i");
+
+const CLOUD_NETWORK = new RegExp([
   "amazon|aws|google llc|google cloud|microsoft|azure|oracle cloud|alibaba|tencent|huawei cloud",
   "digitalocean|linode|akamai|fastly|cloudflare|ovh|hetzner|vultr|contabo|leaseweb|scaleway",
   "godaddy|namecheap|hostgator|bluehost|siteground|wp engine|squarespace|wix|shopify|vercel|netlify",
   "hosting|datacenter|data ?center|colocation|dedicated server|vpn|proxy|tor exit|hurricane electric",
+].join("|"), "i");
+
+const AUTOMATION_NETWORK = new RegExp([
   "facebook|meta platforms|bytedance|semrush|ahrefs|majestic|censys|shodan|palo alto|zscaler",
 ].join("|"), "i");
 
@@ -99,8 +105,9 @@ async function recordLead(request, env) {
       purchase_timeframe, need_samples, dap_destination, message, page_url, page_path,
       landing_page, referrer, utm_source, utm_medium, utm_campaign, utm_term,
       utm_content, gclid, fbclid, lead_score, lead_grade, lead_score_reasons,
-      session_product_views, session_max_engaged_seconds, session_section_views
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+      session_product_views, session_max_engaged_seconds, session_section_views,
+      visitor_id, session_id, visitor_label
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   ).bind(
     leadId,
     submittedAt,
@@ -136,7 +143,10 @@ async function recordLead(request, env) {
     safeText(lead.lead_score_reasons, 2000),
     safeInteger(lead.session_product_views, 0, 1000),
     safeInteger(lead.session_max_engaged_seconds, 0, 86400),
-    safeInteger(lead.session_section_views, 0, 1000)
+    safeInteger(lead.session_section_views, 0, 1000),
+    safeText(lead.visitor_id, 80),
+    safeText(lead.session_id, 80),
+    safeText(lead.visitor_label, 32)
   ).run();
 
   return Response.json(
@@ -166,7 +176,7 @@ async function recordVisit(request, env, allowedOrigins) {
     return;
   }
 
-  const duration = Math.min(Math.max(Number(body.dur) || 0, 0), 3600);
+  const duration = Math.min(Math.max(Number(body.dur) || 0, 0), 86400);
   const minDuration = clampNumber(env.MIN_DURATION_SECONDS, 1, 60, 5);
   if (duration < minDuration) return;
 
@@ -187,31 +197,48 @@ async function recordVisit(request, env, allowedOrigins) {
     country = ipInfo.country_code || ipInfo.country || country;
   }
 
-  if (!org || NOISE.test(org)) return;
+  org = safeText(org, 180) || "Unknown network";
+  domain = safeText(domain, 180);
+  const classification = classifyNetwork(org, domain);
+  const internalCountries = parseList(env.INTERNAL_COUNTRIES || env.DROP_COUNTRIES, []);
+  const internalVisit = country && internalCountries.includes(country.toUpperCase()) ? 1 : 0;
 
-  const dropCountries = parseList(env.DROP_COUNTRIES, []);
-  if (country && dropCountries.includes(country.toUpperCase())) return;
-
-  const blocked = await env.DB.prepare("SELECT org FROM blocklist WHERE lower(org) = lower(?) LIMIT 1").bind(org).first();
-  if (blocked) return;
+  if (org !== "Unknown network") {
+    const blocked = await env.DB.prepare("SELECT org FROM blocklist WHERE lower(org) = lower(?) LIMIT 1").bind(org).first();
+    if (blocked) return;
+  }
 
   const salt = env.VISITOR_HASH_SALT || env.SALT || "";
   if (!salt) return;
 
   const ipHash = await sha256(`${ip}:${salt}`);
+  const attribution = parseAttribution(body);
+  const intent = scoreVisitIntent(body, duration, attribution);
+  const productInterest = inferProductInterest(body.path, attribution.utmTerm);
 
   await env.DB.prepare(
     `INSERT INTO visits (
-      day, ip_hash, asn, org, domain, country, site, path, query, referrer,
-      landing, event, language, timezone, screen, duration
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+      day, ip_hash, visitor_id, session_id, visitor_label, asn, org, domain, country,
+      network_type, company_confidence, company_candidate, internal_visit, classification_reason,
+      site, path, query, referrer, landing, event, language, timezone, screen, duration,
+      utm_source, utm_medium, utm_campaign, utm_term, gclid, product_interest,
+      intent_score, intent_grade, intent_reasons
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   ).bind(
     new Date().toISOString().slice(0, 10),
     ipHash,
+    safeText(body.visitor_id, 80),
+    safeText(body.session_id, 80),
+    safeText(body.visitor_label, 32),
     safeText(asn, 32),
-    safeText(org, 180),
-    safeText(domain, 180),
+    org,
+    domain,
     safeText(country, 8),
+    classification.networkType,
+    classification.companyConfidence,
+    classification.companyCandidate,
+    internalVisit,
+    classification.reason,
     safeText(body.site, 100),
     safeText(body.path, 300),
     safeText(body.query, 300),
@@ -221,8 +248,120 @@ async function recordVisit(request, env, allowedOrigins) {
     safeText(body.lang, 40),
     safeText(body.tz, 80),
     safeText(body.screen, 40),
-    duration
+    duration,
+    attribution.utmSource,
+    attribution.utmMedium,
+    attribution.utmCampaign,
+    attribution.utmTerm,
+    attribution.gclid,
+    productInterest,
+    intent.score,
+    intent.grade,
+    intent.reasons.join("; ")
   ).run();
+}
+
+function classifyNetwork(org, domain) {
+  const value = `${org} ${domain}`.trim();
+  if (!value || org === "Unknown network") {
+    return {
+      networkType: "unknown",
+      companyConfidence: "low",
+      companyCandidate: 0,
+      reason: "No organization data available",
+    };
+  }
+
+  if (AUTOMATION_NETWORK.test(value)) {
+    return {
+      networkType: "automation",
+      companyConfidence: "low",
+      companyCandidate: 0,
+      reason: "Automation, security, or marketing platform network",
+    };
+  }
+
+  if (CLOUD_NETWORK.test(value)) {
+    return {
+      networkType: "cloud",
+      companyConfidence: "low",
+      companyCandidate: 0,
+      reason: "Cloud, hosting, VPN, or data-center network",
+    };
+  }
+
+  if (ISP_NETWORK.test(value)) {
+    return {
+      networkType: "isp",
+      companyConfidence: "low",
+      companyCandidate: 0,
+      reason: "Consumer, mobile, or telecommunications network",
+    };
+  }
+
+  return {
+    networkType: "business",
+    companyConfidence: domain ? "high" : "medium",
+    companyCandidate: 1,
+    reason: domain ? "Business organization with domain match" : "Business-like organization name without domain match",
+  };
+}
+
+function parseAttribution(body) {
+  const params = new URLSearchParams(String(body.query || "").replace(/^\\?/, ""));
+  return {
+    utmSource: safeText(body.utm_source || params.get("utm_source"), 300),
+    utmMedium: safeText(body.utm_medium || params.get("utm_medium"), 300),
+    utmCampaign: safeText(body.utm_campaign || params.get("utm_campaign"), 500),
+    utmTerm: safeText(body.utm_term || params.get("utm_term"), 500),
+    gclid: safeText(body.gclid || params.get("gclid"), 500),
+  };
+}
+
+function scoreVisitIntent(body, duration, attribution) {
+  const path = String(body.path || "").toLowerCase();
+  const referrer = String(body.ref || "").toLowerCase();
+  const searchIntent = `${attribution.utmTerm} ${path}`.toLowerCase();
+  let score = Math.min(Math.round(duration / 15), 20);
+  const reasons = duration >= 300 ? ["Long visit"] : [];
+
+  const add = (points, reason) => {
+    score += points;
+    reasons.push(reason);
+  };
+
+  if (path.includes("/thank-you")) add(30, "Reached thank-you page");
+  else if (path.includes("/contact")) add(22, "Viewed contact/quotation page");
+  else if (path.includes("/request-sample-box")) add(20, "Viewed sample request page");
+  else if (/\/products\/[^/]+\/[^/]+/.test(path)) add(12, "Viewed a specific product");
+  else if (path.includes("/products/") || path.includes("commercial-carpet-tiles")) add(8, "Viewed a product category");
+  else if (path.includes("/solutions") || path.includes("/projects")) add(5, "Viewed solution or project content");
+
+  if (/google\.|bing\.|yahoo\./.test(referrer)) add(4, "Search-engine referral");
+  if (attribution.gclid || attribution.utmMedium.toLowerCase() === "cpc") add(5, "Paid-search visit");
+  if (/supplier|wholesale|price|manufacturer|distributor|from china|contract carpet|custom/.test(searchIntent)) {
+    add(6, "Commercial purchase keyword");
+  }
+
+  score = Math.min(Math.max(Math.round(score), 0), 100);
+  return {
+    score,
+    grade: score >= 35 ? "A" : score >= 18 ? "B" : "C",
+    reasons: reasons.length ? reasons : ["General browsing"],
+  };
+}
+
+function inferProductInterest(pathValue, termValue) {
+  const value = `${pathValue || ""} ${termValue || ""}`.toLowerCase();
+  if (value.includes("gold-mining")) return "Gold Mining Carpet Mat";
+  if (value.includes("wool") || value.includes("sculpted")) return "Custom Wool Carpet";
+  if (value.includes("wall-to-wall") || value.includes("hotel")) return "Hotel / Wall-to-Wall Carpet";
+  if (value.includes("carpet-tile") || value.includes("carpet tile")) return "Commercial Carpet Tiles";
+  if (value.includes("public-area")) return "Public Area Carpet";
+  if (value.includes("request-sample")) return "Carpet Samples";
+  if (value.includes("contact")) return "Project Quotation";
+  if (value.includes("projects") || value.includes("case-")) return "Project Case Research";
+  return "Commercial Carpet";
 }
 
 async function getIpInfo(ip, env) {

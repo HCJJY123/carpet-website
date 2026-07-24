@@ -31,7 +31,8 @@ const sections = [
     body: [
       "When you contact Vishome Carpet through our website, request a quotation, submit a sample request, or complete a Google Ads lead form, we may collect your name, company name, email address, phone number, country or region, project requirements, product interests, message content, and other details you choose to provide.",
       "We may also collect basic technical information such as browser type, device information, referring page, IP address, approximate location, form submission time, and website usage activity for security, analytics, and service improvement purposes.",
-      "For business analytics, we may process IP-derived organization information such as ASN, organization name, country, and company domain where available. We use hashed IP values for visit grouping and do not use this data to identify individual people.",
+      "For business analytics, we may process IP-derived organization information such as ASN, organization name, country, company domain, and network classification where available. We use hashed IP values and randomly generated visitor and session identifiers for visit grouping and do not use this data to identify individual people.",
+      "We may associate those pseudonymous identifiers with website pages viewed, product interests, advertising attribution, engagement duration, and Microsoft Clarity session recordings so that our team can understand business demand and distinguish likely company traffic from residential, mobile, cloud, or internal traffic.",
     ],
   },
   {
@@ -40,12 +41,14 @@ const sections = [
       "We use the information you provide to respond to inquiries, prepare quotations, arrange sample support, communicate about commercial carpet projects, provide product information, improve our website, and support customer service and sales follow-up.",
       "We may also use submitted information to understand lead quality, measure marketing performance, prevent spam or abuse, and maintain business records related to project communication.",
       "Project inquiry data may be assigned an internal lead score based on the information submitted and non-sensitive website engagement signals. This score helps our sales team prioritize relevant B2B requests; it does not produce legal or similarly significant automated decisions.",
+      "Website visits may also receive an internal interest category and company-match confidence level. These indicators support manual sales research and prioritization and are not treated as proof of a visitor's identity or employer.",
     ],
   },
   {
     title: "Cookies",
     body: [
       "Our website may use cookies and similar technologies to keep the site functional, understand visitor behavior, measure advertising performance, and improve the user experience.",
+      "We may store a random first-party visitor identifier in local storage and a random session identifier in session storage. These identifiers help connect website engagement records with the corresponding analytics session without storing a raw IP address in our visitor database.",
       "When you enter or select a translated website experience, we use a language preference cookie to keep subsequent pages in the same language. Google Translate may also set a translation preference cookie so that the selected language remains active while you navigate the website.",
       "You can control cookies through your browser settings. Disabling cookies may affect some website features, analytics, or form-related functionality.",
     ],
@@ -55,7 +58,7 @@ const sections = [
     body: [
       "We may use third-party services such as Google Ads, Google Analytics, website hosting providers, form processing tools, email systems, and communication platforms to operate the website, process inquiries, analyze traffic, and manage marketing campaigns.",
       "For translated browsing outside our manually translated landing pages, we may use Google Translate. Google may receive the page text needed for translation, the selected language, and standard technical request information such as IP address, browser, and device data. Information typed into inquiry form fields is not intentionally submitted to Google Translate by Vishome.",
-      "We may also use Cloudflare and IPinfo Lite to help understand company-level website traffic, filter non-business traffic, protect the website, and improve B2B sales follow-up.",
+      "We may also use Microsoft Clarity, Cloudflare, and IPinfo Lite to understand website behavior, classify network traffic, estimate company-level interest where technically possible, protect the website, and improve B2B sales follow-up.",
       "Website inquiry details are delivered through Formspree and may also be stored in Vishome's access-controlled Cloudflare D1 database so our team can manage quotations, follow-up status, lead quality, and advertising attribution in one record.",
       "These third-party services may process information according to their own privacy policies. We do not sell your personal information to third parties.",
     ],
@@ -114,7 +117,7 @@ export default function PrivacyPolicyPage() {
             <div className="space-y-8">
               <div className="border-b border-border pb-8">
                 <p className="text-sm leading-7 text-muted">
-                  Effective date: July 22, 2026. This policy applies to information collected on
+                  Effective date: July 24, 2026. This policy applies to information collected on
                   {" "}
                   <Link href="/" className="font-bold text-primary hover:text-accent">
                     www.vishomecarpet.com

@@ -13,8 +13,8 @@ id = "5cb4456b929241fd9868e7f010c4cc1c"
 
 [vars]
 ALLOWED_ORIGINS = "https://www.vishomecarpet.com,https://vishomecarpet.com"
-DROP_COUNTRIES = "CN"
-MIN_DURATION_SECONDS = "5"
+INTERNAL_COUNTRIES = "CN"
+MIN_DURATION_SECONDS = "1"
 MAX_BODY_BYTES = "4096"
 
 # Secrets:

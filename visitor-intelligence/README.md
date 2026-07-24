@@ -1,8 +1,10 @@
 # Vishome Visitor Intelligence
 
-Independent Cloudflare Worker endpoint for company-level visitor intelligence.
+Independent Cloudflare Worker endpoint for visitor- and company-level intelligence.
 
-The website does not need to be proxied by Cloudflare. VishomeCarpet sends a small `text/plain` beacon to this Worker, the Worker reads the Cloudflare visitor IP, enriches it with IPinfo Lite ASN/company data, filters consumer ISP/cloud traffic, hashes the IP, and stores company-level visits in D1.
+The website does not need to be proxied by Cloudflare. VishomeCarpet sends a small `text/plain` beacon to this Worker. The Worker hashes the visitor IP, enriches the event with IPinfo Lite ASN/company data, classifies the network as business, ISP/mobile, cloud/VPN, automation, or unknown, and stores the event in D1. Consumer and internal-country visits are retained with review flags instead of being deleted.
+
+The browser creates a random first-party visitor ID and per-tab session ID. The same pseudonymous identity is sent to D1 and Microsoft Clarity so a ranked report can be matched to the relevant Clarity recording. No raw visitor IP is stored in D1.
 
 ## 1. Cloudflare Setup
 
@@ -27,6 +29,13 @@ Create tables:
 
 ```bash
 wrangler d1 execute vishome_visitors --remote --file=./schema.sql
+```
+
+For an existing installation, apply the visitor-correlation migration once:
+
+```bash
+wrangler d1 execute vishome_visitors --remote \
+  --file=./migrations/2026-07-24-visitor-correlation.sql
 ```
 
 Create secrets:
@@ -64,19 +73,11 @@ The browser posts to Vishome's same-origin `/api/lead` route. That route sends t
 
 ## 3. Test
 
-For China-side testing, temporarily set this in `wrangler.toml`:
-
-```toml
-DROP_COUNTRIES = ""
-```
-
-Then deploy and visit the site for more than 5 seconds. Check latest rows:
+China visits are retained and marked as internal-country traffic through `INTERNAL_COUNTRIES`. Deploy and visit the site for at least one second, then check the latest rows:
 
 ```bash
 wrangler d1 execute vishome_visitors --remote --command "SELECT * FROM visits ORDER BY id DESC LIMIT 10"
 ```
-
-After testing, set `DROP_COUNTRIES = "CN"` again if you want to exclude domestic visits.
 
 ## 4. Weekly Export
 
@@ -90,16 +91,16 @@ wrangler d1 execute vishome_visitors --remote --json \
 Build the Excel report:
 
 ```bash
-python3 scripts/weekly_report.py raw.json
+python3 scripts/weekly_report.py raw.json visitor_intelligence.xlsx
 ```
 
 Output:
 
 ```text
-weekly_leads.xlsx
+visitor_intelligence.xlsx
 ```
 
-The report excludes China and the United States for market analysis, ranks companies by visit days, page depth, time on site, contact/product page intent, and return visits, and includes a `Page Performance` sheet showing which VishomeCarpet pages attract the most company-level interest.
+The workbook contains `Visitor Leads`, `Company Matches`, `High Intent Unknown`, `Page Performance`, and `Raw Visits` sheets. It retains all genuine visitors, marks internal-country traffic for review, ranks demand by page depth and engagement, and separates identifiable company networks from high-intent residential or mobile visitors.
 
 ## 5. Unified Lead Export and Google Ads
 
@@ -136,5 +137,5 @@ wrangler d1 execute vishome_visitors --remote --command \
 
 - IPinfo Lite data is used at ASN/company level. Add attribution in site/legal materials when using the Lite database/API commercially.
 - The system stores an IP hash, not the raw IP.
-- This identifies companies or organizations, not personal visitor identities.
+- Company matches are confidence-based signals, not proof of an individual visitor's employer.
 - Keep `VISITOR_HASH_SALT` as a secret. Do not commit it.

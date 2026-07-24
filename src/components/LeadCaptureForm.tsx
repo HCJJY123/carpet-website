@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import { getAttributionForEvent } from "@/lib/attribution";
 import { getFunnelSessionSignals, scoreLead } from "@/lib/funnel";
 import { trackAnalyticsEvent, trackLeadConversion } from "@/lib/tracking";
+import { getVisitorIdentity } from "@/lib/visitorIdentity";
 
 type LeadCaptureFormProps = {
   formName: string;
@@ -54,6 +55,11 @@ export default function LeadCaptureForm({
     formData.set("page_path", window.location.pathname);
     formData.set("submitted_at", new Date().toISOString());
     formData.set("privacy_policy", "Acknowledged at submission");
+
+    const identity = getVisitorIdentity();
+    formData.set("visitor_id", identity.visitorId);
+    formData.set("session_id", identity.sessionId);
+    formData.set("visitor_label", identity.visitorLabel);
 
     Object.entries(getAttributionForEvent()).forEach(([key, value]) => {
       if (value) formData.set(key, value);
