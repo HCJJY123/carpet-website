@@ -38,6 +38,14 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                 <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#C8752A]">Recommended Inquiry Channel</p>
                 <h2 className="mt-2 text-2xl font-black uppercase text-primary md:text-3xl">Send Complete Project Details for an Accurate Quote</h2>
                 <p className="mt-2 text-sm leading-relaxed text-muted">The form keeps your product, destination, quantity, and timeline together so the factory can reply with a comparable quotation.</p>
+                <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-bold text-primary">
+                  <span className="relative flex h-3 w-3 shrink-0" aria-hidden="true">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#25D366] opacity-40" />
+                    <span className="relative inline-flex h-3 w-3 rounded-full bg-[#25D366]" />
+                  </span>
+                  <span className="font-black uppercase tracking-[0.12em]">24/7 Project Inquiry Desk</span>
+                  <span className="text-muted">Submit at any time for a prompt professional response.</span>
+                </div>
               </div>
               <LeadCaptureForm
                 formName="contact_project_quote"

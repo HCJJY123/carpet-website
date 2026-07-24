@@ -393,6 +393,12 @@ export default function LeadCaptureForm({
       >
         {state.submitting ? "SENDING INQUIRY..." : submitLabel}
       </button>
+      <div className="flex items-start justify-center gap-2 text-center text-sm leading-relaxed text-primary">
+        <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[#25D366] shadow-[0_0_0_4px_rgba(37,211,102,0.12)]" aria-hidden="true" />
+        <p>
+          <strong>Monitored 24/7.</strong> Your request goes directly to an export carpet specialist for a prompt, professional response.
+        </p>
+      </div>
       <p className="text-center text-xs leading-relaxed text-muted">
         By submitting, you acknowledge our{" "}
         <Link href="/privacy-policy" className="font-bold text-primary underline underline-offset-2">
