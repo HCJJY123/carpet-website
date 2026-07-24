@@ -9,6 +9,7 @@ import MarketingTracking from "@/components/MarketingTracking";
 import ImageProtection from "@/components/ImageProtection";
 import SendInquiryFloating from "@/components/SendInquiryFloating";
 import VisitorBeacon from "@/components/VisitorBeacon";
+import LocaleExperience from "@/components/LocaleExperience";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -78,6 +79,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <LocaleExperience />
         <JsonLd />
         <MarketingTracking />
         <VisitorBeacon />

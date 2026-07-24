@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
+import { getPathLocale, stripLocaleFromPath } from "@/lib/site-locales";
 
 type NavChild = {
   href: string;
@@ -27,7 +28,7 @@ const languageGroups: LanguageGroup[] = [
   {
     code: "EN",
     name: "English",
-    links: [{ href: "/", label: "Main website" }],
+    links: [{ href: "/?lang=en", label: "Main website" }],
   },
   {
     code: "RU",
@@ -155,6 +156,7 @@ export default function Header() {
   const [languageOpen, setLanguageOpen] = useState(false);
   const [openSections, setOpenSections] = useState<Set<string>>(() => new Set(sectionsWithChildren));
   const pathname = usePathname();
+  const navigationPathname = stripLocaleFromPath(pathname);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -184,9 +186,9 @@ export default function Header() {
     intent: "project_support",
     pagePath: pathname,
   });
-  const isActivePath = (href: string) => (href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`));
+  const isActivePath = (href: string) => (href === "/" ? navigationPathname === "/" : navigationPathname === href || navigationPathname.startsWith(`${href}/`));
   const isActiveNav = (link: NavItem) => isActivePath(link.href) || Boolean(link.children?.some((child) => isActivePath(child.href)));
-  const routeLanguageCode = pathname.split("/")[1]?.toUpperCase();
+  const routeLanguageCode = getPathLocale(pathname)?.toUpperCase();
   const currentLanguage = languageGroups.find((group) => group.code === routeLanguageCode) || languageGroups[0];
 
   const toggleLanguageMenu = () => {

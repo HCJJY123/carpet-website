@@ -1,5 +1,5 @@
-const localizedCampaignPrefixes = ["/fr/", "/es/", "/ar/", "/de/", "/pt/", "/ja/", "/ko/"];
+import { isNativeLocalizedPath } from "@/lib/site-locales";
 
 export function isLocalizedCampaignPath(pathname: string) {
-  return localizedCampaignPrefixes.some((prefix) => pathname.startsWith(prefix)) || pathname === "/ru/hotelnyy-kovrolin";
+  return isNativeLocalizedPath(pathname);
 }

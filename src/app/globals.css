@@ -79,6 +79,33 @@ body {
   background: var(--color-surface);
   color: #1a1a1a;
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  top: 0 !important;
+}
+
+#vishome-google-translate,
+.goog-te-banner-frame,
+iframe.goog-te-banner-frame,
+iframe.VIpgJd-ZVi9od-ORHb-OEVmcd,
+iframe[class*="VIpgJd-ZVi9od-ORHb"],
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.goog-text-highlight {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+html[dir="rtl"] input,
+html[dir="rtl"] select,
+html[dir="rtl"] textarea {
+  text-align: right;
 }
 
 img {
