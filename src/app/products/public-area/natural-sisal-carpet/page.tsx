@@ -56,23 +56,23 @@ const faqs = [
 
 export const metadata: Metadata = product
   ? {
-      title: "Natural Sisal Linen-Weave Commercial Carpet | Commercial Carpet Product | VISHOME",
+      title: "Natural Sisal Carpet Roll | Commercial Supplier & Samples",
       description:
-        "Natural 100% sisal commercial carpet with a linen-weave texture for offices, retail, exhibitions, and hotel public areas. Eco-friendly, custom widths, factory-direct.",
+        "4m natural sisal carpet rolls for offices, retail and hotel public areas. Compare commercial specs, MOQ, custom widths, samples and factory-direct pricing.",
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "Natural Sisal Linen-Weave Commercial Carpet | VISHOME",
+        title: "Natural Sisal Carpet Roll | Commercial Supplier & Samples",
         description:
-          "Natural 100% sisal commercial carpet with a linen-weave texture for offices, retail, exhibitions, and hotel public areas. Eco-friendly, custom widths.",
+          "4m natural sisal carpet rolls for offices, retail and hotel public areas, with commercial specifications, custom widths and samples.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
         images: [{ url: absoluteUrl(productImages.hero), alt: "Natural sisal carpet in a modern biophilic office reception by Vishomecarpet" }],
       },
       twitter: {
         card: "summary_large_image",
-        title: "Natural Sisal Linen-Weave Commercial Carpet | VISHOME",
+        title: "Natural Sisal Carpet Roll | Commercial Supplier & Samples",
         description:
-          "Natural 100% sisal commercial carpet with a linen-weave texture for offices, retail, exhibitions, and hotel public areas. Eco-friendly, custom widths.",
+          "4m natural sisal carpet rolls for offices, retail and hotel public areas, with commercial specifications, custom widths and samples.",
         images: [absoluteUrl(productImages.hero)],
       },
     }

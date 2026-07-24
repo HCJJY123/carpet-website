@@ -72,12 +72,12 @@ const constructionOptions = [
 ];
 
 export const metadata: Metadata = {
-  title: "Wall-to-Wall Carpet & Hotel Broadloom Supplier | VISHOME",
-  description: "Custom commercial wall-to-wall carpet from a hotel carpet manufacturer. Compare Axminster, wool-blend and printed broadloom prices, MOQ and specifications.",
+  title: "Hospitality Wall-to-Wall Carpet | Hotel Broadloom Factory",
+  description: "Compare custom hotel broadloom for guestrooms, corridors, ballrooms and casinos. View Axminster, printed and wool-blend options, MOQ, samples and factory pricing.",
   alternates: { canonical: categoryPath },
   openGraph: {
-    title: "Wall-to-Wall Carpet & Hotel Broadloom Supplier | VISHOME",
-    description: "Compare six custom commercial broadloom carpets for hotel rooms, corridors, ballrooms, lobbies, and contract projects.",
+    title: "Hospitality Wall-to-Wall Carpet | Hotel Broadloom Factory",
+    description: "Compare six custom hotel broadloom carpets by construction, factory price, MOQ, samples, and hospitality application.",
     url: absoluteUrl(categoryPath),
     type: "website",
     images: [{ url: absoluteUrl("/images/category-broadloom.webp"), alt: "Commercial wall-to-wall hotel broadloom carpet by Vishomecarpet" }]
@@ -117,9 +117,10 @@ export default function CategoryPage() {
             Custom commercial wall-to-wall carpet for hotel rooms, corridors, lobbies, ballrooms, casinos, restaurants, and contract interiors. Compare construction, FOB price, MOQ, and lead time across six project-ready broadloom options.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Link href="/contact?product=Wall-to-Wall%20Carpet#quote-form" className="btn-fox-orange">Request Project Quote</Link>
+            <Link href="/contact?product=Wall-to-Wall%20Carpet#quote-form" className="btn-fox-orange">Get Project Quote in 24 Hours</Link>
             <Link href="#wall-to-wall-products" className="inline-flex min-h-12 items-center justify-center border border-white/40 px-7 py-3 text-xs font-black uppercase tracking-widest text-white transition-colors hover:border-white">Compare Products</Link>
           </div>
+          <p className="mt-5 text-xs font-bold uppercase tracking-[0.12em] text-white/65">Specification review · Samples / strike-offs · FOB / CIF / DAP</p>
         </div>
       </section>
       <ProcurementSnapshot

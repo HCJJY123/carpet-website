@@ -76,12 +76,12 @@ const productOptions = [
 ];
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Tiles Manufacturer & Wholesale | VISHOME",
-  description: "50x50 nylon and polypropylene modular carpet tiles for offices and hotels. Compare wholesale prices, backing, thickness, MOQ and specifications.",
+  title: "Commercial Carpet Tiles 50x50 | Factory Price & Samples",
+  description: "Compare 50x50 nylon and polypropylene commercial carpet tiles for offices and hotels. See factory price ranges, MOQ, backing, samples and export terms.",
   alternates: { canonical: categoryPath },
   openGraph: {
-    title: "Commercial Carpet Tiles Manufacturer & Wholesale | VISHOME",
-    description: "Compare six commercial carpet tile products by fiber, backing, price, MOQ, and office or hotel application.",
+    title: "Commercial Carpet Tiles 50x50 | Factory Price & Samples",
+    description: "Compare six 50x50 commercial carpet tile products by fiber, backing, factory price, MOQ, samples, and office or hotel application.",
     url: absoluteUrl(categoryPath),
     type: "website",
     images: [{ url: absoluteUrl("/images/category-tiles.webp"), alt: "Commercial modular carpet tiles supplied by Vishomecarpet" }]
@@ -118,9 +118,10 @@ export default function CategoryPage() {
           <h1 className="text-4xl font-black uppercase text-white md:text-6xl">Commercial Carpet Tiles & Modular Flooring</h1>
           <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">50x50 nylon and polypropylene carpet tiles for offices, hotels, corridors, schools, airports, and commercial projects. Compare wholesale price, backing, thickness, MOQ, and technical performance across six products.</p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="btn-fox-orange">Request Wholesale Quote</Link>
+            <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="btn-fox-orange">Get Price & Samples in 24 Hours</Link>
             <Link href="#carpet-tile-products" className="inline-flex min-h-12 items-center justify-center border border-white/40 px-7 py-3 text-xs font-black uppercase tracking-widest text-white transition-colors hover:border-white">Compare Products</Link>
           </div>
+          <p className="mt-5 text-xs font-bold uppercase tracking-[0.12em] text-white/65">Export sales response within 24 hours · FOB / CIF / DAP support</p>
         </div>
       </section>
       <ProcurementSnapshot
