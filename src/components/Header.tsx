@@ -242,7 +242,7 @@ export default function Header() {
             </div>
           </div>
 
-          <nav className="hidden -translate-x-16 items-center justify-center xl:flex 2xl:-translate-x-14" aria-label="Primary navigation">
+          <nav className="hidden translate-x-6 items-center justify-center xl:flex min-[1900px]:-translate-x-14" aria-label="Primary navigation">
             <div className="flex items-center gap-1.5 rounded-full border border-border/80 bg-white/85 px-2 py-1.5 shadow-[0_10px_30px_rgba(16,42,67,0.06)] backdrop-blur">
               {navLinks.map((link) => {
                 const active = isActiveNav(link);
@@ -506,9 +506,10 @@ function LanguageButton({
       onClick={onClick}
       className={
         variant === "wide"
-          ? "flex h-14 w-[196px] items-center gap-3 rounded-md border border-[#c8963e]/55 bg-white px-3 text-[#102A43] shadow-[0_8px_24px_rgba(16,42,67,0.1)] transition-all hover:-translate-y-0.5 hover:border-[#c8963e] hover:shadow-[0_12px_30px_rgba(16,42,67,0.16)]"
-          : "flex h-11 w-[58px] flex-col items-center justify-center rounded-sm border border-[#c8963e]/60 bg-white text-[#102A43] shadow-sm transition-colors hover:border-[#c8963e] hover:text-[#9a6a16]"
+          ? "notranslate flex h-14 w-[196px] items-center gap-3 rounded-md border border-[#c8963e]/55 bg-white px-3 text-[#102A43] shadow-[0_8px_24px_rgba(16,42,67,0.1)] transition-all hover:-translate-y-0.5 hover:border-[#c8963e] hover:shadow-[0_12px_30px_rgba(16,42,67,0.16)]"
+          : "notranslate flex h-11 w-[58px] flex-col items-center justify-center rounded-sm border border-[#c8963e]/60 bg-white text-[#102A43] shadow-sm transition-colors hover:border-[#c8963e] hover:text-[#9a6a16]"
       }
+      translate="no"
       aria-expanded={open}
       aria-controls={controls}
       aria-haspopup="menu"
@@ -565,9 +566,10 @@ function LanguageMenuPanel({
       role="menu"
       aria-hidden={!open}
       hidden={!open}
-      className={`${placement} z-[90] max-h-[calc(100vh-6rem)] overflow-y-auto rounded-md border border-border bg-white p-2 shadow-[0_24px_60px_rgba(16,42,67,0.24)] transition-all duration-200 ${
+      className={`notranslate ${placement} z-[90] max-h-[calc(100vh-6rem)] overflow-y-auto rounded-md border border-border bg-white p-2 shadow-[0_24px_60px_rgba(16,42,67,0.24)] transition-all duration-200 ${
         open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-1 opacity-0"
       }`}
+      translate="no"
     >
       <div className="grid sm:grid-cols-2">
         {languageGroups.map((group) => {
@@ -587,6 +589,7 @@ function LanguageMenuPanel({
                     <Link
                       key={link.href}
                       href={link.href}
+                      data-site-locale={group.code.toLowerCase()}
                       onClick={onNavigate}
                       className={`rounded-sm px-2 py-2 text-xs font-semibold leading-5 transition-colors ${
                         active ? "bg-[#102A43] text-white" : "text-[#627D98] hover:bg-surface hover:text-[#102A43]"

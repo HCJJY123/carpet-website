@@ -7,6 +7,7 @@ import {
   googleTranslateCookieName,
   isLocaleRoutingExcluded,
   isNativeLocalizedPath,
+  isTranslatedSiteLocale,
   localeCookieMaxAge,
   localeCookieName,
   localizePath,
@@ -52,6 +53,16 @@ function clearClientCookie(name: string) {
   if (window.location.hostname.endsWith("vishomecarpet.com")) {
     document.cookie = `${name}=;path=/;domain=.vishomecarpet.com;max-age=0;SameSite=Lax`;
   }
+}
+
+function replaceLocaleSession(locale: TranslatedSiteLocale | "en") {
+  clearClientCookie(localeCookieName);
+  clearClientCookie(googleTranslateCookieName);
+
+  if (locale === "en") return;
+
+  setClientCookie(localeCookieName, locale, localeCookieMaxAge);
+  setClientCookie(googleTranslateCookieName, `/en/${locale}`, localeCookieMaxAge);
 }
 
 function shouldLocalizeUrl(url: URL) {
@@ -129,9 +140,17 @@ export default function LocaleExperience() {
         const url = new URL(rawHref, window.location.href);
         if (!shouldLocalizeUrl(url)) return;
 
-        if (url.searchParams.get("lang") === "en") {
-          clearClientCookie(localeCookieName);
-          clearClientCookie(googleTranslateCookieName);
+        const requestedLocale = target.dataset.siteLocale;
+        const validRequestedLocale =
+          requestedLocale === "en" || isTranslatedSiteLocale(requestedLocale)
+            ? requestedLocale
+            : null;
+        const currentLocale = locale ?? "en";
+
+        if (validRequestedLocale && validRequestedLocale !== currentLocale) {
+          replaceLocaleSession(validRequestedLocale);
+        } else if (url.searchParams.get("lang") === "en") {
+          replaceLocaleSession("en");
         }
 
         if (url.pathname === window.location.pathname && url.search === window.location.search && url.hash) return;
