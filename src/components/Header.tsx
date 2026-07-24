@@ -142,9 +142,9 @@ const navLinks: NavItem[] = [
     href: "/contact",
     label: "CONTACT US",
     children: [
-      { href: "/contact", label: "Get Factory Quote" },
-      { href: "/request-sample-box", label: "Request Sample Box" },
-      { href: "/faq", label: "MOQ / Lead Time / Samples" },
+      { href: "/contact#quote-form", label: "Get Factory Quote" },
+      { href: "/contact#quote-form", label: "Request Sample Box" },
+      { href: "/contact#quote-form", label: "MOQ / Lead Time / Samples" },
     ],
   },
 ];
@@ -160,8 +160,13 @@ export default function Header() {
 
   useEffect(() => {
     if (!menuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     const timer = window.setTimeout(() => setOpenSections(new Set(sectionsWithChildren)), 0);
-    return () => window.clearTimeout(timer);
+    return () => {
+      window.clearTimeout(timer);
+      document.body.style.overflow = previousOverflow;
+    };
   }, [menuOpen]);
 
   useEffect(() => {
@@ -202,7 +207,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`sticky top-0 bg-white/95 backdrop-blur border-b border-border shadow-sm ${languageOpen ? "z-[110]" : "z-50"}`}>
+    <header className={`sticky top-0 bg-white/95 backdrop-blur border-b border-border shadow-sm ${languageOpen || menuOpen ? "z-[120]" : "z-50"}`}>
       <div className="mx-auto max-w-[1480px] px-4 sm:px-6 xl:px-6">
         <div className="grid h-16 grid-cols-[1fr_auto] items-center md:h-20 xl:h-24 xl:grid-cols-[310px_minmax(620px,1fr)_390px]">
           <div className="flex min-w-0 items-center gap-2 xl:-translate-x-8 2xl:-translate-x-12">
@@ -282,7 +287,7 @@ export default function Header() {
 
                           return (
                             <Link
-                              key={child.href}
+                              key={`${link.href}-${child.label}`}
                               href={child.href}
                               className={`block px-9 py-3.5 text-[14px] font-medium leading-tight transition-colors ${
                                 childActive ? "text-white" : "text-white/78 hover:bg-white/10 hover:text-white"
@@ -390,11 +395,13 @@ export default function Header() {
 
       <div
         id="mobile-navigation"
-        className={`xl:hidden border-t border-border bg-white overscroll-contain transition-[max-height,opacity] duration-300 ${
-          menuOpen ? "max-h-[calc(100vh-4rem)] overflow-y-auto opacity-100" : "max-h-0 overflow-hidden opacity-0"
+        className={`absolute inset-x-0 top-full z-40 h-[calc(100dvh-4rem)] border-t border-border bg-white overscroll-contain transition-[opacity,visibility] duration-300 md:h-[calc(100dvh-5rem)] xl:hidden ${
+          menuOpen
+            ? "visible overflow-y-auto opacity-100 [-webkit-overflow-scrolling:touch]"
+            : "invisible pointer-events-none overflow-hidden opacity-0"
         }`}
       >
-        <nav className="container-fox py-4">
+        <nav className="container-fox min-h-full pb-[calc(1rem+env(safe-area-inset-bottom))] pt-4">
           <div className="grid gap-2">
             {navLinks.map((link) => {
               const sectionOpen = openSections.has(link.href);
@@ -443,7 +450,7 @@ export default function Header() {
                       <div className="min-h-0">
                         {link.children.map((child) => (
                           <Link
-                            key={child.href}
+                            key={`${link.href}-${child.label}`}
                             href={child.href}
                             onClick={() => setMenuOpen(false)}
                             className="block border-b border-border/60 px-5 py-2.5 text-[12px] font-semibold text-[#102A43]/70 last:border-b-0"
@@ -459,7 +466,7 @@ export default function Header() {
             })}
           </div>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            <Link href="/contact" onClick={() => setMenuOpen(false)} className="btn-fox-orange text-center">
+            <Link href="/contact#quote-form" onClick={() => setMenuOpen(false)} className="btn-fox-orange text-center">
               Get Factory Quote
             </Link>
             <a
