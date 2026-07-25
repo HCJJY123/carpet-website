@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Metadata } from "next";
 import Link from "next/link";
 import { productCategories as categories, caseStudies, certifications, products } from "@/lib/data";
@@ -6,6 +5,7 @@ import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 import { productPath } from "@/lib/seo";
+import HomeHeroCarousel from "@/components/HomeHeroCarousel";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://www.vishomecarpet.com" },
@@ -32,60 +32,7 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      {/* Hero Section - B2B Manufacturer Style */}
-      <section className="relative flex min-h-[560px] items-center overflow-hidden bg-primary md:min-h-[650px]">
-        <div className="absolute inset-0 z-0">
-          <ProductImage
-            src="/images/home/hero-home.webp"
-            alt="Commercial carpet tiles manufacturer for international projects"
-            className="w-full h-full object-cover"
-            priority
-            sizes="100vw"
-          />
-         {/* Professional Deep Blue Overlay */}
-         <div className="absolute inset-0 bg-[#102A43]/65"></div>
-
-          {/* Brand Watermark Decor */}
-          <Image
-            src="/logo-mark.svg"
-            alt=""
-            width={550}
-            height={550}
-            className="absolute right-[-80px] bottom-[-60px] w-[400px] md:w-[550px] h-auto opacity-[0.07] pointer-events-none select-none"
-            priority
-          />
-        </div>
-
-        <div className="container-fox relative z-10 py-16 md:py-24">
-          <div className="max-w-4xl">
-            <span className="text-white/70 font-bold tracking-[0.3em] text-xs uppercase mb-6 block border-l-4 border-accent pl-4">
-              Factory Direct Supply since 2005
-            </span>
-            <h1 className="mb-6 text-4xl font-extrabold uppercase leading-tight tracking-tight text-white md:mb-8 md:text-6xl">
-              Commercial Carpet Tiles & Hotel Carpet Manufacturer for Global Projects
-            </h1>
-            <p className="mb-8 max-w-3xl text-base font-light leading-relaxed text-gray-300 opacity-90 md:mb-12 md:text-xl">
-              Factory-direct carpet tiles, hotel broadloom, and custom printed carpets for contractors, distributors, hotels, offices, and commercial renovation projects.
-            </p>
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center md:gap-4">
-              <Link href="/contact#quote-form" data-home-primary-inquiry className="inline-flex min-h-14 items-center justify-center rounded-sm bg-[#C8752A] px-8 py-4 text-center text-sm font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#AD6424]">
-                Send Project Inquiry
-              </Link>
-              <Link href="/request-sample-box" className="inline-flex min-h-14 items-center justify-center rounded-sm border border-white/55 px-8 py-4 text-center text-xs font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-white hover:text-primary">
-                Request Sample Options
-              </Link>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center rounded-sm bg-[#25D366] px-8 py-4 text-center text-sm font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#1ebe5d]">
-                WhatsApp Project Support
-              </a>
-            </div>
-            <div className="mt-8 grid gap-3 text-[10px] font-black uppercase tracking-[0.18em] text-white/70 sm:grid-cols-3">
-              <div className="border border-white/15 bg-white/5 px-4 py-3">Factory Direct Pricing</div>
-              <div className="border border-white/15 bg-white/5 px-4 py-3">Sample Box Available</div>
-              <div className="border border-white/15 bg-white/5 px-4 py-3">Custom Project Support</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HomeHeroCarousel whatsappUrl={whatsappUrl} />
 
       <section className="bg-white border-b border-border">
         <div className="container-fox py-5">
