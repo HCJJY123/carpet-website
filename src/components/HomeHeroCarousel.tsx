@@ -100,7 +100,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
               alt={index === activeIndex ? slide.alt : ""}
               fill
               priority={index === 0}
-              quality={86}
+              quality={90}
               sizes="100vw"
               className="object-cover"
               style={{ objectPosition: slide.objectPosition }}
