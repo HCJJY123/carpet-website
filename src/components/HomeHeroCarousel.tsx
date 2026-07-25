@@ -118,6 +118,11 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
             key={slide.image}
             href={slide.bannerHref}
             tabIndex={index === activeIndex ? 0 : -1}
+            onClick={(event) => {
+              if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+              event.preventDefault();
+              window.location.assign(slide.bannerHref);
+            }}
             className={`absolute inset-0 block transition-opacity duration-700 ${
               index === activeIndex ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
             }`}
@@ -135,6 +140,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
               sizes="100vw"
               className="object-cover"
               style={{ objectPosition: slide.objectPosition }}
+              draggable={false}
             />
             <div className={`absolute inset-0 ${slide.overlay}`} />
           </Link>
