@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getAttributionForEvent } from "@/lib/attribution";
 import { getFunnelSessionSignals, scoreLead } from "@/lib/funnel";
 import { trackAnalyticsEvent, trackLeadConversion } from "@/lib/tracking";
@@ -28,10 +28,39 @@ export default function LeadCaptureForm({
   const router = useRouter();
   const formStarted = useRef(false);
   const lastInvalidField = useRef("");
+  const fullFormRef = useRef<HTMLFormElement>(null);
+  const primarySubmitRef = useRef<HTMLButtonElement>(null);
+  const [fullFormVisible, setFullFormVisible] = useState(false);
+  const [primarySubmitVisible, setPrimarySubmitVisible] = useState(false);
   const [state, setState] = useState({
     submitting: false,
     error: null as string | null,
   });
+
+  useEffect(() => {
+    if (variant !== "full") return;
+
+    const form = fullFormRef.current;
+    const primarySubmit = primarySubmitRef.current;
+    if (!form || !primarySubmit) return;
+
+    const formObserver = new IntersectionObserver(
+      ([entry]) => setFullFormVisible(entry.isIntersecting),
+      { threshold: 0 }
+    );
+    const submitObserver = new IntersectionObserver(
+      ([entry]) => setPrimarySubmitVisible(entry.isIntersecting),
+      { threshold: 0.35 }
+    );
+
+    formObserver.observe(form);
+    submitObserver.observe(primarySubmit);
+
+    return () => {
+      formObserver.disconnect();
+      submitObserver.disconnect();
+    };
+  }, [variant]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -144,8 +173,11 @@ export default function LeadCaptureForm({
 
   function handleInvalid(event: React.FormEvent<HTMLFormElement>) {
     const field = event.target as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
-    if (!field.name || lastInvalidField.current === field.name) return;
+    if (!field.name || lastInvalidField.current) return;
     lastInvalidField.current = field.name;
+    window.setTimeout(() => {
+      lastInvalidField.current = "";
+    }, 0);
     const fieldLabel = field.name.replaceAll("_", " ");
     setState((current) => ({ ...current, error: `Please complete the ${fieldLabel} field.` }));
     trackAnalyticsEvent("form_validation_error", {
@@ -163,6 +195,7 @@ export default function LeadCaptureForm({
     "Hotel broadloom samples",
     "Mixed commercial carpet samples",
   ]));
+  const showFloatingSubmit = variant === "full" && fullFormVisible && !primarySubmitVisible;
 
   if (variant === "quick" || variant === "sample") {
     const isSample = variant === "sample";
@@ -291,52 +324,70 @@ export default function LeadCaptureForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} onFocusCapture={handleFormStart} onInvalidCapture={handleInvalid} className="space-y-6 rounded-lg border border-border bg-surface p-5 shadow-sm md:space-y-8 md:p-10">
+    <form
+      ref={fullFormRef}
+      onSubmit={handleSubmit}
+      onFocusCapture={handleFormStart}
+      onInvalidCapture={handleInvalid}
+      className="space-y-6 rounded-lg border border-border bg-surface p-5 shadow-sm md:space-y-7 md:p-10"
+    >
       <input name="_gotcha" type="text" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       {introText ? <p className="text-sm leading-relaxed text-muted">{introText}</p> : null}
       {state.error ? <p className="text-red-600 font-bold text-center text-sm" role="alert" aria-live="polite">{state.error}</p> : null}
 
-      <div className="grid gap-5 md:grid-cols-2 md:gap-8">
-        <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Name</label>
-          <input name="name" type="text" autoComplete="name" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your name" />
+      <div className="border-b border-border pb-6 md:pb-7">
+        <div className="mb-5 flex flex-wrap items-baseline justify-between gap-2">
+          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#C8752A]">Quote Essentials</p>
+          <p className="text-xs font-semibold text-muted">4 required details</p>
         </div>
-        <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Company Name *</label>
-          <input name="company" type="text" required autoComplete="organization" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Your company or organization" />
-        </div>
-      </div>
-
-      <div className="grid gap-5 md:grid-cols-2 md:gap-8">
-        <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Email *</label>
-          <input name="email" type="email" required autoComplete="email" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="john@company.com" />
-        </div>
-        <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">WhatsApp</label>
-          <input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="+1 000 000 0000" />
-        </div>
-        <div className="md:col-span-2">
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Country / Region</label>
-          <input name="country" type="text" autoComplete="country-name" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="United States, UK, etc." />
-        </div>
-      </div>
-
-      <div className="grid gap-5 md:grid-cols-2 md:gap-8">
-        <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Project Type</label>
-          <input name="project_type" type="text" defaultValue={projectTypeDefault} className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="Hotel, office, retail, public area..." />
-        </div>
-        <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Product Type *</label>
-          <input name="product" type="text" required defaultValue={productDefault} className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="Carpet tiles, hotel carpet, sisal carpet..." />
+        <div className="grid gap-4 md:grid-cols-2 md:gap-5">
+          <div>
+            <label className={labelClass}>Company Name *</label>
+            <input name="company" type="text" required autoComplete="organization" className={fieldClass} placeholder="Your company or organization" />
+          </div>
+          <div>
+            <label className={labelClass}>Business Email *</label>
+            <input name="email" type="email" required autoComplete="email" className={fieldClass} placeholder="john@company.com" />
+          </div>
+          <div>
+            <label className={labelClass}>Product Type *</label>
+            <input name="product" type="text" required defaultValue={productDefault} className={fieldClass} placeholder="Carpet tiles, hotel carpet, sisal carpet..." />
+          </div>
+          <div>
+            <label className={labelClass}>Quantity / Area *</label>
+            <input name="quantity" type="text" required className={fieldClass} placeholder="e.g. 500 SQM" />
+          </div>
         </div>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-2 md:gap-8">
+      <div className="flex items-center gap-3">
+        <p className="text-[11px] font-black uppercase tracking-[0.18em] text-primary">Additional Project Details</p>
+        <span className="h-px flex-1 bg-border" aria-hidden="true" />
+      </div>
+
+      <div className="grid gap-5 md:grid-cols-2 md:gap-6">
         <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Purchase Stage</label>
-          <select name="project_stage" defaultValue="Not specified" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all">
+          <label className={labelClass}>Name</label>
+          <input name="name" type="text" autoComplete="name" className={fieldClass} placeholder="Your name" />
+        </div>
+        <div>
+          <label className={labelClass}>WhatsApp</label>
+          <input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" className={fieldClass} placeholder="+1 000 000 0000" />
+        </div>
+        <div>
+          <label className={labelClass}>Country / Region</label>
+          <input name="country" type="text" autoComplete="country-name" className={fieldClass} placeholder="United States, UK, etc." />
+        </div>
+        <div>
+          <label className={labelClass}>Project Type</label>
+          <input name="project_type" type="text" defaultValue={projectTypeDefault} className={fieldClass} placeholder="Hotel, office, retail, public area..." />
+        </div>
+      </div>
+
+      <div className="grid gap-5 md:grid-cols-2 md:gap-6">
+        <div>
+          <label className={labelClass}>Purchase Stage</label>
+          <select name="project_stage" defaultValue="Not specified" className={fieldClass}>
             <option value="Not specified">Select your current stage (optional)</option>
             <option value="Ready to order">Ready to order</option>
             <option value="Requesting quotation">Requesting quotation</option>
@@ -347,8 +398,8 @@ export default function LeadCaptureForm({
           </select>
         </div>
         <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Purchase Timeframe</label>
-          <select name="purchase_timeframe" defaultValue="Not specified" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all">
+          <label className={labelClass}>Purchase Timeframe</label>
+          <select name="purchase_timeframe" defaultValue="Not specified" className={fieldClass}>
             <option value="Not specified">Select expected timing (optional)</option>
             <option value="Within 30 days">Within 30 days</option>
             <option value="1-3 months">1-3 months</option>
@@ -359,40 +410,35 @@ export default function LeadCaptureForm({
         </div>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-2 md:gap-8">
+      <div className="grid gap-5 md:grid-cols-2 md:gap-6">
         <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Quantity / Area *</label>
-          <input name="quantity" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="e.g. 500 SQM" />
+          <label className={labelClass}>Delivery Time</label>
+          <input name="delivery_time" type="text" className={fieldClass} placeholder="Target shipment or installation date" />
         </div>
         <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Delivery Time</label>
-          <input name="delivery_time" type="text" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all" placeholder="Target shipment or installation date" />
-        </div>
-      </div>
-
-      <div className="grid gap-5 md:grid-cols-2 md:gap-8">
-        <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Need Samples?</label>
-          <select name="need_samples" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all">
+          <label className={labelClass}>Need Samples?</label>
+          <select name="need_samples" className={fieldClass}>
             <option value="Not specified">Not specified</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
           </select>
         </div>
-        <div>
-          <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Sample Box</label>
-          <Link href="/request-sample-box" className="flex min-h-[56px] items-center justify-center border border-border bg-white px-5 py-4 text-center text-[10px] font-black uppercase tracking-[0.16em] text-primary transition-all hover:border-primary hover:bg-surface">
-            Request Commercial Carpet Sample Box
-          </Link>
-        </div>
       </div>
 
       <div>
-        <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Message</label>
-        <textarea name="message" rows={6} className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all resize-none" placeholder="Tell us your project area, delivery country, timeline, design needs, or sample request..." />
+        <label className={labelClass}>Message</label>
+        <textarea name="message" rows={5} className={`${fieldClass} resize-none`} placeholder="Tell us your delivery timeline, design needs, or sample request..." />
+      </div>
+
+      <div>
+        <p className={labelClass}>Sample Box</p>
+        <Link href="/request-sample-box" className="flex min-h-[52px] items-center justify-center border border-border bg-white px-5 py-4 text-center text-[10px] font-black uppercase tracking-[0.16em] text-primary transition-all hover:border-primary hover:bg-surface">
+          Request Commercial Carpet Sample Box
+        </Link>
       </div>
 
       <button
+        ref={primarySubmitRef}
         type="submit"
         disabled={state.submitting}
         className="btn-fox-orange w-full py-5 text-sm tracking-[0.16em] hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 md:py-6 md:text-base md:tracking-[0.4em]"
@@ -412,6 +458,26 @@ export default function LeadCaptureForm({
         </Link>{" "}
         and agree that our export team may contact you about this request.
       </p>
+
+      {showFloatingSubmit ? (
+        <div className="pointer-events-none fixed inset-x-0 bottom-0 z-[97] pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+          <div className="container-fox">
+            <div className="grid lg:grid-cols-3 lg:gap-16">
+              <div className="lg:col-span-2">
+                <div className="pointer-events-auto rounded-lg border border-[#C8752A]/25 bg-white/95 p-2 shadow-[0_12px_35px_rgba(16,42,67,0.22)] backdrop-blur">
+                  <button
+                    type="submit"
+                    disabled={state.submitting}
+                    className="flex min-h-13 w-full items-center justify-center rounded-sm bg-[#C8752A] px-5 py-3.5 text-center text-xs font-black uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#AD6424] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:min-h-14 md:text-sm md:tracking-[0.18em]"
+                  >
+                    {state.submitting ? "SENDING INQUIRY..." : submitLabel}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </form>
   );
 }

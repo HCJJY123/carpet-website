@@ -7,7 +7,7 @@ import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp
 export default function WhatsAppFloating() {
   const pathname = usePathname();
 
-  if (isLocalizedCampaignPath(pathname)) return null;
+  if (pathname === "/contact" || isLocalizedCampaignPath(pathname)) return null;
 
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.floating, {
     placement: "floating_whatsapp",
