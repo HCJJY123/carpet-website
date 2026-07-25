@@ -103,7 +103,12 @@ export default function LocaleExperience() {
     }
 
     const rewriteLinks = (root: ParentNode = document) => {
-      root.querySelectorAll<HTMLAnchorElement>("a[href]").forEach((anchor) => {
+      const anchors = [
+        ...(root instanceof HTMLAnchorElement && root.matches("a[href]") ? [root] : []),
+        ...root.querySelectorAll<HTMLAnchorElement>("a[href]"),
+      ];
+
+      anchors.forEach((anchor) => {
         const rawHref = anchor.getAttribute("href");
         if (!rawHref || rawHref.startsWith("#") || anchor.hasAttribute("download")) return;
         if (/^(mailto:|tel:|sms:|javascript:)/i.test(rawHref)) return;
