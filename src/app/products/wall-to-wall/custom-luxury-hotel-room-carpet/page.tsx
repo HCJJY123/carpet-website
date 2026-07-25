@@ -166,7 +166,7 @@ const productJsonLd = {
     priceCurrency: "USD",
     lowPrice: "3.10",
     highPrice: "9.70",
-    offerCount: "1",
+    offerCount: 1,
     availability: "https://schema.org/PreOrder",
     seller: { "@type": "Organization", name: "Vishomecarpet" },
   },

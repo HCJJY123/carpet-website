@@ -140,7 +140,7 @@ export default function NylonOfficeCarpetTilePage() {
       priceCurrency: "USD",
       lowPrice: "5.10",
       highPrice: "6.30",
-      offerCount: "3",
+      offerCount: 3,
       seller: {
         "@type": "Organization",
         name: "Vishome Global Commercial Carpet Co. Ltd.",

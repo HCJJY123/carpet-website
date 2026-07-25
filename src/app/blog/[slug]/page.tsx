@@ -156,7 +156,7 @@ export default async function BlogPostPage({ params }: Props) {
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
     articleSection: post.category,
     mentions: relatedProducts.map((product) => ({
-      "@type": "Product",
+      "@type": "Thing",
       name: product.name,
       url: absoluteUrl(productPath(product.id)),
       image: absoluteUrl(product.image),

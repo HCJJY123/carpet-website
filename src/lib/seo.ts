@@ -39,27 +39,36 @@ export function productJsonLd(product: Product) {
   const priceValidUntil = new Date();
   priceValidUntil.setFullYear(priceValidUntil.getFullYear() + 1);
 
-  const offer = product.fobPrice
-    ? {
-        "@type": "AggregateOffer",
+  if (!product.fobPrice) {
+    return {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${productUrl}#webpage`,
+      name: product.name,
+      description: product.longDescription || product.description,
+      image: productImages(product),
+      url: productUrl,
+      inLanguage: "en",
+      about: {
+        "@type": "Thing",
+        name: product.name,
         url: productUrl,
-        availability: productAvailability(product.id),
-        itemCondition: "https://schema.org/NewCondition",
-        priceCurrency: product.fobPrice.currency,
-        lowPrice: product.fobPrice.lowPrice,
-        highPrice: product.fobPrice.highPrice,
-        priceValidUntil: priceValidUntil.toISOString().slice(0, 10),
-        offerCount: "1",
-        seller: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
-      }
-    : {
-        "@type": "Offer",
-        url: productUrl,
-        availability: productAvailability(product.id),
-        itemCondition: "https://schema.org/NewCondition",
-        priceCurrency: "USD",
-        seller: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
-      };
+      },
+    };
+  }
+
+  const offer = {
+    "@type": "AggregateOffer",
+    url: productUrl,
+    availability: productAvailability(product.id),
+    itemCondition: "https://schema.org/NewCondition",
+    priceCurrency: product.fobPrice.currency,
+    lowPrice: product.fobPrice.lowPrice,
+    highPrice: product.fobPrice.highPrice,
+    priceValidUntil: priceValidUntil.toISOString().slice(0, 10),
+    offerCount: 1,
+    seller: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
+  };
 
   return {
     "@context": "https://schema.org",

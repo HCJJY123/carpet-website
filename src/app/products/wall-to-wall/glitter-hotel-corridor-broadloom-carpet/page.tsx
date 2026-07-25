@@ -121,7 +121,7 @@ const productJsonLd = {
     "priceCurrency": product.fobPrice.currency,
     "lowPrice": product.fobPrice.lowPrice,
     "highPrice": product.fobPrice.highPrice,
-    "offerCount": "1",
+    "offerCount": 1,
     "availability": "https://schema.org/InStock",
     "seller": { "@type": "Organization", "name": "Vishome Global Commercial Carpet Co. Ltd.", "url": siteUrl }
   },

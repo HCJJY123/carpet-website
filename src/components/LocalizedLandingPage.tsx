@@ -84,11 +84,10 @@ export default function LocalizedLandingPage({ page }: { page: LocalizedLanding 
       ? { "@type": "ImageObject", url: absoluteUrl(heroProduct.image) }
       : undefined,
     about: resolvedProducts.map(({ product, name }) => ({
-      "@type": "Product",
+      "@type": "Thing",
       name,
       url: absoluteUrl(productPath(product.id)),
       image: absoluteUrl(product.image),
-      brand: { "@type": "Brand", name: "VISHOME" },
     })),
     provider: {
       "@type": "Organization",

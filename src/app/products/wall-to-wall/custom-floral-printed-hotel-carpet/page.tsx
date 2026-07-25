@@ -74,7 +74,7 @@ export default function CustomFloralPrintedHotelCarpetPage() {
     brand: { "@type": "Brand", name: "Vishomecarpet" }, category: "Wall-to-Wall Carpet",
     description: "Made-to-order custom floral printed wall-to-wall carpet for hotel corridors, guestrooms, banquet halls, lobbies and office projects.",
     material: "Polypropylene, nylon, polyester or wool-blend options", url: absoluteUrl(path), image: images.map((item) => absoluteUrl(item.src)),
-    offers: { "@type": "AggregateOffer", priceCurrency: "USD", lowPrice: "3.60", highPrice: "6.40", offerCount: "1", availability: "https://schema.org/PreOrder", seller: { "@type": "Organization", name: "Vishomecarpet" } },
+    offers: { "@type": "AggregateOffer", priceCurrency: "USD", lowPrice: "3.60", highPrice: "6.40", offerCount: 1, availability: "https://schema.org/PreOrder", seller: { "@type": "Organization", name: "Vishomecarpet" } },
   };
   const breadcrumbJsonLd = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
