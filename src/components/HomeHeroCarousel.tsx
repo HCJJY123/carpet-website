@@ -21,6 +21,7 @@ const slides = [
     badges: ["Factory Direct Pricing", "Sample Box Available", "Custom Project Support"],
     overlay: "bg-[#102A43]/65",
     objectPosition: "center 50%",
+    quality: 90,
   },
   {
     image: "/images/home/hero-hotel-corridor-carpet.webp",
@@ -34,6 +35,7 @@ const slides = [
     badges: ["Custom Printed Patterns", "Contract Grade Construction", "Hotel Project Support"],
     overlay: "bg-[#102A43]/42",
     objectPosition: "center 58%",
+    quality: 75,
   },
   {
     image: "/images/home/hero-custom-wool-rug.webp",
@@ -47,6 +49,7 @@ const slides = [
     badges: ["Custom Sizes & Colors", "Sculpted Wool Surface", "Project-Made Production"],
     overlay: "bg-[#102A43]/38",
     objectPosition: "center 62%",
+    quality: 75,
   },
 ];
 
@@ -100,7 +103,9 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
               alt={index === activeIndex ? slide.alt : ""}
               fill
               priority={index === 0}
-              quality={90}
+              loading={index === 0 ? undefined : "eager"}
+              fetchPriority={index === 0 ? "high" : "low"}
+              quality={slide.quality}
               sizes="100vw"
               className="object-cover"
               style={{ objectPosition: slide.objectPosition }}
