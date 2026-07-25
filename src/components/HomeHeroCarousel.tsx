@@ -18,6 +18,7 @@ const slides = [
       "Factory-direct carpet tiles, hotel broadloom, and custom printed carpets for contractors, distributors, hotels, offices, and commercial renovation projects.",
     productLabel: "Request Sample Options",
     productHref: "/request-sample-box",
+    bannerHref: "/commercial-carpet-tiles",
     badges: ["Factory Direct Pricing", "Sample Box Available", "Custom Project Support"],
     overlay: "bg-[#102A43]/65",
     objectPosition: "center 50%",
@@ -32,6 +33,7 @@ const slides = [
       "Project-made broadloom carpet with custom colors, patterns, construction, and contract-grade performance for hotel corridors, ballrooms, guest rooms, and public areas.",
     productLabel: "View Hotel Carpets",
     productHref: "/products/wall-to-wall",
+    bannerHref: "/products/wall-to-wall",
     badges: ["Custom Printed Patterns", "Contract Grade Construction", "Hotel Project Support"],
     overlay: "bg-[#102A43]/42",
     objectPosition: "center 58%",
@@ -46,6 +48,7 @@ const slides = [
       "Large-format wool rugs with custom dimensions, carved surface effects, color matching, and project production for luxury lobbies, villas, clubs, and executive interiors.",
     productLabel: "View Custom Wool Rugs",
     productHref: "/products/public-area/custom-sculpted-wool-lobby-rug",
+    bannerHref: "/products/public-area/public-area-heavy-duty",
     badges: ["Custom Sizes & Colors", "Sculpted Wool Surface", "Project-Made Production"],
     overlay: "bg-[#102A43]/38",
     objectPosition: "center 62%",
@@ -57,6 +60,7 @@ const ROTATION_MS = 4_000;
 
 export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [renderedSlides, setRenderedSlides] = useState(() => new Set([0]));
   const [paused, setPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const activeSlide = slides[activeIndex];
@@ -70,6 +74,14 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
   }, []);
 
   useEffect(() => {
+    const preloadTimer = window.setTimeout(() => {
+      setRenderedSlides(new Set(slides.map((_, index) => index)));
+    }, 1_200);
+
+    return () => window.clearTimeout(preloadTimer);
+  }, []);
+
+  useEffect(() => {
     if (paused || reducedMotion) return;
     const timer = window.setTimeout(() => {
       setActiveIndex((current) => (current + 1) % slides.length);
@@ -77,7 +89,16 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
     return () => window.clearTimeout(timer);
   }, [activeIndex, paused, reducedMotion]);
 
-  const showSlide = (index: number) => setActiveIndex((index + slides.length) % slides.length);
+  const showSlide = (index: number) => {
+    const nextIndex = (index + slides.length) % slides.length;
+    setRenderedSlides((current) => {
+      if (current.has(nextIndex)) return current;
+      const updated = new Set(current);
+      updated.add(nextIndex);
+      return updated;
+    });
+    setActiveIndex(nextIndex);
+  };
 
   return (
     <section
@@ -92,10 +113,15 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
       }}
     >
       <div className="absolute inset-0 z-0">
-        {slides.map((slide, index) => (
-          <div
+        {slides.map((slide, index) => renderedSlides.has(index) ? (
+          <Link
             key={slide.image}
-            className={`absolute inset-0 transition-opacity duration-700 ${index === activeIndex ? "opacity-100" : "opacity-0"}`}
+            href={slide.bannerHref}
+            tabIndex={index === activeIndex ? 0 : -1}
+            className={`absolute inset-0 block transition-opacity duration-700 ${
+              index === activeIndex ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+            }`}
+            aria-label={`Open ${slide.title}`}
             aria-hidden={index !== activeIndex}
           >
             <Image
@@ -111,8 +137,8 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
               style={{ objectPosition: slide.objectPosition }}
             />
             <div className={`absolute inset-0 ${slide.overlay}`} />
-          </div>
-        ))}
+          </Link>
+        ) : null)}
 
         <Image
           src="/logo-mark.svg"
@@ -124,7 +150,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
         />
       </div>
 
-      <div className="container-fox relative z-10 py-12 pb-28 md:py-20 md:pb-28">
+      <div className="container-fox pointer-events-none relative z-10 py-12 pb-28 md:py-20 md:pb-28">
         <div className="max-w-4xl">
           <span className="mb-4 block border-l-4 border-accent pl-4 text-[11px] font-bold uppercase tracking-[0.22em] text-white/80 md:mb-6 md:text-xs md:tracking-[0.3em]">
             {activeSlide.eyebrow}
@@ -139,13 +165,13 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
             <Link
               href="/contact#quote-form"
               data-home-primary-inquiry
-              className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[#C8752A] px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#AD6424] md:min-h-14 md:px-8 md:py-4 md:text-sm"
+              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm bg-[#C8752A] px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#AD6424] md:min-h-14 md:px-8 md:py-4 md:text-sm"
             >
               Send Project Inquiry
             </Link>
             <Link
               href={activeSlide.productHref}
-              className="inline-flex min-h-12 items-center justify-center rounded-sm border border-white/65 bg-black/10 px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-white hover:text-primary md:min-h-14 md:px-8 md:py-4"
+              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm border border-white/65 bg-black/10 px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-white hover:text-primary md:min-h-14 md:px-8 md:py-4"
             >
               {activeSlide.productLabel}
             </Link>
@@ -153,7 +179,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[#25D366] px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#1ebe5d] md:min-h-14 md:px-8 md:py-4 md:text-sm"
+              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm bg-[#25D366] px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#1ebe5d] md:min-h-14 md:px-8 md:py-4 md:text-sm"
             >
               WhatsApp Project Support
             </a>
@@ -165,7 +191,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
               </div>
             ))}
           </div>
-          <div className="mt-5 flex h-5 items-center justify-center gap-1 sm:justify-start" role="group" aria-label="Choose banner">
+          <div className="pointer-events-auto mt-5 flex h-5 items-center justify-center gap-1 sm:justify-start" role="group" aria-label="Choose banner">
             {slides.map((slide, index) => (
               <button
                 key={slide.image}

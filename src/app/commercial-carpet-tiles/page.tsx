@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
@@ -18,9 +19,14 @@ export default function CommercialCarpetTilesPage() {
     <div className="bg-white">
       {/* Targeted Hero */}
       <section className="relative overflow-hidden border-b border-white/5">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/commercial-carpet-tiles-office-hero.webp')" }}
+        <Image
+          src="/images/commercial-carpet-tiles-office-hero.webp"
+          alt=""
+          fill
+          priority
+          quality={75}
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-[#15385d]/82" />
         <div className="container-fox relative py-20 md:py-28">
