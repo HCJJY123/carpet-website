@@ -168,37 +168,48 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
         </div>
       </div>
 
-      <div className="absolute inset-x-0 bottom-4 z-20 flex items-center justify-center gap-3 md:bottom-6">
-        <button
-          type="button"
-          onClick={() => showSlide(activeIndex - 1)}
-          className="flex h-11 w-11 items-center justify-center rounded-sm border border-white/45 bg-black/25 text-white transition-colors hover:bg-white hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-          aria-label="Show previous banner"
-        >
-          <span className="h-2.5 w-2.5 rotate-45 border-b-2 border-l-2 border-current" aria-hidden="true" />
-        </button>
+      <div className="absolute inset-x-0 bottom-4 z-20 flex items-center justify-center md:bottom-6">
+        <div className="flex items-center gap-0.5 rounded-[6px] border border-white/15 bg-[#071A29]/30 p-0.5 shadow-[0_8px_24px_rgba(0,0,0,0.14)] backdrop-blur-md">
+          <button
+            type="button"
+            onClick={() => showSlide(activeIndex - 1)}
+            className="flex h-8 w-8 items-center justify-center rounded-[4px] text-white/65 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/70"
+            aria-label="Show previous banner"
+          >
+            <span className="h-2 w-2 rotate-45 border-b border-l border-current" aria-hidden="true" />
+          </button>
 
-        <div className="flex h-11 items-center gap-2 border border-white/35 bg-black/25 px-4" role="group" aria-label="Choose banner">
-          {slides.map((slide, index) => (
-            <button
-              key={slide.image}
-              type="button"
-              onClick={() => showSlide(index)}
-              className={`h-2.5 w-2.5 rounded-full border border-white transition-colors ${index === activeIndex ? "bg-white" : "bg-transparent hover:bg-white/50"}`}
-              aria-label={`Show banner ${index + 1}`}
-              aria-current={index === activeIndex ? "true" : undefined}
-            />
-          ))}
+          <div className="flex h-8 items-center" role="group" aria-label="Choose banner">
+            {slides.map((slide, index) => (
+              <button
+                key={slide.image}
+                type="button"
+                onClick={() => showSlide(index)}
+                className="group flex h-8 w-5 items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/70"
+                aria-label={`Show banner ${index + 1}`}
+                aria-current={index === activeIndex ? "true" : undefined}
+              >
+                <span
+                  className={`h-px transition-all duration-300 ${
+                    index === activeIndex
+                      ? "w-4 bg-[#E0A05A] shadow-[0_0_8px_rgba(224,160,90,0.75)]"
+                      : "w-2 bg-white/40 group-hover:bg-white/70"
+                  }`}
+                  aria-hidden="true"
+                />
+              </button>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={() => showSlide(activeIndex + 1)}
+            className="flex h-8 w-8 items-center justify-center rounded-[4px] text-white/65 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/70"
+            aria-label="Show next banner"
+          >
+            <span className="h-2 w-2 rotate-45 border-r border-t border-current" aria-hidden="true" />
+          </button>
         </div>
-
-        <button
-          type="button"
-          onClick={() => showSlide(activeIndex + 1)}
-          className="flex h-11 w-11 items-center justify-center rounded-sm border border-white/45 bg-black/25 text-white transition-colors hover:bg-white hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-          aria-label="Show next banner"
-        >
-          <span className="h-2.5 w-2.5 rotate-45 border-r-2 border-t-2 border-current" aria-hidden="true" />
-        </button>
       </div>
     </section>
   );
