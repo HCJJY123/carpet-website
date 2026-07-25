@@ -169,34 +169,46 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
       </div>
 
       <div className="absolute inset-x-0 bottom-4 z-20 flex items-center justify-center md:bottom-6">
-        <div className="flex items-center gap-0.5 rounded-[6px] border border-white/15 bg-[#071A29]/30 p-0.5 shadow-[0_8px_24px_rgba(0,0,0,0.14)] backdrop-blur-md">
+        <div
+          className="relative flex h-9 items-center gap-0.5 border-y border-[#75E6F2]/40 bg-[#03131F]/65 px-1 shadow-[0_0_20px_rgba(77,210,229,0.2),inset_0_0_14px_rgba(77,210,229,0.08)] backdrop-blur-md"
+          style={{ clipPath: "polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px)" }}
+        >
+          <span className="pointer-events-none absolute left-0 top-1/2 h-3 w-px -translate-y-1/2 bg-[#75E6F2]/65" aria-hidden="true" />
+          <span className="pointer-events-none absolute right-0 top-1/2 h-3 w-px -translate-y-1/2 bg-[#75E6F2]/65" aria-hidden="true" />
           <button
             type="button"
             onClick={() => showSlide(activeIndex - 1)}
-            className="flex h-8 w-8 items-center justify-center rounded-[4px] text-white/65 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/70"
+            className="group flex h-8 w-8 items-center justify-center text-[#9BEAF2]/70 transition-colors hover:bg-[#75E6F2]/10 hover:text-[#B8F7FC] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#75E6F2]/80"
             aria-label="Show previous banner"
           >
-            <span className="h-2 w-2 rotate-45 border-b border-l border-current" aria-hidden="true" />
+            <span className="relative h-3 w-3" aria-hidden="true">
+              <span className="absolute left-0.5 top-0.5 h-2 w-2 rotate-45 border-b border-l border-current transition-transform group-hover:-translate-x-0.5" />
+              <span className="absolute left-1.5 top-0.5 h-2 w-2 rotate-45 border-b border-l border-current opacity-35 transition-transform group-hover:-translate-x-0.5" />
+            </span>
           </button>
 
-          <div className="flex h-8 items-center" role="group" aria-label="Choose banner">
+          <div className="flex h-6 items-center border-x border-[#75E6F2]/20 px-0.5" role="group" aria-label="Choose banner">
             {slides.map((slide, index) => (
               <button
                 key={slide.image}
                 type="button"
                 onClick={() => showSlide(index)}
-                className="group flex h-8 w-5 items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/70"
+                className="group flex h-8 w-5 items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#75E6F2]/80"
                 aria-label={`Show banner ${index + 1}`}
                 aria-current={index === activeIndex ? "true" : undefined}
               >
                 <span
-                  className={`h-px transition-all duration-300 ${
+                  className={`relative h-2.5 w-2.5 rotate-45 border transition-all duration-300 ${
                     index === activeIndex
-                      ? "w-4 bg-[#E0A05A] shadow-[0_0_8px_rgba(224,160,90,0.75)]"
-                      : "w-2 bg-white/40 group-hover:bg-white/70"
+                      ? "border-[#91F3FA] bg-[#75E6F2]/20 shadow-[0_0_10px_rgba(117,230,242,0.8),inset_0_0_5px_rgba(117,230,242,0.45)]"
+                      : "border-white/30 bg-transparent group-hover:border-[#75E6F2]/65"
                   }`}
                   aria-hidden="true"
-                />
+                >
+                  <span
+                    className={`absolute inset-[3px] transition-colors ${index === activeIndex ? "bg-[#B8F7FC]" : "bg-transparent"}`}
+                  />
+                </span>
               </button>
             ))}
           </div>
@@ -204,10 +216,13 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
           <button
             type="button"
             onClick={() => showSlide(activeIndex + 1)}
-            className="flex h-8 w-8 items-center justify-center rounded-[4px] text-white/65 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/70"
+            className="group flex h-8 w-8 items-center justify-center text-[#9BEAF2]/70 transition-colors hover:bg-[#75E6F2]/10 hover:text-[#B8F7FC] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#75E6F2]/80"
             aria-label="Show next banner"
           >
-            <span className="h-2 w-2 rotate-45 border-r border-t border-current" aria-hidden="true" />
+            <span className="relative h-3 w-3" aria-hidden="true">
+              <span className="absolute right-1.5 top-0.5 h-2 w-2 rotate-45 border-r border-t border-current opacity-35 transition-transform group-hover:translate-x-0.5" />
+              <span className="absolute right-0.5 top-0.5 h-2 w-2 rotate-45 border-r border-t border-current transition-transform group-hover:translate-x-0.5" />
+            </span>
           </button>
         </div>
       </div>
