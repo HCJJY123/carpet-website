@@ -4,7 +4,16 @@ export interface BlogSection {
   image?: string;
   imageAlt?: string;
   imageCaption?: string;
+  blocks?: BlogContentBlock[];
 }
+
+export type BlogContentBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "subheading"; title: string }
+  | { type: "table"; headers: string[]; rows: string[][]; note?: string }
+  | { type: "list"; ordered?: boolean; items: { title?: string; text: string }[] }
+  | { type: "callout"; label?: string; text: string }
+  | { type: "image"; src: string; alt: string; caption?: string };
 
 export interface BlogPost {
   slug: string;
@@ -22,12 +31,306 @@ export interface BlogPost {
   h1Image?: string;
   h1ImageAlt?: string;
   h1ImageCaption?: string;
+  h1ImageFit?: "cover" | "contain";
   sections: BlogSection[];
   relatedProductIds: string[];
   suggestedLinks: { label: string; href: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "hotel-noise-acoustic-carpet-specification-guide",
+    title: "Hotel Noise Is the #1 Guest Complaint: The Acoustic Case for Corridor and Guestroom Carpet",
+    subtitle: "How NRC, IIC, and ΔIIC guide quieter corridor, guestroom, and public-area flooring specifications.",
+    painPoint: "Corridor footfall, luggage wheels, and reverberation can reduce guest satisfaction when flooring is specified without tested acoustic performance.",
+    seoTitle: "Hotel Acoustic Carpet Specification Guide | VISHOME",
+    description: "Guest reviews punish noisy hotels. Learn how NRC, IIC, and ΔIIC guide hotel broadloom and carpet tile specifications for quieter corridors and guestrooms.",
+    keywords: [
+      "hotel broadloom carpet",
+      "hotel corridor carpet",
+      "acoustic hotel carpet",
+      "wall-to-wall hotel carpet",
+      "hotel carpet manufacturer",
+      "NRC rating carpet",
+      "IIC rating flooring",
+      "sound absorbing carpet",
+      "hotel flooring noise reduction",
+      "commercial carpet tiles acoustic",
+    ],
+    date: "2026-07-25",
+    author: "Vishome Technical Team",
+    category: "Technical Guide",
+    image: "/images/blog-series/hotel-acoustic-noise-guide/hotel-corridor-acoustic-carpet-v2.webp",
+    h1Image: "/images/blog-series/hotel-acoustic-noise-guide/hotel-corridor-acoustic-carpet-v2.webp",
+    h1ImageAlt: "Hotel guestroom corridor fitted with patterned acoustic broadloom carpet",
+    h1ImageCaption: "Carpet helps control corridor reverberation and impact noise close to guestroom doors.",
+    h1ImageFit: "cover",
+    relatedProductIds: [
+      "glitter-hotel-corridor-broadloom-carpet",
+      "custom-luxury-hotel-room-carpet",
+      "luxury-hotel-carpet-tile-50x50cm",
+    ],
+    sections: [
+      {
+        title: "Why Hotel Noise Belongs in the Flooring Specification",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Spend ten minutes reading hotel discussions or scanning one-star reviews on any booking platform, and one theme appears repeatedly: noise. Footsteps travel down corridors at night, luggage wheels rattle past doors, and hallway conversations seem to happen inside the room. Industry guest-satisfaction research has repeatedly identified noise as one of the problems travelers encounter most often during hotel stays.",
+          },
+          {
+            type: "paragraph",
+            text: "For hotel owners, developers, and procurement teams, this is not a soft comfort issue. Noise complaints convert into refund requests, room-move labor, lower review scores, and pressure on average daily rates. A significant share of the problem traces back to a single procurement decision: what was specified on the floor.",
+          },
+          {
+            type: "paragraph",
+            text: "This guide explains how flooring choices shape acoustic performance, which metrics belong in a carpet RFQ, and how to specify broadloom carpet and carpet tiles that measurably quiet corridors, guestrooms, and public areas.",
+          },
+        ],
+      },
+      {
+        title: "How the Hard-Flooring Trend Created a Noise Problem",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Over the past decade, many hotels replaced corridor and guestroom carpet with luxury vinyl tile and other hard surfaces. The logic seemed sound: hard floors resist spills, photograph cleanly, and simplify housekeeping. The acoustic consequences arrived quickly.",
+          },
+          {
+            type: "list",
+            items: [
+              {
+                title: "Airborne sound is reflected instead of absorbed.",
+                text: "A corridor lined with hard flooring, painted drywall, and a hard ceiling behaves like an echo chamber. Voices, door slams, and elevator chimes bounce between surfaces rather than dying out.",
+              },
+              {
+                title: "Impact noise is transmitted into the structure.",
+                text: "Every footstep, dropped suitcase, and rolling luggage cart sends vibration into the slab, where it can travel into rooms below and beside the corridor.",
+              },
+            ],
+          },
+          {
+            type: "image",
+            src: "/images/blog-series/hotel-acoustic-noise-guide/hard-floor-vs-carpet-noise-comparison-v2.webp",
+            alt: "Hotel corridor comparison showing hard flooring with high impact noise and carpet flooring with lower noise",
+            caption: "The finish floor changes both impact transmission and reverberation inside the corridor.",
+          },
+          {
+            type: "paragraph",
+            text: "There is also a feedback loop. In loud environments, people unconsciously raise their voices to be heard, which raises ambient noise further and makes everyone speak louder still. A hard-floored corridor at checkout time demonstrates this clearly.",
+          },
+          {
+            type: "paragraph",
+            text: "Hospitality renovation activity increasingly shows properties reinstalling corridor carpet, adding sound-reducing flooring in guestrooms, and treating acoustics as a design-stage requirement rather than a post-opening patch. The procurement question is therefore how to specify soft flooring so that the acoustic benefit is real and documented.",
+          },
+        ],
+      },
+      {
+        title: "Acoustics 101 for Carpet Procurement: Three Numbers That Matter",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "paragraph",
+            text: "You do not need an acoustics degree to write a good flooring RFQ. You need three concepts and the test standards behind them so supplier claims can be compared on equal terms.",
+          },
+          { type: "subheading", title: "1. NRC — Noise Reduction Coefficient" },
+          {
+            type: "paragraph",
+            text: "NRC measures how much airborne sound a material absorbs rather than reflects, on a scale from 0.00 for a highly reflective surface to 1.00 for a highly absorptive surface. It is measured under ASTM C423 in a reverberation room.",
+          },
+          {
+            type: "table",
+            headers: ["Floor finish", "Typical NRC range"],
+            rows: [
+              ["Ceramic tile or stone", "Approximately 0.00–0.05"],
+              ["LVT or vinyl sheet", "Approximately 0.00–0.05"],
+              ["Low-pile commercial carpet tile with hard backing", "Approximately 0.05–0.15"],
+              ["Dense cut-pile broadloom, direct glue-down", "Approximately 0.15–0.30"],
+              ["Broadloom over separate cushion or attached cushion", "Approximately 0.25–0.55"],
+            ],
+            note: "These ranges are indicative. Actual values depend on pile height, pile weight, fiber, backing, and cushion. Request reports for the exact construction quoted.",
+          },
+          {
+            type: "paragraph",
+            text: "Carpet is typically the flooring category that contributes the most meaningful airborne absorption. In a corridor, that absorption helps turn a reverberant hallway echo into the quieter acoustic character guests associate with a quality hotel.",
+          },
+          { type: "subheading", title: "2. IIC — Impact Insulation Class" },
+          {
+            type: "paragraph",
+            text: "IIC rates how well a floor and ceiling assembly blocks impact noise such as footsteps, dropped objects, and furniture movement from reaching the space below. It is measured under ASTM E492 and rated under ASTM E989. The critical procurement point is that IIC describes the complete assembly — slab, underlayment, and finish floor — rather than the carpet alone.",
+          },
+          { type: "subheading", title: "3. ΔIIC — The Improvement Added by the Floor Covering" },
+          {
+            type: "paragraph",
+            text: "ΔIIC, measured under ASTM E2179, isolates the improvement a floor covering adds to a standard bare concrete slab. This is a fairer way to compare products from different suppliers because it removes much of the building-structure variation from the comparison.",
+          },
+          {
+            type: "paragraph",
+            text: "Hard finishes generally add modest impact improvement on their own, while carpet — especially carpet with cushion — can add substantially more. Corridors and upper-floor guestrooms are therefore two zones where carpet delivers a particularly audible benefit.",
+          },
+          {
+            type: "callout",
+            label: "RFQ language you can copy",
+            text: "Please provide NRC (ASTM C423) and ΔIIC (ASTM E2179) test data for the quoted construction, including the backing or cushion configuration as quoted. Values from different constructions will not be accepted as equivalents.",
+          },
+        ],
+      },
+      {
+        title: "Zone by Zone: Where Carpet Earns Its Keep Acoustically",
+        paragraphs: [],
+        blocks: [
+          { type: "subheading", title: "Corridors — The Highest-Impact Decision" },
+          {
+            type: "paragraph",
+            text: "Corridors concentrate footsteps, luggage wheels, housekeeping carts, deliveries, and late-night conversations within a short distance of guestroom doors. Carpet works on both noise paths: it absorbs airborne sound and cushions impacts before vibration enters the slab and walls.",
+          },
+          {
+            type: "paragraph",
+            text: "Dense low-pile broadloom or high-mass carpet tile with cushioned backing is commonly specified here. Broadloom supports continuous pattern flow and fewer seams; carpet tiles support faster replacement near elevators and other high-wear zones. Design intent and maintenance strategy determine the best format.",
+          },
+          { type: "subheading", title: "Guestrooms — Protecting the Guest Below" },
+          {
+            type: "paragraph",
+            text: "In guestrooms, the priority shifts toward impact isolation. Carpet with attached cushion backing, or broadloom over a separate underlay, is one of the most cost-effective impact-noise treatments for concrete-slab construction.",
+          },
+          {
+            type: "paragraph",
+            text: "A practical hybrid is hard flooring at the entrance vestibule and bathroom threshold, with carpet through the sleeping area. This preserves easy cleaning in spill zones while maintaining footfall isolation where quiet matters most.",
+          },
+          { type: "subheading", title: "Meeting Rooms, Ballrooms, and Prefunction Areas" },
+          {
+            type: "paragraph",
+            text: "These spaces depend on speech intelligibility. Excess reverberation makes presentations harder to understand and banquet conversation tiring. High-pile-weight broadloom over cushion contributes absorption while also carrying the design identity of signature hospitality spaces.",
+          },
+          {
+            type: "image",
+            src: "/images/blog-series/hotel-acoustic-noise-guide/hotel-ballroom-acoustic-carpet-v2.webp",
+            alt: "Large hotel ballroom fitted with patterned broadloom carpet for acoustic comfort",
+            caption: "Ballroom broadloom supports both acoustic control and a continuous large-format design.",
+          },
+          { type: "subheading", title: "Stairs and Transition Zones" },
+          {
+            type: "paragraph",
+            text: "Stairwells near guestrooms can transmit sharp impact noise. Carpeted treads with the appropriate nosing and fire performance help close this gap while also improving slip resistance.",
+          },
+        ],
+      },
+      {
+        title: "The Acoustic Specification Checklist",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "paragraph",
+            text: "When the objective is measurable noise reduction rather than simply having carpet, include the following items in the specification.",
+          },
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              {
+                title: "Pile construction and density.",
+                text: "For corridors, specify dense low cut-pile or tight loop construction, pile height, pile weight, and traffic classification. Density supports durability, while pile mass and cushion contribute more directly to acoustics.",
+              },
+              {
+                title: "Backing and cushion.",
+                text: "This is often the largest acoustic variable. Compare hard backing, PE or cushion-back tile, attached-cushion broadloom, and broadloom over separate underlay on the exact same basis.",
+              },
+              {
+                title: "Fire performance.",
+                text: "Request the actual certificate for the quoted construction under the applicable ASTM E648, EN 13501-1, or local requirement rather than relying on a generic brochure claim.",
+              },
+              {
+                title: "Documented acoustic data.",
+                text: "Request NRC under ASTM C423 and ΔIIC under ASTM E2179 for the exact pile, backing, and cushion configuration being priced.",
+              },
+              {
+                title: "Appearance retention and cleanability.",
+                text: "Match fiber, stain protection, sunlight exposure performance, and construction to the traffic zone so acoustic performance is not lost through premature replacement.",
+              },
+              {
+                title: "Dimensional stability for wheeled traffic.",
+                text: "Housekeeping and luggage carts stress seams and edges. Specify tuft bind and delamination strength for broadloom or backing performance suitable for cart traffic for tiles.",
+              },
+            ],
+          },
+          {
+            type: "image",
+            src: "/images/blog-series/hotel-acoustic-noise-guide/acoustic-carpet-underlay-installation-v2.webp",
+            alt: "Installer positioning hotel carpet over an acoustic underlay layer",
+            caption: "The backing or separate cushion beneath the carpet is a major part of the acoustic construction.",
+          },
+        ],
+      },
+      {
+        title: "What This Means for Total Cost of Ownership",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Acoustic carpet is sometimes challenged on initial price against hard flooring. A complete comparison includes costs that rarely appear on the finish-floor quotation.",
+          },
+          {
+            type: "list",
+            items: [
+              {
+                title: "Acoustic remediation avoided.",
+                text: "Achieving comparable impact isolation under hard flooring generally requires resilient underlayment systems, adding material and labor while contributing little airborne absorption inside the corridor.",
+              },
+              {
+                title: "Review-score economics.",
+                text: "Noise is a frequent trigger for negative reviews and compensation requests. Flooring addresses it passively and continuously without requiring staff intervention.",
+              },
+              {
+                title: "Sectional replacement.",
+                text: "Carpet tiles allow worn zones to be replaced without closing an entire corridor, while broadloom in guestrooms can be renewed room by room during planned renovation cycles.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Properties that remove corridor carpet solely for maintenance reasons can end up paying twice: once for the hard finish and again for acoustic remediation after opening.",
+          },
+        ],
+      },
+      {
+        title: "How to Send an Acoustic-Ready RFQ",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "paragraph",
+            text: "For a new build or renovation, the fastest path to a comparable quotation is to send the following information.",
+          },
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              { title: "Zone map and areas.", text: "List corridors, guestrooms, public areas, and meeting spaces in square meters, including the floor construction if known." },
+              { title: "Acoustic targets.", text: "Provide any IIC, ΔIIC, or NRC requirement, or describe the operational problem such as corridor noise complaints." },
+              { title: "Fire-code requirement.", text: "State the country and applicable ASTM, EN, or local classification." },
+              { title: "Design direction.", text: "Share patterns, colors, printing or weaving requirements, and the preferred broadloom or tile format for each zone." },
+              { title: "Project timeline.", text: "Provide the required on-site date so production and international shipping can be planned realistically." },
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Vishome can compare multiple backing constructions against the same design, provide documentation for the quoted build, and prepare project quantities with full commercial documentation. Guests will never see the test reports, but they will experience the result.",
+          },
+          {
+            type: "callout",
+            label: "Next step",
+            text: "Request a sample box or send your zone map to our project team for a construction-by-construction acoustic comparison and factory-direct quotation.",
+          },
+        ],
+      },
+    ],
+    suggestedLinks: [
+      { label: "Construction Comparison Guide", href: "/blog/axminster-vs-wilton-vs-tufted-hospitality-guide" },
+      { label: "High-Traffic Specification Guide", href: "/blog/carpet-tile-specifications-high-traffic-durability-guide" },
+      { label: "Hospitality Lifecycle Cost Guide", href: "/blog/hidden-cost-of-cheap-carpets-hospitality-roi-guide" },
+      { label: "Request Acoustic Project Quote", href: "/contact?product=Hotel%20Acoustic%20Carpet#quote-form" },
+    ],
+  },
   {
     slug: "commercial-space-carpet-tiles-maintenance-cost-guide",
     title: "Transform Your Commercial Space: How Premium Carpet Tiles Cut Maintenance Costs by 40%",

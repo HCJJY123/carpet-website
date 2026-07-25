@@ -1,13 +1,96 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { blogPosts } from "@/lib/blog-data";
+import { blogPosts, type BlogContentBlock } from "@/lib/blog-data";
 import { brandInfo, products } from "@/lib/data";
 import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 
 interface Props {
   params: Promise<{ slug: string }>;
+}
+
+function RichBlogBlock({ block, index }: { block: BlogContentBlock; index: number }) {
+  if (block.type === "paragraph") {
+    return <p className="text-lg leading-relaxed text-muted">{block.text}</p>;
+  }
+
+  if (block.type === "subheading") {
+    return <h3 className="pt-3 text-xl font-black leading-tight text-primary md:text-2xl">{block.title}</h3>;
+  }
+
+  if (block.type === "table") {
+    return (
+      <div className="my-7">
+        <div className="overflow-x-auto rounded-lg border border-border bg-white shadow-sm">
+          <table className="min-w-[680px] w-full border-collapse text-left">
+            <thead className="bg-primary text-white">
+              <tr>
+                {block.headers.map((header) => (
+                  <th key={header} className="px-5 py-4 text-xs font-black uppercase tracking-[0.12em]">
+                    {header}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-border">
+              {block.rows.map((row, rowIndex) => (
+                <tr key={`${index}-${rowIndex}`} className="odd:bg-surface/55">
+                  {row.map((cell, cellIndex) => (
+                    <td key={`${index}-${rowIndex}-${cellIndex}`} className="px-5 py-4 text-sm leading-relaxed text-muted">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {block.note ? <p className="mt-3 text-xs leading-relaxed text-muted">{block.note}</p> : null}
+      </div>
+    );
+  }
+
+  if (block.type === "list") {
+    const items = block.items.map((item, itemIndex) => (
+      <li key={`${index}-${itemIndex}`} className="pl-2 text-base leading-relaxed text-muted md:text-lg">
+        {item.title ? <strong className="font-black text-primary">{item.title} </strong> : null}
+        {item.text}
+      </li>
+    ));
+
+    return block.ordered ? (
+      <ol className="ml-6 space-y-4 marker:font-black marker:text-accent list-decimal">{items}</ol>
+    ) : (
+      <ul className="ml-6 space-y-4 marker:text-accent list-disc">{items}</ul>
+    );
+  }
+
+  if (block.type === "callout") {
+    return (
+      <aside className="my-7 border-l-4 border-accent bg-surface px-6 py-5">
+        {block.label ? <p className="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-accent">{block.label}</p> : null}
+        <p className="text-base font-semibold leading-relaxed text-primary md:text-lg">{block.text}</p>
+      </aside>
+    );
+  }
+
+  return (
+    <figure className="my-8">
+      <div className="aspect-[16/9] overflow-hidden rounded-xl border border-border bg-white shadow-md">
+        <ProductImage
+          src={block.src}
+          alt={block.alt}
+          className="h-full w-full"
+          fit="cover"
+          sizes="(max-width: 1000px) 100vw, 1000px"
+        />
+      </div>
+      {block.caption ? (
+        <figcaption className="mt-3 text-xs font-semibold uppercase tracking-wider text-muted">{block.caption}</figcaption>
+      ) : null}
+    </figure>
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -122,7 +205,7 @@ export default async function BlogPostPage({ params }: Props) {
         {post.h1Image ? (
           <figure className="mb-8">
             <div className="aspect-[16/9] rounded-xl overflow-hidden bg-white shadow-2xl border-8 border-white">
-              <ProductImage src={post.h1Image} alt={post.h1ImageAlt || post.title} className="w-full h-full" fit="contain" priority sizes="(max-width: 1000px) 100vw, 1000px" />
+              <ProductImage src={post.h1Image} alt={post.h1ImageAlt || post.title} className="w-full h-full" fit={post.h1ImageFit || "contain"} priority sizes="(max-width: 1000px) 100vw, 1000px" />
             </div>
             {post.h1ImageCaption ? (
               <figcaption className="text-xs text-muted mt-3 uppercase tracking-wider font-semibold">
@@ -141,25 +224,35 @@ export default async function BlogPostPage({ params }: Props) {
           {post.sections.map((section) => (
             <section key={section.title} className="article-section border-b border-border pb-10">
               <h2 className="text-2xl font-bold text-primary mb-5 uppercase tracking-tight">{section.title}</h2>
-              <div className="space-y-4">
-                {section.paragraphs.map((paragraph, index) => (
-                  <p key={`${section.title}-${index}`} className="text-muted text-lg leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-              {section.image ? (
-                <figure className="mt-8">
-                  <div className="rounded-xl overflow-hidden border border-border bg-white shadow-md">
-                    <ProductImage src={section.image} alt={section.imageAlt || section.title} className="w-full aspect-[16/10]" fit="contain" />
+              {section.blocks ? (
+                <div className="space-y-5">
+                  {section.blocks.map((block, index) => (
+                    <RichBlogBlock key={`${section.title}-${block.type}-${index}`} block={block} index={index} />
+                  ))}
+                </div>
+              ) : (
+                <>
+                  <div className="space-y-4">
+                    {section.paragraphs.map((paragraph, index) => (
+                      <p key={`${section.title}-${index}`} className="text-muted text-lg leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
                   </div>
-                  {section.imageCaption ? (
-                    <figcaption className="text-xs text-muted mt-3 uppercase tracking-wider font-semibold">
-                      {section.imageCaption}
-                    </figcaption>
+                  {section.image ? (
+                    <figure className="mt-8">
+                      <div className="rounded-xl overflow-hidden border border-border bg-white shadow-md">
+                        <ProductImage src={section.image} alt={section.imageAlt || section.title} className="w-full aspect-[16/10]" fit="contain" />
+                      </div>
+                      {section.imageCaption ? (
+                        <figcaption className="text-xs text-muted mt-3 uppercase tracking-wider font-semibold">
+                          {section.imageCaption}
+                        </figcaption>
+                      ) : null}
+                    </figure>
                   ) : null}
-                </figure>
-              ) : null}
+                </>
+              )}
             </section>
           ))}
         </div>
