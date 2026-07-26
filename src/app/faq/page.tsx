@@ -6,7 +6,7 @@ import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "B2B Carpet Sourcing FAQ | Project & Technical Support | VISHOME",
-  description: "Expert answers on commercial carpet types, custom design matching, project lead times, fire ratings (ASTM E648), and global logistics for hotel and office contractors.",
+  description: "Practical answers on commercial carpet specifications, MOQ, samples, quotations, stock, lead times, test reports, quality control, installation, and international shipping.",
   alternates: { canonical: "https://www.vishomecarpet.com/faq" },
 };
 
@@ -94,7 +94,7 @@ export default function FAQPage() {
               Contact Factory Experts
             </Link>
             <Link href="/contact?subject=Samples" className="border-2 border-white/20 px-8 py-5 text-xs font-black uppercase tracking-[0.18em] text-white transition-all hover:bg-white/10 md:px-16 md:py-6 md:tracking-[0.3em]">
-              Request Free Sample Box
+              Request Project Samples
             </Link>
           </div>
         </div>

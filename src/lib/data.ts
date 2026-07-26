@@ -567,47 +567,47 @@ export const faqSections = [
   {
     title: "Product FAQs",
     questions: [
-      { q: "What types of commercial carpets do you offer?", a: "We provide Carpet Tiles, Broadloom Carpets, Modular Carpet Systems, Custom Area Rugs, and Entrance Mat Systems suitable for offices, hotels, healthcare, and public facilities." },
+      { q: "What types of commercial carpets do you offer?", a: "We supply commercial carpet tiles, wall-to-wall and broadloom carpet, custom area rugs, entrance and public-area matting, and specialized gold-recovery matting for project and distribution requirements." },
       { q: "What is the difference between carpet tiles and broadloom carpet?", a: "Carpet tiles offer flexible installation and easier replacement. Broadloom carpet provides a seamless appearance and is commonly used in hospitality projects." },
-      { q: "Are your carpets suitable for high-traffic commercial areas?", a: "Yes. Our commercial flooring solutions are designed for environments such as hotel corridors, office spaces, airports, schools, and healthcare facilities." },
-      { q: "How long do commercial carpets typically last?", a: "Service life depends on traffic level, product specification, and maintenance practices. Commercial-grade carpets maintain performance for years." },
+      { q: "Are your carpets suitable for high-traffic commercial areas?", a: "Yes, when the fiber, pile construction, backing, installation method, and maintenance plan are matched to the traffic level. Share the application and expected traffic so we can recommend a project-specific specification." },
+      { q: "How do I choose the material, thickness, and backing?", a: "We compare traffic, rolling loads, acoustic needs, installation method, cleaning routine, budget, and required service life before recommending nylon, polypropylene, wool, pile weight, thickness, and backing options." },
       { q: "What carpet solutions are best for office buildings?", a: "Office projects typically prioritize durability and acoustic performance; carpet tiles are often preferred." },
       { q: "What carpet solutions are best for hotels?", a: "We provide customized recommendations for guest rooms, corridors, ballrooms, and lobbies." },
-      { q: "What carpet options are suitable for healthcare facilities?", a: "Healthcare projects require hygiene-focused, durable, and easy-to-maintain flooring." }
+      { q: "Can carpet tiles be installed without permanent glue?", a: "Some carpet tile systems can use removable adhesive, fixing tabs, or approved loose-lay methods, depending on the backing and site conditions. Confirm the substrate, traffic, and whether the floor must be removed after an event before installation." }
     ]
   },
   {
     title: "Custom Design FAQs",
     questions: [
-      { q: "Can you customize carpet designs?", a: "Yes. We offer custom patterns, custom colors, brand graphics, and bespoke hospitality collections." },
+      { q: "Can you customize carpet designs?", a: "Yes. We can develop custom patterns, colors, dimensions, brand graphics, and hospitality collections after confirming the application, construction, quantity, target budget, and delivery date." },
       { q: "Can you match our designer’s color palette?", a: "Yes. We can develop colors based on Pantone references, brand guidelines, or existing samples." },
       { q: "Can you work directly from architectural drawings?", a: "Absolutely. We regularly work with CAD files, PDF layouts, and interior design packages." },
-      { q: "Can you provide project samples before production?", a: "Yes. Available samples include material samples, color swatches, and strike-offs." },
-      { q: "Can you develop custom hotel carpet collections?", a: "Yes, we provide fully customized hospitality flooring for all hotel zones." }
+      { q: "Can you provide project samples before production?", a: "Yes. Depending on the product, we can arrange material samples, color swatches, stock samples, or custom strike-offs. We confirm the sample type, color, size, sample cost, freight, and dispatch date before proceeding." },
+      { q: "What is approved before bulk production?", a: "The product specification, artwork or pattern repeat, color reference, backing, dimensions, packaging, and approved sample are confirmed before bulk production. Any acceptable color or batch tolerance should also be recorded." }
     ]
   },
   {
     title: "Commercial Project FAQs",
     questions: [
-      { q: "What information do you need to provide a quotation?", a: "Please provide floor plans, quantities, project location, design requirements, and delivery schedule." },
+      { q: "What information do you need to provide a complete quotation?", a: "Please send the product or reference image, dimensions, quantity or floor area, application, required specification, delivery city or port, and deadline. We can then state the product, unit and total price, packing, trade term, shipping option, stock or production status, lead time, and quotation validity together." },
       { q: "Can you assist with specification and product selection?", a: "Yes. Our technical team assists with product selection, traffic analysis, and budget planning." },
-      { q: "How long does a commercial carpet project take?", a: "Timeline depends on product type, customization level, and quantity." },
+      { q: "How long does a commercial carpet project take?", a: "The timeline depends on whether the selected color and quantity are in stock or made to order, plus sample approval, production, inspection, and transport. We confirm the earliest realistic ready date after the exact specification and quantity are checked." },
       { q: "Can you support phased deliveries?", a: "Yes. We can arrange staged production and shipment according to construction progress." },
-      { q: "Can you support international commercial projects?", a: "Yes. We provide export packaging, shipping coordination, and documentation support." },
+      { q: "Can you support international commercial projects?", a: "Yes. We provide export packaging, shipping coordination, and documentation support, with available EXW, FOB, CIF, or door-to-door options confirmed for the destination and order." },
       { q: "Can you provide third-party inspections before shipment?", a: "Yes, independent inspections can be arranged upon request." },
-      { q: "How can commercial carpet reduce lifecycle costs?", a: "High performance reduces maintenance, replacement frequency, and installation downtime." },
-      { q: "Why do developers choose carpet instead of hard flooring?", a: "Key advantages include acoustic comfort, walking safety, and design flexibility." }
+      { q: "Is the quoted price inclusive of shipping and import charges?", a: "Every quotation should identify its trade term. EXW and FOB prices do not include final delivery; CIF includes freight to the named port; duties and local taxes are excluded unless a door-to-door or DDP quotation explicitly states otherwise." },
+      { q: "How do you confirm stock and the fastest lead time?", a: "Send the exact model, color, dimensions, and quantity. We will distinguish available stock from made-to-order production and provide the earliest ready date, dispatch estimate, and closest practical substitute when timing is critical." }
     ]
   },
   {
     title: "Manufacturing & Logistics FAQs",
     questions: [
-      { q: "What is your production capacity?", a: "Our facilities support large-scale commercial projects and multi-location developments." },
-      { q: "How do you ensure quality consistency?", a: "Quality control includes raw material inspection, production monitoring, and finished product verification." },
-      { q: "What certifications can be provided?", a: "Products comply with standards for fire performance (ASTM E648), indoor air quality, and durability." },
-      { q: "What is your MOQ?", a: "MOQ depends on product type and customization; project-specific recommendations are available." },
-      { q: "What warranty or after-sales support do you provide?", a: "We provide technical assistance, maintenance guidance, and project coordination." },
-      { q: "Why choose us as your commercial carpet supplier?", a: "B2B expertise, custom design capability, large-scale manufacturing, and global export experience." }
+      { q: "What is your production capacity?", a: "Our facilities support large commercial orders and multi-location projects. Available capacity and the production schedule are confirmed against the selected construction, quantity, and required delivery date." },
+      { q: "How do you ensure quality and batch consistency?", a: "Quality control can include approved-sample reference, raw-material checks, color and batch review, in-process monitoring, finished-product inspection, packing confirmation, and third-party inspection when requested." },
+      { q: "What certifications and test reports can be provided?", a: "Available fire-performance, indoor-air-quality, material, and durability documents vary by product and construction. Tell us the required standard, such as a specific fire classification, before quotation so we can confirm the applicable report rather than assume compliance." },
+      { q: "What is your MOQ?", a: "MOQ depends on the product, stock availability, color, and customization. Stock items or samples may support a smaller trial quantity, while custom colors, designs, and production runs normally require a higher project-specific MOQ." },
+      { q: "What warranty or after-sales support do you provide?", a: "Warranty terms depend on the approved product specification, application, installation, and maintenance conditions. We also support issue review with order records, batch information, photos or video, and inspection evidence." },
+      { q: "How many square metres fit in a container?", a: "Loading quantity depends on carpet thickness, backing, roll or tile dimensions, carton size, pallet requirements, and whether products are mixed. We provide a packing and container-loading estimate after the final specification is confirmed." }
     ]
   }
 ];
