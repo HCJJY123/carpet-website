@@ -327,7 +327,7 @@ export default function Header() {
               aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
               title="Email sales@vishomecarpet.com"
             >
-              <EmailIcon className="h-6 w-6 transition-transform group-hover:scale-105" />
+              <EmailIcon className="h-6 w-6 scale-90 transition-transform group-hover:scale-95" />
               Email
             </a>
           </div>
@@ -350,7 +350,7 @@ export default function Header() {
               aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
               title="Email sales@vishomecarpet.com"
             >
-              <EmailIcon className="h-9 w-9" />
+              <EmailIcon className="h-9 w-9 scale-90" />
             </a>
             <div className="relative" data-language-switcher>
               <LanguageButton
@@ -501,7 +501,7 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#102A43]/20 bg-white px-5 py-3 text-[13px] font-semibold uppercase tracking-[0.06em] text-[#102A43] sm:col-span-2"
             >
-              <EmailIcon className="h-6 w-6" />
+              <EmailIcon className="h-6 w-6 scale-90" />
               Email Sales Team
             </a>
           </div>
