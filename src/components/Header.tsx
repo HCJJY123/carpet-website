@@ -327,12 +327,14 @@ export default function Header() {
               aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
               title="Email sales@vishomecarpet.com"
             >
-              <EmailIcon className="h-3.5 w-3.5" />
+              <span className="flex h-5 w-5 items-center justify-center rounded-[5px] bg-[linear-gradient(180deg,#68C7FF_0%,#258CF4_52%,#126DE2_100%)] shadow-[0_2px_5px_rgba(18,109,226,0.32)] ring-1 ring-inset ring-white/35 transition-[filter,transform] group-hover:scale-105 group-hover:brightness-105">
+                <EmailIcon className="h-3.5 w-3.5" />
+              </span>
               Email
             </a>
           </div>
 
-          <div className="flex items-center justify-end gap-2 xl:hidden">
+          <div className="flex items-center justify-end gap-1.5 xl:hidden">
             <a
               href={whatsappUrl}
               target="_blank"
@@ -343,6 +345,14 @@ export default function Header() {
               aria-label="Contact VISHOME on WhatsApp Business"
             >
               <WhatsAppIcon className="h-4 w-4" />
+            </a>
+            <a
+              href={emailUrl}
+              className="flex h-9 w-9 items-center justify-center rounded-[9px] bg-[linear-gradient(180deg,#68C7FF_0%,#258CF4_52%,#126DE2_100%)] shadow-[0_3px_8px_rgba(18,109,226,0.32)] ring-1 ring-inset ring-white/35 transition-[filter,transform] hover:scale-105 hover:brightness-105"
+              aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
+              title="Email sales@vishomecarpet.com"
+            >
+              <EmailIcon className="h-[18px] w-[18px]" />
             </a>
             <div className="relative" data-language-switcher>
               <LanguageButton
@@ -493,7 +503,9 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#102A43]/20 bg-white px-5 py-3 text-[13px] font-semibold uppercase tracking-[0.06em] text-[#102A43] sm:col-span-2"
             >
-              <EmailIcon className="h-4 w-4" />
+              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[linear-gradient(180deg,#68C7FF_0%,#258CF4_52%,#126DE2_100%)] shadow-sm ring-1 ring-inset ring-white/35">
+                <EmailIcon className="h-4 w-4" />
+              </span>
               Email Sales Team
             </a>
           </div>
@@ -649,8 +661,8 @@ function EmailIcon({ className }: { className?: string }) {
   return (
     <span className={className}>
       <svg viewBox="0 0 24 24" width="100%" height="100%" fill="none" aria-hidden="true">
-        <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.8" />
-        <path d="m4 7 8 6 8-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <rect x="3" y="5.25" width="18" height="13.5" rx="2.25" fill="white" />
+        <path d="m4.5 7.25 7.5 5.5 7.5-5.5" stroke="#258CF4" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </span>
   );
