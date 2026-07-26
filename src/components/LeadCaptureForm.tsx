@@ -188,7 +188,7 @@ export default function LeadCaptureForm({
   }
 
   const fieldClass = "w-full rounded-sm border border-border bg-white px-4 py-3.5 text-base transition-all focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/10";
-  const labelClass = "mb-2 block text-[10px] font-black uppercase tracking-[0.16em] text-primary";
+  const labelClass = "mb-2 block text-xs font-bold tracking-[0.02em] text-primary";
   const sampleOptions = Array.from(new Set([
     ...(productDefault && productDefault !== "Commercial carpet sample box" ? [productDefault] : []),
     "Carpet tile samples",
@@ -234,7 +234,7 @@ export default function LeadCaptureForm({
                       page_path: window.location.pathname,
                     })}
                   />
-                  <span className="flex min-h-14 items-center justify-center rounded-sm border border-border bg-surface px-3 py-3 text-center text-[10px] font-black uppercase leading-relaxed tracking-[0.1em] text-primary transition-colors peer-checked:border-accent peer-checked:bg-accent peer-checked:text-white">
+                  <span className="flex min-h-14 items-center justify-center rounded-sm border border-border bg-surface px-3 py-3 text-center text-[13px] font-bold leading-relaxed tracking-[0.02em] text-primary transition-colors peer-checked:border-accent peer-checked:bg-accent peer-checked:text-white">
                     {option}
                   </span>
                 </label>
@@ -311,7 +311,7 @@ export default function LeadCaptureForm({
         <button
           type="submit"
           disabled={state.submitting}
-          className="flex min-h-14 w-full items-center justify-center rounded-sm bg-[#C8752A] px-5 py-4 text-center text-xs font-black uppercase tracking-[0.14em] text-white shadow-sm transition-colors hover:bg-[#AD6424] disabled:cursor-not-allowed disabled:opacity-50"
+          className="flex min-h-14 w-full items-center justify-center rounded-sm bg-[#C8752A] px-5 py-4 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-sm transition-colors hover:bg-[#AD6424] disabled:cursor-not-allowed disabled:opacity-50"
         >
           {state.submitting ? "SENDING..." : submitLabel}
         </button>
@@ -337,7 +337,7 @@ export default function LeadCaptureForm({
 
       <div className="border-b border-border pb-6 md:pb-7">
         <div className="mb-5 flex flex-wrap items-baseline justify-between gap-2">
-          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#C8752A]">Quote Essentials</p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.06em] text-[#C8752A]">Quote Essentials</p>
           <p className="text-xs font-semibold text-muted">4 required details</p>
         </div>
         <div className="grid gap-4 md:grid-cols-2 md:gap-5">
@@ -361,7 +361,7 @@ export default function LeadCaptureForm({
       </div>
 
       <div className="flex items-center gap-3">
-        <p className="text-[11px] font-black uppercase tracking-[0.18em] text-primary">Additional Project Details</p>
+        <p className="text-[13px] font-bold uppercase tracking-[0.06em] text-primary">Additional Project Details</p>
         <span className="h-px flex-1 bg-border" aria-hidden="true" />
       </div>
 
@@ -432,7 +432,7 @@ export default function LeadCaptureForm({
 
       <div>
         <p className={labelClass}>Sample Box</p>
-        <Link href="/request-sample-box" className="flex min-h-[52px] items-center justify-center border border-border bg-white px-5 py-4 text-center text-[10px] font-black uppercase tracking-[0.16em] text-primary transition-all hover:border-primary hover:bg-surface">
+        <Link href="/request-sample-box" className="flex min-h-[52px] items-center justify-center border border-border bg-white px-5 py-4 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-primary transition-all hover:border-primary hover:bg-surface">
           Request Commercial Carpet Sample Box
         </Link>
       </div>
@@ -441,7 +441,7 @@ export default function LeadCaptureForm({
         ref={primarySubmitRef}
         type="submit"
         disabled={state.submitting}
-        className="btn-fox-orange w-full py-5 text-sm tracking-[0.16em] hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 md:py-6 md:text-base md:tracking-[0.4em]"
+        className="btn-fox-orange w-full py-5 text-sm tracking-[0.06em] hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-50 md:py-6 md:text-base md:tracking-[0.08em]"
       >
         {state.submitting ? "SENDING INQUIRY..." : submitLabel}
       </button>
@@ -468,7 +468,7 @@ export default function LeadCaptureForm({
                   <button
                     type="submit"
                     disabled={state.submitting}
-                    className="flex min-h-13 w-full items-center justify-center rounded-sm bg-[#C8752A] px-5 py-3.5 text-center text-xs font-black uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#AD6424] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:min-h-14 md:text-sm md:tracking-[0.18em]"
+                    className="flex min-h-13 w-full items-center justify-center rounded-sm bg-[#C8752A] px-5 py-3.5 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white transition-colors hover:bg-[#AD6424] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:min-h-14 md:text-sm md:tracking-[0.08em]"
                   >
                     {state.submitting ? "SENDING INQUIRY..." : submitLabel}
                   </button>

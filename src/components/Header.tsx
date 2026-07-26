@@ -224,7 +224,7 @@ export default function Header() {
               </span>
               <div className="flex min-w-0 flex-col">
                 <span className="truncate text-lg font-black leading-none tracking-tighter text-[#102A43] md:text-xl">VISHOME</span>
-                <span className="mt-1 truncate text-[7px] font-bold uppercase leading-none tracking-[0.24em] text-[#627D98] md:text-[8px] md:tracking-[0.3em]">Global Commercial Carpet</span>
+                <span className="mt-1 truncate text-[8px] font-bold uppercase leading-none tracking-[0.08em] text-[#627D98] sm:text-[9px] sm:tracking-[0.1em] md:text-[10px] md:tracking-[0.12em]">Global Commercial Carpet</span>
               </div>
             </Link>
 
@@ -258,7 +258,7 @@ export default function Header() {
                     <Link
                       href={link.href}
                       aria-haspopup={hasChildren ? "menu" : undefined}
-                      className={`flex items-center whitespace-nowrap rounded-full px-3.5 py-2 text-[10.5px] font-bold uppercase tracking-[0.15em] transition-all ${
+                      className={`flex items-center whitespace-nowrap rounded-full px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.06em] transition-all ${
                         active
                           ? "bg-[#102A43] text-white shadow-sm"
                           : "text-[#102A43]/58 hover:bg-surface hover:text-[#102A43]"
@@ -307,14 +307,14 @@ export default function Header() {
           </nav>
 
           <div className="hidden translate-x-4 items-center justify-end gap-3 xl:flex 2xl:translate-x-6">
-            <Link href="/contact#quote-form" className="whitespace-nowrap rounded-lg bg-[#C8752A] px-6 py-3 text-[11px] font-black uppercase tracking-widest text-white shadow-[0_3px_10px_rgba(72,43,18,0.16)] transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_5px_14px_rgba(72,43,18,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2">Send Inquiry</Link>
+            <Link href="/contact#quote-form" className="whitespace-nowrap rounded-lg bg-[#C8752A] px-6 py-3 text-[13px] font-bold uppercase tracking-[0.08em] text-white shadow-[0_3px_10px_rgba(72,43,18,0.16)] transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_5px_14px_rgba(72,43,18,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2">Send Inquiry</Link>
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               data-whatsapp-placement="header"
               data-whatsapp-intent="project_support"
-              className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#25D366]/30 bg-white px-3 py-2 text-[9px] font-bold uppercase tracking-[0.1em] text-[#168a42] transition-colors hover:border-[#25D366]/55 hover:bg-[#25D366]/[0.06]"
+              className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#25D366]/30 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#168a42] transition-colors hover:border-[#25D366]/55 hover:bg-[#25D366]/[0.06]"
               aria-label="Contact VISHOME on WhatsApp Business"
             >
               <WhatsAppIcon className="h-3.5 w-3.5" />
@@ -411,7 +411,7 @@ export default function Header() {
                     <Link
                       href={link.href}
                       onClick={() => setMenuOpen(false)}
-                      className="flex flex-1 items-center px-4 py-3 text-[11px] font-black uppercase tracking-[0.16em] text-[#102A43]"
+                      className="flex flex-1 items-center px-4 py-3 text-sm font-semibold uppercase tracking-[0.06em] text-[#102A43]"
                     >
                       {link.label}
                     </Link>
@@ -453,7 +453,7 @@ export default function Header() {
                             key={`${link.href}-${child.label}`}
                             href={child.href}
                             onClick={() => setMenuOpen(false)}
-                            className="block border-b border-border/60 px-5 py-2.5 text-[12px] font-semibold text-[#102A43]/70 last:border-b-0"
+                            className="block border-b border-border/60 px-5 py-2.5 text-[13px] font-semibold text-[#102A43]/70 last:border-b-0"
                           >
                             {child.label}
                           </Link>
@@ -473,7 +473,7 @@ export default function Header() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#25D366]/35 bg-white px-5 py-3 text-xs font-bold uppercase tracking-[0.1em] text-[#168a42]"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#25D366]/35 bg-white px-5 py-3 text-[13px] font-semibold uppercase tracking-[0.06em] text-[#168a42]"
             >
               <WhatsAppIcon className="h-4 w-4" />
               Ask on WhatsApp
@@ -525,19 +525,19 @@ function LanguageButton({
     >
       {variant === "wide" ? (
         <>
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#102A43] text-[9px] font-black text-white">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#102A43] text-[10px] font-bold text-white">
             A/文
           </span>
           <span className="min-w-0 flex-1 text-left">
-            <span className="block text-[8px] font-black uppercase text-[#9a6a16]">Website Language</span>
-            <span className="mt-1 block truncate text-xs font-black" dir="auto">{name} ({code})</span>
+            <span className="block text-[10px] font-bold uppercase tracking-[0.04em] text-[#9a6a16]">Website Language</span>
+            <span className="mt-1 block truncate text-[13px] font-bold" dir="auto">{name} ({code})</span>
           </span>
           {chevron}
         </>
       ) : (
         <>
-          <span className="text-[7px] font-black uppercase text-[#9a6a16]">Language</span>
-          <span className="mt-0.5 flex items-center gap-1 text-[10px] font-black">
+          <span className="text-[9px] font-bold uppercase text-[#9a6a16]">Language</span>
+          <span className="mt-0.5 flex items-center gap-1 text-[11px] font-bold">
             {code}
             {chevron}
           </span>

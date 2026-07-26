@@ -29,7 +29,7 @@ export default function Footer() {
               />
               <div className="flex flex-col">
                 <span className="text-2xl font-black tracking-tight leading-none text-white">VISHOME</span>
-                <span className="text-[8px] font-bold text-gray-400 tracking-[0.3em] uppercase leading-none mt-1.5">Global Commercial Carpet</span>
+                <span className="mt-1.5 text-[10px] font-bold uppercase leading-none tracking-[0.16em] text-gray-400">Global Commercial Carpet</span>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 font-medium">
@@ -39,41 +39,41 @@ export default function Footer() {
 
           {/* Product Links */}
           <div>
-            <h3 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-[#627D98]">
+            <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.08em] text-[#627D98]">
               Collections
             </h3>
             <ul className="space-y-4">
-              <li><Link href="/products/carpet-tiles" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Commercial Carpet Tiles</Link></li>
-              <li><Link href="/products/wall-to-wall" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Wall-to-Wall Carpets</Link></li>
-              <li><Link href="/products/public-area" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Public Area Carpets</Link></li>
-              <li><Link href="/natural-sisal-carpet" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Natural Sisal Carpet</Link></li>
+              <li><Link href="/products/carpet-tiles" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Commercial Carpet Tiles</Link></li>
+              <li><Link href="/products/wall-to-wall" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Wall-to-Wall Carpets</Link></li>
+              <li><Link href="/products/public-area" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Public Area Carpets</Link></li>
+              <li><Link href="/natural-sisal-carpet" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Natural Sisal Carpet</Link></li>
             </ul>
           </div>
 
           {/* Company Links */}
           <div>
-            <h3 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-[#627D98]">
+            <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.08em] text-[#627D98]">
               Company
             </h3>
             <ul className="space-y-4">
-              <li><Link href="/about-us" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">About Us</Link></li>
-              <li><Link href="/commercial-carpet-manufacturer" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Manufacturer</Link></li>
-              <li><Link href="/solutions" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Solutions</Link></li>
-              <li><Link href="/solutions/hotel-carpet-manufacturer" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Hotel Carpet Manufacturer</Link></li>
-              <li><Link href="/projects" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">Case Studies</Link></li>
-              <li><Link href="/blog" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">B2B Insights</Link></li>
-              <li><Link href="/faq" className="text-sm font-bold text-gray-300 hover:text-white transition-colors uppercase tracking-widest">FAQ</Link></li>
+              <li><Link href="/about-us" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">About Us</Link></li>
+              <li><Link href="/commercial-carpet-manufacturer" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Manufacturer</Link></li>
+              <li><Link href="/solutions" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Solutions</Link></li>
+              <li><Link href="/solutions/hotel-carpet-manufacturer" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Hotel Carpet Manufacturer</Link></li>
+              <li><Link href="/projects" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Case Studies</Link></li>
+              <li><Link href="/blog" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">B2B Insights</Link></li>
+              <li><Link href="/faq" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">FAQ</Link></li>
             </ul>
           </div>
 
           {/* Contact Details */}
           <div>
-            <h3 className="text-sm font-black uppercase tracking-[0.2em] mb-8 text-[#627D98]">
+            <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.08em] text-[#627D98]">
               Technical Support
             </h3>
             <ul className="space-y-6">
               <li className="flex flex-col gap-2">
-                <span className="text-[10px] font-black text-accent uppercase tracking-widest">Email Inquiry</span>
+                <span className="text-xs font-bold uppercase tracking-[0.08em] text-accent">Email Inquiry</span>
                 <a
                   href={`mailto:${brandInfo.email}`}
                   className="inline-flex w-fit max-w-full items-center rounded-md border border-accent/50 bg-white/10 px-4 py-3 text-base font-black text-white shadow-md transition-all hover:-translate-y-0.5 hover:border-accent hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:text-lg"
@@ -83,19 +83,19 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex flex-col gap-3">
-                <span className="text-[10px] font-black text-accent uppercase tracking-widest">Chat & Project Inquiry</span>
+                <span className="text-xs font-bold uppercase tracking-[0.08em] text-accent">Chat & Project Inquiry</span>
                 <a
                   href={footerWhatsAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   data-whatsapp-placement="footer_support"
                   data-whatsapp-intent="footer_project_inquiry"
-                  className="inline-flex items-center justify-center rounded-sm bg-[#25D366] px-4 py-3 text-[11px] font-black uppercase tracking-[0.14em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
+                  className="inline-flex items-center justify-center rounded-sm bg-[#25D366] px-4 py-3 text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
                   aria-label="Send VISHOME your project details on WhatsApp"
                 >
                   WhatsApp Project Support
                 </a>
-                <Link href="/contact" className="text-xs font-bold uppercase tracking-[0.18em] text-gray-300 transition-colors hover:text-white">
+                <Link href="/contact" className="text-[13px] font-semibold tracking-[0.04em] text-gray-300 transition-colors hover:text-white">
                   Leave project details →
                 </Link>
                 <p className="text-xs leading-relaxed text-gray-500">
@@ -109,14 +109,14 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/5 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
-            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30">
+            <p className="text-xs font-normal tracking-normal text-white/40">
               &copy; {new Date().getFullYear()} Vishome Global Commercial Carpet Co. Ltd.
             </p>
-            <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">Established 2005</p>
+            <p className="mt-2 text-xs font-medium tracking-normal text-white/45">Established 2005</p>
           </div>
           <div className="flex gap-10 opacity-30">
-             <span className="text-[10px] font-black text-white uppercase tracking-widest">Tianjin Factory Direct</span>
-             <span className="text-[10px] font-black text-white uppercase tracking-widest">ASTM E648 Certified</span>
+             <span className="text-xs font-semibold uppercase tracking-[0.04em] text-white">Tianjin Factory Direct</span>
+             <span className="text-xs font-semibold uppercase tracking-[0.04em] text-white">ASTM E648 Certified</span>
           </div>
         </div>
       </div>

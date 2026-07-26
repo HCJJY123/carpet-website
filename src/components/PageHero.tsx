@@ -37,15 +37,15 @@ export default function PageHero({
       <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-[#102A43]/55 to-transparent" />
       <div className="container-fox relative z-10 flex min-h-[150px] flex-col items-center justify-center md:min-h-[190px]">
         {eyebrow ? (
-          <span className="mb-4 block text-[10px] font-black uppercase tracking-[0.35em] text-accent md:mb-5">
+          <span className="mb-4 block text-xs font-bold uppercase tracking-[0.16em] text-accent md:mb-5 md:tracking-[0.18em]">
             {eyebrow}
           </span>
         ) : null}
-        <h1 className="max-w-5xl text-3xl font-black uppercase leading-tight tracking-[0.06em] text-white drop-shadow-xl sm:text-4xl sm:tracking-[0.1em] md:text-6xl md:tracking-[0.12em]">
+        <h1 className="max-w-5xl text-3xl font-extrabold leading-tight tracking-[-0.015em] text-white drop-shadow-xl sm:text-4xl md:text-[52px]">
           {title}
         </h1>
         {description ? (
-          <p className="mx-auto mt-5 max-w-3xl text-sm font-semibold leading-relaxed text-white/76 sm:mt-6 md:text-lg">
+          <p className="mx-auto mt-5 max-w-3xl text-sm font-medium leading-relaxed text-white/76 sm:mt-6 md:text-lg">
             {description}
           </p>
         ) : null}

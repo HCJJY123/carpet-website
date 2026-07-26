@@ -36,12 +36,12 @@
   display: inline-block;
   background-color: var(--color-accent);
   color: white;
-  font-weight: 900;
+  font-weight: 700;
   padding: 0.75rem 1.5rem;
   border-radius: 0.125rem;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  font-size: 0.8125rem;
   transition: all 0.2s;
   cursor: pointer;
   text-decoration: none;
@@ -54,12 +54,12 @@
   display: inline-block;
   border: 2px solid var(--color-accent);
   color: var(--color-accent);
-  font-weight: 900;
+  font-weight: 700;
   padding: 0.75rem 1.5rem;
   border-radius: 0.125rem;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  font-size: 0.8125rem;
   transition: all 0.2s;
   cursor: pointer;
   text-decoration: none;
@@ -80,6 +80,79 @@ body {
   color: #1a1a1a;
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
   top: 0 !important;
+}
+
+main h1,
+main h2,
+main h3 {
+  text-wrap: balance;
+}
+
+main h1 {
+  letter-spacing: -0.015em;
+}
+
+main h2 {
+  letter-spacing: -0.01em;
+}
+
+main h3 {
+  letter-spacing: 0;
+}
+
+main h1.uppercase,
+main h2.uppercase,
+main h3.uppercase {
+  text-transform: none;
+}
+
+main h1.font-black {
+  font-weight: 800;
+}
+
+main h2.font-black,
+main h3.font-black {
+  font-weight: 700;
+}
+
+html[lang]:not([lang="en"]) .uppercase {
+  text-transform: none;
+}
+
+html[lang]:not([lang="en"]) [class*="tracking-"] {
+  letter-spacing: normal;
+}
+
+html:not(:lang(en)) main :is(h1, h2, h3) {
+  letter-spacing: normal;
+}
+
+html:lang(ar) body {
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+html:lang(ja) body {
+  font-family: "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+}
+
+html:lang(ko) body {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+}
+
+html:lang(zh) body {
+  font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+}
+
+@media (min-width: 768px) {
+  main h1.md\:text-6xl {
+    font-size: 3.5rem;
+    line-height: 1.08;
+  }
+
+  main h2.md\:text-5xl {
+    font-size: 2.5rem;
+    line-height: 1.12;
+  }
 }
 
 #vishome-google-translate,
@@ -141,7 +214,7 @@ body[data-image-zoom-enabled="true"] button img {
   .btn-fox-outline {
     width: 100%;
     padding: 0.95rem 1rem;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.08em;
     text-align: center;
     line-height: 1.35;
   }
@@ -198,7 +271,7 @@ body[data-image-zoom-enabled="true"] button img {
   .tracking-\[0\.4em\],
   .tracking-\[0\.3em\],
   .tracking-\[0\.2em\] {
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
   }
 
   .text-xl {

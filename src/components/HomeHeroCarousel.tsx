@@ -302,13 +302,13 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
 
       <div className="container-fox pointer-events-none relative z-10 py-12 pb-28 md:py-20 md:pb-28">
         <div className="max-w-4xl">
-          <span className="mb-4 block border-l-4 border-accent pl-4 text-[11px] font-bold uppercase tracking-[0.22em] text-white/80 md:mb-6 md:text-xs md:tracking-[0.3em]">
+          <span className="mb-4 block border-l-4 border-accent pl-4 text-xs font-bold uppercase tracking-[0.16em] text-white/80 md:mb-6 md:tracking-[0.18em]">
             {activeSlide.eyebrow}
           </span>
-          <h1 className="mb-5 text-3xl font-extrabold uppercase leading-[1.08] text-white sm:text-4xl md:mb-7 md:text-5xl xl:text-6xl">
+          <h1 className="mb-5 text-3xl font-extrabold leading-[1.08] tracking-[-0.015em] text-white sm:text-4xl md:mb-7 md:text-5xl xl:text-[56px]">
             {activeSlide.title}
           </h1>
-          <p className="mb-7 max-w-3xl text-sm font-light leading-relaxed text-white/85 sm:text-base md:mb-10 md:text-lg">
+          <p className="mb-7 max-w-3xl text-base font-normal leading-relaxed text-white/85 md:mb-10 md:text-lg">
             {activeSlide.description}
           </p>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center md:gap-4">
@@ -316,14 +316,14 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
               href="/contact#quote-form"
               data-home-primary-inquiry
               data-carousel-control
-              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm bg-[#C8752A] px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#AD6424] md:min-h-14 md:px-8 md:py-4 md:text-sm"
+              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm bg-[#C8752A] px-6 py-3.5 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-lg transition-colors hover:bg-[#AD6424] md:min-h-14 md:px-8 md:py-4 md:text-sm"
             >
               Send Project Inquiry
             </Link>
             <Link
               href={activeSlide.productHref}
               data-carousel-control
-              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm border border-white/65 bg-black/10 px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-white hover:text-primary md:min-h-14 md:px-8 md:py-4"
+              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm border border-white/65 bg-black/10 px-6 py-3.5 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white transition-colors hover:bg-white hover:text-primary md:min-h-14 md:px-8 md:py-4 md:text-sm"
             >
               {activeSlide.productLabel}
             </Link>
@@ -332,12 +332,12 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
               target="_blank"
               rel="noopener noreferrer"
               data-carousel-control
-              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm bg-[#25D366] px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#1ebe5d] md:min-h-14 md:px-8 md:py-4 md:text-sm"
+              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm bg-[#25D366] px-6 py-3.5 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-lg transition-colors hover:bg-[#1ebe5d] md:min-h-14 md:px-8 md:py-4 md:text-sm"
             >
               WhatsApp Project Support
             </a>
           </div>
-          <div className="mt-7 hidden gap-3 text-[10px] font-black uppercase tracking-[0.16em] text-white/80 sm:grid sm:grid-cols-3 md:mt-8 md:tracking-[0.18em]">
+          <div className="mt-7 hidden gap-3 text-xs font-bold uppercase tracking-[0.08em] text-white/80 sm:grid sm:grid-cols-3 md:mt-8">
             {activeSlide.badges.map((badge) => (
               <div key={badge} className="border border-white/20 bg-black/10 px-4 py-3">
                 {badge}
