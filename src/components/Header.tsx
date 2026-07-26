@@ -211,9 +211,9 @@ export default function Header() {
     <header className={`sticky top-0 bg-white/95 backdrop-blur border-b border-border shadow-sm ${languageOpen || menuOpen ? "z-[120]" : "z-50"}`}>
       <div className="mx-auto max-w-[1480px] px-4 sm:px-6 xl:px-6">
         <div className="grid h-16 grid-cols-[1fr_auto] items-center md:h-20 xl:h-24 xl:grid-cols-[310px_minmax(620px,1fr)_390px]">
-          <div className="flex min-w-0 items-center gap-2 xl:-translate-x-8 2xl:-translate-x-12">
-            <Link href="/" className="flex min-w-0 items-center gap-2" onClick={closeMenus}>
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-sm md:h-10 md:w-10">
+          <div className="flex min-w-0 items-center gap-1.5 max-[359px]:gap-1 xl:-translate-x-8 2xl:-translate-x-12">
+            <Link href="/" className="flex min-w-0 items-center gap-1.5 max-[359px]:gap-1 sm:gap-2" onClick={closeMenus}>
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-sm max-[359px]:h-7 max-[359px]:w-7 sm:h-9 sm:w-9 md:h-10 md:w-10">
                 <Image
                   src="/logo-footer.svg"
                   alt=""
@@ -224,8 +224,8 @@ export default function Header() {
                 />
               </span>
               <div className="flex min-w-0 flex-col">
-                <span className="truncate text-lg font-black leading-none tracking-tighter text-[#102A43] md:text-xl">VISHOME</span>
-                <span className="mt-1 truncate text-[8px] font-bold uppercase leading-none tracking-[0.08em] text-[#627D98] sm:text-[9px] sm:tracking-[0.1em] md:text-[10px] md:tracking-[0.12em]">Global Commercial Carpet</span>
+                <span className="truncate text-base font-black leading-none tracking-tighter text-[#102A43] sm:text-lg md:text-xl">VISHOME</span>
+                <span className="mt-1 whitespace-nowrap text-[7px] font-bold uppercase leading-none tracking-[0.02em] text-[#627D98] max-[359px]:text-[6px] max-[359px]:tracking-normal sm:text-[9px] sm:tracking-[0.1em] md:text-[10px] md:tracking-[0.12em]">Global Commercial Carpet</span>
               </div>
             </Link>
 
@@ -332,25 +332,25 @@ export default function Header() {
             </a>
           </div>
 
-          <div className="flex items-center justify-end gap-1.5 xl:hidden">
+          <div className="flex items-center justify-end gap-1.5 max-[359px]:gap-1 xl:hidden">
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               data-whatsapp-placement="mobile_header"
               data-whatsapp-intent="project_support"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#25D366]/35 bg-white text-[#168a42]"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-[#25D366]/35 bg-white text-[#168a42] sm:h-9 sm:w-9"
               aria-label="Contact VISHOME on WhatsApp Business"
             >
               <WhatsAppIcon className="h-4 w-4" />
             </a>
             <a
               href={emailUrl}
-              className="flex h-9 w-9 items-center justify-center transition-transform hover:scale-105"
+              className="flex h-8 w-8 items-center justify-center transition-transform hover:scale-105 sm:h-9 sm:w-9"
               aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
               title="Email sales@vishomecarpet.com"
             >
-              <EmailIcon className="h-9 w-9 scale-90" />
+              <EmailIcon className="h-8 w-8 scale-90 sm:h-9 sm:w-9" />
             </a>
             <div className="relative" data-language-switcher>
               <LanguageButton
@@ -375,7 +375,7 @@ export default function Header() {
                 setLanguageOpen(false);
                 setMenuOpen((open) => !open);
               }}
-              className="flex h-10 w-10 items-center justify-center rounded-sm border border-border bg-white text-[#102A43] shadow-sm"
+              className="flex h-9 w-9 items-center justify-center rounded-sm border border-border bg-white text-[#102A43] shadow-sm sm:h-10 sm:w-10"
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
               aria-label="Toggle mobile navigation"
@@ -540,7 +540,7 @@ function LanguageButton({
       className={
         variant === "wide"
           ? "notranslate flex h-14 w-[196px] items-center gap-3 rounded-md border border-[#c8963e]/55 bg-white px-3 text-[#102A43] shadow-[0_8px_24px_rgba(16,42,67,0.1)] transition-all hover:-translate-y-0.5 hover:border-[#c8963e] hover:shadow-[0_12px_30px_rgba(16,42,67,0.16)]"
-          : "notranslate flex h-11 w-[58px] flex-col items-center justify-center rounded-sm border border-[#c8963e]/60 bg-white text-[#102A43] shadow-sm transition-colors hover:border-[#c8963e] hover:text-[#9a6a16]"
+          : "notranslate flex h-10 w-[52px] flex-col items-center justify-center rounded-sm border border-[#c8963e]/60 bg-white text-[#102A43] shadow-sm transition-colors hover:border-[#c8963e] hover:text-[#9a6a16] max-[359px]:w-12 sm:h-11 sm:w-[58px]"
       }
       translate="no"
       aria-expanded={open}

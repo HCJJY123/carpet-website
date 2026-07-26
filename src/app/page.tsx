@@ -132,9 +132,9 @@ export default function Home() {
       )}
 
       {/* Vishome Global Strength - B2B Data Matrix */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white !pb-6 md:!pb-20">
         <div className="container-fox">
-          <div className="grid items-center gap-10 mb-12 lg:grid-cols-2 lg:gap-20 md:mb-20">
+          <div className="grid items-center gap-10 mb-0 lg:grid-cols-2 lg:gap-20 md:mb-20">
             <div>
               <span className="text-primary font-black tracking-[0.3em] text-[10px] uppercase mb-4 block border-l-4 border-primary pl-4">
                 Corporate Profile
@@ -173,7 +173,7 @@ export default function Home() {
       </section>
 
       {/* Project Case Studies - Anonymized for B2B Trust */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white !pt-8 md:!pt-20">
         <div className="container-fox">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
