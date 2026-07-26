@@ -120,11 +120,11 @@ export default function CategoryPage() {
             sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 bg-primary/76 md:bg-[linear-gradient(90deg,rgba(15,43,74,0.82)_0%,rgba(15,43,74,0.68)_50%,rgba(15,43,74,0.52)_100%)]" />
+        <div className="absolute inset-0 bg-black/52 md:bg-black/36" />
         <div className="container-fox relative">
           <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Commercial Carpet Manufacturer & Export Supplier</p>
-          <h1 className="text-4xl font-black uppercase text-white md:text-6xl">Wall-to-Wall Carpet & Hotel Broadloom</h1>
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">
+          <h1 className="text-4xl font-black uppercase text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.72)] md:text-6xl">Wall-to-Wall Carpet & Hotel Broadloom</h1>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/82 drop-shadow-[0_1px_5px_rgba(0,0,0,0.72)]">
             Custom commercial wall-to-wall carpet for hotel rooms, corridors, lobbies, ballrooms, casinos, restaurants, and contract interiors. Compare construction, FOB price, MOQ, and lead time across six project-ready broadloom options.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
