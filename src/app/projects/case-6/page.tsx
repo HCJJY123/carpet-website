@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { brandInfo, caseStudies, products } from "@/lib/data";
 import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
+import { relatedCategoryIds, relatedProductIdsForCase } from "@/lib/content-relations";
 import ProductImage from "@/components/ProductImage";
+import RelatedCategoryLinks from "@/components/RelatedCategoryLinks";
 
 const pageImages = [
   {
@@ -49,7 +51,12 @@ export default function CaseSixPage() {
     notFound();
   }
 
-  const recommendedProducts = products.filter((item) => item.category === project.category).slice(0, 3);
+  const recommendedProductIds = relatedProductIdsForCase(project.id, project.category, project.recommendedProductIds);
+  const recommendedProducts = recommendedProductIds.flatMap((productId) => {
+    const product = products.find((item) => item.id === productId);
+    return product ? [product] : [];
+  });
+  const relatedCategories = relatedCategoryIds(recommendedProducts, project.category);
 
   const sections = project.sections.map((section) => {
     if (section.title === "Patterning for Passenger Flow") {
@@ -240,6 +247,8 @@ export default function CaseSixPage() {
               ))}
             </div>
           </section>
+
+          <RelatedCategoryLinks categoryIds={relatedCategories} className="mb-14" />
 
           <section className="bg-primary rounded-xl p-10 text-center text-white">
             <h3 className="text-3xl font-black uppercase tracking-wider mb-4">Need a Similar Project Solution?</h3>

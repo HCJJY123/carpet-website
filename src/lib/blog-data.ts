@@ -1,3 +1,5 @@
+import { sluiceMattingGuide } from "@/lib/blog-posts/sluice-matting-guide";
+
 export interface BlogSection {
   title: string;
   paragraphs: string[];
@@ -38,6 +40,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  sluiceMattingGuide,
   {
     slug: "hotel-noise-acoustic-carpet-specification-guide",
     title: "Hotel Noise Is the #1 Guest Complaint: The Acoustic Case for Corridor and Guestroom Carpet",

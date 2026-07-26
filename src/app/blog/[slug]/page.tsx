@@ -4,7 +4,9 @@ import Link from "next/link";
 import { blogPosts, type BlogContentBlock } from "@/lib/blog-data";
 import { brandInfo, products } from "@/lib/data";
 import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
+import { relatedCategoryIds } from "@/lib/content-relations";
 import ProductImage from "@/components/ProductImage";
+import RelatedCategoryLinks from "@/components/RelatedCategoryLinks";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -129,6 +131,7 @@ export default async function BlogPostPage({ params }: Props) {
   const relatedProducts = post.relatedProductIds
     .map((id) => products.find((product) => product.id === id))
     .filter((product): product is NonNullable<typeof product> => Boolean(product));
+  const relatedCategories = relatedCategoryIds(relatedProducts);
   const relatedProductPaths = new Set(relatedProducts.map((product) => productPath(product.id)));
   const nextStepLinks = post.suggestedLinks.filter((item) => !relatedProductPaths.has(item.href));
 
@@ -288,6 +291,8 @@ export default async function BlogPostPage({ params }: Props) {
             ))}
           </div>
         </section>
+
+        <RelatedCategoryLinks categoryIds={relatedCategories} className="mt-12" />
 
         <section className="mt-12 bg-primary rounded-xl p-8 md:p-10">
           <h3 className="text-xl font-black text-white uppercase tracking-wider mb-6">Related Next Steps</h3>
