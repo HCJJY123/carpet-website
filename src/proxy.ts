@@ -35,7 +35,6 @@ function setPersistentCookie(
 
   if (usesSharedLocaleCookieDomain(hostname)) {
     response.cookies.set(name, value, { ...cookieOptions, domain: sharedLocaleCookieDomain });
-    appendHostCookieDeletion(response, name, secure);
     return;
   }
 
@@ -51,7 +50,6 @@ function clearPersistentCookie(response: NextResponse, name: string, secure: boo
       sameSite: "lax",
       secure,
     });
-    appendHostCookieDeletion(response, name, secure);
     return;
   }
 
@@ -61,6 +59,10 @@ function clearPersistentCookie(response: NextResponse, name: string, secure: boo
 function applyLocaleCookies(response: NextResponse, locale: string, secure: boolean, hostname: string) {
   setPersistentCookie(response, localeCookieName, locale, secure, hostname);
   setPersistentCookie(response, googleTranslateCookieName, `/en/${locale}`, secure, hostname);
+  if (usesSharedLocaleCookieDomain(hostname)) {
+    appendHostCookieDeletion(response, localeCookieName, secure);
+    appendHostCookieDeletion(response, googleTranslateCookieName, secure);
+  }
   response.headers.set("Content-Language", locale);
   return response;
 }
@@ -68,6 +70,10 @@ function applyLocaleCookies(response: NextResponse, locale: string, secure: bool
 function clearLocaleCookies(response: NextResponse, secure: boolean, hostname: string) {
   clearPersistentCookie(response, localeCookieName, secure, hostname);
   clearPersistentCookie(response, googleTranslateCookieName, secure, hostname);
+  if (usesSharedLocaleCookieDomain(hostname)) {
+    appendHostCookieDeletion(response, localeCookieName, secure);
+    appendHostCookieDeletion(response, googleTranslateCookieName, secure);
+  }
   return response;
 }
 
