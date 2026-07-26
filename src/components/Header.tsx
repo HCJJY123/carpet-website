@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 import { getPathLocale, stripLocaleFromPath } from "@/lib/site-locales";
 
@@ -323,13 +323,11 @@ export default function Header() {
             </a>
             <a
               href={emailUrl}
-              className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#102A43]/20 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#102A43] transition-colors hover:border-[#C8752A]/55 hover:bg-[#C8752A]/[0.06] hover:text-[#AD6424]"
+              className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#102A43]/20 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#102A43] transition-colors hover:border-[#258CF4]/55 hover:bg-[#258CF4]/[0.05] hover:text-[#126DE2]"
               aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
               title="Email sales@vishomecarpet.com"
             >
-              <span className="flex h-5 w-5 items-center justify-center rounded-[5px] bg-[linear-gradient(180deg,#68C7FF_0%,#258CF4_52%,#126DE2_100%)] shadow-[0_2px_5px_rgba(18,109,226,0.32)] ring-1 ring-inset ring-white/35 transition-[filter,transform] group-hover:scale-105 group-hover:brightness-105">
-                <EmailIcon className="h-3.5 w-3.5" />
-              </span>
+              <EmailIcon className="h-6 w-6 transition-transform group-hover:scale-105" />
               Email
             </a>
           </div>
@@ -348,11 +346,11 @@ export default function Header() {
             </a>
             <a
               href={emailUrl}
-              className="flex h-9 w-9 items-center justify-center rounded-[9px] bg-[linear-gradient(180deg,#68C7FF_0%,#258CF4_52%,#126DE2_100%)] shadow-[0_3px_8px_rgba(18,109,226,0.32)] ring-1 ring-inset ring-white/35 transition-[filter,transform] hover:scale-105 hover:brightness-105"
+              className="flex h-9 w-9 items-center justify-center transition-transform hover:scale-105"
               aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
               title="Email sales@vishomecarpet.com"
             >
-              <EmailIcon className="h-[18px] w-[18px]" />
+              <EmailIcon className="h-9 w-9" />
             </a>
             <div className="relative" data-language-switcher>
               <LanguageButton
@@ -503,9 +501,7 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#102A43]/20 bg-white px-5 py-3 text-[13px] font-semibold uppercase tracking-[0.06em] text-[#102A43] sm:col-span-2"
             >
-              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[linear-gradient(180deg,#68C7FF_0%,#258CF4_52%,#126DE2_100%)] shadow-sm ring-1 ring-inset ring-white/35">
-                <EmailIcon className="h-4 w-4" />
-              </span>
+              <EmailIcon className="h-6 w-6" />
               Email Sales Team
             </a>
           </div>
@@ -658,11 +654,29 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 function EmailIcon({ className }: { className?: string }) {
+  const gradientId = useId().replace(/:/g, "");
+  const shadowId = useId().replace(/:/g, "");
+
   return (
-    <span className={className}>
-      <svg viewBox="0 0 24 24" width="100%" height="100%" fill="none" aria-hidden="true">
-        <rect x="3" y="5.25" width="18" height="13.5" rx="2.25" fill="white" />
-        <path d="m4.5 7.25 7.5 5.5 7.5-5.5" stroke="#258CF4" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+    <span className={`inline-flex shrink-0 ${className || ""}`}>
+      <svg viewBox="0 0 36 36" width="100%" height="100%" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id={gradientId} x1="18" y1="0" x2="18" y2="36" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#75D3FF" />
+            <stop offset="0.48" stopColor="#2D98F7" />
+            <stop offset="1" stopColor="#0872EB" />
+          </linearGradient>
+          <filter id={shadowId} x="3" y="7" width="30" height="23" filterUnits="userSpaceOnUse">
+            <feDropShadow dx="0" dy="1" stdDeviation="0.8" floodColor="#0753A9" floodOpacity="0.28" />
+          </filter>
+        </defs>
+        <rect x="0.75" y="0.75" width="34.5" height="34.5" rx="8" fill={`url(#${gradientId})`} />
+        <rect x="1.25" y="1.25" width="33.5" height="33.5" rx="7.5" stroke="white" strokeOpacity="0.38" />
+        <g filter={`url(#${shadowId})`}>
+          <rect x="5.75" y="9" width="24.5" height="18" rx="3.1" fill="white" />
+          <path d="M7.4 10.9 18 18.75 28.6 10.9" fill="#EAF6FF" />
+          <path d="m7.4 10.9 10.6 7.85 10.6-7.85" stroke="#3897EF" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
       </svg>
     </span>
   );
