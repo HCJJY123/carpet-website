@@ -8,6 +8,12 @@ export type SiteLocale = typeof defaultSiteLocale | TranslatedSiteLocale;
 export const localeCookieName = "vishome_locale";
 export const googleTranslateCookieName = "googtrans";
 export const localeCookieMaxAge = 60 * 60 * 24 * 180;
+export const sharedLocaleCookieDomain = ".vishomecarpet.com";
+
+export function usesSharedLocaleCookieDomain(hostname: string) {
+  const normalizedHostname = hostname.split(":")[0].toLowerCase();
+  return normalizedHostname === "vishomecarpet.com" || normalizedHostname.endsWith(".vishomecarpet.com");
+}
 
 export const nativeLocalizedPaths = [
   "/fr/moquette-hotel-sur-mesure",

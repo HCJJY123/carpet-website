@@ -593,7 +593,7 @@ function LanguageMenuPanel({
                   const active = pathname === link.href;
 
                   return (
-                    <Link
+                    <a
                       key={link.href}
                       href={link.href}
                       data-site-locale={group.code.toLowerCase()}
@@ -605,7 +605,7 @@ function LanguageMenuPanel({
                       role="menuitem"
                     >
                       {link.label}
-                    </Link>
+                    </a>
                   );
                 })}
               </div>

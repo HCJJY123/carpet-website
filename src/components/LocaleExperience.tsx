@@ -11,8 +11,10 @@ import {
   localeCookieMaxAge,
   localeCookieName,
   localizePath,
+  sharedLocaleCookieDomain,
   translatedSiteLocales,
   type TranslatedSiteLocale,
+  usesSharedLocaleCookieDomain,
 } from "@/lib/site-locales";
 
 type GoogleTranslateConstructor = new (
@@ -41,21 +43,27 @@ const googleContainerId = "vishome-google-translate";
 
 function setClientCookie(name: string, value: string, maxAge: number) {
   const secure = window.location.protocol === "https:" ? ";Secure" : "";
-  document.cookie = `${name}=${value};path=/;max-age=${maxAge};SameSite=Lax${secure}`;
+  const baseCookie = `${name}=${value};path=/;max-age=${maxAge};SameSite=Lax${secure}`;
 
-  if (window.location.hostname.endsWith("vishomecarpet.com")) {
-    document.cookie = `${name}=${value};path=/;domain=.vishomecarpet.com;max-age=${maxAge};SameSite=Lax${secure}`;
+  if (usesSharedLocaleCookieDomain(window.location.hostname)) {
+    // Remove the legacy host-only copy before writing the shared preference.
+    document.cookie = `${name}=;path=/;max-age=0;SameSite=Lax${secure}`;
+    document.cookie = `${baseCookie};domain=${sharedLocaleCookieDomain}`;
+    return;
   }
+
+  document.cookie = baseCookie;
 }
 
 function clearClientCookie(name: string) {
-  document.cookie = `${name}=;path=/;max-age=0;SameSite=Lax`;
-  if (window.location.hostname.endsWith("vishomecarpet.com")) {
-    document.cookie = `${name}=;path=/;domain=.vishomecarpet.com;max-age=0;SameSite=Lax`;
+  const secure = window.location.protocol === "https:" ? ";Secure" : "";
+  document.cookie = `${name}=;path=/;max-age=0;SameSite=Lax${secure}`;
+  if (usesSharedLocaleCookieDomain(window.location.hostname)) {
+    document.cookie = `${name}=;path=/;domain=${sharedLocaleCookieDomain};max-age=0;SameSite=Lax${secure}`;
   }
 }
 
-function replaceLocaleSession(locale: TranslatedSiteLocale | "en") {
+function persistLocalePreference(locale: TranslatedSiteLocale | "en") {
   clearClientCookie(localeCookieName);
   clearClientCookie(googleTranslateCookieName);
 
@@ -153,9 +161,9 @@ export default function LocaleExperience() {
         const currentLocale = locale ?? "en";
 
         if (validRequestedLocale && validRequestedLocale !== currentLocale) {
-          replaceLocaleSession(validRequestedLocale);
+          persistLocalePreference(validRequestedLocale);
         } else if (url.searchParams.get("lang") === "en") {
-          replaceLocaleSession("en");
+          persistLocalePreference("en");
         }
 
         if (url.pathname === window.location.pathname && url.search === window.location.search && url.hash) return;

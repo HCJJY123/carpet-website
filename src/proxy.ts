@@ -7,10 +7,25 @@ import {
   isTranslatedSiteLocale,
   localeCookieMaxAge,
   localeCookieName,
+  sharedLocaleCookieDomain,
   stripLocaleFromPath,
+  usesSharedLocaleCookieDomain,
 } from "@/lib/site-locales";
 
-function applyLocaleCookies(response: NextResponse, locale: string, secure: boolean) {
+function appendHostCookieDeletion(response: NextResponse, name: string, secure: boolean) {
+  response.headers.append(
+    "Set-Cookie",
+    `${name}=; Path=/; Max-Age=0; SameSite=Lax${secure ? "; Secure" : ""}`,
+  );
+}
+
+function setPersistentCookie(
+  response: NextResponse,
+  name: string,
+  value: string,
+  secure: boolean,
+  hostname: string,
+) {
   const cookieOptions = {
     maxAge: localeCookieMaxAge,
     path: "/",
@@ -18,41 +33,68 @@ function applyLocaleCookies(response: NextResponse, locale: string, secure: bool
     secure,
   };
 
-  response.cookies.set(localeCookieName, locale, cookieOptions);
-  response.cookies.set(googleTranslateCookieName, `/en/${locale}`, cookieOptions);
+  if (usesSharedLocaleCookieDomain(hostname)) {
+    response.cookies.set(name, value, { ...cookieOptions, domain: sharedLocaleCookieDomain });
+    appendHostCookieDeletion(response, name, secure);
+    return;
+  }
+
+  response.cookies.set(name, value, cookieOptions);
+}
+
+function clearPersistentCookie(response: NextResponse, name: string, secure: boolean, hostname: string) {
+  if (usesSharedLocaleCookieDomain(hostname)) {
+    response.cookies.set(name, "", {
+      domain: sharedLocaleCookieDomain,
+      maxAge: 0,
+      path: "/",
+      sameSite: "lax",
+      secure,
+    });
+    appendHostCookieDeletion(response, name, secure);
+    return;
+  }
+
+  response.cookies.set(name, "", { maxAge: 0, path: "/", sameSite: "lax", secure });
+}
+
+function applyLocaleCookies(response: NextResponse, locale: string, secure: boolean, hostname: string) {
+  setPersistentCookie(response, localeCookieName, locale, secure, hostname);
+  setPersistentCookie(response, googleTranslateCookieName, `/en/${locale}`, secure, hostname);
   response.headers.set("Content-Language", locale);
   return response;
 }
 
-function clearLocaleCookies(response: NextResponse) {
-  response.cookies.set(localeCookieName, "", { maxAge: 0, path: "/" });
-  response.cookies.set(googleTranslateCookieName, "", { maxAge: 0, path: "/" });
+function clearLocaleCookies(response: NextResponse, secure: boolean, hostname: string) {
+  clearPersistentCookie(response, localeCookieName, secure, hostname);
+  clearPersistentCookie(response, googleTranslateCookieName, secure, hostname);
   return response;
 }
 
 export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone();
   const pathname = url.pathname;
+  const secure = request.nextUrl.protocol === "https:";
+  const hostname = request.nextUrl.hostname;
 
   if (isLocaleRoutingExcluded(pathname)) return NextResponse.next();
 
   if (url.searchParams.get("lang") === "en") {
     url.searchParams.delete("lang");
-    return clearLocaleCookies(NextResponse.redirect(url));
+    return clearLocaleCookies(NextResponse.redirect(url), secure, hostname);
   }
 
   const pathLocale = getPathLocale(pathname);
-  const secure = request.nextUrl.protocol === "https:";
 
   if (pathLocale) {
     if (isNativeLocalizedPath(pathname)) {
-      return applyLocaleCookies(NextResponse.next(), pathLocale, secure);
+      return applyLocaleCookies(NextResponse.next(), pathLocale, secure, hostname);
     }
 
     url.pathname = stripLocaleFromPath(pathname);
     const response = NextResponse.rewrite(url);
     response.headers.set("X-Robots-Tag", "noindex, follow");
-    return applyLocaleCookies(response, pathLocale, secure);
+    return applyLocaleCookies(response, pathLocale, secure, hostname);
   }
 
   const preferredLocale = request.cookies.get(localeCookieName)?.value;
