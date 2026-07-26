@@ -48,7 +48,7 @@ export const solutionPages: SolutionPageData[] = [
     seoTitle: "Office Carpet Tiles Supplier | 50x50 Modular Carpet Tiles | VISHOME",
     description:
       "Office carpet tiles supplier for corporate offices, coworking spaces, raised floors, meeting rooms, and rolling-chair traffic areas.",
-    image: "/images/products/nylon-office-carpet-tile/01-hero-commercial-office.webp",
+    image: "/images/solutions/office-carpet-tiles-supplier-hero-a9b57e72.webp",
     buyerIntent: "For office fit-out contractors, facility managers, distributors, and commercial flooring buyers.",
     painPoints: [
       "50x50 modular flooring that is easy to replace after local damage.",

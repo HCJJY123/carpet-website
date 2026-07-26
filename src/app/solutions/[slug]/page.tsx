@@ -46,6 +46,7 @@ export default async function SolutionDetailPage({ params }: Props) {
 
   if (!page) notFound();
 
+  const usesOfficeCarpetTileHero = page.slug === "office-carpet-tiles-supplier";
   const pageUrl = absoluteUrl(`/solutions/${page.slug}`);
   const whatsappMessage = `Hello, I am interested in ${page.title}. Please recommend products, MOQ, sample options, price range, lead time, fire-rating documents, packing, and shipping support.`;
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappMessage, {
@@ -95,10 +96,23 @@ export default async function SolutionDetailPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
 
       <section className="relative overflow-hidden bg-primary text-white">
-        <div className="absolute inset-0 opacity-30">
-          <ProductImage src={page.image} alt={page.title} className="h-full w-full object-cover" priority sizes="100vw" />
+        <div className={`absolute inset-0 ${usesOfficeCarpetTileHero ? "opacity-100" : "opacity-30"}`}>
+          <ProductImage
+            src={page.image}
+            alt={usesOfficeCarpetTileHero ? "Modern office with blue and gray 50x50 commercial carpet tiles" : page.title}
+            className="h-full w-full object-cover"
+            priority
+            quality={usesOfficeCarpetTileHero ? 75 : 82}
+            sizes="100vw"
+          />
         </div>
-        <div className="absolute inset-0 bg-primary/86" />
+        <div
+          className={`absolute inset-0 ${
+            usesOfficeCarpetTileHero
+              ? "bg-primary/72 md:bg-[linear-gradient(90deg,rgba(15,43,74,0.94)_0%,rgba(15,43,74,0.8)_44%,rgba(15,43,74,0.28)_72%,rgba(15,43,74,0.12)_100%)]"
+              : "bg-primary/86"
+          }`}
+        />
         <div className="container-fox relative py-16 md:py-24">
           <div className="max-w-4xl">
             <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Application Solution</p>
@@ -161,7 +175,7 @@ export default async function SolutionDetailPage({ params }: Props) {
 
       <section className="section-padding">
         <div className="container-fox grid gap-10 lg:grid-cols-[1fr_0.85fr]">
-          <div className="border border-border bg-white p-6 md:p-8">
+          <div className={`border border-border bg-white p-6 md:p-8 ${usesOfficeCarpetTileHero ? "min-w-0" : ""}`}>
             <h2 className="mb-6 text-2xl font-black uppercase leading-tight text-primary">Specification Snapshot</h2>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[560px] text-sm">
