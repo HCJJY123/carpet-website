@@ -15,8 +15,19 @@ export default function CarpetTiles50x50Page() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="bg-primary-light py-24 border-b border-white/5 text-center">
-        <div className="container-fox">
+      <section className="relative overflow-hidden border-b border-white/5 bg-primary-light py-24 text-center">
+        <div className="absolute inset-0">
+          <ProductImage
+            src="/images/solutions/carpet-tiles-50x50-hero-429cb13f.webp"
+            alt="Modern office fitted with 50x50 commercial carpet tiles"
+            className="h-full w-full"
+            priority
+            quality={75}
+            sizes="100vw"
+          />
+        </div>
+        <div className="absolute inset-0 bg-primary/76 md:bg-[linear-gradient(90deg,rgba(15,43,74,0.9)_0%,rgba(15,43,74,0.72)_48%,rgba(15,43,74,0.36)_100%)]" />
+        <div className="container-fox relative">
           <span className="text-accent font-bold tracking-[0.2em] text-sm uppercase mb-4 block">The Global Standard</span>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase leading-tight max-w-4xl mx-auto">
             50x50 Carpet Tile Specification & Installation Guide

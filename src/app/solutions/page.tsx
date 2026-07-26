@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.vishomecarpet.com/images/about/commercial-project-application.webp",
-        width: 1200,
-        height: 630,
+        url: "https://www.vishomecarpet.com/images/solutions/solutions-hero-a53a2e5f.webp",
+        width: 1928,
+        height: 816,
         alt: "Commercial carpet application solutions for B2B projects",
       },
     ],
@@ -60,16 +60,17 @@ export default function SolutionsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(collectionJsonLd) }} />
 
       <section className="relative overflow-hidden bg-primary text-white">
-        <div className="absolute inset-0 opacity-35">
+        <div className="absolute inset-0">
           <ProductImage
-            src="/images/about/commercial-project-application.webp"
+            src="/images/solutions/solutions-hero-a53a2e5f.webp"
             alt="Commercial carpet applications for hotels offices airports and retail projects"
             className="h-full w-full object-cover"
             priority
+            quality={75}
             sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 bg-primary/86" />
+        <div className="absolute inset-0 bg-primary/72 md:bg-[linear-gradient(90deg,rgba(15,43,74,0.94)_0%,rgba(15,43,74,0.78)_46%,rgba(15,43,74,0.3)_72%,rgba(15,43,74,0.12)_100%)]" />
         <div className="container-fox relative py-16 md:py-24">
           <div className="max-w-4xl">
             <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Project-Based Carpet Specification</p>

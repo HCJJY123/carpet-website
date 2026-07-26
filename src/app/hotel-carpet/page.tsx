@@ -15,10 +15,20 @@ export default function HotelCarpetPage() {
   return (
     <div className="bg-white">
       {/* Hospitality Hero */}
-      <section className="bg-primary-light py-24 border-b border-white/5 overflow-hidden">
-        <div className="container-fox">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-3/5">
+      <section className="relative overflow-hidden border-b border-white/5 bg-primary-light py-24">
+        <div className="absolute inset-0">
+          <ProductImage
+            src="/images/solutions/hotel-carpet-hero-c68765be.webp"
+            alt="Luxury hotel lobby with custom patterned broadloom carpet"
+            className="h-full w-full"
+            priority
+            quality={75}
+            sizes="100vw"
+          />
+        </div>
+        <div className="absolute inset-0 bg-primary/76 md:bg-[linear-gradient(90deg,rgba(15,43,74,0.94)_0%,rgba(15,43,74,0.78)_44%,rgba(15,43,74,0.28)_72%,rgba(15,43,74,0.1)_100%)]" />
+        <div className="container-fox relative">
+          <div className="max-w-3xl">
               <span className="text-accent font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Elevating Guest Experience</span>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase leading-tight">
                 Hotel Carpet Selection by Guest Area
@@ -30,11 +40,6 @@ export default function HotelCarpetPage() {
                 <Link href="/products/wall-to-wall" className="btn-fox-orange">Compare Hotel Carpet Products</Link>
                 <Link href="/projects" className="btn-fox-outline">View Hotel Projects</Link>
               </div>
-            </div>
-            <div className="lg:w-2/5 relative">
-              <div className="absolute -inset-4 bg-accent/20 blur-2xl rounded-full"></div>
-              <ProductImage src="/images/case-hilton.webp" alt="Hotel luxury scene" className="relative rounded-2xl shadow-2xl z-10 border border-white/10" priority sizes="(max-width: 1024px) 100vw, 50vw" />
-            </div>
           </div>
         </div>
       </section>
