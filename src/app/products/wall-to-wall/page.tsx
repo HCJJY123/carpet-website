@@ -109,8 +109,19 @@ export default function CategoryPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
-      <section className="bg-[#102A43] py-20 text-center md:py-24">
-        <div className="container-fox">
+      <section className="relative overflow-hidden bg-[#102A43] py-20 text-center md:py-24">
+        <div className="absolute inset-0">
+          <ProductImage
+            src="/images/solutions/hotel-carpet-hero-c68765be.webp"
+            alt="Luxury hotel lobby with custom patterned wall-to-wall broadloom carpet"
+            className="h-full w-full"
+            priority
+            quality={75}
+            sizes="100vw"
+          />
+        </div>
+        <div className="absolute inset-0 bg-primary/76 md:bg-[linear-gradient(90deg,rgba(15,43,74,0.82)_0%,rgba(15,43,74,0.68)_50%,rgba(15,43,74,0.52)_100%)]" />
+        <div className="container-fox relative">
           <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Commercial Carpet Manufacturer & Export Supplier</p>
           <h1 className="text-4xl font-black uppercase text-white md:text-6xl">Wall-to-Wall Carpet & Hotel Broadloom</h1>
           <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">
