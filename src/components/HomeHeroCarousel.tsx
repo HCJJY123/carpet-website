@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 
 type HomeHeroCarouselProps = {
   whatsappUrl: string;
@@ -57,12 +57,27 @@ const slides = [
 ];
 
 const ROTATION_MS = 4_000;
+const DRAG_SETTLE_MS = 260;
+
+type DragState = {
+  pointerId: number;
+  startX: number;
+  startY: number;
+  startTime: number;
+  horizontal: boolean;
+};
 
 export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [renderedSlides, setRenderedSlides] = useState(() => new Set([0]));
   const [paused, setPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [dragging, setDragging] = useState(false);
+  const [settling, setSettling] = useState(false);
+  const dragStateRef = useRef<DragState | null>(null);
+  const settleTimerRef = useRef<number | null>(null);
+  const suppressBannerClickRef = useRef(false);
   const activeSlide = slides[activeIndex];
 
   useEffect(() => {
@@ -82,14 +97,20 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
   }, []);
 
   useEffect(() => {
-    if (paused || reducedMotion) return;
+    if (paused || reducedMotion || dragging || settling) return;
     const timer = window.setTimeout(() => {
       setActiveIndex((current) => (current + 1) % slides.length);
     }, ROTATION_MS);
     return () => window.clearTimeout(timer);
-  }, [activeIndex, paused, reducedMotion]);
+  }, [activeIndex, dragging, paused, reducedMotion, settling]);
 
-  const showSlide = (index: number) => {
+  useEffect(() => {
+    return () => {
+      if (settleTimerRef.current !== null) window.clearTimeout(settleTimerRef.current);
+    };
+  }, []);
+
+  const ensureSlideRendered = (index: number) => {
     const nextIndex = (index + slides.length) % slides.length;
     setRenderedSlides((current) => {
       if (current.has(nextIndex)) return current;
@@ -97,14 +118,131 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
       updated.add(nextIndex);
       return updated;
     });
+  };
+
+  const showSlide = (index: number) => {
+    const nextIndex = (index + slides.length) % slides.length;
+    ensureSlideRendered(nextIndex);
     setActiveIndex(nextIndex);
+  };
+
+  const beginDrag = (event: ReactPointerEvent<HTMLElement>) => {
+    if (!event.isPrimary || settling || (event.pointerType === "mouse" && event.button !== 0)) return;
+    if (event.target instanceof Element && event.target.closest("[data-carousel-control]")) return;
+
+    if (settleTimerRef.current !== null) {
+      window.clearTimeout(settleTimerRef.current);
+      settleTimerRef.current = null;
+    }
+
+    ensureSlideRendered(activeIndex - 1);
+    ensureSlideRendered(activeIndex + 1);
+    dragStateRef.current = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      startTime: performance.now(),
+      horizontal: false,
+    };
+    setDragOffset(0);
+    setDragging(true);
+    event.currentTarget.setPointerCapture(event.pointerId);
+  };
+
+  const moveDrag = (event: ReactPointerEvent<HTMLElement>) => {
+    const dragState = dragStateRef.current;
+    if (!dragState || dragState.pointerId !== event.pointerId) return;
+
+    const deltaX = event.clientX - dragState.startX;
+    const deltaY = event.clientY - dragState.startY;
+
+    if (!dragState.horizontal) {
+      if (Math.abs(deltaX) < 8 && Math.abs(deltaY) < 8) return;
+      if (Math.abs(deltaY) >= Math.abs(deltaX)) {
+        dragStateRef.current = null;
+        setDragging(false);
+        setDragOffset(0);
+        if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+          event.currentTarget.releasePointerCapture(event.pointerId);
+        }
+        return;
+      }
+      dragState.horizontal = true;
+    }
+
+    event.preventDefault();
+    const maxOffset = event.currentTarget.getBoundingClientRect().width * 0.72;
+    setDragOffset(Math.max(-maxOffset, Math.min(maxOffset, deltaX)));
+  };
+
+  const finishDrag = (event: ReactPointerEvent<HTMLElement>, cancelled = false) => {
+    const dragState = dragStateRef.current;
+    if (!dragState || dragState.pointerId !== event.pointerId) return;
+
+    dragStateRef.current = null;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+
+    const distance = event.clientX - dragState.startX;
+    const elapsed = Math.max(1, performance.now() - dragState.startTime);
+    const velocity = Math.abs(distance) / elapsed;
+    const width = event.currentTarget.getBoundingClientRect().width;
+    const threshold = Math.min(110, Math.max(48, width * 0.12));
+    const shouldChange =
+      !cancelled && dragState.horizontal && (Math.abs(distance) >= threshold || (Math.abs(distance) >= 24 && velocity >= 0.45));
+
+    if (dragState.horizontal) {
+      suppressBannerClickRef.current = true;
+      window.setTimeout(() => {
+        suppressBannerClickRef.current = false;
+      }, DRAG_SETTLE_MS + 120);
+    }
+
+    setDragging(false);
+    setSettling(true);
+    setDragOffset(shouldChange ? (distance < 0 ? -width : width) : 0);
+
+    settleTimerRef.current = window.setTimeout(() => {
+      if (shouldChange) showSlide(activeIndex + (distance < 0 ? 1 : -1));
+      setDragOffset(0);
+      setSettling(false);
+      settleTimerRef.current = null;
+    }, DRAG_SETTLE_MS);
+  };
+
+  const slidePresentation = (index: number) => {
+    const previousIndex = (activeIndex - 1 + slides.length) % slides.length;
+    const nextIndex = (activeIndex + 1) % slides.length;
+    const gestureActive = dragging || settling;
+
+    if (gestureActive && index === activeIndex) {
+      return { opacity: 1, pointerEvents: "auto" as const, transform: `translate3d(${dragOffset}px, 0, 0)`, zIndex: 2 };
+    }
+    if (gestureActive && dragOffset < 0 && index === nextIndex) {
+      return { opacity: 1, pointerEvents: "none" as const, transform: `translate3d(calc(100% + ${dragOffset}px), 0, 0)`, zIndex: 1 };
+    }
+    if (gestureActive && dragOffset > 0 && index === previousIndex) {
+      return { opacity: 1, pointerEvents: "none" as const, transform: `translate3d(calc(-100% + ${dragOffset}px), 0, 0)`, zIndex: 1 };
+    }
+
+    return index === activeIndex
+      ? { opacity: 1, pointerEvents: "auto" as const, transform: "translate3d(0, 0, 0)", zIndex: 2 }
+      : { opacity: 0, pointerEvents: "none" as const, transform: "translate3d(0, 0, 0)", zIndex: 1 };
   };
 
   return (
     <section
-      className="relative flex min-h-[calc(100svh-5rem)] items-center overflow-hidden bg-primary md:min-h-[650px]"
+      className={`relative flex min-h-[calc(100svh-5rem)] touch-pan-y select-none items-center overflow-hidden bg-primary md:min-h-[650px] ${
+        dragging ? "cursor-grabbing" : "cursor-grab"
+      }`}
       aria-roledescription="carousel"
       aria-label="Vishome carpet product highlights"
+      onPointerDown={beginDrag}
+      onPointerMove={moveDrag}
+      onPointerUp={(event) => finishDrag(event)}
+      onPointerCancel={(event) => finishDrag(event, true)}
+      onDragStart={(event) => event.preventDefault()}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
@@ -117,15 +255,21 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
           <Link
             key={slide.image}
             href={slide.bannerHref}
+            draggable={false}
             tabIndex={index === activeIndex ? 0 : -1}
             onClick={(event) => {
+              if (suppressBannerClickRef.current) {
+                event.preventDefault();
+                return;
+              }
               if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
               event.preventDefault();
               window.location.assign(slide.bannerHref);
             }}
-            className={`absolute inset-0 block transition-opacity duration-700 ${
-              index === activeIndex ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+            className={`absolute inset-0 block will-change-transform ${
+              dragging ? "transition-none" : "transition-[opacity,transform] duration-300 ease-out"
             }`}
+            style={slidePresentation(index)}
             aria-label={`Open ${slide.title}`}
             aria-hidden={index !== activeIndex}
           >
@@ -171,12 +315,14 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
             <Link
               href="/contact#quote-form"
               data-home-primary-inquiry
+              data-carousel-control
               className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm bg-[#C8752A] px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#AD6424] md:min-h-14 md:px-8 md:py-4 md:text-sm"
             >
               Send Project Inquiry
             </Link>
             <Link
               href={activeSlide.productHref}
+              data-carousel-control
               className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm border border-white/65 bg-black/10 px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-white hover:text-primary md:min-h-14 md:px-8 md:py-4"
             >
               {activeSlide.productLabel}
@@ -185,6 +331,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              data-carousel-control
               className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm bg-[#25D366] px-6 py-3.5 text-center text-xs font-black uppercase tracking-[0.12em] text-white shadow-lg transition-colors hover:bg-[#1ebe5d] md:min-h-14 md:px-8 md:py-4 md:text-sm"
             >
               WhatsApp Project Support
@@ -203,6 +350,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
                 key={slide.image}
                 type="button"
                 onClick={() => showSlide(index)}
+                data-carousel-control
                 className="group flex h-5 w-8 items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/80"
                 aria-label={`Show banner ${index + 1}`}
                 aria-current={index === activeIndex ? "true" : undefined}
@@ -224,6 +372,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
       <button
         type="button"
         onClick={() => showSlide(activeIndex - 1)}
+        data-carousel-control
         className="absolute bottom-20 left-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-[#071829]/35 text-white/75 shadow-[0_8px_24px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all hover:border-white/45 hover:bg-[#071829]/60 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 md:bottom-auto md:left-6 md:top-1/2 md:h-12 md:w-12 md:-translate-y-1/2"
         aria-label="Show previous banner"
       >
@@ -233,6 +382,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
       <button
         type="button"
         onClick={() => showSlide(activeIndex + 1)}
+        data-carousel-control
         className="absolute bottom-20 right-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-[#071829]/35 text-white/75 shadow-[0_8px_24px_rgba(0,0,0,0.16)] backdrop-blur-md transition-all hover:border-white/45 hover:bg-[#071829]/60 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 md:bottom-auto md:right-6 md:top-1/2 md:h-12 md:w-12 md:-translate-y-1/2"
         aria-label="Show next banner"
       >
