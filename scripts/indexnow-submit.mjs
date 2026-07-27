@@ -1,10 +1,10 @@
 /**
  * IndexNow 批量提交脚本
- * 用途：新内容发布后，通知 Bing/Yandex 立即爬取
+ * 用途：生产部署成功后，通知支持 IndexNow 的搜索引擎立即爬取
  * 使用：node scripts/indexnow-submit.mjs
  */
 
-const KEY = "47ce845ea2794869a16a0b4abad37110";
+const KEY = process.env.INDEXNOW_KEY || "47ce845ea2794869a16a0b4abad37110";
 const HOST = "www.vishomecarpet.com";
 const BASE = `https://${HOST}`;
 
@@ -50,4 +50,4 @@ async function submit(endpoint, urls) {
 const urls = await loadSitemapUrls();
 const indexNowCount = await submit("https://api.indexnow.org/indexnow", urls);
 const bingCount = await submit("https://www.bing.com/indexnow", urls);
-console.log(`IndexNow and Bing accepted ${Math.min(indexNowCount, bingCount)} sitemap URLs.`);
+console.log(`IndexNow and Bing accepted ${Math.min(indexNowCount, bingCount)} production sitemap URLs for ${HOST}.`);

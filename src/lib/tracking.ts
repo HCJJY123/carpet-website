@@ -133,6 +133,8 @@ export function trackLeadConversion({
     if (leadGrade) window.clarity("set", "lead_grade", leadGrade);
     if (typeof leadScore === "number") window.clarity("set", "lead_score", String(leadScore));
     if (attribution.utm_source) window.clarity("set", "lead_utm_source", attribution.utm_source);
+    if (attribution.traffic_channel) window.clarity("set", "lead_traffic_channel", attribution.traffic_channel);
+    if (attribution.ai_source) window.clarity("set", "lead_ai_source", attribution.ai_source);
   }
 
   pushTrackingEvent("lead_form_submit_success", leadPayload);

@@ -25,6 +25,8 @@ const ALLOWED_FIELDS = [
   "page_path",
   "landing_page",
   "referrer",
+  "traffic_channel",
+  "ai_source",
   "utm_source",
   "utm_medium",
   "utm_campaign",

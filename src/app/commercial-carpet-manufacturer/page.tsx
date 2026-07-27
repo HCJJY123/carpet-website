@@ -7,7 +7,14 @@ import { absoluteUrl, productItemListJsonLd, productPath, safeJsonLd } from "@/l
 export const metadata: Metadata = {
   title: "Commercial Carpet Manufacturer in China | Carpet Tiles & Hotel Carpet | VISHOME",
   description:
-    "VISHOME is a Tianjin commercial carpet manufacturer supplying carpet tiles, hotel broadloom, public-area carpet, custom patterns, samples, FOB pricing, and export packaging for B2B projects.",
+    "Compare a China commercial carpet manufacturer by product fit, MOQ, price basis, lead time, samples, test documents, customization, and export support. Review VISHOME factory capabilities.",
+  keywords: [
+    "commercial carpet manufacturer China",
+    "commercial carpet tile manufacturer",
+    "hotel carpet manufacturer China",
+    "carpet factory direct",
+    "wholesale commercial carpet supplier",
+  ],
   alternates: { canonical: "/commercial-carpet-manufacturer" },
   openGraph: {
     title: "Commercial Carpet Manufacturer in China | VISHOME",
@@ -28,6 +35,46 @@ const factoryFacts = [
   ["Project Support", "Samples, specification advice, custom colors, export packing, shipment coordination"],
 ];
 
+const sourcingCriteria = [
+  {
+    criterion: "Product and application fit",
+    verify: "Ask for the exact construction recommended for office, hotel, corridor, lobby, retail, or public-area traffic.",
+    response: "Carpet tiles, hotel broadloom, public-area carpet, printed carpet, natural sisal, and custom rug programs.",
+  },
+  {
+    criterion: "Comparable commercial terms",
+    verify: "Compare the same fiber, pile weight, backing, dimensions, packing, Incoterm, and destination—not price alone.",
+    response: "Product pages show indicative MOQ, lead time, and FOB range; the final quotation is matched to the approved construction.",
+  },
+  {
+    criterion: "Samples and technical evidence",
+    verify: "Request a physical sample, technical data sheet, construction details, and reports for the exact product being quoted.",
+    response: "Sample-box support and project-specific technical-document review are available before bulk confirmation.",
+  },
+  {
+    criterion: "Customization control",
+    verify: "Confirm pattern repeat, color tolerance, strike-off process, backing, dimensions, and approval checkpoints.",
+    response: "Custom color, pattern, size, material, printing, and hospitality design support are available by project.",
+  },
+  {
+    criterion: "Production and delivery plan",
+    verify: "Document sample approval, production window, inspection, packing, loading, shipping basis, and target arrival date.",
+    response: "The export team supports production scheduling, export packing, container planning, and shipment coordination.",
+  },
+];
+
+const quoteChecklist = [
+  "Application area and project type",
+  "Required quantity in square meters",
+  "Destination country, city, or port",
+  "Fiber, backing, size, and performance target",
+  "Fire-rating or indoor-air-quality document requirement",
+  "Color, pattern, drawing, or reference image",
+  "Required sample and approval process",
+  "Target shipment or installation date",
+  "Preferred Incoterm such as FOB, CIF, or DAP",
+];
+
 const faqs = [
   {
     q: "What does VISHOME manufacture?",
@@ -43,7 +90,19 @@ const faqs = [
   },
   {
     q: "Does VISHOME export commercial carpet?",
-    a: "Yes. VISHOME supports export packaging, FOB/CIF/DDP shipping coordination, documentation, sample dispatch, and container planning for global buyers.",
+    a: "Yes. VISHOME supports export packaging, FOB/CIF/DAP shipping coordination, documentation, sample dispatch, and container planning for global buyers. Available terms depend on the destination and shipment.",
+  },
+  {
+    q: "How should buyers compare commercial carpet manufacturers in China?",
+    a: "Compare the exact construction, fiber, pile weight, backing, test-document availability, MOQ, sample process, quality-control checkpoints, Incoterm, packing, and delivery plan. A low price is not comparable if the construction or commercial basis is different.",
+  },
+  {
+    q: "What are typical MOQ and lead-time ranges?",
+    a: "They vary by product and customization. Current product pages show indicative project ranges, while the final MOQ and schedule are confirmed after the construction, color, quantity, sample requirement, and delivery destination are reviewed.",
+  },
+  {
+    q: "Can buyers request ASTM or EN fire-performance documents?",
+    a: "Buyers can state the required test standard in the RFQ. Vishome will confirm which report is available for the quoted construction or whether project-specific testing is required. A report from a different construction should not be treated as equivalent.",
   },
 ];
 
@@ -65,10 +124,27 @@ export default function CommercialCarpetManufacturerPage() {
     })),
   };
 
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": absoluteUrl("/commercial-carpet-manufacturer#webpage"),
+    url: absoluteUrl("/commercial-carpet-manufacturer"),
+    name: "Commercial Carpet Manufacturer in China",
+    description:
+      "A buyer-oriented guide to comparing commercial carpet manufacturers by construction, MOQ, price basis, samples, technical evidence, customization, and export delivery support.",
+    dateModified: "2026-07-28",
+    reviewedBy: {
+      "@type": "Organization",
+      name: brandInfo.name,
+      url: brandInfo.url,
+    },
+  };
+
   return (
     <div className="bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(webPageJsonLd) }} />
       <section className="bg-primary py-20 md:py-28">
         <div className="container-fox grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
@@ -77,7 +153,7 @@ export default function CommercialCarpetManufacturerPage() {
               Commercial Carpet Manufacturer in China
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-white/75">
-              VISHOME manufactures commercial carpet tiles, wall-to-wall hotel broadloom, public-area carpet, and custom printed flooring from Tianjin for contractors, distributors, hotels, and project procurement teams.
+              VISHOME is a Tianjin-based B2B manufacturer of commercial carpet tiles, hotel broadloom, public-area carpet, and custom printed flooring. Buyers can compare product construction, MOQ, price basis, samples, technical documents, customization, packing, and delivery planning before confirming a project order.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/contact" className="btn-fox-orange">Request Factory Quote</Link>
@@ -85,6 +161,29 @@ export default function CommercialCarpetManufacturerPage() {
             </div>
           </div>
           <ProductImage src="/images/about/production-workshop.webp" alt="VISHOME commercial carpet factory production workshop in Tianjin" className="aspect-[4/3] rounded-sm border border-white/10 shadow-2xl" />
+        </div>
+      </section>
+
+      <section className="section-padding" data-funnel-section="manufacturer_direct_answer">
+        <div className="container-fox grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div>
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.24em] text-accent">Direct Buyer Answer</p>
+            <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
+              How to Choose a Commercial Carpet Manufacturer in China
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="text-lg font-semibold leading-relaxed text-primary">
+              Choose a manufacturer by matching the exact carpet construction to the application, then compare MOQ, sample approval, technical evidence, customization controls, production timing, packing, and the same shipping basis. Do not compare headline price per square meter until fiber, pile weight, backing, dimensions, performance requirements, and Incoterm are aligned.
+            </p>
+            <p className="text-sm leading-relaxed text-muted">
+              Vishome provides indicative commercial terms on product pages and confirms final terms after reviewing quantity, destination, construction, required documents, customization, and delivery date. Product claims and test reports should always be checked against the exact construction included in the quotation.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/contact" className="btn-fox-orange">Send Comparable RFQ</Link>
+              <Link href="/request-sample-box" className="btn-fox-outline !border-primary !text-primary hover:!bg-primary hover:!text-white">Request Samples</Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -97,6 +196,40 @@ export default function CommercialCarpetManufacturerPage() {
                 <p className="text-sm font-semibold leading-relaxed text-primary">{value}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-surface" data-funnel-section="manufacturer_comparison">
+        <div className="container-fox">
+          <div className="mb-10 max-w-4xl">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.24em] text-accent">Supplier Comparison</p>
+            <h2 className="text-3xl font-black uppercase text-primary md:text-5xl">
+              Commercial Carpet Factory Evaluation Table
+            </h2>
+            <p className="mt-5 text-sm leading-relaxed text-muted">
+              Use the same checklist for every supplier so that price, performance, documents, and delivery commitments remain comparable.
+            </p>
+          </div>
+          <div className="overflow-x-auto border border-border bg-white">
+            <table className="w-full min-w-[860px] border-collapse text-left">
+              <thead className="bg-primary text-white">
+                <tr>
+                  <th className="w-[20%] px-5 py-4 text-xs font-black uppercase tracking-wider">Criterion</th>
+                  <th className="w-[40%] px-5 py-4 text-xs font-black uppercase tracking-wider">What the Buyer Should Verify</th>
+                  <th className="w-[40%] px-5 py-4 text-xs font-black uppercase tracking-wider">Vishome Response</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sourcingCriteria.map((item) => (
+                  <tr key={item.criterion} className="border-t border-border align-top">
+                    <th scope="row" className="px-5 py-5 text-sm font-black text-primary">{item.criterion}</th>
+                    <td className="px-5 py-5 text-sm leading-relaxed text-muted">{item.verify}</td>
+                    <td className="px-5 py-5 text-sm leading-relaxed text-primary">{item.response}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -127,6 +260,30 @@ export default function CommercialCarpetManufacturerPage() {
         </div>
       </section>
 
+      <section className="section-padding" data-funnel-section="manufacturer_rfq_checklist">
+        <div className="container-fox grid gap-10 lg:grid-cols-[1fr_1fr]">
+          <div className="border border-border bg-primary p-7 text-white md:p-10">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.24em] text-accent">Comparable RFQ</p>
+            <h2 className="text-3xl font-black uppercase leading-tight md:text-4xl">
+              Information to Send for an Accurate Quote
+            </h2>
+            <p className="mt-5 text-sm leading-relaxed text-white/70">
+              Supplying these details reduces assumptions and makes quotations from different factories easier to compare.
+            </p>
+          </div>
+          <ol className="grid gap-3 sm:grid-cols-2">
+            {quoteChecklist.map((item, index) => (
+              <li key={item} className="flex gap-4 border border-border bg-white p-5">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-black text-white">
+                  {index + 1}
+                </span>
+                <span className="pt-1 text-sm font-semibold leading-relaxed text-primary">{item}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       <section className="section-padding">
         <div className="container-fox grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
@@ -140,6 +297,12 @@ export default function CommercialCarpetManufacturerPage() {
                 <p className="text-sm leading-relaxed text-muted">{item.a}</p>
               </div>
             ))}
+            <div className="border border-accent/40 bg-accent/5 p-6">
+              <h3 className="mb-3 text-base font-black uppercase text-primary">Evidence and Claim Check</h3>
+              <p className="text-sm leading-relaxed text-muted">
+                Final specifications, certifications, test results, commercial terms, and delivery dates are construction- and project-specific. Request the document that matches the quoted product and record approvals in the purchase specification.
+              </p>
+            </div>
           </div>
         </div>
       </section>

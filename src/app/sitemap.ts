@@ -7,47 +7,58 @@ import { solutionPages } from "@/lib/solution-data";
 
 const BASE = "https://www.vishomecarpet.com";
 
-const staticRoutes: { url: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
-  { url: "/", priority: 1.0, changeFrequency: "weekly" },
-  { url: "/products", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/commercial-carpet-manufacturer", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/commercial-carpet-tiles", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/hotel-carpet", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/carpet-tiles-50x50", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/natural-sisal-carpet", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/projects", priority: 0.85, changeFrequency: "monthly" },
-  { url: "/blog", priority: 0.85, changeFrequency: "weekly" },
-  { url: "/about-us", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/factory", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/faq", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/contact", priority: 0.7, changeFrequency: "yearly" },
-  { url: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" },
-  { url: "/request-sample-box", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/solutions", priority: 0.75, changeFrequency: "monthly" },
-  { url: "/solutions/hotel-hospitality", priority: 0.75, changeFrequency: "monthly" },
-  { url: "/ru", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/ru/products/carpet-tiles/nylon-office-carpet-tile", priority: 0.85, changeFrequency: "monthly" },
-  { url: "/ru/products/public-area/public-area-heavy-duty", priority: 0.85, changeFrequency: "monthly" },
-  { url: "/ru/products/public-area/gold-mining-carpet-mat", priority: 0.85, changeFrequency: "monthly" },
+type StaticRoute = {
+  url: string;
+  modified: string;
+  priority: number;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+};
+
+const staticRoutes: StaticRoute[] = [
+  { url: "/", modified: "2026-07-27", priority: 1.0, changeFrequency: "weekly" },
+  { url: "/products", modified: "2026-07-23", priority: 0.9, changeFrequency: "monthly" },
+  { url: "/commercial-carpet-manufacturer", modified: "2026-07-28", priority: 0.9, changeFrequency: "monthly" },
+  { url: "/commercial-carpet-tiles", modified: "2026-07-25", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/hotel-carpet", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/carpet-tiles-50x50", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/natural-sisal-carpet", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/projects", modified: "2026-07-23", priority: 0.85, changeFrequency: "monthly" },
+  { url: "/blog", modified: "2026-07-26", priority: 0.85, changeFrequency: "weekly" },
+  { url: "/about-us", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/factory", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/faq", modified: "2026-07-26", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/contact", modified: "2026-07-25", priority: 0.7, changeFrequency: "yearly" },
+  { url: "/privacy-policy", modified: "2026-07-25", priority: 0.3, changeFrequency: "yearly" },
+  { url: "/request-sample-box", modified: "2026-07-25", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/solutions", modified: "2026-07-27", priority: 0.75, changeFrequency: "monthly" },
+  { url: "/solutions/hotel-hospitality", modified: "2026-07-23", priority: 0.75, changeFrequency: "monthly" },
+  { url: "/ru", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/ru/products/carpet-tiles/nylon-office-carpet-tile", modified: "2026-07-23", priority: 0.85, changeFrequency: "monthly" },
+  { url: "/ru/products/public-area/public-area-heavy-duty", modified: "2026-07-23", priority: 0.85, changeFrequency: "monthly" },
+  { url: "/ru/products/public-area/gold-mining-carpet-mat", modified: "2026-07-23", priority: 0.85, changeFrequency: "monthly" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const contentDates = {
+    catalog: new Date("2026-07-26T00:00:00.000Z"),
+    localizedLandings: new Date("2026-07-24T00:00:00.000Z"),
+    solutions: new Date("2026-07-26T00:00:00.000Z"),
+  };
   const imageUrl = (path: string) => (path.startsWith("http") ? path : `${BASE}${path}`);
   const uniqueImages = (images: Array<string | undefined>) => [
     ...new Set(images.filter((image): image is string => Boolean(image)).map(imageUrl)),
   ];
 
-  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map(({ url, priority, changeFrequency }) => ({
+  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map(({ url, modified, priority, changeFrequency }) => ({
     url: `${BASE}${url}`,
-    lastModified: now,
+    lastModified: new Date(`${modified}T00:00:00.000Z`),
     changeFrequency,
     priority,
   }));
 
   const categoryEntries: MetadataRoute.Sitemap = productCategories.map((category) => ({
     url: `${BASE}/products/${category.slug}`,
-    lastModified: now,
+    lastModified: contentDates.catalog,
     changeFrequency: "monthly",
     priority: 0.9,
     images: uniqueImages([category.image]),
@@ -55,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const productEntries: MetadataRoute.Sitemap = products.map((product) => ({
     url: `${BASE}${productPath(product.id)}`,
-    lastModified: now,
+    lastModified: contentDates.catalog,
     changeFrequency: "monthly",
     priority: product.category === "carpet-tiles" ? 0.9 : 0.85,
     images: uniqueImages([product.image, ...(product.gallery?.map((image) => image.src) ?? [])]),
@@ -63,7 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const projectEntries: MetadataRoute.Sitemap = caseStudies.map((project) => ({
     url: `${BASE}/projects/${project.id}`,
-    lastModified: now,
+    lastModified: contentDates.catalog,
     changeFrequency: "yearly",
     priority: 0.75,
     images: uniqueImages([
@@ -75,7 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const solutionEntries: MetadataRoute.Sitemap = solutionPages.map((page) => ({
     url: `${BASE}/solutions/${page.slug}`,
-    lastModified: now,
+    lastModified: contentDates.solutions,
     changeFrequency: "monthly" as const,
     priority: 0.84,
   }));
@@ -97,7 +108,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return {
       url: `${BASE}${page.path}`,
-      lastModified: now,
+      lastModified: contentDates.localizedLandings,
       changeFrequency: "monthly" as const,
       priority: 0.82,
       images: product ? uniqueImages([product.image]) : undefined,

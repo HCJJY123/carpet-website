@@ -4,7 +4,7 @@ import Script from "next/script";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { trackAnalyticsEvent, trackInteractionConversion } from "@/lib/tracking";
-import { captureAttributionOnce } from "@/lib/attribution";
+import { captureAttributionOnce, getAttributionForEvent } from "@/lib/attribution";
 import {
   getFunnelSessionSignals,
   markFunnelEventOnce,
@@ -12,6 +12,7 @@ import {
   recordProductView,
   recordSectionView,
 } from "@/lib/funnel";
+import { getVisitorIdentity } from "@/lib/visitorIdentity";
 
 const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-T2VYHXTK1F";
 const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "GT-NMDDTW67";
@@ -32,6 +33,19 @@ export default function MarketingTracking() {
 
   useEffect(() => {
     captureAttributionOnce();
+
+    const attribution = getAttributionForEvent();
+    if (
+      attribution.traffic_channel === "ai_referral" &&
+      !window.sessionStorage.getItem("vishome_ai_referral_landing")
+    ) {
+      window.sessionStorage.setItem("vishome_ai_referral_landing", "1");
+      trackAnalyticsEvent("ai_referral_landing", {
+        ai_source: attribution.ai_source,
+        landing_page: attribution.landing_page,
+        page_path: window.location.pathname,
+      });
+    }
   }, []);
 
   useEffect(() => {
@@ -161,7 +175,7 @@ export default function MarketingTracking() {
       const anchor = target?.closest("a");
       if (!anchor) return;
 
-      const href = anchor.getAttribute("href") || "";
+      let href = anchor.getAttribute("href") || "";
       const text = anchor.textContent?.trim() || "";
       const leadData = {
         placement: anchor.dataset.whatsappPlacement,
@@ -193,6 +207,21 @@ export default function MarketingTracking() {
       }
 
       if (href.startsWith("https://wa.me/") || href.includes("whatsapp")) {
+        const attribution = getAttributionForEvent();
+        if (attribution.ai_source && href.startsWith("https://wa.me/")) {
+          const whatsappUrl = new URL(anchor.href);
+          const message = whatsappUrl.searchParams.get("text") || "";
+
+          if (!message.includes("AI Referral:")) {
+            const { sessionId } = getVisitorIdentity();
+            const leadReference = `VH-${sessionId.slice(-8).toUpperCase()}`;
+            const aiContext = `AI Referral: ${attribution.ai_source}\nLead Ref: ${leadReference}`;
+            whatsappUrl.searchParams.set("text", message ? `${message}\n\n${aiContext}` : aiContext);
+            anchor.href = whatsappUrl.toString();
+            href = anchor.href;
+          }
+        }
+
         trackInteractionConversion("whatsapp_click", {
           href,
           link_text: text,
