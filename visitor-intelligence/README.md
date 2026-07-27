@@ -2,7 +2,7 @@
 
 Independent Cloudflare Worker endpoint for visitor- and company-level intelligence.
 
-The website does not need to be proxied by Cloudflare. VishomeCarpet sends a small `text/plain` beacon to this Worker. The Worker hashes the visitor IP, enriches the event with IPinfo Lite ASN/company data, classifies the network as business, ISP/mobile, cloud/VPN, automation, or unknown, and stores the event in D1. Consumer and internal-country visits are retained with review flags instead of being deleted.
+The website does not need to be proxied by Cloudflare. VishomeCarpet sends a small same-origin `text/plain` beacon to `/api/visit`; the Vercel route forwards it to the authenticated Worker endpoint. This avoids browser blocking and regional `workers.dev` DNS failures while preserving the visitor IP for server-side enrichment. The Worker hashes the visitor IP, enriches the event with IPinfo Lite ASN/company data, classifies the network as business, ISP/mobile, cloud/VPN, automation, or unknown, and stores the event in D1. Consumer and internal-country visits are retained with review flags instead of being deleted.
 
 The browser creates a random first-party visitor ID and per-tab session ID. The same pseudonymous identity is sent to D1 and Microsoft Clarity so a ranked report can be matched to the relevant Clarity recording. No raw visitor IP is stored in D1.
 
@@ -58,9 +58,10 @@ Add the Worker URL to Vercel:
 
 ```bash
 NEXT_PUBLIC_VISITOR_BEACON_URL=https://vishome-visitor-intelligence.<your-subdomain>.workers.dev
+VISITOR_INGEST_URL=https://vishome-visitor-intelligence.<your-subdomain>.workers.dev/visit
 ```
 
-The website integration is already in `src/components/VisitorBeacon.tsx` and `src/app/layout.tsx`. If the env var is empty, no beacon is sent.
+The browser integration is in `src/components/VisitorBeacon.tsx`, the same-origin relay is in `src/app/api/visit/route.ts`, and both are mounted through `src/app/layout.tsx`.
 
 The inquiry archive also needs these server-only Vercel variables:
 

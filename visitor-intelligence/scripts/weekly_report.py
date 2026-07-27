@@ -29,7 +29,8 @@ TEXT_COLUMNS = (
     "day", "ip_hash", "visitor_id", "session_id", "visitor_label", "asn", "org",
     "domain", "country", "network_type", "company_confidence", "classification_reason",
     "site", "path", "query", "referrer", "landing", "event", "language", "timezone",
-    "screen", "utm_source", "utm_medium", "utm_campaign", "utm_term", "gclid",
+    "screen", "traffic_channel", "ai_source", "utm_source", "utm_medium",
+    "utm_campaign", "utm_term", "utm_content", "gclid",
     "product_interest", "intent_grade", "intent_reasons", "ts",
 )
 
@@ -160,6 +161,8 @@ def build_visitor_frame(frame: pd.DataFrame) -> pd.DataFrame:
             "Product Interest": unique_text(group["product_interest"], 6),
             "Search Terms": unique_text(group["utm_term"], 6),
             "Campaign": unique_text(group["utm_campaign"], 4),
+            "Traffic Channel": mode(group["traffic_channel"]),
+            "AI Source": mode(group["ai_source"]),
             "Top Referrer": mode(group["referrer"]),
             "Visit Days": group["day"].nunique(),
             "Sessions": max(group["session_id"].nunique(), 1),
@@ -204,6 +207,15 @@ def build_unknown_frame(visitor_frame: pd.DataFrame) -> pd.DataFrame:
     ].copy().reset_index(drop=True)
 
 
+def build_ai_frame(visitor_frame: pd.DataFrame) -> pd.DataFrame:
+    if visitor_frame.empty:
+        return visitor_frame.copy()
+    return visitor_frame[
+        visitor_frame["AI Source"].ne("")
+        | visitor_frame["Traffic Channel"].eq("ai_referral")
+    ].copy().reset_index(drop=True)
+
+
 def build_page_frame(frame: pd.DataFrame) -> pd.DataFrame:
     external = frame[frame["internal_visit"] == 0].copy()
     if external.empty:
@@ -243,6 +255,7 @@ def main(input_path: str, output_path: str = "visitor_intelligence.xlsx") -> Non
     visitor_frame = build_visitor_frame(frame) if not frame.empty else pd.DataFrame()
     company_frame = build_company_frame(visitor_frame)
     unknown_frame = build_unknown_frame(visitor_frame)
+    ai_frame = build_ai_frame(visitor_frame)
     page_frame = build_page_frame(frame) if not frame.empty else pd.DataFrame()
 
     summary = pd.DataFrame([
@@ -252,6 +265,7 @@ def main(input_path: str, output_path: str = "visitor_intelligence.xlsx") -> Non
         {"Metric": "B-grade visitors", "Value": int((visitor_frame.get("Priority") == "B").sum()) if not visitor_frame.empty else 0},
         {"Metric": "Company matches", "Value": len(company_frame)},
         {"Metric": "High-intent company unknown", "Value": len(unknown_frame)},
+        {"Metric": "AI referral visitors", "Value": len(ai_frame)},
         {"Metric": "Internal-country visitors retained", "Value": int((visitor_frame.get("Internal Visit") == "Yes").sum()) if not visitor_frame.empty else 0},
     ])
 
@@ -261,6 +275,7 @@ def main(input_path: str, output_path: str = "visitor_intelligence.xlsx") -> Non
         visitor_frame.to_excel(writer, sheet_name="Visitor Leads", index=False)
         company_frame.to_excel(writer, sheet_name="Company Matches", index=False)
         unknown_frame.to_excel(writer, sheet_name="High Intent Unknown", index=False)
+        ai_frame.to_excel(writer, sheet_name="AI Referrals", index=False)
         page_frame.to_excel(writer, sheet_name="Page Performance", index=False)
         frame.sort_values("ts", ascending=False).drop(columns=["visitor_key"], errors="ignore").to_excel(
             writer, sheet_name="Raw Visits", index=False

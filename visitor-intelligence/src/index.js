@@ -38,8 +38,12 @@ const worker = {
       return recordLead(request, env);
     }
 
-    const origin = request.headers.get("Origin") || "";
     const allowedOrigins = parseList(env.ALLOWED_ORIGINS, DEFAULT_ALLOWED_ORIGINS);
+    if (request.method === "POST" && url.pathname === "/visit") {
+      return recordProxiedVisit(request, env, allowedOrigins);
+    }
+
+    const origin = request.headers.get("Origin") || "";
     const allowedOrigin = allowedOrigins.includes(origin) ? origin : "";
     const cors = buildCorsHeaders(allowedOrigin);
 
@@ -103,11 +107,12 @@ async function recordLead(request, env) {
       lead_id, submitted_at, form_name, language, name, company, email, whatsapp,
       country, project_type, product, quantity, delivery_time, project_stage,
       purchase_timeframe, need_samples, dap_destination, message, page_url, page_path,
-      landing_page, referrer, utm_source, utm_medium, utm_campaign, utm_term,
+      landing_page, referrer, traffic_channel, ai_source,
+      utm_source, utm_medium, utm_campaign, utm_term,
       utm_content, gclid, fbclid, lead_score, lead_grade, lead_score_reasons,
       session_product_views, session_max_engaged_seconds, session_section_views,
       visitor_id, session_id, visitor_label
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   ).bind(
     leadId,
     submittedAt,
@@ -131,6 +136,8 @@ async function recordLead(request, env) {
     safeText(lead.page_path, 500),
     safeText(lead.landing_page, 1000),
     safeText(lead.referrer, 1000),
+    safeText(lead.traffic_channel, 100),
+    safeText(lead.ai_source, 160),
     safeText(lead.utm_source, 300),
     safeText(lead.utm_medium, 300),
     safeText(lead.utm_campaign, 500),
@@ -155,11 +162,30 @@ async function recordLead(request, env) {
   );
 }
 
-async function recordVisit(request, env, allowedOrigins) {
-  const origin = request.headers.get("Origin") || "";
+async function recordProxiedVisit(request, env, allowedOrigins) {
+  const authorization = request.headers.get("Authorization") || "";
+  if (!env.LEAD_INGEST_SECRET || authorization !== `Bearer ${env.LEAD_INGEST_SECRET}`) {
+    return Response.json({ ok: false, error: "Unauthorized" }, { status: 401 });
+  }
+
+  try {
+    await recordVisit(request, env, allowedOrigins, true);
+    return new Response(null, { status: 204, headers: { "Cache-Control": "no-store" } });
+  } catch (error) {
+    console.error("Proxied visit ingest failed", error);
+    return Response.json({ ok: false, error: "Ingest failed" }, { status: 500 });
+  }
+}
+
+async function recordVisit(request, env, allowedOrigins, trustedProxy = false) {
+  const origin = trustedProxy
+    ? request.headers.get("X-Visitor-Origin") || ""
+    : request.headers.get("Origin") || "";
   if (!allowedOrigins.includes(origin)) return;
 
-  const userAgent = request.headers.get("User-Agent") || "";
+  const userAgent = trustedProxy
+    ? request.headers.get("X-Visitor-User-Agent") || ""
+    : request.headers.get("User-Agent") || "";
   if (!userAgent || BOT_UA.test(userAgent)) return;
 
   const maxBodyBytes = clampNumber(env.MAX_BODY_BYTES, 512, 8192, 4096);
@@ -180,14 +206,18 @@ async function recordVisit(request, env, allowedOrigins) {
   const minDuration = clampNumber(env.MIN_DURATION_SECONDS, 1, 60, 5);
   if (duration < minDuration) return;
 
-  const ip = request.headers.get("CF-Connecting-IP");
+  const ip = trustedProxy
+    ? request.headers.get("X-Visitor-IP")
+    : request.headers.get("CF-Connecting-IP");
   if (!ip) return;
 
   const cf = request.cf || {};
   let org = cf.asOrganization || "";
   let asn = cf.asn ? `AS${cf.asn}` : "";
   let domain = "";
-  let country = cf.country || "";
+  let country = trustedProxy
+    ? request.headers.get("X-Visitor-Country") || ""
+    : cf.country || "";
 
   const ipInfo = await getIpInfo(ip, env);
   if (ipInfo) {
@@ -221,9 +251,10 @@ async function recordVisit(request, env, allowedOrigins) {
       day, ip_hash, visitor_id, session_id, visitor_label, asn, org, domain, country,
       network_type, company_confidence, company_candidate, internal_visit, classification_reason,
       site, path, query, referrer, landing, event, language, timezone, screen, duration,
-      utm_source, utm_medium, utm_campaign, utm_term, gclid, product_interest,
+      traffic_channel, ai_source, utm_source, utm_medium, utm_campaign, utm_term,
+      utm_content, gclid, product_interest,
       intent_score, intent_grade, intent_reasons
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   ).bind(
     new Date().toISOString().slice(0, 10),
     ipHash,
@@ -249,10 +280,13 @@ async function recordVisit(request, env, allowedOrigins) {
     safeText(body.tz, 80),
     safeText(body.screen, 40),
     duration,
+    attribution.trafficChannel,
+    attribution.aiSource,
     attribution.utmSource,
     attribution.utmMedium,
     attribution.utmCampaign,
     attribution.utmTerm,
+    attribution.utmContent,
     attribution.gclid,
     productInterest,
     intent.score,
@@ -308,12 +342,15 @@ function classifyNetwork(org, domain) {
 }
 
 function parseAttribution(body) {
-  const params = new URLSearchParams(String(body.query || "").replace(/^\\?/, ""));
+  const params = new URLSearchParams(String(body.query || "").replace(/^\?/, ""));
   return {
+    trafficChannel: safeText(body.traffic_channel, 100),
+    aiSource: safeText(body.ai_source, 160),
     utmSource: safeText(body.utm_source || params.get("utm_source"), 300),
     utmMedium: safeText(body.utm_medium || params.get("utm_medium"), 300),
     utmCampaign: safeText(body.utm_campaign || params.get("utm_campaign"), 500),
     utmTerm: safeText(body.utm_term || params.get("utm_term"), 500),
+    utmContent: safeText(body.utm_content || params.get("utm_content"), 500),
     gclid: safeText(body.gclid || params.get("gclid"), 500),
   };
 }
@@ -338,6 +375,7 @@ function scoreVisitIntent(body, duration, attribution) {
   else if (path.includes("/solutions") || path.includes("/projects")) add(5, "Viewed solution or project content");
 
   if (/google\.|bing\.|yahoo\./.test(referrer)) add(4, "Search-engine referral");
+  if (attribution.trafficChannel === "ai_referral" || attribution.aiSource) add(5, "AI referral");
   if (attribution.gclid || attribution.utmMedium.toLowerCase() === "cpc") add(5, "Paid-search visit");
   if (/supplier|wholesale|price|manufacturer|distributor|from china|contract carpet|custom/.test(searchIntent)) {
     add(6, "Commercial purchase keyword");

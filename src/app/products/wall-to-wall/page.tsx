@@ -71,13 +71,40 @@ const constructionOptions = [
   }
 ];
 
+const contractCarpetSelector = [
+  {
+    area: "Hotel Guestrooms & Suites",
+    construction: "Custom cut-pile or printed broadloom",
+    buyingRange: "MOQ from 100 SQM · FOB from US$3.10/SQM",
+    href: "/products/wall-to-wall/custom-luxury-hotel-room-carpet"
+  },
+  {
+    area: "Hotel Corridors & Lift Lobbies",
+    construction: "Patterned high-traffic corridor broadloom",
+    buyingRange: "MOQ from 300 SQM · FOB from US$4.20/SQM",
+    href: "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet"
+  },
+  {
+    area: "Ballrooms & Banquet Halls",
+    construction: "Dense custom printed contract carpet",
+    buyingRange: "MOQ from 200 SQM · FOB from US$3.80/SQM",
+    href: "/products/wall-to-wall/3d-printed-banquet-hall-carpet"
+  },
+  {
+    area: "Luxury Hotels & Casinos",
+    construction: "Woven 80% wool / 20% nylon Axminster",
+    buyingRange: "MOQ from 500 SQM · FOB from US$18.00/SQM",
+    href: "/products/wall-to-wall/luxury-hotel-broadloom"
+  }
+];
+
 export const metadata: Metadata = {
-  title: "Hospitality Wall-to-Wall Carpet | Hotel Broadloom Factory",
-  description: "Compare custom hotel broadloom for guestrooms, corridors, ballrooms and casinos. View Axminster, printed and wool-blend options, MOQ, samples and factory pricing.",
+  title: "Contract Carpet Supplier | Hotel Wall-to-Wall Broadloom",
+  description: "Compare contract carpet for hotel rooms, corridors, ballrooms and casinos. Review Axminster, printed broadloom, MOQ, samples, lead time and factory FOB pricing.",
   alternates: { canonical: categoryPath },
   openGraph: {
-    title: "Hospitality Wall-to-Wall Carpet | Hotel Broadloom Factory",
-    description: "Compare six custom hotel broadloom carpets by construction, factory price, MOQ, samples, and hospitality application.",
+    title: "Contract Carpet Supplier | Hotel Wall-to-Wall Broadloom",
+    description: "Compare six contract carpet and hotel broadloom options by construction, factory price, MOQ, samples, and hospitality application.",
     url: absoluteUrl(categoryPath),
     type: "website",
     images: [{ url: absoluteUrl("/images/category-broadloom.webp"), alt: "Commercial wall-to-wall hotel broadloom carpet by Vishomecarpet" }]
@@ -123,7 +150,7 @@ export default function CategoryPage() {
         <div className="absolute inset-0 bg-black/52 md:bg-black/36" />
         <div className="container-fox relative">
           <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Commercial Carpet Manufacturer & Export Supplier</p>
-          <h1 className="text-4xl font-black uppercase text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.72)] md:text-6xl">Wall-to-Wall Carpet & Hotel Broadloom</h1>
+          <h1 className="text-4xl font-black uppercase text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.72)] md:text-6xl">Contract Carpet & Hotel Broadloom</h1>
           <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/82 drop-shadow-[0_1px_5px_rgba(0,0,0,0.72)]">
             Custom commercial wall-to-wall carpet for hotel rooms, corridors, lobbies, ballrooms, casinos, restaurants, and contract interiors. Compare construction, FOB price, MOQ, and lead time across six project-ready broadloom options.
           </p>
@@ -146,6 +173,44 @@ export default function CategoryPage() {
         downloadHref="/downloads/commercial-carpet-procurement-checklist.pdf"
         downloadName="Commercial Carpet Procurement Checklist"
       />
+      <section className="border-b border-border bg-white py-14 md:py-18" data-funnel-section="contract_carpet_selector">
+        <div className="container-fox">
+          <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+            <div>
+              <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Direct Contract Carpet Answer</p>
+              <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-4xl">Choose by Area, Traffic and Construction</h2>
+              <p className="mt-5 leading-8 text-muted">
+                For hotel contract carpet, choose the construction by application before comparing price. Guestrooms prioritize comfort and design flexibility; corridors need appearance retention; ballrooms need dense project-grade broadloom; premium hotels and casinos commonly specify woven wool-nylon Axminster.
+              </p>
+              <Link href="/contact?product=Contract%20Carpet#quote-form" className="btn-fox-orange mt-7">Request Contract Carpet Quote</Link>
+            </div>
+            <div className="overflow-x-auto border border-border">
+              <table className="w-full min-w-[700px] border-collapse text-left">
+                <thead className="bg-primary text-white">
+                  <tr>
+                    <th className="px-5 py-4 text-xs font-black uppercase">Project Area</th>
+                    <th className="px-5 py-4 text-xs font-black uppercase">Recommended Construction</th>
+                    <th className="px-5 py-4 text-xs font-black uppercase">Reference Buying Range</th>
+                    <th className="px-5 py-4 text-xs font-black uppercase">Product</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {contractCarpetSelector.map((item) => (
+                    <tr key={item.area} className="border-t border-border align-top">
+                      <td className="px-5 py-5 text-sm font-black text-primary">{item.area}</td>
+                      <td className="px-5 py-5 text-sm leading-relaxed text-muted">{item.construction}</td>
+                      <td className="px-5 py-5 text-sm leading-relaxed text-muted">{item.buyingRange}</td>
+                      <td className="px-5 py-5">
+                        <Link href={item.href} className="text-xs font-black uppercase text-accent hover:text-primary">View →</Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="wall-to-wall-products" className="section-padding scroll-mt-24">
         <div className="container-fox">
           <div className="mb-12 max-w-3xl">

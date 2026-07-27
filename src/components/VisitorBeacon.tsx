@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { getAttributionForEvent } from "@/lib/attribution";
 import { syncClarityIdentity } from "@/lib/visitorIdentity";
 
-const visitorBeaconUrl = process.env.NEXT_PUBLIC_VISITOR_BEACON_URL?.trim();
+const visitorBeaconUrl = "/api/visit";
 
 function getLandingPage() {
   if (typeof window === "undefined") return "";
@@ -43,15 +43,16 @@ export default function VisitorBeacon() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (!visitorBeaconUrl || navigator.webdriver) return;
+    if (navigator.webdriver) return;
 
     const startedAt = Date.now();
     let sent = false;
     const identity = syncClarityIdentity(pathname);
     const clarityRetry = window.setTimeout(() => syncClarityIdentity(pathname), 1_500);
+    const engagementTimer = window.setTimeout(() => send("engaged_8s"), 8_000);
 
     function send(event: string) {
-      if (sent || !visitorBeaconUrl) return;
+      if (sent) return;
 
       const duration = Math.max(1, Math.round((Date.now() - startedAt) / 1000));
 
@@ -88,6 +89,7 @@ export default function VisitorBeacon() {
     return () => {
       send("route_change");
       window.clearTimeout(clarityRetry);
+      window.clearTimeout(engagementTimer);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       window.removeEventListener("pagehide", handlePageHide);
     };
