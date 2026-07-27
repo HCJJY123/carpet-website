@@ -30,10 +30,12 @@ def load_rows(path: str) -> pd.DataFrame:
         "lead_id", "submitted_at", "form_name", "language", "name", "company",
         "email", "whatsapp", "country", "project_type", "product", "quantity",
         "delivery_time", "project_stage", "purchase_timeframe", "need_samples",
-        "message", "page_url", "page_path", "landing_page", "referrer", "utm_source",
-        "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid",
+        "message", "page_url", "page_path", "landing_page", "referrer",
+        "traffic_channel", "ai_source", "utm_source", "utm_medium", "utm_campaign",
+        "utm_term", "utm_content", "gclid", "fbclid",
         "lead_grade", "lead_score_reasons", "lead_status", "qualified_at",
         "conversion_currency", "google_ads_uploaded_at", "next_follow_up_at", "sales_notes",
+        "visitor_id", "session_id", "visitor_label",
     ]
     for column in text_columns:
         if column not in frame:
@@ -91,6 +93,10 @@ def google_ads_rows(frame: pd.DataFrame) -> pd.DataFrame:
 
 
 def traffic_source(row: pd.Series) -> str:
+    ai_source = str(row.get("ai_source", "")).strip()
+    if ai_source:
+        return ai_source
+
     source = str(row.get("utm_source", "")).strip().lower()
     if source:
         return source
@@ -175,6 +181,44 @@ def landing_page_performance(frame: pd.DataFrame) -> pd.DataFrame:
     ).reset_index(drop=True)
 
 
+def ai_conversion_performance(frame: pd.DataFrame) -> pd.DataFrame:
+    ai = frame[
+        frame["ai_source"].str.strip().ne("")
+        | frame["traffic_channel"].str.lower().eq("ai_referral")
+    ].copy()
+    if ai.empty:
+        return pd.DataFrame(columns=[
+            "AI Source", "Leads", "A Leads", "Sales Qualified",
+            "Average Lead Score", "Latest Lead",
+        ])
+
+    ai["AI Source"] = ai["ai_source"].replace("", "Unspecified AI referral")
+    ai["Is A Lead"] = ai["lead_grade"].eq("A")
+    ai["Is Sales Qualified"] = ai["lead_status"].str.lower().isin(QUALIFIED_STATUSES)
+    summary = (
+        ai.groupby("AI Source", dropna=False)
+        .agg(
+            Leads=("lead_id", "count"),
+            A_Leads=("Is A Lead", "sum"),
+            Sales_Qualified=("Is Sales Qualified", "sum"),
+            Average_Lead_Score=("lead_score", "mean"),
+            Latest_Lead=("submitted_at", "max"),
+        )
+        .reset_index()
+        .rename(columns={
+            "A_Leads": "A Leads",
+            "Sales_Qualified": "Sales Qualified",
+            "Average_Lead_Score": "Average Lead Score",
+            "Latest_Lead": "Latest Lead",
+        })
+    )
+    summary["Average Lead Score"] = summary["Average Lead Score"].round(1)
+    return summary.sort_values(
+        ["Sales Qualified", "A Leads", "Average Lead Score", "Leads"],
+        ascending=[False, False, False, False],
+    ).reset_index(drop=True)
+
+
 def main(input_path: str, output_dir: str = ".") -> None:
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
@@ -198,14 +242,19 @@ def main(input_path: str, output_dir: str = ".") -> None:
         ascending=[True, False, False],
     ).drop(columns=["_grade_order"])
 
-    ads = google_ads_rows(frame)
-    sources = source_performance(frame)
-    landing_pages = landing_page_performance(frame)
+    reportable = frame[frame["lead_status"].str.lower().ne("test")].copy()
+    test_leads = frame[frame["lead_status"].str.lower().eq("test")].copy()
+    ads = google_ads_rows(reportable)
+    sources = source_performance(reportable)
+    landing_pages = landing_page_performance(reportable)
+    ai_conversions = ai_conversion_performance(reportable)
     with pd.ExcelWriter(excel_path) as writer:
         frame.to_excel(writer, sheet_name="All Leads", index=False)
         sources.to_excel(writer, sheet_name="Source Performance", index=False)
         landing_pages.to_excel(writer, sheet_name="Landing Pages", index=False)
+        ai_conversions.to_excel(writer, sheet_name="AI Conversions", index=False)
         ads.to_excel(writer, sheet_name="Qualified for Ads", index=False)
+        test_leads.to_excel(writer, sheet_name="Test Leads", index=False)
 
     if ads.empty:
         ads = pd.DataFrame(columns=[
