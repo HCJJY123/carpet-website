@@ -1,3 +1,4 @@
+import { carpetTilesOverConcreteGuide } from "@/lib/blog-posts/carpet-tiles-over-concrete-guide";
 import { sluiceMattingGuide } from "@/lib/blog-posts/sluice-matting-guide";
 
 export interface BlogSection {
@@ -40,6 +41,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  carpetTilesOverConcreteGuide,
   sluiceMattingGuide,
   {
     slug: "hotel-noise-acoustic-carpet-specification-guide",
