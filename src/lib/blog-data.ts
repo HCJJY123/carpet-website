@@ -1,3 +1,4 @@
+import { hotelCarpetPatternsGuide } from "@/lib/blog-posts/hotel-carpet-patterns-guide";
 import { carpetTilesOverConcreteGuide } from "@/lib/blog-posts/carpet-tiles-over-concrete-guide";
 import { sluiceMattingGuide } from "@/lib/blog-posts/sluice-matting-guide";
 
@@ -41,6 +42,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  hotelCarpetPatternsGuide,
   carpetTilesOverConcreteGuide,
   sluiceMattingGuide,
   {
