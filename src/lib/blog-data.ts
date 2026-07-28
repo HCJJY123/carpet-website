@@ -47,7 +47,7 @@ export const blogPosts: BlogPost[] = [
   sluiceMattingGuide,
   {
     slug: "hotel-noise-acoustic-carpet-specification-guide",
-    title: "Hotel Noise Is the #1 Guest Complaint: The Acoustic Case for Corridor and Guestroom Carpet",
+    title: "Reducing Hotel Noise: The Acoustic Case for Corridor and Guestroom Carpet",
     subtitle: "How NRC, IIC, and ΔIIC guide quieter corridor, guestroom, and public-area flooring specifications.",
     painPoint: "Corridor footfall, luggage wheels, and reverberation can reduce guest satisfaction when flooring is specified without tested acoustic performance.",
     seoTitle: "Hotel Acoustic Carpet Specification Guide | VISHOME",
@@ -340,7 +340,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "commercial-space-carpet-tiles-maintenance-cost-guide",
-    title: "Transform Your Commercial Space: How Premium Carpet Tiles Cut Maintenance Costs by 40%",
+    title: "How Commercial Carpet Tiles Can Reduce Maintenance Disruption and Lifecycle Costs",
     subtitle: "Strategic flooring solutions for hotels, offices, and retail environments.",
     painPoint: "High maintenance budgets, frequent replacement needs, and downtime costs.",
     seoTitle: "Premium Carpet Tiles Maintenance Cost Guide | VISHOME",
@@ -635,11 +635,11 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "shipping-optimization-5000sqm-mumbai-14days",
-    title: "Shipping Optimization: How to Move 5,000 Sq Meters of Carpet to Mumbai in 14 Days",
+    title: "Shipping Optimization: A 14-Day Fast-Track Planning Scenario for Carpet Delivery to Mumbai",
     subtitle: "Logistics playbook for accelerated international carpet programs.",
     painPoint: "Uncertain shipping windows, damage risk, and schedule overruns.",
     seoTitle: "Carpet Shipping Optimization to Mumbai in 14 Days | VISHOME",
-    description: "How to plan route, packaging, and timeline controls for fast 5,000 sqm carpet delivery to Mumbai.",
+    description: "A planning scenario for route, packaging, and timeline controls when a commercial carpet shipment has a 14-day target.",
     keywords: ["shipping optimization", "mumbai carpet delivery", "carpet logistics", "project lead time"],
     date: "2026-06-24",
     author: "Vishome Export Team",

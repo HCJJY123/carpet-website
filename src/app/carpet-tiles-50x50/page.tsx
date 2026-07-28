@@ -51,7 +51,7 @@ export default function CarpetTiles50x50Page() {
               },
               {
                 title: "LOW WASTE",
-                desc: "Modular 50x50cm format reduces cutting waste by 15-20% compared to broadloom rolls.",
+                desc: "The modular 50x50cm format can reduce cutting waste when the floor plan and installation layout are planned for tiles.",
                 icon: "📉"
               },
               {

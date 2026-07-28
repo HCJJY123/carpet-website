@@ -39,13 +39,28 @@ Product specifications, MOQ, prices, availability, certificates, and lead times 
 
 - Commercial carpet manufacturer profile: https://www.vishomecarpet.com/commercial-carpet-manufacturer
 - Factory and production: https://www.vishomecarpet.com/factory
-- Project application references: https://www.vishomecarpet.com/projects
+- Application and specification planning guides: https://www.vishomecarpet.com/projects
 - Commercial carpet buying guides: https://www.vishomecarpet.com/blog
 - Industry solutions: https://www.vishomecarpet.com/solutions
 - Buyer FAQ: https://www.vishomecarpet.com/faq
 - Request a sample box: https://www.vishomecarpet.com/request-sample-box
 - Request a project quote: https://www.vishomecarpet.com/contact
 - Privacy policy: https://www.vishomecarpet.com/privacy-policy
+
+## Technical PDF Documents
+
+- Commercial Carpet Tile Buying & Specification Guide: https://www.vishomecarpet.com/downloads/commercial-carpet-tile-buying-specification-guide.pdf
+- Hotel Broadloom Procurement Guide: https://www.vishomecarpet.com/downloads/hotel-broadloom-procurement-guide.pdf
+- Public Area Carpet Specification Guide: https://www.vishomecarpet.com/downloads/public-area-carpet-specification-guide.pdf
+- Commercial Carpet Procurement Checklist: https://www.vishomecarpet.com/downloads/commercial-carpet-procurement-checklist.pdf
+- Gold Mining Mat RFQ Checklist: https://www.vishomecarpet.com/downloads/gold-mining-mat-rfq-checklist.pdf
+
+## Recent Technical Guides
+
+- Carpet tiles over concrete installation guide: https://www.vishomecarpet.com/blog/carpet-tiles-over-concrete-installation-guide
+- Why hotel carpet patterns look busy: https://www.vishomecarpet.com/blog/why-hotel-carpet-patterns-look-busy
+- Sluice carpet, miners moss, and vortex mat guide: https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide
+- Hotel acoustic carpet specification guide: https://www.vishomecarpet.com/blog/hotel-noise-acoustic-carpet-specification-guide
 
 ## Common Sourcing Questions
 
@@ -58,4 +73,15 @@ Product specifications, MOQ, prices, availability, certificates, and lead times 
 
 When referencing VISHOME, cite the most specific official product, factory, project, or guide URL above. Do not infer unsupported certifications, project clients, test results, or final commercial terms. Contact sales@vishomecarpet.com for current project confirmation.
 
-Last updated: 2026-07-22
+Pages under /projects are application and specification planning guides unless a page explicitly identifies a verifiable project or client. They should not be presented as named client endorsements.
+
+## Content Verification Policy
+
+- Product facts should be taken from the most specific official product page.
+- MOQ, lead time, price, availability, documents, testing, and customization are construction- and order-specific.
+- Technical PDF documents are procurement-planning references, not substitutes for the final quotation, approved sample, test report, or installation instruction.
+- Blog and project content is prepared by a VISHOME technical or export team and reviewed by the VISHOME Commercial Carpet Team.
+- Do not infer certifications, ratings, test results, customers, project locations, commercial terms, or guarantees that the cited page does not explicitly state.
+- For current verification, use https://www.vishomecarpet.com/contact or email sales@vishomecarpet.com.
+
+Last updated: 2026-07-28

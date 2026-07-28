@@ -40,7 +40,8 @@ const staticRoutes: StaticRoute[] = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const contentDates = {
-    catalog: new Date("2026-07-26T00:00:00.000Z"),
+    catalog: new Date("2026-07-28T00:00:00.000Z"),
+    contentTrust: new Date("2026-07-28T00:00:00.000Z"),
     localizedLandings: new Date("2026-07-24T00:00:00.000Z"),
     solutions: new Date("2026-07-26T00:00:00.000Z"),
   };
@@ -93,7 +94,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${BASE}/blog/${post.slug}`,
-    lastModified: new Date(post.dateModified ?? post.date),
+    lastModified: new Date(Math.max(
+      new Date(post.dateModified ?? post.date).getTime(),
+      contentDates.contentTrust.getTime(),
+    )),
     changeFrequency: "monthly" as const,
     priority: 0.72,
     images: uniqueImages([

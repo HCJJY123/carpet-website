@@ -39,37 +39,6 @@ export function productJsonLd(product: Product) {
   const priceValidUntil = new Date();
   priceValidUntil.setFullYear(priceValidUntil.getFullYear() + 1);
 
-  if (!product.fobPrice) {
-    return {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": `${productUrl}#webpage`,
-      name: product.name,
-      description: product.longDescription || product.description,
-      image: productImages(product),
-      url: productUrl,
-      inLanguage: "en",
-      about: {
-        "@type": "Thing",
-        name: product.name,
-        url: productUrl,
-      },
-    };
-  }
-
-  const offer = {
-    "@type": "AggregateOffer",
-    url: productUrl,
-    availability: productAvailability(product.id),
-    itemCondition: "https://schema.org/NewCondition",
-    priceCurrency: product.fobPrice.currency,
-    lowPrice: product.fobPrice.lowPrice,
-    highPrice: product.fobPrice.highPrice,
-    priceValidUntil: priceValidUntil.toISOString().slice(0, 10),
-    offerCount: 1,
-    seller: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
-  };
-
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -88,7 +57,22 @@ export function productJsonLd(product: Product) {
     material: product.spec.material,
     size: product.spec.size,
     ...(product.spec.colors.length ? { color: product.spec.colors.map((color) => color.name).join(", ") } : {}),
-    offers: offer,
+    ...(product.fobPrice
+      ? {
+          offers: {
+            "@type": "AggregateOffer",
+            url: productUrl,
+            availability: productAvailability(product.id),
+            itemCondition: "https://schema.org/NewCondition",
+            priceCurrency: product.fobPrice.currency,
+            lowPrice: product.fobPrice.lowPrice,
+            highPrice: product.fobPrice.highPrice,
+            priceValidUntil: priceValidUntil.toISOString().slice(0, 10),
+            offerCount: 1,
+            seller: { "@id": `${brandInfo.url}/#organization` },
+          },
+        }
+      : {}),
     additionalProperty: [
       { "@type": "PropertyValue", name: "Minimum Order Quantity", value: product.moq },
       { "@type": "PropertyValue", name: "Lead Time", value: product.leadTime },

@@ -7,6 +7,7 @@ import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
 import { relatedCategoryIds } from "@/lib/content-relations";
 import ProductImage from "@/components/ProductImage";
 import RelatedCategoryLinks from "@/components/RelatedCategoryLinks";
+import ContentTrustPanel from "@/components/ContentTrustPanel";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -138,25 +139,39 @@ export default async function BlogPostPage({ params }: Props) {
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${absoluteUrl(`/blog/${post.slug}`)}#article`,
     headline: post.title,
     description: post.description,
     image: absoluteUrl(post.image),
     datePublished: post.date,
     dateModified: post.dateModified ?? post.date,
+    inLanguage: "en",
     author: {
       "@type": "Organization",
+      "@id": `${brandInfo.url}/#technical-content-team`,
       name: post.author || brandInfo.name,
       url: brandInfo.url,
+      parentOrganization: { "@id": `${brandInfo.url}/#organization` },
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      "@id": `${brandInfo.url}/#commercial-carpet-team`,
+      name: "VISHOME Commercial Carpet Team",
+      parentOrganization: { "@id": `${brandInfo.url}/#organization` },
     },
     publisher: {
       "@type": "Organization",
-      name: brandInfo.name,
+      "@id": `${brandInfo.url}/#organization`,
       logo: {
         "@type": "ImageObject",
         url: absoluteUrl("/logo.svg"),
       },
     },
-    mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
+    isPartOf: { "@id": `${brandInfo.url}/#website` },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": absoluteUrl(`/blog/${post.slug}`),
+    },
     articleSection: post.category,
     mentions: relatedProducts.map((product) => ({
       "@type": "Thing",
@@ -217,6 +232,13 @@ export default async function BlogPostPage({ params }: Props) {
             ) : null}
           </figure>
         ) : null}
+
+        <ContentTrustPanel
+          type="blog"
+          author={post.author}
+          published={post.date}
+          modified={post.dateModified}
+        />
 
         <div className="bg-surface border border-border rounded-xl p-6 md:p-8 mt-8">
           <p className="text-[10px] font-black uppercase tracking-[0.25em] text-primary/60 mb-2">Pain Point Addressed</p>

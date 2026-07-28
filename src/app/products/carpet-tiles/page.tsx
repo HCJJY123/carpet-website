@@ -3,6 +3,7 @@ import { products } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import ProcurementSnapshot from "@/components/ProcurementSnapshot";
+import TechnicalSourcePanel from "@/components/TechnicalSourcePanel";
 import { absoluteUrl, categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 const categoryPath = "/products/carpet-tiles";
@@ -133,8 +134,21 @@ export default function CategoryPage() {
           { label: "Trade Terms", value: "FOB / CIF / DAP", detail: "Freight is calculated from destination and order volume." },
         ]}
         quoteHref="/contact?product=Commercial%20Carpet%20Tiles#quote-form"
-        downloadHref="/downloads/commercial-carpet-procurement-checklist.pdf"
-        downloadName="Commercial Carpet Procurement Checklist"
+        downloadHref="/downloads/commercial-carpet-tile-buying-specification-guide.pdf"
+        downloadName="Carpet Tile Buying & Specification Guide"
+      />
+      <TechnicalSourcePanel
+        title="Verify Carpet Tile Construction Before Ordering"
+        summary="Compare the exact fiber, backing, pile weight, tile size, traffic requirement, installation system, MOQ, and Incoterm. The guide is a procurement reference; the quoted construction and project documents control the final order."
+        documents={[
+          { label: "Commercial Carpet Tile Buying & Specification Guide", href: "/downloads/commercial-carpet-tile-buying-specification-guide.pdf" },
+        ]}
+        sources={[
+          { label: "Manufacturer Profile", href: "/commercial-carpet-manufacturer" },
+          { label: "Factory & Production", href: "/factory" },
+          { label: "Concrete Installation Guide", href: "/blog/carpet-tiles-over-concrete-installation-guide" },
+          { label: "Request a Quote", href: "/contact?product=Commercial%20Carpet%20Tiles#quote-form" },
+        ]}
       />
       <section id="carpet-tile-products" className="section-padding scroll-mt-24">
         <div className="container-fox">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { products, productCategories } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+import TechnicalSourcePanel from "@/components/TechnicalSourcePanel";
 import { categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -36,6 +37,20 @@ export default function CategoryPage() {
           </div>
         </div>
       </section>
+
+      <TechnicalSourcePanel
+        title="Public Area Carpet Specification Reference"
+        summary="Public-area flooring should be matched to traffic, cleaning access, replacement strategy, fire-performance requirements, construction, site conditions, and phased delivery. Confirm every requirement against the quoted product."
+        documents={[
+          { label: "Public Area Carpet Specification Guide", href: "/downloads/public-area-carpet-specification-guide.pdf" },
+        ]}
+        sources={[
+          { label: "Manufacturer Profile", href: "/commercial-carpet-manufacturer" },
+          { label: "Factory & Production", href: "/factory" },
+          { label: "Application Guides", href: "/projects" },
+          { label: "Request a Quote", href: "/contact?product=Public%20Area%20Carpet#quote-form" },
+        ]}
+      />
 
       <section className="section-padding">
         <div className="container-fox">

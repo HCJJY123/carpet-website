@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+import TechnicalSourcePanel from "@/components/TechnicalSourcePanel";
 import { brandInfo, products } from "@/lib/data";
 import { absoluteUrl, productItemListJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 
@@ -187,6 +188,22 @@ export default function CommercialCarpetManufacturerPage() {
         </div>
       </section>
 
+      <TechnicalSourcePanel
+        title="Commercial Carpet Specification Documents"
+        summary="Use these category-level planning guides to prepare a comparable RFQ. Product construction, performance documents, MOQ, lead time, price, and testing remain subject to the exact quotation."
+        documents={[
+          { label: "Commercial Carpet Tile Buying & Specification Guide", href: "/downloads/commercial-carpet-tile-buying-specification-guide.pdf" },
+          { label: "Hotel Broadloom Procurement Guide", href: "/downloads/hotel-broadloom-procurement-guide.pdf" },
+          { label: "Public Area Carpet Specification Guide", href: "/downloads/public-area-carpet-specification-guide.pdf" },
+        ]}
+        sources={[
+          { label: "Factory Evidence", href: "/factory" },
+          { label: "Product Catalog", href: "/products" },
+          { label: "Technical Blog", href: "/blog" },
+          { label: "Request Verification", href: "/contact#quote-form" },
+        ]}
+      />
+
       <section className="section-padding">
         <div className="container-fox">
           <div className="grid gap-px border border-border bg-border md:grid-cols-3">
@@ -197,6 +214,9 @@ export default function CommercialCarpetManufacturerPage() {
               </div>
             ))}
           </div>
+          <p className="mt-4 text-xs leading-relaxed text-muted">
+            Factory area and team-size figures are current VISHOME company-profile figures. Buyers should reconfirm capacity, production scheduling, and the responsible manufacturing line for the quoted order during supplier verification.
+          </p>
         </div>
       </section>
 

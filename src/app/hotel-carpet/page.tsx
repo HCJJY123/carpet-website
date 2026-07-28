@@ -99,7 +99,7 @@ export default function HotelCarpetPage() {
                 {[
                   { step: "01", title: "Reference Matching", desc: "Send us your project renderings or Pantone colors. Our design team creates a 3D visualization within 48 hours." },
                   { step: "02", title: "Strike-off Sampling", desc: "We produce a physical 'strike-off' sample for color and texture verification before bulk manufacturing." },
-                  { step: "03", title: "Global Compliance", desc: "Every custom order is tested for ASTM E648 fire ratings and certified for hospitality use." }
+                  { step: "03", title: "Document Confirmation", desc: "Required fire-performance documents and testing options are confirmed for the quoted construction and destination standard." }
                 ].map((s) => (
                   <div key={s.step} className="flex items-start gap-6">
                     <span className="text-4xl font-black text-accent/20 italic">{s.step}</span>

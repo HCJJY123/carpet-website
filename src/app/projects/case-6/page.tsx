@@ -6,6 +6,7 @@ import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
 import { relatedCategoryIds, relatedProductIdsForCase } from "@/lib/content-relations";
 import ProductImage from "@/components/ProductImage";
 import RelatedCategoryLinks from "@/components/RelatedCategoryLinks";
+import ContentTrustPanel from "@/components/ContentTrustPanel";
 
 const pageImages = [
   {
@@ -82,24 +83,39 @@ export default function CaseSixPage() {
 
   const caseJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "TechArticle",
+    "@id": `${absoluteUrl("/projects/case-6")}#guide`,
     headline: project.title,
     description: project.description,
     image: absoluteUrl(pageImages[0].src),
+    inLanguage: "en",
+    genre: "Application planning guide",
     author: {
       "@type": "Organization",
-      name: brandInfo.name,
+      "@id": `${brandInfo.url}/#technical-content-team`,
+      name: "VISHOME Technical Team",
       url: brandInfo.url,
+      parentOrganization: { "@id": `${brandInfo.url}/#organization` },
+    },
+    reviewedBy: {
+      "@type": "Organization",
+      "@id": `${brandInfo.url}/#commercial-carpet-team`,
+      name: "VISHOME Commercial Carpet Team",
+      parentOrganization: { "@id": `${brandInfo.url}/#organization` },
     },
     publisher: {
       "@type": "Organization",
-      name: brandInfo.name,
+      "@id": `${brandInfo.url}/#organization`,
       logo: {
         "@type": "ImageObject",
         url: absoluteUrl("/logo.svg"),
       },
     },
-    mainEntityOfPage: absoluteUrl("/projects/case-6"),
+    isPartOf: { "@id": `${brandInfo.url}/#website` },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": absoluteUrl("/projects/case-6"),
+    },
     articleSection: "Commercial Carpet Specification Guide",
     about: project.category,
   };
@@ -140,10 +156,8 @@ export default function CaseSixPage() {
           {project.subtitle ? (
             <p className="text-muted text-lg leading-relaxed max-w-4xl mb-10">{project.subtitle}</p>
           ) : null}
-          <div className="mb-8 border border-border bg-surface p-5">
-            <p className="text-sm leading-relaxed text-muted">
-              This guide explains specification logic, design direction, and procurement considerations for similar commercial flooring projects. Confirm final construction, testing, and installation details against your own project requirements.
-            </p>
+          <div className="mb-8">
+            <ContentTrustPanel type="case" />
           </div>
 
           <div className="aspect-[21/9] rounded-xl overflow-hidden shadow-2xl border border-border mb-10">

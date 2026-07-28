@@ -3,6 +3,7 @@ import { products } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import ProcurementSnapshot from "@/components/ProcurementSnapshot";
+import TechnicalSourcePanel from "@/components/TechnicalSourcePanel";
 import { absoluteUrl, categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 const categoryPath = "/products/wall-to-wall";
@@ -170,8 +171,22 @@ export default function CategoryPage() {
           { label: "Trade Terms", value: "FOB / CIF / DAP", detail: "Roll plan, packing, and freight depend on destination." },
         ]}
         quoteHref="/contact?product=Wall-to-Wall%20Carpet#quote-form"
-        downloadHref="/downloads/commercial-carpet-procurement-checklist.pdf"
-        downloadName="Commercial Carpet Procurement Checklist"
+        downloadHref="/downloads/hotel-broadloom-procurement-guide.pdf"
+        downloadName="Hotel Broadloom Procurement Guide"
+      />
+      <TechnicalSourcePanel
+        title="Verify Hotel Broadloom Before Design Approval"
+        summary="Confirm application area, fiber and construction, pile weight, roll width, pattern repeat, fire-performance requirement, sample or strike-off approval, packing, and delivery basis before production."
+        documents={[
+          { label: "Hotel Broadloom Procurement Guide", href: "/downloads/hotel-broadloom-procurement-guide.pdf" },
+        ]}
+        sources={[
+          { label: "Manufacturer Profile", href: "/commercial-carpet-manufacturer" },
+          { label: "Factory & Production", href: "/factory" },
+          { label: "Hotel Acoustic Guide", href: "/blog/hotel-noise-acoustic-carpet-specification-guide" },
+          { label: "Hotel Pattern Guide", href: "/blog/why-hotel-carpet-patterns-look-busy" },
+          { label: "Request a Quote", href: "/contact?product=Wall-to-Wall%20Carpet#quote-form" },
+        ]}
       />
       <section className="border-b border-border bg-white py-14 md:py-18" data-funnel-section="contract_carpet_selector">
         <div className="container-fox">
