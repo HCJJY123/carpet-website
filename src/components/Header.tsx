@@ -231,7 +231,7 @@ export default function Header() {
 
           </div>
 
-          <nav className="hidden items-center justify-center min-[1420px]:flex min-[1536px]:translate-x-6 min-[1900px]:-translate-x-14" aria-label="Primary navigation">
+          <nav className="hidden items-center justify-center min-[1420px]:flex min-[1536px]:-translate-x-2 min-[1900px]:-translate-x-14" aria-label="Primary navigation">
             <div className="flex items-center gap-1 rounded-full border border-border/80 bg-white/85 px-2 py-1.5 shadow-[0_10px_30px_rgba(16,42,67,0.06)] backdrop-blur">
               {navLinks.map((link) => {
                 const active = isActiveNav(link);
