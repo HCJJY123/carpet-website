@@ -313,7 +313,7 @@ export default function Header() {
               <EmailIcon className="h-6 w-6 scale-90 transition-transform group-hover:scale-95" />
               Email
             </a>
-            <div className="relative ml-2 shrink-0" data-language-switcher>
+            <div className="relative ml-2 shrink-0 min-[1900px]:invisible" data-language-switcher>
               <LanguageButton
                 code={currentLanguage.code}
                 name={currentLanguage.name}
@@ -388,6 +388,27 @@ export default function Header() {
             </button>
           </div>
         </div>
+      </div>
+
+      <div
+        className="absolute right-16 top-1/2 hidden -translate-y-1/2 min-[1900px]:block"
+        data-language-switcher
+      >
+        <LanguageButton
+          code={currentLanguage.code}
+          name={currentLanguage.name}
+          open={languageOpen}
+          controls="wide-language-menu"
+          onClick={toggleLanguageMenu}
+          variant="desktop"
+        />
+        <LanguageMenuPanel
+          id="wide-language-menu"
+          open={languageOpen}
+          pathname={pathname}
+          onNavigate={closeMenus}
+          variant="desktop"
+        />
       </div>
 
       <div
