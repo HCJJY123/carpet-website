@@ -290,7 +290,7 @@ export default function Header() {
             </div>
           </nav>
 
-          <div className="hidden items-center justify-end gap-3 min-[1420px]:flex min-[1536px]:translate-x-4 min-[1900px]:translate-x-6">
+          <div className="hidden items-center justify-end gap-3 min-[1420px]:flex min-[1536px]:translate-x-4 min-[1536px]:gap-5 min-[1900px]:translate-x-6 min-[1900px]:gap-6">
             <Link href="/contact#quote-form" className="whitespace-nowrap rounded-lg bg-[#C8752A] px-6 py-3 text-[13px] font-bold uppercase tracking-[0.08em] text-white shadow-[0_3px_10px_rgba(72,43,18,0.16)] transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_5px_14px_rgba(72,43,18,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2">Send Inquiry</Link>
             <a
               href={whatsappUrl}
@@ -298,19 +298,19 @@ export default function Header() {
               rel="noopener noreferrer"
               data-whatsapp-placement="header"
               data-whatsapp-intent="project_support"
-              className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#25D366]/30 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#168a42] transition-colors hover:border-[#25D366]/55 hover:bg-[#25D366]/[0.06]"
+              className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#25D366]/30 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#168a42] transition-colors hover:border-[#25D366]/55 hover:bg-[#25D366]/[0.06] min-[1536px]:px-[13px] min-[1536px]:py-[9px] min-[1536px]:text-xs"
               aria-label="Contact VISHOME on WhatsApp Business"
             >
-              <WhatsAppIcon className="h-3.5 w-3.5" />
+              <WhatsAppIcon className="h-3.5 w-3.5 min-[1536px]:h-4 min-[1536px]:w-4" />
               WhatsApp
             </a>
             <a
               href={emailUrl}
-              className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#102A43]/20 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#102A43] transition-colors hover:border-[#258CF4]/55 hover:bg-[#258CF4]/[0.05] hover:text-[#126DE2]"
+              className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#102A43]/20 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#102A43] transition-colors hover:border-[#258CF4]/55 hover:bg-[#258CF4]/[0.05] hover:text-[#126DE2] min-[1536px]:px-[13px] min-[1536px]:py-[9px] min-[1536px]:text-xs"
               aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
               title="Email sales@vishomecarpet.com"
             >
-              <EmailIcon className="h-6 w-6 scale-90 transition-transform group-hover:scale-95" />
+              <EmailIcon className="h-6 w-6 scale-90 transition-transform group-hover:scale-95 min-[1536px]:h-[26px] min-[1536px]:w-[26px]" />
               Email
             </a>
             <div className="relative ml-2 shrink-0 min-[1900px]:invisible" data-language-switcher>
