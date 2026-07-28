@@ -313,7 +313,7 @@ export default function Header() {
               <EmailIcon className="h-6 w-6 scale-90 transition-transform group-hover:scale-95" />
               Email
             </a>
-            <div className="relative shrink-0" data-language-switcher>
+            <div className="relative ml-2 shrink-0" data-language-switcher>
               <LanguageButton
                 code={currentLanguage.code}
                 name={currentLanguage.name}
