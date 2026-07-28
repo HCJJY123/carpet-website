@@ -210,8 +210,8 @@ export default function Header() {
   return (
     <header className={`sticky top-0 bg-white/95 backdrop-blur border-b border-border shadow-sm ${languageOpen || menuOpen ? "z-[120]" : "z-50"}`}>
       <div className="mx-auto max-w-[1480px] px-4 sm:px-6 xl:px-6">
-        <div className="grid h-16 grid-cols-[1fr_auto] items-center md:h-20 xl:h-24 xl:grid-cols-[310px_minmax(620px,1fr)_390px]">
-          <div className="flex min-w-0 items-center gap-1.5 max-[359px]:gap-1 xl:-translate-x-8 2xl:-translate-x-12">
+        <div className="grid h-16 grid-cols-[1fr_auto] items-center md:h-20 min-[1420px]:h-24 min-[1420px]:grid-cols-[250px_minmax(620px,1fr)_430px]">
+          <div className="flex min-w-0 items-center gap-1.5 max-[359px]:gap-1 min-[1536px]:-translate-x-12">
             <Link href="/" className="flex min-w-0 items-center gap-1.5 max-[359px]:gap-1 sm:gap-2" onClick={closeMenus}>
               <span className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-sm max-[359px]:h-7 max-[359px]:w-7 sm:h-9 sm:w-9 md:h-10 md:w-10">
                 <Image
@@ -229,27 +229,10 @@ export default function Header() {
               </div>
             </Link>
 
-            <div className="relative hidden xl:block min-[1900px]:!hidden" data-language-switcher>
-              <LanguageButton
-                code={currentLanguage.code}
-                name={currentLanguage.name}
-                open={languageOpen}
-                controls="desktop-language-menu"
-                onClick={toggleLanguageMenu}
-                variant="compact"
-              />
-              <LanguageMenuPanel
-                id="desktop-language-menu"
-                open={languageOpen}
-                pathname={pathname}
-                onNavigate={closeMenus}
-                variant="desktop"
-              />
-            </div>
           </div>
 
-          <nav className="hidden translate-x-6 items-center justify-center xl:flex min-[1900px]:-translate-x-14" aria-label="Primary navigation">
-            <div className="flex items-center gap-1.5 rounded-full border border-border/80 bg-white/85 px-2 py-1.5 shadow-[0_10px_30px_rgba(16,42,67,0.06)] backdrop-blur">
+          <nav className="hidden items-center justify-center min-[1420px]:flex min-[1536px]:translate-x-6 min-[1900px]:-translate-x-14" aria-label="Primary navigation">
+            <div className="flex items-center gap-1 rounded-full border border-border/80 bg-white/85 px-2 py-1.5 shadow-[0_10px_30px_rgba(16,42,67,0.06)] backdrop-blur">
               {navLinks.map((link) => {
                 const active = isActiveNav(link);
                 const hasChildren = Boolean(link.children?.length);
@@ -259,7 +242,7 @@ export default function Header() {
                     <Link
                       href={link.href}
                       aria-haspopup={hasChildren ? "menu" : undefined}
-                      className={`flex items-center whitespace-nowrap rounded-full px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.06em] transition-all ${
+                      className={`flex items-center whitespace-nowrap rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.06em] transition-all ${
                         active
                           ? "bg-[#102A43] text-white shadow-sm"
                           : "text-[#102A43]/58 hover:bg-surface hover:text-[#102A43]"
@@ -307,7 +290,7 @@ export default function Header() {
             </div>
           </nav>
 
-          <div className="hidden translate-x-4 items-center justify-end gap-3 xl:flex 2xl:translate-x-6">
+          <div className="hidden items-center justify-end gap-3 min-[1420px]:flex min-[1536px]:translate-x-4 min-[1900px]:translate-x-6">
             <Link href="/contact#quote-form" className="whitespace-nowrap rounded-lg bg-[#C8752A] px-6 py-3 text-[13px] font-bold uppercase tracking-[0.08em] text-white shadow-[0_3px_10px_rgba(72,43,18,0.16)] transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_5px_14px_rgba(72,43,18,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2">Send Inquiry</Link>
             <a
               href={whatsappUrl}
@@ -330,9 +313,26 @@ export default function Header() {
               <EmailIcon className="h-6 w-6 scale-90 transition-transform group-hover:scale-95" />
               Email
             </a>
+            <div className="relative shrink-0" data-language-switcher>
+              <LanguageButton
+                code={currentLanguage.code}
+                name={currentLanguage.name}
+                open={languageOpen}
+                controls="desktop-language-menu"
+                onClick={toggleLanguageMenu}
+                variant="desktop"
+              />
+              <LanguageMenuPanel
+                id="desktop-language-menu"
+                open={languageOpen}
+                pathname={pathname}
+                onNavigate={closeMenus}
+                variant="desktop"
+              />
+            </div>
           </div>
 
-          <div className="flex items-center justify-end gap-1.5 max-[359px]:gap-1 xl:hidden">
+          <div className="flex items-center justify-end gap-1.5 max-[359px]:gap-1 min-[1420px]:hidden">
             <a
               href={whatsappUrl}
               target="_blank"
@@ -391,29 +391,8 @@ export default function Header() {
       </div>
 
       <div
-        className="absolute right-6 top-1/2 hidden -translate-y-1/2 min-[1900px]:block"
-        data-language-switcher
-      >
-        <LanguageButton
-          code={currentLanguage.code}
-          name={currentLanguage.name}
-          open={languageOpen}
-          controls="wide-language-menu"
-          onClick={toggleLanguageMenu}
-          variant="wide"
-        />
-        <LanguageMenuPanel
-          id="wide-language-menu"
-          open={languageOpen}
-          pathname={pathname}
-          onNavigate={closeMenus}
-          variant="wide"
-        />
-      </div>
-
-      <div
         id="mobile-navigation"
-        className={`absolute inset-x-0 top-full z-40 h-[calc(100dvh-4rem)] border-t border-border bg-white overscroll-contain transition-[opacity,visibility] duration-300 md:h-[calc(100dvh-5rem)] xl:hidden ${
+        className={`absolute inset-x-0 top-full z-40 h-[calc(100dvh-4rem)] border-t border-border bg-white overscroll-contain transition-[opacity,visibility] duration-300 md:h-[calc(100dvh-5rem)] min-[1420px]:hidden ${
           menuOpen
             ? "visible overflow-y-auto opacity-100 [-webkit-overflow-scrolling:touch]"
             : "invisible pointer-events-none overflow-hidden opacity-0"
@@ -524,7 +503,7 @@ function LanguageButton({
   open: boolean;
   controls: string;
   onClick: () => void;
-  variant: "compact" | "wide";
+  variant: "compact" | "desktop";
 }) {
   const chevron = (
     <span
@@ -538,8 +517,8 @@ function LanguageButton({
       type="button"
       onClick={onClick}
       className={
-        variant === "wide"
-          ? "notranslate flex h-14 w-[196px] items-center gap-3 rounded-md border border-[#c8963e]/55 bg-white px-3 text-[#102A43] shadow-[0_8px_24px_rgba(16,42,67,0.1)] transition-all hover:-translate-y-0.5 hover:border-[#c8963e] hover:shadow-[0_12px_30px_rgba(16,42,67,0.16)]"
+        variant === "desktop"
+          ? "notranslate flex h-9 w-12 shrink-0 flex-col items-center justify-center rounded-sm border border-[#c8963e]/45 bg-white text-[#102A43] shadow-sm transition-colors hover:border-[#c8963e] hover:text-[#9a6a16]"
           : "notranslate flex h-10 w-[52px] flex-col items-center justify-center rounded-sm border border-[#c8963e]/60 bg-white text-[#102A43] shadow-sm transition-colors hover:border-[#c8963e] hover:text-[#9a6a16] max-[359px]:w-12 sm:h-11 sm:w-[58px]"
       }
       translate="no"
@@ -549,16 +528,13 @@ function LanguageButton({
       aria-label={`Website language, current language ${name} (${code})`}
       title="Change website language"
     >
-      {variant === "wide" ? (
+      {variant === "desktop" ? (
         <>
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-[#102A43] text-[10px] font-bold text-white">
-            A/文
+          <span className="text-[8px] font-bold leading-none text-[#9a6a16]">A/文</span>
+          <span className="mt-1 flex items-center gap-1 text-[10px] font-bold leading-none">
+            {code}
+            {chevron}
           </span>
-          <span className="min-w-0 flex-1 text-left">
-            <span className="block text-[10px] font-bold uppercase tracking-[0.04em] text-[#9a6a16]">Website Language</span>
-            <span className="mt-1 block truncate text-[13px] font-bold" dir="auto">{name} ({code})</span>
-          </span>
-          {chevron}
         </>
       ) : (
         <>
@@ -584,14 +560,12 @@ function LanguageMenuPanel({
   open: boolean;
   pathname: string;
   onNavigate: () => void;
-  variant: "desktop" | "mobile" | "wide";
+  variant: "desktop" | "mobile";
 }) {
   const placement =
     variant === "desktop"
-      ? "absolute left-0 top-full mt-3 w-[680px]"
-      : variant === "wide"
-        ? "absolute right-0 top-full mt-3 w-[680px]"
-        : "fixed left-4 right-4 top-16 w-auto md:top-20";
+      ? "absolute right-0 top-full mt-3 w-[680px]"
+      : "fixed left-4 right-4 top-16 w-auto md:top-20";
 
   return (
     <div
