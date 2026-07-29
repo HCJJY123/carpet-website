@@ -68,4 +68,26 @@ first-party review dataset was available. No ratings or reviews were fabricated.
 
 ## Google Search Console URL Inspection
 
-Pending authenticated URL Inspection results.
+Authenticated URL Inspection was completed against the
+`https://www.vishomecarpet.com/` URL-prefix property.
+
+| URL | GSC status |
+| --- | --- |
+| https://www.vishomecarpet.com/ | Indexed |
+| https://www.vishomecarpet.com/products/carpet-tiles | Indexed |
+| https://www.vishomecarpet.com/products/wall-to-wall | Indexed |
+| https://www.vishomecarpet.com/products/public-area | Indexed |
+| https://www.vishomecarpet.com/products/carpet-tiles/healthcare-hospital-carpet-tiles | Not indexed - Google does not recognize this URL |
+| https://www.vishomecarpet.com/products/carpet-tiles/education-school-carpet-tiles | Not indexed - Google does not recognize this URL |
+| https://www.vishomecarpet.com/products/wall-to-wall/cinema-theater-carpet | Not indexed - Google does not recognize this URL |
+| https://www.vishomecarpet.com/products/public-area/commercial-stair-carpet-runner | Not indexed - Google does not recognize this URL |
+| https://www.vishomecarpet.com/projects/case-11 | Not indexed - Google does not recognize this URL |
+| https://www.vishomecarpet.com/projects/case-12 | Indexed |
+
+The four new product URLs were published on the validation date, so their
+not-indexed status reflects discovery latency rather than a live-page or
+structured-data failure. Each returned HTTP 200, was present in the sitemap,
+had at least seven internal links, and passed the official Rich Results Test.
+
+At validation time, the GSC property overview reported 72 indexed pages and 36
+not-indexed pages.
