@@ -332,25 +332,25 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="flex items-center justify-end gap-1.5 max-[359px]:gap-1 min-[1420px]:hidden">
+          <div className="flex items-center justify-end gap-1.5 max-[359px]:gap-0.5 min-[1420px]:hidden">
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               data-whatsapp-placement="mobile_header"
               data-whatsapp-intent="project_support"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-[#25D366]/35 bg-white text-[#168a42] sm:h-9 sm:w-9"
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#25D366]/40 bg-white text-[#168a42] transition-[border-color,background-color,transform] hover:scale-105 hover:border-[#25D366]/65 hover:bg-[#25D366]/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/45 focus-visible:ring-offset-2 max-[359px]:h-8 max-[359px]:w-8 sm:h-10 sm:w-10"
               aria-label="Contact VISHOME on WhatsApp Business"
             >
-              <WhatsAppIcon className="h-4 w-4" />
+              <WhatsAppIcon className="h-[18px] w-[18px] max-[359px]:h-4 max-[359px]:w-4 sm:h-5 sm:w-5" />
             </a>
             <a
               href={emailUrl}
-              className="flex h-8 w-8 items-center justify-center transition-transform hover:scale-105 sm:h-9 sm:w-9"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] border border-[#258CF4]/25 bg-[#258CF4]/[0.04] shadow-[0_2px_7px_rgba(18,109,226,0.12)] transition-[border-color,background-color,transform,box-shadow] hover:scale-105 hover:border-[#258CF4]/50 hover:bg-[#258CF4]/[0.08] hover:shadow-[0_3px_9px_rgba(18,109,226,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#258CF4]/45 focus-visible:ring-offset-2 max-[359px]:h-9 max-[359px]:w-9 sm:h-11 sm:w-11"
               aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
               title="Email sales@vishomecarpet.com"
             >
-              <EmailIcon className="h-8 w-8 scale-90 sm:h-9 sm:w-9" />
+              <EmailIcon className="h-9 w-9 scale-90 max-[359px]:h-8 max-[359px]:w-8 sm:h-10 sm:w-10" />
             </a>
             <div className="relative" data-language-switcher>
               <LanguageButton
@@ -540,7 +540,7 @@ function LanguageButton({
       className={
         variant === "desktop"
           ? "notranslate flex h-9 w-12 shrink-0 flex-col items-center justify-center rounded-sm border border-[#c8963e]/45 bg-white text-[#102A43] shadow-sm transition-colors hover:border-[#c8963e] hover:text-[#9a6a16]"
-          : "notranslate flex h-10 w-[52px] flex-col items-center justify-center rounded-sm border border-[#c8963e]/60 bg-white text-[#102A43] shadow-sm transition-colors hover:border-[#c8963e] hover:text-[#9a6a16] max-[359px]:w-12 sm:h-11 sm:w-[58px]"
+          : "notranslate group flex h-10 w-10 shrink-0 items-center justify-center rounded-sm text-[#52677A] transition-colors hover:bg-surface hover:text-[#102A43] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#102A43]/25 focus-visible:ring-offset-1 max-[359px]:h-9 max-[359px]:w-9 sm:h-11 sm:w-11"
       }
       translate="no"
       aria-expanded={open}
@@ -558,13 +558,13 @@ function LanguageButton({
           </span>
         </>
       ) : (
-        <>
-          <span className="text-[9px] font-bold uppercase text-[#9a6a16]">Language</span>
-          <span className="mt-0.5 flex items-center gap-1 text-[11px] font-bold">
+        <span className="flex h-8 w-9 flex-col items-center justify-center rounded-sm border border-[#102A43]/15 bg-[#F7F9FA] transition-colors group-hover:border-[#102A43]/25 group-hover:bg-white max-[359px]:h-7 max-[359px]:w-8">
+          <span className="text-[7px] font-black leading-none text-[#7B8794]">A/文</span>
+          <span className="mt-1 flex items-center gap-1 text-[10px] font-black leading-none">
             {code}
-            {chevron}
+            <span className="scale-75">{chevron}</span>
           </span>
-        </>
+        </span>
       )}
     </button>
   );
