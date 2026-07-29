@@ -223,7 +223,7 @@ export default async function BlogPostPage({ params }: Props) {
         {post.h1Image ? (
           <figure className="mb-8">
             <div className="aspect-[16/9] rounded-xl overflow-hidden bg-white shadow-2xl border-8 border-white">
-              <ProductImage src={post.h1Image} alt={post.h1ImageAlt || post.title} className="w-full h-full" fit={post.h1ImageFit || "contain"} priority sizes="(max-width: 1000px) 100vw, 1000px" />
+              <ProductImage src={post.h1Image} alt={post.h1ImageAlt || post.title} className="w-full h-full" fit={post.h1ImageFit || "contain"} priority sizes="(max-width: 1000px) 100vw, 1000px" unoptimized={post.h1ImageUnoptimized} />
             </div>
             {post.h1ImageCaption ? (
               <figcaption className="text-xs text-muted mt-3 uppercase tracking-wider font-semibold">

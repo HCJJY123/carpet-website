@@ -37,6 +37,7 @@ export default function BlogPage() {
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    unoptimized={post.imageUnoptimized}
                   />
                 </div>
                 <div className="p-8 flex-1 flex flex-col">

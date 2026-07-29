@@ -22,6 +22,7 @@ export const officeCarpetTilesVsHardFlooringGuide: BlogPost = {
   category: "Office Flooring",
   image:
     "/images/blog-series/office-carpet-tiles-vs-hard-flooring/office-carpet-tiles-vs-hard-flooring-maintenance.webp",
+  imageUnoptimized: true,
   h1Image:
     "/images/blog-series/office-carpet-tiles-vs-hard-flooring/office-carpet-tiles-vs-hard-flooring-maintenance.webp",
   h1ImageAlt:
@@ -29,6 +30,7 @@ export const officeCarpetTilesVsHardFlooringGuide: BlogPost = {
   h1ImageCaption:
     "Office flooring performance is decided by maintenance, chair traffic, acoustics, and replacement planning, not only by day-one appearance.",
   h1ImageFit: "cover",
+  h1ImageUnoptimized: true,
   relatedProductIds: [
     "nylon-office-carpet-tile",
     "50x50-nylon-pp-office-carpet-tiles",

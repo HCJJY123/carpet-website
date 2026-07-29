@@ -33,10 +33,12 @@ export interface BlogPost {
   author: string;
   category: string;
   image: string;
+  imageUnoptimized?: boolean;
   h1Image?: string;
   h1ImageAlt?: string;
   h1ImageCaption?: string;
   h1ImageFit?: "cover" | "contain";
+  h1ImageUnoptimized?: boolean;
   sections: BlogSection[];
   relatedProductIds: string[];
   suggestedLinks: { label: string; href: string }[];
