@@ -9,13 +9,6 @@ export const metadata: Metadata = {
   title: "Commercial Carpet Manufacturer in China | Carpet Tiles & Hotel Carpet | VISHOME",
   description:
     "Compare a China commercial carpet manufacturer by product fit, MOQ, price basis, lead time, samples, test documents, customization, and export support. Review VISHOME factory capabilities.",
-  keywords: [
-    "commercial carpet manufacturer China",
-    "commercial carpet tile manufacturer",
-    "hotel carpet manufacturer China",
-    "carpet factory direct",
-    "wholesale commercial carpet supplier",
-  ],
   alternates: { canonical: "/commercial-carpet-manufacturer" },
   openGraph: {
     title: "Commercial Carpet Manufacturer in China | VISHOME",
@@ -269,7 +262,7 @@ export default function CommercialCarpetManufacturerPage() {
                 <h3 className="mb-3 text-lg font-black uppercase leading-tight text-primary group-hover:text-accent">{product.name}</h3>
                 <p className="mb-5 text-sm leading-relaxed text-muted">{product.description}</p>
                 <div className="grid grid-cols-2 gap-3 border-t border-border pt-5 text-[10px] font-black uppercase tracking-widest text-primary">
-                  <span>MOQ: {product.moq}</span>
+                  <span>Project MOQ: {product.moqTiers.project}</span>
                   <span>Lead: {product.leadTime}</span>
                   {product.fobPrice && <span className="col-span-2 text-accent">{product.fobPrice.display}</span>}
                   <span className="col-span-2 text-muted">Availability: In Stock / Made to Order</span>

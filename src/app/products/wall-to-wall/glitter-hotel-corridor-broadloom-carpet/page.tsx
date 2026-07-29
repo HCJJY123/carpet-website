@@ -7,11 +7,14 @@ const siteUrl = "https://www.vishomecarpet.com";
 const canonicalPath = "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet";
 
 const product = {
+  id: "glitter-hotel-corridor-broadloom-carpet",
   name: "Glitter Hotel Corridor Broadloom Carpet",
+  category: "wall-to-wall" as const,
   description: "Blue and gold glitter-pattern wall-to-wall broadloom carpet for hotel corridors, lobbies, ballrooms, and luxury hospitality projects.",
   image: "/images/products/hotel-glitter-broadloom/1.webp",
   imageAlt: "Blue and gold glitter hotel corridor broadloom carpet installed in a luxury hotel by Vishomecarpet",
   moq: "300 SQM",
+  moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Approved Design", project: "300 SQM" },
   leadTime: "25-35 Days",
   fobPrice: { display: "US$4.20-8.60 / SQM", lowPrice: "4.20", highPrice: "8.60", currency: "USD", unit: "SQM" },
   technicalSpecs: {
@@ -137,7 +140,7 @@ const productJsonLd = {
     { "@type": "PropertyValue", "name": "Backing", "value": "Commercial Woven Backing" },
     { "@type": "PropertyValue", "name": "Roll Width", "value": "4m" },
     { "@type": "PropertyValue", "name": "FOB Price Range", "value": "US$4.20-8.60 / SQM" },
-    { "@type": "PropertyValue", "name": "MOQ", "value": "300 SQM" },
+    { "@type": "PropertyValue", "name": "Project MOQ", "value": "300 SQM" },
     { "@type": "PropertyValue", "name": "Lead Time", "value": "25-35 Days" },
     { "@type": "PropertyValue", "name": "Availability", "value": "InStock" }
   ]
@@ -154,6 +157,17 @@ const faqJsonLd = {
       "text": item.a
     }
   }))
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+    { "@type": "ListItem", position: 2, name: "Products", item: `${siteUrl}/products` },
+    { "@type": "ListItem", position: 3, name: "Wall-to-Wall Carpets", item: `${siteUrl}/products/wall-to-wall` },
+    { "@type": "ListItem", position: 4, name: product.name, item: `${siteUrl}${canonicalPath}` },
+  ],
 };
 
 const specLabels: Record<string, string> = {
@@ -178,6 +192,10 @@ export default function ProductDetailPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c") }}
       />
 
       <nav className="bg-surface py-4 border-b border-border">
@@ -209,7 +227,7 @@ export default function ProductDetailPage() {
               <p className="text-muted text-base leading-relaxed mb-8">{product.description}</p>
               <div className="bg-surface p-8 border border-border space-y-4 mb-10">
                 <div className="flex justify-between uppercase text-xs gap-6">
-                  <span>MOQ</span>
+                  <span>Project MOQ</span>
                   <span className="font-bold">{product.moq}</span>
                 </div>
                 <div className="flex justify-between uppercase text-xs gap-6">

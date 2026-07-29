@@ -203,7 +203,7 @@ export default function GoldMiningCarpetMatPage() {
               </div>
               <div className="mb-8 space-y-4 border border-border bg-surface p-5 md:p-8">
                 <div className="flex justify-between gap-6 text-xs uppercase">
-                  <span>MOQ</span>
+                  <span>Project MOQ</span>
                   <span className="text-right font-bold">{p.moq}</span>
                 </div>
                 <div className="flex justify-between gap-6 text-xs uppercase">
@@ -234,7 +234,7 @@ export default function GoldMiningCarpetMatPage() {
       <ProcurementSnapshot
         title="Gold Mining Mat Wholesale Facts"
         facts={[
-          { label: "MOQ", value: "100 Rolls", detail: "Trial samples and wholesale production are confirmed separately." },
+          { label: "Project MOQ", value: "100 Rolls", detail: "Samples and trial orders are confirmed separately." },
           { label: "Production", value: "15-25 Days", detail: "Final timing follows size, thickness, packaging, and quantity." },
           { label: "Standard Roll", value: "1m x 15m", detail: "10mm, 15mm, and 20mm thickness options are available." },
           { label: "OEM Supply", value: "Size / Logo / Pack", detail: "Custom color, width, roll length, logo, and packing by order." },

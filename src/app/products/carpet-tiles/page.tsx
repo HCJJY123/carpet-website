@@ -39,7 +39,7 @@ const categoryFaqs = [
   },
   {
     question: "Do you make waterproof, washable, self-adhesive, wool, or polyester carpet tiles?",
-    answer: "These terms describe different constructions that are not automatically interchangeable with the six listed products. Send the required fiber, backing, cleaning method, installation system, and test standard for separate confirmation of waterproof carpet tiles, washable carpet tiles, self adhesive carpet tiles, wool carpet tiles, polyester carpet tiles, or cut pile carpet tiles."
+    answer: "These terms describe different constructions that are not automatically interchangeable with the eight listed products. Send the required fiber, backing, cleaning method, installation system, and test standard for separate confirmation of waterproof carpet tiles, washable carpet tiles, self adhesive carpet tiles, wool carpet tiles, polyester carpet tiles, or cut pile carpet tiles."
   }
 ];
 
@@ -73,6 +73,16 @@ const productOptions = [
     title: "Premium Nylon 6.6 Carpet Tiles",
     text: "Heavy-duty 50x50 commercial modular tiles for corporate offices, corridors, airports, schools, and contract projects.",
     href: "/products/carpet-tiles/commercial-nylon-tiles"
+  },
+  {
+    title: "Healthcare Hospital Carpet Tiles",
+    text: "Low-pile modular flooring for non-clinical waiting, consultation, administration, and senior-care areas.",
+    href: "/products/carpet-tiles/healthcare-hospital-carpet-tiles"
+  },
+  {
+    title: "Education School Carpet Tiles",
+    text: "Replaceable commercial carpet tiles for classrooms, libraries, student centers, and campus interiors.",
+    href: "/products/carpet-tiles/education-school-carpet-tiles"
   }
 ];
 
@@ -82,7 +92,7 @@ export const metadata: Metadata = {
   alternates: { canonical: categoryPath },
   openGraph: {
     title: "Commercial Carpet Tiles 50x50 | Factory Price & Samples",
-    description: "Compare six 50x50 commercial carpet tile products by fiber, backing, factory price, MOQ, samples, and office or hotel application.",
+    description: "Compare eight commercial carpet tile products by fiber, backing, factory price, MOQ, samples, and office, hotel, healthcare, or education application.",
     url: absoluteUrl(categoryPath),
     type: "website",
     images: [{ url: absoluteUrl("/images/category-tiles.webp"), alt: "Commercial modular carpet tiles supplied by Vishomecarpet" }]
@@ -93,7 +103,7 @@ export default function CategoryPage() {
   const categoryProducts = products.filter((p) => p.category === categoryId);
   const jsonLd = productItemListJsonLd({
     name: "Commercial Carpet Tiles and Modular Office Carpet Flooring",
-    description: "Six 50x50 commercial carpet tile products for offices, hotels, schools, corridors, airports, and contract flooring projects.",
+    description: "Eight commercial carpet tile products for offices, hotels, schools, healthcare support areas, corridors, airports, and contract flooring projects.",
     url: categoryPath,
     items: categoryProducts,
   });
@@ -117,7 +127,7 @@ export default function CategoryPage() {
         <div className="container-fox">
           <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Carpet Tile Manufacturer, Supplier & Distributor Support</p>
           <h1 className="text-4xl font-black uppercase text-white md:text-6xl">Commercial Carpet Tiles & Modular Flooring</h1>
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">50x50 nylon and polypropylene carpet tiles for offices, hotels, corridors, schools, airports, and commercial projects. Compare wholesale price, backing, thickness, MOQ, and technical performance across six products.</p>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">50x50 nylon and polypropylene carpet tiles for offices, hotels, corridors, schools, healthcare support areas, airports, and commercial projects. Compare wholesale price, backing, thickness, MOQ, and technical performance across eight products.</p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="btn-fox-orange">Get Price & Samples in 24 Hours</Link>
             <Link href="#carpet-tile-products" className="inline-flex min-h-12 items-center justify-center border border-white/40 px-7 py-3 text-xs font-black uppercase tracking-widest text-white transition-colors hover:border-white">Compare Products</Link>
@@ -128,7 +138,7 @@ export default function CategoryPage() {
       <ProcurementSnapshot
         title="Commercial Carpet Tile Buying Facts"
         facts={[
-          { label: "MOQ", value: "200-500 SQM", detail: "Selected constructions are quoted on a project basis." },
+          { label: "Project MOQ", value: "200-500 SQM", detail: "Samples and trial orders are confirmed separately." },
           { label: "Production", value: "7-25 Days", detail: "Timing depends on fiber, backing, color, and quantity." },
           { label: "Samples", value: "Available", detail: "Confirm surface, backing, color, and specification before bulk order." },
           { label: "Trade Terms", value: "FOB / CIF / DAP", detail: "Freight is calculated from destination and order volume." },
@@ -153,7 +163,7 @@ export default function CategoryPage() {
       <section id="carpet-tile-products" className="section-padding scroll-mt-24">
         <div className="container-fox">
           <div className="mb-12 max-w-3xl">
-            <h2 className="mb-4 text-3xl font-black uppercase text-primary md:text-4xl">Six Commercial Carpet Tile Products</h2>
+            <h2 className="mb-4 text-3xl font-black uppercase text-primary md:text-4xl">Eight Commercial Carpet Tile Products</h2>
             <p className="leading-relaxed text-muted">Compare material, backing, traffic class, price, minimum order, and application. Each product page includes technical data, project images, and a direct inquiry form.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -170,8 +180,8 @@ export default function CategoryPage() {
                     <span className="text-right font-black text-primary">{p.fobPrice?.display ?? "Quote by project"}</span>
                   </div>
                   <div className="flex justify-between gap-4">
-                    <span className="text-muted">MOQ</span>
-                    <span className="text-right font-black text-primary">{p.moq}</span>
+                    <span className="text-muted">Project MOQ</span>
+                    <span className="text-right font-black text-primary">{p.moqTiers.project}</span>
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Availability</span>

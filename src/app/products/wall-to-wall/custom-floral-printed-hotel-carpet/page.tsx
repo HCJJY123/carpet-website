@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ProductSpecCards } from "@/components/ProductConversion";
+import { products } from "@/lib/data";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
 
+const productId = "custom-floral-printed-hotel-carpet";
+const product = products.find((item) => item.id === productId);
 const path = "/products/wall-to-wall/custom-floral-printed-hotel-carpet";
 const name = "Custom Floral Printed Wall-to-Wall Hotel Carpet";
 const imageBase = "/images/products/wall-to-wall/custom-floral-printed-hotel-carpet";
@@ -24,7 +28,7 @@ const specs = [
   ["Pile Height", "Custom-Made"],
   ["Gauge", "1/8 Inch"],
   ["Color", "Custom Colorways"],
-  ["MOQ", "100 SQM"],
+  ["Project MOQ", "100 SQM"],
   ["Price Range", "US$3.60-6.40 / SQM"],
   ["Application", "Hotel Corridors, Guestrooms, Banquet Halls, Lobbies and Offices"],
   ["Customization", "Pattern, Color, Material and Pile Height"],
@@ -69,11 +73,18 @@ function InquiryActions() {
 }
 
 export default function CustomFloralPrintedHotelCarpetPage() {
+  if (!product) return null;
+
   const productJsonLd = {
     "@context": "https://schema.org", "@type": "Product", name, sku: "VHC-WTW-FPC-001",
     brand: { "@type": "Brand", name: "Vishomecarpet" }, category: "Wall-to-Wall Carpet",
     description: "Made-to-order custom floral printed wall-to-wall carpet for hotel corridors, guestrooms, banquet halls, lobbies and office projects.",
     material: "Polypropylene, nylon, polyester or wool-blend options", url: absoluteUrl(path), image: images.map((item) => absoluteUrl(item.src)),
+    additionalProperty: [
+      { "@type": "PropertyValue", name: "Sample", value: product.moqTiers.sample },
+      { "@type": "PropertyValue", name: "Trial Order", value: product.moqTiers.trialOrder },
+      { "@type": "PropertyValue", name: "Project MOQ", value: product.moqTiers.project },
+    ],
     offers: { "@type": "AggregateOffer", priceCurrency: "USD", lowPrice: "3.60", highPrice: "6.40", offerCount: 1, availability: "https://schema.org/PreOrder", seller: { "@type": "Organization", name: "Vishomecarpet" } },
   };
   const breadcrumbJsonLd = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
@@ -116,8 +127,9 @@ export default function CustomFloralPrintedHotelCarpetPage() {
               <h1 className="mb-7 text-4xl font-black uppercase leading-tight md:text-6xl">{name}</h1>
               <p className="text-lg leading-relaxed text-muted">Made-to-order custom printed carpet with floral patterns, project colorways, material options, and adjustable pile height for hotel lobbies, corridors, guestrooms, banquet halls, restaurants, showrooms, and offices.</p>
             </div>
+            <ProductSpecCards product={product} />
             <dl className="grid grid-cols-2 gap-px border border-border bg-border">
-              {[["MOQ", "100 SQM"], ["FOB Price", "US$3.60-6.40 / SQM"], ["Availability", "Made to Order"], ["Sample", "Sample Option Available on Request"], ["Lead Time", "Confirmed After Artwork and Specification Review"], ["Customization", "Pattern, Color, Material and Pile Height"]].map(([label, value]) => <div key={label} className="bg-white p-5"><dt className="mb-2 text-[10px] font-black uppercase tracking-widest text-primary/40">{label}</dt><dd className="text-sm font-bold">{value}</dd></div>)}
+              {[["FOB Price", "US$3.60-6.40 / SQM"], ["Availability", "Made to Order"], ["Lead Time", "Confirmed After Artwork and Specification Review"], ["Customization", "Pattern, Color, Material and Pile Height"]].map(([label, value]) => <div key={label} className="bg-white p-5"><dt className="mb-2 text-[10px] font-black uppercase tracking-widest text-primary/40">{label}</dt><dd className="text-sm font-bold">{value}</dd></div>)}
             </dl>
             <InquiryActions />
             <p className="text-sm leading-relaxed text-muted">Send your project area, required quantity, destination country, application area, preferred material and pattern reference. Vishomecarpet will confirm the suitable specification, artwork process, price and production schedule.</p>

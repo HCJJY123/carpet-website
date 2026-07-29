@@ -135,7 +135,7 @@ export default function HotelCarpetPage() {
                     <span className="text-right">{product.fobPrice?.display}</span>
                   </div>
                   <div className="flex justify-between gap-4">
-                    <span>MOQ</span>
+                    <span>Project MOQ</span>
                     <span className="text-right">{product.moq}</span>
                   </div>
                   <div className="flex justify-between gap-4">

@@ -75,6 +75,9 @@ export function productJsonLd(product: Product) {
       : {}),
     additionalProperty: [
       { "@type": "PropertyValue", name: "Minimum Order Quantity", value: product.moq },
+      { "@type": "PropertyValue", name: "Sample", value: product.moqTiers.sample },
+      { "@type": "PropertyValue", name: "Trial Order", value: product.moqTiers.trialOrder },
+      { "@type": "PropertyValue", name: "Project MOQ", value: product.moqTiers.project },
       { "@type": "PropertyValue", name: "Lead Time", value: product.leadTime },
       { "@type": "PropertyValue", name: "Availability", value: productAvailability(product.id).endsWith("PreOrder") ? "Made to Order" : "InStock" },
       { "@type": "PropertyValue", name: "Product Category", value: categoryName(product.category) },

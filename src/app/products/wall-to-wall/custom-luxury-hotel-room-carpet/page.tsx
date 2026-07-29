@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ProductTrackedLink, ProductViewEvent } from "@/components/ProductAnalytics";
+import { ProductSpecCards } from "@/components/ProductConversion";
 import { brandInfo, products } from "@/lib/data";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
@@ -46,7 +47,7 @@ const tds = [
   ["PILE PROFILE", "Medium Pile, Custom Specification Available"],
   ["COLOR", "Custom Project Colorways"],
   ["SIZE", "Custom Roll and Cutting Plan"],
-  ["MOQ", "100 SQM"],
+  ["Project MOQ", "100 SQM"],
   ["REFERENCE FOB PRICE", "US$3.10-9.70 / SQM"],
   ["APPLICATION", "Hotel Guestrooms, Suites, Corridors, Offices and Hospitality Public Areas"],
   ["CUSTOMIZATION", "Pattern, Color, Material, Pile Specification and Size"],
@@ -156,7 +157,9 @@ const productJsonLd = {
   image: images.map((item) => absoluteUrl(item.src)),
   material: "Project-specific nylon or wool-nylon options",
   additionalProperty: [
-    { "@type": "PropertyValue", name: "MOQ", value: "100 SQM" },
+    { "@type": "PropertyValue", name: "Sample", value: product?.moqTiers.sample },
+    { "@type": "PropertyValue", name: "Trial Order", value: product?.moqTiers.trialOrder },
+    { "@type": "PropertyValue", name: "Project MOQ", value: product?.moqTiers.project },
     { "@type": "PropertyValue", name: "Pattern", value: "Custom" },
     { "@type": "PropertyValue", name: "Application", value: "Hotel guestrooms, suites and corridors" },
     { "@type": "PropertyValue", name: "Availability", value: "Made to Order" },
@@ -274,13 +277,12 @@ export default function CustomLuxuryHotelRoomCarpetPage() {
               <h1 className="mb-6 text-4xl font-black uppercase leading-tight md:text-6xl">{name}</h1>
               <p className="text-lg leading-relaxed text-muted">Made-to-order wall-to-wall carpet developed for hotel guestrooms, suites, corridors and hospitality renovation projects, with customizable patterns, colors and project-based material specifications.</p>
             </div>
+            <ProductSpecCards product={product} />
             <dl className="grid grid-cols-2 gap-px border border-border bg-border">
               {[
-                ["MOQ", "100 SQM"],
                 ["Reference FOB Price", "US$3.10-9.70 / SQM"],
                 ["Availability", "Made to Order"],
                 ["Lead Time", "Confirmed After Design and Specification Approval"],
-                ["Sample", "Sample Option Available on Request"],
                 ["Customization", "Pattern, Color, Material and Size"],
               ].map(([label, value]) => (
                 <div key={label} className="bg-white p-5">

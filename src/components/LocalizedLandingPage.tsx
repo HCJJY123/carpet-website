@@ -23,7 +23,6 @@ export function localizedLandingMetadata(page: LocalizedLanding): Metadata {
   return {
     title: page.metadataTitle,
     description: page.metadataDescription,
-    keywords: page.keywords,
     alternates: {
       canonical: absoluteUrl(page.path),
       languages: Object.fromEntries(

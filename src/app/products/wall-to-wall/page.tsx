@@ -19,7 +19,7 @@ const categoryFaqs = [
   },
   {
     question: "What is the wall-to-wall carpet price?",
-    answer: "The six products on this page currently show reference FOB prices from US$3.10 to US$38.00 per square meter. Final commercial carpet price depends on yarn, construction, pile weight, pattern, quantity, backing, testing, and delivery requirements."
+    answer: "The seven products on this page currently show reference FOB prices from US$3.10 to US$38.00 per square meter. Final commercial carpet price depends on yarn, construction, pile weight, pattern, quantity, backing, testing, and delivery requirements."
   },
   {
     question: "Which carpet is suitable for hotel rooms and corridors?",
@@ -69,6 +69,11 @@ const constructionOptions = [
     title: "Custom Floral Printed Carpet",
     text: "Low-MOQ custom printed carpet for corridors, guestrooms, banquet halls, hotel lobbies, offices, and reception spaces.",
     href: "/products/wall-to-wall/custom-floral-printed-hotel-carpet"
+  },
+  {
+    title: "Cinema and Theater Carpet",
+    text: "Custom patterned broadloom for auditoriums, aisles, theater lobbies, concession areas, and entertainment venues.",
+    href: "/products/wall-to-wall/cinema-theater-carpet"
   }
 ];
 
@@ -96,6 +101,12 @@ const contractCarpetSelector = [
     construction: "Woven 80% wool / 20% nylon Axminster",
     buyingRange: "MOQ from 500 SQM · FOB from US$18.00/SQM",
     href: "/products/wall-to-wall/luxury-hotel-broadloom"
+  },
+  {
+    area: "Cinemas & Theaters",
+    construction: "Custom printed entertainment-venue broadloom",
+    buyingRange: "MOQ from 300 SQM · FOB from US$4.20/SQM",
+    href: "/products/wall-to-wall/cinema-theater-carpet"
   }
 ];
 
@@ -105,7 +116,7 @@ export const metadata: Metadata = {
   alternates: { canonical: categoryPath },
   openGraph: {
     title: "Contract Carpet Supplier | Hotel Wall-to-Wall Broadloom",
-    description: "Compare six contract carpet and hotel broadloom options by construction, factory price, MOQ, samples, and hospitality application.",
+    description: "Compare seven contract carpet and broadloom options by construction, factory price, MOQ, samples, and hospitality or entertainment application.",
     url: absoluteUrl(categoryPath),
     type: "website",
     images: [{ url: absoluteUrl("/images/category-broadloom.webp"), alt: "Commercial wall-to-wall hotel broadloom carpet by Vishomecarpet" }]
@@ -153,7 +164,7 @@ export default function CategoryPage() {
           <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Commercial Carpet Manufacturer & Export Supplier</p>
           <h1 className="text-4xl font-black uppercase text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.72)] md:text-6xl">Contract Carpet & Hotel Broadloom</h1>
           <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/82 drop-shadow-[0_1px_5px_rgba(0,0,0,0.72)]">
-            Custom commercial wall-to-wall carpet for hotel rooms, corridors, lobbies, ballrooms, casinos, restaurants, and contract interiors. Compare construction, FOB price, MOQ, and lead time across six project-ready broadloom options.
+            Custom commercial wall-to-wall carpet for hotel rooms, corridors, lobbies, ballrooms, casinos, cinemas, theaters, restaurants, and contract interiors. Compare construction, FOB price, MOQ, and lead time across seven project-ready broadloom options.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <Link href="/contact?product=Wall-to-Wall%20Carpet#quote-form" className="btn-fox-orange">Get Project Quote in 24 Hours</Link>
@@ -165,7 +176,7 @@ export default function CategoryPage() {
       <ProcurementSnapshot
         title="Hotel Broadloom Buying Facts"
         facts={[
-          { label: "MOQ", value: "100-500 SQM", detail: "MOQ varies by printed, tufted, or woven construction." },
+          { label: "Project MOQ", value: "100-500 SQM", detail: "Samples and trial orders vary by construction." },
           { label: "Production", value: "15-35 Days", detail: "Custom artwork and specification approval affect timing." },
           { label: "Samples", value: "Sample / Strike-Off", detail: "Color, pattern scale, pile, and backing are confirmed by project." },
           { label: "Trade Terms", value: "FOB / CIF / DAP", detail: "Roll plan, packing, and freight depend on destination." },
@@ -229,7 +240,7 @@ export default function CategoryPage() {
       <section id="wall-to-wall-products" className="section-padding scroll-mt-24">
         <div className="container-fox">
           <div className="mb-12 max-w-3xl">
-            <h2 className="mb-4 text-3xl font-black uppercase text-primary md:text-4xl">Six Commercial Broadloom Carpet Options</h2>
+            <h2 className="mb-4 text-3xl font-black uppercase text-primary md:text-4xl">Seven Commercial Broadloom Carpet Options</h2>
             <p className="leading-relaxed text-muted">Select a product by construction and application. Each page includes reference pricing, minimum order quantity, technical data, project images, and a direct inquiry form.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -254,8 +265,8 @@ export default function CategoryPage() {
                     <span className="text-right font-black text-primary">{p.fobPrice?.display}</span>
                   </div>
                   <div className="flex justify-between gap-4">
-                    <span className="text-muted">MOQ</span>
-                    <span className="text-right font-black text-primary">{p.moq}</span>
+                    <span className="text-muted">Project MOQ</span>
+                    <span className="text-right font-black text-primary">{p.moqTiers.project}</span>
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Availability</span>
@@ -279,7 +290,7 @@ export default function CategoryPage() {
             <div className="space-y-5 text-base leading-8 text-muted">
               <p>Vishomecarpet manufactures and supplies commercial carpet rolls for hospitality and contract projects. The collection covers woven Axminster carpet, 80 wool 20 nylon carpet, custom printed carpet, patterned broadloom carpet, machine-tufted hotel room carpet, and high-traffic corridor carpet.</p>
               <p>Project applications include carpet for hotel rooms, hotel hallway carpet, hotel lobby carpet, banquet room carpet, ballroom carpet, casino style carpet, restaurant carpet, conference room carpet, club carpet, cinema carpet, theatre carpet, showroom carpet, office carpet rolls, church carpet, mosque carpet, and mosque carpet rolls. Final construction, fire performance, and installation requirements must be confirmed for the intended building.</p>
-              <p>For Wilton carpet, solution dyed nylon carpet, Saxony carpet rolls, machine tufted carpet, cut pile carpet rolls, polyester carpet rolls, wool carpet wholesale, exhibition carpet flooring, needle punch carpet, marine carpet rolls, or another construction not shown in the six products, send the exact specification. The factory will confirm feasibility rather than substituting a different product without approval.</p>
+              <p>For Wilton carpet, solution dyed nylon carpet, Saxony carpet rolls, machine tufted carpet, cut pile carpet rolls, polyester carpet rolls, wool carpet wholesale, exhibition carpet flooring, needle punch carpet, marine carpet rolls, or another construction not shown in the seven products, send the exact specification. The factory will confirm feasibility rather than substituting a different product without approval.</p>
               <p>Vishomecarpet supports wholesale hotel carpet orders as a commercial carpet manufacturer, broadloom carpet manufacturer, hospitality carpet manufacturer, and export supplier. Buyers comparing commercial carpet suppliers or hotel carpet suppliers can review product-level prices and specifications before requesting a factory quotation.</p>
             </div>
           </div>
@@ -299,7 +310,7 @@ export default function CategoryPage() {
           <div>
             <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Transparent Buying Information</p>
             <h2 className="mb-6 text-3xl font-black uppercase text-primary md:text-5xl">Wall-to-Wall Carpet Price & Quote Requirements</h2>
-            <p className="leading-8 text-muted">Reference FOB prices across the six products range from US$3.10 to US$38.00 per square meter. Send the information below for an accurate commercial carpet quotation and cutting plan.</p>
+            <p className="leading-8 text-muted">Reference FOB prices across the seven products range from US$3.10 to US$38.00 per square meter. Send the information below for an accurate commercial carpet quotation and cutting plan.</p>
           </div>
           <dl className="grid gap-px border border-border bg-border sm:grid-cols-2">
             {[

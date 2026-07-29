@@ -86,8 +86,8 @@ export default function CategoryPage() {
                     <span className="text-right font-black text-primary">{p.fobPrice?.display}</span>
                   </div>
                   <div className="flex justify-between gap-4">
-                    <span className="text-muted">MOQ</span>
-                    <span className="text-right font-black text-primary">{p.moq}</span>
+                    <span className="text-muted">Project MOQ</span>
+                    <span className="text-right font-black text-primary">{p.moqTiers.project}</span>
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Availability</span>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import { blogPosts } from "@/lib/blog-data";
-import { brandInfo, products } from "@/lib/data";
+import { brandInfo, products, type ProductMoqTiers } from "@/lib/data";
 import { productPath } from "@/lib/seo";
 import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
 
@@ -12,6 +12,7 @@ type ConversionProduct = {
   image?: string;
   imageAlt?: string;
   moq?: string;
+  moqTiers?: ProductMoqTiers;
   leadTime?: string;
   technicalSpecs?: {
     fireRating?: string;
@@ -40,9 +41,12 @@ function RelatedProductContent({ product }: { product: ConversionProduct }) {
 
   if (!current) return null;
 
-  const relatedProducts = products
-    .filter((item) => item.category === current.category && item.id !== current.id)
-    .slice(0, 3);
+  const categoryProducts = products.filter((item) => item.category === current.category);
+  const currentIndex = categoryProducts.findIndex((item) => item.id === current.id);
+  const relatedProducts = Array.from(
+    { length: Math.min(5, Math.max(0, categoryProducts.length - 1)) },
+    (_, offset) => categoryProducts[(currentIndex + offset + 1) % categoryProducts.length],
+  );
   const guides = guideSlugs[current.category]
     .map((slug) => blogPosts.find((post) => post.slug === slug))
     .filter((post): post is NonNullable<typeof post> => Boolean(post));
@@ -54,10 +58,10 @@ function RelatedProductContent({ product }: { product: ConversionProduct }) {
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.14em] text-accent">Continue Your Specification</p>
           <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-5xl">Related Products & Technical Guides</h2>
         </div>
-        <div className="grid gap-10 lg:grid-cols-[1.5fr_0.8fr]">
+        <div className="grid gap-10">
           <div>
             <h3 className="mb-5 text-sm font-bold uppercase tracking-[0.08em] text-primary">Related Products</h3>
-            <div className="grid gap-5 sm:grid-cols-3">
+            <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-5">
               {relatedProducts.map((item) => (
                 <Link key={item.id} href={productPath(item.id)} className="group border border-border bg-white p-4 transition-all hover:border-accent hover:shadow-lg">
                   <div className="mb-4 aspect-square overflow-hidden bg-surface">
@@ -70,7 +74,7 @@ function RelatedProductContent({ product }: { product: ConversionProduct }) {
           </div>
           <div>
             <h3 className="mb-5 text-sm font-bold uppercase tracking-[0.08em] text-primary">Technical Guides</h3>
-            <div className="space-y-4">
+            <div className="grid gap-4 sm:grid-cols-2">
               {guides.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} className="block border border-border bg-surface p-5 transition-all hover:border-accent hover:bg-white">
                   <p className="mb-2 text-xs font-bold uppercase tracking-[0.08em] text-accent">{post.category}</p>
@@ -90,10 +94,17 @@ function productMessage(product: ConversionProduct, action: string) {
 }
 
 function specCards(product: ConversionProduct) {
+  const tiers = product.moqTiers ?? {
+    sample: "Material Swatch Available",
+    trialOrder: "Confirm Stock and Construction",
+    project: product.moq || "Project-Based",
+  };
+
   return [
-    { label: "MOQ", value: product.moq || "Project-Based" },
+    { label: "Sample", value: tiers.sample },
+    { label: "Trial Order", value: tiers.trialOrder },
+    { label: "Project MOQ", value: tiers.project },
     { label: "Lead Time", value: product.leadTime || "About 25 Days" },
-    { label: "Sample", value: "Free Sample Available" },
     { label: "Fire Rating", value: product.technicalSpecs?.fireRating || "ASTM E648 Available" },
   ];
 }
@@ -225,7 +236,7 @@ export function BuyerReasons({ product }: { product?: ConversionProduct } = {}) 
   const reasons = [
     { title: "Factory Supply", text: "Direct commercial carpet production with export support." },
     { title: "Custom Pattern", text: "Pattern, color, backing, and size matched to project needs." },
-    { title: "MOQ", text: "Clear MOQ guidance for samples, trial orders, and bulk projects." },
+    { title: "Three-Level MOQ", text: "Clear quantities for samples, trial orders, and bulk projects." },
     { title: "Lead Time", text: "Project-based production planning and shipping coordination." },
     { title: "Hotel Project Support", text: "Specification help for corridors, lobbies, rooms, and public areas." },
   ];

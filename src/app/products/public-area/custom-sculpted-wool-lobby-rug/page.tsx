@@ -4,6 +4,7 @@ import Link from "next/link";
 import { brandInfo, products } from "@/lib/data";
 import ProductImage from "@/components/ProductImage";
 import { ProductTrackedLink, ProductViewEvent } from "@/components/ProductAnalytics";
+import { ProductSpecCards } from "@/components/ProductConversion";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 
 const productId = "custom-sculpted-wool-lobby-rug";
@@ -24,11 +25,9 @@ const images = [
 const heroFacts = [
   ["Product Type", "Decorative Area Rug"],
   ["Starting Price", "US$500 / Piece"],
-  ["MOQ", "10 Pieces"],
   ["Availability", "Made to Order"],
   ["Lead Time", "Confirmed After Size and Specification Approval"],
   ["Customization", "Size, Color, Material and Pattern Scale"],
-  ["Sample", "Material or Color Sample Available on Request"],
 ];
 
 const sections = [
@@ -86,7 +85,7 @@ const tds = [
   ["Size", "Custom Dimensions"],
   ["Edge Finish", "Confirmed According to Final Design"],
   ["Backing", "Confirmed According to Project Requirement"],
-  ["MOQ", "10 Pieces"],
+  ["Project MOQ", "10 Pieces"],
   ["Starting Price", "US$500 / Piece"],
   ["Availability", "Made to Order"],
   ["Application", "Hotel Lobbies, Executive Lounges, Reception Areas, Clubs, Villas and Showrooms"],
@@ -246,6 +245,11 @@ export default function CustomSculptedWoolLobbyRugPage() {
     color: "Sand Beige / Custom",
     pattern: "Concentric Square Geometric Pattern",
     image: images.map((image) => absoluteUrl(image.src)),
+    additionalProperty: [
+      { "@type": "PropertyValue", name: "Sample", value: product.moqTiers.sample },
+      { "@type": "PropertyValue", name: "Trial Order", value: product.moqTiers.trialOrder },
+      { "@type": "PropertyValue", name: "Project MOQ", value: product.moqTiers.project },
+    ],
     offers: {
       "@type": "Offer",
       priceCurrency: "USD",
@@ -326,9 +330,12 @@ export default function CustomSculptedWoolLobbyRugPage() {
               Made-to-order sand-beige wool area rug featuring a dimensional concentric-square texture for hotel lobbies, executive lounges, reception areas, luxury clubs and commercial showrooms.
             </p>
             <div className="mb-8 grid gap-3 sm:grid-cols-2">
-              {["Wool Material", "Sculpted Geometric Texture", "Custom Size and Color", "MOQ 10 Pieces"].map((item) => (
+              {["Wool Material", "Sculpted Geometric Texture", "Custom Size and Color", "B2B Project Supply"].map((item) => (
                 <div key={item} className="border border-border bg-surface px-4 py-3 text-xs font-black uppercase tracking-[0.12em] text-primary">{item}</div>
               ))}
+            </div>
+            <div className="mb-8">
+              <ProductSpecCards product={product} />
             </div>
             <div className="space-y-4 border border-border bg-surface p-5 md:p-8">
               {heroFacts.map(([label, value]) => (

@@ -213,7 +213,7 @@ export default function NylonOfficeCarpetTilePage() {
 
               <div className="mb-8 space-y-4 border border-border bg-surface p-5 md:p-8">
                 <div className="flex justify-between gap-6 text-xs uppercase">
-                  <span>MOQ</span>
+                  <span>Project MOQ</span>
                   <span className="text-right font-bold">{p.moq}</span>
                 </div>
                 <div className="flex justify-between gap-6 text-xs uppercase">

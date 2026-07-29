@@ -1,7 +1,8 @@
 export interface ProductColor { name: string; hex: string; }
 export interface TechnicalSpecs { fireRating: string; trafficClass: string; fiber?: string; yarnSystem: string; backing: string; pileWeight: string; totalThickness: string; rollWidth?: string; soundInsulation?: string; antistatic: string; }
 export interface FobPriceRange { display: string; lowPrice: string; highPrice: string; currency: "USD"; unit: string; }
-export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; leadTime: string; fobPrice?: FobPriceRange; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
+export interface ProductMoqTiers { sample: string; trialOrder: string; project: string; }
+export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; moqTiers: ProductMoqTiers; leadTime: string; fobPrice?: FobPriceRange; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
 export interface CaseSpecItem { label: string; value: string; }
 export type CaseSectionBlock =
   | { type: "paragraph"; text: string }
@@ -44,6 +45,7 @@ export const products: Product[] = [
       { src: "/images/products/luxury-hotel-carpet-tile-50x50cm/09-executive-office-carpet-tiles.webp", alt: "Executive office carpet tiles for commercial office carpet and tile floor carpet projects" }
     ],
     moq: "500 SQM (Custom Project)",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Standard Color", project: "500 SQM Custom Project" },
     leadTime: "7-15 Days",
     fobPrice: { display: "US$1.40-2.20 / Piece", lowPrice: "1.40", highPrice: "2.20", currency: "USD", unit: "Piece" },
     spec: {
@@ -78,6 +80,7 @@ export const products: Product[] = [
     image: "/images/products/ecocore-pe-backing/01-hero-white-background.webp",
     imageAlt: "Vishomecarpet EcoCore PVC-free PE backing 50x50cm commercial carpet tile for sustainable office flooring",
     moq: "Project-Based",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Standard Color", project: "Confirmed by Backing and Color" },
     leadTime: "10-20 Days",
     fobPrice: { display: "US$4.20-8.90 / SQM", lowPrice: "4.20", highPrice: "8.90", currency: "USD", unit: "SQM" },
     spec: {
@@ -122,6 +125,7 @@ export const products: Product[] = [
       { src: "/images/products/50x50-nylon-pp-office-carpet-tiles/10-factory-qc.webp", alt: "Factory quality control for Vishomecarpet commercial carpet tiles and floor carpets" }
     ],
     moq: "200 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Standard Color", project: "200 SQM" },
     leadTime: "10-20 Days",
     fobPrice: { display: "US$3.80-8.90 / SQM", lowPrice: "3.80", highPrice: "8.90", currency: "USD", unit: "SQM" },
     spec: {
@@ -162,6 +166,7 @@ export const products: Product[] = [
       { src: "/images/products/nylon-office-carpet-tile/04-lobby-modular-carpet-tiles.webp", alt: "Commercial nylon carpet tiles in an office lobby and meeting area" }
     ],
     moq: "300 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Standard Color", project: "300 SQM" },
     leadTime: "25 Days",
     fobPrice: { display: "US$5.10-6.30 / SQM", lowPrice: "5.10", highPrice: "6.30", currency: "USD", unit: "SQM" },
     spec: {
@@ -203,6 +208,7 @@ export const products: Product[] = [
       { src: "/images/products/gray-line-nylon-office-carpet-tiles/06-conference-room-detail.webp", alt: "Conference room hotel carpet floor application with interlocking carpet tiles" }
     ],
     moq: "200 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Standard Color", project: "200 SQM" },
     leadTime: "10-20 Days",
     fobPrice: { display: "US$3.80-8.90 / SQM", lowPrice: "3.80", highPrice: "8.90", currency: "USD", unit: "SQM" },
     spec: {
@@ -237,6 +243,7 @@ export const products: Product[] = [
     image: "/images/carpet-tile-premium.webp",
     imageAlt: "Premium Nylon 6.6 commercial carpet tiles for high-traffic office corridors by Vishomecarpet",
     moq: "200 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Standard Color", project: "200 SQM" },
     leadTime: "10-14 Days",
     fobPrice: { display: "US$5.80-11.50 / SQM", lowPrice: "5.80", highPrice: "11.50", currency: "USD", unit: "SQM" },
     spec: { material: "100% Nylon 6.6", size: "50x50 cm", colors: [] },
@@ -258,6 +265,7 @@ export const products: Product[] = [
       { src: "/images/products/wall-to-wall/luxury-hotel-broadloom/05-luxury-hospitality-corridor-finish.webp", alt: "Luxury hotel corridor finish with custom Axminster wool blend carpet" }
     ],
     moq: "500 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Approved Construction", project: "500 SQM Custom Weave" },
     leadTime: "30 Days",
     fobPrice: { display: "US$18.00-38.00 / SQM", lowPrice: "18.00", highPrice: "38.00", currency: "USD", unit: "SQM" },
     spec: { material: "80% Wool / 20% Nylon", size: "4m Width", colors: [] },
@@ -282,6 +290,7 @@ export const products: Product[] = [
       { src: "/images/3d-printed-hotel-carpet-colorways.webp", alt: "Hotel printed broadloom carpet pattern shown in four custom colorways" }
     ],
     moq: "300 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Approved Design", project: "300 SQM" },
     leadTime: "25 Days",
     fobPrice: { display: "US$3.50-7.80 / SQM", lowPrice: "3.50", highPrice: "7.80", currency: "USD", unit: "SQM" },
     spec: { material: "100% Nylon (HD Printed)", size: "4m Width", colors: [] },
@@ -305,6 +314,7 @@ export const products: Product[] = [
       { src: "/images/products/wall-to-wall/custom-luxury-hotel-room-carpet/06-custom-carpet-pile-closeup.webp", alt: "Close-up texture of custom hotel room carpet pile and colors" }
     ],
     moq: "100 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Selected Construction", project: "100 SQM Custom Project" },
     leadTime: "Confirmed After Design and Specification Approval",
     fobPrice: { display: "US$3.10-9.70 / SQM", lowPrice: "3.10", highPrice: "9.70", currency: "USD", unit: "SQM" },
     spec: {
@@ -347,6 +357,7 @@ export const products: Product[] = [
       { src: "/images/products/3d-printed-banquet-carpet/04-corridor-detail.webp", alt: "Hotel corridor wall-to-wall carpet with 3D printed blue and gold wave pattern by Vishomecarpet" }
     ],
     moq: "200 SQM",
+    moqTiers: { sample: "Printed Strike-Off Available", trialOrder: "100 SQM Approved Design", project: "200 SQM" },
     leadTime: "15-25 Days",
     fobPrice: { display: "US$3.80-8.90 / SQM", lowPrice: "3.80", highPrice: "8.90", currency: "USD", unit: "SQM" },
     spec: { material: "100% High-Density Nylon / Soft Synthetic Blend", size: "4m Width", colors: [] },
@@ -374,6 +385,7 @@ export const products: Product[] = [
       { src: "/images/products/hotel-glitter-broadloom/10.webp", alt: "Hotel carpet testing and durability detail image for high-traffic projects" }
     ],
     moq: "300 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Approved Design", project: "300 SQM" },
     leadTime: "25-35 Days",
     fobPrice: { display: "US$4.20-8.60 / SQM", lowPrice: "4.20", highPrice: "8.60", currency: "USD", unit: "SQM" },
     spec: { material: "Commercial Synthetic Fiber", size: "4m Width", colors: [] },
@@ -405,6 +417,7 @@ export const products: Product[] = [
       { src: "/images/products/wall-to-wall/custom-floral-printed-hotel-carpet/06-hotel-corridor-project-view.webp", alt: "Custom printed broadloom carpet installed along a hotel guestroom corridor" }
     ],
     moq: "100 SQM",
+    moqTiers: { sample: "Printed Strike-Off Available", trialOrder: "50 SQM Approved Design", project: "100 SQM" },
     leadTime: "Confirmed After Artwork and Specification Review",
     fobPrice: { display: "US$3.60-6.40 / SQM", lowPrice: "3.60", highPrice: "6.40", currency: "USD", unit: "SQM" },
     spec: { material: "Polypropylene, Nylon, Polyester or Wool-Blend Options", size: "Custom Broadloom Roll", colors: [] },
@@ -441,6 +454,7 @@ export const products: Product[] = [
       { src: "/images/products/gold-mining-carpet-mat/10-gold-washing-mining-site-application.webp", alt: "Gold mining carpet applied in river gold washing and placer gold recovery site" }
     ],
     moq: "100 Rolls",
+    moqTiers: { sample: "Cut Sample Available", trialOrder: "1 Standard Roll", project: "100 Rolls" },
     leadTime: "15-25 Days",
     fobPrice: { display: "US$18.00-45.00 / Roll", lowPrice: "18.00", highPrice: "45.00", currency: "USD", unit: "Roll" },
     spec: {
@@ -474,6 +488,7 @@ export const products: Product[] = [
     image: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp",
     imageAlt: "High-traffic public area corridor carpet roll for airports exhibition centers and commercial buildings",
     moq: "300 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Standard Color", project: "300 SQM" },
     leadTime: "20 Days",
     fobPrice: { display: "US$4.80-9.80 / SQM", lowPrice: "4.80", highPrice: "9.80", currency: "USD", unit: "SQM" },
     spec: { material: "Solution-Dyed Nylon", size: "4m Width", colors: [] },
@@ -489,6 +504,7 @@ export const products: Product[] = [
     image: "/images/natural-sisal-carpet-office.webp",
     imageAlt: "Natural sisal linen-weave commercial carpet installed in office reception public area by Vishomecarpet",
     moq: "300 SQM",
+    moqTiers: { sample: "Natural Fiber Swatch Available", trialOrder: "1 Stock Roll", project: "300 SQM" },
     leadTime: "30 Days",
     fobPrice: { display: "US$6.50-14.80 / SQM", lowPrice: "6.50", highPrice: "14.80", currency: "USD", unit: "SQM" },
     spec: {
@@ -530,6 +546,7 @@ export const products: Product[] = [
       { src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/05-private-club-lounge-wool-rug.webp", alt: "Sand beige sculpted wool rug in a private club lounge" }
     ],
     moq: "10 Pieces",
+    moqTiers: { sample: "Wool and Color Swatch Available", trialOrder: "1 Prototype Piece", project: "10 Pieces" },
     leadTime: "Confirmed After Size and Specification Approval",
     fobPrice: { display: "US$500 / Piece", lowPrice: "500", highPrice: "500", currency: "USD", unit: "Piece" },
     spec: {
@@ -554,6 +571,144 @@ export const products: Product[] = [
       antistatic: "Available on Request"
     },
     features: ["Wool Material", "Sculpted Geometric Texture", "Custom Size and Color", "MOQ 10 Pieces"]
+  },
+  {
+    id: "healthcare-hospital-carpet-tiles",
+    name: "Healthcare Hospital Carpet Tiles",
+    category: "carpet-tiles",
+    description: "Low-pile commercial carpet tiles for healthcare waiting rooms, consultation areas, administrative offices, and senior-care circulation zones.",
+    longDescription: "Vishomecarpet Healthcare Hospital Carpet Tiles are a modular commercial flooring option for non-clinical healthcare interiors where cleanability, low static performance, selective replacement, and acoustic comfort must be reviewed together. Final fiber, backing, fire performance, indoor-air-quality documents, cleaning protocol, and suitability for each room must be confirmed against the project specification before approval.",
+    image: "/images/case-series/case-4/Case_4_Hospital_Ward.webp",
+    imageAlt: "Healthcare carpet tiles in a hospital waiting and circulation area",
+    moq: "300 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Standard Color", project: "300 SQM" },
+    leadTime: "20-30 Days After Specification Approval",
+    fobPrice: { display: "US$5.80-12.50 / SQM", lowPrice: "5.80", highPrice: "12.50", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "Solution-Dyed Nylon Option",
+      size: "50x50 cm",
+      colors: [
+        { name: "Calm Blue Gray", hex: "#718995" },
+        { name: "Soft Sage", hex: "#8D9B89" },
+        { name: "Warm Neutral", hex: "#A79E90" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I Option; Confirm Exact Construction",
+      trafficClass: "Heavy Commercial Healthcare Support Areas",
+      fiber: "Solution-Dyed Nylon Option",
+      yarnSystem: "Tufted Low-Pile Loop",
+      backing: "PVC-Free PE / Cushion Backing Option",
+      pileWeight: "500-700 g/sqm",
+      totalThickness: "6-8mm",
+      soundInsulation: "Acoustic Backing Option",
+      antistatic: "Low Static Option"
+    },
+    features: ["Modular Replacement", "Low-Pile Cleaning Access", "Acoustic Comfort Option", "Document Review by Construction"]
+  },
+  {
+    id: "education-school-carpet-tiles",
+    name: "Education School Carpet Tiles",
+    category: "carpet-tiles",
+    description: "Durable modular carpet tiles for classrooms, libraries, student centers, corridors, and education fit-out programs.",
+    longDescription: "Vishomecarpet Education School Carpet Tiles are designed for education buyers comparing modular flooring for classrooms, libraries, student centers, faculty offices, and public circulation areas. The 50x50 cm format supports phased installation and selective replacement, while fiber, backing, fire-performance documents, indoor-air-quality requirements, chair-caster use, and cleaning schedules are confirmed for the quoted construction.",
+    image: "/images/case-wework.webp",
+    imageAlt: "Commercial carpet tiles in a university student center and collaborative learning area",
+    moq: "200 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Standard Color", project: "200 SQM" },
+    leadTime: "15-25 Days",
+    fobPrice: { display: "US$3.80-8.90 / SQM", lowPrice: "3.80", highPrice: "8.90", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "Nylon / Polypropylene Option",
+      size: "50x50 cm",
+      colors: [
+        { name: "Library Gray", hex: "#707477" },
+        { name: "Campus Blue", hex: "#41677A" },
+        { name: "Learning Green", hex: "#7A8B6C" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I Option",
+      trafficClass: "Class 33 Option",
+      fiber: "Nylon / Polypropylene Option",
+      yarnSystem: "Tufted Multi-Level Loop",
+      backing: "Bitumen / PVC-Free PE Option",
+      pileWeight: "450-650 g/sqm",
+      totalThickness: "5.5-7.0mm",
+      soundInsulation: "Acoustic Comfort Option",
+      antistatic: "Low Static Office and Education Use"
+    },
+    features: ["Classroom and Library Use", "Selective Tile Replacement", "Chair-Caster Option", "Campus Color Zoning"]
+  },
+  {
+    id: "cinema-theater-carpet",
+    name: "Cinema and Theater Carpet",
+    category: "wall-to-wall",
+    description: "Custom patterned commercial broadloom for cinema aisles, theater auditoriums, lobbies, concession areas, and entertainment venues.",
+    longDescription: "Vishomecarpet Cinema and Theater Carpet is a project-based broadloom program for auditoriums, cinema aisles, theater lobbies, concession areas, and entertainment venues. Pattern scale, aisle visibility, acoustic construction, seam planning, cleaning access, fire-performance documents, underlay, and installation details must be matched to the venue and confirmed for the exact quoted construction.",
+    image: "/images/case-series/case-3/Case_3_Casino_Hall.webp",
+    imageAlt: "Patterned commercial broadloom carpet for a cinema or theater entertainment interior",
+    moq: "300 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Approved Design", project: "300 SQM" },
+    leadTime: "20-30 Days After Artwork Approval",
+    fobPrice: { display: "US$4.20-9.50 / SQM", lowPrice: "4.20", highPrice: "9.50", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "Printed Nylon / Synthetic Blend Option",
+      size: "4m Broadloom Width",
+      colors: [
+        { name: "Auditorium Navy", hex: "#1F3247" },
+        { name: "Burgundy", hex: "#713A43" },
+        { name: "Gold Accent", hex: "#B49755" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "ASTM E648 Class I / EN Option; Confirm Venue Requirement",
+      trafficClass: "Heavy Commercial Entertainment Venue",
+      fiber: "Printed Nylon / Synthetic Blend Option",
+      yarnSystem: "Tufted Cut Pile / Printed Broadloom",
+      backing: "ActionBac / Project Backing Option",
+      pileWeight: "800-1200 g/sqm",
+      totalThickness: "8-11mm",
+      rollWidth: "4m",
+      soundInsulation: "Acoustic Underlay Option",
+      antistatic: "Permanent Option"
+    },
+    features: ["Custom Auditorium Pattern", "Aisle and Lobby Zoning", "Acoustic Construction Option", "Venue Fire Document Review"]
+  },
+  {
+    id: "commercial-stair-carpet-runner",
+    name: "Commercial Stair Carpet Runner",
+    category: "public-area",
+    description: "Made-to-size commercial stair carpet runner for hotels, clubs, offices, galleries, and public interiors requiring coordinated tread and landing finishes.",
+    longDescription: "Vishomecarpet Commercial Stair Carpet Runner is a made-to-size program for stair treads, risers, landings, and adjoining circulation areas. Natural sisal, sisal-look synthetic, and project-selected contract constructions can be reviewed according to traffic, cleaning, edge binding, underlay, nosing, fire-performance, and slip-resistance requirements. Final installation details and code compliance remain the responsibility of the project designer and local installer.",
+    image: "/images/natural-sisal-carpet-roll.webp",
+    imageAlt: "Natural fiber commercial carpet roll prepared for custom stair runner cutting and binding",
+    moq: "100 SQM",
+    moqTiers: { sample: "Material and Binding Swatch Available", trialOrder: "1 Sample Runner Section", project: "100 SQM" },
+    leadTime: "20-30 Days After Size Approval",
+    fobPrice: { display: "US$6.50-14.80 / SQM", lowPrice: "6.50", highPrice: "14.80", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "Natural Sisal / Sisal-Look Synthetic Option",
+      size: "Custom Width and Length",
+      colors: [
+        { name: "Natural Wheat", hex: "#B99A67" },
+        { name: "Warm Taupe", hex: "#8E7B68" },
+        { name: "Charcoal", hex: "#4D4B48" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "Confirm Required Standard for Exact Construction",
+      trafficClass: "Project-Specific Commercial Stair Use",
+      fiber: "Natural Sisal / Synthetic Option",
+      yarnSystem: "Woven Flatweave / Contract Low-Pile Option",
+      backing: "Latex / Project-Specified Backing",
+      pileWeight: "Confirmed by Selected Construction",
+      totalThickness: "5-8mm Option",
+      rollWidth: "Custom Cut and Bound",
+      soundInsulation: "Underlay Dependent",
+      antistatic: "Construction Dependent"
+    },
+    features: ["Custom Cut and Bound", "Tread and Landing Coordination", "Nosing Review Required", "Natural or Synthetic Option"]
   }
 ];
 
@@ -1392,8 +1547,8 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-11",
-    title: "Exhibition & Expo Booth Carpet Application Guide — Johannesburg Convention Reference",
-    metadataTitle: "Exhibition & Expo Booth Carpet Application Guide — Johannesburg Convention Reference",
+    title: "Exhibition & Expo Booth Carpet Specification Guide - Johannesburg",
+    metadataTitle: "Exhibition & Expo Booth Carpet Specification Guide | VISHOME",
     h1: "Exhibition & Expo Booth Carpet: Multi-Show Reusable Specification Guide",
     tag: "Technical Overview · Events & Exhibitions",
     category: "public-area",
@@ -1493,8 +1648,8 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-12",
-    title: "Gold Mining Sluice Carpet Application Reference — Madre de Dios, Peru",
-    metadataTitle: "Gold Mining Sluice Carpet Application Reference — Madre de Dios, Peru",
+    title: "Gold Mining Sluice Carpet Field Specification Guide - Peru",
+    metadataTitle: "Gold Mining Sluice Carpet Field Specification Guide | VISHOME",
     h1: "Gold Sluice Mat & Mining Carpet: Roll Specification and Container Planning",
     tag: "Technical Overview · Mining & Industrial",
     category: "public-area",

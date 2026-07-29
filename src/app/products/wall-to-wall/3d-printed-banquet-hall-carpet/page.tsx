@@ -153,7 +153,7 @@ export default function ProductDetailPage() {
               <p className="text-muted text-base leading-relaxed mb-8">{product.description}</p>
               <div className="bg-surface p-8 border border-border space-y-4 mb-10">
                 <div className="flex justify-between uppercase text-xs gap-6">
-                  <span>MOQ</span>
+                  <span>Project MOQ</span>
                   <span className="font-bold">{product.moq}</span>
                 </div>
                 <div className="flex justify-between uppercase text-xs gap-6">

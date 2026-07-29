@@ -136,7 +136,7 @@ export default function EcoCorePeBackingProductPage() {
                   <span className="text-right font-bold">{p.spec.size}</span>
                 </div>
                 <div className="flex justify-between gap-6 text-xs uppercase">
-                  <span>MOQ</span>
+                  <span>Project MOQ</span>
                   <span className="text-right font-bold">{p.moq}</span>
                 </div>
                 <div className="flex justify-between gap-6 text-xs uppercase">
