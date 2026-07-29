@@ -77,11 +77,11 @@ Authenticated URL Inspection was completed against the
 | https://www.vishomecarpet.com/products/carpet-tiles | Indexed |
 | https://www.vishomecarpet.com/products/wall-to-wall | Indexed |
 | https://www.vishomecarpet.com/products/public-area | Indexed |
-| https://www.vishomecarpet.com/products/carpet-tiles/healthcare-hospital-carpet-tiles | Not indexed - Google does not recognize this URL |
-| https://www.vishomecarpet.com/products/carpet-tiles/education-school-carpet-tiles | Not indexed - Google does not recognize this URL |
-| https://www.vishomecarpet.com/products/wall-to-wall/cinema-theater-carpet | Not indexed - Google does not recognize this URL |
-| https://www.vishomecarpet.com/products/public-area/commercial-stair-carpet-runner | Not indexed - Google does not recognize this URL |
-| https://www.vishomecarpet.com/projects/case-11 | Not indexed - Google does not recognize this URL |
+| https://www.vishomecarpet.com/products/carpet-tiles/healthcare-hospital-carpet-tiles | Not indexed - indexing requested |
+| https://www.vishomecarpet.com/products/carpet-tiles/education-school-carpet-tiles | Not indexed - indexing requested |
+| https://www.vishomecarpet.com/products/wall-to-wall/cinema-theater-carpet | Not indexed - indexing requested |
+| https://www.vishomecarpet.com/products/public-area/commercial-stair-carpet-runner | Not indexed - indexing requested |
+| https://www.vishomecarpet.com/projects/case-11 | Discovered, not indexed - indexing requested |
 | https://www.vishomecarpet.com/projects/case-12 | Indexed |
 
 The four new product URLs were published on the validation date, so their
@@ -91,3 +91,9 @@ had at least seven internal links, and passed the official Rich Results Test.
 
 At validation time, the GSC property overview reported 72 indexed pages and 36
 not-indexed pages.
+
+Authenticated indexing requests were submitted for all four new product URLs
+and Case 11 on 2026-07-29. GSC displayed the green "Indexing requested"
+confirmation for every URL and added each URL to the priority crawl queue.
+Case 11 immediately changed from an unknown URL to "Discovered - currently not
+indexed", with `sitemap.xml` and `/projects` recognized as discovery sources.
