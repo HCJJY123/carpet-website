@@ -33,12 +33,43 @@ export default function JsonLd() {
     ],
     knowsAbout: [
       "Commercial carpet tiles",
+      "Office carpet tiles",
+      "Modular commercial flooring",
       "Hotel broadloom carpet",
+      "Hotel corridor carpet",
       "Custom printed carpet",
       "Public area carpet",
       "Natural sisal carpet",
+      "Gold mining carpet mat",
+      "Custom wool lobby rugs",
       "Commercial carpet project procurement",
     ],
+    subjectOf: [
+      { "@type": "CreativeWork", name: "AI-readable source map", url: absoluteUrl("/llms.txt") },
+      { "@type": "CreativeWork", name: "Full AI source map", url: absoluteUrl("/llms-full.txt") },
+      { "@type": "Dataset", name: "Structured AI source data", url: absoluteUrl("/ai-sources.json") },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "VISHOME Commercial Carpet Product Categories",
+      itemListElement: [
+        {
+          "@type": "OfferCatalog",
+          name: "Commercial Carpet Tiles",
+          url: absoluteUrl("/products/carpet-tiles"),
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Wall-to-Wall Hotel Carpet",
+          url: absoluteUrl("/products/wall-to-wall"),
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Public Area Carpets",
+          url: absoluteUrl("/products/public-area"),
+        },
+      ],
+    },
   };
 
   const localBusinessData = {
@@ -105,6 +136,13 @@ export default function JsonLd() {
       "@id": `${brandInfo.url}/#organization`,
     },
     inLanguage: "en",
+    about: [
+      "Commercial carpet tiles",
+      "Hotel broadloom carpet",
+      "Office carpet tile supplier",
+      "Public area carpet",
+      "Commercial carpet manufacturer in Tianjin, China",
+    ],
   };
 
   return (

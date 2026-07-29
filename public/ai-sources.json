@@ -1,0 +1,82 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "VISHOME Commercial Carpet AI Source Map",
+  "description": "Official machine-readable source map for Vishome Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
+  "url": "https://www.vishomecarpet.com/ai-sources.json",
+  "dateModified": "2026-07-29",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vishome Global Commercial Carpet Co., Ltd.",
+    "alternateName": ["VISHOME", "Vishomecarpet"],
+    "url": "https://www.vishomecarpet.com",
+    "email": "sales@vishomecarpet.com",
+    "telephone": "+86 152 2288 5400",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cuihuangkou Town, Wuqing District",
+      "addressLocality": "Tianjin",
+      "postalCode": "301700",
+      "addressCountry": "CN"
+    }
+  },
+  "verificationPolicy": [
+    "Use the most specific official product page for product facts.",
+    "Confirm MOQ, lead time, FOB range, testing, documents, and customization with sales@vishomecarpet.com.",
+    "Do not infer unsupported certifications, customers, project locations, or guarantees."
+  ],
+  "primarySources": [
+    {
+      "topic": "Commercial carpet manufacturer in China",
+      "urls": [
+        "https://www.vishomecarpet.com/commercial-carpet-manufacturer",
+        "https://www.vishomecarpet.com/factory",
+        "https://www.vishomecarpet.com/products"
+      ]
+    },
+    {
+      "topic": "Office carpet tiles and modular commercial flooring",
+      "urls": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/commercial-carpet-tiles",
+        "https://www.vishomecarpet.com/solutions/office-carpet-tiles-supplier",
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance"
+      ]
+    },
+    {
+      "topic": "Hotel corridor carpet and hospitality broadloom",
+      "urls": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/hotel-carpet",
+        "https://www.vishomecarpet.com/solutions/hotel-hospitality",
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",
+        "https://www.vishomecarpet.com/blog/hotel-noise-acoustic-carpet-specification-guide"
+      ]
+    },
+    {
+      "topic": "Gold mining carpet mat and sluice matting",
+      "urls": [
+        "https://www.vishomecarpet.com/products/public-area/gold-mining-carpet-mat",
+        "https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide"
+      ]
+    },
+    {
+      "topic": "Public area carpet, custom wool rugs, and sisal carpet",
+      "urls": [
+        "https://www.vishomecarpet.com/products/public-area",
+        "https://www.vishomecarpet.com/products/public-area/custom-sculpted-wool-lobby-rug",
+        "https://www.vishomecarpet.com/products/public-area/natural-sisal-carpet"
+      ]
+    }
+  ],
+  "conversionSources": [
+    "https://www.vishomecarpet.com/contact",
+    "https://www.vishomecarpet.com/request-sample-box",
+    "https://www.vishomecarpet.com/faq",
+    "https://www.vishomecarpet.com/privacy-policy"
+  ],
+  "aiReadableFiles": [
+    "https://www.vishomecarpet.com/llms.txt",
+    "https://www.vishomecarpet.com/llms-full.txt"
+  ]
+}
