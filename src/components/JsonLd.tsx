@@ -47,7 +47,15 @@ export default function JsonLd() {
     subjectOf: [
       { "@type": "CreativeWork", name: "AI-readable source map", url: absoluteUrl("/llms.txt") },
       { "@type": "CreativeWork", name: "Full AI source map", url: absoluteUrl("/llms-full.txt") },
-      { "@type": "Dataset", name: "Structured AI source data", url: absoluteUrl("/ai-sources.json") },
+      {
+        "@type": "Dataset",
+        name: "Structured AI source data",
+        description:
+          "Machine-readable VISHOME commercial carpet product, category, project, and technical source data for search and AI systems.",
+        url: absoluteUrl("/ai-sources.json"),
+        creator: { "@id": `${brandInfo.url}/#organization` },
+        license: absoluteUrl("/data-license.txt"),
+      },
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
