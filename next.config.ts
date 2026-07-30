@@ -1,5 +1,20 @@
 import type { NextConfig } from "next";
 
+const projectRedirects = [
+  ["case-1", "hotel-lobby-axminster-carpet-dubai"],
+  ["case-2", "department-store-carpet-tiles-india"],
+  ["case-3", "casino-carpet-nylon-broadloom-las-vegas"],
+  ["case-4", "healthcare-hospital-carpet-tiles-singapore"],
+  ["case-5", "multi-floor-office-carpet-tiles-tokyo"],
+  ["case-6", "airport-terminal-carpet-tiles-singapore"],
+  ["case-7", "luxury-residential-custom-carpet-mumbai"],
+  ["case-8", "university-campus-carpet-tiles-australia"],
+  ["case-9", "extended-stay-hotel-carpet-tiles-south-korea"],
+  ["case-10", "luxury-retail-custom-carpet-paris"],
+  ["case-11", "reusable-exhibition-carpet-expo-booths-johannesburg"],
+  ["case-12", "gold-mining-sluice-carpet-peru"],
+] as const;
+
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["127.0.0.1"],
   images: {
@@ -12,19 +27,24 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      ...projectRedirects.map(([source, destination]) => ({
+        source: `/projects/${source}`,
+        destination: `/projects/${destination}`,
+        permanent: true,
+      })),
       {
         source: "/project-application/hotel-lobby-carpet-specification-guide",
-        destination: "/projects/case-1",
+        destination: "/projects/hotel-lobby-axminster-carpet-dubai",
         permanent: true,
       },
       {
         source: "/project-application/office-carpet-planning-guide",
-        destination: "/projects/case-5",
+        destination: "/projects/multi-floor-office-carpet-tiles-tokyo",
         permanent: true,
       },
       {
         source: "/project-application/gold-mining-sluice-carpet-application-reference",
-        destination: "/projects/case-12",
+        destination: "/projects/gold-mining-sluice-carpet-peru",
         permanent: true,
       },
     ];

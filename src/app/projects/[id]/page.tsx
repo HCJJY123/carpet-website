@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import { brandInfo, caseStudies, products } from "@/lib/data";
 import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
@@ -7,6 +7,8 @@ import { relatedCategoryIds, relatedProductIdsForCase } from "@/lib/content-rela
 import ProductImage from "@/components/ProductImage";
 import RelatedCategoryLinks from "@/components/RelatedCategoryLinks";
 import ContentTrustPanel from "@/components/ContentTrustPanel";
+import CaseBuyerAnswer from "@/components/CaseBuyerAnswer";
+import { caseIdFromRoute, caseSeoProfiles, getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -14,33 +16,65 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const project = caseStudies.find((item) => item.id === id);
+  const caseId = caseIdFromRoute(id);
+  const project = caseStudies.find((item) => item.id === caseId);
+  const profile = caseId ? getCaseSeoProfile(caseId) : undefined;
 
-  if (!project) {
+  if (!project || !profile) {
     return { title: "Project Not Found" };
   }
 
+  const canonical = projectPath(project.id);
+  const heroImage = profile.heroImage ?? project.image;
+
   return {
-    title: project.metadataTitle ?? `${project.title} | Commercial Carpet Guide | VISHOME`,
-    description: project.description,
-    alternates: { canonical: `/projects/${project.id}` },
+    title: profile.metadataTitle,
+    description: profile.metadataDescription,
+    alternates: { canonical },
+    robots: { index: true, follow: true },
     openGraph: {
-      title: project.metadataTitle ?? `${project.title} | VISHOME Commercial Carpet Guide`,
-      description: project.description,
-      url: absoluteUrl(`/projects/${project.id}`),
+      title: profile.metadataTitle,
+      description: profile.metadataDescription,
+      url: absoluteUrl(canonical),
       type: "article",
-      images: [{ url: absoluteUrl(project.image), alt: project.imageAlt ?? project.title }],
+      images: [{ url: absoluteUrl(heroImage), alt: profile.heroImageAlt ?? project.imageAlt ?? profile.h1 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: profile.metadataTitle,
+      description: profile.metadataDescription,
+      images: [absoluteUrl(heroImage)],
     },
   };
 }
 
+export function generateStaticParams() {
+  return Object.values(caseSeoProfiles).map((profile) => ({ id: profile.slug }));
+}
+
 export default async function ProjectDetailPage({ params }: Props) {
   const { id } = await params;
-  const project = caseStudies.find((item) => item.id === id);
+  const caseId = caseIdFromRoute(id);
+  const project = caseStudies.find((item) => item.id === caseId);
+  const profile = caseId ? getCaseSeoProfile(caseId) : undefined;
 
-  if (!project) {
+  if (!project || !profile) {
     notFound();
   }
+
+  if (id !== profile.slug) {
+    permanentRedirect(projectPath(project.id));
+  }
+
+  const canonical = projectPath(project.id);
+  const heroImage = profile.heroImage ?? project.image;
+  const heroImageAlt = profile.heroImageAlt ?? project.imageAlt ?? profile.h1;
+  const sections = project.sections.map((section) => {
+    const imageOverride = profile.sectionImages?.[section.title];
+    return imageOverride
+      ? { ...section, image: imageOverride.src, imageAlt: imageOverride.alt, imageCaption: undefined }
+      : section;
+  });
 
   const recommendedProductIds = relatedProductIdsForCase(project.id, project.category, project.recommendedProductIds);
   const recommendedProducts = recommendedProductIds
@@ -49,16 +83,23 @@ export default async function ProjectDetailPage({ params }: Props) {
         return product ? [product] : [];
       });
   const relatedCategories = relatedCategoryIds(recommendedProducts, project.category);
+  const relatedProjects = [
+    ...caseStudies.filter((item) => item.id !== project.id && item.category === project.category),
+    ...caseStudies.filter((item) => item.id !== project.id && item.category !== project.category),
+  ].slice(0, 3);
+  const buyerQuestions = [...profile.buyerQuestions, ...(project.faqs ?? [])];
 
   const caseJsonLd = {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "@id": `${absoluteUrl(`/projects/${project.id}`)}#guide`,
-    headline: project.h1 ?? project.title,
-    description: project.description,
-    image: absoluteUrl(project.image),
+    "@id": `${absoluteUrl(canonical)}#guide`,
+    headline: profile.h1,
+    description: profile.metadataDescription,
+    image: absoluteUrl(heroImage),
     inLanguage: "en",
-    genre: "Application planning guide",
+    genre: "Commercial carpet application and procurement guide",
+    dateModified: "2026-07-30",
+    keywords: profile.topics,
     author: {
       "@type": "Organization",
       "@id": `${brandInfo.url}/#technical-content-team`,
@@ -83,10 +124,19 @@ export default async function ProjectDetailPage({ params }: Props) {
     isPartOf: { "@id": `${brandInfo.url}/#website` },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": absoluteUrl(`/projects/${project.id}`),
+      "@id": absoluteUrl(canonical),
     },
-    articleSection: project.tag ?? "Commercial Carpet Specification Guide",
-    about: project.category,
+    articleSection: profile.eyebrow,
+    about: profile.topics.map((name) => ({ "@type": "Thing", name })),
+    mentions: recommendedProducts.map((item) => ({
+      "@type": "Product",
+      name: item.name,
+      url: absoluteUrl(productPath(item.id)),
+    })),
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".case-answer"],
+    },
   };
 
   const breadcrumbJsonLd = {
@@ -95,21 +145,19 @@ export default async function ProjectDetailPage({ params }: Props) {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
       { "@type": "ListItem", position: 2, name: "Projects", item: absoluteUrl("/projects") },
-      { "@type": "ListItem", position: 3, name: project.title, item: absoluteUrl(`/projects/${project.id}`) },
+      { "@type": "ListItem", position: 3, name: profile.cardTitle, item: absoluteUrl(canonical) },
     ],
   };
 
-  const faqJsonLd = project.faqs?.length
-    ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: project.faqs.map((item) => ({
-          "@type": "Question",
-          name: item.question,
-          acceptedAnswer: { "@type": "Answer", text: item.answer },
-        })),
-      }
-    : null;
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: buyerQuestions.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
 
   return (
     <div className="bg-white min-h-screen">
@@ -121,12 +169,10 @@ export default async function ProjectDetailPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }}
       />
-      {faqJsonLd ? (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }}
-        />
-      ) : null}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }}
+      />
       <nav className="bg-surface py-4 border-b border-border">
         <div className="container-fox">
           <Link href="/projects" className="text-[10px] font-black text-primary/50 uppercase hover:text-primary">
@@ -137,22 +183,23 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       <section className="py-16 md:py-20">
         <div className="container-fox max-w-6xl">
-          {project.tag ? (
-            <p className="mb-4 text-xs font-black uppercase tracking-[0.22em] text-accent">{project.tag}</p>
-          ) : null}
+          <p className="mb-4 text-xs font-black uppercase tracking-[0.22em] text-accent">{profile.eyebrow}</p>
           <h1 className="text-3xl md:text-5xl font-black text-primary mb-4 uppercase leading-tight">
-            {project.h1 ?? project.title}
+            {profile.h1}
           </h1>
-          {project.subtitle ? (
-            <p className="text-muted text-lg leading-relaxed max-w-4xl mb-10">{project.subtitle}</p>
-          ) : null}
+          <p className="text-muted text-lg leading-relaxed max-w-4xl mb-10">{profile.metadataDescription}</p>
           <div className="mb-8">
             <ContentTrustPanel type="case" />
           </div>
 
           <div className="aspect-[21/9] rounded-xl overflow-hidden shadow-2xl border border-border mb-10">
-            <ProductImage src={project.image} alt={project.imageAlt ?? project.title} className="w-full h-full object-cover" priority sizes="100vw" />
+            <ProductImage src={heroImage} alt={heroImageAlt} className="w-full h-full object-cover" priority sizes="100vw" />
           </div>
+
+          <CaseBuyerAnswer
+            profile={profile}
+            quoteHref={`/contact?product=${encodeURIComponent(profile.cardTitle)}#quote-form`}
+          />
 
           {project.specificationTitle ? (
             <section className="mb-14">
@@ -190,7 +237,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           )}
 
           <div className="space-y-12 mb-14">
-            {project.sections.map((section) => (
+            {sections.map((section) => (
               <section key={section.title} className="border-b border-border pb-10">
                 <h2 className="text-2xl md:text-3xl font-bold text-primary mb-5 uppercase tracking-tight">
                   {section.title}
@@ -293,21 +340,19 @@ export default async function ProjectDetailPage({ params }: Props) {
             </section>
           ) : null}
 
-          {project.faqs?.length ? (
-            <section className="mb-14">
-              <h2 className="mb-8 text-2xl font-black uppercase tracking-tight text-primary md:text-3xl">
-                FAQ
-              </h2>
-              <div className="space-y-4">
-                {project.faqs.map((item) => (
-                  <details key={item.question} className="border border-border bg-white p-6">
-                    <summary className="cursor-pointer font-black text-primary">{item.question}</summary>
-                    <p className="mt-4 text-base leading-relaxed text-muted">{item.answer}</p>
-                  </details>
-                ))}
-              </div>
-            </section>
-          ) : null}
+          <section className="mb-14">
+            <h2 className="mb-8 text-2xl font-black uppercase tracking-tight text-primary md:text-3xl">
+              Buyer Questions
+            </h2>
+            <div className="space-y-4">
+              {buyerQuestions.map((item) => (
+                <details key={item.question} className="border border-border bg-white p-6">
+                  <summary className="cursor-pointer font-black text-primary">{item.question}</summary>
+                  <p className="mt-4 text-base leading-relaxed text-muted">{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
 
           {recommendedProducts.length ? (
             <section className="mb-14">
@@ -327,12 +372,28 @@ export default async function ProjectDetailPage({ params }: Props) {
 
           <RelatedCategoryLinks categoryIds={relatedCategories} className="mb-14" />
 
+          <section className="mb-14">
+            <h2 className="mb-6 text-xl font-black uppercase tracking-wider text-primary">Related Application Guides</h2>
+            <div className="grid gap-5 md:grid-cols-3">
+              {relatedProjects.map((item) => {
+                const relatedProfile = getCaseSeoProfile(item.id);
+                return (
+                  <Link key={item.id} href={projectPath(item.id)} className="border-t-2 border-primary bg-surface p-5 transition-colors hover:border-accent hover:bg-white">
+                    <p className="text-[9px] font-black uppercase tracking-[0.16em] text-accent">{relatedProfile.eyebrow}</p>
+                    <h3 className="mt-3 text-sm font-black uppercase leading-snug text-primary">{relatedProfile.cardTitle}</h3>
+                    <p className="mt-3 text-xs leading-relaxed text-muted">{relatedProfile.metadataDescription}</p>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+
           <section className="bg-primary rounded-xl p-10 text-center text-white">
             <h3 className="text-3xl font-black uppercase tracking-wider mb-4">Need a Similar Project Solution?</h3>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
               Share your floor plan and timeline. We can build a solution package covering design, technical specification, and phased delivery strategy.
             </p>
-            <Link href="/contact" className="btn-fox-orange !px-10 !py-5">
+            <Link href={`/contact?product=${encodeURIComponent(profile.cardTitle)}#quote-form`} className="btn-fox-orange !px-10 !py-5">
               Request Similar Solution
             </Link>
           </section>

@@ -7,6 +7,7 @@ import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp
 import { productPath } from "@/lib/seo";
 import HomeHeroCarousel from "@/components/HomeHeroCarousel";
 import AnswerFirst from "@/components/AnswerFirst";
+import { getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://www.vishomecarpet.com" },
@@ -216,16 +217,16 @@ export default function Home() {
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {prioritizedCases.map((cs) => (
-              <Link key={cs.id} href={`/projects/${cs.id}`} className="group flex flex-col">
+              <Link key={cs.id} href={projectPath(cs.id)} className="group flex flex-col">
                 <div className="aspect-[4/3] overflow-hidden bg-surface mb-6">
                   <ProductImage
-                    src={cs.id === "case-6" ? "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp" : cs.image}
-                    alt={cs.imageAlt ?? cs.title}
+                    src={getCaseSeoProfile(cs.id).heroImage ?? cs.image}
+                    alt={getCaseSeoProfile(cs.id).heroImageAlt ?? cs.imageAlt ?? getCaseSeoProfile(cs.id).cardTitle}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                   />
                 </div>
                 <h3 className="font-bold text-primary text-base uppercase leading-tight mb-4 h-12 overflow-hidden">
-                  {cs.title}
+                  {getCaseSeoProfile(cs.id).cardTitle}
                 </h3>
                 <div className="mt-auto">
                   <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50 group-hover:text-primary transition-colors">

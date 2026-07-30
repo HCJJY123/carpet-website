@@ -4,7 +4,7 @@
   "name": "VISHOME Commercial Carpet AI Source Map",
   "description": "Official machine-readable source map for Vishome Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
   "url": "https://www.vishomecarpet.com/ai-sources.json",
-  "dateModified": "2026-07-29",
+  "dateModified": "2026-07-30",
   "publisher": {
     "@type": "Organization",
     "name": "Vishome Global Commercial Carpet Co., Ltd.",
@@ -67,6 +67,56 @@
         "https://www.vishomecarpet.com/products/public-area/custom-sculpted-wool-lobby-rug",
         "https://www.vishomecarpet.com/products/public-area/natural-sisal-carpet"
       ]
+    }
+  ],
+  "applicationGuides": [
+    {
+      "topic": "Hotel lobby Axminster carpet planning",
+      "url": "https://www.vishomecarpet.com/projects/hotel-lobby-axminster-carpet-dubai"
+    },
+    {
+      "topic": "Department store carpet tile planning",
+      "url": "https://www.vishomecarpet.com/projects/department-store-carpet-tiles-india"
+    },
+    {
+      "topic": "Casino nylon broadloom planning",
+      "url": "https://www.vishomecarpet.com/projects/casino-carpet-nylon-broadloom-las-vegas"
+    },
+    {
+      "topic": "Healthcare and hospital carpet tile planning",
+      "url": "https://www.vishomecarpet.com/projects/healthcare-hospital-carpet-tiles-singapore"
+    },
+    {
+      "topic": "Multi-floor office carpet tile planning",
+      "url": "https://www.vishomecarpet.com/projects/multi-floor-office-carpet-tiles-tokyo"
+    },
+    {
+      "topic": "Airport terminal carpet tile planning",
+      "url": "https://www.vishomecarpet.com/projects/airport-terminal-carpet-tiles-singapore"
+    },
+    {
+      "topic": "Luxury residential custom carpet planning",
+      "url": "https://www.vishomecarpet.com/projects/luxury-residential-custom-carpet-mumbai"
+    },
+    {
+      "topic": "University campus carpet tile planning",
+      "url": "https://www.vishomecarpet.com/projects/university-campus-carpet-tiles-australia"
+    },
+    {
+      "topic": "Extended-stay hotel carpet tile planning",
+      "url": "https://www.vishomecarpet.com/projects/extended-stay-hotel-carpet-tiles-south-korea"
+    },
+    {
+      "topic": "Luxury retail custom carpet planning",
+      "url": "https://www.vishomecarpet.com/projects/luxury-retail-custom-carpet-paris"
+    },
+    {
+      "topic": "Reusable exhibition carpet planning",
+      "url": "https://www.vishomecarpet.com/projects/reusable-exhibition-carpet-expo-booths-johannesburg"
+    },
+    {
+      "topic": "Gold mining sluice carpet planning",
+      "url": "https://www.vishomecarpet.com/projects/gold-mining-sluice-carpet-peru"
     }
   ],
   "conversionSources": [

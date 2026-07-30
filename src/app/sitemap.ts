@@ -4,6 +4,7 @@ import { caseStudies, productCategories, products } from "@/lib/data";
 import { localizedLandings } from "@/lib/localized-landings";
 import { productPath } from "@/lib/seo";
 import { solutionPages } from "@/lib/solution-data";
+import { getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 
 const BASE = "https://www.vishomecarpet.com";
 
@@ -22,7 +23,7 @@ const staticRoutes: StaticRoute[] = [
   { url: "/hotel-carpet", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
   { url: "/carpet-tiles-50x50", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
   { url: "/natural-sisal-carpet", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/projects", modified: "2026-07-23", priority: 0.85, changeFrequency: "monthly" },
+  { url: "/projects", modified: "2026-07-30", priority: 0.85, changeFrequency: "monthly" },
   { url: "/blog", modified: "2026-07-30", priority: 0.85, changeFrequency: "weekly" },
   { url: "/about-us", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/factory", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
@@ -32,9 +33,9 @@ const staticRoutes: StaticRoute[] = [
   { url: "/request-sample-box", modified: "2026-07-25", priority: 0.8, changeFrequency: "monthly" },
   { url: "/solutions", modified: "2026-07-27", priority: 0.75, changeFrequency: "monthly" },
   { url: "/solutions/hotel-hospitality", modified: "2026-07-23", priority: 0.75, changeFrequency: "monthly" },
-  { url: "/llms.txt", modified: "2026-07-29", priority: 0.2, changeFrequency: "weekly" },
-  { url: "/llms-full.txt", modified: "2026-07-29", priority: 0.2, changeFrequency: "weekly" },
-  { url: "/ai-sources.json", modified: "2026-07-29", priority: 0.2, changeFrequency: "weekly" },
+  { url: "/llms.txt", modified: "2026-07-30", priority: 0.2, changeFrequency: "weekly" },
+  { url: "/llms-full.txt", modified: "2026-07-30", priority: 0.2, changeFrequency: "weekly" },
+  { url: "/ai-sources.json", modified: "2026-07-30", priority: 0.2, changeFrequency: "weekly" },
   { url: "/ru", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/ru/products/carpet-tiles/nylon-office-carpet-tile", modified: "2026-07-23", priority: 0.85, changeFrequency: "monthly" },
   { url: "/ru/products/public-area/public-area-heavy-duty", modified: "2026-07-23", priority: 0.85, changeFrequency: "monthly" },
@@ -77,12 +78,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const projectEntries: MetadataRoute.Sitemap = caseStudies.map((project) => ({
-    url: `${BASE}/projects/${project.id}`,
-    lastModified: contentDates.catalog,
-    changeFrequency: "yearly",
-    priority: 0.75,
+    url: `${BASE}${projectPath(project.id)}`,
+    lastModified: new Date("2026-07-30T00:00:00.000Z"),
+    changeFrequency: "monthly",
+    priority: 0.78,
     images: uniqueImages([
-      project.image,
+      getCaseSeoProfile(project.id).heroImage ?? project.image,
       ...project.sections.map((section) => section.image),
       ...(project.gallery ?? []),
     ]),
