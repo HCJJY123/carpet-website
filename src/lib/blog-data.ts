@@ -3,6 +3,7 @@ import { carpetTilesOverConcreteGuide } from "@/lib/blog-posts/carpet-tiles-over
 import { sluiceMattingGuide } from "@/lib/blog-posts/sluice-matting-guide";
 import { officeCarpetTilesVsHardFlooringGuide } from "@/lib/blog-posts/office-carpet-tiles-vs-hard-flooring-guide";
 import { hotelCorridorCarpetDesignGuide } from "@/lib/blog-posts/hotel-corridor-carpet-design-guide";
+import { commercialCarpetTileMoqGuide } from "@/lib/blog-posts/commercial-carpet-tile-moq-guide";
 
 export interface BlogSection {
   title: string;
@@ -46,6 +47,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  commercialCarpetTileMoqGuide,
   officeCarpetTilesVsHardFlooringGuide,
   hotelCorridorCarpetDesignGuide,
   hotelCarpetPatternsGuide,

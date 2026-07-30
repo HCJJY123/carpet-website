@@ -23,7 +23,7 @@ const staticRoutes: StaticRoute[] = [
   { url: "/carpet-tiles-50x50", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
   { url: "/natural-sisal-carpet", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/projects", modified: "2026-07-23", priority: 0.85, changeFrequency: "monthly" },
-  { url: "/blog", modified: "2026-07-29", priority: 0.85, changeFrequency: "weekly" },
+  { url: "/blog", modified: "2026-07-30", priority: 0.85, changeFrequency: "weekly" },
   { url: "/about-us", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/factory", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/faq", modified: "2026-07-26", priority: 0.8, changeFrequency: "monthly" },
