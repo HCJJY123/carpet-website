@@ -9,6 +9,25 @@ const nextConfig: NextConfig = {
     imageSizes: [48, 64, 96, 128, 256, 384],
     qualities: [75, 82, 90],
   },
+  async redirects() {
+    return [
+      {
+        source: "/project-application/hotel-lobby-carpet-specification-guide",
+        destination: "/projects/case-1",
+        permanent: true,
+      },
+      {
+        source: "/project-application/office-carpet-planning-guide",
+        destination: "/projects/case-5",
+        permanent: true,
+      },
+      {
+        source: "/project-application/gold-mining-sluice-carpet-application-reference",
+        destination: "/projects/case-12",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
