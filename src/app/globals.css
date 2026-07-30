@@ -199,6 +199,27 @@ body[data-image-zoom-enabled="true"] button img {
   cursor: inherit;
 }
 
+@keyframes factory-cta-pan {
+  from {
+    transform: translate3d(-6%, 0, 0) scale(1.04);
+  }
+  to {
+    transform: translate3d(0, 0, 0) scale(1.04);
+  }
+}
+
+.factory-cta-pan {
+  animation: factory-cta-pan 22s ease-in-out infinite alternate;
+  transform-origin: center center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .factory-cta-pan {
+    animation: none;
+    transform: scale(1.04);
+  }
+}
+
 @media (max-width: 767px) {
   .container-fox {
     padding-left: 1.25rem;
