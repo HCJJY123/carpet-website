@@ -4,6 +4,7 @@ import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
+import AnswerFirst from "@/components/AnswerFirst";
 
 const productId = "luxury-hotel-broadloom";
 const product = products.find((prod) => prod.id === productId);
@@ -166,6 +167,33 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
+      <AnswerFirst
+        eyebrow="Axminster Buying Answer"
+        title="When Should a Hotel Specify 80/20 Wool-Nylon Axminster?"
+        answer="Specify this woven 80% wool and 20% nylon Axminster when a premium hotel, casino, corridor, ballroom, or guest area needs a custom pattern integrated into the carpet structure. It is a project product rather than a quick stock-flooring choice. Approve yarn colors, density, pattern scale, fire requirement, roll plan, and installation quantities before production."
+        facts={[
+          { label: "Construction", value: "Woven Axminster broadloom" },
+          { label: "Fiber", value: "80% wool / 20% nylon" },
+          { label: "Reference FOB", value: "US$18.00-38.00 / SQM" },
+          { label: "Lead Time", value: "About 30 days after approvals" },
+        ]}
+        moq={[
+          { label: "Sample", value: p.moqTiers.sample },
+          { label: "Trial Order", value: p.moqTiers.trialOrder },
+          { label: "Project MOQ", value: p.moqTiers.project },
+        ]}
+        suitableFor={[
+          "Five-star hotels, casinos, ballrooms and premium corridors",
+          "Custom jacquard patterns with coordinated roll and cutting plans",
+        ]}
+        notSuitableFor={[
+          "Very small custom areas below the confirmed weaving minimum",
+          "Buyers needing immediate stock delivery or an unapproved fire claim",
+        ]}
+        evidence="Published values describe this product's current construction and buying range. Final density, pattern feasibility, test documents, quantity, price, and schedule are confirmed from the approved specification and production sample."
+        quoteHref={`/contact?product=${encodeURIComponent(p.name)}#quote-form`}
+        quoteLabel="Request Axminster Project Review"
+      />
       <section className="section-padding border-y border-border bg-surface">
         <div className="container-fox">
           <h2 className="mb-8 text-center text-2xl font-bold uppercase tracking-[0.08em] text-primary md:mb-12 md:text-3xl md:tracking-widest">

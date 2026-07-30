@@ -26,6 +26,9 @@ CREATE TABLE IF NOT EXISTS visits (
   duration    INTEGER,
   traffic_channel TEXT,
   ai_source TEXT,
+  ai_referred INTEGER DEFAULT 0,
+  ai_referrer_host TEXT,
+  ai_landing_path TEXT,
   utm_source  TEXT,
   utm_medium  TEXT,
   utm_campaign TEXT,
@@ -51,6 +54,8 @@ CREATE INDEX IF NOT EXISTS idx_visits_network_type ON visits(network_type);
 CREATE INDEX IF NOT EXISTS idx_visits_company_confidence ON visits(company_confidence);
 CREATE INDEX IF NOT EXISTS idx_visits_intent_grade ON visits(intent_grade);
 CREATE INDEX IF NOT EXISTS idx_visits_internal ON visits(internal_visit);
+CREATE INDEX IF NOT EXISTS idx_visits_ai_source ON visits(ai_referred, ai_source);
+CREATE INDEX IF NOT EXISTS idx_visits_ai_landing ON visits(ai_referred, ai_landing_path);
 
 CREATE TABLE IF NOT EXISTS blocklist (
   org     TEXT PRIMARY KEY,

@@ -67,6 +67,8 @@ export default function VisitorBeacon() {
         query: window.location.search,
         ref: document.referrer,
         landing: getLandingPage(),
+        title: document.title,
+        url: window.location.href,
         dur: duration,
         lang: navigator.language || "",
         tz: Intl.DateTimeFormat().resolvedOptions().timeZone || "",

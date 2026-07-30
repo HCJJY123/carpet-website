@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import AnswerFirst from "@/components/AnswerFirst";
 import { products } from "@/lib/data";
 import { productPath } from "@/lib/seo";
 
@@ -58,6 +59,33 @@ export default function CommercialCarpetTilesPage() {
           </div>
         </div>
       </section>
+
+      <AnswerFirst
+        title="Are Commercial Carpet Tiles the Right Choice for Your Project?"
+        answer="Commercial carpet tiles are a practical choice for offices, hotels, retail, schools, and phased renovations where damaged areas may need individual replacement. Vishomecarpet supplies 50x50 modular tiles in nylon or polypropylene options with project-specific backing. Compare traffic level, fire requirement, rolling-chair use, maintenance plan, sample approval, and total delivered cost before choosing a style."
+        facts={[
+          { label: "Common Format", value: "50x50 cm modular carpet tiles" },
+          { label: "Fiber Options", value: "Nylon or polypropylene by product" },
+          { label: "Reference Price", value: "From US$3.80 / SQM; final quote varies" },
+          { label: "Typical Production", value: "7-25 days after order confirmation" },
+        ]}
+        moq={[
+          { label: "Sample", value: "Material or color swatch available" },
+          { label: "Trial Order", value: "Typically from 100 SQM in a standard color" },
+          { label: "Project MOQ", value: "Usually 200-500 SQM depending on style and backing" },
+        ]}
+        suitableFor={[
+          "Open offices, meeting rooms, corridors and commercial fit-outs",
+          "Projects needing phased installation or easy tile replacement",
+        ]}
+        notSuitableFor={[
+          "Wet areas or outdoor exposure without a confirmed system",
+          "Specifications selected before subfloor and fire requirements are checked",
+        ]}
+        evidence="The ranges above summarize current published product data. Exact construction, stock status, price, certification document, packing, and delivery time must be confirmed for the selected tile and destination before purchase."
+        quoteHref="#quick-quote"
+        quoteLabel="Get Carpet Tile Recommendation"
+      />
 
       <section id="quick-quote" className="scroll-mt-24 border-b border-border bg-white py-12 md:py-16" data-funnel-section="carpet_tile_quick_quote">
         <div className="container-fox grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-14">

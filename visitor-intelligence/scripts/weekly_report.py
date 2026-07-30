@@ -29,7 +29,8 @@ TEXT_COLUMNS = (
     "day", "ip_hash", "visitor_id", "session_id", "visitor_label", "asn", "org",
     "domain", "country", "network_type", "company_confidence", "classification_reason",
     "site", "path", "query", "referrer", "landing", "event", "language", "timezone",
-    "screen", "traffic_channel", "ai_source", "utm_source", "utm_medium",
+    "screen", "traffic_channel", "ai_source", "ai_referrer_host", "ai_landing_path",
+    "utm_source", "utm_medium",
     "utm_campaign", "utm_term", "utm_content", "gclid",
     "product_interest", "intent_grade", "intent_reasons", "ts",
 )
@@ -53,7 +54,7 @@ def load_rows(path: str) -> pd.DataFrame:
         else:
             frame[column] = frame[column].fillna("").astype(str)
 
-    for column in ("duration", "company_candidate", "internal_visit", "intent_score"):
+    for column in ("duration", "company_candidate", "internal_visit", "intent_score", "ai_referred"):
         if column not in frame:
             frame[column] = 0
         else:
@@ -163,6 +164,9 @@ def build_visitor_frame(frame: pd.DataFrame) -> pd.DataFrame:
             "Campaign": unique_text(group["utm_campaign"], 4),
             "Traffic Channel": mode(group["traffic_channel"]),
             "AI Source": mode(group["ai_source"]),
+            "AI Referrer Host": mode(group["ai_referrer_host"]),
+            "AI First Landing Page": mode(group["ai_landing_path"]),
+            "AI Referred": "Yes" if group["ai_referred"].max() == 1 else "No",
             "Top Referrer": mode(group["referrer"]),
             "Visit Days": group["day"].nunique(),
             "Sessions": max(group["session_id"].nunique(), 1),
@@ -211,7 +215,8 @@ def build_ai_frame(visitor_frame: pd.DataFrame) -> pd.DataFrame:
     if visitor_frame.empty:
         return visitor_frame.copy()
     return visitor_frame[
-        visitor_frame["AI Source"].ne("")
+        visitor_frame["AI Referred"].eq("Yes")
+        | visitor_frame["AI Source"].ne("")
         | visitor_frame["Traffic Channel"].eq("ai_referral")
     ].copy().reset_index(drop=True)
 

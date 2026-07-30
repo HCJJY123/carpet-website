@@ -12,6 +12,8 @@ export interface Attribution {
   referrer?: string;
   trafficChannel?: "ai_referral";
   aiSource?: string;
+  aiReferrerHost?: string;
+  aiLandingPath?: string;
 }
 
 const PARAM_MAP = {
@@ -29,11 +31,11 @@ const PARAM_MAP = {
 type AttributionParamKey = keyof typeof PARAM_MAP;
 
 const AI_SOURCE_PATTERNS = [
-  { source: "ChatGPT", patterns: ["chatgpt", "openai"] },
-  { source: "Perplexity", patterns: ["perplexity"] },
-  { source: "Microsoft Copilot", patterns: ["copilot.microsoft", "microsoftcopilot"] },
-  { source: "Google Gemini", patterns: ["gemini.google", "bard.google"] },
-  { source: "Claude", patterns: ["claude.ai", "anthropic"] },
+  { source: "chatgpt", patterns: ["chatgpt.com", "openai.com", "utm_source=chatgpt"] },
+  { source: "perplexity", patterns: ["perplexity.ai", "utm_source=perplexity"] },
+  { source: "microsoft_copilot", patterns: ["copilot.microsoft.com", "bing.com/chat", "utm_source=copilot"] },
+  { source: "google_gemini", patterns: ["gemini.google.com", "bard.google.com", "utm_source=gemini"] },
+  { source: "claude", patterns: ["claude.ai", "utm_source=claude"] },
   { source: "Poe", patterns: ["poe.com", "quora-poe"] },
   { source: "You.com", patterns: ["you.com"] },
 ] as const;
@@ -64,7 +66,17 @@ export function captureAttributionOnce() {
   attribution.landingPage = window.location.pathname;
   attribution.referrer = document.referrer || undefined;
   attribution.aiSource = identifyAiSource(attribution.utmSource, attribution.referrer);
-  if (attribution.aiSource) attribution.trafficChannel = "ai_referral";
+  if (attribution.aiSource) {
+    attribution.trafficChannel = "ai_referral";
+    attribution.aiLandingPath = `${window.location.pathname}${window.location.search}`;
+    try {
+      attribution.aiReferrerHost = attribution.referrer
+        ? new URL(attribution.referrer).hostname.toLowerCase()
+        : undefined;
+    } catch {
+      attribution.aiReferrerHost = undefined;
+    }
+  }
 
   sessionStorage.setItem(STORAGE_KEY, JSON.stringify(attribution));
 }
@@ -94,5 +106,8 @@ export function getAttributionForEvent(): Record<string, string> {
   if (attribution.referrer) event.referrer = attribution.referrer;
   if (attribution.trafficChannel) event.traffic_channel = attribution.trafficChannel;
   if (attribution.aiSource) event.ai_source = attribution.aiSource;
+  if (attribution.aiSource) event.ai_referred = "1";
+  if (attribution.aiReferrerHost) event.ai_referrer_host = attribution.aiReferrerHost;
+  if (attribution.aiLandingPath) event.ai_landing_path = attribution.aiLandingPath;
   return event;
 }

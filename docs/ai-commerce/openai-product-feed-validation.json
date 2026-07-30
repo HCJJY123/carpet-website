@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-07-30T11:20:15.017Z",
+  "sourceProducts": 20,
+  "draftRows": 20,
+  "searchEligibleRows": 0,
+  "rowsMissingPrice": 20,
+  "rowsMissingReturnPolicy": 20,
+  "rowsWithUnsupportedImageFormat": 20,
+  "rowsWithUnknownAvailability": 20
+}

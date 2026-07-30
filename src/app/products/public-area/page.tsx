@@ -3,6 +3,7 @@ import { products, productCategories } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import TechnicalSourcePanel from "@/components/TechnicalSourcePanel";
+import AnswerFirst from "@/components/AnswerFirst";
 import { categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -37,6 +38,33 @@ export default function CategoryPage() {
           </div>
         </div>
       </section>
+
+      <AnswerFirst
+        title="How Should Buyers Choose a Public-Area Carpet?"
+        answer="Public-area carpet is not one interchangeable product type. Vishomecarpet's range includes heavy-duty interior carpet, natural sisal, sculpted wool lobby rugs, stair runners, and gold-recovery matting. Select by actual application, traffic, cleaning method, fire requirement, dimensions, edge treatment, and replacement plan. A hotel lobby rug specification should never be reused for mining recovery or stair installation."
+        facts={[
+          { label: "Applications", value: "Lobby, corridor, stair, natural-fiber and mining systems" },
+          { label: "Construction", value: "Product-specific; confirm fiber, backing and edge finish" },
+          { label: "Order Basis", value: "Piece, roll or square-meter quantity by product" },
+          { label: "Specification Inputs", value: "Use, dimensions, traffic, cleaning, fire and delivery" },
+        ]}
+        moq={[
+          { label: "Sample", value: "Material, wool, natural-fiber, binding or cut sample" },
+          { label: "Trial Order", value: "Prototype piece, runner section, stock roll or trial area" },
+          { label: "Project MOQ", value: "Varies by product from piece-based orders to 300 SQM" },
+        ]}
+        suitableFor={[
+          "Buyers matching a specialist carpet to a defined public-area application",
+          "Projects that need samples, dimensions and finish approval before production",
+        ]}
+        notSuitableFor={[
+          "Treating decorative, stair, mining and general commercial carpet as equivalents",
+          "Purchasing before installation and maintenance conditions are documented",
+        ]}
+        evidence="Each product page contains its own MOQ tiers, reference price, construction and technical details. Because this category covers unrelated applications, final suitability and compliance must be confirmed against the exact product rather than the category description."
+        quoteHref="/contact?product=Public%20Area%20Carpet#quote-form"
+        quoteLabel="Match a Product to My Application"
+      />
 
       <TechnicalSourcePanel
         title="Public Area Carpet Specification Reference"

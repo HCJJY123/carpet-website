@@ -4,6 +4,7 @@ import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
+import AnswerFirst from "@/components/AnswerFirst";
 
 const productId = "50x50-nylon-pp-office-carpet-tiles";
 const product = products.find((prod) => prod.id === productId);
@@ -210,6 +211,34 @@ export default function OfficeCarpetTilesProductPage() {
           </div>
         </div>
       </section>
+
+      <AnswerFirst
+        eyebrow="Office Carpet Tile Buying Answer"
+        title="Should You Choose Nylon or PP 50x50 Carpet Tiles?"
+        answer="Choose nylon 50x50 carpet tiles for stronger appearance retention in demanding office traffic, and consider polypropylene where budget and moderate-use requirements are the priority. This product supports modular replacement and multiple layout methods. Confirm fiber, backing, rolling-chair use, fire requirement, color, subfloor, adhesive, and maintenance plan before comparing only the square-meter price."
+        facts={[
+          { label: "Tile Size", value: p.spec.size },
+          { label: "Fiber Options", value: p.spec.material },
+          { label: "Reference FOB", value: p.fobPrice?.display || "Confirm by specification" },
+          { label: "Lead Time", value: p.leadTime },
+        ]}
+        moq={[
+          { label: "Sample", value: p.moqTiers.sample },
+          { label: "Trial Order", value: p.moqTiers.trialOrder },
+          { label: "Project MOQ", value: p.moqTiers.project },
+        ]}
+        suitableFor={[
+          "Offices, meeting rooms, corridors, retail and phased renovation",
+          "Projects requiring easy local replacement and modular installation",
+        ]}
+        notSuitableFor={[
+          "Outdoor or wet areas without a confirmed specialist system",
+          "Projects where fiber and backing are left unspecified before quotation",
+        ]}
+        evidence="The values above come from the current product specification. Nylon and PP performance varies by yarn, pile weight and backing; exact stock, fire documentation, sample color, price, packing and delivery are confirmed for each order."
+        quoteHref={`/contact?product=${encodeURIComponent(p.name)}#quote-form`}
+        quoteLabel="Request Fiber and Backing Advice"
+      />
 
       <section className="section-padding bg-primary text-white">
         <div className="container-fox grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">

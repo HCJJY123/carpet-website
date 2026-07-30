@@ -4,6 +4,7 @@ import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import ProcurementSnapshot from "@/components/ProcurementSnapshot";
 import TechnicalSourcePanel from "@/components/TechnicalSourcePanel";
+import AnswerFirst from "@/components/AnswerFirst";
 import { absoluteUrl, categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 const categoryPath = "/products/wall-to-wall";
@@ -173,6 +174,32 @@ export default function CategoryPage() {
           <p className="mt-5 text-xs font-bold uppercase tracking-[0.12em] text-white/65">Specification review · Samples / strike-offs · FOB / CIF / DAP</p>
         </div>
       </section>
+      <AnswerFirst
+        title="Which Wall-to-Wall Carpet Should a Hotel Buyer Specify?"
+        answer="Choose hotel wall-to-wall carpet by area and construction, not pattern alone. Guestrooms usually prioritize comfort and design flexibility; corridors need appearance retention and a coordinated roll plan; ballrooms need dense project-grade broadloom; premium hotels and casinos may specify woven wool-nylon Axminster. Confirm traffic, fire standard, acoustics, cleaning method, pattern repeat, waste allowance, and installation schedule before ordering."
+        facts={[
+          { label: "Construction Options", value: "Printed, cut-pile, Axminster and project broadloom" },
+          { label: "Published FOB Range", value: "US$3.10-38.00 / SQM across current products" },
+          { label: "Typical Production", value: "15-35 days after approvals" },
+          { label: "Planning Inputs", value: "Floor plan, roll width, pattern repeat, waste allowance" },
+        ]}
+        moq={[
+          { label: "Sample", value: "Material swatch or printed strike-off by construction" },
+          { label: "Trial Order", value: "Generally 50-100 SQM after design or construction approval" },
+          { label: "Project MOQ", value: "Generally 100-500 SQM depending on construction" },
+        ]}
+        suitableFor={[
+          "Hotel rooms, corridors, lobbies, ballrooms, casinos and cinemas",
+          "Custom pattern, coordinated roll planning and contract installation",
+        ]}
+        notSuitableFor={[
+          "Wet or outdoor areas without a purpose-built flooring system",
+          "Ordering from artwork alone without site measurements and fire requirements",
+        ]}
+        evidence="The ranges are derived from the seven products currently listed on this category page. Final price, availability, fire documentation, pattern feasibility, and lead time are confirmed only after specification and sample review."
+        quoteHref="/contact?product=Wall-to-Wall%20Carpet#quote-form"
+        quoteLabel="Request Broadloom Recommendation"
+      />
       <ProcurementSnapshot
         title="Hotel Broadloom Buying Facts"
         facts={[

@@ -6,6 +6,7 @@ import ProductImage from "@/components/ProductImage";
 import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 import { productPath } from "@/lib/seo";
 import HomeHeroCarousel from "@/components/HomeHeroCarousel";
+import AnswerFirst from "@/components/AnswerFirst";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://www.vishomecarpet.com" },
@@ -33,6 +34,33 @@ export default function Home() {
   return (
     <div className="bg-white">
       <HomeHeroCarousel whatsappUrl={whatsappUrl} />
+
+      <AnswerFirst
+        eyebrow="Commercial Carpet Sourcing Answer"
+        title="What Can Vishomecarpet Supply for a Commercial Project?"
+        answer="Vishomecarpet supplies factory-direct commercial carpet tiles, custom hotel broadloom, and specialist public-area carpets for international B2B projects. Buyers can start with a material sample or trial quantity, then confirm construction, color, testing, packing, and delivery terms before project production. The right product depends on traffic, application, budget, destination, and required compliance."
+        facts={[
+          { label: "Main Product Groups", value: "Carpet tiles, hotel broadloom, public-area carpet" },
+          { label: "Buyer Support", value: "Specification review, samples, custom design, export packing" },
+          { label: "Trade Terms", value: "FOB / CIF / DAP by destination" },
+          { label: "Quote Inputs", value: "Area, use, destination, date, technical standard" },
+        ]}
+        moq={[
+          { label: "Sample", value: "Material swatch, color sample, or design strike-off by construction" },
+          { label: "Trial Order", value: "Standard color, stock roll, or approved construction where available" },
+          { label: "Project MOQ", value: "Confirmed per product, customization, backing, and production method" },
+        ]}
+        suitableFor={[
+          "Hotels, offices, retail, schools, healthcare and public interiors",
+          "Distributors, flooring contractors, designers and project owners",
+        ]}
+        notSuitableFor={[
+          "A final specification chosen only from appearance or lowest price",
+          "Projects ordered before site, fire and delivery requirements are confirmed",
+        ]}
+        evidence="Published product pages show construction, reference FOB range, lead time, three-stage MOQ, technical data, and application images. Final compliance, availability, and delivered cost are confirmed against the buyer's written project requirements."
+        quoteHref="/contact?product=Commercial%20Carpet%20Project#quote-form"
+      />
 
       <section className="bg-white border-b border-border">
         <div className="container-fox py-5">

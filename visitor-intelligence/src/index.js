@@ -251,10 +251,11 @@ async function recordVisit(request, env, allowedOrigins, trustedProxy = false) {
       day, ip_hash, visitor_id, session_id, visitor_label, asn, org, domain, country,
       network_type, company_confidence, company_candidate, internal_visit, classification_reason,
       site, path, query, referrer, landing, event, language, timezone, screen, duration,
-      traffic_channel, ai_source, utm_source, utm_medium, utm_campaign, utm_term,
+      traffic_channel, ai_source, ai_referred, ai_referrer_host, ai_landing_path,
+      utm_source, utm_medium, utm_campaign, utm_term,
       utm_content, gclid, product_interest,
       intent_score, intent_grade, intent_reasons
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
   ).bind(
     new Date().toISOString().slice(0, 10),
     ipHash,
@@ -282,6 +283,9 @@ async function recordVisit(request, env, allowedOrigins, trustedProxy = false) {
     duration,
     attribution.trafficChannel,
     attribution.aiSource,
+    attribution.aiReferred,
+    attribution.aiReferrerHost,
+    attribution.aiLandingPath,
     attribution.utmSource,
     attribution.utmMedium,
     attribution.utmCampaign,
@@ -346,6 +350,9 @@ function parseAttribution(body) {
   return {
     trafficChannel: safeText(body.traffic_channel, 100),
     aiSource: safeText(body.ai_source, 160),
+    aiReferred: body.ai_referred ? 1 : 0,
+    aiReferrerHost: safeText(body.ai_referrer_host, 180),
+    aiLandingPath: safeText(body.ai_landing_path || body.landing_page || body.landing, 500),
     utmSource: safeText(body.utm_source || params.get("utm_source"), 300),
     utmMedium: safeText(body.utm_medium || params.get("utm_medium"), 300),
     utmCampaign: safeText(body.utm_campaign || params.get("utm_campaign"), 500),
@@ -375,7 +382,7 @@ function scoreVisitIntent(body, duration, attribution) {
   else if (path.includes("/solutions") || path.includes("/projects")) add(5, "Viewed solution or project content");
 
   if (/google\.|bing\.|yahoo\./.test(referrer)) add(4, "Search-engine referral");
-  if (attribution.trafficChannel === "ai_referral" || attribution.aiSource) add(5, "AI referral");
+  if (attribution.aiReferred || attribution.trafficChannel === "ai_referral" || attribution.aiSource) add(6, "AI referral");
   if (attribution.gclid || attribution.utmMedium.toLowerCase() === "cpc") add(5, "Paid-search visit");
   if (/supplier|wholesale|price|manufacturer|distributor|from china|contract carpet|custom/.test(searchIntent)) {
     add(6, "Commercial purchase keyword");
