@@ -21,6 +21,7 @@ export const commercialCarpetTileMoqGuide: BlogPost = {
   category: "Buying Guide",
   image:
     "/images/blog-series/commercial-carpet-tile-moq-guide/commercial-carpet-tile-moq-sample-trial-project-guide-3f6d2a1c.webp",
+  imageUnoptimized: true,
   h1Image:
     "/images/blog-series/commercial-carpet-tile-moq-guide/commercial-carpet-tile-moq-sample-trial-project-guide-3f6d2a1c.webp",
   h1ImageAlt:
@@ -28,6 +29,7 @@ export const commercialCarpetTileMoqGuide: BlogPost = {
   h1ImageCaption:
     "A useful order plan separates material approval, trial-area validation, project quantity, and future spare stock.",
   h1ImageFit: "cover",
+  h1ImageUnoptimized: true,
   relatedProductIds: [
     "50x50-nylon-pp-office-carpet-tiles",
     "ecocore-pe-backing-carpet-tiles",
