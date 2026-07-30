@@ -124,8 +124,25 @@ export default function CategoryPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
-      <section className="bg-[#102A43] py-20 text-center md:py-24">
-        <div className="container-fox">
+      <section className="relative isolate overflow-hidden bg-[#102A43] py-20 text-center md:py-24">
+        <picture className="absolute inset-0 -z-20 block h-full w-full" aria-hidden="true">
+          <source
+            srcSet="/images/category/carpet-tiles-hero-factory/carpet-tiles-factory-hero-640.webp 640w, /images/category/carpet-tiles-hero-factory/carpet-tiles-factory-hero-960.webp 960w, /images/category/carpet-tiles-hero-factory/carpet-tiles-factory-hero-1440.webp 1440w, /images/category/carpet-tiles-hero-factory/carpet-tiles-factory-hero-1920.webp 1920w"
+            sizes="100vw"
+            type="image/webp"
+          />
+          <img
+            src="/images/category/carpet-tiles-hero-factory/carpet-tiles-factory-hero-1440.webp"
+            alt=""
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="h-full w-full object-cover"
+          />
+        </picture>
+        <div className="absolute inset-0 -z-10 bg-[#102A43]/72" />
+        <div className="absolute inset-x-0 bottom-0 -z-10 h-28 bg-gradient-to-t from-[#102A43] to-transparent" />
+        <div className="container-fox relative z-10">
           <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Carpet Tile Manufacturer, Supplier & Distributor Support</p>
           <h1 className="text-4xl font-black uppercase text-white md:text-6xl">Commercial Carpet Tiles & Modular Flooring</h1>
           <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">50x50 nylon and polypropylene carpet tiles for offices, hotels, corridors, schools, healthcare support areas, airports, and commercial projects. Compare wholesale price, backing, thickness, MOQ, and technical performance across eight products.</p>
