@@ -11,7 +11,7 @@ export default function ProductImage({
   priority = false,
   quality = 82,
   sizes = "(max-width: 768px) 100vw, 50vw",
-  unoptimized = false,
+  unoptimized = true,
 }: {
   src: string;
   alt: string;
@@ -25,8 +25,8 @@ export default function ProductImage({
   const [loadState, setLoadState] = useState<{
     src: string;
     mode: "optimized" | "direct" | "failed";
-  }>({ src, mode: "optimized" });
-  const loadMode = loadState.src === src ? loadState.mode : "optimized";
+  }>({ src, mode: unoptimized ? "direct" : "optimized" });
+  const loadMode = loadState.src === src ? loadState.mode : unoptimized ? "direct" : "optimized";
   const useDirectImage = unoptimized || loadMode === "direct";
 
   if (loadMode !== "failed") {

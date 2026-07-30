@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["127.0.0.1"],
   images: {
+    unoptimized: true,
     formats: ["image/webp"],
     minimumCacheTTL: 31_536_000,
     deviceSizes: [360, 390, 430, 640, 750, 828, 1080, 1200, 1440, 1536, 1920],
