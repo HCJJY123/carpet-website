@@ -7,6 +7,7 @@ import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp
 import { productPath } from "@/lib/seo";
 import HomeHeroCarousel from "@/components/HomeHeroCarousel";
 import AnswerFirst from "@/components/AnswerFirst";
+import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 import { getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 
 export const metadata: Metadata = {
@@ -267,23 +268,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA - Professional Intake */}
-      <section className="relative isolate overflow-hidden bg-primary py-16 text-white md:py-24">
-        <picture className="absolute inset-0 -z-20 block h-full w-full" aria-hidden="true">
-          <source
-            srcSet="/images/home/factory-production-scroll/factory-carpet-production-640.webp 640w, /images/home/factory-production-scroll/factory-carpet-production-960.webp 960w, /images/home/factory-production-scroll/factory-carpet-production-1440.webp 1440w, /images/home/factory-production-scroll/factory-carpet-production-1600.webp 1600w"
-            sizes="116vw"
-            type="image/webp"
-          />
-          <img
-            src="/images/home/factory-production-scroll/factory-carpet-production-1440.webp"
-            alt=""
-            loading="lazy"
-            decoding="async"
-            className="factory-cta-pan h-full w-[116%] max-w-none object-cover opacity-75"
-          />
-        </picture>
-        <div className="absolute inset-0 -z-10 bg-primary/72" />
-        <div className="absolute inset-x-0 bottom-0 -z-10 h-28 bg-gradient-to-t from-primary to-transparent" />
+      <FactoryCtaBackground className="py-16 md:py-24">
         <div className="container-fox text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest">Ready for Technical Assessment?</h2>
           <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg font-light leading-relaxed">
@@ -293,7 +278,7 @@ export default function Home() {
             Contact Our Factory
           </Link>
         </div>
-      </section>
+      </FactoryCtaBackground>
     </div>
   );
 }

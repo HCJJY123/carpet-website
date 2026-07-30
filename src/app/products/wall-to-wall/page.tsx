@@ -5,6 +5,7 @@ import ProductImage from "@/components/ProductImage";
 import ProcurementSnapshot from "@/components/ProcurementSnapshot";
 import TechnicalSourcePanel from "@/components/TechnicalSourcePanel";
 import AnswerFirst from "@/components/AnswerFirst";
+import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 import { absoluteUrl, categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 const categoryPath = "/products/wall-to-wall";
@@ -369,13 +370,13 @@ export default function CategoryPage() {
           </div>
         </div>
       </section>
-      <section className="bg-primary py-16 text-center">
+      <FactoryCtaBackground className="py-16 text-center">
         <div className="container-fox">
           <h2 className="text-2xl font-black uppercase text-white md:text-4xl">Request a Contract Carpet Quotation</h2>
           <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-white/70">Send your carpet area, application, construction, destination, and required date for a product recommendation and project price.</p>
           <Link href="/contact?product=Wall-to-Wall%20Carpet#quote-form" className="btn-fox-orange mt-8">Send Inquiry</Link>
         </div>
-      </section>
+      </FactoryCtaBackground>
     </div>
   );
 }

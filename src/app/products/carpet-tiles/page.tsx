@@ -4,6 +4,7 @@ import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import ProcurementSnapshot from "@/components/ProcurementSnapshot";
 import TechnicalSourcePanel from "@/components/TechnicalSourcePanel";
+import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 import { absoluteUrl, categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 const categoryPath = "/products/carpet-tiles";
@@ -256,13 +257,13 @@ export default function CategoryPage() {
           </div>
         </div>
       </section>
-      <section className="bg-primary py-16 text-center">
+      <FactoryCtaBackground className="py-16 text-center">
         <div className="container-fox">
           <h2 className="text-2xl font-black uppercase text-white md:text-4xl">Request a Bulk Carpet Tile Quotation</h2>
           <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-white/70">Send your area, application, material, backing, destination, and required date for a product recommendation and wholesale price.</p>
           <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="btn-fox-orange mt-8">Send Inquiry</Link>
         </div>
-      </section>
+      </FactoryCtaBackground>
     </div>
   );
 }

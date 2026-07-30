@@ -1,5 +1,6 @@
 import ProductImage from "@/components/ProductImage";
 import Link from "next/link";
+import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata = {
   title: "Carpet Manufacturing Factory | Vishome Global Commercial Carpet",
@@ -107,7 +108,7 @@ export default function FactoryPage() {
       </section>
 
       {/* Factory CTA */}
-      <section className="py-20 bg-primary">
+      <FactoryCtaBackground className="py-20">
         <div className="container-fox flex flex-col md:flex-row items-center justify-between gap-8 text-white">
           <div className="max-w-xl">
             <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-widest mb-4">Planning a Bulk Order?</h2>
@@ -117,7 +118,7 @@ export default function FactoryPage() {
             Consult With Factory
           </Link>
         </div>
-      </section>
+      </FactoryCtaBackground>
     </div>
   );
 }

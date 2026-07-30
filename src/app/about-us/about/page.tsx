@@ -2,6 +2,7 @@ import ProductImage from "@/components/ProductImage";
 import { certifications } from "@/lib/data";
 import Link from "next/link";
 import type { Metadata } from "next";
+import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata: Metadata = {
   title: "Company Profile | VISHOME Commercial Carpet Manufacturer",
@@ -193,7 +194,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-<section className="py-24 bg-primary text-white text-center">
+      <FactoryCtaBackground className="py-24 text-center">
         <div className="container-fox">
           <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-widest">Connect with our Export Team</h2>
           <p className="text-gray-400 mb-12 max-w-xl mx-auto">Get technical documentation, samples, and project-based pricing within 24 hours.</p>
@@ -201,7 +202,7 @@ export default function AboutPage() {
             Send Inquiry to Factory
           </Link>
         </div>
-      </section>
+      </FactoryCtaBackground>
     </div>
   );
 }

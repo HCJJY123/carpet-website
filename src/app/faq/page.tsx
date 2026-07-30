@@ -3,6 +3,7 @@ import Link from "next/link";
 import { faqSections } from "@/lib/data";
 import { safeJsonLd } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
+import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata: Metadata = {
   title: "B2B Carpet Sourcing FAQ | Project & Technical Support | VISHOME",
@@ -80,8 +81,7 @@ export default function FAQPage() {
       </section>
 
       {/* Global Support CTA */}
-      <section className="relative overflow-hidden bg-primary py-16 text-center text-white md:py-24">
-        <div className="absolute inset-0 bg-[#0B2E4A] opacity-50"></div>
+      <FactoryCtaBackground className="py-16 text-center md:py-24">
         <div className="container-fox relative z-10">
           <h2 className="mb-8 text-3xl font-black uppercase leading-tight tracking-[0.08em] md:text-5xl md:tracking-widest">
             Ready to Start Your <br />Technical Assessment?
@@ -98,7 +98,7 @@ export default function FAQPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </FactoryCtaBackground>
     </div>
   );
 }

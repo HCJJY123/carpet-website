@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata: Metadata = {
   title: "About Vishome Global Commercial Carpet Co. Ltd. | Commercial Carpet Manufacturer",
@@ -345,7 +346,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* 12. Final CTA */}
-      <section className="relative overflow-hidden bg-[#0B2E4A] py-16 text-center text-white md:py-24">
+      <FactoryCtaBackground className="py-16 text-center md:py-24">
         <div className="container-fox relative z-10">
           <h2 className="text-3xl md:text-5xl font-black mb-10 uppercase tracking-widest leading-tight">
             Looking for a Reliable <br />Commercial Carpet Manufacturer?
@@ -362,7 +363,7 @@ export default function AboutUsPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </FactoryCtaBackground>
     </div>
   );
 }

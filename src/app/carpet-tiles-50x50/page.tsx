@@ -2,6 +2,7 @@ import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import { products } from "@/lib/data";
 import { productPath } from "@/lib/seo";
+import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata = {
   title: "50x50 Carpet Tile Specification & Installation Guide | Vishome",
@@ -136,7 +137,7 @@ export default function CarpetTiles50x50Page() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-accent">
+      <FactoryCtaBackground className="py-20" overlayClassName="bg-primary/68">
         <div className="container-fox text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 uppercase tracking-widest">Ready for Your Office Fit-out?</h2>
           <p className="text-white/80 mb-12 max-w-2xl mx-auto text-lg">
@@ -148,7 +149,7 @@ export default function CarpetTiles50x50Page() {
             </Link>
           </div>
         </div>
-      </section>
+      </FactoryCtaBackground>
     </div>
   );
 }
