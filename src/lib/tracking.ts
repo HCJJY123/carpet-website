@@ -31,6 +31,8 @@ declare global {
 }
 
 function conversionSendToFor(type: ClickConversionType) {
+  const legacyEmailConversionSendTo = "AW-18306142236/YUPmCKq-gc0cEJyghplE";
+  const emailConversionSendTo = process.env.NEXT_PUBLIC_GOOGLE_ADS_EMAIL_CONVERSION_SEND_TO;
   const map: Record<ClickConversionType, string | undefined> = {
     thank_you_page_view:
       process.env.NEXT_PUBLIC_GOOGLE_ADS_THANK_YOU_CONVERSION_SEND_TO ||
@@ -39,8 +41,9 @@ function conversionSendToFor(type: ClickConversionType) {
       process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_CONVERSION_SEND_TO ||
       "AW-18306142236/NqtSCK74gc0cEJyghplE",
     email_click:
-      process.env.NEXT_PUBLIC_GOOGLE_ADS_EMAIL_CONVERSION_SEND_TO ||
-      "AW-18306142236/YUPmCKq-gc0cEJyghplE",
+      emailConversionSendTo && emailConversionSendTo !== legacyEmailConversionSendTo
+        ? emailConversionSendTo
+        : "AW-18306142236/jHA5COn46NkcEJyghplE",
     phone_click:
       process.env.NEXT_PUBLIC_GOOGLE_ADS_PHONE_CONVERSION_SEND_TO ||
       "AW-18306142236/9VJZCK7t_swcEJyghplE",
