@@ -357,6 +357,7 @@ export const blogPosts: BlogPost[] = [
     description: "How modular carpet tiles reduce maintenance scope, replacement waste, and lifecycle cost in commercial spaces.",
     keywords: ["carpet tiles", "maintenance cost", "commercial flooring", "hospitality carpet ROI"],
     date: "2026-06-23",
+    dateModified: "2026-07-31",
     author: "Vishome Technical Team",
     category: "Cost & ROI",
     image: "/images/blog-series/blog-1/Blog_1_BeforeAfter_Comparison.webp",
@@ -369,42 +370,110 @@ export const blogPosts: BlogPost[] = [
     h1ImageAlt: "Blog 1 hotel lobby before and after comparison",
     sections: [
       {
-        title: "The Financial Reality",
-        paragraphs: [
-          "Commercial property managers face a difficult balance: preserving premium visual standards while controlling maintenance budgets and downtime.",
-          "Traditional broadloom often forces full-area replacement when damage is localized, which drives unnecessary material waste and labor cost.",
-          "Modular carpet tiles shift the maintenance model by allowing selective replacement in high-wear zones.",
-          "In practical operations, this reduces disruption windows and improves lifecycle budget predictability for hotels, offices, and retail chains."
-        ]
+        title: "Direct Answer: Where Carpet Tiles Create Lifecycle Value",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Commercial carpet tiles can reduce maintenance disruption when damage and wear are localized, the site retains spare tiles from the approved batch, and the installation system allows individual modules to be lifted and replaced. The saving does not come from the tile format alone. It comes from a maintenance plan that limits replacement to the affected zone instead of automatically removing a complete floor area.",
+          },
+          {
+            type: "table",
+            headers: ["Decision factor", "Broadloom planning question", "Carpet tile planning question"],
+            rows: [
+              ["Localized damage", "Can the damaged section be repaired without a visible seam?", "Are matching spare tiles available from the same approved batch?"],
+              ["Operational access", "How long must the full work zone be closed?", "Can replacement be phased by room, bay, or traffic lane?"],
+              ["Subfloor access", "Will large rolls restrict access to services?", "Does the modular system support access-floor maintenance?"],
+              ["Appearance control", "Can replacement material match the aged field?", "Was attic stock stored under suitable conditions?"],
+            ],
+            note: "This comparison is a procurement framework, not a universal cost guarantee. Labor rates, site access, adhesive, pattern direction, and retained stock determine the actual result.",
+          },
+          {
+            type: "callout",
+            label: "Buyer answer",
+            text: "For active offices, hotels, education spaces, and commercial interiors, modular replacement is most valuable when downtime and access are more expensive than the damaged flooring area itself.",
+          },
+        ],
       },
       {
-        title: "Installation Advantages",
-        paragraphs: [
-          "Modern carpet tiles integrate with HVAC access routes, cable systems, and phased renovation schedules without requiring full-site shutdown.",
-          "The 50x50 modular format supports faster logistics handling and staged installation by functional zone.",
-          "For active sites, teams can often complete section-based replacement within short operational windows.",
-          "This is especially valuable for facilities that cannot tolerate prolonged closure or full-floor shutdown."
-        ],
+        title: "Installation and Maintenance Conditions That Matter",
+        paragraphs: [],
         image: "/images/blog-series/blog-1/Blog_1_Installation_Process.webp",
         imageAlt: "Blog 1 installation process",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              { title: "Subfloor", text: "Record moisture, flatness, cleanliness, access-floor joints, and any preparation needed before installation." },
+              { title: "Installation system", text: "Confirm the releasable adhesive or approved tab system, application rate, open time, and compatibility with the selected backing." },
+              { title: "Layout", text: "Document monolithic, quarter-turn, ashlar, or brick direction so replacement tiles follow the approved visual pattern." },
+              { title: "Attic stock", text: "Reserve labelled spare tiles from the approved batch and store them flat, dry, and traceable to the installation zone." },
+              { title: "Cleaning plan", text: "Match vacuuming, spot treatment, extraction, and drying procedures to the fiber, backing, soil load, and operating hours." },
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "A modular format can support phased renovation and service-floor access, but poor subfloor preparation or an incompatible adhesive can erase that advantage. Procurement should therefore compare the complete flooring system, not only the tile price.",
+          },
+        ],
       },
       {
-        title: "ROI Calculation",
-        paragraphs: [
-          "A practical ROI model should include installation cost, replacement cycle, deep-cleaning frequency, and operational downtime.",
-          "For a 1,000 m² project, 5-year savings often come from reduced replacement scope rather than lower upfront price alone.",
-          "Higher-grade tiles can outperform low-cost options when measured against real operating conditions.",
-          "For B2B buyers, total ownership cost is the decision metric that matters most—not unit price in isolation."
-        ],
+        title: "Build a Lifecycle Cost Comparison Before Awarding the Order",
+        paragraphs: [],
         image: "/images/blog-series/blog-1/Blog_1_Durability_Infographic.webp",
         imageAlt: "Blog 1 durability and maintenance infographic",
-      }
+        blocks: [
+          {
+            type: "paragraph",
+            text: "A useful commercial carpet tile cost model separates known inputs from assumptions. Record material, freight, subfloor preparation, installation, planned spare stock, routine cleaning, periodic extraction, local repair labor, disposal, and operating downtime. Then compare the same service period and traffic conditions across every option.",
+          },
+          {
+            type: "table",
+            headers: ["Cost input", "What the buyer should request", "Why it changes the decision"],
+            rows: [
+              ["Initial supply", "Quoted construction, unit, quantity, packing, Incoterm, and waste allowance", "Prevents unlike products from being compared as if they were identical"],
+              ["Replacement scope", "Expected repair unit and retained-spares plan", "Shows whether a local defect triggers a tile, zone, or full-area replacement"],
+              ["Maintenance", "Approved cleaning method and frequency", "Reveals labor, equipment, chemistry, drying, and access requirements"],
+              ["Downtime", "Hours and areas unavailable during installation or repair", "Captures operational cost that is absent from the material quote"],
+            ],
+          },
+          {
+            type: "subheading",
+            title: "Procurement checklist",
+          },
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              { text: "Define the room type, traffic, rolling-chair use, cleaning schedule, subfloor, and local fire requirements." },
+              { text: "Compare fiber, pile construction, backing, total thickness, dimensional stability, and the documents supplied with the quote." },
+              { text: "Approve a physical sample and record the product, color, batch, layout direction, adhesive, and spare-tile quantity." },
+              { text: "Request pricing for supply, installation inputs, freight, and retained stock on the same commercial basis." },
+              { text: "Send the project area and requirements through the quotation form before treating any published range as a final price." },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Frequently Asked Buyer Questions",
+        paragraphs: [],
+        blocks: [
+          { type: "subheading", title: "How many spare carpet tiles should a project keep?" },
+          { type: "paragraph", text: "There is no universal percentage. The correct quantity depends on total area, number of colors, pattern direction, expected damage, future availability, and the number of operating zones. Ask the supplier and installer to agree a labelled attic-stock plan before shipment." },
+          { type: "subheading", title: "Are carpet tiles always cheaper than broadloom?" },
+          { type: "paragraph", text: "No. Material price, backing, subfloor preparation, installation method, waste, and local labor can make either format more economical. Carpet tiles become especially relevant when selective replacement, phased work, or access-floor flexibility has measurable value." },
+          { type: "subheading", title: "Can any damaged tile be replaced with a new one later?" },
+          { type: "paragraph", text: "A technically compatible replacement may still look different because of batch variation, wear, cleaning history, and direction. Retaining approved spare tiles and recording the layout reduces this risk." },
+          { type: "subheading", title: "What should be included in a factory quotation?" },
+          { type: "paragraph", text: "Provide project area, application, traffic, fiber preference, backing, subfloor, tile size, color, quantity, destination, delivery date, testing requirements, and Incoterm. The final quotation should identify the exact construction and order terms." },
+        ],
+      },
     ],
     suggestedLinks: [
-      { label: "Carpet Tile Products", href: "/products/carpet-tiles" },
-      { label: "Luxury 50x50 Hotel Carpet Tiles", href: "/products/carpet-tiles/luxury-hotel-carpet-tile-50x50cm" },
+      { label: "Compare Commercial Carpet Tiles", href: "/products/carpet-tiles" },
+      { label: "PVC-Free EcoCore PE Backing Carpet Tiles", href: "/products/carpet-tiles/ecocore-pe-backing-carpet-tiles" },
       { label: "Heavy-Duty Nylon Carpet Tiles", href: "/products/carpet-tiles/commercial-nylon-tiles" },
-      { label: "Request Quote", href: "/contact" }
+      { label: "Request Carpet Tile Quote", href: "/contact?product=Commercial%20Carpet%20Tiles#quote-form" }
     ]
   },
   {
@@ -593,6 +662,7 @@ export const blogPosts: BlogPost[] = [
     description: "Why low-cost carpet choices can damage hospitality ROI over a 10-year operating horizon.",
     keywords: ["hospitality ROI", "carpet lifecycle cost", "cheap carpet risk", "replacement strategy"],
     date: "2026-06-23",
+    dateModified: "2026-07-31",
     author: "Vishome Technical Team",
     category: "Cost & ROI",
     image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.webp",
@@ -603,44 +673,105 @@ export const blogPosts: BlogPost[] = [
     ],
     sections: [
       {
-        title: "Financial Analysis",
-        paragraphs: [
-          "Low unit pricing can be misleading when replacement cycles are short and operational disruption is frequent.",
-          "Lifecycle modeling should include reinstall labor, downtime, disposal, and turnover impact.",
-          "Over a 10-year horizon, repeated replacement often outweighs initial purchase savings.",
-          "Hospitality assets benefit more from predictable performance than from short-term material cost reductions."
-        ],
+        title: "Direct Answer: Compare Hospitality Carpet by Total Cost and Risk",
+        paragraphs: [],
         image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.webp",
         imageAlt: "Blog 5 ten-year cost comparison",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "A low carpet quotation is not automatically a low-cost hospitality decision. Hotel buyers should compare the exact construction, expected service conditions, replacement scope, installation access, cleaning program, spare material, freight, and documentation. The lowest initial figure becomes expensive when it creates premature replacement, repeated closure, visible mismatch, or a specification dispute.",
+          },
+          {
+            type: "table",
+            headers: ["Tender question", "Low-bid risk", "Procurement control"],
+            rows: [
+              ["Is the construction identical?", "Different fiber, pile weight, backing, or density is hidden behind a similar image", "Require a construction schedule and approved physical sample"],
+              ["Is the application defined?", "Guestroom, corridor, ballroom, and lobby traffic are treated as one specification", "Create zone-specific requirements and quantities"],
+              ["Are documents included?", "Required fire or material documents are assumed but not identified", "List the exact destination standard and documents in the RFQ"],
+              ["Is replacement planned?", "Roll layout, pattern repeat, attic stock, and future matching are ignored", "Approve the roll plan, waste allowance, batch record, and spare material"],
+            ],
+            note: "This framework identifies cost exposure. It does not predict a universal service life because traffic, cleaning, installation, and construction vary by project.",
+          },
+          {
+            type: "callout",
+            label: "Procurement principle",
+            text: "Compare suppliers on one written specification and one commercial basis before comparing the final price.",
+          },
+        ],
       },
       {
-        title: "Brand Impact",
-        paragraphs: [
-          "Guest-facing flooring condition directly shapes perceived quality and review sentiment.",
-          "Visible wear in lobbies and corridors can undermine premium positioning even when service standards remain high.",
-          "Carpet performance is therefore part of brand delivery—not a hidden back-of-house expense.",
-          "This link between surface condition and customer trust should be reflected in procurement criteria."
-        ],
+        title: "Separate the Hotel into Performance Zones",
+        paragraphs: [],
         image: "/images/blog-series/blog-5/Blog_5_Customer_Experience_Timeline.webp",
         imageAlt: "Blog 5 customer experience timeline",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "A hotel carpet specification should not use one generic requirement for every area. Guestrooms may prioritize comfort and design coordination; corridors add luggage-wheel traffic and long roll planning; ballrooms add dense event traffic and pattern-scale control; lobby and public circulation zones need their own soil, cleaning, and appearance-retention review.",
+          },
+          {
+            type: "table",
+            headers: ["Hotel zone", "Main buyer concern", "Information to send for quotation"],
+            rows: [
+              ["Guestrooms and suites", "Comfort, visual coordination, room-by-room installation", "Room plans, area, construction preference, color direction, and renovation schedule"],
+              ["Corridors and lift lobbies", "Continuous traffic, luggage wheels, repeat alignment, roll waste", "Corridor dimensions, door positions, roll width, artwork, and installation sequence"],
+              ["Ballrooms and banquet areas", "Dense traffic, movable furniture, event operations, pattern scale", "Floor plan, event use, construction, artwork, fire requirement, and deadline"],
+              ["Lobby and public circulation", "Soil entry, appearance retention, cleaning access, local repair strategy", "Entrance conditions, traffic routes, cleaning method, material brief, and required documents"],
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "When areas have different risks, they may need different carpet constructions even if the visual language is coordinated. A supplier should explain the proposed build for each zone rather than applying a decorative image to an unspecified base product.",
+          },
+        ],
       },
       {
-        title: "Cost Breakdown",
-        paragraphs: [
-          "A robust cost model should combine material, labor, maintenance, disruption, customer-impact, and equipment-wear factors.",
-          "Category-level breakdown makes trade-offs visible to finance, procurement, and operations teams.",
-          "This enables more defensible tender decisions and better capex planning.",
-          "In hospitality procurement, cost transparency is often the strongest defense against low-price, high-risk options."
-        ],
+        title: "Build a Defensible Hotel Carpet Cost Model",
+        paragraphs: [],
         image: "/images/blog-series/blog-5/Blog_5_Cost_Breakdown.webp",
         imageAlt: "Blog 5 cost breakdown visualization",
-      }
+        blocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              { title: "Supply", text: "Record the quoted construction, price unit, project quantity, waste, packing, and Incoterm." },
+              { title: "Approval", text: "Include artwork development, strike-off or sample, color approval, testing, and project-document review." },
+              { title: "Installation", text: "Include subfloor preparation, adhesive or underlay, roll planning, pattern alignment, labor, access, and protection." },
+              { title: "Operation", text: "Estimate routine cleaning, periodic extraction, stain response, drying, equipment, and restricted-area time." },
+              { title: "Replacement", text: "Model local repair or zone replacement, removal, disposal, freight, matching risk, and operating disruption." },
+            ],
+          },
+          {
+            type: "callout",
+            label: "Quote requirement",
+            text: "Send the floor plan, zone quantities, intended construction, artwork, fire-document requirement, destination, delivery date, and installation schedule. Ask every bidder to price the same scope before selecting a supplier.",
+          },
+        ],
+      },
+      {
+        title: "Frequently Asked Hospitality Procurement Questions",
+        paragraphs: [],
+        blocks: [
+          { type: "subheading", title: "Does a higher carpet price guarantee a longer service life?" },
+          { type: "paragraph", text: "No. Price alone does not prove construction, suitability, installation quality, cleaning compatibility, or service life. Compare the written specification, sample, project documents, and operating conditions." },
+          { type: "subheading", title: "Should guestrooms and corridors use the same carpet?" },
+          { type: "paragraph", text: "They may share a design direction, but the construction and roll planning should be checked separately. Corridors usually add sustained circulation, luggage wheels, long pattern runs, doors, turns, and higher replacement disruption." },
+          { type: "subheading", title: "What is the most common tender comparison mistake?" },
+          { type: "paragraph", text: "Comparing unit prices without confirming that fiber, pile, backing, weight, width, pattern repeat, test documents, quantity, packing, and trade terms are equivalent." },
+          { type: "subheading", title: "When should a hotel request a sample or strike-off?" },
+          { type: "paragraph", text: "Before bulk approval. The buyer should use the sample or strike-off to review color, pattern scale, surface, construction, and the reference used for production approval." },
+          { type: "subheading", title: "What information produces a more accurate quotation?" },
+          { type: "paragraph", text: "Provide the destination, floor plans, zone areas, construction preference, pattern files, color references, roll-width constraints, fire standard, project schedule, quantity, packing, and preferred Incoterm." },
+        ],
+      },
     ],
     suggestedLinks: [
-      { label: "Wool-Blend Hotel Broadloom", href: "/products/wall-to-wall/luxury-hotel-broadloom" },
+      { label: "Compare Hotel Wall-to-Wall Carpet", href: "/products/wall-to-wall" },
       { label: "Custom Hotel Room Carpet", href: "/products/wall-to-wall/custom-luxury-hotel-room-carpet" },
-      { label: "Hospitality Solutions", href: "/projects" },
-      { label: "Request Project Costing", href: "/contact" }
+      { label: "Heavy-Duty Public Area Carpet", href: "/products/public-area/public-area-heavy-duty" },
+      { label: "Request Hotel Carpet Costing", href: "/contact?product=Hotel%20Carpet#quote-form" }
     ]
   },
   {

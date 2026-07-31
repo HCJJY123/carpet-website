@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { brandInfo, products } from "@/lib/data";
 import ProductImage from "@/components/ProductImage";
+import AnswerFirst from "@/components/AnswerFirst";
 import { ProductTrackedLink, ProductViewEvent } from "@/components/ProductAnalytics";
 import { ProductSpecCards } from "@/components/ProductConversion";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
@@ -352,6 +353,33 @@ export default function CustomSculptedWoolLobbyRugPage() {
           </div>
         </div>
       </section>
+
+      <AnswerFirst
+        title="When Is a Custom Sculpted Wool Rug the Right Lobby Choice?"
+        answer="Specify this product as a made-to-order feature rug for a controlled indoor seating, reception, lounge, or display zone where the rug can be sized around furniture and circulation. It is not a substitute for continuous wall-to-wall public-area carpet. Buyers should review traffic, entrance moisture, cleaning, backing, edge finish, local fire requirements, and the relationship between rug dimensions and the furniture plan before approval."
+        facts={[
+          { label: "Product Type", value: "Separate decorative feature rug" },
+          { label: "Customization", value: "Size, color, material and pattern scale" },
+          { label: "Quote Inputs", value: "Floor plan, furniture layout, dimensions, quantity and destination" },
+          { label: "Buyer Checks", value: "Traffic, cleaning, edge finish, backing and local fire requirements" },
+        ]}
+        moq={[
+          { label: "Sample", value: product.moqTiers.sample },
+          { label: "Trial Order", value: product.moqTiers.trialOrder },
+          { label: "Project MOQ", value: product.moqTiers.project },
+        ]}
+        suitableFor={[
+          "Hotel lobbies, executive lounges, reception seating and premium showrooms",
+          "Designer-led projects with approved dimensions, colors and furniture layouts",
+        ]}
+        notSuitableFor={[
+          "Wet entrances, airport corridors or continuous luggage-wheel circulation by default",
+          "Wall-to-wall coverage or projects without confirmed cleaning and fire requirements",
+        ]}
+        evidence="The product page was reviewed on July 31, 2026. Final material composition, pile profile, sculpting depth, commercial suitability, price and lead time are confirmed only after the size and project specification are approved."
+        quoteHref="/contact?product=Custom%20Sculpted%20Wool%20Lobby%20Rug#quote-form"
+        quoteLabel="Request a Rug Specification Review"
+      />
 
       <section className="section-padding bg-primary text-white">
         <div className="container-fox">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
+import AnswerFirst from "@/components/AnswerFirst";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 
 const productId = "ecocore-pe-backing-carpet-tiles";
@@ -63,26 +64,33 @@ export default function EcoCorePeBackingProductPage() {
 
   const breadcrumbJsonLd = productBreadcrumbJsonLd(p);
 
+  const faqs = [
+    {
+      question: "What is PE backing carpet tile?",
+      answer: "PE backing carpet tile uses a polyethylene backing structure instead of conventional PVC backing. Buyers should request the material and emissions documents required by their project rather than assuming that one backing label satisfies every green-building standard.",
+    },
+    {
+      question: "Where can Vishomecarpet EcoCore PE Backing Carpet Tiles be used?",
+      answer: "They are intended for offices, coworking spaces, schools, public workspaces, corridors, raised-floor areas, and commercial interiors that benefit from modular replacement. Traffic, fire, acoustic, antistatic, and subfloor requirements must still be confirmed for the project.",
+    },
+    {
+      question: "Can individual carpet tiles be replaced?",
+      answer: "Yes. The 50x50cm modular format allows damaged or worn tiles to be replaced individually when spare tiles from the approved production batch are retained and the installation system supports local removal.",
+    },
+    {
+      question: "What should a buyer send for an EcoCore quotation?",
+      answer: "Send the project area, destination, application, traffic requirement, subfloor or raised-floor details, required backing documents, color direction, target delivery date, and any mandatory test standards.",
+    },
+  ];
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What is PE backing carpet tile?",
-        acceptedAnswer: { "@type": "Answer", text: "PE backing carpet tile uses a polyethylene backing structure instead of conventional PVC backing, making it suitable for projects that prioritize PVC-free and sustainability-oriented flooring options." },
-      },
-      {
-        "@type": "Question",
-        name: "Where can Vishomecarpet EcoCore PE Backing Carpet Tiles be used?",
-        acceptedAnswer: { "@type": "Answer", text: "They are suitable for offices, green buildings, coworking spaces, schools, public workspaces, corridors, and commercial interiors requiring modular replacement and low-maintenance flooring." },
-      },
-      {
-        "@type": "Question",
-        name: "Can individual carpet tiles be replaced?",
-        acceptedAnswer: { "@type": "Answer", text: "Yes. Modular 50x50cm carpet tiles can be replaced individually, helping reduce maintenance downtime and lifecycle waste." },
-      },
-    ],
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
   };
 
   return (
@@ -163,6 +171,33 @@ export default function EcoCorePeBackingProductPage() {
         </div>
       </section>
 
+      <AnswerFirst
+        title="When Should a Buyer Specify PVC-Free PE Backing Carpet Tiles?"
+        answer="Specify EcoCore when a modular 50x50 carpet tile and a PVC-free PE backing construction match the project's material brief, office traffic, subfloor, maintenance, and replacement strategy. Do not treat the backing name as automatic proof of a green-building credit. Confirm the exact composition, emissions, fire, acoustic, antistatic, and destination-market documents required before approval."
+        facts={[
+          { label: "Tile Format", value: "50 x 50 cm modular carpet tile" },
+          { label: "Backing", value: "PVC-free PE backing construction" },
+          { label: "Best-Fit Planning", value: "Offices, raised floors and phased tile replacement" },
+          { label: "Buyer Checks", value: "Material documents, traffic, fire, emissions, subfloor and adhesive" },
+        ]}
+        moq={[
+          { label: "Sample", value: p.moqTiers.sample },
+          { label: "Trial Order", value: p.moqTiers.trialOrder },
+          { label: "Project MOQ", value: p.moqTiers.project },
+        ]}
+        suitableFor={[
+          "Office, coworking, education and raised-floor commercial interiors",
+          "Projects that plan for individual-tile replacement and retained spare stock",
+        ]}
+        notSuitableFor={[
+          "Wet or outdoor areas without an engineered flooring system",
+          "Projects that require an unverified environmental certification or test result",
+        ]}
+        evidence="Product information was reviewed on July 31, 2026. Final material declarations, test documents, price, availability, MOQ and lead time are supplied against the approved product specification and quotation."
+        quoteHref="/contact?product=EcoCore%20PE%20Backing%20Carpet%20Tiles#quote-form"
+        quoteLabel="Request EcoCore Documents and Quote"
+      />
+
       <section className="section-padding bg-primary text-white">
         <div className="container-fox grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
@@ -224,6 +259,20 @@ export default function EcoCorePeBackingProductPage() {
 
       <BuyerReasons product={p} />
 
+      <section className="section-padding border-y border-border bg-surface">
+        <div className="container-fox max-w-5xl">
+          <h2 className="mb-10 text-3xl font-black uppercase text-primary md:text-5xl">EcoCore Buyer FAQ</h2>
+          <div className="grid gap-5 lg:grid-cols-2">
+            {faqs.map((item) => (
+              <details key={item.question} className="border border-border bg-white p-6">
+                <summary className="cursor-pointer font-black text-primary">{item.question}</summary>
+                <p className="mt-4 leading-relaxed text-muted">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding">
         <div className="container-fox grid gap-8 lg:grid-cols-2">
           <div className="overflow-hidden rounded-2xl border border-border">
@@ -231,6 +280,24 @@ export default function EcoCorePeBackingProductPage() {
           </div>
           <div className="overflow-hidden rounded-2xl border border-border">
             <ProductImage src={productImages.green} alt="Green building office with eco carpet tiles" className="aspect-[4/3] w-full" />
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-surface">
+        <div className="container-fox">
+          <h2 className="mb-8 text-3xl font-black uppercase text-primary">Related Carpet Tiles and Procurement Guides</h2>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              ["Commercial Carpet Tile Collection", "/products/carpet-tiles"],
+              ["Heavy-Duty Nylon Carpet Tiles", "/products/carpet-tiles/commercial-nylon-tiles"],
+              ["Maintenance and Lifecycle Cost Guide", "/blog/commercial-space-carpet-tiles-maintenance-cost-guide"],
+              ["Request EcoCore Quotation", "/contact?product=EcoCore%20PE%20Backing%20Carpet%20Tiles#quote-form"],
+            ].map(([label, href]) => (
+              <Link key={href} href={href} className="border border-border bg-white p-6 font-black uppercase transition-colors hover:border-accent hover:text-accent">
+                {label} <span aria-hidden="true">→</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

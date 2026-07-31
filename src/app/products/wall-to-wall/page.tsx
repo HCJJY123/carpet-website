@@ -182,7 +182,7 @@ export default function CategoryPage() {
           { label: "Construction Options", value: "Printed, cut-pile, Axminster and project broadloom" },
           { label: "Published FOB Range", value: "US$3.10-38.00 / SQM across current products" },
           { label: "Typical Production", value: "15-35 days after approvals" },
-          { label: "Planning Inputs", value: "Floor plan, roll width, pattern repeat, waste allowance" },
+          { label: "Buyer Checks", value: "Floor plan, fire requirement, roll plan, repeat and waste allowance" },
         ]}
         moq={[
           { label: "Sample", value: "Material swatch or printed strike-off by construction" },
@@ -197,7 +197,7 @@ export default function CategoryPage() {
           "Wet or outdoor areas without a purpose-built flooring system",
           "Ordering from artwork alone without site measurements and fire requirements",
         ]}
-        evidence="The ranges are derived from the seven products currently listed on this category page. Final price, availability, fire documentation, pattern feasibility, and lead time are confirmed only after specification and sample review."
+        evidence="The ranges are derived from the seven products currently listed on this category page and were reviewed on July 31, 2026. Final price, availability, fire documentation, pattern feasibility, roll planning, and lead time are confirmed only after specification and sample review."
         quoteHref="/contact?product=Wall-to-Wall%20Carpet#quote-form"
         quoteLabel="Request Broadloom Recommendation"
       />

@@ -13,7 +13,7 @@ export default function FactoryCtaBackground({
 }: FactoryCtaBackgroundProps) {
   return (
     <section className={`relative isolate overflow-hidden bg-primary text-white ${className}`}>
-      <picture className="absolute inset-0 -z-20 block h-full w-full" aria-hidden="true">
+      <picture className="absolute inset-0 -z-20 block h-full w-full">
         <source
           srcSet="/images/home/factory-production-scroll/factory-carpet-production-640.webp 640w, /images/home/factory-production-scroll/factory-carpet-production-960.webp 960w, /images/home/factory-production-scroll/factory-carpet-production-1440.webp 1440w, /images/home/factory-production-scroll/factory-carpet-production-1600.webp 1600w"
           sizes="116vw"

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
+import AnswerFirst from "@/components/AnswerFirst";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 import ProcurementSnapshot from "@/components/ProcurementSnapshot";
 
@@ -231,6 +232,33 @@ export default function GoldMiningCarpetMatPage() {
         </div>
       </section>
 
+      <AnswerFirst
+        title="Which Sluice Mat Profile Should a Gold-Recovery Buyer Order?"
+        answer="Select sluice matting by equipment geometry, water flow, sediment load, target particle range, width, thickness, and cleaning method. The listed PVC coil mat is intended as a capture layer inside compatible sluice, dredge, trommel, or concentrator systems. A sample or trial section should be evaluated in the buyer's own operating conditions before a project order because recovery performance depends on the complete system, not the mat alone."
+        facts={[
+          { label: "Standard Listed Roll", value: "1 m x 15 m" },
+          { label: "Listed Thicknesses", value: "10 mm, 15 mm and 20 mm" },
+          { label: "Quote Inputs", value: "Profile, width, thickness, roll length, quantity and destination" },
+          { label: "Buyer Checks", value: "Flow, riffle layout, sediment load, retention and clean-out method" },
+        ]}
+        moq={[
+          { label: "Sample", value: p.moqTiers.sample },
+          { label: "Trial Order", value: p.moqTiers.trialOrder },
+          { label: "Project MOQ", value: p.moqTiers.project },
+        ]}
+        suitableFor={[
+          "Compatible placer, sluice, dredge, trommel and concentrator recovery systems",
+          "OEM, distributor and equipment-builder orders with a defined mat specification",
+        ]}
+        notSuitableFor={[
+          "Use as architectural flooring or as a stand-alone guarantee of recovery rate",
+          "Ordering without confirming equipment width, profile, flow and clean-out procedure",
+        ]}
+        evidence="Specifications and buyer guidance were reviewed on July 31, 2026. Vishomecarpet does not claim a universal recovery percentage; buyers should validate the selected profile in their own equipment and material conditions before scale-up."
+        quoteHref="/contact?product=Gold%20Mining%20Carpet%20Mat#quote-form"
+        quoteLabel="Request a Sluice Mat Recommendation"
+      />
+
       <ProcurementSnapshot
         title="Gold Mining Mat Wholesale Facts"
         facts={[
@@ -342,6 +370,23 @@ export default function GoldMiningCarpetMatPage() {
       </section>
 
       <BuyerReasons product={p} />
+      <section className="section-padding bg-surface">
+        <div className="container-fox">
+          <h2 className="mb-8 text-3xl font-black uppercase text-primary">Related Mining Resources and Product Links</h2>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              ["Public Area Product Collection", "/products/public-area"],
+              ["Gold Mining Sluice Project Case", "/projects/gold-mining-sluice-carpet-peru"],
+              ["Sluice Matting Selection Guide", "/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide"],
+              ["Request Mining Mat Quote", "/contact?product=Gold%20Mining%20Carpet%20Mat#quote-form"],
+            ].map(([label, href]) => (
+              <Link key={href} href={href} className="border border-border bg-white p-6 font-black uppercase transition-colors hover:border-accent hover:text-accent">
+                {label} <span aria-hidden="true">→</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

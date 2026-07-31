@@ -45,8 +45,8 @@ const faqs = [
 const relatedLinks = [
   { label: "Wall-to-Wall Carpets", href: "/products/wall-to-wall" },
   { label: "Custom Floral Printed Carpet", href: "/products/wall-to-wall/custom-floral-printed-hotel-carpet" },
-  { label: "Broadloom Decision Guide", href: "/blog/modular-carpet-tiles-vs-broadloom-property-decision-framework" },
-  { label: "Seaming Excellence Guide", href: "/blog/seaming-excellence-invisible-commercial-carpet-seams-guide" }
+  { label: "Broadloom Construction Guide", href: "/blog/axminster-vs-wilton-vs-tufted-hospitality-guide" },
+  { label: "Hotel Corridor Specification Guide", href: "/blog/hotel-corridor-carpet-design-noise-stain-maintenance" }
 ];
 
 export const metadata: Metadata = {

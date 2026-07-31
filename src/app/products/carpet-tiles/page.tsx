@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { products } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
+import AnswerFirst from "@/components/AnswerFirst";
 import ProcurementSnapshot from "@/components/ProcurementSnapshot";
 import TechnicalSourcePanel from "@/components/TechnicalSourcePanel";
 import FactoryCtaBackground from "@/components/FactoryCtaBackground";
@@ -125,7 +126,7 @@ export default function CategoryPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
       <section className="relative isolate overflow-hidden bg-[#102A43] py-20 text-center md:py-24">
-        <picture className="absolute inset-0 -z-20 block h-full w-full" aria-hidden="true">
+        <picture className="absolute inset-0 -z-20 block h-full w-full">
           <source
             srcSet="/images/category/carpet-tiles-hero-factory/carpet-tiles-factory-hero-640.webp 640w, /images/category/carpet-tiles-hero-factory/carpet-tiles-factory-hero-960.webp 960w, /images/category/carpet-tiles-hero-factory/carpet-tiles-factory-hero-1440.webp 1440w, /images/category/carpet-tiles-hero-factory/carpet-tiles-factory-hero-1920.webp 1920w"
             sizes="100vw"
@@ -153,6 +154,32 @@ export default function CategoryPage() {
           <p className="mt-5 text-xs font-bold uppercase tracking-[0.12em] text-white/65">Export sales response within 24 hours · FOB / CIF / DAP support</p>
         </div>
       </section>
+      <AnswerFirst
+        title="Which Commercial Carpet Tile Should a Project Buyer Choose?"
+        answer="Choose commercial carpet tiles by traffic level, fiber, backing, subfloor, maintenance plan, and replacement strategy rather than color alone. Nylon is generally the stronger starting point for demanding traffic; polypropylene can suit value-led areas; PVC-free PE backing is relevant when the project specifically requires that construction. Confirm the exact fire, antistatic, acoustic, and dimensional-stability documents required for the destination market before approving an order."
+        facts={[
+          { label: "Standard Listed Size", value: "50 x 50 cm modular tiles" },
+          { label: "Fiber Options", value: "Nylon, Nylon 6.6 and polypropylene" },
+          { label: "Backing Options", value: "Bitumen, PVC, cushion and PVC-free PE" },
+          { label: "Buyer Checks", value: "Traffic, fire, subfloor, adhesive and spare-tile plan" },
+        ]}
+        moq={[
+          { label: "Sample", value: "Confirm color, texture, fiber and backing" },
+          { label: "Trial Order", value: "Confirmed by product, color and production feasibility" },
+          { label: "Project MOQ", value: "Generally 200-500 SQM across the listed range" },
+        ]}
+        suitableFor={[
+          "Offices, hotels, education, healthcare support areas and phased renovation",
+          "Projects that value individual-tile replacement and access-floor flexibility",
+        ]}
+        notSuitableFor={[
+          "Wet or outdoor areas without a purpose-built flooring system",
+          "Buying by appearance alone without traffic, fire and installation requirements",
+        ]}
+        evidence="The comparison is based on the eight products currently listed on this category page and was reviewed on July 31, 2026. Final construction, test documents, price, availability, MOQ and lead time are confirmed against the selected product and project specification."
+        quoteHref="/contact?product=Commercial%20Carpet%20Tiles#quote-form"
+        quoteLabel="Request a Tile Recommendation"
+      />
       <ProcurementSnapshot
         title="Commercial Carpet Tile Buying Facts"
         facts={[

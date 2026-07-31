@@ -19,10 +19,8 @@ const staticRoutes: StaticRoute[] = [
   { url: "/", modified: "2026-07-27", priority: 1.0, changeFrequency: "weekly" },
   { url: "/products", modified: "2026-07-23", priority: 0.9, changeFrequency: "monthly" },
   { url: "/commercial-carpet-manufacturer", modified: "2026-07-28", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/commercial-carpet-tiles", modified: "2026-07-25", priority: 0.8, changeFrequency: "monthly" },
   { url: "/hotel-carpet", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
   { url: "/carpet-tiles-50x50", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/natural-sisal-carpet", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/projects", modified: "2026-07-30", priority: 0.85, changeFrequency: "monthly" },
   { url: "/blog", modified: "2026-07-30", priority: 0.85, changeFrequency: "weekly" },
   { url: "/about-us", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
@@ -49,6 +47,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     localizedLandings: new Date("2026-07-24T00:00:00.000Z"),
     solutions: new Date("2026-07-26T00:00:00.000Z"),
   };
+  const categoryLastModified: Record<string, Date> = {
+    "carpet-tiles": new Date("2026-07-31T00:00:00.000Z"),
+    "wall-to-wall": new Date("2026-07-31T00:00:00.000Z"),
+  };
+  const productLastModified: Record<string, Date> = {
+    "ecocore-pe-backing-carpet-tiles": new Date("2026-07-31T00:00:00.000Z"),
+    "public-area-heavy-duty": new Date("2026-07-31T00:00:00.000Z"),
+    "gold-mining-carpet-mat": new Date("2026-07-31T00:00:00.000Z"),
+    "custom-sculpted-wool-lobby-rug": new Date("2026-07-31T00:00:00.000Z"),
+  };
   const imageUrl = (path: string) => (path.startsWith("http") ? path : `${BASE}${path}`);
   const uniqueImages = (images: Array<string | undefined>) => [
     ...new Set(images.filter((image): image is string => Boolean(image)).map(imageUrl)),
@@ -63,7 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const categoryEntries: MetadataRoute.Sitemap = productCategories.map((category) => ({
     url: `${BASE}/products/${category.slug}`,
-    lastModified: contentDates.catalog,
+    lastModified: categoryLastModified[category.slug] ?? contentDates.catalog,
     changeFrequency: "monthly",
     priority: 0.9,
     images: uniqueImages([category.image]),
@@ -71,7 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const productEntries: MetadataRoute.Sitemap = products.map((product) => ({
     url: `${BASE}${productPath(product.id)}`,
-    lastModified: contentDates.catalog,
+    lastModified: productLastModified[product.id] ?? contentDates.catalog,
     changeFrequency: "monthly",
     priority: product.category === "carpet-tiles" ? 0.9 : 0.85,
     images: uniqueImages([product.image, ...(product.gallery?.map((image) => image.src) ?? [])]),

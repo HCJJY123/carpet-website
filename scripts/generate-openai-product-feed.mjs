@@ -16,9 +16,9 @@ function loadSiteData() {
       esModuleInterop: true,
     },
   }).outputText;
-  const module = { exports: {} };
-  new Function("exports", "module", compiled)(module.exports, module);
-  return module.exports;
+  const compiledModule = { exports: {} };
+  new Function("exports", "module", compiled)(compiledModule.exports, compiledModule);
+  return compiledModule.exports;
 }
 
 function csvCell(value) {

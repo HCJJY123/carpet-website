@@ -129,7 +129,7 @@ export default async function ProjectDetailPage({ params }: Props) {
     articleSection: profile.eyebrow,
     about: profile.topics.map((name) => ({ "@type": "Thing", name })),
     mentions: recommendedProducts.map((item) => ({
-      "@type": "Product",
+      "@type": "Thing",
       name: item.name,
       url: absoluteUrl(productPath(item.id)),
     })),
