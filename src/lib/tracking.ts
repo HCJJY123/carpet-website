@@ -89,7 +89,10 @@ export function trackLeadConversion({
 }: LeadConversionPayload) {
   if (typeof window === "undefined") return;
 
-  const conversionSendTo = process.env.NEXT_PUBLIC_GOOGLE_ADS_FORM_CONVERSION_SEND_TO;
+  const conversionSendTo =
+    process.env.NEXT_PUBLIC_GOOGLE_ADS_FORM_CONVERSION_SEND_TO ||
+    process.env.NEXT_PUBLIC_GOOGLE_ADS_THANK_YOU_CONVERSION_SEND_TO ||
+    "AW-18306142236/MKQzCMXB_swcEJyghplF";
   const attribution = getAttributionForEvent();
   const leadPayload = {
     event_category: "lead",

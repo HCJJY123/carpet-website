@@ -176,6 +176,9 @@ export default function MarketingTracking() {
       if (!anchor) return;
 
       let href = anchor.getAttribute("href") || "";
+      const resolvedUrl = new URL(anchor.href, window.location.origin);
+      const isSameOrigin = resolvedUrl.origin === window.location.origin;
+      const normalizedPath = `${resolvedUrl.pathname}${resolvedUrl.search}${resolvedUrl.hash}`;
       const text = anchor.textContent?.trim() || "";
       const leadData = {
         placement: anchor.dataset.whatsappPlacement,
@@ -198,9 +201,9 @@ export default function MarketingTracking() {
         });
       }
 
-      if (href === "#quote-form" || href.startsWith("/contact")) {
+      if (href === "#quote-form" || (isSameOrigin && (resolvedUrl.pathname === "/contact" || normalizedPath.startsWith("/contact")))) {
         trackAnalyticsEvent("quote_form_click", {
-          href,
+          href: isSameOrigin ? normalizedPath : href,
           link_text: text,
           page_path: window.location.pathname,
         });
@@ -249,9 +252,9 @@ export default function MarketingTracking() {
         return;
       }
 
-      if (href.startsWith("/request-sample-box")) {
+      if (isSameOrigin && resolvedUrl.pathname === "/request-sample-box") {
         trackInteractionConversion("request_sample_box_click", {
-          href,
+          href: normalizedPath,
           link_text: text,
           page_path: window.location.pathname,
         });
