@@ -34,7 +34,10 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://www.vishomecarpet.com/sitemap.xml",
+    sitemap: [
+      "https://www.vishomecarpet.com/sitemap.xml",
+      "https://www.vishomecarpet.com/sitemap-ru.xml",
+    ],
     host: "www.vishomecarpet.com",
   };
 }

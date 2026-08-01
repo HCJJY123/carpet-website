@@ -3,8 +3,16 @@ import Link from "next/link";
 import { products } from "@/lib/data";
 import { absoluteUrl } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
+import RuLeadCaptureForm from "@/components/RuLeadCaptureForm";
+import { ruB2BPages } from "@/lib/ru-b2b-pages";
 
 const ruPages = [
+  ...ruB2BPages.slice(0, 4).map((page) => ({
+    href: `/ru/${page.slug}`,
+    title: page.title,
+    description: page.description,
+    productId: page.primaryProductId,
+  })),
   {
     href: "/ru/products/carpet-tiles/nylon-office-carpet-tile",
     title: "Ковровая плитка 50×50 см",
@@ -58,12 +66,16 @@ export default function RuHubPage() {
       <section className="bg-primary py-16 text-white md:py-24">
         <div className="container-fox">
           <p className="mb-4 text-[10px] font-black uppercase tracking-[0.28em] text-accent">Прямые поставки с фабрики</p>
-          <h1 className="mb-6 max-w-3xl text-3xl font-black uppercase leading-tight md:text-5xl">
-            Коммерческие ковровые покрытия для Казахстана и Узбекистана
+          <h1 className="mb-6 max-w-4xl text-3xl font-black leading-tight md:text-5xl">
+            Коммерческие ковровые покрытия для гостиниц, офисов и общественных помещений
           </h1>
           <p className="max-w-2xl text-white/80 leading-relaxed">
-            Фабрика Vishomecarpet поставляет ковровую плитку, коммерческий и гостиничный ковролин в рулонах, а также коврики для золотодобычи. Поддерживаем экспортные поставки в Казахстан, Узбекистан и другие страны СНГ.
+            Производство ковролина и ковровой плитки на заказ для коммерческих проектов. Поставка напрямую с фабрики в Китае, образцы и проектный расчет для российских закупщиков.
           </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link href="/ru/kovrolin-dlya-gostinits#ru-quote-form" className="btn-fox-orange text-center">Получить расчет стоимости</Link>
+            <Link href="/request-sample-box" className="btn-fox-outline border-white/45 text-center text-white hover:border-accent">Запросить образцы</Link>
+          </div>
         </div>
       </section>
 
@@ -90,6 +102,39 @@ export default function RuHubPage() {
               </Link>
             );
           })}
+        </div>
+      </section>
+
+      <section className="section-padding border-y border-border bg-surface">
+        <div className="container-fox grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.16em] text-accent">Для закупщиков</p>
+            <h2 className="text-3xl font-black text-primary md:text-4xl">Кому помогает русскоязычная команда</h2>
+            <p className="mt-5 text-sm leading-relaxed text-muted">Импортеры, дизайнеры, гостиничные проекты и строительные компании могут отправить одну заявку с площадью, назначением, сроком и городом поставки.</p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {ruB2BPages.slice(4).map((page) => (
+              <Link key={page.slug} href={`/ru/${page.slug}`} className="border border-border bg-white p-5 font-black text-primary transition-colors hover:border-accent hover:text-accent">
+                {page.title} →
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="ru-quote-form" className="section-padding" data-funnel-section="ru_home_quote">
+        <div className="container-fox max-w-5xl">
+          <div className="mb-9 text-center">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.16em] text-accent">Запрос проекта</p>
+            <h2 className="text-3xl font-black text-primary md:text-4xl">Получить расчет стоимости</h2>
+          </div>
+          <RuLeadCaptureForm
+            formName="ru_russia_home_quote"
+            productDefault="Коммерческий ковролин / ковровая плитка"
+            submitLabel="Отправить запрос"
+            market="russia"
+            introText="Укажите тип объекта, площадь и город доставки. После проверки спецификации команда подтвердит доступные варианты и следующий шаг."
+          />
         </div>
       </section>
     </div>

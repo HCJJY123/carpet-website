@@ -19,12 +19,14 @@ const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "GT-NMDDTW67";
 const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18306142236";
 const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "xgg9z07tsm";
 const gtmContainerId = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID;
+const yandexMetricaId = process.env.NEXT_PUBLIC_YANDEX_METRICA_ID;
 
 declare global {
   interface Window {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
     clarity?: (...args: unknown[]) => void;
+    ym?: (...args: unknown[]) => void;
   }
 }
 
@@ -313,6 +315,17 @@ export default function MarketingTracking() {
           `}
         </Script>
       )}
+
+      {yandexMetricaId ? (
+        <Script id="yandex-metrica" strategy="afterInteractive">
+          {`
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            window.ym(${JSON.stringify(yandexMetricaId)}, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+          `}
+        </Script>
+      ) : null}
     </>
   );
 }

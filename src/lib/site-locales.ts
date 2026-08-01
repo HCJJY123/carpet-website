@@ -32,6 +32,15 @@ export const nativeLocalizedPaths = [
   "/ru/products/carpet-tiles/nylon-office-carpet-tile",
   "/ru/products/public-area/public-area-heavy-duty",
   "/ru/products/public-area/gold-mining-carpet-mat",
+  "/ru/kovrolin-dlya-gostinits",
+  "/ru/kovrovaya-plitka",
+  "/ru/ofisnyy-kovrolin",
+  "/ru/kommercheskiy-kovrolin",
+  "/ru/dlya-importerov-i-distributorov",
+  "/ru/dlya-dizaynerov-i-arkhitektorov",
+  "/ru/dlya-gostinichnykh-proektov",
+  "/ru/dlya-stroitelnykh-kompaniy",
+  "/ru/optovye-postavki-kovrolina",
 ] as const;
 
 export function isTranslatedSiteLocale(value: string | undefined): value is TranslatedSiteLocale {

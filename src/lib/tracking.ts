@@ -27,6 +27,7 @@ declare global {
     gtag?: (...args: unknown[]) => void;
     clarity?: (...args: unknown[]) => void;
     dataLayer?: unknown[];
+    ym?: (...args: unknown[]) => void;
   }
 }
 
@@ -73,6 +74,11 @@ export function trackAnalyticsEvent(event: string, payload: Record<string, unkno
 
   if (typeof window.clarity === "function") {
     window.clarity("event", event);
+  }
+
+  const yandexMetricaId = process.env.NEXT_PUBLIC_YANDEX_METRICA_ID;
+  if (yandexMetricaId && typeof window.ym === "function") {
+    window.ym(Number(yandexMetricaId), "reachGoal", event, fullPayload);
   }
 }
 

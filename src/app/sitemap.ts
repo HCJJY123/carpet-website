@@ -5,6 +5,7 @@ import { localizedLandings } from "@/lib/localized-landings";
 import { productPath } from "@/lib/seo";
 import { solutionPages } from "@/lib/solution-data";
 import { getCaseSeoProfile, projectPath } from "@/lib/case-seo";
+import { ruB2BPages } from "@/lib/ru-b2b-pages";
 
 const BASE = "https://www.vishomecarpet.com";
 
@@ -131,5 +132,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticEntries, ...categoryEntries, ...productEntries, ...projectEntries, ...solutionEntries, ...blogEntries, ...localizedLandingEntries];
+  const ruB2BEntries: MetadataRoute.Sitemap = ruB2BPages.map((page) => {
+    const product = products.find((item) => item.id === page.primaryProductId);
+    return {
+      url: `${BASE}/ru/${page.slug}`,
+      lastModified: new Date("2026-08-01T00:00:00.000Z"),
+      changeFrequency: "monthly" as const,
+      priority: 0.88,
+      images: product ? uniqueImages([product.image]) : undefined,
+    };
+  });
+
+  return [...staticEntries, ...categoryEntries, ...productEntries, ...projectEntries, ...solutionEntries, ...blogEntries, ...localizedLandingEntries, ...ruB2BEntries];
 }

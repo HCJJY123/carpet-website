@@ -12,6 +12,7 @@ type RuLeadCaptureFormProps = {
   productDefault?: string;
   submitLabel: string;
   introText?: string;
+  market?: "cis" | "russia";
 };
 
 export default function RuLeadCaptureForm({
@@ -19,6 +20,7 @@ export default function RuLeadCaptureForm({
   productDefault = "",
   submitLabel,
   introText,
+  market = "cis",
 }: RuLeadCaptureFormProps) {
   const router = useRouter();
   const formStarted = useRef(false);
@@ -35,6 +37,7 @@ export default function RuLeadCaptureForm({
     const formData = new FormData(form);
     formData.set("form_name", formName);
     formData.set("language", "ru");
+    formData.set("market", market);
     formData.set("page_url", window.location.href);
     formData.set("page_path", window.location.pathname);
     formData.set("submitted_at", new Date().toISOString());
@@ -86,6 +89,15 @@ export default function RuLeadCaptureForm({
         productViewCount: signals.productViewCount,
         maxEngagedSeconds: signals.maxEngagedSeconds,
       });
+      if (market === "russia") {
+        trackAnalyticsEvent("ru_quote_form_submit", {
+          form_name: formName,
+          product: String(formData.get("product") || ""),
+          quantity: String(formData.get("quantity") || ""),
+          country: String(formData.get("country") || ""),
+          lead_grade: qualification.grade,
+        });
+      }
 
       sessionStorage.setItem(
         "vishome_form_success",
@@ -111,7 +123,7 @@ export default function RuLeadCaptureForm({
   function handleFormStart() {
     if (formStarted.current) return;
     formStarted.current = true;
-    trackAnalyticsEvent("form_start", {
+    trackAnalyticsEvent(market === "russia" ? "ru_quote_form_start" : "form_start", {
       form_name: formName,
       product: productDefault,
       page_path: window.location.pathname,
@@ -147,7 +159,7 @@ export default function RuLeadCaptureForm({
         </div>
         <div className="md:col-span-2">
           <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Страна / Город доставки *</label>
-          <input name="country" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder="Казахстан, Узбекистан и т.д." />
+          <input name="country" type="text" required className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:ring-1 focus:ring-primary/10 focus:outline-none transition-all" placeholder={market === "russia" ? "Россия, Москва" : "Казахстан, Узбекистан и т.д."} />
         </div>
       </div>
 
@@ -209,11 +221,24 @@ export default function RuLeadCaptureForm({
       </div>
 
       <div>
-        <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">Пункт доставки (DAP)</label>
+        <label className="block text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-3">{market === "russia" ? "Город / пункт доставки" : "Пункт доставки (DAP)"}</label>
         <select name="dap_destination" className="w-full px-5 py-4 rounded-sm bg-white border border-border focus:border-primary focus:outline-none transition-all">
-          <option value="Almaty">Алматы (Казахстан)</option>
-          <option value="Tashkent">Ташкент (Узбекистан)</option>
-          <option value="Other">Другой город / уточню в сообщении</option>
+          {market === "russia" ? (
+            <>
+              <option value="Moscow">Москва / Московская область</option>
+              <option value="Saint Petersburg">Санкт-Петербург / Ленинградская область</option>
+              <option value="Kazan">Казань</option>
+              <option value="Yekaterinburg">Екатеринбург</option>
+              <option value="Novosibirsk">Новосибирск</option>
+              <option value="Other Russia">Другой город России</option>
+            </>
+          ) : (
+            <>
+              <option value="Almaty">Алматы (Казахстан)</option>
+              <option value="Tashkent">Ташкент (Узбекистан)</option>
+              <option value="Other">Другой город / уточню в сообщении</option>
+            </>
+          )}
         </select>
       </div>
 
