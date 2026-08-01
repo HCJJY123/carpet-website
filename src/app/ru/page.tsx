@@ -113,7 +113,7 @@ export default function RuHubPage() {
             <p className="mt-5 text-sm leading-relaxed text-muted">Импортеры, дизайнеры, гостиничные проекты и строительные компании могут отправить одну заявку с площадью, назначением, сроком и городом поставки.</p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
-            {ruB2BPages.slice(4).map((page) => (
+            {ruB2BPages.filter((page) => page.slug.startsWith("dlya-") || page.slug === "optovye-postavki-kovrolina").map((page) => (
               <Link key={page.slug} href={`/ru/${page.slug}`} className="border border-border bg-white p-5 font-black text-primary transition-colors hover:border-accent hover:text-accent">
                 {page.title} →
               </Link>
