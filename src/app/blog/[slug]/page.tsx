@@ -96,6 +96,38 @@ function RichBlogBlock({ block, index }: { block: BlogContentBlock; index: numbe
   );
 }
 
+function ResponsiveBlogImage({
+  src,
+  mobileSrc,
+  alt,
+  className = "",
+  fit = "cover",
+  priority = false,
+}: {
+  src: string;
+  mobileSrc: string;
+  alt: string;
+  className?: string;
+  fit?: "cover" | "contain";
+  priority?: boolean;
+}) {
+  return (
+    <picture className="block h-full w-full">
+      <source media="(max-width: 767px)" srcSet={mobileSrc} type="image/webp" />
+      <img
+        src={src}
+        alt={alt}
+        width={1600}
+        height={900}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "low"}
+        decoding="async"
+        className={`h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"} ${className}`}
+      />
+    </picture>
+  );
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = blogPosts.find((item) => item.slug === slug);
@@ -223,7 +255,17 @@ export default async function BlogPostPage({ params }: Props) {
         {post.h1Image ? (
           <figure className="mb-8">
             <div className="aspect-[16/9] rounded-xl overflow-hidden bg-white shadow-2xl border-8 border-white">
-              <ProductImage src={post.h1Image} alt={post.h1ImageAlt || post.title} className="w-full h-full" fit={post.h1ImageFit || "contain"} priority sizes="(max-width: 1000px) 100vw, 1000px" unoptimized={post.h1ImageUnoptimized} />
+              {post.h1ImageMobile ? (
+                <ResponsiveBlogImage
+                  src={post.h1Image}
+                  mobileSrc={post.h1ImageMobile}
+                  alt={post.h1ImageAlt || post.title}
+                  fit={post.h1ImageFit || "contain"}
+                  priority
+                />
+              ) : (
+                <ProductImage src={post.h1Image} alt={post.h1ImageAlt || post.title} className="w-full h-full" fit={post.h1ImageFit || "contain"} priority sizes="(max-width: 1000px) 100vw, 1000px" unoptimized={post.h1ImageUnoptimized} />
+              )}
             </div>
             {post.h1ImageCaption ? (
               <figcaption className="text-xs text-muted mt-3 uppercase tracking-wider font-semibold">
@@ -267,7 +309,18 @@ export default async function BlogPostPage({ params }: Props) {
                   {section.image ? (
                     <figure className="mt-8">
                       <div className="rounded-xl overflow-hidden border border-border bg-white shadow-md">
-                        <ProductImage src={section.image} alt={section.imageAlt || section.title} className="w-full aspect-[16/10]" fit="contain" />
+                        {section.imageMobile ? (
+                          <div className="aspect-[16/10]">
+                            <ResponsiveBlogImage
+                              src={section.image}
+                              mobileSrc={section.imageMobile}
+                              alt={section.imageAlt || section.title}
+                              fit="contain"
+                            />
+                          </div>
+                        ) : (
+                          <ProductImage src={section.image} alt={section.imageAlt || section.title} className="w-full aspect-[16/10]" fit="contain" />
+                        )}
                       </div>
                       {section.imageCaption ? (
                         <figcaption className="text-xs text-muted mt-3 uppercase tracking-wider font-semibold">

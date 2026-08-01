@@ -10,6 +10,7 @@ export interface BlogSection {
   title: string;
   paragraphs: string[];
   image?: string;
+  imageMobile?: string;
   imageAlt?: string;
   imageCaption?: string;
   blocks?: BlogContentBlock[];
@@ -38,6 +39,7 @@ export interface BlogPost {
   image: string;
   imageUnoptimized?: boolean;
   h1Image?: string;
+  h1ImageMobile?: string;
   h1ImageAlt?: string;
   h1ImageCaption?: string;
   h1ImageFit?: "cover" | "contain";
@@ -922,55 +924,144 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "climate-control-carpet-installation-stability-guide",
-    title: "Climate Control in Carpet Installation: Preventing Wrinkles, Mold, and Dimensional Instability",
-    subtitle: "Temperature and humidity controls for stable commercial carpet installation.",
-    painPoint: "Post-install wrinkling, mold risk, and dimensional movement in humid climates.",
-    seoTitle: "Climate Control Carpet Installation Stability Guide | VISHOME",
-    description: "How controlled installation climate reduces deformation, cure defects, and post-handover failures.",
-    keywords: ["climate control", "carpet installation", "humidity", "dimensional stability", "mold prevention"],
+    title: "Commercial Carpet Installation Climate Control: A Stability Checklist",
+    subtitle: "A practical guide to temperature, humidity, acclimatization, curing and handover control.",
+    painPoint: "Post-install wrinkling, seam movement, mold risk and dimensional change when site conditions are not controlled.",
+    seoTitle: "Commercial Carpet Installation Climate Control Guide | VISHOME",
+    description: "A buyer-focused guide to commercial carpet installation climate control, including humidity targets, acclimatization, moisture checks, curing time and handover risks.",
+    keywords: ["commercial carpet installation climate control", "carpet installation humidity", "carpet acclimatization", "carpet dimensional stability"],
     date: "2026-06-24",
+    dateModified: "2026-08-01",
     author: "Vishome Technical Team",
     category: "Installation",
-    image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.webp",
+    image: "/images/blog-series/blog-7/Blog_7_Installation_Control_1600.webp",
+    h1Image: "/images/blog-series/blog-7/Blog_7_Installation_Control_1600.webp",
+    h1ImageMobile: "/images/blog-series/blog-7/Blog_7_Installation_Control_768.webp",
+    h1ImageAlt: "Commercial carpet installation team checking floor conditions before, during and after hotel carpet installation",
+    h1ImageCaption: "Stable commercial carpet installation depends on site readiness, controlled working conditions and documented handover checks.",
+    h1ImageFit: "cover",
     relatedProductIds: [
       "public-area-heavy-duty",
-      "natural-sisal-carpet",
       "ecocore-pe-backing-carpet-tiles",
+      "custom-luxury-hotel-room-carpet",
     ],
     sections: [
       {
-        title: "Scientific Principle",
-        paragraphs: [
-          "Fiber and backing systems respond to humidity shifts. Excessive expansion during cure phase can trigger wrinkling and alignment drift.",
-          "Environmental targets should be treated as installation specs, not optional site recommendations."
+        title: "Direct Answer: What Climate Control Should Be Confirmed Before Installation?",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Commercial carpet installation climate control should be treated as a project specification. Before unloading carpet, the building should be enclosed, the HVAC system should be operating, wet trades should be complete, and the floor, air temperature and relative humidity should be recorded against the adhesive and flooring manufacturers' requirements.",
+          },
+          {
+            type: "paragraph",
+            text: "The buyer's practical objective is not one universal temperature number. It is a stable environment that allows carpet and backing to acclimatize, keeps the substrate dry, supports adhesive curing and prevents a rapid change in dimensions after handover. The installer should record conditions before work, during installation and before the space returns to normal operation.",
+          },
+          {
+            type: "table",
+            headers: ["Control point", "What to verify", "Why it matters"],
+            rows: [
+              ["Building readiness", "Enclosure, glazing, HVAC and wet trades", "Prevents moisture and temperature swings from reaching the flooring"],
+              ["Subfloor condition", "Moisture, cleanliness, flatness and surface strength", "Reduces adhesive failure, bubbling and seam movement"],
+              ["Material acclimatization", "Packaging opened or staged according to the product system", "Allows carpet, backing and adhesive to respond before fitting"],
+              ["Installation climate", "Temperature, relative humidity and air movement", "Supports predictable cutting, seaming and adhesive curing"],
+              ["Handover", "Final readings, visual inspection and protection status", "Creates a clear record before occupancy and normal HVAC changes"],
+            ],
+            note: "Exact limits must be confirmed from the selected carpet, backing, adhesive and subfloor system. Do not substitute a generic climate target for the manufacturer's installation instructions.",
+          },
         ],
-        image: "/images/blog-series/blog-7/Blog_7_Humidity_Expansion.webp",
-        imageAlt: "Blog 7 humidity expansion visualization",
       },
       {
-        title: "Equipment Setup",
+        title: "Site Conditions to Confirm Before Installation",
         paragraphs: [
-          "HVAC, dehumidifiers, and sensor layout must be coordinated at floor-plan level to maintain uniform climate zones.",
-          "Localized imbalance can compromise seam stability even when average room conditions appear acceptable."
+          "The first control decision is whether the site is ready to receive the material. A hotel corridor or public-area floor may look visually complete while plaster, concrete moisture, cleaning water or temporary ventilation is still changing the environment.",
+          "Use a written readiness check covering floor moisture, ambient readings, storage location, access routes, lighting and protection of finished zones. This is more reliable than relying on a single reading taken at the center of the room."
+        ],
+        image: "/images/blog-series/blog-7/Blog_7_Humidity_Control_1600.webp",
+        imageMobile: "/images/blog-series/blog-7/Blog_7_Humidity_Control_768.webp",
+        imageAlt: "Installer measuring humidity and floor conditions during a commercial carpet installation",
+        imageCaption: "Record readings in representative zones rather than relying on one average room measurement.",
+      },
+      {
+        title: "How to Control Acclimatization, HVAC and Curing",
+        paragraphs: [
+          "Carpet rolls, tiles, adhesive and accessories should be stored in a protected area that reflects the installation environment. Avoid moving cold, wet or unconditioned materials directly into a finished room and beginning installation before the product has had time to stabilize.",
+          "HVAC, dehumidifiers and sensors should be planned by floor zone. Localized drafts, direct sunlight, open façades or a high-moisture area can create a different condition from the room average and affect seams or adhesive cure."
         ],
         image: "/images/blog-series/blog-7/Blog_7_HVAC_Equipment_Layout.webp",
         imageAlt: "Blog 7 HVAC equipment layout",
       },
       {
-        title: "Project Management",
+        title: "Work Backwards from Handover",
         paragraphs: [
-          "A phased timeline should include pre-conditioning, controlled install, cure stabilization, and gradual normalization.",
-          "This method reduces post-handover defect probability in monsoon and high-humidity regions."
+          "Plan the sequence around the date when the area must be opened, not only the date when installation begins. Allow time for subfloor verification, material acclimatization, fitting, adhesive curing, protection removal, cleaning and a final condition record.",
+          "In monsoon or high-humidity regions, the site team should agree in advance how HVAC operation will continue after installation. A sudden change from a conditioned installation environment to an uncontrolled space can create movement after the installer has left."
         ],
         image: "/images/blog-series/blog-7/Blog_7_Installation_Timeline_Climate.webp",
         imageAlt: "Blog 7 climate-phase installation timeline",
-      }
+      },
+      {
+        title: "Procurement Comparison: Quick Installation vs Controlled Installation",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "table",
+            headers: ["Approach", "Short-term appeal", "Main exposure", "Better decision rule"],
+            rows: [
+              ["Start immediately", "May appear to protect the opening date", "Wrinkles, seam issues, adhesive failure and rework", "Use only when readiness readings and product instructions are confirmed"],
+              ["Wait for stable conditions", "Adds coordination time before fitting", "Requires schedule discipline and site cooperation", "Preferred for large hotel, office and public-area programs"],
+              ["Install by zone", "Allows priority areas to progress first", "Different zones may cure under different conditions", "Use a documented zone plan with separate readings and handover checks"],
+              ["Use temporary drying only", "Can reduce a short-term moisture problem", "Local over-drying, drafts or incomplete curing", "Treat equipment as part of a monitored plan, not a substitute for building readiness"],
+            ],
+            note: "The lowest-risk option is the one supported by measured conditions, compatible materials and a documented sequence. A faster start is not a faster project if the floor must later be repaired.",
+          },
+        ],
+      },
+      {
+        title: "Risk Checklist for Commercial Carpet Projects",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "list",
+            items: [
+              { text: "Do not unload or install over a subfloor with unverified moisture or visible contamination." },
+              { text: "Do not assume a building is conditioned because the HVAC system is installed; verify that it is operating consistently." },
+              { text: "Do not mix product batches or backing systems without confirming appearance, installation and adhesive compatibility." },
+              { text: "Do not close the area to traffic before adhesive curing and protection requirements are complete." },
+              { text: "Record readings, product batch information, installation dates and visible exceptions before handover." },
+            ],
+          },
+          {
+            type: "callout",
+            label: "Request a Project Review",
+            text: "For a climate-sensitive hotel, office or public-area project, send the application, estimated area, substrate type, destination climate and required installation date before requesting a final carpet recommendation.",
+          },
+        ],
+      },
+      {
+        title: "Buyer FAQs",
+        paragraphs: [],
+        blocks: [
+          { type: "subheading", title: "Can carpet be installed before the HVAC system is running?" },
+          { type: "paragraph", text: "It is risky because the space may not have stable temperature and humidity. Confirm building readiness and the selected product system's installation requirements before scheduling the fitting team." },
+          { type: "subheading", title: "Why is relative humidity important for carpet installation?" },
+          { type: "paragraph", text: "Relative humidity affects the moisture balance of the backing, substrate and adhesive environment. Large changes during or after installation can contribute to dimensional movement, curing problems or seam instability." },
+          { type: "subheading", title: "Should carpet rolls and carpet tiles acclimatize in the same way?" },
+          { type: "paragraph", text: "Not necessarily. The construction, backing, packaging and installation method are different, so the manufacturer and adhesive system instructions should determine staging and acclimatization requirements." },
+          { type: "subheading", title: "What should a buyer request from the installer?" },
+          { type: "paragraph", text: "Request a readiness checklist, recorded site readings, product and batch details, installation sequence, curing guidance and a handover record with any exceptions clearly noted." },
+          { type: "subheading", title: "Can a commercial carpet manufacturer help with climate-sensitive projects?" },
+          { type: "paragraph", text: "Yes. Share the application, product construction, area, substrate, destination climate and schedule early so the manufacturer and project team can review material selection, packing, installation conditions and technical support together." },
+        ],
+      },
     ],
     suggestedLinks: [
       { label: "Heavy-Duty Public Area Carpet", href: "/products/public-area/public-area-heavy-duty" },
-      { label: "Natural Sisal Commercial Carpet", href: "/products/public-area/natural-sisal-carpet" },
-      { label: "Installation Support", href: "/contact" },
-      { label: "Hotel & Hospitality Solutions", href: "/projects" }
+      { label: "EcoCore PE Backing Carpet Tiles", href: "/products/carpet-tiles/ecocore-pe-backing-carpet-tiles" },
+      { label: "Custom Luxury Hotel Room Carpet", href: "/products/wall-to-wall/custom-luxury-hotel-room-carpet" },
+      { label: "Commercial Carpet Tiles", href: "/products/carpet-tiles" },
+      { label: "Request Installation and Carpet Quotation", href: "/contact?product=Commercial%20Carpet%20Installation#quote-form" }
     ]
   }
 ];
