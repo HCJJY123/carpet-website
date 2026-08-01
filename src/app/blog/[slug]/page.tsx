@@ -210,7 +210,7 @@ export default async function BlogPostPage({ params }: Props) {
           <Link href="/blog" className="text-accent font-bold text-xs uppercase mb-6 inline-block">
             ← Back to Blog
           </Link>
-          <h1 className="text-3xl md:text-5xl text-white font-black uppercase tracking-wider leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl text-white font-black uppercase tracking-normal sm:tracking-wider leading-tight">
             {post.title}
           </h1>
           <p className="article-summary text-gray-300 mt-6 max-w-3xl mx-auto text-base leading-relaxed">

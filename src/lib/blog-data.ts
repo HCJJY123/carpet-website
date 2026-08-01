@@ -776,55 +776,148 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "shipping-optimization-5000sqm-mumbai-14days",
-    title: "Shipping Optimization: A 14-Day Fast-Track Planning Scenario for Carpet Delivery to Mumbai",
-    subtitle: "Logistics playbook for accelerated international carpet programs.",
-    painPoint: "Uncertain shipping windows, damage risk, and schedule overruns.",
-    seoTitle: "Carpet Shipping Optimization to Mumbai in 14 Days | VISHOME",
-    description: "A planning scenario for route, packaging, and timeline controls when a commercial carpet shipment has a 14-day target.",
-    keywords: ["shipping optimization", "mumbai carpet delivery", "carpet logistics", "project lead time"],
+    title: "Commercial Carpet Shipping: How to Plan a Fast-Track Project Delivery",
+    subtitle: "A practical logistics framework for hotel, office and public-area carpet programs.",
+    painPoint: "Uncertain shipping windows, damage risk, incomplete documents and schedule overruns.",
+    seoTitle: "Commercial Carpet Shipping Guide | Fast-Track Project Delivery",
+    description: "Learn how to plan commercial carpet shipping for hotel, office and public-area projects, including route selection, packaging, customs documents, risk controls and delivery scheduling.",
+    keywords: ["commercial carpet shipping", "carpet logistics", "project carpet delivery", "carpet export packaging"],
     date: "2026-06-24",
+    dateModified: "2026-08-01",
     author: "Vishome Export Team",
     category: "Logistics",
-    image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.webp",
+    image: "/images/blog-series/blog-6/Blog_6_Commercial_Carpet_Shipping_v2.webp",
     relatedProductIds: [
       "commercial-nylon-tiles",
       "3d-printed-hotel-carpet",
       "public-area-heavy-duty",
     ],
+    h1Image: "/images/blog-series/blog-6/Blog_6_Commercial_Carpet_Shipping_v2.webp",
+    h1ImageAlt: "Commercial carpet rolls and carpet tile cartons prepared for export shipping",
+    h1ImageCaption: "A coordinated cargo-ready plan connects production approval, packaging, freight and site receiving.",
+    h1ImageFit: "cover",
     sections: [
       {
-        title: "Logistics Optimization",
-        paragraphs: [
-          "Route planning should compare standard ocean, expedited ocean, and hybrid multimodal options against deadline certainty.",
-          "For time-sensitive openings, schedule reliability often outweighs lowest freight rate."
+        title: "Direct Answer: How to Plan Commercial Carpet Shipping",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Fast commercial carpet shipping depends on more than choosing the fastest freight service. The buyer, carpet manufacturer, freight forwarder, customs broker and installation team must work from one confirmed timeline covering sample approval, production, packing, export documents, vessel or flight booking, customs clearance and site receiving.",
+          },
+          {
+            type: "paragraph",
+            text: "A 14-day delivery target should be treated as a planning scenario, not a universal promise. Whether it is realistic depends on product availability, production status, shipment volume, destination, route capacity, customs requirements and final-mile access. The safest approach is to confirm the required arrival date first and work backwards to establish the latest acceptable approval and cargo-ready dates.",
+          },
+          {
+            type: "table",
+            headers: ["Shipping option", "Best suited to", "Main advantages", "Main risks and checks"],
+            rows: [
+              ["Standard ocean freight", "Large project quantities with sufficient planning time", "Lower freight cost per cubic meter", "Longer transit, vessel changes, port congestion and customs time"],
+              ["Expedited ocean service", "Medium or large orders with a tighter opening schedule", "Faster routing than standard ocean freight", "Limited route availability, higher freight cost and stricter cargo-ready deadlines"],
+              ["LCL ocean freight", "Samples, trial orders and smaller commercial quantities", "Does not require a full container", "More handling stages, consolidation delays and packaging requirements"],
+              ["Air freight", "Samples, strike-offs or urgent replacement material", "Fast transport for limited cargo", "High cost, size restrictions and chargeable-weight calculations"],
+              ["Split shipment", "Projects that need priority zones before the main container", "Urgent material can move separately", "Requires batch, color, quantity and installation-zone control"],
+            ],
+            note: "Final route, freight cost and delivery timing are confirmed only after the product, quantity, destination and trade terms are reviewed.",
+          },
         ],
-        image: "/images/blog-series/blog-6/Blog_6_Shipping_Routes_Map.webp",
-        imageAlt: "Blog 6 shipping routes map",
       },
       {
-        title: "Damage Prevention",
-        paragraphs: [
-          "Packaging sequence—barrier wrap, palletization, labeling, and shrink protection—directly reduces transit-loss exposure.",
-          "Protection standards should be defined per handling stage, not only at factory dispatch."
+        title: "What Must Be Confirmed Before Booking Freight",
+        paragraphs: [],
+        blocks: [
+          {
+            type: "list",
+            items: [
+              { title: "Approved construction", text: "Confirm product, color, backing, quantity and the approved physical sample or strike-off." },
+              { title: "Cargo dimensions", text: "Record roll dimensions, carton dimensions, pallet requirements, gross weight and package count." },
+              { title: "Cargo-ready date", text: "Base the booking on production completion, inspection, packing and document preparation." },
+              { title: "Trade terms", text: "Confirm Incoterm, loading port, destination port, final address and responsibility for customs clearance." },
+              { title: "Site receiving", text: "Confirm unloading equipment, storage space, access hours, receiving contact and installation sequence." },
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "A provisional booking can protect route capacity, but the commercial carpet shipping plan must still allow time for final inspection and documentation. Shipping unfinished or incorrectly labelled goods to meet an artificial deadline usually creates a larger delay at customs or the project site.",
+          },
+          {
+            type: "subheading",
+            title: "Damage-prevention checklist",
+          },
+          {
+            type: "list",
+            items: [
+              { text: "Protect carpet rolls and tile cartons against moisture, crushing and excessive stacking." },
+              { text: "Label each package by product, color, batch, quantity and installation area." },
+              { text: "Separate and identify retained spare material from the main installation quantity." },
+              { text: "Match the commercial invoice and packing list to the actual loaded quantities." },
+              { text: "Photograph packing and loading condition before departure." },
+            ],
+          },
         ],
-        image: "/images/blog-series/blog-6/Blog_6_Packaging_Process.webp",
-        imageAlt: "Blog 6 packaging protection workflow",
       },
       {
-        title: "Timeline Management",
+        title: "Shipping Route and Packaging Planning",
         paragraphs: [
-          "A day-by-day execution model with customs buffers and handover checkpoints keeps fast-track delivery realistic.",
-          "Transparent cost phasing helps procurement and logistics teams align decisions under time pressure."
+          "Review the route, package format, cargo labels and receiving plan together before freight is booked. This helps the forwarder calculate usable cargo space while giving the site team a clear record of what will arrive and how each package should be handled.",
         ],
+        image: "/images/blog-series/blog-6/Blog_6_Shipping_Route_Packaging_v2.webp",
+        imageAlt: "Commercial carpet rolls, cartons and protected sample packaging prepared for export",
+        imageCaption: "Route selection and export packaging should be confirmed as one coordinated delivery plan.",
+      },
+      {
+        title: "Work Backwards from the Installation Date",
+        paragraphs: [],
         image: "/images/blog-series/blog-6/Blog_6_Timeline_Cost_Breakdown.webp",
         imageAlt: "Blog 6 timeline and cost breakdown",
-      }
+        blocks: [
+          {
+            type: "table",
+            headers: ["Project milestone", "Buyer decision required"],
+            rows: [
+              ["Site handover", "Confirm when the floor area is clean, dry, secure and available."],
+              ["Installation start", "Confirm installer, subfloor preparation, adhesive or underlay and access hours."],
+              ["Material arrival", "Allow time for customs, local transport, receiving inspection and storage."],
+              ["International departure", "Confirm booking, cargo-ready date and document cut-off."],
+              ["Production approval", "Approve construction, sample or strike-off, color and quantity."],
+              ["Initial quotation", "Provide destination, area, application, specification and required date."],
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Commercial carpet shipping cannot correct a delayed sample approval or an incomplete floor plan. The project schedule should show which party owns each decision and what happens when an approval date moves.",
+          },
+          {
+            type: "callout",
+            label: "Quote requirement",
+            text: "Send the product requirement, total area, destination, required delivery date, preferred Incoterm, site restrictions and any need for samples or split shipment before asking for a final logistics quotation.",
+          },
+        ],
+      },
+      {
+        title: "Frequently Asked Buyer Questions",
+        paragraphs: [],
+        blocks: [
+          { type: "subheading", title: "Can a complete commercial carpet order arrive in 14 days?" },
+          { type: "paragraph", text: "Sometimes, but it cannot be promised without confirming stock or production status, shipment size, destination, available route and customs requirements. A 14-day target is more realistic for samples, replacement material or a limited split shipment than for a large made-to-order project." },
+          { type: "subheading", title: "Should carpet tiles and broadloom use the same packaging?" },
+          { type: "paragraph", text: "No. Carpet tiles are normally packed in cartons, while broadloom is shipped as protected rolls. Package weight, backing stability, roll length, moisture protection and unloading conditions must be evaluated separately." },
+          { type: "subheading", title: "Is air freight suitable for a large carpet project?" },
+          { type: "paragraph", text: "Air freight can be useful for samples, urgent replacement material or priority zones. It is usually expensive for a complete commercial carpet project because carpet rolls and cartons occupy substantial volume." },
+          { type: "subheading", title: "What causes common carpet shipping delays?" },
+          { type: "paragraph", text: "Late product approval, missed booking cut-offs, incomplete documents, differences between packing lists and actual cargo, port congestion, customs questions and unprepared receiving sites are common causes." },
+          { type: "subheading", title: "What should be checked when the shipment arrives?" },
+          { type: "paragraph", text: "Check package count, external damage, moisture exposure, product labels, color and batch identification. Record any visible damage before unloading is completed and before material is moved into long-term storage." },
+        ],
+      },
     ],
     suggestedLinks: [
-      { label: "Commercial Carpet Tiles", href: "/products/carpet-tiles/commercial-nylon-tiles" },
+      { label: "Compare Commercial Carpet Tiles", href: "/products/carpet-tiles" },
+      { label: "Commercial Nylon Carpet Tiles", href: "/products/carpet-tiles/commercial-nylon-tiles" },
       { label: "Custom Printed Hotel Carpet", href: "/products/wall-to-wall/3d-printed-hotel-carpet" },
-      { label: "View Project Cases", href: "/projects" },
-      { label: "Contact Export Team", href: "/contact" }
+      { label: "Heavy-Duty Public Area Carpet", href: "/products/public-area/public-area-heavy-duty" },
+      { label: "Request Carpet and Shipping Quotation", href: "/contact?product=Commercial%20Carpet%20Shipping#quote-form" }
     ]
   },
   {
