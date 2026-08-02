@@ -211,7 +211,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
             className="h-full w-full"
             fit="cover"
             priority
-            quality={88}
+            quality={90}
             sizes="100vw"
           />
         </div>
