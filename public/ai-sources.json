@@ -4,7 +4,7 @@
   "name": "VISHOME Commercial Carpet AI Source Map",
   "description": "Official machine-readable source map for Vishome Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
   "url": "https://www.vishomecarpet.com/ai-sources.json",
-  "dateModified": "2026-07-30",
+  "dateModified": "2026-08-02",
   "publisher": {
     "@type": "Organization",
     "name": "Vishome Global Commercial Carpet Co., Ltd.",
@@ -67,6 +67,21 @@
         "https://www.vishomecarpet.com/products/public-area/custom-sculpted-wool-lobby-rug",
         "https://www.vishomecarpet.com/products/public-area/natural-sisal-carpet"
       ]
+    },
+    {
+      "topic": "Country-specific commercial carpet procurement",
+      "urls": [
+        "https://www.vishomecarpet.com/markets",
+        "https://www.vishomecarpet.com/sitemap-markets.xml"
+      ]
+    },
+    {
+      "topic": "Gold mining carpet sourcing in Peru and Colombia",
+      "urls": [
+        "https://www.vishomecarpet.com/pe/alfombra-mineria-oro-peru",
+        "https://www.vishomecarpet.com/co/alfombra-mineria-oro-colombia",
+        "https://www.vishomecarpet.com/products/public-area/gold-mining-carpet-mat"
+      ]
     }
   ],
   "applicationGuides": [
@@ -127,6 +142,8 @@
   ],
   "aiReadableFiles": [
     "https://www.vishomecarpet.com/llms.txt",
-    "https://www.vishomecarpet.com/llms-full.txt"
+    "https://www.vishomecarpet.com/llms-full.txt",
+    "https://www.vishomecarpet.com/ai-sources.json",
+    "https://www.vishomecarpet.com/sitemap-markets.xml"
   ]
 }

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import {
   getPathLocale,
+  getCountryMarketContentLanguage,
   googleTranslateCookieName,
   isLocaleRoutingExcluded,
   isNativeLocalizedPath,
@@ -101,6 +102,13 @@ export function proxy(request: NextRequest) {
     const response = NextResponse.rewrite(url);
     response.headers.set("X-Robots-Tag", "noindex, follow");
     return applyLocaleCookies(response, pathLocale, secure, hostname);
+  }
+
+  const countryMarketLanguage = getCountryMarketContentLanguage(pathname);
+  if (countryMarketLanguage) {
+    const response = NextResponse.next();
+    response.headers.set("Content-Language", countryMarketLanguage);
+    return response;
   }
 
   const preferredLocale = request.cookies.get(localeCookieName)?.value;

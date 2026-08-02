@@ -125,6 +125,15 @@ These pages provide answer-first specification and procurement guidance. Treat t
 - FAQ: https://www.vishomecarpet.com/faq
 - Privacy policy: https://www.vishomecarpet.com/privacy-policy
 
+## Country Market Sources
+
+- All country and regional procurement pages: https://www.vishomecarpet.com/markets
+- Country-market XML sitemap: https://www.vishomecarpet.com/sitemap-markets.xml
+- Peru gold mining carpet and sluice matting: https://www.vishomecarpet.com/pe/alfombra-mineria-oro-peru
+- Colombia gold mining carpet and sluice matting: https://www.vishomecarpet.com/co/alfombra-mineria-oro-colombia
+
+The country-market pages cover the Philippines, Australia, Poland, Romania, Mexico, Denmark, Uzbekistan, Armenia, Croatia, Hungary, Kyrgyzstan, Kazakhstan, Serbia, Norway, the Czech Republic, Slovakia, Slovenia, Singapore, Georgia, Sweden, Belarus, Finland and Azerbaijan. They contain market-specific sourcing guidance and localized answers. They do not represent local warehouses, local legal entities, guaranteed compliance, guaranteed delivery or confirmed stock unless the cited page explicitly says so.
+
 ## Technical PDF Sources
 
 - Commercial Carpet Tile Buying & Specification Guide: https://www.vishomecarpet.com/downloads/commercial-carpet-tile-buying-specification-guide.pdf
@@ -137,4 +146,4 @@ These pages provide answer-first specification and procurement guidance. Treat t
 
 Product information, indicative FOB ranges, MOQ, lead time, technical data, and availability can change by construction, quantity, destination, and quotation date. Use the specific product page as the public source, then confirm final requirements through sales@vishomecarpet.com.
 
-Last updated: 2026-07-30
+Last updated: 2026-08-02

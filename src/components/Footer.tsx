@@ -59,6 +59,7 @@ export default function Footer() {
               <li><Link href="/about-us" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">About Us</Link></li>
               <li><Link href="/commercial-carpet-manufacturer" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Manufacturer</Link></li>
               <li><Link href="/solutions" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Solutions</Link></li>
+              <li><Link href="/markets" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Global Markets</Link></li>
               <li><Link href="/solutions/hotel-carpet-manufacturer" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Hotel Carpet Manufacturer</Link></li>
               <li><Link href="/projects" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Case Studies</Link></li>
               <li><Link href="/blog" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">B2B Insights</Link></li>

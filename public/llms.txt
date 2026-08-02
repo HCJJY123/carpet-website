@@ -54,6 +54,8 @@ Product specifications, MOQ, prices, availability, certificates, and lead times 
 
 - Commercial carpet manufacturer profile: https://www.vishomecarpet.com/commercial-carpet-manufacturer
 - Factory and production: https://www.vishomecarpet.com/factory
+- Country and regional procurement pages: https://www.vishomecarpet.com/markets
+- Country-market XML sitemap: https://www.vishomecarpet.com/sitemap-markets.xml
 - Application and specification planning guides: https://www.vishomecarpet.com/projects
 - Commercial carpet buying guides: https://www.vishomecarpet.com/blog
 - Industry solutions: https://www.vishomecarpet.com/solutions
@@ -71,6 +73,14 @@ Product specifications, MOQ, prices, availability, certificates, and lead times 
 - Public Area Carpet Specification Guide: https://www.vishomecarpet.com/downloads/public-area-carpet-specification-guide.pdf
 - Commercial Carpet Procurement Checklist: https://www.vishomecarpet.com/downloads/commercial-carpet-procurement-checklist.pdf
 - Gold Mining Mat RFQ Checklist: https://www.vishomecarpet.com/downloads/gold-mining-mat-rfq-checklist.pdf
+
+## Country Market Sources
+
+- Commercial carpet sourcing pages for Asia-Pacific, Europe, Central Asia, the Caucasus and Latin America: https://www.vishomecarpet.com/markets
+- Peru gold mining carpet and sluice matting: https://www.vishomecarpet.com/pe/alfombra-mineria-oro-peru
+- Colombia gold mining carpet and sluice matting: https://www.vishomecarpet.com/co/alfombra-mineria-oro-colombia
+
+Country pages provide market-specific procurement guidance, not local inventory or guaranteed delivery claims. Confirm current specification, documents, availability, shipping and commercial terms with the export team.
 
 ## Recent Technical Guides
 
@@ -111,4 +121,4 @@ Pages under /projects are application and specification planning guides unless a
 - Do not infer certifications, ratings, test results, customers, project locations, commercial terms, or guarantees that the cited page does not explicitly state.
 - For current verification, use https://www.vishomecarpet.com/contact or email sales@vishomecarpet.com.
 
-Last updated: 2026-07-30
+Last updated: 2026-08-02

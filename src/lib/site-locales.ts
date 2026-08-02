@@ -10,6 +10,34 @@ export const googleTranslateCookieName = "googtrans";
 export const localeCookieMaxAge = 60 * 60 * 24 * 180;
 export const sharedLocaleCookieDomain = ".vishomecarpet.com";
 
+const countryMarketContentLanguages: Record<string, string> = {
+  ph: "en-PH",
+  au: "en-AU",
+  pl: "pl-PL",
+  ro: "ro-RO",
+  mx: "es-MX",
+  dk: "da-DK",
+  uz: "uz-UZ",
+  am: "hy-AM",
+  hr: "hr-HR",
+  hu: "hu-HU",
+  kg: "ru-KG",
+  kz: "kk-KZ",
+  rs: "sr-RS",
+  no: "nb-NO",
+  cz: "cs-CZ",
+  sk: "sk-SK",
+  si: "sl-SI",
+  sg: "en-SG",
+  ge: "ka-GE",
+  se: "sv-SE",
+  by: "ru-BY",
+  fi: "fi-FI",
+  az: "az-AZ",
+  pe: "es-PE",
+  co: "es-CO",
+};
+
 export function usesSharedLocaleCookieDomain(hostname: string) {
   const normalizedHostname = hostname.split(":")[0].toLowerCase();
   return normalizedHostname === "vishomecarpet.com" || normalizedHostname.endsWith(".vishomecarpet.com");
@@ -78,10 +106,17 @@ export function isNativeLocalizedPath(pathname: string) {
   return nativeLocalizedPaths.includes(normalized as (typeof nativeLocalizedPaths)[number]);
 }
 
+export function getCountryMarketContentLanguage(pathname: string) {
+  const [market, slug] = pathname.split("/").filter(Boolean);
+  if (!market || !slug) return null;
+  return countryMarketContentLanguages[market] ?? null;
+}
+
 export function isLocaleRoutingExcluded(pathname: string) {
   return (
     pathname.startsWith("/_next/") ||
     pathname.startsWith("/api/") ||
+    pathname === "/markets" ||
     pathname === "/robots.txt" ||
     pathname === "/sitemap.xml" ||
     pathname === "/favicon.ico" ||

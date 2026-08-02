@@ -6,6 +6,7 @@ import { productPath } from "@/lib/seo";
 import { solutionPages } from "@/lib/solution-data";
 import { getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 import { ruB2BPages } from "@/lib/ru-b2b-pages";
+import { countryMarketPages } from "@/lib/country-market-pages";
 
 const BASE = "https://www.vishomecarpet.com";
 
@@ -19,6 +20,7 @@ type StaticRoute = {
 const staticRoutes: StaticRoute[] = [
   { url: "/", modified: "2026-07-27", priority: 1.0, changeFrequency: "weekly" },
   { url: "/products", modified: "2026-07-23", priority: 0.9, changeFrequency: "monthly" },
+  { url: "/markets", modified: "2026-08-02", priority: 0.86, changeFrequency: "monthly" },
   { url: "/commercial-carpet-manufacturer", modified: "2026-07-28", priority: 0.9, changeFrequency: "monthly" },
   { url: "/hotel-carpet", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
   { url: "/carpet-tiles-50x50", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
@@ -143,5 +145,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticEntries, ...categoryEntries, ...productEntries, ...projectEntries, ...solutionEntries, ...blogEntries, ...localizedLandingEntries, ...ruB2BEntries];
+  const countryMarketEntries: MetadataRoute.Sitemap = countryMarketPages.map((page) => {
+    const product = products.find((item) => item.id === page.primaryProductId);
+    return {
+      url: `${BASE}${page.path}`,
+      lastModified: new Date("2026-08-02T00:00:00.000Z"),
+      changeFrequency: "monthly" as const,
+      priority: page.kind === "gold" ? 0.86 : 0.84,
+      images: product ? uniqueImages([product.image]) : undefined,
+    };
+  });
+
+  return [...staticEntries, ...categoryEntries, ...productEntries, ...projectEntries, ...solutionEntries, ...blogEntries, ...localizedLandingEntries, ...ruB2BEntries, ...countryMarketEntries];
 }
