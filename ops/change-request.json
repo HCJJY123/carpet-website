@@ -1,0 +1,17 @@
+{
+  "task": "Install repository-level site operations guardrails",
+  "approvedBy": "Site owner approval in Codex task on 2026-08-02",
+  "approvedCategories": ["governance", "ci", "build-config"],
+  "allowedPaths": [
+    "AGENTS.md",
+    "SITE_OPS_GUIDE.md",
+    "CHANGELOG_OPS.md",
+    "keyword-map.csv",
+    "ops/**",
+    "scripts/site-ops-check.mjs",
+    ".github/workflows/site-ops-guard.yml",
+    "package.json"
+  ],
+  "protectedUrlsChanged": false,
+  "notes": "No public page, navigation, SEO template, Sitemap, form or tracking behavior may change in this branch."
+}
