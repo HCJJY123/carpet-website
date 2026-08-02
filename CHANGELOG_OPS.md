@@ -18,4 +18,4 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Rollback point:** `105c1ac`
 
-**Verification:** Scope guard passed; negative out-of-scope test was blocked; ESLint passed; 128-page production build passed; current production baseline verification passed. Vercel Preview validation remains required before merge.
+**Verification:** Scope guard passed; negative out-of-scope test was blocked; ESLint passed; 128-page production build passed; current production baseline verification passed. Preview network failures now produce a clear blocking result instead of an unhandled exception. Vercel Preview validation remains required before merge.

@@ -156,13 +156,24 @@ if (/BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|\bghp_[A-Za-z0-9]{20,}|\bsk-[A-Za-z0-
 
 parseKeywordMap();
 
+async function request(url) {
+  try {
+    return await fetch(url, { redirect: "manual", cache: "no-store" });
+  } catch (error) {
+    const reason = error?.cause?.code || error?.message || "unknown network error";
+    failures.push(`Unable to reach ${url}: ${reason}.`);
+    return null;
+  }
+}
+
 const originArg = process.argv.find((arg) => arg.startsWith("--origin="));
 if (originArg) {
   const origin = originArg.slice("--origin=".length).replace(/\/$/, "");
   const normalize = (value) => value.replace(/\/$/, "");
 
   for (const sitemap of baseline.sitemaps) {
-    const response = await fetch(`${origin}${sitemap.path}`, { redirect: "manual", cache: "no-store" });
+    const response = await request(`${origin}${sitemap.path}`);
+    if (!response) continue;
     const text = await response.text();
     const count = (text.match(/<loc>/g) || []).length;
     if (response.status !== 200 || response.headers.get("location")) failures.push(`${sitemap.path} did not return a direct HTTP 200.`);
@@ -170,7 +181,8 @@ if (originArg) {
   }
 
   for (const page of baseline.criticalPages) {
-    const response = await fetch(`${origin}${page.path}`, { redirect: "manual", cache: "no-store" });
+    const response = await request(`${origin}${page.path}`);
+    if (!response) continue;
     const html = await response.text();
     const h1Count = (html.match(/<h1\b/gi) || []).length;
     const canonical = html.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)/i)?.[1]
