@@ -136,7 +136,7 @@ export default function NylonOfficeCarpetTilePage() {
     offers: {
       "@type": "AggregateOffer",
       url: absoluteUrl(productPath(p.id)),
-      availability: "https://schema.org/InStock",
+      availability: "https://schema.org/PreOrder",
       priceCurrency: "USD",
       lowPrice: "5.10",
       highPrice: "6.30",
@@ -147,11 +147,16 @@ export default function NylonOfficeCarpetTilePage() {
         url: "https://www.vishomecarpet.com",
       },
     },
-    additionalProperty: tds.map((item) => ({
-      "@type": "PropertyValue",
-      name: item.label,
-      value: item.value,
-    })),
+    additionalProperty: [
+      ...tds.map((item) => ({
+        "@type": "PropertyValue",
+        name: item.label,
+        value: item.value,
+      })),
+      { "@type": "PropertyValue", name: "Availability", value: "Quotation required / made to order" },
+      { "@type": "PropertyValue", name: "Sales Unit", value: "SQM" },
+      { "@type": "PropertyValue", name: "Price Basis", value: "Reference FOB range; final price and validity require a written quotation" },
+    ],
   };
 
   const faqJsonLd = {

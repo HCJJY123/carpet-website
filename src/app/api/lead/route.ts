@@ -4,6 +4,9 @@ export const runtime = "nodejs";
 
 const FORMSPREE_ENDPOINT = process.env.FORMSPREE_ENDPOINT || "https://formspree.io/f/xlgkpkza";
 const MAX_BODY_BYTES = 48_000;
+const RATE_WINDOW_MS = 15 * 60 * 1000;
+const RATE_LIMIT = 6;
+const rateLimitStore = new Map<string, { count: number; resetAt: number }>();
 const ALLOWED_FIELDS = [
   "form_name",
   "language",
@@ -61,6 +64,83 @@ function sameOrigin(request: NextRequest) {
   }
 }
 
+function clientKey(request: NextRequest, email = "") {
+  const forwardedFor = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
+  const ip = forwardedFor || request.headers.get("x-real-ip") || "unknown";
+  return `${ip}:${email.toLowerCase() || "anonymous"}`;
+}
+
+function checkRateLimit(key: string) {
+  const now = Date.now();
+  const current = rateLimitStore.get(key);
+
+  if (!current || current.resetAt <= now) {
+    rateLimitStore.set(key, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    return { limited: false, retryAfter: 0 };
+  }
+
+  if (current.count >= RATE_LIMIT) {
+    return { limited: true, retryAfter: Math.ceil((current.resetAt - now) / 1000) };
+  }
+
+  current.count += 1;
+  return { limited: false, retryAfter: 0 };
+}
+
+function validEmail(value: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+async function deliverToFormspree(formData: FormData) {
+  let lastError: unknown;
+
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    try {
+      const formspreeResponse = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+        cache: "no-store",
+        signal: AbortSignal.timeout(12_000),
+      });
+
+      if (formspreeResponse.ok) return true;
+      lastError = new Error(`Form delivery failed with ${formspreeResponse.status}`);
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  console.error("Lead email delivery failed", lastError);
+  return false;
+}
+
+async function archiveLead(lead: Record<string, string>) {
+  const ingestUrl = process.env.LEAD_INGEST_URL;
+  const ingestSecret = process.env.LEAD_INGEST_SECRET;
+
+  if (!ingestUrl || !ingestSecret) return false;
+
+  try {
+    const ingestResponse = await fetch(ingestUrl, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${ingestSecret}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(lead),
+      cache: "no-store",
+      signal: AbortSignal.timeout(8_000),
+    });
+    if (ingestResponse.ok) return true;
+    console.error("Lead archive failed", ingestResponse.status);
+  } catch (error) {
+    console.error("Lead archive failed", error);
+  }
+
+  return false;
+}
+
 export async function POST(request: NextRequest) {
   if (!sameOrigin(request)) {
     return NextResponse.json({ ok: false, error: "Invalid origin" }, { status: 403 });
@@ -94,6 +174,18 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: false, error: "Please complete all required fields" }, { status: 400 });
   }
 
+  if (!validEmail(lead.email)) {
+    return NextResponse.json({ ok: false, error: "Please enter a valid email address" }, { status: 400 });
+  }
+
+  const rateLimit = checkRateLimit(clientKey(request, lead.email));
+  if (rateLimit.limited) {
+    return NextResponse.json(
+      { ok: false, error: "Too many submissions. Please try again later." },
+      { status: 429, headers: { "Retry-After": String(rateLimit.retryAfter) } }
+    );
+  }
+
   const leadId = crypto.randomUUID();
   lead.lead_id = leadId;
   lead.submitted_at = lead.submitted_at || new Date().toISOString();
@@ -101,48 +193,17 @@ export async function POST(request: NextRequest) {
   const formData = new FormData();
   Object.entries(lead).forEach(([key, value]) => formData.set(key, value));
 
-  try {
-    const formspreeResponse = await fetch(FORMSPREE_ENDPOINT, {
-      method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" },
-      cache: "no-store",
-      signal: AbortSignal.timeout(12_000),
-    });
+  const [archived, delivered] = await Promise.all([
+    archiveLead(lead),
+    deliverToFormspree(formData),
+  ]);
 
-    if (!formspreeResponse.ok) {
-      throw new Error(`Form delivery failed with ${formspreeResponse.status}`);
-    }
-  } catch (error) {
-    console.error("Lead email delivery failed", error);
+  if (!archived && !delivered) {
     return NextResponse.json({ ok: false, error: "Submission failed" }, { status: 502 });
   }
 
-  const ingestUrl = process.env.LEAD_INGEST_URL;
-  const ingestSecret = process.env.LEAD_INGEST_SECRET;
-  let archived = false;
-
-  if (ingestUrl && ingestSecret) {
-    try {
-      const ingestResponse = await fetch(ingestUrl, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${ingestSecret}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(lead),
-        cache: "no-store",
-        signal: AbortSignal.timeout(8_000),
-      });
-      archived = ingestResponse.ok;
-      if (!archived) console.error("Lead archive failed", ingestResponse.status);
-    } catch (error) {
-      console.error("Lead archive failed", error);
-    }
-  }
-
   return NextResponse.json(
-    { ok: true, leadId, archived },
+    { ok: true, leadId, archived, delivered, status: delivered ? "delivered" : "archived_pending_email" },
     { headers: { "Cache-Control": "no-store" } }
   );
 }

@@ -76,6 +76,14 @@
       ]
     },
     {
+      "topic": "Technical documents, buyer guides, quotation basis, MOQ and availability",
+      "urls": [
+        "https://www.vishomecarpet.com/technical-documents",
+        "https://www.vishomecarpet.com/commercial-terms",
+        "https://www.vishomecarpet.com/privacy-policy"
+      ]
+    },
+    {
       "topic": "Gold mining carpet sourcing in Peru and Colombia",
       "urls": [
         "https://www.vishomecarpet.com/pe/alfombra-mineria-oro-peru",
@@ -138,6 +146,8 @@
     "https://www.vishomecarpet.com/contact",
     "https://www.vishomecarpet.com/request-sample-box",
     "https://www.vishomecarpet.com/faq",
+    "https://www.vishomecarpet.com/technical-documents",
+    "https://www.vishomecarpet.com/commercial-terms",
     "https://www.vishomecarpet.com/privacy-policy"
   ],
   "aiReadableFiles": [

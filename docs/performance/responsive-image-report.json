@@ -1,0 +1,2205 @@
+{
+  "generatedAt": "2026-08-02T13:49:12.353Z",
+  "images": [
+    {
+      "source": "/images/home/hero-home.webp",
+      "references": 2,
+      "originalBytes": 472414,
+      "originalWidth": 1774,
+      "originalHeight": 887,
+      "desktopAvifBytes": 159187,
+      "reductionPercent": 66.3,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/home-hero-home-552dc7b8e3-480w.avif",
+            "width": 480,
+            "bytes": 16600
+          },
+          {
+            "src": "/images/optimized/home-hero-home-552dc7b8e3-768w.avif",
+            "width": 768,
+            "bytes": 45049
+          },
+          {
+            "src": "/images/optimized/home-hero-home-552dc7b8e3-1200w.avif",
+            "width": 1200,
+            "bytes": 109034
+          },
+          {
+            "src": "/images/optimized/home-hero-home-552dc7b8e3-1600w.avif",
+            "width": 1600,
+            "bytes": 159187
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/home-hero-home-552dc7b8e3-480w.webp",
+            "width": 480,
+            "bytes": 20338
+          },
+          {
+            "src": "/images/optimized/home-hero-home-552dc7b8e3-768w.webp",
+            "width": 768,
+            "bytes": 54064
+          },
+          {
+            "src": "/images/optimized/home-hero-home-552dc7b8e3-1200w.webp",
+            "width": 1200,
+            "bytes": 131264
+          },
+          {
+            "src": "/images/optimized/home-hero-home-552dc7b8e3-1600w.webp",
+            "width": 1600,
+            "bytes": 211472
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/home/hero-custom-wool-rug.webp",
+      "references": 2,
+      "originalBytes": 207466,
+      "originalWidth": 1672,
+      "originalHeight": 941,
+      "desktopAvifBytes": 121568,
+      "reductionPercent": 41.4,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/home-hero-custom-wool-rug-262ae9fc03-480w.avif",
+            "width": 480,
+            "bytes": 18551
+          },
+          {
+            "src": "/images/optimized/home-hero-custom-wool-rug-262ae9fc03-768w.avif",
+            "width": 768,
+            "bytes": 41898
+          },
+          {
+            "src": "/images/optimized/home-hero-custom-wool-rug-262ae9fc03-1200w.avif",
+            "width": 1200,
+            "bytes": 87954
+          },
+          {
+            "src": "/images/optimized/home-hero-custom-wool-rug-262ae9fc03-1600w.avif",
+            "width": 1600,
+            "bytes": 121568
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/home-hero-custom-wool-rug-262ae9fc03-480w.webp",
+            "width": 480,
+            "bytes": 22268
+          },
+          {
+            "src": "/images/optimized/home-hero-custom-wool-rug-262ae9fc03-768w.webp",
+            "width": 768,
+            "bytes": 51230
+          },
+          {
+            "src": "/images/optimized/home-hero-custom-wool-rug-262ae9fc03-1200w.webp",
+            "width": 1200,
+            "bytes": 109284
+          },
+          {
+            "src": "/images/optimized/home-hero-custom-wool-rug-262ae9fc03-1600w.webp",
+            "width": 1600,
+            "bytes": 160656
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/home/category-tiles.webp",
+      "references": 2,
+      "originalBytes": 409088,
+      "originalWidth": 1774,
+      "originalHeight": 887,
+      "desktopAvifBytes": 122316,
+      "reductionPercent": 70.1,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/home-category-tiles-b3791d455a-480w.avif",
+            "width": 480,
+            "bytes": 11783
+          },
+          {
+            "src": "/images/optimized/home-category-tiles-b3791d455a-768w.avif",
+            "width": 768,
+            "bytes": 31078
+          },
+          {
+            "src": "/images/optimized/home-category-tiles-b3791d455a-1200w.avif",
+            "width": 1200,
+            "bytes": 78741
+          },
+          {
+            "src": "/images/optimized/home-category-tiles-b3791d455a-1600w.avif",
+            "width": 1600,
+            "bytes": 122316
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/home-category-tiles-b3791d455a-480w.webp",
+            "width": 480,
+            "bytes": 14718
+          },
+          {
+            "src": "/images/optimized/home-category-tiles-b3791d455a-768w.webp",
+            "width": 768,
+            "bytes": 40196
+          },
+          {
+            "src": "/images/optimized/home-category-tiles-b3791d455a-1200w.webp",
+            "width": 1200,
+            "bytes": 104724
+          },
+          {
+            "src": "/images/optimized/home-category-tiles-b3791d455a-1600w.webp",
+            "width": 1600,
+            "bytes": 171684
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/home/category-broadloom.webp",
+      "references": 2,
+      "originalBytes": 377426,
+      "originalWidth": 1774,
+      "originalHeight": 887,
+      "desktopAvifBytes": 111967,
+      "reductionPercent": 70.3,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/home-category-broadloom-ebdf261c4e-480w.avif",
+            "width": 480,
+            "bytes": 14119
+          },
+          {
+            "src": "/images/optimized/home-category-broadloom-ebdf261c4e-768w.avif",
+            "width": 768,
+            "bytes": 32478
+          },
+          {
+            "src": "/images/optimized/home-category-broadloom-ebdf261c4e-1200w.avif",
+            "width": 1200,
+            "bytes": 73209
+          },
+          {
+            "src": "/images/optimized/home-category-broadloom-ebdf261c4e-1600w.avif",
+            "width": 1600,
+            "bytes": 111967
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/home-category-broadloom-ebdf261c4e-480w.webp",
+            "width": 480,
+            "bytes": 17466
+          },
+          {
+            "src": "/images/optimized/home-category-broadloom-ebdf261c4e-768w.webp",
+            "width": 768,
+            "bytes": 41172
+          },
+          {
+            "src": "/images/optimized/home-category-broadloom-ebdf261c4e-1200w.webp",
+            "width": 1200,
+            "bytes": 93876
+          },
+          {
+            "src": "/images/optimized/home-category-broadloom-ebdf261c4e-1600w.webp",
+            "width": 1600,
+            "bytes": 149842
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/home/category-public-area.webp",
+      "references": 2,
+      "originalBytes": 432116,
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "desktopAvifBytes": 182959,
+      "reductionPercent": 57.7,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/home-category-public-area-6e36ddec35-480w.avif",
+            "width": 480,
+            "bytes": 36788
+          },
+          {
+            "src": "/images/optimized/home-category-public-area-6e36ddec35-768w.avif",
+            "width": 768,
+            "bytes": 84651
+          },
+          {
+            "src": "/images/optimized/home-category-public-area-6e36ddec35-1200w.avif",
+            "width": 1200,
+            "bytes": 141974
+          },
+          {
+            "src": "/images/optimized/home-category-public-area-6e36ddec35-1254w.avif",
+            "width": 1254,
+            "bytes": 182959
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/home-category-public-area-6e36ddec35-480w.webp",
+            "width": 480,
+            "bytes": 45950
+          },
+          {
+            "src": "/images/optimized/home-category-public-area-6e36ddec35-768w.webp",
+            "width": 768,
+            "bytes": 112184
+          },
+          {
+            "src": "/images/optimized/home-category-public-area-6e36ddec35-1200w.webp",
+            "width": 1200,
+            "bytes": 214780
+          },
+          {
+            "src": "/images/optimized/home-category-public-area-6e36ddec35-1254w.webp",
+            "width": 1254,
+            "bytes": 265946
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/natural-sisal-carpet-office.webp",
+      "references": 6,
+      "originalBytes": 543238,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 297450,
+      "reductionPercent": 45.2,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/natural-sisal-carpet-office-bee17440d3-480w.avif",
+            "width": 480,
+            "bytes": 30827
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-office-bee17440d3-768w.avif",
+            "width": 768,
+            "bytes": 87862
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-office-bee17440d3-1200w.avif",
+            "width": 1200,
+            "bytes": 155072
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-office-bee17440d3-1536w.avif",
+            "width": 1536,
+            "bytes": 297450
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/natural-sisal-carpet-office-bee17440d3-480w.webp",
+            "width": 480,
+            "bytes": 37486
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-office-bee17440d3-768w.webp",
+            "width": 768,
+            "bytes": 105844
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-office-bee17440d3-1200w.webp",
+            "width": 1200,
+            "bytes": 206352
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-office-bee17440d3-1536w.webp",
+            "width": 1536,
+            "bytes": 363646
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/hero-home.webp",
+      "references": 6,
+      "originalBytes": 472414,
+      "originalWidth": 1774,
+      "originalHeight": 887,
+      "desktopAvifBytes": 159187,
+      "reductionPercent": 66.3,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/hero-home-552dc7b8e3-480w.avif",
+            "width": 480,
+            "bytes": 16600
+          },
+          {
+            "src": "/images/optimized/hero-home-552dc7b8e3-768w.avif",
+            "width": 768,
+            "bytes": 45049
+          },
+          {
+            "src": "/images/optimized/hero-home-552dc7b8e3-1200w.avif",
+            "width": 1200,
+            "bytes": 109034
+          },
+          {
+            "src": "/images/optimized/hero-home-552dc7b8e3-1600w.avif",
+            "width": 1600,
+            "bytes": 159187
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/hero-home-552dc7b8e3-480w.webp",
+            "width": 480,
+            "bytes": 20338
+          },
+          {
+            "src": "/images/optimized/hero-home-552dc7b8e3-768w.webp",
+            "width": 768,
+            "bytes": 54064
+          },
+          {
+            "src": "/images/optimized/hero-home-552dc7b8e3-1200w.webp",
+            "width": 1200,
+            "bytes": 131264
+          },
+          {
+            "src": "/images/optimized/hero-home-552dc7b8e3-1600w.webp",
+            "width": 1600,
+            "bytes": 211472
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/nylon-office-carpet-tile.webp",
+      "references": 5,
+      "originalBytes": 482270,
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "desktopAvifBytes": 249707,
+      "reductionPercent": 48.2,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/nylon-office-carpet-tile-0c4db43589-480w.avif",
+            "width": 480,
+            "bytes": 25252
+          },
+          {
+            "src": "/images/optimized/nylon-office-carpet-tile-0c4db43589-768w.avif",
+            "width": 768,
+            "bytes": 80786
+          },
+          {
+            "src": "/images/optimized/nylon-office-carpet-tile-0c4db43589-1200w.avif",
+            "width": 1200,
+            "bytes": 160061
+          },
+          {
+            "src": "/images/optimized/nylon-office-carpet-tile-0c4db43589-1254w.avif",
+            "width": 1254,
+            "bytes": 249707
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/nylon-office-carpet-tile-0c4db43589-480w.webp",
+            "width": 480,
+            "bytes": 34152
+          },
+          {
+            "src": "/images/optimized/nylon-office-carpet-tile-0c4db43589-768w.webp",
+            "width": 768,
+            "bytes": 101930
+          },
+          {
+            "src": "/images/optimized/nylon-office-carpet-tile-0c4db43589-1200w.webp",
+            "width": 1200,
+            "bytes": 226378
+          },
+          {
+            "src": "/images/optimized/nylon-office-carpet-tile-0c4db43589-1254w.webp",
+            "width": 1254,
+            "bytes": 309452
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/carpet-tile-premium.webp",
+      "references": 5,
+      "originalBytes": 472908,
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "desktopAvifBytes": 227855,
+      "reductionPercent": 51.8,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/carpet-tile-premium-3fe504d1e9-480w.avif",
+            "width": 480,
+            "bytes": 24370
+          },
+          {
+            "src": "/images/optimized/carpet-tile-premium-3fe504d1e9-768w.avif",
+            "width": 768,
+            "bytes": 64523
+          },
+          {
+            "src": "/images/optimized/carpet-tile-premium-3fe504d1e9-1200w.avif",
+            "width": 1200,
+            "bytes": 134522
+          },
+          {
+            "src": "/images/optimized/carpet-tile-premium-3fe504d1e9-1448w.avif",
+            "width": 1448,
+            "bytes": 227855
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/carpet-tile-premium-3fe504d1e9-480w.webp",
+            "width": 480,
+            "bytes": 32548
+          },
+          {
+            "src": "/images/optimized/carpet-tile-premium-3fe504d1e9-768w.webp",
+            "width": 768,
+            "bytes": 87202
+          },
+          {
+            "src": "/images/optimized/carpet-tile-premium-3fe504d1e9-1200w.webp",
+            "width": 1200,
+            "bytes": 197208
+          },
+          {
+            "src": "/images/optimized/carpet-tile-premium-3fe504d1e9-1448w.webp",
+            "width": 1448,
+            "bytes": 320254
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp",
+      "references": 5,
+      "originalBytes": 441778,
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "desktopAvifBytes": 182221,
+      "reductionPercent": 58.8,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-01-main-public-area-heavy-duty-carpet-2dbe6f89e9-480w.avif",
+            "width": 480,
+            "bytes": 36973
+          },
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-01-main-public-area-heavy-duty-carpet-2dbe6f89e9-768w.avif",
+            "width": 768,
+            "bytes": 84907
+          },
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-01-main-public-area-heavy-duty-carpet-2dbe6f89e9-1200w.avif",
+            "width": 1200,
+            "bytes": 142046
+          },
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-01-main-public-area-heavy-duty-carpet-2dbe6f89e9-1254w.avif",
+            "width": 1254,
+            "bytes": 182221
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-01-main-public-area-heavy-duty-carpet-2dbe6f89e9-480w.webp",
+            "width": 480,
+            "bytes": 46190
+          },
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-01-main-public-area-heavy-duty-carpet-2dbe6f89e9-768w.webp",
+            "width": 768,
+            "bytes": 113062
+          },
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-01-main-public-area-heavy-duty-carpet-2dbe6f89e9-1200w.webp",
+            "width": 1200,
+            "bytes": 215278
+          },
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-01-main-public-area-heavy-duty-carpet-2dbe6f89e9-1254w.webp",
+            "width": 1254,
+            "bytes": 272824
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/3d-printed-hotel-carpet-corridor.webp",
+      "references": 5,
+      "originalBytes": 397906,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 189914,
+      "reductionPercent": 52.3,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/3d-printed-hotel-carpet-corridor-2ad34b48a8-480w.avif",
+            "width": 480,
+            "bytes": 19350
+          },
+          {
+            "src": "/images/optimized/3d-printed-hotel-carpet-corridor-2ad34b48a8-768w.avif",
+            "width": 768,
+            "bytes": 51062
+          },
+          {
+            "src": "/images/optimized/3d-printed-hotel-carpet-corridor-2ad34b48a8-1200w.avif",
+            "width": 1200,
+            "bytes": 90477
+          },
+          {
+            "src": "/images/optimized/3d-printed-hotel-carpet-corridor-2ad34b48a8-1536w.avif",
+            "width": 1536,
+            "bytes": 189914
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/3d-printed-hotel-carpet-corridor-2ad34b48a8-480w.webp",
+            "width": 480,
+            "bytes": 22544
+          },
+          {
+            "src": "/images/optimized/3d-printed-hotel-carpet-corridor-2ad34b48a8-768w.webp",
+            "width": 768,
+            "bytes": 58888
+          },
+          {
+            "src": "/images/optimized/3d-printed-hotel-carpet-corridor-2ad34b48a8-1200w.webp",
+            "width": 1200,
+            "bytes": 114848
+          },
+          {
+            "src": "/images/optimized/3d-printed-hotel-carpet-corridor-2ad34b48a8-1536w.webp",
+            "width": 1536,
+            "bytes": 229568
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/hotel-glitter-broadloom/1.webp",
+      "references": 5,
+      "originalBytes": 392858,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 208483,
+      "reductionPercent": 46.9,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-1-313ebce5b9-480w.avif",
+            "width": 480,
+            "bytes": 24068
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-1-313ebce5b9-768w.avif",
+            "width": 768,
+            "bytes": 71062
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-1-313ebce5b9-1200w.avif",
+            "width": 1200,
+            "bytes": 117650
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-1-313ebce5b9-1536w.avif",
+            "width": 1536,
+            "bytes": 208483
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-1-313ebce5b9-480w.webp",
+            "width": 480,
+            "bytes": 28298
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-1-313ebce5b9-768w.webp",
+            "width": 768,
+            "bytes": 76294
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-1-313ebce5b9-1200w.webp",
+            "width": 1200,
+            "bytes": 139230
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-1-313ebce5b9-1536w.webp",
+            "width": 1536,
+            "bytes": 233910
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/about/production-workshop.webp",
+      "references": 5,
+      "originalBytes": 365772,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 162659,
+      "reductionPercent": 55.5,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/about-production-workshop-d7cf418530-480w.avif",
+            "width": 480,
+            "bytes": 28281
+          },
+          {
+            "src": "/images/optimized/about-production-workshop-d7cf418530-768w.avif",
+            "width": 768,
+            "bytes": 64014
+          },
+          {
+            "src": "/images/optimized/about-production-workshop-d7cf418530-1200w.avif",
+            "width": 1200,
+            "bytes": 101329
+          },
+          {
+            "src": "/images/optimized/about-production-workshop-d7cf418530-1536w.avif",
+            "width": 1536,
+            "bytes": 162659
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/about-production-workshop-d7cf418530-480w.webp",
+            "width": 480,
+            "bytes": 32906
+          },
+          {
+            "src": "/images/optimized/about-production-workshop-d7cf418530-768w.webp",
+            "width": 768,
+            "bytes": 75302
+          },
+          {
+            "src": "/images/optimized/about-production-workshop-d7cf418530-1200w.webp",
+            "width": 1200,
+            "bytes": 131258
+          },
+          {
+            "src": "/images/optimized/about-production-workshop-d7cf418530-1536w.webp",
+            "width": 1536,
+            "bytes": 211178
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/gold-mining-carpet-mat/01-hero-45-degree.webp",
+      "references": 5,
+      "originalBytes": 346594,
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "desktopAvifBytes": 166484,
+      "reductionPercent": 52,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-01-hero-45-degree-8f256d20c6-480w.avif",
+            "width": 480,
+            "bytes": 36348
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-01-hero-45-degree-8f256d20c6-768w.avif",
+            "width": 768,
+            "bytes": 82838
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-01-hero-45-degree-8f256d20c6-1200w.avif",
+            "width": 1200,
+            "bytes": 133176
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-01-hero-45-degree-8f256d20c6-1254w.avif",
+            "width": 1254,
+            "bytes": 166484
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-01-hero-45-degree-8f256d20c6-480w.webp",
+            "width": 480,
+            "bytes": 43056
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-01-hero-45-degree-8f256d20c6-768w.webp",
+            "width": 768,
+            "bytes": 101578
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-01-hero-45-degree-8f256d20c6-1200w.webp",
+            "width": 1200,
+            "bytes": 190154
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-01-hero-45-degree-8f256d20c6-1254w.webp",
+            "width": 1254,
+            "bytes": 229942
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/3d-printed-banquet-carpet/02-banquet-hall.webp",
+      "references": 5,
+      "originalBytes": 312146,
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "desktopAvifBytes": 147922,
+      "reductionPercent": 52.6,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-3d-printed-banquet-carpet-02-banquet-hall-333ee2a16a-480w.avif",
+            "width": 480,
+            "bytes": 24156
+          },
+          {
+            "src": "/images/optimized/products-3d-printed-banquet-carpet-02-banquet-hall-333ee2a16a-768w.avif",
+            "width": 768,
+            "bytes": 54767
+          },
+          {
+            "src": "/images/optimized/products-3d-printed-banquet-carpet-02-banquet-hall-333ee2a16a-1200w.avif",
+            "width": 1200,
+            "bytes": 104118
+          },
+          {
+            "src": "/images/optimized/products-3d-printed-banquet-carpet-02-banquet-hall-333ee2a16a-1254w.avif",
+            "width": 1254,
+            "bytes": 147922
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-3d-printed-banquet-carpet-02-banquet-hall-333ee2a16a-480w.webp",
+            "width": 480,
+            "bytes": 32126
+          },
+          {
+            "src": "/images/optimized/products-3d-printed-banquet-carpet-02-banquet-hall-333ee2a16a-768w.webp",
+            "width": 768,
+            "bytes": 72172
+          },
+          {
+            "src": "/images/optimized/products-3d-printed-banquet-carpet-02-banquet-hall-333ee2a16a-1200w.webp",
+            "width": 1200,
+            "bytes": 140178
+          },
+          {
+            "src": "/images/optimized/products-3d-printed-banquet-carpet-02-banquet-hall-333ee2a16a-1254w.webp",
+            "width": 1254,
+            "bytes": 181850
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/gold-mining-carpet-mat/02-full-texture-top-view.webp",
+      "references": 4,
+      "originalBytes": 435654,
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "desktopAvifBytes": 260014,
+      "reductionPercent": 40.3,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-02-full-texture-top-view-6d3103ef1a-480w.avif",
+            "width": 480,
+            "bytes": 35374
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-02-full-texture-top-view-6d3103ef1a-768w.avif",
+            "width": 768,
+            "bytes": 97080
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-02-full-texture-top-view-6d3103ef1a-1200w.avif",
+            "width": 1200,
+            "bytes": 189539
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-02-full-texture-top-view-6d3103ef1a-1254w.avif",
+            "width": 1254,
+            "bytes": 260014
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-02-full-texture-top-view-6d3103ef1a-480w.webp",
+            "width": 480,
+            "bytes": 41178
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-02-full-texture-top-view-6d3103ef1a-768w.webp",
+            "width": 768,
+            "bytes": 108398
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-02-full-texture-top-view-6d3103ef1a-1200w.webp",
+            "width": 1200,
+            "bytes": 230172
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-02-full-texture-top-view-6d3103ef1a-1254w.webp",
+            "width": 1254,
+            "bytes": 302844
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/case-series/case-3/Case_3_Casino_Hall.webp",
+      "references": 4,
+      "originalBytes": 435174,
+      "originalWidth": 1672,
+      "originalHeight": 941,
+      "desktopAvifBytes": 188674,
+      "reductionPercent": 56.6,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-casino-hall-80cdb26960-480w.avif",
+            "width": 480,
+            "bytes": 39550
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-casino-hall-80cdb26960-768w.avif",
+            "width": 768,
+            "bytes": 79275
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-casino-hall-80cdb26960-1200w.avif",
+            "width": 1200,
+            "bytes": 141035
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-casino-hall-80cdb26960-1600w.avif",
+            "width": 1600,
+            "bytes": 188674
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-casino-hall-80cdb26960-480w.webp",
+            "width": 480,
+            "bytes": 41794
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-casino-hall-80cdb26960-768w.webp",
+            "width": 768,
+            "bytes": 86746
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-casino-hall-80cdb26960-1200w.webp",
+            "width": 1200,
+            "bytes": 161994
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-casino-hall-80cdb26960-1600w.webp",
+            "width": 1600,
+            "bytes": 229460
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/case-series/case-1/Case_1_Lobby_Grand_Reveal.webp",
+      "references": 4,
+      "originalBytes": 434366,
+      "originalWidth": 1672,
+      "originalHeight": 941,
+      "desktopAvifBytes": 159511,
+      "reductionPercent": 63.3,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-lobby-grand-reveal-fe8723ff90-480w.avif",
+            "width": 480,
+            "bytes": 29256
+          },
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-lobby-grand-reveal-fe8723ff90-768w.avif",
+            "width": 768,
+            "bytes": 59561
+          },
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-lobby-grand-reveal-fe8723ff90-1200w.avif",
+            "width": 1200,
+            "bytes": 114295
+          },
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-lobby-grand-reveal-fe8723ff90-1600w.avif",
+            "width": 1600,
+            "bytes": 159511
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-lobby-grand-reveal-fe8723ff90-480w.webp",
+            "width": 480,
+            "bytes": 34092
+          },
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-lobby-grand-reveal-fe8723ff90-768w.webp",
+            "width": 768,
+            "bytes": 72574
+          },
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-lobby-grand-reveal-fe8723ff90-1200w.webp",
+            "width": 1200,
+            "bytes": 142912
+          },
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-lobby-grand-reveal-fe8723ff90-1600w.webp",
+            "width": 1600,
+            "bytes": 207024
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/category-broadloom.webp",
+      "references": 4,
+      "originalBytes": 377426,
+      "originalWidth": 1774,
+      "originalHeight": 887,
+      "desktopAvifBytes": 111967,
+      "reductionPercent": 70.3,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/category-broadloom-ebdf261c4e-480w.avif",
+            "width": 480,
+            "bytes": 14119
+          },
+          {
+            "src": "/images/optimized/category-broadloom-ebdf261c4e-768w.avif",
+            "width": 768,
+            "bytes": 32478
+          },
+          {
+            "src": "/images/optimized/category-broadloom-ebdf261c4e-1200w.avif",
+            "width": 1200,
+            "bytes": 73209
+          },
+          {
+            "src": "/images/optimized/category-broadloom-ebdf261c4e-1600w.avif",
+            "width": 1600,
+            "bytes": 111967
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/category-broadloom-ebdf261c4e-480w.webp",
+            "width": 480,
+            "bytes": 17466
+          },
+          {
+            "src": "/images/optimized/category-broadloom-ebdf261c4e-768w.webp",
+            "width": 768,
+            "bytes": 41172
+          },
+          {
+            "src": "/images/optimized/category-broadloom-ebdf261c4e-1200w.webp",
+            "width": 1200,
+            "bytes": 93876
+          },
+          {
+            "src": "/images/optimized/category-broadloom-ebdf261c4e-1600w.webp",
+            "width": 1600,
+            "bytes": 149842
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/case-series/case-4/Case_4_Hospital_Ward.webp",
+      "references": 4,
+      "originalBytes": 284318,
+      "originalWidth": 1672,
+      "originalHeight": 941,
+      "desktopAvifBytes": 96405,
+      "reductionPercent": 66.1,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/case-series-case-4-case-4-hospital-ward-5f2a580fcc-480w.avif",
+            "width": 480,
+            "bytes": 14282
+          },
+          {
+            "src": "/images/optimized/case-series-case-4-case-4-hospital-ward-5f2a580fcc-768w.avif",
+            "width": 768,
+            "bytes": 33237
+          },
+          {
+            "src": "/images/optimized/case-series-case-4-case-4-hospital-ward-5f2a580fcc-1200w.avif",
+            "width": 1200,
+            "bytes": 69193
+          },
+          {
+            "src": "/images/optimized/case-series-case-4-case-4-hospital-ward-5f2a580fcc-1600w.avif",
+            "width": 1600,
+            "bytes": 96405
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/case-series-case-4-case-4-hospital-ward-5f2a580fcc-480w.webp",
+            "width": 480,
+            "bytes": 17062
+          },
+          {
+            "src": "/images/optimized/case-series-case-4-case-4-hospital-ward-5f2a580fcc-768w.webp",
+            "width": 768,
+            "bytes": 40216
+          },
+          {
+            "src": "/images/optimized/case-series-case-4-case-4-hospital-ward-5f2a580fcc-1200w.webp",
+            "width": 1200,
+            "bytes": 86188
+          },
+          {
+            "src": "/images/optimized/case-series-case-4-case-4-hospital-ward-5f2a580fcc-1600w.webp",
+            "width": 1600,
+            "bytes": 131366
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/natural-sisal-carpet-roll.webp",
+      "references": 4,
+      "originalBytes": 233180,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 114210,
+      "reductionPercent": 51,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/natural-sisal-carpet-roll-8976fc04f1-480w.avif",
+            "width": 480,
+            "bytes": 10985
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-roll-8976fc04f1-768w.avif",
+            "width": 768,
+            "bytes": 34912
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-roll-8976fc04f1-1200w.avif",
+            "width": 1200,
+            "bytes": 61863
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-roll-8976fc04f1-1536w.avif",
+            "width": 1536,
+            "bytes": 114210
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/natural-sisal-carpet-roll-8976fc04f1-480w.webp",
+            "width": 480,
+            "bytes": 13840
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-roll-8976fc04f1-768w.webp",
+            "width": 768,
+            "bytes": 42072
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-roll-8976fc04f1-1200w.webp",
+            "width": 1200,
+            "bytes": 85612
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-roll-8976fc04f1-1536w.webp",
+            "width": 1536,
+            "bytes": 147622
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/about/custom-design-support.webp",
+      "references": 4,
+      "originalBytes": 219358,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 84932,
+      "reductionPercent": 61.3,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/about-custom-design-support-67168ad5aa-480w.avif",
+            "width": 480,
+            "bytes": 20990
+          },
+          {
+            "src": "/images/optimized/about-custom-design-support-67168ad5aa-768w.avif",
+            "width": 768,
+            "bytes": 40352
+          },
+          {
+            "src": "/images/optimized/about-custom-design-support-67168ad5aa-1200w.avif",
+            "width": 1200,
+            "bytes": 58077
+          },
+          {
+            "src": "/images/optimized/about-custom-design-support-67168ad5aa-1536w.avif",
+            "width": 1536,
+            "bytes": 84932
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/about-custom-design-support-67168ad5aa-480w.webp",
+            "width": 480,
+            "bytes": 25486
+          },
+          {
+            "src": "/images/optimized/about-custom-design-support-67168ad5aa-768w.webp",
+            "width": 768,
+            "bytes": 51636
+          },
+          {
+            "src": "/images/optimized/about-custom-design-support-67168ad5aa-1200w.webp",
+            "width": 1200,
+            "bytes": 83960
+          },
+          {
+            "src": "/images/optimized/about-custom-design-support-67168ad5aa-1536w.webp",
+            "width": 1536,
+            "bytes": 121794
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/natural-sisal-carpet.webp",
+      "references": 3,
+      "originalBytes": 748848,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 419772,
+      "reductionPercent": 43.9,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/natural-sisal-carpet-11dd7bb52a-480w.avif",
+            "width": 480,
+            "bytes": 24755
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-11dd7bb52a-768w.avif",
+            "width": 768,
+            "bytes": 97965
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-11dd7bb52a-1200w.avif",
+            "width": 1200,
+            "bytes": 200558
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-11dd7bb52a-1536w.avif",
+            "width": 1536,
+            "bytes": 419772
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/natural-sisal-carpet-11dd7bb52a-480w.webp",
+            "width": 480,
+            "bytes": 51664
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-11dd7bb52a-768w.webp",
+            "width": 768,
+            "bytes": 152076
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-11dd7bb52a-1200w.webp",
+            "width": 1200,
+            "bytes": 311434
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-11dd7bb52a-1536w.webp",
+            "width": 1536,
+            "bytes": 525708
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/broadloom-patterned.webp",
+      "references": 3,
+      "originalBytes": 586476,
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "desktopAvifBytes": 298276,
+      "reductionPercent": 49.1,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/broadloom-patterned-2f7a898869-480w.avif",
+            "width": 480,
+            "bytes": 44572
+          },
+          {
+            "src": "/images/optimized/broadloom-patterned-2f7a898869-768w.avif",
+            "width": 768,
+            "bytes": 109418
+          },
+          {
+            "src": "/images/optimized/broadloom-patterned-2f7a898869-1200w.avif",
+            "width": 1200,
+            "bytes": 195581
+          },
+          {
+            "src": "/images/optimized/broadloom-patterned-2f7a898869-1448w.avif",
+            "width": 1448,
+            "bytes": 298276
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/broadloom-patterned-2f7a898869-480w.webp",
+            "width": 480,
+            "bytes": 52478
+          },
+          {
+            "src": "/images/optimized/broadloom-patterned-2f7a898869-768w.webp",
+            "width": 768,
+            "bytes": 131664
+          },
+          {
+            "src": "/images/optimized/broadloom-patterned-2f7a898869-1200w.webp",
+            "width": 1200,
+            "bytes": 271372
+          },
+          {
+            "src": "/images/optimized/broadloom-patterned-2f7a898869-1448w.webp",
+            "width": 1448,
+            "bytes": 395538
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/hotel-glitter-broadloom/2.webp",
+      "references": 3,
+      "originalBytes": 522152,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 286875,
+      "reductionPercent": 45.1,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-2-599c5da505-480w.avif",
+            "width": 480,
+            "bytes": 35209
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-2-599c5da505-768w.avif",
+            "width": 768,
+            "bytes": 98037
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-2-599c5da505-1200w.avif",
+            "width": 1200,
+            "bytes": 164694
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-2-599c5da505-1536w.avif",
+            "width": 1536,
+            "bytes": 286875
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-2-599c5da505-480w.webp",
+            "width": 480,
+            "bytes": 41192
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-2-599c5da505-768w.webp",
+            "width": 768,
+            "bytes": 108092
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-2-599c5da505-1200w.webp",
+            "width": 1200,
+            "bytes": 198258
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-2-599c5da505-1536w.webp",
+            "width": 1536,
+            "bytes": 336404
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/gold-mining-carpet-mat/08-pvc-ribbed-wear-resistant-anti-slip.webp",
+      "references": 3,
+      "originalBytes": 518330,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 276125,
+      "reductionPercent": 46.7,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-08-pvc-ribbed-wear-resistant-anti-slip-ba6f703682-480w.avif",
+            "width": 480,
+            "bytes": 46826
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-08-pvc-ribbed-wear-resistant-anti-slip-ba6f703682-768w.avif",
+            "width": 768,
+            "bytes": 108627
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-08-pvc-ribbed-wear-resistant-anti-slip-ba6f703682-1200w.avif",
+            "width": 1200,
+            "bytes": 179099
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-08-pvc-ribbed-wear-resistant-anti-slip-ba6f703682-1536w.avif",
+            "width": 1536,
+            "bytes": 276125
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-08-pvc-ribbed-wear-resistant-anti-slip-ba6f703682-480w.webp",
+            "width": 480,
+            "bytes": 51826
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-08-pvc-ribbed-wear-resistant-anti-slip-ba6f703682-768w.webp",
+            "width": 768,
+            "bytes": 121124
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-08-pvc-ribbed-wear-resistant-anti-slip-ba6f703682-1200w.webp",
+            "width": 1200,
+            "bytes": 218464
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-08-pvc-ribbed-wear-resistant-anti-slip-ba6f703682-1536w.webp",
+            "width": 1536,
+            "bytes": 336626
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/gold-mining-carpet-mat/04-pvc-ribbed-miners-moss-texture.webp",
+      "references": 3,
+      "originalBytes": 505460,
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "desktopAvifBytes": 306295,
+      "reductionPercent": 39.4,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-04-pvc-ribbed-miners-moss-texture-0be80b4286-480w.avif",
+            "width": 480,
+            "bytes": 56573
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-04-pvc-ribbed-miners-moss-texture-0be80b4286-768w.avif",
+            "width": 768,
+            "bytes": 134496
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-04-pvc-ribbed-miners-moss-texture-0be80b4286-1200w.avif",
+            "width": 1200,
+            "bytes": 236701
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-04-pvc-ribbed-miners-moss-texture-0be80b4286-1254w.avif",
+            "width": 1254,
+            "bytes": 306295
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-04-pvc-ribbed-miners-moss-texture-0be80b4286-480w.webp",
+            "width": 480,
+            "bytes": 59072
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-04-pvc-ribbed-miners-moss-texture-0be80b4286-768w.webp",
+            "width": 768,
+            "bytes": 142980
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-04-pvc-ribbed-miners-moss-texture-0be80b4286-1200w.webp",
+            "width": 1200,
+            "bytes": 282828
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-04-pvc-ribbed-miners-moss-texture-0be80b4286-1254w.webp",
+            "width": 1254,
+            "bytes": 347764
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/luxury-hotel-carpet-tile-50x50cm/01-main-carpet-tile-top-view.webp",
+      "references": 3,
+      "originalBytes": 501678,
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "desktopAvifBytes": 280082,
+      "reductionPercent": 44.2,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-luxury-hotel-carpet-tile-50x50cm-01-main-carpet-tile-top-view-3c312e31d0-480w.avif",
+            "width": 480,
+            "bytes": 53241
+          },
+          {
+            "src": "/images/optimized/products-luxury-hotel-carpet-tile-50x50cm-01-main-carpet-tile-top-view-3c312e31d0-768w.avif",
+            "width": 768,
+            "bytes": 128288
+          },
+          {
+            "src": "/images/optimized/products-luxury-hotel-carpet-tile-50x50cm-01-main-carpet-tile-top-view-3c312e31d0-1200w.avif",
+            "width": 1200,
+            "bytes": 206177
+          },
+          {
+            "src": "/images/optimized/products-luxury-hotel-carpet-tile-50x50cm-01-main-carpet-tile-top-view-3c312e31d0-1254w.avif",
+            "width": 1254,
+            "bytes": 280082
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-luxury-hotel-carpet-tile-50x50cm-01-main-carpet-tile-top-view-3c312e31d0-480w.webp",
+            "width": 480,
+            "bytes": 57260
+          },
+          {
+            "src": "/images/optimized/products-luxury-hotel-carpet-tile-50x50cm-01-main-carpet-tile-top-view-3c312e31d0-768w.webp",
+            "width": 768,
+            "bytes": 146866
+          },
+          {
+            "src": "/images/optimized/products-luxury-hotel-carpet-tile-50x50cm-01-main-carpet-tile-top-view-3c312e31d0-1200w.webp",
+            "width": 1200,
+            "bytes": 294734
+          },
+          {
+            "src": "/images/optimized/products-luxury-hotel-carpet-tile-50x50cm-01-main-carpet-tile-top-view-3c312e31d0-1254w.webp",
+            "width": 1254,
+            "bytes": 361404
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/nylon-office-carpet-tile/04-lobby-modular-carpet-tiles.webp",
+      "references": 3,
+      "originalBytes": 496804,
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "desktopAvifBytes": 231448,
+      "reductionPercent": 53.4,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-nylon-office-carpet-tile-04-lobby-modular-carpet-tiles-dd0f3c2339-480w.avif",
+            "width": 480,
+            "bytes": 27465
+          },
+          {
+            "src": "/images/optimized/products-nylon-office-carpet-tile-04-lobby-modular-carpet-tiles-dd0f3c2339-768w.avif",
+            "width": 768,
+            "bytes": 83577
+          },
+          {
+            "src": "/images/optimized/products-nylon-office-carpet-tile-04-lobby-modular-carpet-tiles-dd0f3c2339-1200w.avif",
+            "width": 1200,
+            "bytes": 163816
+          },
+          {
+            "src": "/images/optimized/products-nylon-office-carpet-tile-04-lobby-modular-carpet-tiles-dd0f3c2339-1254w.avif",
+            "width": 1254,
+            "bytes": 231448
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-nylon-office-carpet-tile-04-lobby-modular-carpet-tiles-dd0f3c2339-480w.webp",
+            "width": 480,
+            "bytes": 36308
+          },
+          {
+            "src": "/images/optimized/products-nylon-office-carpet-tile-04-lobby-modular-carpet-tiles-dd0f3c2339-768w.webp",
+            "width": 768,
+            "bytes": 106038
+          },
+          {
+            "src": "/images/optimized/products-nylon-office-carpet-tile-04-lobby-modular-carpet-tiles-dd0f3c2339-1200w.webp",
+            "width": 1200,
+            "bytes": 228622
+          },
+          {
+            "src": "/images/optimized/products-nylon-office-carpet-tile-04-lobby-modular-carpet-tiles-dd0f3c2339-1254w.webp",
+            "width": 1254,
+            "bytes": 319338
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/case-series/case-3/Case_3_Pattern_Complexity.webp",
+      "references": 3,
+      "originalBytes": 496006,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 270671,
+      "reductionPercent": 45.4,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-pattern-complexity-005f03728a-480w.avif",
+            "width": 480,
+            "bytes": 45626
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-pattern-complexity-005f03728a-768w.avif",
+            "width": 768,
+            "bytes": 108541
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-pattern-complexity-005f03728a-1200w.avif",
+            "width": 1200,
+            "bytes": 173394
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-pattern-complexity-005f03728a-1536w.avif",
+            "width": 1536,
+            "bytes": 270671
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-pattern-complexity-005f03728a-480w.webp",
+            "width": 480,
+            "bytes": 50682
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-pattern-complexity-005f03728a-768w.webp",
+            "width": 768,
+            "bytes": 118940
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-pattern-complexity-005f03728a-1200w.webp",
+            "width": 1200,
+            "bytes": 210006
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-pattern-complexity-005f03728a-1536w.webp",
+            "width": 1536,
+            "bytes": 321162
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/case-series/case-3/Case_3_Customer_Engagement.webp",
+      "references": 3,
+      "originalBytes": 494642,
+      "originalWidth": 1672,
+      "originalHeight": 941,
+      "desktopAvifBytes": 222965,
+      "reductionPercent": 54.9,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-customer-engagement-8805dc4602-480w.avif",
+            "width": 480,
+            "bytes": 40392
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-customer-engagement-8805dc4602-768w.avif",
+            "width": 768,
+            "bytes": 87336
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-customer-engagement-8805dc4602-1200w.avif",
+            "width": 1200,
+            "bytes": 165114
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-customer-engagement-8805dc4602-1600w.avif",
+            "width": 1600,
+            "bytes": 222965
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-customer-engagement-8805dc4602-480w.webp",
+            "width": 480,
+            "bytes": 43402
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-customer-engagement-8805dc4602-768w.webp",
+            "width": 768,
+            "bytes": 93876
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-customer-engagement-8805dc4602-1200w.webp",
+            "width": 1200,
+            "bytes": 182484
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-customer-engagement-8805dc4602-1600w.webp",
+            "width": 1600,
+            "bytes": 261832
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/hotel-glitter-broadloom/4.webp",
+      "references": 3,
+      "originalBytes": 482126,
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "desktopAvifBytes": 275572,
+      "reductionPercent": 42.8,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-4-4d67229550-480w.avif",
+            "width": 480,
+            "bytes": 32221
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-4-4d67229550-768w.avif",
+            "width": 768,
+            "bytes": 87171
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-4-4d67229550-1200w.avif",
+            "width": 1200,
+            "bytes": 169669
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-4-4d67229550-1448w.avif",
+            "width": 1448,
+            "bytes": 275572
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-4-4d67229550-480w.webp",
+            "width": 480,
+            "bytes": 34812
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-4-4d67229550-768w.webp",
+            "width": 768,
+            "bytes": 93174
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-4-4d67229550-1200w.webp",
+            "width": 1200,
+            "bytes": 201646
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-4-4d67229550-1448w.webp",
+            "width": 1448,
+            "bytes": 313470
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/natural-sisal-carpet-retail.webp",
+      "references": 3,
+      "originalBytes": 481828,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 250512,
+      "reductionPercent": 48,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/natural-sisal-carpet-retail-b8af34ed63-480w.avif",
+            "width": 480,
+            "bytes": 26468
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-retail-b8af34ed63-768w.avif",
+            "width": 768,
+            "bytes": 75590
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-retail-b8af34ed63-1200w.avif",
+            "width": 1200,
+            "bytes": 130972
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-retail-b8af34ed63-1536w.avif",
+            "width": 1536,
+            "bytes": 250512
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/natural-sisal-carpet-retail-b8af34ed63-480w.webp",
+            "width": 480,
+            "bytes": 32608
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-retail-b8af34ed63-768w.webp",
+            "width": 768,
+            "bytes": 89278
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-retail-b8af34ed63-1200w.webp",
+            "width": 1200,
+            "bytes": 172558
+          },
+          {
+            "src": "/images/optimized/natural-sisal-carpet-retail-b8af34ed63-1536w.webp",
+            "width": 1536,
+            "bytes": 303476
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/case-series/case-1/Case_1_Design_Detail.webp",
+      "references": 3,
+      "originalBytes": 475988,
+      "originalWidth": 1672,
+      "originalHeight": 941,
+      "desktopAvifBytes": 197564,
+      "reductionPercent": 58.5,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-design-detail-9d7cb5d4f8-480w.avif",
+            "width": 480,
+            "bytes": 35377
+          },
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-design-detail-9d7cb5d4f8-768w.avif",
+            "width": 768,
+            "bytes": 77774
+          },
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-design-detail-9d7cb5d4f8-1200w.avif",
+            "width": 1200,
+            "bytes": 145825
+          },
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-design-detail-9d7cb5d4f8-1600w.avif",
+            "width": 1600,
+            "bytes": 197564
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-design-detail-9d7cb5d4f8-480w.webp",
+            "width": 480,
+            "bytes": 39536
+          },
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-design-detail-9d7cb5d4f8-768w.webp",
+            "width": 768,
+            "bytes": 88640
+          },
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-design-detail-9d7cb5d4f8-1200w.webp",
+            "width": 1200,
+            "bytes": 173578
+          },
+          {
+            "src": "/images/optimized/case-series-case-1-case-1-design-detail-9d7cb5d4f8-1600w.webp",
+            "width": 1600,
+            "bytes": 253752
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/case-series/case-2/Case_2_Pattern_Detail.webp",
+      "references": 3,
+      "originalBytes": 471894,
+      "originalWidth": 1672,
+      "originalHeight": 941,
+      "desktopAvifBytes": 189766,
+      "reductionPercent": 59.8,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-pattern-detail-efb763945d-480w.avif",
+            "width": 480,
+            "bytes": 31441
+          },
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-pattern-detail-efb763945d-768w.avif",
+            "width": 768,
+            "bytes": 71851
+          },
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-pattern-detail-efb763945d-1200w.avif",
+            "width": 1200,
+            "bytes": 138727
+          },
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-pattern-detail-efb763945d-1600w.avif",
+            "width": 1600,
+            "bytes": 189766
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-pattern-detail-efb763945d-480w.webp",
+            "width": 480,
+            "bytes": 36496
+          },
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-pattern-detail-efb763945d-768w.webp",
+            "width": 768,
+            "bytes": 86164
+          },
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-pattern-detail-efb763945d-1200w.webp",
+            "width": 1200,
+            "bytes": 171616
+          },
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-pattern-detail-efb763945d-1600w.webp",
+            "width": 1600,
+            "bytes": 251430
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/hotel-glitter-broadloom/6.webp",
+      "references": 3,
+      "originalBytes": 466160,
+      "originalWidth": 1402,
+      "originalHeight": 1122,
+      "desktopAvifBytes": 242890,
+      "reductionPercent": 47.9,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-6-8cc55581c7-480w.avif",
+            "width": 480,
+            "bytes": 54212
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-6-8cc55581c7-768w.avif",
+            "width": 768,
+            "bytes": 107384
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-6-8cc55581c7-1200w.avif",
+            "width": 1200,
+            "bytes": 173702
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-6-8cc55581c7-1402w.avif",
+            "width": 1402,
+            "bytes": 242890
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-6-8cc55581c7-480w.webp",
+            "width": 480,
+            "bytes": 62326
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-6-8cc55581c7-768w.webp",
+            "width": 768,
+            "bytes": 127466
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-6-8cc55581c7-1200w.webp",
+            "width": 1200,
+            "bytes": 229152
+          },
+          {
+            "src": "/images/optimized/products-hotel-glitter-broadloom-6-8cc55581c7-1402w.webp",
+            "width": 1402,
+            "bytes": 304444
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/public-area/public-area-heavy-duty/03-public-area-heavy-duty-detail.webp",
+      "references": 3,
+      "originalBytes": 465952,
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "desktopAvifBytes": 195323,
+      "reductionPercent": 58.1,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-03-public-area-heavy-duty-detail-78f19c0f87-480w.avif",
+            "width": 480,
+            "bytes": 35345
+          },
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-03-public-area-heavy-duty-detail-78f19c0f87-768w.avif",
+            "width": 768,
+            "bytes": 84221
+          },
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-03-public-area-heavy-duty-detail-78f19c0f87-1200w.avif",
+            "width": 1200,
+            "bytes": 147592
+          },
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-03-public-area-heavy-duty-detail-78f19c0f87-1254w.avif",
+            "width": 1254,
+            "bytes": 195323
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-03-public-area-heavy-duty-detail-78f19c0f87-480w.webp",
+            "width": 480,
+            "bytes": 47028
+          },
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-03-public-area-heavy-duty-detail-78f19c0f87-768w.webp",
+            "width": 768,
+            "bytes": 112956
+          },
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-03-public-area-heavy-duty-detail-78f19c0f87-1200w.webp",
+            "width": 1200,
+            "bytes": 218268
+          },
+          {
+            "src": "/images/optimized/products-public-area-public-area-heavy-duty-03-public-area-heavy-duty-detail-78f19c0f87-1254w.webp",
+            "width": 1254,
+            "bytes": 274790
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/case-series/case-3/Case_3_Stain_Hiding_Demo.webp",
+      "references": 3,
+      "originalBytes": 450940,
+      "originalWidth": 1672,
+      "originalHeight": 941,
+      "desktopAvifBytes": 196140,
+      "reductionPercent": 56.5,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-stain-hiding-demo-829a3a76f1-480w.avif",
+            "width": 480,
+            "bytes": 35171
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-stain-hiding-demo-829a3a76f1-768w.avif",
+            "width": 768,
+            "bytes": 79315
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-stain-hiding-demo-829a3a76f1-1200w.avif",
+            "width": 1200,
+            "bytes": 147096
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-stain-hiding-demo-829a3a76f1-1600w.avif",
+            "width": 1600,
+            "bytes": 196140
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-stain-hiding-demo-829a3a76f1-480w.webp",
+            "width": 480,
+            "bytes": 40162
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-stain-hiding-demo-829a3a76f1-768w.webp",
+            "width": 768,
+            "bytes": 91562
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-stain-hiding-demo-829a3a76f1-1200w.webp",
+            "width": 1200,
+            "bytes": 175360
+          },
+          {
+            "src": "/images/optimized/case-series-case-3-case-3-stain-hiding-demo-829a3a76f1-1600w.webp",
+            "width": 1600,
+            "bytes": 250738
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/case-series/case-2/Case_2_Beauty_Department.webp",
+      "references": 3,
+      "originalBytes": 443864,
+      "originalWidth": 1672,
+      "originalHeight": 941,
+      "desktopAvifBytes": 189263,
+      "reductionPercent": 57.4,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-beauty-department-8b7b893071-480w.avif",
+            "width": 480,
+            "bytes": 37337
+          },
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-beauty-department-8b7b893071-768w.avif",
+            "width": 768,
+            "bytes": 76467
+          },
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-beauty-department-8b7b893071-1200w.avif",
+            "width": 1200,
+            "bytes": 139499
+          },
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-beauty-department-8b7b893071-1600w.avif",
+            "width": 1600,
+            "bytes": 189263
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-beauty-department-8b7b893071-480w.webp",
+            "width": 480,
+            "bytes": 38922
+          },
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-beauty-department-8b7b893071-768w.webp",
+            "width": 768,
+            "bytes": 84938
+          },
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-beauty-department-8b7b893071-1200w.webp",
+            "width": 1200,
+            "bytes": 160464
+          },
+          {
+            "src": "/images/optimized/case-series-case-2-case-2-beauty-department-8b7b893071-1600w.webp",
+            "width": 1600,
+            "bytes": 228684
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/products/gold-mining-carpet-mat/10-gold-washing-mining-site-application.webp",
+      "references": 3,
+      "originalBytes": 439020,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 218778,
+      "reductionPercent": 50.2,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-10-gold-washing-mining-site-application-2897c0f32a-480w.avif",
+            "width": 480,
+            "bytes": 36873
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-10-gold-washing-mining-site-application-2897c0f32a-768w.avif",
+            "width": 768,
+            "bytes": 86019
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-10-gold-washing-mining-site-application-2897c0f32a-1200w.avif",
+            "width": 1200,
+            "bytes": 139533
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-10-gold-washing-mining-site-application-2897c0f32a-1536w.avif",
+            "width": 1536,
+            "bytes": 218778
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-10-gold-washing-mining-site-application-2897c0f32a-480w.webp",
+            "width": 480,
+            "bytes": 42408
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-10-gold-washing-mining-site-application-2897c0f32a-768w.webp",
+            "width": 768,
+            "bytes": 96924
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-10-gold-washing-mining-site-application-2897c0f32a-1200w.webp",
+            "width": 1200,
+            "bytes": 169286
+          },
+          {
+            "src": "/images/optimized/products-gold-mining-carpet-mat-10-gold-washing-mining-site-application-2897c0f32a-1536w.webp",
+            "width": 1536,
+            "bytes": 260264
+          }
+        ]
+      }
+    }
+  ]
+}

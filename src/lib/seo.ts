@@ -24,10 +24,10 @@ export function categoryName(categoryId: Product["category"]) {
   return productCategories.find((item) => item.id === categoryId)?.name ?? categoryId;
 }
 
-function productAvailability(productId: string) {
-  return ["custom-luxury-hotel-room-carpet", "custom-floral-printed-hotel-carpet", "custom-sculpted-wool-lobby-rug"].includes(productId)
-    ? "https://schema.org/PreOrder"
-    : "https://schema.org/InStock";
+function productAvailability(product: Product) {
+  return product.availability === "in-stock"
+    ? "https://schema.org/InStock"
+    : "https://schema.org/PreOrder";
 }
 
 function productImages(product: Product) {
@@ -36,8 +36,7 @@ function productImages(product: Product) {
 
 export function productJsonLd(product: Product) {
   const productUrl = absoluteUrl(productPath(product.id));
-  const priceValidUntil = new Date();
-  priceValidUntil.setFullYear(priceValidUntil.getFullYear() + 1);
+  const availability = productAvailability(product);
 
   return {
     "@context": "https://schema.org",
@@ -62,12 +61,11 @@ export function productJsonLd(product: Product) {
           offers: {
             "@type": "AggregateOffer",
             url: productUrl,
-            availability: productAvailability(product.id),
+            availability,
             itemCondition: "https://schema.org/NewCondition",
             priceCurrency: product.fobPrice.currency,
             lowPrice: product.fobPrice.lowPrice,
             highPrice: product.fobPrice.highPrice,
-            priceValidUntil: priceValidUntil.toISOString().slice(0, 10),
             offerCount: 1,
             seller: { "@id": `${brandInfo.url}/#organization` },
           },
@@ -79,11 +77,15 @@ export function productJsonLd(product: Product) {
       { "@type": "PropertyValue", name: "Trial Order", value: product.moqTiers.trialOrder },
       { "@type": "PropertyValue", name: "Project MOQ", value: product.moqTiers.project },
       { "@type": "PropertyValue", name: "Lead Time", value: product.leadTime },
-      { "@type": "PropertyValue", name: "Availability", value: productAvailability(product.id).endsWith("PreOrder") ? "Made to Order" : "InStock" },
+      { "@type": "PropertyValue", name: "Availability", value: availability.endsWith("PreOrder") ? "Quotation required / made to order" : "Confirmed in stock" },
       { "@type": "PropertyValue", name: "Product Category", value: categoryName(product.category) },
       { "@type": "PropertyValue", name: "Target Buyer", value: "Contractors, distributors, hotels, offices, and commercial renovation projects" },
       ...(product.fobPrice
-        ? [{ "@type": "PropertyValue", name: "FOB Price Range", value: product.fobPrice.display }]
+        ? [
+            { "@type": "PropertyValue", name: "FOB Price Range", value: product.fobPrice.display },
+            { "@type": "PropertyValue", name: "Sales Unit", value: product.fobPrice.unit },
+            { "@type": "PropertyValue", name: "Price Basis", value: "Reference FOB range; final price and validity require a written quotation" },
+          ]
         : []),
       ...product.spec.colors.map((color) => ({ "@type": "PropertyValue", name: "Color Option", value: color.name })),
       ...Object.entries(product.technicalSpecs)

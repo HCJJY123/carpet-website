@@ -10,6 +10,7 @@ import ImageProtection from "@/components/ImageProtection";
 import SendInquiryFloating from "@/components/SendInquiryFloating";
 import VisitorBeacon from "@/components/VisitorBeacon";
 import LocaleExperience from "@/components/LocaleExperience";
+import CookieConsent from "@/components/CookieConsent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -97,6 +98,7 @@ export default function RootLayout({
         <Footer />
         <SendInquiryFloating />
         <WhatsAppFloating />
+        <CookieConsent />
         <ImageProtection />
       </body>
     </html>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
+import ProductImage from "@/components/ProductImage";
 
 type HomeHeroCarouselProps = {
   whatsappUrl: string;
@@ -273,18 +274,15 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
             aria-label={`Open ${slide.title}`}
             aria-hidden={index !== activeIndex}
           >
-            <Image
+            <ProductImage
               src={slide.image}
               alt={index === activeIndex ? slide.alt : ""}
-              fill
+              className="absolute inset-0"
               priority={index === 0}
-              loading={index === 0 ? undefined : "eager"}
-              fetchPriority={index === 0 ? "high" : "low"}
+              loading="eager"
               quality={slide.quality}
               sizes="100vw"
-              className="object-cover"
-              style={{ objectPosition: slide.objectPosition }}
-              draggable={false}
+              objectPosition={slide.objectPosition}
             />
             <div className={`absolute inset-0 ${slide.overlay}`} />
           </Link>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { responsiveImageManifest } from "@/lib/responsive-image-manifest";
 
 export default function ProductImage({
   src,
@@ -12,6 +13,8 @@ export default function ProductImage({
   quality = 82,
   sizes = "(max-width: 768px) 100vw, 50vw",
   unoptimized = true,
+  loading,
+  objectPosition,
 }: {
   src: string;
   alt: string;
@@ -21,13 +24,45 @@ export default function ProductImage({
   quality?: number;
   sizes?: string;
   unoptimized?: boolean;
+  loading?: "eager" | "lazy";
+  objectPosition?: string;
 }) {
+  const responsive = responsiveImageManifest[src];
   const [loadState, setLoadState] = useState<{
     src: string;
-    mode: "optimized" | "direct" | "failed";
-  }>({ src, mode: unoptimized ? "direct" : "optimized" });
-  const loadMode = loadState.src === src ? loadState.mode : unoptimized ? "direct" : "optimized";
+    mode: "responsive" | "optimized" | "direct" | "failed";
+  }>({ src, mode: responsive ? "responsive" : unoptimized ? "direct" : "optimized" });
+  const defaultMode = responsive ? "responsive" : unoptimized ? "direct" : "optimized";
+  const loadMode = loadState.src === src ? loadState.mode : defaultMode;
   const useDirectImage = unoptimized || loadMode === "direct";
+
+  if (loadMode === "responsive" && responsive) {
+    const avifSrcSet = responsive.avif.map((item) => `${item.src} ${item.width}w`).join(", ");
+    const webpSrcSet = responsive.webp.map((item) => `${item.src} ${item.width}w`).join(", ");
+
+    return (
+      <div className={`relative overflow-hidden ${className}`}>
+        <picture>
+          <source type="image/avif" srcSet={avifSrcSet} sizes={sizes} />
+          <source type="image/webp" srcSet={webpSrcSet} sizes={sizes} />
+          <img
+            src={responsive.fallback}
+            alt={alt}
+            width={responsive.width}
+            height={responsive.height}
+            sizes={sizes}
+            loading={loading ?? (priority ? "eager" : "lazy")}
+            fetchPriority={priority ? "high" : "low"}
+            decoding="async"
+            draggable={false}
+            className={`absolute inset-0 h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"}`}
+            style={{ objectPosition }}
+            onError={() => setLoadState({ src, mode: "direct" })}
+          />
+        </picture>
+      </div>
+    );
+  }
 
   if (loadMode !== "failed") {
     return (
@@ -38,9 +73,10 @@ export default function ProductImage({
           alt={alt}
           fill
           className={fit === "contain" ? "object-contain" : "object-cover"}
+          style={{ objectPosition }}
           sizes={sizes}
           priority={priority}
-          loading={priority ? "eager" : "lazy"}
+          loading={loading ?? (priority ? "eager" : "lazy")}
           quality={quality}
           unoptimized={useDirectImage}
           onError={() => setLoadState({ src, mode: useDirectImage ? "failed" : "direct" })}

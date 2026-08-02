@@ -13,6 +13,7 @@ import {
   recordSectionView,
 } from "@/lib/funnel";
 import { getVisitorIdentity } from "@/lib/visitorIdentity";
+import { useAnalyticsAllowed } from "@/lib/useAnalyticsConsent";
 
 const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-T2VYHXTK1F";
 const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "GT-NMDDTW67";
@@ -32,8 +33,11 @@ declare global {
 
 export default function MarketingTracking() {
   const pathname = usePathname();
+  const analyticsAllowed = useAnalyticsAllowed();
 
   useEffect(() => {
+    if (!analyticsAllowed) return;
+
     captureAttributionOnce();
 
     const attribution = getAttributionForEvent();
@@ -48,9 +52,10 @@ export default function MarketingTracking() {
         page_path: window.location.pathname,
       });
     }
-  }, []);
+  }, [analyticsAllowed]);
 
   useEffect(() => {
+    if (!analyticsAllowed) return;
     if (typeof window.gtag !== "function") return;
 
     const pageViewPayload = {
@@ -70,9 +75,11 @@ export default function MarketingTracking() {
     if (googleAdsId) {
       window.gtag("config", googleAdsId, pageViewPayload);
     }
-  }, [pathname]);
+  }, [analyticsAllowed, pathname]);
 
   useEffect(() => {
+    if (!analyticsAllowed) return;
+
     const productMatch = pathname.match(/^\/(?:[a-z]{2}\/)?products\/([^/]+)\/([^/]+)$/);
 
     function maybeTrackHighIntentSession() {
@@ -169,9 +176,11 @@ export default function MarketingTracking() {
       window.clearInterval(engagementTimer);
       observer.disconnect();
     };
-  }, [pathname]);
+  }, [analyticsAllowed, pathname]);
 
   useEffect(() => {
+    if (!analyticsAllowed) return;
+
     function handleClick(event: MouseEvent) {
       const target = event.target as HTMLElement | null;
       const anchor = target?.closest("a");
@@ -265,11 +274,11 @@ export default function MarketingTracking() {
 
     document.addEventListener("click", handleClick, true);
     return () => document.removeEventListener("click", handleClick, true);
-  }, []);
+  }, [analyticsAllowed]);
 
   return (
     <>
-      {gtmContainerId ? (
+      {analyticsAllowed && gtmContainerId ? (
         <>
           <Script id="gtm-init" strategy="afterInteractive">
             {`
@@ -284,7 +293,7 @@ export default function MarketingTracking() {
         </>
       ) : null}
 
-      {(googleTagId || ga4MeasurementId || googleAdsId) && (
+      {analyticsAllowed && (googleTagId || ga4MeasurementId || googleAdsId) && (
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId || ga4MeasurementId || googleAdsId}`}
@@ -304,7 +313,7 @@ export default function MarketingTracking() {
         </>
       )}
 
-      {clarityProjectId && (
+      {analyticsAllowed && clarityProjectId && (
         <Script id="microsoft-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
@@ -316,7 +325,7 @@ export default function MarketingTracking() {
         </Script>
       )}
 
-      {yandexMetricaId ? (
+      {analyticsAllowed && yandexMetricaId ? (
         <Script id="yandex-metrica" strategy="afterInteractive">
           {`
             (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

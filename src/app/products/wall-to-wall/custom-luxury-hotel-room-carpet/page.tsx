@@ -163,6 +163,8 @@ const productJsonLd = {
     { "@type": "PropertyValue", name: "Pattern", value: "Custom" },
     { "@type": "PropertyValue", name: "Application", value: "Hotel guestrooms, suites and corridors" },
     { "@type": "PropertyValue", name: "Availability", value: "Made to Order" },
+    { "@type": "PropertyValue", name: "Sales Unit", value: "SQM" },
+    { "@type": "PropertyValue", name: "Price Basis", value: "Reference FOB range; final price and validity require a written quotation" },
   ],
   offers: {
     "@type": "AggregateOffer",

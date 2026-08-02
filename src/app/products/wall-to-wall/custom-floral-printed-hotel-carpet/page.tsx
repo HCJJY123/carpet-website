@@ -84,6 +84,8 @@ export default function CustomFloralPrintedHotelCarpetPage() {
       { "@type": "PropertyValue", name: "Sample", value: product.moqTiers.sample },
       { "@type": "PropertyValue", name: "Trial Order", value: product.moqTiers.trialOrder },
       { "@type": "PropertyValue", name: "Project MOQ", value: product.moqTiers.project },
+      { "@type": "PropertyValue", name: "Sales Unit", value: "SQM" },
+      { "@type": "PropertyValue", name: "Price Basis", value: "Reference FOB range; final price and validity require a written quotation" },
     ],
     offers: { "@type": "AggregateOffer", priceCurrency: "USD", lowPrice: "3.60", highPrice: "6.40", offerCount: 1, availability: "https://schema.org/PreOrder", seller: { "@type": "Organization", name: "Vishomecarpet" } },
   };

@@ -90,9 +90,14 @@ const productJsonLd = product
             lowPrice: product.fobPrice.lowPrice,
             highPrice: product.fobPrice.highPrice,
             offerCount: 1,
-            availability: "https://schema.org/InStock",
+            availability: "https://schema.org/PreOrder",
           }
         : undefined,
+      additionalProperty: [
+        { "@type": "PropertyValue", name: "Availability", value: "Quotation required / made to order" },
+        { "@type": "PropertyValue", name: "Sales Unit", value: product.fobPrice?.unit ?? "Roll" },
+        { "@type": "PropertyValue", name: "Price Basis", value: "Reference FOB range; final price and validity require a written quotation" },
+      ],
     }
   : null;
 

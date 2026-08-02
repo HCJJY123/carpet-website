@@ -2,7 +2,7 @@ export interface ProductColor { name: string; hex: string; }
 export interface TechnicalSpecs { fireRating: string; trafficClass: string; fiber?: string; yarnSystem: string; backing: string; pileWeight: string; totalThickness: string; rollWidth?: string; soundInsulation?: string; antistatic: string; }
 export interface FobPriceRange { display: string; lowPrice: string; highPrice: string; currency: "USD"; unit: string; }
 export interface ProductMoqTiers { sample: string; trialOrder: string; project: string; }
-export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; moqTiers: ProductMoqTiers; leadTime: string; fobPrice?: FobPriceRange; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
+export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; moqTiers: ProductMoqTiers; leadTime: string; fobPrice?: FobPriceRange; availability?: "preorder" | "in-stock"; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
 export interface CaseSpecItem { label: string; value: string; }
 export type CaseSectionBlock =
   | { type: "paragraph"; text: string }
@@ -20,7 +20,7 @@ export const brandInfo = {
   whatsapp: "+86 152 2288 5400",
   wechat: "8615222885400",
   address: "Cuihuangkou Town, Wuqing District, Tianjin 301700, China",
-  stats: { area: "50,000㎡", employees: "900+", markets: "45+", experience: "15+ Years" }
+  stats: { area: "50,000㎡", employees: "900+", markets: "45+", experience: "Since 2005" }
 };
 
 export const products: Product[] = [
