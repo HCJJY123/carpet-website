@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
-import ProductImage from "@/components/ProductImage";
+import { responsiveImageManifest } from "@/lib/responsive-image-manifest";
 
 type HomeHeroCarouselProps = {
   whatsappUrl: string;
@@ -21,7 +21,7 @@ const slides = [
     productHref: "/request-sample-box",
     bannerHref: "/commercial-carpet-tiles",
     badges: ["Factory Direct Pricing", "Sample Box Available", "Custom Project Support"],
-    overlay: "bg-[#102A43]/65",
+    overlay: "bg-gradient-to-r from-[#102A43]/88 via-[#102A43]/58 to-[#102A43]/18",
     objectPosition: "center 50%",
     quality: 90,
   },
@@ -36,7 +36,7 @@ const slides = [
     productHref: "/products/wall-to-wall",
     bannerHref: "/products/wall-to-wall",
     badges: ["Custom Printed Patterns", "Contract Grade Construction", "Hotel Project Support"],
-    overlay: "bg-[#102A43]/42",
+    overlay: "bg-gradient-to-r from-[#102A43]/82 via-[#102A43]/48 to-[#102A43]/12",
     objectPosition: "center 58%",
     quality: 75,
   },
@@ -51,7 +51,7 @@ const slides = [
     productHref: "/products/public-area/custom-sculpted-wool-lobby-rug",
     bannerHref: "/products/public-area/public-area-heavy-duty",
     badges: ["Custom Sizes & Colors", "Sculpted Wool Surface", "Project-Made Production"],
-    overlay: "bg-[#102A43]/38",
+    overlay: "bg-gradient-to-r from-[#102A43]/80 via-[#102A43]/45 to-[#102A43]/10",
     objectPosition: "center 62%",
     quality: 75,
   },
@@ -67,6 +67,56 @@ type DragState = {
   startTime: number;
   horizontal: boolean;
 };
+
+function HeroBackgroundImage({
+  src,
+  alt,
+  priority,
+  objectPosition,
+}: {
+  src: string;
+  alt: string;
+  priority: boolean;
+  objectPosition: string;
+}) {
+  const responsive = responsiveImageManifest[src];
+
+  if (!responsive) {
+    return (
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        priority={priority}
+        quality={82}
+        sizes="100vw"
+        unoptimized
+        className="object-cover"
+        style={{ objectPosition }}
+      />
+    );
+  }
+
+  return (
+    <picture className="absolute inset-0 block h-full w-full">
+      <source type="image/avif" srcSet={responsive.avif.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
+      <source type="image/webp" srcSet={responsive.webp.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
+      <img
+        src={responsive.fallback}
+        alt={alt}
+        width={responsive.width}
+        height={responsive.height}
+        sizes="100vw"
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "low"}
+        decoding="async"
+        draggable={false}
+        className="h-full w-full object-cover"
+        style={{ objectPosition }}
+      />
+    </picture>
+  );
+}
 
 export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -274,14 +324,10 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
             aria-label={`Open ${slide.title}`}
             aria-hidden={index !== activeIndex}
           >
-            <ProductImage
+            <HeroBackgroundImage
               src={slide.image}
               alt={index === activeIndex ? slide.alt : ""}
-              className="absolute inset-0"
               priority={index === 0}
-              loading="eager"
-              quality={slide.quality}
-              sizes="100vw"
               objectPosition={slide.objectPosition}
             />
             <div className={`absolute inset-0 ${slide.overlay}`} />
