@@ -3,6 +3,7 @@ import { products } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import AnswerFirst from "@/components/AnswerFirst";
+import ConversionLiftPanel from "@/components/ConversionLiftPanel";
 import ProcurementSnapshot from "@/components/ProcurementSnapshot";
 import TechnicalSourcePanel from "@/components/TechnicalSourcePanel";
 import FactoryCtaBackground from "@/components/FactoryCtaBackground";
@@ -180,6 +181,16 @@ export default function CategoryPage() {
         quoteHref="/contact?product=Commercial%20Carpet%20Tiles#quote-form"
         quoteLabel="Request a Tile Recommendation"
       />
+
+      <ConversionLiftPanel
+        eyebrow="Quote Before Final Selection"
+        title="Ask for the Right Carpet Tile Specification by Project Use"
+        body="Tell us the office, hotel, school, healthcare, corridor, or retail application, then add area and destination. This helps the factory recommend the tile construction, backing, MOQ, and sample path before you spend time comparing every style."
+        product="Commercial Carpet Tiles"
+        quoteHref="/contact?product=Commercial%20Carpet%20Tiles#quote-form"
+        compact
+      />
+
       <ProcurementSnapshot
         title="Commercial Carpet Tile Buying Facts"
         facts={[

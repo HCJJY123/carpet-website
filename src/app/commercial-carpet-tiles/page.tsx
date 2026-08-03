@@ -3,6 +3,7 @@ import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import AnswerFirst from "@/components/AnswerFirst";
+import ConversionLiftPanel from "@/components/ConversionLiftPanel";
 import { products } from "@/lib/data";
 import { productPath } from "@/lib/seo";
 
@@ -85,6 +86,15 @@ export default function CommercialCarpetTilesPage() {
         evidence="The ranges above summarize current published product data. Exact construction, stock status, price, certification document, packing, and delivery time must be confirmed for the selected tile and destination before purchase."
         quoteHref="#quick-quote"
         quoteLabel="Get Carpet Tile Recommendation"
+      />
+
+      <ConversionLiftPanel
+        eyebrow="High-Intent Buyer Shortcut"
+        title="Send Area and Destination Before Comparing Every Tile"
+        body="Commercial carpet tile buyers usually need a fast match between fiber, backing, quantity, and delivery country. Submit the basics first and the factory can narrow the choices instead of making you compare every option manually."
+        product="Commercial Carpet Tiles"
+        quoteHref="#quick-quote"
+        compact
       />
 
       <section id="quick-quote" className="scroll-mt-24 border-b border-border bg-white py-12 md:py-16" data-funnel-section="carpet_tile_quick_quote">

@@ -8,6 +8,7 @@ import { relatedCategoryIds } from "@/lib/content-relations";
 import ProductImage from "@/components/ProductImage";
 import RelatedCategoryLinks from "@/components/RelatedCategoryLinks";
 import ContentTrustPanel from "@/components/ContentTrustPanel";
+import ConversionLiftPanel from "@/components/ConversionLiftPanel";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -334,6 +335,16 @@ export default async function BlogPostPage({ params }: Props) {
             </section>
           ))}
         </div>
+
+        <ConversionLiftPanel
+          eyebrow="Turn This Guide Into a Quote"
+          title="Send Your Project Requirements After Reading This Guide"
+          body="If this topic matches your project, send the carpet application, estimated area, destination, and required date. Vishome can recommend the related product path and reply with sample, MOQ, lead time, and quotation details."
+          product={relatedProducts[0]?.name ?? post.title}
+          quoteHref={`/contact?product=${encodeURIComponent(relatedProducts[0]?.name ?? post.title)}#quote-form`}
+          className="mt-12 overflow-hidden rounded-xl border-y-0"
+          compact
+        />
 
         <section className="mt-12" aria-labelledby="related-products-heading">
           <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-accent">Continue Your Specification</p>
