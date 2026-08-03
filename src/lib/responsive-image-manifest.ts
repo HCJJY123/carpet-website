@@ -2010,5 +2010,205 @@ export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
       }
     ],
     "fallback": "/images/optimized/products-gold-mining-carpet-mat-10-gold-washing-mining-site-application-2897c0f32a-1536w.webp"
+  },
+  "/images/blog-series/reddit-hotel-office-carpet-decisions/hotel-office-carpet-reddit-main.webp": {
+    "width": 1600,
+    "height": 900,
+    "originalBytes": 208712,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-reddit-main-39ccf343ac-480w.avif",
+        "width": 480,
+        "bytes": 19248
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-reddit-main-39ccf343ac-768w.avif",
+        "width": 768,
+        "bytes": 39671
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-reddit-main-39ccf343ac-1200w.avif",
+        "width": 1200,
+        "bytes": 79743
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-reddit-main-39ccf343ac-1600w.avif",
+        "width": 1600,
+        "bytes": 144198
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-reddit-main-39ccf343ac-480w.webp",
+        "width": 480,
+        "bytes": 23366
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-reddit-main-39ccf343ac-768w.webp",
+        "width": 768,
+        "bytes": 51160
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-reddit-main-39ccf343ac-1200w.webp",
+        "width": 1200,
+        "bytes": 103754
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-reddit-main-39ccf343ac-1600w.webp",
+        "width": 1600,
+        "bytes": 184842
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-reddit-main-39ccf343ac-1600w.webp"
+  },
+  "/images/blog-series/reddit-hotel-office-carpet-decisions/hotel-corridor-noise-complaints.webp": {
+    "width": 1400,
+    "height": 876,
+    "originalBytes": 136926,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-corridor-noise-complaints-ffd8665f23-480w.avif",
+        "width": 480,
+        "bytes": 16608
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-corridor-noise-complaints-ffd8665f23-768w.avif",
+        "width": 768,
+        "bytes": 35939
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-corridor-noise-complaints-ffd8665f23-1200w.avif",
+        "width": 1200,
+        "bytes": 62908
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-corridor-noise-complaints-ffd8665f23-1400w.avif",
+        "width": 1400,
+        "bytes": 95656
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-corridor-noise-complaints-ffd8665f23-480w.webp",
+        "width": 480,
+        "bytes": 20206
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-corridor-noise-complaints-ffd8665f23-768w.webp",
+        "width": 768,
+        "bytes": 45990
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-corridor-noise-complaints-ffd8665f23-1200w.webp",
+        "width": 1200,
+        "bytes": 84982
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-corridor-noise-complaints-ffd8665f23-1400w.webp",
+        "width": 1400,
+        "bytes": 125872
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-corridor-noise-complaints-ffd8665f23-1400w.webp"
+  },
+  "/images/blog-series/reddit-hotel-office-carpet-decisions/carpet-samples-procurement-specification.webp": {
+    "width": 1280,
+    "height": 801,
+    "originalBytes": 178198,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-carpet-samples-procurement-specification-0a1dfad2aa-480w.avif",
+        "width": 480,
+        "bytes": 29113
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-carpet-samples-procurement-specification-0a1dfad2aa-768w.avif",
+        "width": 768,
+        "bytes": 65902
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-carpet-samples-procurement-specification-0a1dfad2aa-1200w.avif",
+        "width": 1200,
+        "bytes": 111651
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-carpet-samples-procurement-specification-0a1dfad2aa-1280w.avif",
+        "width": 1280,
+        "bytes": 163896
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-carpet-samples-procurement-specification-0a1dfad2aa-480w.webp",
+        "width": 480,
+        "bytes": 33160
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-carpet-samples-procurement-specification-0a1dfad2aa-768w.webp",
+        "width": 768,
+        "bytes": 76942
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-carpet-samples-procurement-specification-0a1dfad2aa-1200w.webp",
+        "width": 1200,
+        "bytes": 146432
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-carpet-samples-procurement-specification-0a1dfad2aa-1280w.webp",
+        "width": 1280,
+        "bytes": 179904
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-carpet-samples-procurement-specification-0a1dfad2aa-1280w.webp"
+  },
+  "/images/blog-series/reddit-hotel-office-carpet-decisions/hotel-office-carpet-comparison-summary.webp": {
+    "width": 1400,
+    "height": 788,
+    "originalBytes": 145424,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-comparison-summary-1d7730575a-480w.avif",
+        "width": 480,
+        "bytes": 17636
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-comparison-summary-1d7730575a-768w.avif",
+        "width": 768,
+        "bytes": 37211
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-comparison-summary-1d7730575a-1200w.avif",
+        "width": 1200,
+        "bytes": 69502
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-comparison-summary-1d7730575a-1400w.avif",
+        "width": 1400,
+        "bytes": 110385
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-comparison-summary-1d7730575a-480w.webp",
+        "width": 480,
+        "bytes": 21852
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-comparison-summary-1d7730575a-768w.webp",
+        "width": 768,
+        "bytes": 47376
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-comparison-summary-1d7730575a-1200w.webp",
+        "width": 1200,
+        "bytes": 89752
+      },
+      {
+        "src": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-comparison-summary-1d7730575a-1400w.webp",
+        "width": 1400,
+        "bytes": 135594
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-comparison-summary-1d7730575a-1400w.webp"
   }
 };
