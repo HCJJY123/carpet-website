@@ -4,6 +4,7 @@ import Link from "next/link";
 import { brandInfo, products } from "@/lib/data";
 import ProductImage from "@/components/ProductImage";
 import AnswerFirst from "@/components/AnswerFirst";
+import ProductTrustLinks from "@/components/ProductTrustLinks";
 import { ProductTrackedLink, ProductViewEvent } from "@/components/ProductAnalytics";
 import { ProductSpecCards } from "@/components/ProductConversion";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
@@ -384,6 +385,7 @@ export default function CustomSculptedWoolLobbyRugPage() {
         quoteHref="/contact?product=Custom%20Sculpted%20Wool%20Lobby%20Rug#quote-form"
         quoteLabel="Request a Rug Specification Review"
       />
+      <ProductTrustLinks productName="custom sculpted wool lobby rug" quoteHref="/contact?product=Custom%20Sculpted%20Wool%20Lobby%20Rug#quote-form" />
 
       <section className="section-padding bg-primary text-white">
         <div className="container-fox">

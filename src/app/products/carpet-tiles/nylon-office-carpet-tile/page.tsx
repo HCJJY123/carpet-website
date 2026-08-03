@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AnswerFirst from "@/components/AnswerFirst";
 import ProductImage from "@/components/ProductImage";
+import ProductTrustLinks from "@/components/ProductTrustLinks";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productPath, safeJsonLd } from "@/lib/seo";
@@ -252,6 +254,30 @@ export default function NylonOfficeCarpetTilePage() {
           </div>
         </div>
       </section>
+
+      <AnswerFirst
+        eyebrow="Office Carpet Tile Buying Answer"
+        title="Choose nylon carpet tiles when replacement speed and heavy office traffic matter"
+        answer="For offices, corridors and meeting areas, 50x50 nylon carpet tiles are usually the safer project choice when buyers need modular replacement, chair-caster resistance, antistatic performance and controlled installation downtime. Confirm backing, traffic rating, quantity, color approval and written quotation terms before comparing price by square metre."
+        facts={[
+          { label: "Best Use", value: "Office floors, corridors, meeting rooms and commercial fit-out projects" },
+          { label: "Key Risk", value: "Comparing tile prices without matching backing, pile weight and installation method" },
+          { label: "Document Check", value: "Request TDS, packing data, quotation unit and available project documents" },
+          { label: "Quote Basis", value: "Reference FOB range only; final validity requires written quotation" },
+        ]}
+        moq={[
+          { label: "Sample", value: p.moqTiers.sample },
+          { label: "Trial Order", value: p.moqTiers.trialOrder },
+          { label: "Project MOQ", value: p.moqTiers.project },
+        ]}
+        suitableFor={["Multi-room office renovation", "Corridors with frequent localized wear", "Projects requiring future tile-by-tile replacement"]}
+        notSuitableFor={["Seamless luxury hotel broadloom look", "Wet or outdoor areas", "Projects needing confirmed stock without written availability"]}
+        evidence="Specifications, FOB ranges and availability on this page are sourcing references. Request written confirmation for final backing, sales unit, lead time, documents and quotation validity."
+        quoteHref={`/contact?product=${encodeURIComponent(p.name)}#quote-form`}
+        quoteLabel="Request Office Tile Quote"
+      />
+
+      <ProductTrustLinks productName="nylon office carpet tiles" quoteHref={`/contact?product=${encodeURIComponent(p.name)}#quote-form`} />
 
       <section className="section-padding border-y border-border bg-surface">
         <div className="container-fox">
