@@ -91,6 +91,12 @@ export default function LocaleExperience() {
     if (!locale) {
       document.documentElement.lang = "en";
       document.documentElement.dir = "ltr";
+      delete document.documentElement.dataset.siteLocale;
+      clearClientCookie(localeCookieName);
+      clearClientCookie(googleTranslateCookieName);
+      const main = document.querySelector("main");
+      main?.classList.remove("notranslate");
+      main?.removeAttribute("translate");
       return;
     }
 

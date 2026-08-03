@@ -91,6 +91,12 @@ export function proxy(request: NextRequest) {
     return clearLocaleCookies(NextResponse.redirect(url), secure, hostname);
   }
 
+  if (pathname === "/") {
+    const response = NextResponse.next();
+    response.headers.set("Content-Language", "en");
+    return clearLocaleCookies(response, secure, hostname);
+  }
+
   const pathLocale = getPathLocale(pathname);
 
   if (pathLocale) {
