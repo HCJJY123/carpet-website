@@ -2510,5 +2510,205 @@ export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
       }
     ],
     "fallback": "/images/optimized/projects-case-14-canada-office-carpet-tiles-attic-stock-2b5668c236-1600w.webp"
+  },
+  "/images/products/pp-bitumen-backed-office-carpet-tiles/01-hero-office-meeting-room.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 3508123,
+    "avif": [
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-01-hero-office-meeting-room-404a7a61a0-480w.avif",
+        "width": 480,
+        "bytes": 9486
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-01-hero-office-meeting-room-404a7a61a0-768w.avif",
+        "width": 768,
+        "bytes": 27070
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-01-hero-office-meeting-room-404a7a61a0-1200w.avif",
+        "width": 1200,
+        "bytes": 76924
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-01-hero-office-meeting-room-404a7a61a0-1536w.avif",
+        "width": 1536,
+        "bytes": 121616
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-01-hero-office-meeting-room-404a7a61a0-480w.webp",
+        "width": 480,
+        "bytes": 13946
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-01-hero-office-meeting-room-404a7a61a0-768w.webp",
+        "width": 768,
+        "bytes": 41248
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-01-hero-office-meeting-room-404a7a61a0-1200w.webp",
+        "width": 1200,
+        "bytes": 115398
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-01-hero-office-meeting-room-404a7a61a0-1536w.webp",
+        "width": 1536,
+        "bytes": 188000
+      }
+    ],
+    "fallback": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-01-hero-office-meeting-room-404a7a61a0-1536w.webp"
+  },
+  "/images/products/pp-bitumen-backed-office-carpet-tiles/02-blue-meeting-room-carpet-tiles.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 3796853,
+    "avif": [
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-02-blue-meeting-room-carpet-tiles-9dbc0128ca-480w.avif",
+        "width": 480,
+        "bytes": 10330
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-02-blue-meeting-room-carpet-tiles-9dbc0128ca-768w.avif",
+        "width": 768,
+        "bytes": 32911
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-02-blue-meeting-room-carpet-tiles-9dbc0128ca-1200w.avif",
+        "width": 1200,
+        "bytes": 103886
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-02-blue-meeting-room-carpet-tiles-9dbc0128ca-1536w.avif",
+        "width": 1536,
+        "bytes": 168354
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-02-blue-meeting-room-carpet-tiles-9dbc0128ca-480w.webp",
+        "width": 480,
+        "bytes": 15904
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-02-blue-meeting-room-carpet-tiles-9dbc0128ca-768w.webp",
+        "width": 768,
+        "bytes": 48322
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-02-blue-meeting-room-carpet-tiles-9dbc0128ca-1200w.webp",
+        "width": 1200,
+        "bytes": 146650
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-02-blue-meeting-room-carpet-tiles-9dbc0128ca-1536w.webp",
+        "width": 1536,
+        "bytes": 241562
+      }
+    ],
+    "fallback": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-02-blue-meeting-room-carpet-tiles-9dbc0128ca-1536w.webp"
+  },
+  "/images/products/pp-bitumen-backed-office-carpet-tiles/03-executive-office-carpet-tiles.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 3397509,
+    "avif": [
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-03-executive-office-carpet-tiles-7a5ff53b98-480w.avif",
+        "width": 480,
+        "bytes": 8833
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-03-executive-office-carpet-tiles-7a5ff53b98-768w.avif",
+        "width": 768,
+        "bytes": 23820
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-03-executive-office-carpet-tiles-7a5ff53b98-1200w.avif",
+        "width": 1200,
+        "bytes": 67192
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-03-executive-office-carpet-tiles-7a5ff53b98-1536w.avif",
+        "width": 1536,
+        "bytes": 108764
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-03-executive-office-carpet-tiles-7a5ff53b98-480w.webp",
+        "width": 480,
+        "bytes": 12978
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-03-executive-office-carpet-tiles-7a5ff53b98-768w.webp",
+        "width": 768,
+        "bytes": 34370
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-03-executive-office-carpet-tiles-7a5ff53b98-1200w.webp",
+        "width": 1200,
+        "bytes": 96176
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-03-executive-office-carpet-tiles-7a5ff53b98-1536w.webp",
+        "width": 1536,
+        "bytes": 159144
+      }
+    ],
+    "fallback": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-03-executive-office-carpet-tiles-7a5ff53b98-1536w.webp"
+  },
+  "/images/products/pp-bitumen-backed-office-carpet-tiles/04-open-office-lounge-carpet-tiles.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 3689690,
+    "avif": [
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-04-open-office-lounge-carpet-tiles-ca62a0e7cf-480w.avif",
+        "width": 480,
+        "bytes": 11357
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-04-open-office-lounge-carpet-tiles-ca62a0e7cf-768w.avif",
+        "width": 768,
+        "bytes": 36047
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-04-open-office-lounge-carpet-tiles-ca62a0e7cf-1200w.avif",
+        "width": 1200,
+        "bytes": 102110
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-04-open-office-lounge-carpet-tiles-ca62a0e7cf-1536w.avif",
+        "width": 1536,
+        "bytes": 159618
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-04-open-office-lounge-carpet-tiles-ca62a0e7cf-480w.webp",
+        "width": 480,
+        "bytes": 16610
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-04-open-office-lounge-carpet-tiles-ca62a0e7cf-768w.webp",
+        "width": 768,
+        "bytes": 50302
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-04-open-office-lounge-carpet-tiles-ca62a0e7cf-1200w.webp",
+        "width": 1200,
+        "bytes": 143286
+      },
+      {
+        "src": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-04-open-office-lounge-carpet-tiles-ca62a0e7cf-1536w.webp",
+        "width": 1536,
+        "bytes": 230288
+      }
+    ],
+    "fallback": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-04-open-office-lounge-carpet-tiles-ca62a0e7cf-1536w.webp"
   }
 };

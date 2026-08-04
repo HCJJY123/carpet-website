@@ -63,6 +63,11 @@ const productOptions = [
     href: "/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles"
   },
   {
+    title: "PP Bitumen Backed Office Carpet Tiles",
+    text: "100% PP fiber 50x50cm carpet squares with bitumen backing for office, meeting room, home office, and OEM flooring projects.",
+    href: "/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+  },
+  {
     title: "100% Nylon Office Carpet Tile",
     text: "Class 33 heavy-duty commercial carpet tiles with bitumen backing and antistatic performance for demanding office traffic.",
     href: "/products/carpet-tiles/nylon-office-carpet-tile"
@@ -95,7 +100,7 @@ export const metadata: Metadata = {
   alternates: { canonical: categoryPath },
   openGraph: {
     title: "Commercial Carpet Tiles 50x50 | Factory Price & Samples",
-    description: "Compare eight commercial carpet tile products by fiber, backing, factory price, MOQ, samples, and office, hotel, healthcare, or education application.",
+    description: "Compare commercial carpet tile products by fiber, backing, factory price, MOQ, samples, and office, hotel, healthcare, or education application.",
     url: absoluteUrl(categoryPath),
     type: "website",
     images: [{ url: absoluteUrl("/images/category-tiles.webp"), alt: "Commercial modular carpet tiles supplied by Vishomecarpet" }]
@@ -106,7 +111,7 @@ export default function CategoryPage() {
   const categoryProducts = products.filter((p) => p.category === categoryId);
   const jsonLd = productItemListJsonLd({
     name: "Commercial Carpet Tiles and Modular Office Carpet Flooring",
-    description: "Eight commercial carpet tile products for offices, hotels, schools, healthcare support areas, corridors, airports, and contract flooring projects.",
+    description: "Commercial carpet tile products for offices, hotels, schools, healthcare support areas, corridors, airports, and contract flooring projects.",
     url: categoryPath,
     items: categoryProducts,
   });
@@ -219,7 +224,7 @@ export default function CategoryPage() {
       <section id="carpet-tile-products" className="section-padding scroll-mt-24">
         <div className="container-fox">
           <div className="mb-12 max-w-3xl">
-            <h2 className="mb-4 text-3xl font-black uppercase text-primary md:text-4xl">Eight Commercial Carpet Tile Products</h2>
+            <h2 className="mb-4 text-3xl font-black uppercase text-primary md:text-4xl">Commercial Carpet Tile Products</h2>
             <p className="leading-relaxed text-muted">Compare material, backing, traffic class, price, minimum order, and application. Each product page includes technical data, project images, and a direct inquiry form.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">

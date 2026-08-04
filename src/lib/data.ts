@@ -152,6 +152,48 @@ export const products: Product[] = [
     features: ["50x50 Carpet Tiles", "Nylon / PP Option", "Office Carpet", "Interlocking Modular Floor"]
   },
   {
+    id: "pp-bitumen-backed-office-carpet-tiles",
+    name: "PP Bitumen Backed Office Carpet Tiles 50x50cm",
+    category: "carpet-tiles",
+    description: "Vishomecarpet 100% PP fiber bitumen backed office carpet tiles in 50x50cm squares for commercial offices, meeting rooms, home offices, retail, and OEM flooring projects.",
+    longDescription: "Vishomecarpet PP Bitumen Backed Office Carpet Tiles 50x50cm are cost-effective modular carpet squares for office buildings, meeting rooms, home offices, retail spaces, corridors, and light-to-medium commercial interiors. The 100% PP fiber surface supports practical color and pattern options, while the bitumen backing helps dimensional stability, non-slip installation support, easy replacement, carton-based logistics, and factory OEM supply for B2B buyers comparing commercial flooring by specification, MOQ, lead time, and landed cost.",
+    image: "/images/products/pp-bitumen-backed-office-carpet-tiles/01-hero-office-meeting-room.webp",
+    imageAlt: "Vishomecarpet PP bitumen backed office carpet tiles 50x50cm installed in a modern meeting room",
+    gallery: [
+      { src: "/images/products/pp-bitumen-backed-office-carpet-tiles/01-hero-office-meeting-room.webp", alt: "Vishomecarpet PP bitumen backed office carpet tiles 50x50cm installed in a modern meeting room" },
+      { src: "/images/products/pp-bitumen-backed-office-carpet-tiles/02-blue-meeting-room-carpet-tiles.webp", alt: "Blue and gray PP office carpet tiles with bitumen backing in a meeting room" },
+      { src: "/images/products/pp-bitumen-backed-office-carpet-tiles/03-executive-office-carpet-tiles.webp", alt: "Gray 50x50cm polypropylene carpet tiles for executive office flooring" },
+      { src: "/images/products/pp-bitumen-backed-office-carpet-tiles/04-open-office-lounge-carpet-tiles.webp", alt: "Modular PP carpet tiles for open office lounge and commercial flooring projects" }
+    ],
+    moq: "200 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Standard Color", project: "200 SQM" },
+    leadTime: "10-20 Days",
+    fobPrice: { display: "US$3.20-7.80 / SQM", lowPrice: "3.20", highPrice: "7.80", currency: "USD", unit: "SQM" },
+    availability: "preorder",
+    spec: {
+      material: "100% PP Fiber",
+      size: "50x50 cm",
+      colors: [
+        { name: "Graphite Gray", hex: "#4B4F52" },
+        { name: "Charcoal", hex: "#272B2F" },
+        { name: "Silver Gray", hex: "#8B9094" },
+        { name: "Office Blue", hex: "#466C86" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "Confirm Required Standard for Exact Construction",
+      trafficClass: "Commercial Office / Medium to Heavy Contract Use",
+      fiber: "100% PP Fiber",
+      yarnSystem: "Tufted Loop / Patterned Modular Tile",
+      backing: "Bitumen Backing",
+      pileWeight: "450-650 g/sqm Option",
+      totalThickness: "Approx. 5.0-7.0mm Option",
+      soundInsulation: "Office Acoustic Comfort Option",
+      antistatic: "Available / Project Confirmation"
+    },
+    features: ["100% PP Fiber", "Bitumen Backing", "50x50cm Modular Tile", "Non-Slip Commercial Flooring", "OEM Factory Supply"]
+  },
+  {
     id: "nylon-office-carpet-tile",
     name: "Nylon 50x50 Commercial Office Carpet Tile",
     category: "carpet-tiles",

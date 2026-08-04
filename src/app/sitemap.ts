@@ -54,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     solutions: new Date("2026-07-26T00:00:00.000Z"),
   };
   const categoryLastModified: Record<string, Date> = {
-    "carpet-tiles": new Date("2026-08-04T00:00:00.000Z"),
+    "carpet-tiles": new Date("2026-08-05T00:00:00.000Z"),
     "wall-to-wall": new Date("2026-08-04T00:00:00.000Z"),
     "public-area": new Date("2026-08-04T00:00:00.000Z"),
   };
@@ -63,6 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "public-area-heavy-duty": new Date("2026-07-31T00:00:00.000Z"),
     "gold-mining-carpet-mat": new Date("2026-07-31T00:00:00.000Z"),
     "custom-sculpted-wool-lobby-rug": new Date("2026-07-31T00:00:00.000Z"),
+    "pp-bitumen-backed-office-carpet-tiles": new Date("2026-08-05T00:00:00.000Z"),
   };
   const imageUrl = (path: string) => (path.startsWith("http") ? path : `${BASE}${path}`);
   const uniqueImages = (images: Array<string | undefined>) => [
