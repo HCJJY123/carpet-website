@@ -19,11 +19,12 @@ type StaticRoute = {
 
 const staticRoutes: StaticRoute[] = [
   { url: "/", modified: "2026-07-27", priority: 1.0, changeFrequency: "weekly" },
-  { url: "/products", modified: "2026-07-23", priority: 0.9, changeFrequency: "monthly" },
+  { url: "/products", modified: "2026-08-04", priority: 0.9, changeFrequency: "monthly" },
   { url: "/markets", modified: "2026-08-02", priority: 0.86, changeFrequency: "monthly" },
   { url: "/commercial-carpet-manufacturer", modified: "2026-07-28", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/hotel-carpet", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/carpet-tiles-50x50", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/commercial-carpet-tiles", modified: "2026-08-04", priority: 0.88, changeFrequency: "monthly" },
+  { url: "/hotel-carpet", modified: "2026-08-04", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/carpet-tiles-50x50", modified: "2026-08-04", priority: 0.8, changeFrequency: "monthly" },
   { url: "/projects", modified: "2026-08-04", priority: 0.85, changeFrequency: "monthly" },
   { url: "/blog", modified: "2026-07-30", priority: 0.85, changeFrequency: "weekly" },
   { url: "/about-us", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
@@ -47,14 +48,15 @@ const staticRoutes: StaticRoute[] = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const contentDates = {
-    catalog: new Date("2026-07-28T00:00:00.000Z"),
+    catalog: new Date("2026-08-04T00:00:00.000Z"),
     contentTrust: new Date("2026-07-28T00:00:00.000Z"),
     localizedLandings: new Date("2026-07-24T00:00:00.000Z"),
     solutions: new Date("2026-07-26T00:00:00.000Z"),
   };
   const categoryLastModified: Record<string, Date> = {
-    "carpet-tiles": new Date("2026-07-31T00:00:00.000Z"),
-    "wall-to-wall": new Date("2026-07-31T00:00:00.000Z"),
+    "carpet-tiles": new Date("2026-08-04T00:00:00.000Z"),
+    "wall-to-wall": new Date("2026-08-04T00:00:00.000Z"),
+    "public-area": new Date("2026-08-04T00:00:00.000Z"),
   };
   const productLastModified: Record<string, Date> = {
     "ecocore-pe-backing-carpet-tiles": new Date("2026-07-31T00:00:00.000Z"),

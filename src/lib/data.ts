@@ -713,9 +713,27 @@ export const products: Product[] = [
 ];
 
 export const productCategories = [
-  { id: "carpet-tiles", name: "Commercial Carpet Tiles", description: "Modular solutions.", image: "/images/category-tiles.webp", slug: "carpet-tiles" },
-  { id: "wall-to-wall", name: "Wall-to-Wall Carpets", description: "Seamless broadloom.", image: "/images/category-broadloom.webp", slug: "wall-to-wall" },
-  { id: "public-area", name: "Public Area Carpets", description: "Heavy-duty specialized flooring.", image: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp", slug: "public-area" }
+  {
+    id: "carpet-tiles",
+    name: "Commercial Carpet Tiles",
+    description: "50x50 modular carpet tiles for offices, hotels, schools, healthcare areas, retail floors, samples, MOQ planning, and bulk project quotes.",
+    image: "/images/category-tiles.webp",
+    slug: "carpet-tiles"
+  },
+  {
+    id: "wall-to-wall",
+    name: "Wall-to-Wall Carpets",
+    description: "Custom hotel broadloom and wall-to-wall carpet for guestrooms, corridors, lobbies, ballrooms, samples, design approval, and project quotes.",
+    image: "/images/category-broadloom.webp",
+    slug: "wall-to-wall"
+  },
+  {
+    id: "public-area",
+    name: "Public Area Carpets",
+    description: "Heavy-duty carpet systems for airports, exhibitions, corridors, custom wool lobby rugs, natural sisal carpets, and gold mining carpet mats.",
+    image: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp",
+    slug: "public-area"
+  }
 ];
 
 export const faqSections = [

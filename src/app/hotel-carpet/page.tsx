@@ -5,8 +5,8 @@ import { productPath } from "@/lib/seo";
 import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata = {
-  title: "Hotel Carpet Selection Guide by Guest Area | Vishome",
-  description: "Compare carpet specifications for hotel guestrooms, corridors, lobbies, banquet halls, and restaurants, including material, traffic, acoustics, and maintenance priorities.",
+  title: "Hotel Carpet Supplier | Guestroom, Corridor & Lobby Broadloom | Vishome",
+  description: "Source custom hotel carpet for guestrooms, corridors, lobbies and banquet halls. Compare broadloom, Axminster, printed designs, samples, MOQ and project quote support.",
   alternates: { canonical: "/hotel-carpet" },
 };
 
