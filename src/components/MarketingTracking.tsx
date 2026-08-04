@@ -19,6 +19,7 @@ const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-T2VYHX
 const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "GT-NMDDTW67";
 const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18306142236";
 const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "xgg9z07tsm";
+const microsoftUetTagId = process.env.NEXT_PUBLIC_MICROSOFT_UET_TAG_ID || "97259674";
 const gtmContainerId = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID;
 const yandexMetricaId = process.env.NEXT_PUBLIC_YANDEX_METRICA_ID;
 
@@ -28,6 +29,7 @@ declare global {
     gtag?: (...args: unknown[]) => void;
     clarity?: (...args: unknown[]) => void;
     ym?: (...args: unknown[]) => void;
+    uetq?: unknown[];
   }
 }
 
@@ -324,6 +326,35 @@ export default function MarketingTracking() {
           `}
         </Script>
       )}
+
+      {analyticsAllowed && microsoftUetTagId ? (
+        <Script id="microsoft-uet" strategy="afterInteractive">
+          {`
+            (function(w,d,t,r,u){
+              var f,n,i;
+              w[u]=w[u]||[];
+              f=function(){
+                var o={ti:"${microsoftUetTagId}", enableAutoSpaTracking:true};
+                o.q=w[u];
+                w[u]=new UET(o);
+                w[u].push("pageLoad");
+              };
+              n=d.createElement(t);
+              n.src=r;
+              n.async=1;
+              n.onload=n.onreadystatechange=function(){
+                var s=this.readyState;
+                if(!s||s==="loaded"||s==="complete"){
+                  f();
+                  n.onload=n.onreadystatechange=null;
+                }
+              };
+              i=d.getElementsByTagName(t)[0];
+              i.parentNode.insertBefore(n,i);
+            })(window,document,"script","https://bat.bing.com/bat.js","uetq");
+          `}
+        </Script>
+      ) : null}
 
       {analyticsAllowed && yandexMetricaId ? (
         <Script id="yandex-metrica" strategy="afterInteractive">

@@ -57,7 +57,7 @@ const sections = [
   {
     title: "Third-party Services",
     body: [
-      "With analytics consent, we may use third-party services such as Google Ads, Google Analytics, Microsoft Clarity, Yandex Metrica, website hosting providers, form processing tools, email systems, and communication platforms to operate the website, process inquiries, analyze traffic, and manage marketing campaigns.",
+      "With analytics consent, we may use third-party services such as Google Ads, Google Analytics, Microsoft Advertising UET, Microsoft Clarity, Yandex Metrica, website hosting providers, form processing tools, email systems, and communication platforms to operate the website, process inquiries, analyze traffic, and manage marketing campaigns.",
       "For translated browsing outside our manually translated landing pages, we may use Google Translate. Google may receive the page text needed for translation, the selected language, and standard technical request information such as IP address, browser, and device data. Information typed into inquiry form fields is not intentionally submitted to Google Translate by Vishome.",
       "We may also use Microsoft Clarity, Cloudflare, and IPinfo Lite to understand website behavior, classify network traffic, estimate company-level interest where technically possible, protect the website, and improve B2B sales follow-up.",
       "Website inquiry details are delivered through Formspree and may also be stored in Vishome's access-controlled Cloudflare D1 database so our team can manage quotations, follow-up status, lead quality, and advertising attribution in one record.",
