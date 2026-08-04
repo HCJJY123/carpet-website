@@ -4,7 +4,7 @@
   "name": "VISHOME Commercial Carpet AI Source Map",
   "description": "Official machine-readable source map for Vishome Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
   "url": "https://www.vishomecarpet.com/ai-sources.json",
-  "dateModified": "2026-08-02",
+  "dateModified": "2026-08-04",
   "publisher": {
     "@type": "Organization",
     "name": "Vishome Global Commercial Carpet Co., Ltd.",
@@ -40,6 +40,7 @@
         "https://www.vishomecarpet.com/products/carpet-tiles",
         "https://www.vishomecarpet.com/commercial-carpet-tiles",
         "https://www.vishomecarpet.com/solutions/office-carpet-tiles-supplier",
+        "https://www.vishomecarpet.com/projects/office-carpet-tiles-canada-phased-renovation-guide",
         "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance"
       ]
     },
@@ -88,7 +89,9 @@
       "urls": [
         "https://www.vishomecarpet.com/pe/alfombra-mineria-oro-peru",
         "https://www.vishomecarpet.com/co/alfombra-mineria-oro-colombia",
-        "https://www.vishomecarpet.com/products/public-area/gold-mining-carpet-mat"
+        "https://www.vishomecarpet.com/products/public-area/gold-mining-carpet-mat",
+        "https://www.vishomecarpet.com/projects/gold-mining-sluice-carpet-peru",
+        "https://www.vishomecarpet.com/projects/gold-mining-carpet-colombia-distributor-guide"
       ]
     }
   ],
@@ -140,6 +143,14 @@
     {
       "topic": "Gold mining sluice carpet planning",
       "url": "https://www.vishomecarpet.com/projects/gold-mining-sluice-carpet-peru"
+    },
+    {
+      "topic": "Colombia gold mining carpet distributor planning",
+      "url": "https://www.vishomecarpet.com/projects/gold-mining-carpet-colombia-distributor-guide"
+    },
+    {
+      "topic": "Canada office carpet tiles phased renovation planning",
+      "url": "https://www.vishomecarpet.com/projects/office-carpet-tiles-canada-phased-renovation-guide"
     }
   ],
   "conversionSources": [

@@ -24,7 +24,7 @@ const staticRoutes: StaticRoute[] = [
   { url: "/commercial-carpet-manufacturer", modified: "2026-07-28", priority: 0.9, changeFrequency: "monthly" },
   { url: "/hotel-carpet", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
   { url: "/carpet-tiles-50x50", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/projects", modified: "2026-07-30", priority: 0.85, changeFrequency: "monthly" },
+  { url: "/projects", modified: "2026-08-04", priority: 0.85, changeFrequency: "monthly" },
   { url: "/blog", modified: "2026-07-30", priority: 0.85, changeFrequency: "weekly" },
   { url: "/about-us", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/factory", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
@@ -36,9 +36,9 @@ const staticRoutes: StaticRoute[] = [
   { url: "/request-sample-box", modified: "2026-07-25", priority: 0.8, changeFrequency: "monthly" },
   { url: "/solutions", modified: "2026-07-27", priority: 0.75, changeFrequency: "monthly" },
   { url: "/solutions/hotel-hospitality", modified: "2026-07-23", priority: 0.75, changeFrequency: "monthly" },
-  { url: "/llms.txt", modified: "2026-07-30", priority: 0.2, changeFrequency: "weekly" },
-  { url: "/llms-full.txt", modified: "2026-07-30", priority: 0.2, changeFrequency: "weekly" },
-  { url: "/ai-sources.json", modified: "2026-07-30", priority: 0.2, changeFrequency: "weekly" },
+  { url: "/llms.txt", modified: "2026-08-04", priority: 0.2, changeFrequency: "weekly" },
+  { url: "/llms-full.txt", modified: "2026-08-04", priority: 0.2, changeFrequency: "weekly" },
+  { url: "/ai-sources.json", modified: "2026-08-04", priority: 0.2, changeFrequency: "weekly" },
   { url: "/ru", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/ru/products/carpet-tiles/nylon-office-carpet-tile", modified: "2026-07-23", priority: 0.85, changeFrequency: "monthly" },
   { url: "/ru/products/public-area/public-area-heavy-duty", modified: "2026-07-23", priority: 0.85, changeFrequency: "monthly" },
@@ -92,7 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const projectEntries: MetadataRoute.Sitemap = caseStudies.map((project) => ({
     url: `${BASE}${projectPath(project.id)}`,
-    lastModified: new Date("2026-07-30T00:00:00.000Z"),
+    lastModified: new Date("2026-08-04T00:00:00.000Z"),
     changeFrequency: "monthly",
     priority: 0.78,
     images: uniqueImages([
