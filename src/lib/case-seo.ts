@@ -346,7 +346,7 @@ export const caseSeoProfiles: Record<string, CaseSeoProfile> = {
       { question: "What information is needed for a Colombia gold carpet quotation?", answer: "Send target roll width and length, expected order quantity, destination port, preferred pile weight, feed conditions, color preference and whether the order is for direct mine use or distributor resale." },
     ],
     topics: ["gold mining carpet Colombia", "gold recovery mat", "sluice carpet distributor", "alluvial mining carpet"],
-    heroImage: "/images/products/gold-mining-carpet-mat/10-gold-washing-mining-site-application.webp",
+    heroImage: "/images/projects/case-13/colombia-gold-mining-carpet-hero.webp",
     heroImageAlt: "Gold mining carpet mat used in an alluvial recovery washing setup for Colombia distributor planning",
   },
   "case-14": {
@@ -372,7 +372,7 @@ export const caseSeoProfiles: Record<string, CaseSeoProfile> = {
       { question: "How much attic stock should an office carpet tile buyer keep?", answer: "Many projects reserve extra tiles from the same color batch for future repairs. The exact percentage depends on floor area, layout complexity, expected churn and whether the design uses multiple colors." },
     ],
     topics: ["office carpet tiles Canada", "commercial carpet tiles", "50x50 carpet tiles", "phased office renovation flooring"],
-    heroImage: "/images/products/nylon-office-carpet-tile/01-hero-commercial-office.webp",
+    heroImage: "/images/projects/case-14/canada-office-carpet-tiles-hero.webp",
     heroImageAlt: "Commercial office carpet tiles used for a Canada phased renovation planning guide",
   },
 };

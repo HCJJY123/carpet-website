@@ -2210,5 +2210,305 @@ export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
       }
     ],
     "fallback": "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-hotel-office-carpet-comparison-summary-1d7730575a-1400w.webp"
+  },
+  "/images/projects/case-13/colombia-gold-mining-carpet-hero.webp": {
+    "width": 1600,
+    "height": 914,
+    "originalBytes": 232354,
+    "avif": [
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-hero-24b0985db4-480w.avif",
+        "width": 480,
+        "bytes": 30756
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-hero-24b0985db4-768w.avif",
+        "width": 768,
+        "bytes": 63286
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-hero-24b0985db4-1200w.avif",
+        "width": 1200,
+        "bytes": 115848
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-hero-24b0985db4-1600w.avif",
+        "width": 1600,
+        "bytes": 155111
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-hero-24b0985db4-480w.webp",
+        "width": 480,
+        "bytes": 39210
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-hero-24b0985db4-768w.webp",
+        "width": 768,
+        "bytes": 84422
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-hero-24b0985db4-1200w.webp",
+        "width": 1200,
+        "bytes": 160878
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-hero-24b0985db4-1600w.webp",
+        "width": 1600,
+        "bytes": 232354
+      }
+    ],
+    "fallback": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-hero-24b0985db4-1600w.webp"
+  },
+  "/images/projects/case-13/colombia-gold-mining-carpet-sample-comparison.webp": {
+    "width": 1600,
+    "height": 900,
+    "originalBytes": 180128,
+    "avif": [
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-sample-comparison-beea5071bd-480w.avif",
+        "width": 480,
+        "bytes": 20329
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-sample-comparison-beea5071bd-768w.avif",
+        "width": 768,
+        "bytes": 45095
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-sample-comparison-beea5071bd-1200w.avif",
+        "width": 1200,
+        "bytes": 86566
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-sample-comparison-beea5071bd-1600w.avif",
+        "width": 1600,
+        "bytes": 117791
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-sample-comparison-beea5071bd-480w.webp",
+        "width": 480,
+        "bytes": 27758
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-sample-comparison-beea5071bd-768w.webp",
+        "width": 768,
+        "bytes": 62378
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-sample-comparison-beea5071bd-1200w.webp",
+        "width": 1200,
+        "bytes": 124460
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-sample-comparison-beea5071bd-1600w.webp",
+        "width": 1600,
+        "bytes": 180128
+      }
+    ],
+    "fallback": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-sample-comparison-beea5071bd-1600w.webp"
+  },
+  "/images/projects/case-13/colombia-gold-mining-carpet-roll-packing.webp": {
+    "width": 1600,
+    "height": 900,
+    "originalBytes": 182318,
+    "avif": [
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-roll-packing-b492e8bcc4-480w.avif",
+        "width": 480,
+        "bytes": 16495
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-roll-packing-b492e8bcc4-768w.avif",
+        "width": 768,
+        "bytes": 37295
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-roll-packing-b492e8bcc4-1200w.avif",
+        "width": 1200,
+        "bytes": 78941
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-roll-packing-b492e8bcc4-1600w.avif",
+        "width": 1600,
+        "bytes": 111795
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-roll-packing-b492e8bcc4-480w.webp",
+        "width": 480,
+        "bytes": 24324
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-roll-packing-b492e8bcc4-768w.webp",
+        "width": 768,
+        "bytes": 57068
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-roll-packing-b492e8bcc4-1200w.webp",
+        "width": 1200,
+        "bytes": 120812
+      },
+      {
+        "src": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-roll-packing-b492e8bcc4-1600w.webp",
+        "width": 1600,
+        "bytes": 182318
+      }
+    ],
+    "fallback": "/images/optimized/projects-case-13-colombia-gold-mining-carpet-roll-packing-b492e8bcc4-1600w.webp"
+  },
+  "/images/projects/case-14/canada-office-carpet-tiles-hero.webp": {
+    "width": 1600,
+    "height": 914,
+    "originalBytes": 158826,
+    "avif": [
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-hero-718d734487-480w.avif",
+        "width": 480,
+        "bytes": 12297
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-hero-718d734487-768w.avif",
+        "width": 768,
+        "bytes": 27192
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-hero-718d734487-1200w.avif",
+        "width": 1200,
+        "bytes": 61704
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-hero-718d734487-1600w.avif",
+        "width": 1600,
+        "bytes": 91858
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-hero-718d734487-480w.webp",
+        "width": 480,
+        "bytes": 18842
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-hero-718d734487-768w.webp",
+        "width": 768,
+        "bytes": 43886
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-hero-718d734487-1200w.webp",
+        "width": 1200,
+        "bytes": 102570
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-hero-718d734487-1600w.webp",
+        "width": 1600,
+        "bytes": 158826
+      }
+    ],
+    "fallback": "/images/optimized/projects-case-14-canada-office-carpet-tiles-hero-718d734487-1600w.webp"
+  },
+  "/images/projects/case-14/canada-office-carpet-tiles-phased-installation.webp": {
+    "width": 1600,
+    "height": 900,
+    "originalBytes": 159826,
+    "avif": [
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-phased-installation-f48fb2a877-480w.avif",
+        "width": 480,
+        "bytes": 12704
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-phased-installation-f48fb2a877-768w.avif",
+        "width": 768,
+        "bytes": 30057
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-phased-installation-f48fb2a877-1200w.avif",
+        "width": 1200,
+        "bytes": 67593
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-phased-installation-f48fb2a877-1600w.avif",
+        "width": 1600,
+        "bytes": 97227
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-phased-installation-f48fb2a877-480w.webp",
+        "width": 480,
+        "bytes": 19894
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-phased-installation-f48fb2a877-768w.webp",
+        "width": 768,
+        "bytes": 48846
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-phased-installation-f48fb2a877-1200w.webp",
+        "width": 1200,
+        "bytes": 106028
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-phased-installation-f48fb2a877-1600w.webp",
+        "width": 1600,
+        "bytes": 159826
+      }
+    ],
+    "fallback": "/images/optimized/projects-case-14-canada-office-carpet-tiles-phased-installation-f48fb2a877-1600w.webp"
+  },
+  "/images/projects/case-14/canada-office-carpet-tiles-attic-stock.webp": {
+    "width": 1600,
+    "height": 900,
+    "originalBytes": 182444,
+    "avif": [
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-attic-stock-2b5668c236-480w.avif",
+        "width": 480,
+        "bytes": 13112
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-attic-stock-2b5668c236-768w.avif",
+        "width": 768,
+        "bytes": 32373
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-attic-stock-2b5668c236-1200w.avif",
+        "width": 1200,
+        "bytes": 70187
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-attic-stock-2b5668c236-1600w.avif",
+        "width": 1600,
+        "bytes": 98924
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-attic-stock-2b5668c236-480w.webp",
+        "width": 480,
+        "bytes": 22470
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-attic-stock-2b5668c236-768w.webp",
+        "width": 768,
+        "bytes": 54930
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-attic-stock-2b5668c236-1200w.webp",
+        "width": 1200,
+        "bytes": 121122
+      },
+      {
+        "src": "/images/optimized/projects-case-14-canada-office-carpet-tiles-attic-stock-2b5668c236-1600w.webp",
+        "width": 1600,
+        "bytes": 182444
+      }
+    ],
+    "fallback": "/images/optimized/projects-case-14-canada-office-carpet-tiles-attic-stock-2b5668c236-1600w.webp"
   }
 };

@@ -1796,7 +1796,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Gold Mining Carpet Distributor Roll Planning - Colombia",
     subtitle: "A procurement guide for Colombia mining-supply distributors comparing stocked pile weights, sample validation, custom roll length, wet handling and container loading before a bulk order.",
     category: "public-area",
-    image: "/images/products/gold-mining-carpet-mat/10-gold-washing-mining-site-application.webp",
+    image: "/images/projects/case-13/colombia-gold-mining-carpet-hero.webp",
     imageAlt: "Gold mining carpet mat used in an alluvial washing setup for Colombia distributor planning",
     description: "A Colombia-focused gold mining carpet procurement scenario covering stocked sample weights, distributor roll sizing, reinforced backing, FOB quotation details and 40HC loading decisions.",
     specificationTitle: "Gold Mining Carpet Procurement Snapshot",
@@ -1824,7 +1824,7 @@ export const caseStudies: CaseStudy[] = [
           "For a first Colombia order, stocked samples reduce decision risk. The distributor can send samples to several field users, collect feedback on gold retention, cleaning effort and pile recovery, then decide whether a stocked weight is enough or a custom-weight run is justified.",
           "A custom weight can be useful when a market has a dominant sluice configuration, but it should be treated as a second-step decision. The setup cost and lead time only make sense after field users agree on the target behaviour."
         ],
-        image: "/images/products/gold-mining-carpet-mat/04-pvc-ribbed-miners-moss-texture.webp",
+        image: "/images/projects/case-13/colombia-gold-mining-carpet-sample-comparison.webp",
         imageAlt: "Close-up texture of gold mining carpet pile used for sample weight comparison"
       },
       {
@@ -1834,7 +1834,7 @@ export const caseStudies: CaseStudy[] = [
           "A standard 2 m wide roll can be converted into several resale formats, but the buyer should confirm the most common downstream cut sizes before ordering. If a custom length such as 24 m or another market-specific length improves resale efficiency, the change should be checked against rolled diameter and container space.",
           "Color, label, roll wrapping and pallet or loose-roll handling should also be stated in the quotation. These small details affect warehouse control and make repeat orders easier to manage."
         ],
-        image: "/images/products/gold-mining-carpet-mat/07-oem-odm-custom-size-logo-package.webp",
+        image: "/images/projects/case-13/colombia-gold-mining-carpet-roll-packing.webp",
         imageAlt: "OEM roll size and packaging planning for gold mining carpet distributor orders"
       },
       {
@@ -1883,7 +1883,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Office Carpet Tiles Phased Renovation - Canada",
     subtitle: "A Canada-focused office flooring guide for buyers planning 50x50 commercial carpet tiles, phased installation, acoustic comfort, attic stock and long-term replacement strategy.",
     category: "carpet-tiles",
-    image: "/images/products/nylon-office-carpet-tile/01-hero-commercial-office.webp",
+    image: "/images/projects/case-14/canada-office-carpet-tiles-hero.webp",
     imageAlt: "Commercial office carpet tiles for a Canada phased renovation procurement guide",
     description: "A Canada office carpet tile planning scenario covering 50x50 modular format, occupied-site installation, backing stability, spare-tile planning, winter delivery and replacement control.",
     specificationTitle: "Office Carpet Tile Procurement Snapshot",
@@ -1911,7 +1911,7 @@ export const caseStudies: CaseStudy[] = [
           "Carpet tiles also help with future churn. If a meeting room chair area stains or a corridor tile wears faster than the surrounding field, maintenance can replace selected tiles from attic stock instead of removing a complete floor section.",
           "For Canada projects, winter delivery and site storage should be planned early. Cartons need dry handling, and the flooring should acclimate according to the adhesive and site-condition requirements before installation."
         ],
-        image: "/images/products/nylon-office-carpet-tile/03-office-hallway-blue-gray-carpet-tiles.webp",
+        image: "/images/projects/case-14/canada-office-carpet-tiles-phased-installation.webp",
         imageAlt: "Blue gray office carpet tiles installed in a commercial corridor"
       },
       {
@@ -1921,7 +1921,7 @@ export const caseStudies: CaseStudy[] = [
           "Attic stock should come from the same color batch as the main order. Even neutral gray or blue-gray tiles can show batch difference under office lighting, so replacement stock should be planned while the first order is produced.",
           "If the office uses multiple color zones, attic stock should be split by color. This keeps future repairs clean and avoids using an almost-right tile in a visible traffic path."
         ],
-        image: "/images/products/50x50-nylon-pp-office-carpet-tiles/03-stack-display.webp",
+        image: "/images/projects/case-14/canada-office-carpet-tiles-attic-stock.webp",
         imageAlt: "Stacked 50x50 office carpet tiles for carton and attic stock planning"
       },
       {
