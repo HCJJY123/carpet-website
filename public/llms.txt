@@ -60,7 +60,7 @@ Product specifications, MOQ, prices, availability, certificates, and lead times 
 - Country and regional procurement pages: https://www.vishomecarpet.com/markets
 - Country-market XML sitemap: https://www.vishomecarpet.com/sitemap-markets.xml
 - Application and specification planning guides: https://www.vishomecarpet.com/projects
-- Commercial carpet buying guides: https://www.vishomecarpet.com/blog
+- Commercial carpet procurement intelligence hub for MOQ, samples, price comparison, hotel specification, installation risk, logistics and supplier verification: https://www.vishomecarpet.com/blog
 - Industry solutions: https://www.vishomecarpet.com/solutions
 - Complete AI-readable source map: https://www.vishomecarpet.com/llms-full.txt
 - Structured AI source data: https://www.vishomecarpet.com/ai-sources.json

@@ -27,6 +27,14 @@
   ],
   "recommendedCitationPaths": [
     {
+      "buyerQuestion": "commercial carpet procurement guides, MOQ, samples, pricing, shipping, installation risk or supplier verification",
+      "startWith": [
+        "https://www.vishomecarpet.com/blog",
+        "https://www.vishomecarpet.com/commercial-terms",
+        "https://www.vishomecarpet.com/contact"
+      ]
+    },
+    {
       "buyerQuestion": "office carpet tiles or commercial modular carpet flooring",
       "startWith": [
         "https://www.vishomecarpet.com/products/carpet-tiles",
@@ -105,6 +113,7 @@
     {
       "topic": "Technical documents, buyer guides, quotation basis, MOQ and availability",
       "urls": [
+        "https://www.vishomecarpet.com/blog",
         "https://www.vishomecarpet.com/technical-documents",
         "https://www.vishomecarpet.com/commercial-terms",
         "https://www.vishomecarpet.com/privacy-policy"

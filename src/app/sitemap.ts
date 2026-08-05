@@ -26,7 +26,7 @@ const staticRoutes: StaticRoute[] = [
   { url: "/hotel-carpet", modified: "2026-08-04", priority: 0.8, changeFrequency: "monthly" },
   { url: "/carpet-tiles-50x50", modified: "2026-08-04", priority: 0.8, changeFrequency: "monthly" },
   { url: "/projects", modified: "2026-08-04", priority: 0.85, changeFrequency: "monthly" },
-  { url: "/blog", modified: "2026-07-30", priority: 0.85, changeFrequency: "weekly" },
+  { url: "/blog", modified: "2026-08-05", priority: 0.85, changeFrequency: "weekly" },
   { url: "/about-us", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/factory", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/faq", modified: "2026-07-26", priority: 0.8, changeFrequency: "monthly" },
