@@ -2,17 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { brandInfo } from "@/lib/data";
+import { technicalDocuments } from "@/lib/resource-data";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 
 const pagePath = "/resources/technical-library";
-
-const documents = [
-  { title: "Commercial Carpet Tile Buying & Specification Guide", type: "Guide", category: "Carpet Tiles", application: "Office, retail and modular commercial flooring", href: "/downloads/commercial-carpet-tile-buying-specification-guide.pdf" },
-  { title: "Hotel Broadloom Procurement Guide", type: "Guide", category: "Wall-to-Wall", application: "Hotel corridors, guestrooms and banquet halls", href: "/downloads/hotel-broadloom-procurement-guide.pdf" },
-  { title: "Public Area Carpet Specification Guide", type: "Guide", category: "Public Area", application: "Lobbies, corridors and decorative public zones", href: "/downloads/public-area-carpet-specification-guide.pdf" },
-  { title: "Commercial Carpet Procurement Checklist", type: "Checklist", category: "Multiple", application: "RFQ, samples, packing and delivery planning", href: "/downloads/commercial-carpet-procurement-checklist.pdf" },
-  { title: "Gold Mining Mat RFQ Checklist", type: "Checklist", category: "Gold Mining Mat", application: "Sluice matting and trial order confirmation", href: "/downloads/gold-mining-mat-rfq-checklist.pdf" },
-];
 
 const filters = ["Product category", "Document type", "Application", "Language", "File format"];
 
@@ -40,11 +33,11 @@ export default function TechnicalLibraryPage() {
     publisher: { "@id": `${brandInfo.url}/#organization` },
     mainEntity: {
       "@type": "ItemList",
-      itemListElement: documents.map((document, index) => ({
+      itemListElement: technicalDocuments.map((document, index) => ({
         "@type": "ListItem",
         position: index + 1,
         name: document.title,
-        url: absoluteUrl(document.href),
+        url: absoluteUrl(`/resources/downloads/${document.slug}`),
       })),
     },
   };
@@ -77,16 +70,16 @@ export default function TechnicalLibraryPage() {
               <span className="col-span-2">Category</span>
               <span className="col-span-3">Action</span>
             </div>
-            {documents.map((document) => (
-              <article key={document.href} className="grid grid-cols-1 gap-4 border-b border-border px-5 py-5 last:border-b-0 md:grid-cols-12 md:items-center">
+            {technicalDocuments.map((document) => (
+              <article key={document.slug} className="grid grid-cols-1 gap-4 border-b border-border px-5 py-5 last:border-b-0 md:grid-cols-12 md:items-center">
                 <div className="md:col-span-5">
                   <h2 className="font-black text-primary">{document.title}</h2>
-                  <p className="mt-2 text-sm leading-6 text-muted">{document.application}</p>
+                  <p className="mt-2 text-sm leading-6 text-muted">{document.description}</p>
                 </div>
-                <p className="text-sm font-bold text-primary md:col-span-2">{document.type}</p>
-                <p className="text-sm font-bold text-muted md:col-span-2">{document.category}</p>
+                <p className="text-sm font-bold text-primary md:col-span-2">{document.documentType}</p>
+                <p className="text-sm font-bold text-muted md:col-span-2">{document.relatedCategory}</p>
                 <div className="flex flex-col gap-2 sm:flex-row md:col-span-3">
-                  <a href={document.href} className="btn-fox-orange text-center" data-track-event="technical_document_download" data-document-type={document.type}>Download</a>
+                  <a href={document.filePath} className="btn-fox-orange text-center" data-track-event="technical_document_download" data-document-type={document.documentType} data-document-slug={document.slug}>Download</a>
                   <Link href={`/contact?document=${encodeURIComponent(document.title)}#quote-form`} className="btn-fox-outline text-center">Request matched TDS</Link>
                 </div>
               </article>
