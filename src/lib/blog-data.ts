@@ -6,6 +6,7 @@ import { hotelCorridorCarpetDesignGuide } from "@/lib/blog-posts/hotel-corridor-
 import { commercialCarpetTileMoqGuide } from "@/lib/blog-posts/commercial-carpet-tile-moq-guide";
 import { hotelCarpetSupplierChecklistGuide } from "@/lib/blog-posts/hotel-carpet-supplier-checklist-guide";
 import { redditHotelOfficeCarpetComplaintsGuide } from "@/lib/blog-posts/reddit-hotel-office-carpet-complaints-guide";
+import { redditCountryCarpetBuyingGuides } from "@/lib/blog-posts/reddit-country-carpet-buying-guides";
 
 export interface BlogSection {
   title: string;
@@ -51,6 +52,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  ...redditCountryCarpetBuyingGuides,
   redditHotelOfficeCarpetComplaintsGuide,
   hotelCarpetSupplierChecklistGuide,
   commercialCarpetTileMoqGuide,
