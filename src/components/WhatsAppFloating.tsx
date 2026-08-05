@@ -13,7 +13,7 @@ export default function WhatsAppFloating() {
   useEffect(() => {
     const updateVisibility = () => {
       const isDesktop = window.matchMedia("(min-width: 768px)").matches;
-      setShowMobileCta(isDesktop || window.scrollY > window.innerHeight * 0.85);
+      setShowMobileCta(isDesktop || window.scrollY >= window.innerHeight);
     };
 
     updateVisibility();
@@ -33,6 +33,9 @@ export default function WhatsAppFloating() {
     intent: "project_support",
     pagePath: pathname,
   });
+  const mobileRevealClass = showMobileCta
+    ? "pointer-events-auto translate-y-0 opacity-100"
+    : "pointer-events-none translate-y-5 opacity-0";
 
   return (
     <div className="group fixed bottom-9 left-3 z-[98] sm:left-5 md:left-8">
@@ -42,8 +45,10 @@ export default function WhatsAppFloating() {
         rel="noopener noreferrer"
         data-whatsapp-placement="floating_whatsapp"
         data-whatsapp-intent="project_support"
-        className={`vishome-wa-float relative h-[38px] min-w-[117px] items-center gap-2 rounded-full border border-[#25D366]/35 bg-white px-2.5 text-[#128C4A] shadow-[0_8px_30px_rgba(16,42,67,0.13)] transition-all duration-200 hover:scale-[1.06] hover:border-[#25D366]/60 hover:shadow-[0_12px_40px_rgba(37,211,102,0.26)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 motion-reduce:transform-none md:flex md:h-13 md:min-w-[156px] md:px-4 ${showMobileCta ? "flex" : "hidden"}`}
+        className={`vishome-wa-float relative flex h-[38px] min-w-[117px] items-center gap-2 rounded-full border border-[#25D366]/35 bg-white px-2.5 text-[#128C4A] shadow-[0_8px_30px_rgba(16,42,67,0.13)] transition-all duration-300 ease-out hover:scale-[1.06] hover:border-[#25D366]/60 hover:shadow-[0_12px_40px_rgba(37,211,102,0.26)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 motion-reduce:transform-none md:pointer-events-auto md:h-13 md:min-w-[156px] md:translate-y-0 md:px-4 md:opacity-100 ${mobileRevealClass}`}
         aria-label="Contact VISHOME on WhatsApp Business"
+        aria-hidden={!showMobileCta}
+        tabIndex={showMobileCta ? undefined : -1}
       >
         <span className="relative flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_5px_16px_rgba(37,211,102,0.32)] md:h-8 md:w-8">
           <svg
