@@ -43,10 +43,10 @@ function InquiryFloatingLink({ showOnMobile }: { showOnMobile: boolean }) {
       data-item-name={quoteProduct}
       data-item-category={product?.category || category?.id || "sitewide"}
       data-item-id={product?.id || category?.id || "sitewide"}
-      className={`group fixed right-4 top-[64vh] z-[99] h-12 w-[154px] items-center gap-2 rounded-lg border border-white/15 bg-[#C8752A] px-2.5 text-white shadow-[0_8px_22px_rgba(72,43,18,0.2)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_10px_26px_rgba(72,43,18,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2 motion-reduce:transform-none md:right-6 md:top-[62vh] md:h-14 md:w-[176px] md:gap-3 md:px-3 ${showOnMobile ? "flex" : "hidden md:flex"}`}
+      className={`vishome-quote-float group fixed bottom-9 right-3 z-[99] h-12 min-w-[162px] items-center gap-2.5 rounded-full border border-[#C9A84C]/30 bg-[#C9A84C] px-3.5 text-[#102A43] shadow-[0_8px_32px_rgba(201,168,76,0.5)] transition-all duration-200 hover:scale-[1.06] hover:bg-[#E0BF63] hover:shadow-[0_12px_44px_rgba(201,168,76,0.62)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A84C] focus-visible:ring-offset-2 motion-reduce:transform-none sm:right-5 md:right-8 md:h-13 md:min-w-[176px] md:px-4 ${showOnMobile ? "flex" : "hidden md:flex"}`}
       aria-label="Open project quote form"
     >
-      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#C8752A] shadow-[inset_0_0_0_1px_rgba(200,117,42,0.12)] md:h-9 md:w-9">
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#102A43] text-[#C9A84C] shadow-[0_5px_16px_rgba(16,42,67,0.22)]">
         <svg
           viewBox="0 0 24 24"
           width="17"
@@ -64,7 +64,7 @@ function InquiryFloatingLink({ showOnMobile }: { showOnMobile: boolean }) {
         </svg>
       </span>
       <span
-        className="notranslate min-w-0 flex-1 whitespace-nowrap text-[10px] font-black uppercase leading-none tracking-[0.08em] md:text-[11px]"
+        className="notranslate min-w-0 flex-1 whitespace-nowrap text-[10px] font-black uppercase leading-none tracking-[0.12em]"
         translate="no"
       >
         {quoteLabels[locale]}
