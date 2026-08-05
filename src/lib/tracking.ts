@@ -2,6 +2,8 @@ import { getAttributionForEvent } from "@/lib/attribution";
 
 type LeadConversionPayload = {
   formName: string;
+  email?: string;
+  phone?: string;
   product?: string;
   quantity?: string;
   country?: string;
@@ -56,6 +58,16 @@ function conversionSendToFor(type: ClickConversionType) {
   return map[type];
 }
 
+function normalizeEnhancedConversionEmail(value?: string) {
+  const email = value?.trim().toLowerCase();
+  return email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? email : undefined;
+}
+
+function normalizeEnhancedConversionPhone(value?: string) {
+  const phone = value?.replace(/[\s().-]/g, "").trim();
+  return phone && /^\+?\d{8,15}$/.test(phone) ? phone : undefined;
+}
+
 export function pushTrackingEvent(event: string, payload: Record<string, unknown>) {
   if (typeof window === "undefined") return;
   window.dataLayer = window.dataLayer || [];
@@ -84,6 +96,8 @@ export function trackAnalyticsEvent(event: string, payload: Record<string, unkno
 
 export function trackLeadConversion({
   formName,
+  email,
+  phone,
   product,
   quantity,
   country,
@@ -125,6 +139,16 @@ export function trackLeadConversion({
     window.gtag("event", "generate_lead", leadPayload);
 
     if (conversionSendTo) {
+      const enhancedConversionEmail = normalizeEnhancedConversionEmail(email);
+      const enhancedConversionPhone = normalizeEnhancedConversionPhone(phone);
+
+      if (enhancedConversionEmail || enhancedConversionPhone) {
+        window.gtag("set", "user_data", {
+          ...(enhancedConversionEmail ? { email: enhancedConversionEmail } : {}),
+          ...(enhancedConversionPhone ? { phone_number: enhancedConversionPhone } : {}),
+        });
+      }
+
       window.gtag("event", "conversion", {
         send_to: conversionSendTo,
         event_category: "lead",

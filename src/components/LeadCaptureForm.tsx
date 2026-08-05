@@ -128,6 +128,8 @@ export default function LeadCaptureForm({
 
       trackLeadConversion({
         formName,
+        email: String(formData.get("email") || ""),
+        phone: String(formData.get("whatsapp") || ""),
         product: String(formData.get("product") || ""),
         quantity: String(formData.get("quantity") || ""),
         country: String(formData.get("country") || ""),
