@@ -16,7 +16,7 @@ export default function WhatsAppFloating() {
   });
 
   return (
-    <div className="group fixed bottom-[104px] right-3 z-[98] sm:right-5 md:bottom-[112px] md:right-8">
+    <div className="group fixed bottom-9 left-3 z-[98] sm:left-5 md:left-8">
       <a
         href={whatsappUrl}
         target="_blank"
