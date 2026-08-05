@@ -154,6 +154,7 @@ const sectionsWithChildren = navLinks.filter((link) => link.children?.length).ma
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
   const [openSections, setOpenSections] = useState<Set<string>>(() => new Set(sectionsWithChildren));
   const pathname = usePathname();
   const navigationPathname = stripLocaleFromPath(pathname);
@@ -186,12 +187,19 @@ export default function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!emailCopied) return;
+    const timer = window.setTimeout(() => setEmailCopied(false), 2400);
+    return () => window.clearTimeout(timer);
+  }, [emailCopied]);
+
   const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header, {
     placement: "header",
     intent: "project_support",
     pagePath: pathname,
   });
-  const emailUrl = "mailto:sales@vishomecarpet.com?subject=VISHOME%20Commercial%20Carpet%20Project%20Inquiry";
+  const salesEmail = "sales@vishomecarpet.com";
+  const emailUrl = `mailto:${salesEmail}?subject=VISHOME%20Commercial%20Carpet%20Project%20Inquiry`;
   const isActivePath = (href: string) => (href === "/" ? navigationPathname === "/" : navigationPathname === href || navigationPathname.startsWith(`${href}/`));
   const isActiveNav = (link: NavItem) => isActivePath(link.href) || Boolean(link.children?.some((child) => isActivePath(child.href)));
   const routeLanguageCode = getPathLocale(pathname)?.toUpperCase();
@@ -207,8 +215,20 @@ export default function Header() {
     setMenuOpen(false);
   };
 
+  const handleEmailClick = () => {
+    setEmailCopied(true);
+    void navigator.clipboard?.writeText(salesEmail).catch(() => undefined);
+  };
+
   return (
     <header className={`sticky top-0 bg-white/95 backdrop-blur border-b border-border shadow-sm ${languageOpen || menuOpen ? "z-[120]" : "z-50"}`}>
+      <div
+        className={`pointer-events-none fixed right-4 top-24 z-[140] rounded-lg border border-[#258CF4]/20 bg-white px-4 py-3 text-xs font-black uppercase tracking-[0.08em] text-[#102A43] shadow-[0_14px_40px_rgba(16,42,67,0.18)] transition-all duration-200 md:right-8 ${emailCopied ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"}`}
+        aria-live="polite"
+        role="status"
+      >
+        Email copied: {salesEmail}
+      </div>
       <div className="mx-auto max-w-[1480px] px-4 sm:px-6 xl:px-6">
         <div className="grid h-16 grid-cols-[1fr_auto] items-center md:h-20 min-[1420px]:h-24 min-[1420px]:grid-cols-[250px_minmax(620px,1fr)_430px]">
           <div className="flex min-w-0 items-center gap-1.5 max-[359px]:gap-1 min-[1536px]:-translate-x-12">
@@ -306,6 +326,7 @@ export default function Header() {
             </a>
             <a
               href={emailUrl}
+              onClick={handleEmailClick}
               className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#102A43]/20 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#102A43] transition-colors hover:border-[#258CF4]/55 hover:bg-[#258CF4]/[0.05] hover:text-[#126DE2] min-[1536px]:px-[13px] min-[1536px]:py-[9px] min-[1536px]:text-xs"
               aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
               title="Email sales@vishomecarpet.com"
@@ -346,6 +367,7 @@ export default function Header() {
             </a>
             <a
               href={emailUrl}
+              onClick={handleEmailClick}
               className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] border border-[#258CF4]/25 bg-[#258CF4]/[0.04] shadow-[0_2px_7px_rgba(18,109,226,0.12)] transition-[border-color,background-color,transform,box-shadow] hover:scale-105 hover:border-[#258CF4]/50 hover:bg-[#258CF4]/[0.08] hover:shadow-[0_3px_9px_rgba(18,109,226,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#258CF4]/45 focus-visible:ring-offset-2 max-[359px]:h-9 max-[359px]:w-9 sm:h-11 sm:w-11"
               aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
               title="Email sales@vishomecarpet.com"
@@ -498,7 +520,10 @@ export default function Header() {
             </a>
             <a
               href={emailUrl}
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                handleEmailClick();
+                setMenuOpen(false);
+              }}
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#102A43]/20 bg-white px-5 py-3 text-[13px] font-semibold uppercase tracking-[0.06em] text-[#102A43] sm:col-span-2"
             >
               <EmailIcon className="h-6 w-6 scale-90" />

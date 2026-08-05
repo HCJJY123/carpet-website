@@ -41,7 +41,7 @@ function InquiryFloatingLink({ showOnMobile }: { showOnMobile: boolean }) {
   useEffect(() => {
     const updateVisibility = () => {
       const isDesktop = window.matchMedia("(min-width: 768px)").matches;
-      setShowMobileCta(isDesktop || window.scrollY > window.innerHeight * 0.85);
+      setShowMobileCta(isDesktop || window.scrollY >= window.innerHeight);
     };
 
     updateVisibility();
@@ -53,6 +53,9 @@ function InquiryFloatingLink({ showOnMobile }: { showOnMobile: boolean }) {
       window.removeEventListener("resize", updateVisibility);
     };
   }, []);
+  const mobileRevealClass = showOnMobile && showMobileCta
+    ? "pointer-events-auto translate-y-0 opacity-100"
+    : "pointer-events-none translate-y-5 opacity-0";
 
   return (
     <Link
@@ -61,8 +64,10 @@ function InquiryFloatingLink({ showOnMobile }: { showOnMobile: boolean }) {
       data-item-name={quoteProduct}
       data-item-category={product?.category || category?.id || "sitewide"}
       data-item-id={product?.id || category?.id || "sitewide"}
-      className={`vishome-quote-float group fixed bottom-9 right-3 z-[99] h-[38px] min-w-[130px] items-center gap-2 rounded-full border border-[#C9A84C]/30 bg-[#C9A84C] px-2.5 text-[#102A43] shadow-[0_8px_32px_rgba(201,168,76,0.5)] transition-all duration-200 hover:scale-[1.06] hover:bg-[#E0BF63] hover:shadow-[0_12px_44px_rgba(201,168,76,0.62)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A84C] focus-visible:ring-offset-2 motion-reduce:transform-none sm:right-5 md:flex md:right-8 md:h-13 md:min-w-[176px] md:px-4 ${showOnMobile && showMobileCta ? "flex" : "hidden md:flex"}`}
+      className={`vishome-quote-float group fixed bottom-9 right-3 z-[99] flex h-[38px] min-w-[130px] items-center gap-2 rounded-full border border-[#C9A84C]/30 bg-[#C9A84C] px-2.5 text-[#102A43] shadow-[0_8px_32px_rgba(201,168,76,0.5)] transition-all duration-300 ease-out hover:scale-[1.06] hover:bg-[#E0BF63] hover:shadow-[0_12px_44px_rgba(201,168,76,0.62)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A84C] focus-visible:ring-offset-2 motion-reduce:transform-none sm:right-5 md:pointer-events-auto md:right-8 md:h-13 md:min-w-[176px] md:translate-y-0 md:px-4 md:opacity-100 ${mobileRevealClass}`}
       aria-label="Open project quote form"
+      aria-hidden={!showMobileCta}
+      tabIndex={showMobileCta ? undefined : -1}
     >
       <span className="flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-full bg-[#102A43] text-[#C9A84C] shadow-[0_5px_16px_rgba(16,42,67,0.22)] md:h-8 md:w-8">
         <svg
