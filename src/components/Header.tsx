@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { getContactBridgeUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 import { getPathLocale, stripLocaleFromPath } from "@/lib/site-locales";
 
@@ -155,6 +155,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
+  const [emailPanelOpen, setEmailPanelOpen] = useState(false);
   const [openSections, setOpenSections] = useState<Set<string>>(() => new Set(sectionsWithChildren));
   const pathname = usePathname();
   const navigationPathname = stripLocaleFromPath(pathname);
@@ -174,6 +175,7 @@ export default function Header() {
     const closeLanguageMenu = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       if (!target.closest("[data-language-switcher]")) setLanguageOpen(false);
+      if (!target.closest("[data-email-contact-panel]")) setEmailPanelOpen(false);
     };
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") setLanguageOpen(false);
@@ -199,7 +201,9 @@ export default function Header() {
     pagePath: pathname,
   });
   const salesEmail = "sales@vishomecarpet.com";
-  const emailUrl = `mailto:${salesEmail}?subject=VISHOME%20Commercial%20Carpet%20Project%20Inquiry`;
+  const emailSubject = "VISHOME Commercial Carpet Project Inquiry";
+  const emailUrl = `mailto:${salesEmail}?subject=${encodeURIComponent(emailSubject)}`;
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(salesEmail)}&su=${encodeURIComponent(emailSubject)}`;
   const isActivePath = (href: string) => (href === "/" ? navigationPathname === "/" : navigationPathname === href || navigationPathname.startsWith(`${href}/`));
   const isActiveNav = (link: NavItem) => isActivePath(link.href) || Boolean(link.children?.some((child) => isActivePath(child.href)));
   const routeLanguageCode = getPathLocale(pathname)?.toUpperCase();
@@ -213,11 +217,19 @@ export default function Header() {
   const closeMenus = () => {
     setLanguageOpen(false);
     setMenuOpen(false);
+    setEmailPanelOpen(false);
   };
 
-  const handleEmailClick = () => {
+  const copyEmailAddress = () => {
     setEmailCopied(true);
     void navigator.clipboard?.writeText(salesEmail).catch(() => undefined);
+  };
+
+  const handleEmailClick = (event?: ReactMouseEvent<HTMLAnchorElement>) => {
+    event?.preventDefault();
+    copyEmailAddress();
+    setEmailPanelOpen((open) => !open);
+    setLanguageOpen(false);
   };
 
   return (
@@ -228,6 +240,45 @@ export default function Header() {
         role="status"
       >
         Email copied: {salesEmail}
+      </div>
+      <div
+        data-email-contact-panel
+        className={`fixed right-4 top-20 z-[145] w-[min(calc(100vw-2rem),360px)] rounded-xl border border-[#258CF4]/20 bg-white p-4 text-[#102A43] shadow-[0_22px_60px_rgba(16,42,67,0.22)] transition-all duration-200 md:right-8 md:top-24 ${emailPanelOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"}`}
+      >
+        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#258CF4]">Email Vishome Carpet</p>
+        <p className="mt-2 break-all text-sm font-black">{salesEmail}</p>
+        <div className="mt-4 grid gap-2 sm:grid-cols-2">
+          <button
+            type="button"
+            onClick={copyEmailAddress}
+            className="rounded-lg border border-[#258CF4]/25 bg-[#258CF4]/[0.06] px-4 py-3 text-xs font-black uppercase tracking-[0.08em] text-[#126DE2]"
+          >
+            Copy Email
+          </button>
+          <a
+            href={gmailUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setEmailPanelOpen(false)}
+            className="rounded-lg bg-[#102A43] px-4 py-3 text-center text-xs font-black uppercase tracking-[0.08em] text-white"
+          >
+            Open Gmail
+          </a>
+          <a
+            href={emailUrl}
+            onClick={() => setEmailPanelOpen(false)}
+            className="rounded-lg border border-[#102A43]/20 bg-white px-4 py-3 text-center text-xs font-black uppercase tracking-[0.08em] text-[#102A43]"
+          >
+            Email App
+          </a>
+          <Link
+            href="/contact#quote-form"
+            onClick={() => setEmailPanelOpen(false)}
+            className="rounded-lg bg-[#C8752A] px-4 py-3 text-center text-xs font-black uppercase tracking-[0.08em] text-white"
+          >
+            Contact Form
+          </Link>
+        </div>
       </div>
       <div className="mx-auto max-w-[1480px] px-4 sm:px-6 xl:px-6">
         <div className="grid h-16 grid-cols-[1fr_auto] items-center md:h-20 min-[1420px]:h-24 min-[1420px]:grid-cols-[250px_minmax(620px,1fr)_430px]">
@@ -326,6 +377,7 @@ export default function Header() {
             </a>
             <a
               href={emailUrl}
+              data-email-contact-panel
               onClick={handleEmailClick}
               className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#102A43]/20 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#102A43] transition-colors hover:border-[#258CF4]/55 hover:bg-[#258CF4]/[0.05] hover:text-[#126DE2] min-[1536px]:px-[13px] min-[1536px]:py-[9px] min-[1536px]:text-xs"
               aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
@@ -367,6 +419,7 @@ export default function Header() {
             </a>
             <a
               href={emailUrl}
+              data-email-contact-panel
               onClick={handleEmailClick}
               className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] border border-[#258CF4]/25 bg-[#258CF4]/[0.04] shadow-[0_2px_7px_rgba(18,109,226,0.12)] transition-[border-color,background-color,transform,box-shadow] hover:scale-105 hover:border-[#258CF4]/50 hover:bg-[#258CF4]/[0.08] hover:shadow-[0_3px_9px_rgba(18,109,226,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#258CF4]/45 focus-visible:ring-offset-2 max-[359px]:h-9 max-[359px]:w-9 sm:h-11 sm:w-11"
               aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
@@ -520,8 +573,9 @@ export default function Header() {
             </a>
             <a
               href={emailUrl}
-              onClick={() => {
-                handleEmailClick();
+              data-email-contact-panel
+              onClick={(event) => {
+                handleEmailClick(event);
                 setMenuOpen(false);
               }}
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#102A43]/20 bg-white px-5 py-3 text-[13px] font-semibold uppercase tracking-[0.06em] text-[#102A43] sm:col-span-2"
