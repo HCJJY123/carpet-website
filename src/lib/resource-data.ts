@@ -11,6 +11,7 @@ export type TechnicalDocument = {
   issueDate: string;
   reviewDate: string;
   filePath: string;
+  fileSizeLabel: string;
   fileFormat: "PDF";
   language: "English";
   publicStatus: "published";
@@ -29,6 +30,7 @@ export const technicalDocuments: TechnicalDocument[] = [
     issueDate: "CONFIRM_DOCUMENT_ISSUE_DATE",
     reviewDate: "2026-08-06",
     filePath: "/downloads/commercial-carpet-tile-buying-specification-guide.pdf",
+    fileSizeLabel: "8 KB",
     fileFormat: "PDF",
     language: "English",
     publicStatus: "published",
@@ -45,6 +47,7 @@ export const technicalDocuments: TechnicalDocument[] = [
     issueDate: "CONFIRM_DOCUMENT_ISSUE_DATE",
     reviewDate: "2026-08-06",
     filePath: "/downloads/hotel-broadloom-procurement-guide.pdf",
+    fileSizeLabel: "8 KB",
     fileFormat: "PDF",
     language: "English",
     publicStatus: "published",
@@ -61,6 +64,7 @@ export const technicalDocuments: TechnicalDocument[] = [
     issueDate: "CONFIRM_DOCUMENT_ISSUE_DATE",
     reviewDate: "2026-08-06",
     filePath: "/downloads/public-area-carpet-specification-guide.pdf",
+    fileSizeLabel: "8 KB",
     fileFormat: "PDF",
     language: "English",
     publicStatus: "published",
@@ -77,6 +81,7 @@ export const technicalDocuments: TechnicalDocument[] = [
     issueDate: "CONFIRM_DOCUMENT_ISSUE_DATE",
     reviewDate: "2026-08-06",
     filePath: "/downloads/commercial-carpet-procurement-checklist.pdf",
+    fileSizeLabel: "4 KB",
     fileFormat: "PDF",
     language: "English",
     publicStatus: "published",
@@ -93,6 +98,7 @@ export const technicalDocuments: TechnicalDocument[] = [
     issueDate: "CONFIRM_DOCUMENT_ISSUE_DATE",
     reviewDate: "2026-08-06",
     filePath: "/downloads/gold-mining-mat-rfq-checklist.pdf",
+    fileSizeLabel: "4 KB",
     fileFormat: "PDF",
     language: "English",
     publicStatus: "published",

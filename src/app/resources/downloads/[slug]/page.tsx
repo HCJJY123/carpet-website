@@ -1,5 +1,3 @@
-import fs from "node:fs";
-import path from "node:path";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -17,17 +15,6 @@ import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
 type Props = {
   params: Promise<{ slug: string }>;
 };
-
-function fileSizeLabel(filePath: string) {
-  try {
-    const publicRelative = filePath.replace(/^\//, "");
-    const bytes = fs.statSync(path.join(process.cwd(), "public", publicRelative)).size;
-    if (bytes >= 1024 * 1024) return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
-    return `${Math.round(bytes / 1024)} KB`;
-  } catch {
-    return "File size pending verification";
-  }
-}
 
 export function generateStaticParams() {
   return technicalDocuments.map((document) => ({ slug: document.slug }));
@@ -59,7 +46,7 @@ export default async function DownloadDetailPage({ params }: Props) {
 
   const relatedProducts = relatedProductsForDocument(document);
   const pagePath = `/resources/downloads/${document.slug}`;
-  const fileSize = fileSizeLabel(document.filePath);
+  const fileSize = document.fileSizeLabel;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "DigitalDocument",
