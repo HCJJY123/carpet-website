@@ -199,7 +199,16 @@ export async function POST(request: NextRequest) {
   ]);
 
   if (!archived && !delivered) {
-    return NextResponse.json({ ok: false, error: "Submission failed" }, { status: 502 });
+    return NextResponse.json(
+      {
+        ok: false,
+        leadId,
+        archived,
+        delivered,
+        error: "Email delivery failed. Please contact us by WhatsApp or email directly.",
+      },
+      { status: 502, headers: { "Cache-Control": "no-store" } }
+    );
   }
 
   return NextResponse.json(

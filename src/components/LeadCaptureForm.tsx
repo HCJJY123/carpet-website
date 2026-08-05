@@ -161,7 +161,7 @@ export default function LeadCaptureForm({
         submitting: false,
         error: error instanceof Error && error.message !== "Submission failed"
           ? error.message
-          : "We could not send the request. Please check the fields and try again.",
+          : "We could not send the request. Please contact us by WhatsApp or email directly.",
       });
     }
   }
