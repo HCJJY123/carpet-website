@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "eslint",
     "indexnow": "node scripts/indexnow-submit.mjs",
-    "images:responsive": "node scripts/generate-responsive-images.mjs"
+    "images:responsive": "node scripts/generate-responsive-images.mjs",
+    "audit:seo": "node scripts/audit-backlink-readiness.mjs seo",
+    "audit:links": "node scripts/audit-backlink-readiness.mjs links",
+    "audit:assets": "node scripts/audit-backlink-readiness.mjs assets",
+    "audit:placeholders": "node scripts/audit-backlink-readiness.mjs placeholders"
   },
   "dependencies": {
     "next": "16.2.9",

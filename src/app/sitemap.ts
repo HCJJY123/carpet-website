@@ -7,6 +7,9 @@ import { solutionPages } from "@/lib/solution-data";
 import { getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 import { ruB2BPages } from "@/lib/ru-b2b-pages";
 import { countryMarketPages } from "@/lib/country-market-pages";
+import { applicationPages } from "@/lib/application-data";
+import { productLinePages } from "@/lib/product-line-data";
+import { resourceCategories, technicalDocuments } from "@/lib/resource-data";
 
 const BASE = "https://www.vishomecarpet.com";
 
@@ -31,9 +34,13 @@ const staticRoutes: StaticRoute[] = [
   { url: "/factory", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/faq", modified: "2026-07-26", priority: 0.8, changeFrequency: "monthly" },
   { url: "/technical-documents", modified: "2026-08-02", priority: 0.76, changeFrequency: "monthly" },
+  { url: "/resources", modified: "2026-08-06", priority: 0.78, changeFrequency: "monthly" },
   { url: "/resources/technical-library", modified: "2026-08-06", priority: 0.76, changeFrequency: "monthly" },
   { url: "/architects-designers", modified: "2026-08-06", priority: 0.74, changeFrequency: "monthly" },
   { url: "/media/press-kit", modified: "2026-08-06", priority: 0.5, changeFrequency: "monthly" },
+  { url: "/applications", modified: "2026-08-06", priority: 0.78, changeFrequency: "monthly" },
+  { url: "/quality-control", modified: "2026-08-06", priority: 0.7, changeFrequency: "monthly" },
+  { url: "/certifications", modified: "2026-08-06", priority: 0.58, changeFrequency: "monthly" },
   { url: "/commercial-terms", modified: "2026-08-02", priority: 0.64, changeFrequency: "monthly" },
   { url: "/contact", modified: "2026-07-25", priority: 0.7, changeFrequency: "yearly" },
   { url: "/privacy-policy", modified: "2026-07-25", priority: 0.3, changeFrequency: "yearly" },
@@ -96,6 +103,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: uniqueImages([product.image, ...(product.gallery?.map((image) => image.src) ?? [])]),
   }));
 
+  const productLineEntries: MetadataRoute.Sitemap = productLinePages.map((page) => ({
+    url: `${BASE}/products/${page.slug}`,
+    lastModified: new Date("2026-08-06T00:00:00.000Z"),
+    changeFrequency: "monthly",
+    priority: 0.84,
+    images: uniqueImages([page.image]),
+  }));
+
   const projectEntries: MetadataRoute.Sitemap = caseStudies.map((project) => ({
     url: `${BASE}${projectPath(project.id)}`,
     lastModified: new Date("2026-08-04T00:00:00.000Z"),
@@ -114,6 +129,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: 0.84,
   }));
+
+  const applicationEntries: MetadataRoute.Sitemap = applicationPages.map((page) => ({
+    url: `${BASE}/applications/${page.slug}`,
+    lastModified: new Date("2026-08-06T00:00:00.000Z"),
+    changeFrequency: "monthly" as const,
+    priority: 0.76,
+    images: uniqueImages([page.image]),
+  }));
+
+  const resourceEntries: MetadataRoute.Sitemap = [
+    ...resourceCategories.map((category) => ({
+      url: `${BASE}${category.href}`,
+      lastModified: new Date("2026-08-06T00:00:00.000Z"),
+      changeFrequency: "monthly" as const,
+      priority: category.href === "/resources/bim-cad" ? 0.58 : 0.68,
+    })),
+    ...technicalDocuments.map((document) => ({
+      url: `${BASE}/resources/downloads/${document.slug}`,
+      lastModified: new Date(`${document.reviewDate}T00:00:00.000Z`),
+      changeFrequency: "monthly" as const,
+      priority: 0.66,
+    })),
+  ];
 
   const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${BASE}/blog/${post.slug}`,
@@ -164,5 +202,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticEntries, ...categoryEntries, ...productEntries, ...projectEntries, ...solutionEntries, ...blogEntries, ...localizedLandingEntries, ...ruB2BEntries, ...countryMarketEntries];
+  return [...staticEntries, ...categoryEntries, ...productLineEntries, ...productEntries, ...projectEntries, ...solutionEntries, ...applicationEntries, ...resourceEntries, ...blogEntries, ...localizedLandingEntries, ...ruB2BEntries, ...countryMarketEntries];
 }
