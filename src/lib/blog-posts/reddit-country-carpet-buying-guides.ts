@@ -234,13 +234,14 @@ export const usaCustomSculptedWoolRugGuide: BlogPost = {
     "sculpted rug supplier",
   ],
   date: "2026-08-05",
+  dateModified: "2026-08-05",
   author: "Vishome Technical Team",
   category: "Custom Rugs",
-  image: "/images/products/public-area/custom-sculpted-wool-lobby-rug/01-main-hotel-lobby-wool-rug.webp",
-  h1Image: "/images/products/public-area/custom-sculpted-wool-lobby-rug/01-main-hotel-lobby-wool-rug.webp",
-  h1ImageAlt: "Custom sculpted wool lobby rug with carved pile in a hotel seating area",
+  image: "/images/blog-series/custom-sculpted-wool-rugs-us-hotel-lobbies/custom-sculpted-wool-rug-us-hotel-lobby.webp",
+  h1Image: "/images/blog-series/custom-sculpted-wool-rugs-us-hotel-lobbies/custom-sculpted-wool-rug-us-hotel-lobby.webp",
+  h1ImageAlt: "Custom sculpted wool rug with organic shape and carved pile in a luxury hotel lobby seating area",
   h1ImageCaption:
-    "A project-grade sculpted wool rug should be specified for scale, traffic, cleaning and edge finishing, not just appearance.",
+    "A project-grade sculpted wool rug should show the full organic outline, carved pile depth, seating scale and real lobby use case.",
   h1ImageFit: "cover",
   relatedProductIds: ["custom-sculpted-wool-lobby-rug", "natural-sisal-carpet", "public-area-heavy-duty"],
   suggestedLinks: [

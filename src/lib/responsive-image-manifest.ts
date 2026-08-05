@@ -2710,5 +2710,55 @@ export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
       }
     ],
     "fallback": "/images/optimized/products-pp-bitumen-backed-office-carpet-tiles-04-open-office-lounge-carpet-tiles-ca62a0e7cf-1536w.webp"
+  },
+  "/images/blog-series/custom-sculpted-wool-rugs-us-hotel-lobbies/custom-sculpted-wool-rug-us-hotel-lobby.webp": {
+    "width": 1599,
+    "height": 900,
+    "originalBytes": 135950,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-custom-sculpted-wool-rugs-us-hotel-lobbies-custom-sculpted-wool-rug-us-hotel-lobby-fc37dad3e3-480w.avif",
+        "width": 480,
+        "bytes": 14363
+      },
+      {
+        "src": "/images/optimized/blog-series-custom-sculpted-wool-rugs-us-hotel-lobbies-custom-sculpted-wool-rug-us-hotel-lobby-fc37dad3e3-768w.avif",
+        "width": 768,
+        "bytes": 28169
+      },
+      {
+        "src": "/images/optimized/blog-series-custom-sculpted-wool-rugs-us-hotel-lobbies-custom-sculpted-wool-rug-us-hotel-lobby-fc37dad3e3-1200w.avif",
+        "width": 1200,
+        "bytes": 51388
+      },
+      {
+        "src": "/images/optimized/blog-series-custom-sculpted-wool-rugs-us-hotel-lobbies-custom-sculpted-wool-rug-us-hotel-lobby-fc37dad3e3-1600w.avif",
+        "width": 1600,
+        "bytes": 87842
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-custom-sculpted-wool-rugs-us-hotel-lobbies-custom-sculpted-wool-rug-us-hotel-lobby-fc37dad3e3-480w.webp",
+        "width": 480,
+        "bytes": 17076
+      },
+      {
+        "src": "/images/optimized/blog-series-custom-sculpted-wool-rugs-us-hotel-lobbies-custom-sculpted-wool-rug-us-hotel-lobby-fc37dad3e3-768w.webp",
+        "width": 768,
+        "bytes": 35284
+      },
+      {
+        "src": "/images/optimized/blog-series-custom-sculpted-wool-rugs-us-hotel-lobbies-custom-sculpted-wool-rug-us-hotel-lobby-fc37dad3e3-1200w.webp",
+        "width": 1200,
+        "bytes": 66100
+      },
+      {
+        "src": "/images/optimized/blog-series-custom-sculpted-wool-rugs-us-hotel-lobbies-custom-sculpted-wool-rug-us-hotel-lobby-fc37dad3e3-1600w.webp",
+        "width": 1600,
+        "bytes": 116792
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-custom-sculpted-wool-rugs-us-hotel-lobbies-custom-sculpted-wool-rug-us-hotel-lobby-fc37dad3e3-1600w.webp"
   }
 };
