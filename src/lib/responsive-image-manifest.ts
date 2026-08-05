@@ -2760,5 +2760,205 @@ export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
       }
     ],
     "fallback": "/images/optimized/blog-series-custom-sculpted-wool-rugs-us-hotel-lobbies-custom-sculpted-wool-rug-us-hotel-lobby-fc37dad3e3-1600w.webp"
+  },
+  "/images/blog-series/gold-mining-carpet-mat-australia-fine-gold-recovery/gold-mining-carpet-mat-australia-sluice-field.webp": {
+    "width": 1599,
+    "height": 900,
+    "originalBytes": 222612,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-gold-mining-carpet-mat-australia-fine-gold-recovery-gold-mining-carpet-mat-australia-sluice-field-d076b8f6f1-480w.avif",
+        "width": 480,
+        "bytes": 25333
+      },
+      {
+        "src": "/images/optimized/blog-series-gold-mining-carpet-mat-australia-fine-gold-recovery-gold-mining-carpet-mat-australia-sluice-field-d076b8f6f1-768w.avif",
+        "width": 768,
+        "bytes": 51853
+      },
+      {
+        "src": "/images/optimized/blog-series-gold-mining-carpet-mat-australia-fine-gold-recovery-gold-mining-carpet-mat-australia-sluice-field-d076b8f6f1-1200w.avif",
+        "width": 1200,
+        "bytes": 92559
+      },
+      {
+        "src": "/images/optimized/blog-series-gold-mining-carpet-mat-australia-fine-gold-recovery-gold-mining-carpet-mat-australia-sluice-field-d076b8f6f1-1600w.avif",
+        "width": 1600,
+        "bytes": 158911
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-gold-mining-carpet-mat-australia-fine-gold-recovery-gold-mining-carpet-mat-australia-sluice-field-d076b8f6f1-480w.webp",
+        "width": 480,
+        "bytes": 35010
+      },
+      {
+        "src": "/images/optimized/blog-series-gold-mining-carpet-mat-australia-fine-gold-recovery-gold-mining-carpet-mat-australia-sluice-field-d076b8f6f1-768w.webp",
+        "width": 768,
+        "bytes": 73072
+      },
+      {
+        "src": "/images/optimized/blog-series-gold-mining-carpet-mat-australia-fine-gold-recovery-gold-mining-carpet-mat-australia-sluice-field-d076b8f6f1-1200w.webp",
+        "width": 1200,
+        "bytes": 137556
+      },
+      {
+        "src": "/images/optimized/blog-series-gold-mining-carpet-mat-australia-fine-gold-recovery-gold-mining-carpet-mat-australia-sluice-field-d076b8f6f1-1600w.webp",
+        "width": 1600,
+        "bytes": 219370
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-gold-mining-carpet-mat-australia-fine-gold-recovery-gold-mining-carpet-mat-australia-sluice-field-d076b8f6f1-1600w.webp"
+  },
+  "/images/blog-series/office-carpet-tiles-canada-phased-renovation-reddit-guide/office-carpet-tiles-canada-phased-installation.webp": {
+    "width": 1599,
+    "height": 900,
+    "originalBytes": 138406,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-canada-phased-renovation-reddit-guide-office-carpet-tiles-canada-phased-installation-183962c50c-480w.avif",
+        "width": 480,
+        "bytes": 9541
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-canada-phased-renovation-reddit-guide-office-carpet-tiles-canada-phased-installation-183962c50c-768w.avif",
+        "width": 768,
+        "bytes": 19435
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-canada-phased-renovation-reddit-guide-office-carpet-tiles-canada-phased-installation-183962c50c-1200w.avif",
+        "width": 1200,
+        "bytes": 41907
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-canada-phased-renovation-reddit-guide-office-carpet-tiles-canada-phased-installation-183962c50c-1600w.avif",
+        "width": 1600,
+        "bytes": 83348
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-canada-phased-renovation-reddit-guide-office-carpet-tiles-canada-phased-installation-183962c50c-480w.webp",
+        "width": 480,
+        "bytes": 14970
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-canada-phased-renovation-reddit-guide-office-carpet-tiles-canada-phased-installation-183962c50c-768w.webp",
+        "width": 768,
+        "bytes": 34344
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-canada-phased-renovation-reddit-guide-office-carpet-tiles-canada-phased-installation-183962c50c-1200w.webp",
+        "width": 1200,
+        "bytes": 70932
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-canada-phased-renovation-reddit-guide-office-carpet-tiles-canada-phased-installation-183962c50c-1600w.webp",
+        "width": 1600,
+        "bytes": 127772
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-office-carpet-tiles-canada-phased-renovation-reddit-guide-office-carpet-tiles-canada-phased-installation-183962c50c-1600w.webp"
+  },
+  "/images/blog-series/hotel-carpet-philippines-pattern-stain-maintenance-guide/hotel-carpet-philippines-corridor-pattern.webp": {
+    "width": 1599,
+    "height": 900,
+    "originalBytes": 81074,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-hotel-carpet-philippines-pattern-stain-maintenance-guide-hotel-carpet-philippines-corridor-pattern-a1e87b2e86-480w.avif",
+        "width": 480,
+        "bytes": 8010
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-carpet-philippines-pattern-stain-maintenance-guide-hotel-carpet-philippines-corridor-pattern-a1e87b2e86-768w.avif",
+        "width": 768,
+        "bytes": 14902
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-carpet-philippines-pattern-stain-maintenance-guide-hotel-carpet-philippines-corridor-pattern-a1e87b2e86-1200w.avif",
+        "width": 1200,
+        "bytes": 26465
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-carpet-philippines-pattern-stain-maintenance-guide-hotel-carpet-philippines-corridor-pattern-a1e87b2e86-1600w.avif",
+        "width": 1600,
+        "bytes": 43158
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-hotel-carpet-philippines-pattern-stain-maintenance-guide-hotel-carpet-philippines-corridor-pattern-a1e87b2e86-480w.webp",
+        "width": 480,
+        "bytes": 12016
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-carpet-philippines-pattern-stain-maintenance-guide-hotel-carpet-philippines-corridor-pattern-a1e87b2e86-768w.webp",
+        "width": 768,
+        "bytes": 24018
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-carpet-philippines-pattern-stain-maintenance-guide-hotel-carpet-philippines-corridor-pattern-a1e87b2e86-1200w.webp",
+        "width": 1200,
+        "bytes": 44450
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-carpet-philippines-pattern-stain-maintenance-guide-hotel-carpet-philippines-corridor-pattern-a1e87b2e86-1600w.webp",
+        "width": 1600,
+        "bytes": 72864
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-hotel-carpet-philippines-pattern-stain-maintenance-guide-hotel-carpet-philippines-corridor-pattern-a1e87b2e86-1600w.webp"
+  },
+  "/images/blog-series/commercial-carpet-tiles-russia-winter-office-flooring-guide/commercial-carpet-tiles-russia-winter-entry-office.webp": {
+    "width": 1599,
+    "height": 900,
+    "originalBytes": 165942,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-commercial-carpet-tiles-russia-winter-office-flooring-guide-commercial-carpet-tiles-russia-winter-entry-office-60b79347fb-480w.avif",
+        "width": 480,
+        "bytes": 8119
+      },
+      {
+        "src": "/images/optimized/blog-series-commercial-carpet-tiles-russia-winter-office-flooring-guide-commercial-carpet-tiles-russia-winter-entry-office-60b79347fb-768w.avif",
+        "width": 768,
+        "bytes": 19474
+      },
+      {
+        "src": "/images/optimized/blog-series-commercial-carpet-tiles-russia-winter-office-flooring-guide-commercial-carpet-tiles-russia-winter-entry-office-60b79347fb-1200w.avif",
+        "width": 1200,
+        "bytes": 48334
+      },
+      {
+        "src": "/images/optimized/blog-series-commercial-carpet-tiles-russia-winter-office-flooring-guide-commercial-carpet-tiles-russia-winter-entry-office-60b79347fb-1600w.avif",
+        "width": 1600,
+        "bytes": 108240
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-commercial-carpet-tiles-russia-winter-office-flooring-guide-commercial-carpet-tiles-russia-winter-entry-office-60b79347fb-480w.webp",
+        "width": 480,
+        "bytes": 13728
+      },
+      {
+        "src": "/images/optimized/blog-series-commercial-carpet-tiles-russia-winter-office-flooring-guide-commercial-carpet-tiles-russia-winter-entry-office-60b79347fb-768w.webp",
+        "width": 768,
+        "bytes": 34908
+      },
+      {
+        "src": "/images/optimized/blog-series-commercial-carpet-tiles-russia-winter-office-flooring-guide-commercial-carpet-tiles-russia-winter-entry-office-60b79347fb-1200w.webp",
+        "width": 1200,
+        "bytes": 80964
+      },
+      {
+        "src": "/images/optimized/blog-series-commercial-carpet-tiles-russia-winter-office-flooring-guide-commercial-carpet-tiles-russia-winter-entry-office-60b79347fb-1600w.webp",
+        "width": 1600,
+        "bytes": 157418
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-commercial-carpet-tiles-russia-winter-office-flooring-guide-commercial-carpet-tiles-russia-winter-entry-office-60b79347fb-1600w.webp"
   }
 };
