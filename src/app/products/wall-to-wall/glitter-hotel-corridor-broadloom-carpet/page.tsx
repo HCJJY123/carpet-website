@@ -126,11 +126,11 @@ const productJsonLd = {
     "highPrice": product.fobPrice.highPrice,
     "offerCount": 1,
     "availability": "https://schema.org/PreOrder",
-    "seller": { "@type": "Organization", "name": "Vishome Global Commercial Carpet Co. Ltd.", "url": siteUrl }
+    "seller": { "@type": "Organization", "name": "Vishome Global Commercial Carpet Co., Ltd.", "url": siteUrl }
   },
   "manufacturer": {
     "@type": "Organization",
-    "name": "Vishome Global Commercial Carpet Co. Ltd.",
+    "name": "Vishome Global Commercial Carpet Co., Ltd.",
     "url": siteUrl
   },
   "additionalProperty": [

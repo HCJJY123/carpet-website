@@ -132,7 +132,7 @@ export default function NylonOfficeCarpetTilePage() {
     material: "100% Nylon",
     manufacturer: {
       "@type": "Organization",
-      name: "Vishome Global Commercial Carpet Co. Ltd.",
+      name: "Vishome Global Commercial Carpet Co., Ltd.",
       url: "https://www.vishomecarpet.com",
     },
     offers: {
@@ -145,7 +145,7 @@ export default function NylonOfficeCarpetTilePage() {
       offerCount: 3,
       seller: {
         "@type": "Organization",
-        name: "Vishome Global Commercial Carpet Co. Ltd.",
+        name: "Vishome Global Commercial Carpet Co., Ltd.",
         url: "https://www.vishomecarpet.com",
       },
     },

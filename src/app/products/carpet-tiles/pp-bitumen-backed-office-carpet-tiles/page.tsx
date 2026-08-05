@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import AnswerFirst from "@/components/AnswerFirst";
 import ProductImage from "@/components/ProductImage";
+import ProductTrustLinks from "@/components/ProductTrustLinks";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
@@ -235,6 +236,8 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <ProductTrustLinks productName="PP bitumen backed office carpet tiles" quoteHref={`/contact?product=${encodeURIComponent(product.name)}#quote-form`} />
 
       <BuyerReasons product={product} />
     </div>

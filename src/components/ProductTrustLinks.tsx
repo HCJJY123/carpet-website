@@ -8,8 +8,10 @@ export default function ProductTrustLinks({
   quoteHref: string;
 }) {
   const links = [
+    { label: "Factory profile", href: "/factory", note: "Production, QC, sample review and export project support" },
     { label: "Technical documents", href: "/technical-documents", note: "Buyer guides, TDS request path and project document limitations" },
     { label: "Commercial terms", href: "/commercial-terms", note: "Reference price, MOQ, availability and quotation validity" },
+    { label: "Buyer FAQ", href: "/faq", note: "Common sourcing questions about samples, MOQ, shipping and documents" },
     { label: "Sample support", href: "/request-sample-box", note: "Material sample and trial-order discussion before project purchase" },
   ];
 
@@ -23,7 +25,7 @@ export default function ProductTrustLinks({
               Confirm documents, terms and sample path for {productName}
             </h2>
           </div>
-          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             {links.map((item) => (
               <Link key={item.href} href={item.href} className="rounded-sm border border-border bg-white p-4 transition hover:-translate-y-0.5 hover:border-accent hover:shadow-card">
                 <span className="block text-xs font-black uppercase tracking-[0.1em] text-primary">{item.label}</span>

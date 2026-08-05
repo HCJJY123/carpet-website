@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   title: "Vishome | Commercial Carpet Tiles & Hotel Broadloom Manufacturer",
   description:
-    "Vishome Global Commercial Carpet Co. Ltd. manufactures commercial carpet tiles, hotel broadloom carpets, and custom flooring solutions for global B2B projects.",
+    "Vishome Global Commercial Carpet Co., Ltd. manufactures commercial carpet tiles, hotel broadloom carpets, and custom flooring solutions for global B2B projects.",
   alternates: {
     types: {
       "text/plain": [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Vishome | Premium Commercial Carpet & Flooring Solutions",
-    description: "Vishome Global Commercial Carpet Co. Ltd.: a Tianjin-based manufacturer for commercial carpet tiles, hotel carpets, and custom B2B flooring projects.",
+    description: "Vishome Global Commercial Carpet Co., Ltd.: a Tianjin-based manufacturer for commercial carpet tiles, hotel carpets, and custom B2B flooring projects.",
     url: "https://www.vishomecarpet.com",
     siteName: "Vishome",
     type: "website",
