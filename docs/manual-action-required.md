@@ -30,3 +30,24 @@ These actions should not be automated by Codex because they require account acce
 - Confirm GA4, Google Ads and Search Console access in the browser.
 - Verify document download and outbound click events after public pages are deployed.
 - Do not claim Looker Studio or GA4 dashboards are configured unless account access was used and verified.
+
+## Additional Confirmation Added During P0/P1 Execution
+
+- CONFIRM_DOCUMENT_VERSION for each PDF download.
+- CONFIRM_DOCUMENT_ISSUE_DATE for each PDF download.
+- CONFIRM_PRIMARY_CONTACT for outreach emails and platform submissions.
+- CONFIRM_REAL_NAME for all outbound email templates.
+- CONFIRM_CONTACT_NAME and CONFIRM_EDITOR_NAME before sending outreach.
+- CONFIRM_CASE_URL before requesting a project partner backlink.
+- CONFIRM_BIM_PLATFORM_REQUIREMENTS before preparing platform-specific BIM files.
+- CONFIRM_CAD_PATTERN_FILES before listing CAD downloads.
+- CONFIRM_REVIT_SERVICE_PROVIDER before producing Revit assets.
+- CONFIRM_PRODUCT_METADATA_FOR_BIM before any BIM/CAD platform submission.
+- CONFIRM_BIM_OR_CAD_PUBLICATION_PERMISSION for external platforms.
+- CONFIRM_UPLOAD_HANDLER if the architect/designer form should support drawing uploads. The current contact form does not add file upload because no verified upload service is configured.
+
+## Public Claim Restrictions
+
+- Certification and test-report pages must remain request/verification pages until exact current documents are confirmed.
+- Project sheet pages must not publish named client or hotel-brand project sheets until authorization is confirmed.
+- Link prospect records must remain in `Researching` until the target domain, contact route and relevance are manually verified.

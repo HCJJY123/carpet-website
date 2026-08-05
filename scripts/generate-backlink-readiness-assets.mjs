@@ -39,6 +39,14 @@ function writeCsv(relativePath, rows) {
   fs.writeFileSync(path.join(ROOT, relativePath), `${body}\n`);
 }
 
+function writeCsvIfMissing(relativePath, rows) {
+  const absolutePath = path.join(ROOT, relativePath);
+  if (fs.existsSync(absolutePath) && fs.readFileSync(absolutePath, "utf8").trim().split("\n").length > 2) {
+    return;
+  }
+  writeCsv(relativePath, rows);
+}
+
 function writeText(relativePath, content) {
   fs.writeFileSync(path.join(ROOT, relativePath), content.trimStart());
 }
@@ -111,7 +119,7 @@ ensureDir("data");
 writeCsv("data/products-master.csv", productRows);
 writeCsv("data/projects-master.csv", projectRows);
 writeCsv("data/documents-master.csv", documentRows);
-writeCsv("data/link-prospects.csv", [{
+writeCsvIfMissing("data/link-prospects.csv", [{
   prospect_id: "",
   domain: "",
   organization: "",
@@ -137,7 +145,7 @@ writeCsv("data/link-prospects.csv", [{
   anchor_text: "",
   notes: "",
 }]);
-writeCsv("data/outreach-log.csv", [{
+writeCsvIfMissing("data/outreach-log.csv", [{
   log_id: "",
   prospect_id: "",
   status: "Researching",
