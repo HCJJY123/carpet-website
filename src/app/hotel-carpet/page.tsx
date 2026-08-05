@@ -38,7 +38,16 @@ export default function HotelCarpetPage() {
                 From luxury guest suites to high-traffic corridors and grand banquet halls. We provide fire-rated, bespoke flooring solutions trusted by 5-star hotel chains globally.
               </p>
               <div className="flex flex-wrap gap-6">
-                <Link href="/products/wall-to-wall" className="btn-fox-orange">Compare Hotel Carpet Products</Link>
+                <Link
+                  href="/contact?product=Hotel%20Carpet%20Project&source=%2Fhotel-carpet#quote-form"
+                  data-track-event="hotel_carpet_hero_quote_click"
+                  data-item-name="Hotel Carpet Project"
+                  data-item-category="wall-to-wall"
+                  className="btn-fox-orange"
+                >
+                  Request Hotel Carpet Quote
+                </Link>
+                <Link href="/products/wall-to-wall" className="btn-fox-outline">Compare Hotel Carpet Products</Link>
                 <Link href="/projects" className="btn-fox-outline">View Hotel Projects</Link>
               </div>
           </div>
@@ -158,7 +167,7 @@ export default function HotelCarpetPage() {
             Partner with a factory that understands the complexities of international hospitality procurement.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link href="/contact" className="bg-white text-accent font-bold px-12 py-5 rounded-md hover:bg-gray-100 transition-all uppercase tracking-widest shadow-xl">
+            <Link href="/contact?product=Hotel%20Carpet%20Project&source=%2Fhotel-carpet#quote-form" className="bg-white text-accent font-bold px-12 py-5 rounded-md hover:bg-gray-100 transition-all uppercase tracking-widest shadow-xl">
               Get A Professional Quote
             </Link>
           </div>

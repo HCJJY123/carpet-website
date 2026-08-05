@@ -147,13 +147,25 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
         </p>
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-3">
+      <div className="grid gap-3 sm:grid-cols-2">
         <Link
           href={`/contact?product=${encodeURIComponent(product.name)}#quote-form`}
-          className="flex min-h-12 items-center justify-center rounded-sm bg-[#d9480f] px-4 py-3 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[#b83a08]"
+          data-track-event="request_quote_cta_click"
+          data-item-name={product.name}
+          data-item-category={product.category}
+          data-item-id={product.id}
+          className="flex min-h-14 items-center justify-center rounded-sm bg-[#d9480f] px-5 py-4 text-center text-[13px] font-black uppercase tracking-[0.08em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#b83a08] sm:col-span-2"
         >
-          Request Quote
+          Request Project Quote
         </Link>
+        <a
+          href={`mailto:${brandInfo.email}?subject=${emailSubject}&body=${emailBody}`}
+          data-email-placement="product_conversion_panel"
+          data-email-product={product.name}
+          className="flex min-h-12 items-center justify-center rounded-sm border border-[#C8752A]/35 bg-white px-4 py-3 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-[#9a5a20] transition-all hover:border-[#C8752A] hover:bg-[#FFF8F1]"
+        >
+          Email Sales
+        </a>
         <a
           href={whatsappUrl}
           target="_blank"
@@ -161,15 +173,9 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
           data-whatsapp-placement="product_conversion_panel"
           data-whatsapp-product={product.name}
           data-whatsapp-intent="project_quote"
-          className="flex min-h-12 items-center justify-center rounded-sm bg-[#25D366] px-4 py-3 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
+          className="flex min-h-12 items-center justify-center rounded-sm border border-[#25D366]/35 bg-white px-4 py-3 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-[#168a42] transition-all hover:-translate-y-0.5 hover:bg-[#25D366] hover:text-white"
         >
           WhatsApp
-        </a>
-        <a
-          href={`mailto:${brandInfo.email}?subject=${emailSubject}&body=${emailBody}`}
-          className="flex min-h-12 items-center justify-center rounded-sm border border-border bg-white px-4 py-3 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-primary transition-all hover:border-primary hover:bg-surface"
-        >
-          Email
         </a>
       </div>
 

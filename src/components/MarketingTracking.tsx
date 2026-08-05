@@ -215,10 +215,16 @@ export default function MarketingTracking() {
       }
 
       if (href === "#quote-form" || (isSameOrigin && (resolvedUrl.pathname === "/contact" || normalizedPath.startsWith("/contact")))) {
+        const signals = getFunnelSessionSignals();
         trackAnalyticsEvent("quote_form_click", {
           href: isSameOrigin ? normalizedPath : href,
           link_text: text,
           page_path: window.location.pathname,
+          quote_product: resolvedUrl.searchParams.get("product") || anchor.dataset.itemName || "",
+          quote_source: resolvedUrl.searchParams.get("source") || window.location.pathname,
+          product_view_count: signals.productViewCount,
+          max_engaged_seconds: signals.maxEngagedSeconds,
+          section_view_count: signals.sectionViewCount,
         });
       }
 

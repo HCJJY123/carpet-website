@@ -10,9 +10,9 @@ export default function ContactPage() {
   return (
     <div className="bg-white">
       <PageHero
-        title="Start Your Procurement"
+        title="Request a Project Quote"
         eyebrow="Factory Direct Project Support"
-        description="Submit destination, carpet type, and estimated area for project pricing, MOQ, samples, lead time, and technical documents."
+        description="Send product type, project area, destination, and business email in one form. Vishomecarpet will reply with pricing basis, MOQ, samples, lead time, and technical documents."
         image="/images/contact-hero.webp"
         imageAlt="Commercial carpet procurement consultation background"
         objectPosition="center 42%"
@@ -25,8 +25,8 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <div className="mb-6 border-l-4 border-[#C8752A] pl-5">
                 <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#C8752A]">Recommended Inquiry Channel</p>
-                <h2 className="mt-2 text-2xl font-black uppercase text-primary md:text-3xl">Send Complete Project Details for an Accurate Quote</h2>
-                <p className="mt-2 text-sm leading-relaxed text-muted">The form keeps your product, destination, quantity, and timeline together so the factory can reply with a comparable quotation.</p>
+                <h2 className="mt-2 text-2xl font-black uppercase text-primary md:text-3xl">Use the Form for the Fastest Accurate Quote</h2>
+                <p className="mt-2 text-sm leading-relaxed text-muted">The form keeps your product, quantity, destination, and business email together. This is the clearest path for factory pricing, MOQ, sample options, and technical documents.</p>
                 <div className="mt-5 flex flex-wrap gap-3">
                   <a
                     href={`mailto:${brandInfo.email}?subject=${encodeURIComponent("Project quote request")}&body=${encodeURIComponent("Hello Vishome team,\n\nPlease help quote this carpet project.\n\nProduct / application:\nEstimated area:\nDestination country:\nTarget delivery date:\n\nThank you.")}`}
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 formName="contact_project_quote"
                 fallbackProduct=""
                 submitLabel="REQUEST PROJECT QUOTE"
-                introText="Send your project area, carpet type, quantity, country, and target delivery date. We will reply with FOB price, sample options, technical data sheet, and production lead time."
+                introText="Complete the four required fields first. Extra details are optional, but they help us quote a closer price and recommend the right carpet construction."
               />
             </div>
 
