@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "ops:check": "node scripts/site-ops-check.mjs",
+    "ops:verify": "node scripts/site-ops-check.mjs",
     "indexnow": "node scripts/indexnow-submit.mjs",
     "images:responsive": "node scripts/generate-responsive-images.mjs",
     "audit:seo": "node scripts/audit-backlink-readiness.mjs seo",
