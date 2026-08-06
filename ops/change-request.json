@@ -1,17 +1,21 @@
 {
-  "task": "Install repository-level site operations guardrails",
-  "approvedBy": "Site owner approval in Codex task on 2026-08-02",
-  "approvedCategories": ["governance", "ci", "build-config"],
+  "task": "Sync production Singapore casino carpet product, market page and Phase 0 audit report",
+  "approvedBy": "Site owner approval in Codex task on 2026-08-07 to organize tonight's production content into one commit/PR",
+  "approvedCategories": ["governance", "content", "seo-global", "conversion", "media", "country-market", "product-page", "documentation"],
   "allowedPaths": [
-    "AGENTS.md",
-    "SITE_OPS_GUIDE.md",
     "CHANGELOG_OPS.md",
-    "keyword-map.csv",
+    "docs/reports/**",
     "ops/**",
-    "scripts/site-ops-check.mjs",
-    ".github/workflows/site-ops-guard.yml",
-    "package.json"
+    "public/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-*",
+    "public/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/**",
+    "src/app/products/wall-to-wall/page.tsx",
+    "src/app/products/wall-to-wall/singapore-casino-carpet/**",
+    "src/components/CountryMarketLandingPage.tsx",
+    "src/lib/country-market-pages.ts",
+    "src/lib/data.ts",
+    "src/lib/responsive-image-manifest.ts",
+    "src/lib/solution-data.ts"
   ],
   "protectedUrlsChanged": false,
-  "notes": "No public page, navigation, SEO template, Sitemap, form or tracking behavior may change in this branch."
+  "notes": "Large image variant set is expected because the production product page uses responsive AVIF/WebP variants. Existing indexed URLs are preserved; one new product URL and one new country market URL are added."
 }

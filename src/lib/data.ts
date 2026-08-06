@@ -444,6 +444,54 @@ export const products: Product[] = [
     features: ["Glitter Hotel Carpet", "Custom Corridor Pattern", "Wall-to-Wall Broadloom"]
   },
   {
+    id: "singapore-casino-carpet",
+    name: "Singapore Casino Carpet | Custom Polyester Loop Pile",
+    category: "wall-to-wall",
+    description: "Custom casino carpet for Singapore gaming floors, hotel entertainment zones, VIP rooms, clubs, corridors, and hospitality public areas.",
+    longDescription: "Vishomecarpet Singapore Casino Carpet is a made-to-order commercial carpet program for casino flooring, hotel entertainment spaces, VIP rooms, clubs, corridors, and high-traffic hospitality interiors. The product uses a high-density polyester loop pile appearance with PVC and bitumen backing options shown in the product construction image, while pattern, color, logo, backing, packing, and project documentation are confirmed by written quotation and sample approval.",
+    image: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/01-main-custom-polyester-loop-casino-carpet.webp",
+    imageAlt: "Custom blue and gold Singapore casino carpet with OEM pattern support by Vishomecarpet",
+    gallery: [
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/01-main-custom-polyester-loop-casino-carpet.webp", alt: "Custom blue and gold Singapore casino carpet for gaming floor and hotel entertainment projects" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/02-reinforced-backing-easy-installation.webp", alt: "Reinforced backing and installation view for polyester loop casino carpet" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/03-professional-casino-hotel-flooring.webp", alt: "Professional casino and hotel flooring scene with custom patterned commercial carpet" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/04-source-factory-commercial-solutions.webp", alt: "Factory direct commercial carpet solution for casino lounge and hotel interiors" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/05-artistic-pattern-premium-quality.webp", alt: "Artistic patterned commercial carpet for casino lounge and premium hospitality flooring" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/06-source-factory-direct-manufacturer.webp", alt: "Factory roll and sample display for custom polyester loop casino carpet projects" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/07-casino-club-hotel-applications.webp", alt: "Casino club and hotel carpet application collage for entertainment venues" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/08-pattern-color-options.webp", alt: "Pattern and color options for custom Singapore casino carpet projects" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/09-loop-pile-stain-resistant-closeup.webp", alt: "High density loop pile close up for stain resistant commercial casino carpet" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/10-backing-construction-diagram.webp", alt: "Polyester loop pile carpet construction diagram with PVC and bitumen backing" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/11-oem-service-carpet-tile-stack.webp", alt: "OEM service and carpet stack for custom casino carpet project buyers" }
+    ],
+    moq: "300 SQM",
+    moqTiers: { sample: "Material Swatch / Strike-Off Available", trialOrder: "100 SQM Approved Pattern", project: "300 SQM Custom Casino Project" },
+    leadTime: "Confirmed After Pattern, Backing and Sample Approval",
+    fobPrice: { display: "US$4.60-9.80 / SQM", lowPrice: "4.60", highPrice: "9.80", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "Polyester Loop Pile with Project-Confirmed Backing",
+      size: "Custom Project Format; Roll or Modular Plan Confirmed by Quotation",
+      colors: [
+        { name: "Casino Navy", hex: "#163E73" },
+        { name: "Gaming Gold", hex: "#C69B38" },
+        { name: "Deep Charcoal", hex: "#1D2026" },
+        { name: "Warm Amber", hex: "#A85F2C" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "Confirmed by Project Specification",
+      trafficClass: "High-Traffic Commercial / Casino Use",
+      fiber: "Polyester Loop Pile, Final Construction Confirmed by Sample",
+      yarnSystem: "High-Density Loop Pile",
+      backing: "PVC / Bitumen Backing Option Shown; Final Backing Confirmed by Project",
+      pileWeight: "Confirmed by Project Specification",
+      totalThickness: "Confirmed by Project Specification",
+      rollWidth: "Confirmed According to Project Format",
+      antistatic: "Available by Project Specification"
+    },
+    features: ["Singapore Casino Carpet", "Custom OEM Pattern", "Polyester Loop Pile", "PVC Bitumen Backing Option", "Gaming Floor Specification Support"]
+  },
+  {
     id: "custom-floral-printed-hotel-carpet",
     name: "Custom Floral Printed Wall-to-Wall Hotel Carpet",
     category: "wall-to-wall",

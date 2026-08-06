@@ -25,7 +25,7 @@ export interface CountryMarketPage {
 
 function commercialPage(
   page: Omit<CountryMarketPage, "kind" | "path" | "primaryProductId" | "productIds"> & {
-    productSet?: "humid" | "hospitality" | "office" | "cold";
+    productSet?: "humid" | "hospitality" | "office" | "cold" | "casino";
   },
 ): CountryMarketPage {
   const productSets = {
@@ -33,6 +33,7 @@ function commercialPage(
     hospitality: ["3d-printed-hotel-carpet", "luxury-hotel-broadloom", "commercial-nylon-tiles"],
     office: ["nylon-office-carpet-tile", "commercial-nylon-tiles", "public-area-heavy-duty"],
     cold: ["nylon-office-carpet-tile", "luxury-hotel-broadloom", "public-area-heavy-duty"],
+    casino: ["singapore-casino-carpet", "3d-printed-banquet-hall-carpet", "glitter-hotel-corridor-broadloom-carpet"],
   } as const;
   const productIds = [...productSets[page.productSet ?? "office"]];
 
@@ -399,6 +400,25 @@ export const countryMarketPages: CountryMarketPage[] = [
     applications: ["High-rise offices", "Hotels and serviced apartments", "Retail interiors", "Airports and public buildings"],
     localTerms: ["commercial carpet supplier Singapore", "office carpet tiles Singapore", "hotel carpet supplier Singapore"],
     productSet: "humid",
+  }),
+  commercialPage({
+    market: "sg",
+    slug: "singapore-casino-carpet-supplier",
+    language: "en",
+    hreflang: "en-SG",
+    openGraphLocale: "en_SG",
+    countryName: "Singapore",
+    countryNameLocal: "Singapore",
+    title: "Singapore Casino Carpet Supplier for Gaming Floors",
+    metadataTitle: "Singapore Casino Carpet Supplier | Vishomecarpet",
+    metadataDescription: "Custom casino carpet for Singapore gaming floors, VIP rooms, clubs and hotel entertainment areas. Review samples, MOQ, backing, shipping and quote.",
+    directAnswer: "A Singapore casino carpet supplier should help buyers confirm price per SQM, sample timing, traffic level, pattern approval, visual soil control, backing stability, cleaning access, fire-document requirements and staged delivery before production. Vishomecarpet supplies custom casino carpet options led by polyester loop pile and project-confirmed backing, with samples and quotation support for gaming floors, VIP rooms and hotel entertainment zones.",
+    marketContext: "Singapore casino, hotel and entertainment projects often combine gaming floors, VIP rooms, clubs, lift lobbies and corridors in one procurement package. High-quality B2B buyers usually need sample speed, price basis, MOQ, exact quantity planning, distributor support, installation-team coordination, packing data and freight clarity before an internal purchasing decision can move forward.",
+    environmentNote: "Indoor humidity, high air-conditioning use, heavy foot traffic, gaming chairs, service carts and frequent cleaning make backing selection, product acclimation, substrate checks and maintenance planning important before installation.",
+    deliveryNote: "Send the Singapore site address, delivery floor, loading access, contact phone, project phase, roll or pallet restrictions, required sample date and target installation date when requesting a casino carpet quotation.",
+    applications: ["Casino gaming floors", "VIP rooms and clubs", "Hotel entertainment zones", "Lift lobbies and gaming corridors"],
+    localTerms: ["Singapore casino carpet", "casino carpet supplier Singapore", "custom gaming floor carpet Singapore", "hotel casino carpet Singapore", "casino carpet sample Singapore"],
+    productSet: "casino",
   }),
   commercialPage({
     market: "ge",

@@ -105,7 +105,7 @@ export const solutionPages: SolutionPageData[] = [
   {
     slug: "casino-carpet-supplier",
     title: "Casino Carpet Supplier",
-    seoTitle: "Casino Carpet Supplier | VISHOME",
+    seoTitle: "Casino Carpet Supplier | Vishomecarpet",
     description:
       "Casino carpet supplier for gaming floors, hotel corridors, VIP rooms, restaurants, and entertainment public areas.",
     image: "/images/products/3d-printed-banquet-carpet/02-banquet-hall.webp",
@@ -116,9 +116,9 @@ export const solutionPages: SolutionPageData[] = [
       "Strike-off samples before final design approval.",
     ],
     recommendedProducts: [
+      { name: "Singapore Casino Carpet", href: "/products/wall-to-wall/singapore-casino-carpet", fit: "Custom polyester loop pile casino carpet for Singapore gaming floors" },
       { name: "Custom 3D Printed Banquet Hall Carpet", href: "/products/wall-to-wall/3d-printed-banquet-hall-carpet", fit: "Custom casino and entertainment patterns" },
       { name: "3D HD Printed Nylon Hotel Carpet", href: "/products/wall-to-wall/3d-printed-hotel-carpet", fit: "Fast design iteration and corridor use" },
-      { name: "Glitter Hotel Corridor Broadloom Carpet", href: "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet", fit: "Luxury corridor and public-area effects" },
     ],
     specs: [
       { label: "Design", value: "Custom print or patterned broadloom" },
