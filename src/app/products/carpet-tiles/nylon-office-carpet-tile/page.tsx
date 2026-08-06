@@ -123,8 +123,13 @@ export default function NylonOfficeCarpetTilePage() {
   const productJsonLd = {
     "@context": "https://schema.org/",
     "@type": "Product",
+    "@id": `${absoluteUrl(productPath(p.id))}#product`,
     name: "Nylon 50x50 Commercial Office Carpet Tile",
+    sku: p.id,
+    mpn: p.id,
     image: galleryImages.map((image) => absoluteUrl(image.src)),
+    url: absoluteUrl(productPath(p.id)),
+    mainEntityOfPage: absoluteUrl(productPath(p.id)),
     description:
       "Heavy-duty 100% nylon commercial carpet tiles in 50x50 cm modular format for offices, corridors, and high-traffic spaces. Bitumen-backed, Class I fire-rated, custom colors, factory-direct from Vishomecarpet.",
     brand: { "@type": "Brand", name: "Vishomecarpet" },
@@ -139,6 +144,7 @@ export default function NylonOfficeCarpetTilePage() {
       "@type": "AggregateOffer",
       url: absoluteUrl(productPath(p.id)),
       availability: "https://schema.org/PreOrder",
+      itemCondition: "https://schema.org/NewCondition",
       priceCurrency: "USD",
       lowPrice: "5.10",
       highPrice: "6.30",

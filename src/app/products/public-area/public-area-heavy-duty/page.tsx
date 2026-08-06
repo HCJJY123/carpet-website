@@ -65,7 +65,7 @@ const faqJsonLd = {
 
 export const metadata: Metadata = product
   ? {
-      title: `${product.name} | Commercial Carpet Product | VISHOME`,
+      title: "Heavy-Duty Public Area Carpet | VISHOME",
       description: product.description,
       alternates: {
         canonical: productPath(product.id),

@@ -2960,5 +2960,305 @@ export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
       }
     ],
     "fallback": "/images/optimized/blog-series-commercial-carpet-tiles-russia-winter-office-flooring-guide-commercial-carpet-tiles-russia-winter-entry-office-60b79347fb-1600w.webp"
+  },
+  "/images/blog-series/hotel-corridor-carpet-mexico/hotel-corridor-carpet-mexico-hero.png": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 2835093,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-hero-95cf7cd50d-480w.avif",
+        "width": 480,
+        "bytes": 13890
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-hero-95cf7cd50d-768w.avif",
+        "width": 768,
+        "bytes": 34842
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-hero-95cf7cd50d-1200w.avif",
+        "width": 1200,
+        "bytes": 75758
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-hero-95cf7cd50d-1536w.avif",
+        "width": 1536,
+        "bytes": 112621
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-hero-95cf7cd50d-480w.webp",
+        "width": 480,
+        "bytes": 19070
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-hero-95cf7cd50d-768w.webp",
+        "width": 768,
+        "bytes": 45616
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-hero-95cf7cd50d-1200w.webp",
+        "width": 1200,
+        "bytes": 105230
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-hero-95cf7cd50d-1536w.webp",
+        "width": 1536,
+        "bytes": 163632
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-hero-95cf7cd50d-1536w.webp"
+  },
+  "/images/blog-series/hotel-corridor-carpet-mexico/hotel-corridor-carpet-mexico-installation.png": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 2935994,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-installation-fcb464484f-480w.avif",
+        "width": 480,
+        "bytes": 16017
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-installation-fcb464484f-768w.avif",
+        "width": 768,
+        "bytes": 38730
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-installation-fcb464484f-1200w.avif",
+        "width": 1200,
+        "bytes": 76194
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-installation-fcb464484f-1536w.avif",
+        "width": 1536,
+        "bytes": 104418
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-installation-fcb464484f-480w.webp",
+        "width": 480,
+        "bytes": 20896
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-installation-fcb464484f-768w.webp",
+        "width": 768,
+        "bytes": 50832
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-installation-fcb464484f-1200w.webp",
+        "width": 1200,
+        "bytes": 107960
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-installation-fcb464484f-1536w.webp",
+        "width": 1536,
+        "bytes": 156018
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-installation-fcb464484f-1536w.webp"
+  },
+  "/images/blog-series/hotel-corridor-carpet-mexico/hotel-corridor-carpet-mexico-texture.png": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 3631429,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-texture-61efdda072-480w.avif",
+        "width": 480,
+        "bytes": 35410
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-texture-61efdda072-768w.avif",
+        "width": 768,
+        "bytes": 67655
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-texture-61efdda072-1200w.avif",
+        "width": 1200,
+        "bytes": 112841
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-texture-61efdda072-1536w.avif",
+        "width": 1536,
+        "bytes": 144934
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-texture-61efdda072-480w.webp",
+        "width": 480,
+        "bytes": 49976
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-texture-61efdda072-768w.webp",
+        "width": 768,
+        "bytes": 102260
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-texture-61efdda072-1200w.webp",
+        "width": 1200,
+        "bytes": 185396
+      },
+      {
+        "src": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-texture-61efdda072-1536w.webp",
+        "width": 1536,
+        "bytes": 253084
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-hotel-corridor-carpet-mexico-hotel-corridor-carpet-mexico-texture-61efdda072-1536w.webp"
+  },
+  "/images/blog-series/office-carpet-tiles-romania/office-carpet-tiles-romania-hero.png": {
+    "width": 1672,
+    "height": 941,
+    "originalBytes": 2636761,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-hero-a533cd0d15-480w.avif",
+        "width": 480,
+        "bytes": 13798
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-hero-a533cd0d15-768w.avif",
+        "width": 768,
+        "bytes": 30732
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-hero-a533cd0d15-1200w.avif",
+        "width": 1200,
+        "bytes": 73953
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-hero-a533cd0d15-1600w.avif",
+        "width": 1600,
+        "bytes": 110508
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-hero-a533cd0d15-480w.webp",
+        "width": 480,
+        "bytes": 18444
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-hero-a533cd0d15-768w.webp",
+        "width": 768,
+        "bytes": 43100
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-hero-a533cd0d15-1200w.webp",
+        "width": 1200,
+        "bytes": 104288
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-hero-a533cd0d15-1600w.webp",
+        "width": 1600,
+        "bytes": 164124
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-hero-a533cd0d15-1600w.webp"
+  },
+  "/images/blog-series/office-carpet-tiles-romania/office-carpet-tiles-romania-phase-installation.png": {
+    "width": 1672,
+    "height": 941,
+    "originalBytes": 2820647,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-phase-installation-496cb50495-480w.avif",
+        "width": 480,
+        "bytes": 14683
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-phase-installation-496cb50495-768w.avif",
+        "width": 768,
+        "bytes": 35727
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-phase-installation-496cb50495-1200w.avif",
+        "width": 1200,
+        "bytes": 84315
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-phase-installation-496cb50495-1600w.avif",
+        "width": 1600,
+        "bytes": 125214
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-phase-installation-496cb50495-480w.webp",
+        "width": 480,
+        "bytes": 20138
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-phase-installation-496cb50495-768w.webp",
+        "width": 768,
+        "bytes": 50352
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-phase-installation-496cb50495-1200w.webp",
+        "width": 1200,
+        "bytes": 121190
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-phase-installation-496cb50495-1600w.webp",
+        "width": 1600,
+        "bytes": 188282
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-phase-installation-496cb50495-1600w.webp"
+  },
+  "/images/blog-series/office-carpet-tiles-romania/office-carpet-tiles-romania-detail.png": {
+    "width": 1672,
+    "height": 941,
+    "originalBytes": 3389775,
+    "avif": [
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-detail-ea60f8ed5a-480w.avif",
+        "width": 480,
+        "bytes": 30414
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-detail-ea60f8ed5a-768w.avif",
+        "width": 768,
+        "bytes": 71951
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-detail-ea60f8ed5a-1200w.avif",
+        "width": 1200,
+        "bytes": 132976
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-detail-ea60f8ed5a-1600w.avif",
+        "width": 1600,
+        "bytes": 174773
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-detail-ea60f8ed5a-480w.webp",
+        "width": 480,
+        "bytes": 41146
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-detail-ea60f8ed5a-768w.webp",
+        "width": 768,
+        "bytes": 101860
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-detail-ea60f8ed5a-1200w.webp",
+        "width": 1200,
+        "bytes": 198774
+      },
+      {
+        "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-detail-ea60f8ed5a-1600w.webp",
+        "width": 1600,
+        "bytes": 289890
+      }
+    ],
+    "fallback": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-detail-ea60f8ed5a-1600w.webp"
   }
 };

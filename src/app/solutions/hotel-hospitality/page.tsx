@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
-import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
+import { getContactBridgeUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Hotel & Hospitality Carpet Solutions | Wall-to-Wall Broadloom | VISHOME",
+  title: "Hotel Carpet Solutions | VISHOME",
   description:
     "End-to-end hotel carpet solutions for lobby, corridor, guestroom, and ballroom projects. ASTM/EN compliant broadloom and carpet tile systems with custom pattern development and global delivery support.",
   alternates: {
@@ -97,7 +97,7 @@ const faqItems = [
 ];
 
 export default function HotelHospitalitySolutionPage() {
-  const whatsappUrl = getWhatsAppBusinessUrl(
+  const whatsappUrl = getContactBridgeUrl(
     "Hello, I am interested in hotel and hospitality commercial carpet solutions. Please help me with a project quote, sample options, MOQ, lead time, and technical data sheet.",
     {
       placement: "hotel_hospitality_cta",
@@ -345,8 +345,6 @@ export default function HotelHospitalitySolutionPage() {
               </Link>
               <a
                 href={whatsappUrl}
-                target="_blank"
-                rel="noreferrer"
                 data-whatsapp-placement="hotel_hospitality_cta"
                 data-whatsapp-product="Hotel and hospitality carpet solutions"
                 data-whatsapp-intent="hotel_project_quote"

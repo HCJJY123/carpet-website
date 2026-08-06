@@ -4,7 +4,7 @@ import ProductImage from "@/components/ProductImage";
 import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata: Metadata = {
-  title: "About Vishome Global Commercial Carpet Co., Ltd. | Commercial Carpet Manufacturer",
+  title: "About Vishome Carpet Manufacturer | VISHOME",
   description: "Vishome Global Commercial Carpet Co., Ltd. is a professional commercial carpet manufacturer with a 50,000-square-meter factory, 900+ employees, and exports to over 45 countries and regions. We supply commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event carpets, and custom carpet solutions for global B2B projects.",
   alternates: { canonical: "https://www.vishomecarpet.com/about-us" },
 };

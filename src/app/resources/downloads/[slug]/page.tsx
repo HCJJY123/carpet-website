@@ -40,11 +40,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = `/resources/downloads/${document.slug}`;
 
   return {
-    title: `${document.title} | Vishome Carpet Downloads`,
+    title: `${document.title} | VISHOME`,
     description: document.description,
     alternates: { canonical: absoluteUrl(canonical) },
     openGraph: {
-      title: `${document.title} | Vishome Carpet Downloads`,
+      title: `${document.title} | VISHOME`,
       description: document.description,
       url: absoluteUrl(canonical),
       type: "article",

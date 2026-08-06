@@ -3,6 +3,7 @@ import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
 import QueryProductLeadCaptureForm from "@/components/QueryProductLeadCaptureForm";
 import QueryProductWhatsAppLink from "@/components/QueryProductWhatsAppLink";
+import WhatsAppBridgePrompt from "@/components/WhatsAppBridgePrompt";
 import { brandInfo } from "@/lib/data";
 import { whatsappBusinessMessages } from "@/lib/whatsapp";
 
@@ -23,6 +24,7 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-3 lg:gap-16">
             {/* Form Column */}
             <div className="lg:col-span-2">
+              <WhatsAppBridgePrompt />
               <div className="mb-6 border-l-4 border-[#C8752A] pl-5">
                 <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#C8752A]">Recommended Inquiry Channel</p>
                 <h2 className="mt-2 text-2xl font-black uppercase text-primary md:text-3xl">Use the Form for the Fastest Accurate Quote</h2>

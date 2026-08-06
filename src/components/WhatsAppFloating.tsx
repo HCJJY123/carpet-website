@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { isLocalizedCampaignPath } from "@/lib/localized-paths";
-import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
+import { getContactBridgeUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 
 export default function WhatsAppFloating() {
   const pathname = usePathname();
@@ -27,7 +27,7 @@ export default function WhatsAppFloating() {
 
   if (isLocalizedCampaignPath(pathname)) return null;
 
-  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.floating, {
+  const whatsappUrl = getContactBridgeUrl(whatsappBusinessMessages.floating, {
     placement: "floating_whatsapp",
     intent: "project_support",
     pagePath: pathname,

@@ -3,7 +3,7 @@ import ProductImage from "@/components/ProductImage";
 import { blogPosts } from "@/lib/blog-data";
 import { brandInfo, products, type ProductMoqTiers } from "@/lib/data";
 import { productPath } from "@/lib/seo";
-import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
+import { getContactBridgeUrl } from "@/lib/whatsapp";
 
 type ConversionProduct = {
   id?: string;
@@ -110,22 +110,22 @@ function specCards(product: ConversionProduct) {
 }
 
 export function ProductConversionPanel({ product }: { product: ConversionProduct }) {
-  const whatsappUrl = getWhatsAppBusinessUrl(productMessage(product, "I would like to discuss a project inquiry"), {
+  const whatsappUrl = getContactBridgeUrl(productMessage(product, "I would like to discuss a project inquiry"), {
     placement: "product_conversion_panel",
     product: product.name,
     intent: "project_quote",
   });
-  const drawingUrl = getWhatsAppBusinessUrl(productMessage(product, "I want to send my project drawing or floor plan"), {
+  const drawingUrl = getContactBridgeUrl(productMessage(product, "I want to send my project drawing or floor plan"), {
     placement: "product_conversion_panel",
     product: product.name,
     intent: "send_project_drawing",
   });
-  const sampleUrl = getWhatsAppBusinessUrl(productMessage(product, "I want to get a sample before bulk order"), {
+  const sampleUrl = getContactBridgeUrl(productMessage(product, "I want to get a sample before bulk order"), {
     placement: "product_conversion_panel",
     product: product.name,
     intent: "sample_request",
   });
-  const priceUrl = getWhatsAppBusinessUrl(productMessage(product, "I want to ask the factory price"), {
+  const priceUrl = getContactBridgeUrl(productMessage(product, "I want to ask the factory price"), {
     placement: "product_conversion_panel",
     product: product.name,
     intent: "factory_price",
@@ -168,8 +168,6 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
         </a>
         <a
           href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           data-whatsapp-placement="product_conversion_panel"
           data-whatsapp-product={product.name}
           data-whatsapp-intent="project_quote"
@@ -182,8 +180,6 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
       <div className="grid gap-3 md:grid-cols-3">
         <a
           href={drawingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           data-whatsapp-placement="product_conversion_panel"
           data-whatsapp-product={product.name}
           data-whatsapp-intent="send_project_drawing"
@@ -193,8 +189,6 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
         </a>
         <a
           href={sampleUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           data-whatsapp-placement="product_conversion_panel"
           data-whatsapp-product={product.name}
           data-whatsapp-intent="sample_request"
@@ -204,8 +198,6 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
         </a>
         <a
           href={priceUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           data-whatsapp-placement="product_conversion_panel"
           data-whatsapp-product={product.name}
           data-whatsapp-intent="factory_price"

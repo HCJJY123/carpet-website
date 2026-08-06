@@ -10,7 +10,7 @@ import { productPath } from "@/lib/seo";
 export const metadata = {
   title: "Office Carpet Tiles Supplier | 50x50 Commercial Tiles | Vishome",
   description: "Source 50x50 commercial carpet tiles for offices, hotels and retail projects. Compare backing, MOQ, samples, factory price ranges and export support from China.",
-  alternates: { canonical: "/products/carpet-tiles" },
+  alternates: { canonical: "/commercial-carpet-tiles" },
 };
 
 export default function CommercialCarpetTilesPage() {

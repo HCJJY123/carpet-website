@@ -112,8 +112,11 @@ const productJsonLd = {
   "@type": "Product",
   "@id": `${siteUrl}${canonicalPath}#product`,
   "name": "Glitter Hotel Corridor Broadloom Carpet",
+  "sku": product.id,
+  "mpn": product.id,
   "image": product.mainImages.map((image) => `${siteUrl}${image.src}`),
   "url": `${siteUrl}${canonicalPath}`,
+  "mainEntityOfPage": `${siteUrl}${canonicalPath}`,
   "description": "Custom blue and gold glitter-pattern wall-to-wall broadloom carpet for hotel corridors, lobbies, ballrooms, and luxury hospitality projects.",
   "brand": { "@type": "Brand", "name": "Vishomecarpet" },
   "category": "Wall-to-Wall Hotel Broadloom Carpet",
@@ -126,6 +129,7 @@ const productJsonLd = {
     "highPrice": product.fobPrice.highPrice,
     "offerCount": 1,
     "availability": "https://schema.org/PreOrder",
+    "itemCondition": "https://schema.org/NewCondition",
     "seller": { "@type": "Organization", "name": "Vishome Global Commercial Carpet Co., Ltd.", "url": siteUrl }
   },
   "manufacturer": {

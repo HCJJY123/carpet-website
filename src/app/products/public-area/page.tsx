@@ -7,7 +7,7 @@ import AnswerFirst from "@/components/AnswerFirst";
 import { categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Public Area Carpet Supplier | Heavy-Duty, Wool Rug & Gold Mining Mat | VISHOME",
+  title: "Public Area Carpet Supplier | VISHOME",
   description: "Source public area carpet for airports, exhibitions, corridors, custom wool lobby rugs, natural sisal carpets and gold mining mats with samples and project quote support.",
   alternates: { canonical: "/products/public-area" },
 };

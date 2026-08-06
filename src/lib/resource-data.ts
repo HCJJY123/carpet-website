@@ -20,7 +20,7 @@ export type TechnicalDocument = {
 export const technicalDocuments: TechnicalDocument[] = [
   {
     slug: "commercial-carpet-tile-buying-specification-guide",
-    title: "Commercial Carpet Tile Buying & Specification Guide",
+    title: "Commercial Carpet Tile Buying Guide",
     description: "A procurement guide for office, retail and modular commercial carpet tile projects covering specification inputs, samples and buying checks.",
     documentType: "Guide",
     relatedProductIds: ["50x50-nylon-pp-office-carpet-tiles", "nylon-office-carpet-tile", "pp-bitumen-backed-office-carpet-tiles"],

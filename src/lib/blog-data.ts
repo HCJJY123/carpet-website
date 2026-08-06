@@ -1,4 +1,6 @@
 import { hotelCarpetPatternsGuide } from "@/lib/blog-posts/hotel-carpet-patterns-guide";
+import { hotelCorridorCarpetMexicoGuide } from "@/lib/blog-posts/hotel-corridor-carpet-mexico-guide";
+import { officeCarpetTilesRomaniaGuide } from "@/lib/blog-posts/office-carpet-tiles-romania-guide";
 import { carpetTilesOverConcreteGuide } from "@/lib/blog-posts/carpet-tiles-over-concrete-guide";
 import { sluiceMattingGuide } from "@/lib/blog-posts/sluice-matting-guide";
 import { officeCarpetTilesVsHardFlooringGuide } from "@/lib/blog-posts/office-carpet-tiles-vs-hard-flooring-guide";
@@ -52,6 +54,8 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  officeCarpetTilesRomaniaGuide,
+  hotelCorridorCarpetMexicoGuide,
   ...redditCountryCarpetBuyingGuides,
   redditHotelOfficeCarpetComplaintsGuide,
   hotelCarpetSupplierChecklistGuide,

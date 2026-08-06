@@ -32,7 +32,7 @@ const hotelFaqs = [
 ];
 
 export const metadata = {
-  title: "Hotel Carpet Supplier | Guestroom, Corridor & Lobby Broadloom | Vishome",
+  title: "Hotel Carpet Supplier | VISHOME",
   description: "Source custom hotel carpet for guestrooms, corridors, lobbies and banquet halls. Compare broadloom, Axminster, printed designs, samples, MOQ and project quote support.",
   alternates: { canonical: "/hotel-carpet" },
 };

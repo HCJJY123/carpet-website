@@ -23,11 +23,11 @@ const workflow = [
 ];
 
 export const metadata: Metadata = {
-  title: "Architects & Designers Carpet Specification Support | Vishome Carpet",
+  title: "Carpet Specification Support | VISHOME",
   description: "Specification support for architects and interior designers sourcing commercial carpet tiles, hotel broadloom, custom carpet patterns, samples and technical documents.",
   alternates: { canonical: absoluteUrl(pagePath) },
   openGraph: {
-    title: "Architects & Designers Carpet Specification Support | Vishome Carpet",
+    title: "Carpet Specification Support | VISHOME",
     description: "Request carpet samples, technical documents, custom pattern support and project quotation guidance for commercial carpet specifications.",
     url: absoluteUrl(pagePath),
     type: "website",

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { productCategories as categories, caseStudies, certifications, products } from "@/lib/data";
 import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
-import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
+import { getContactBridgeUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 import { productPath } from "@/lib/seo";
 import HomeHeroCarousel from "@/components/HomeHeroCarousel";
 import AnswerFirst from "@/components/AnswerFirst";
@@ -22,7 +22,7 @@ const homeCategoryImages: Record<string, string> = {
 };
 
 export default function Home() {
-  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header);
+  const whatsappUrl = getContactBridgeUrl(whatsappBusinessMessages.header, { placement: "home_hero", intent: "project_support", pagePath: "/" });
   const featuredProduct = products.find((product) => product.id === "3d-printed-hotel-carpet");
   const categoryPriority = ["carpet-tiles", "wall-to-wall", "public-area"];
   const prioritizedCategories = categoryPriority

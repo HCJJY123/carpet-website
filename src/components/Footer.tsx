@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { brandInfo } from "@/lib/data";
-import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
+import { getContactBridgeUrl } from "@/lib/whatsapp";
 
 export default function Footer() {
-  const footerWhatsAppUrl = getWhatsAppBusinessUrl(
+  const footerWhatsAppUrl = getContactBridgeUrl(
     "Hello VISHOME, I would like to share my commercial carpet project details. Please help with price, MOQ, samples, lead time, and technical documents.",
     {
       placement: "footer_support",

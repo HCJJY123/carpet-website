@@ -353,7 +353,7 @@ export const caseSeoProfiles: Record<string, CaseSeoProfile> = {
     slug: "office-carpet-tiles-canada-phased-renovation-guide",
     cardTitle: "Office Carpet Tiles Phased Renovation - Canada",
     h1: "Office Carpet Tiles: Canada Phased Renovation Procurement Guide",
-    metadataTitle: "Office Carpet Tiles Canada | Phased Renovation Guide",
+    metadataTitle: "Canada Office Carpet Tiles Case | Phased Renovation Planning",
     metadataDescription: "Plan office carpet tiles for Canada projects: 50x50 modular format, low-disruption installation, attic stock, winter delivery and replacement strategy.",
     eyebrow: "Office Carpet Tile Procurement Guide",
     directAnswer: "For Canada office renovation projects, 50x50 commercial carpet tiles are a practical choice when the buyer needs phased installation, local replacement, stable backing, neutral design, acoustic comfort and clear spare-tile planning. The quotation should define yarn, backing, tile size, carton quantity, attic stock, winter delivery timing, adhesive compatibility and replacement rules before the purchase order is fixed.",

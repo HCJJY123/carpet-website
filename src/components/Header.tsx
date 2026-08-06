@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
-import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
+import { getContactBridgeUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 import { getPathLocale, stripLocaleFromPath } from "@/lib/site-locales";
 
 type NavChild = {
@@ -186,7 +186,7 @@ export default function Header() {
     };
   }, []);
 
-  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header, {
+  const whatsappUrl = getContactBridgeUrl(whatsappBusinessMessages.header, {
     placement: "header",
     intent: "project_support",
     pagePath: pathname,
