@@ -3260,5 +3260,445 @@ export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
       }
     ],
     "fallback": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-detail-ea60f8ed5a-1600w.webp"
+  },
+  "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/01-main-custom-polyester-loop-casino-carpet.webp": {
+    "width": 1024,
+    "height": 1024,
+    "originalBytes": 2020104,
+    "avif": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-custom-polyester-loop-casino-carpet-480w.avif",
+        "width": 480,
+        "bytes": 45993
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-custom-polyester-loop-casino-carpet-768w.avif",
+        "width": 768,
+        "bytes": 100252
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-custom-polyester-loop-casino-carpet-1024w.avif",
+        "width": 1024,
+        "bytes": 152413
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-custom-polyester-loop-casino-carpet-480w.webp",
+        "width": 480,
+        "bytes": 55092
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-custom-polyester-loop-casino-carpet-768w.webp",
+        "width": 768,
+        "bytes": 128320
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-custom-polyester-loop-casino-carpet-1024w.webp",
+        "width": 1024,
+        "bytes": 208230
+      }
+    ],
+    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-custom-polyester-loop-casino-carpet-1024w.webp"
+  },
+  "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/02-reinforced-backing-easy-installation.webp": {
+    "width": 1024,
+    "height": 1024,
+    "originalBytes": 1978033,
+    "avif": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-02-reinforced-backing-easy-installation-480w.avif",
+        "width": 480,
+        "bytes": 42932
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-02-reinforced-backing-easy-installation-768w.avif",
+        "width": 768,
+        "bytes": 96031
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-02-reinforced-backing-easy-installation-1024w.avif",
+        "width": 1024,
+        "bytes": 146042
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-02-reinforced-backing-easy-installation-480w.webp",
+        "width": 480,
+        "bytes": 52364
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-02-reinforced-backing-easy-installation-768w.webp",
+        "width": 768,
+        "bytes": 121266
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-02-reinforced-backing-easy-installation-1024w.webp",
+        "width": 1024,
+        "bytes": 195350
+      }
+    ],
+    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-02-reinforced-backing-easy-installation-1024w.webp"
+  },
+  "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/03-professional-casino-hotel-flooring.webp": {
+    "width": 1024,
+    "height": 1024,
+    "originalBytes": 2017116,
+    "avif": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-03-professional-casino-hotel-flooring-480w.avif",
+        "width": 480,
+        "bytes": 54692
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-03-professional-casino-hotel-flooring-768w.avif",
+        "width": 768,
+        "bytes": 111181
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-03-professional-casino-hotel-flooring-1024w.avif",
+        "width": 1024,
+        "bytes": 164315
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-03-professional-casino-hotel-flooring-480w.webp",
+        "width": 480,
+        "bytes": 61152
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-03-professional-casino-hotel-flooring-768w.webp",
+        "width": 768,
+        "bytes": 138456
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-03-professional-casino-hotel-flooring-1024w.webp",
+        "width": 1024,
+        "bytes": 218530
+      }
+    ],
+    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-03-professional-casino-hotel-flooring-1024w.webp"
+  },
+  "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/04-source-factory-commercial-solutions.webp": {
+    "width": 1024,
+    "height": 1024,
+    "originalBytes": 2026094,
+    "avif": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-04-source-factory-commercial-solutions-480w.avif",
+        "width": 480,
+        "bytes": 37622
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-04-source-factory-commercial-solutions-768w.avif",
+        "width": 768,
+        "bytes": 78512
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-04-source-factory-commercial-solutions-1024w.avif",
+        "width": 1024,
+        "bytes": 123097
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-04-source-factory-commercial-solutions-480w.webp",
+        "width": 480,
+        "bytes": 47066
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-04-source-factory-commercial-solutions-768w.webp",
+        "width": 768,
+        "bytes": 104926
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-04-source-factory-commercial-solutions-1024w.webp",
+        "width": 1024,
+        "bytes": 168520
+      }
+    ],
+    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-04-source-factory-commercial-solutions-1024w.webp"
+  },
+  "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/05-artistic-pattern-premium-quality.webp": {
+    "width": 1024,
+    "height": 1024,
+    "originalBytes": 2260768,
+    "avif": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-05-artistic-pattern-premium-quality-480w.avif",
+        "width": 480,
+        "bytes": 56571
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-05-artistic-pattern-premium-quality-768w.avif",
+        "width": 768,
+        "bytes": 127358
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-05-artistic-pattern-premium-quality-1024w.avif",
+        "width": 1024,
+        "bytes": 192671
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-05-artistic-pattern-premium-quality-480w.webp",
+        "width": 480,
+        "bytes": 62606
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-05-artistic-pattern-premium-quality-768w.webp",
+        "width": 768,
+        "bytes": 148292
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-05-artistic-pattern-premium-quality-1024w.webp",
+        "width": 1024,
+        "bytes": 239680
+      }
+    ],
+    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-05-artistic-pattern-premium-quality-1024w.webp"
+  },
+  "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/06-source-factory-direct-manufacturer.webp": {
+    "width": 1024,
+    "height": 1024,
+    "originalBytes": 1852887,
+    "avif": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-06-source-factory-direct-manufacturer-480w.avif",
+        "width": 480,
+        "bytes": 40242
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-06-source-factory-direct-manufacturer-768w.avif",
+        "width": 768,
+        "bytes": 86607
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-06-source-factory-direct-manufacturer-1024w.avif",
+        "width": 1024,
+        "bytes": 130690
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-06-source-factory-direct-manufacturer-480w.webp",
+        "width": 480,
+        "bytes": 49612
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-06-source-factory-direct-manufacturer-768w.webp",
+        "width": 768,
+        "bytes": 110374
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-06-source-factory-direct-manufacturer-1024w.webp",
+        "width": 1024,
+        "bytes": 176400
+      }
+    ],
+    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-06-source-factory-direct-manufacturer-1024w.webp"
+  },
+  "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/07-casino-club-hotel-applications.webp": {
+    "width": 1024,
+    "height": 1024,
+    "originalBytes": 1726506,
+    "avif": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-07-casino-club-hotel-applications-480w.avif",
+        "width": 480,
+        "bytes": 44657
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-07-casino-club-hotel-applications-768w.avif",
+        "width": 768,
+        "bytes": 83014
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-07-casino-club-hotel-applications-1024w.avif",
+        "width": 1024,
+        "bytes": 115196
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-07-casino-club-hotel-applications-480w.webp",
+        "width": 480,
+        "bytes": 51314
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-07-casino-club-hotel-applications-768w.webp",
+        "width": 768,
+        "bytes": 103582
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-07-casino-club-hotel-applications-1024w.webp",
+        "width": 1024,
+        "bytes": 150482
+      }
+    ],
+    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-07-casino-club-hotel-applications-1024w.webp"
+  },
+  "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/08-pattern-color-options.webp": {
+    "width": 1024,
+    "height": 1024,
+    "originalBytes": 2210490,
+    "avif": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-08-pattern-color-options-480w.avif",
+        "width": 480,
+        "bytes": 40439
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-08-pattern-color-options-768w.avif",
+        "width": 768,
+        "bytes": 104296
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-08-pattern-color-options-1024w.avif",
+        "width": 1024,
+        "bytes": 163782
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-08-pattern-color-options-480w.webp",
+        "width": 480,
+        "bytes": 47034
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-08-pattern-color-options-768w.webp",
+        "width": 768,
+        "bytes": 118474
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-08-pattern-color-options-1024w.webp",
+        "width": 1024,
+        "bytes": 209008
+      }
+    ],
+    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-08-pattern-color-options-1024w.webp"
+  },
+  "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/09-loop-pile-stain-resistant-closeup.webp": {
+    "width": 1024,
+    "height": 1024,
+    "originalBytes": 1780374,
+    "avif": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-09-loop-pile-stain-resistant-closeup-480w.avif",
+        "width": 480,
+        "bytes": 40869
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-09-loop-pile-stain-resistant-closeup-768w.avif",
+        "width": 768,
+        "bytes": 75243
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-09-loop-pile-stain-resistant-closeup-1024w.avif",
+        "width": 1024,
+        "bytes": 103718
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-09-loop-pile-stain-resistant-closeup-480w.webp",
+        "width": 480,
+        "bytes": 52364
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-09-loop-pile-stain-resistant-closeup-768w.webp",
+        "width": 768,
+        "bytes": 100592
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-09-loop-pile-stain-resistant-closeup-1024w.webp",
+        "width": 1024,
+        "bytes": 145890
+      }
+    ],
+    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-09-loop-pile-stain-resistant-closeup-1024w.webp"
+  },
+  "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/10-backing-construction-diagram.webp": {
+    "width": 1024,
+    "height": 1024,
+    "originalBytes": 1424956,
+    "avif": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-10-backing-construction-diagram-480w.avif",
+        "width": 480,
+        "bytes": 33507
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-10-backing-construction-diagram-768w.avif",
+        "width": 768,
+        "bytes": 73525
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-10-backing-construction-diagram-1024w.avif",
+        "width": 1024,
+        "bytes": 107928
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-10-backing-construction-diagram-480w.webp",
+        "width": 480,
+        "bytes": 39186
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-10-backing-construction-diagram-768w.webp",
+        "width": 768,
+        "bytes": 90362
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-10-backing-construction-diagram-1024w.webp",
+        "width": 1024,
+        "bytes": 142698
+      }
+    ],
+    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-10-backing-construction-diagram-1024w.webp"
+  },
+  "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/11-oem-service-carpet-tile-stack.webp": {
+    "width": 1024,
+    "height": 1024,
+    "originalBytes": 1945662,
+    "avif": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-11-oem-service-carpet-tile-stack-480w.avif",
+        "width": 480,
+        "bytes": 29858
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-11-oem-service-carpet-tile-stack-768w.avif",
+        "width": 768,
+        "bytes": 84252
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-11-oem-service-carpet-tile-stack-1024w.avif",
+        "width": 1024,
+        "bytes": 135950
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-11-oem-service-carpet-tile-stack-480w.webp",
+        "width": 480,
+        "bytes": 33178
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-11-oem-service-carpet-tile-stack-768w.webp",
+        "width": 768,
+        "bytes": 93404
+      },
+      {
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-11-oem-service-carpet-tile-stack-1024w.webp",
+        "width": 1024,
+        "bytes": 162936
+      }
+    ],
+    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-11-oem-service-carpet-tile-stack-1024w.webp"
   }
 };

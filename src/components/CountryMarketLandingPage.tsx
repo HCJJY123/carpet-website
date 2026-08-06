@@ -35,7 +35,7 @@ function commercialFaqs(page: CountryMarketPage) {
     },
     {
       question: "Does the product automatically comply with every local project standard?",
-      answer: "No. Standards, test reports and submittal formats vary by project. VISHOME can provide the available product documents for review, but the buyer, consultant or contractor must confirm that the nominated specification satisfies the actual tender and local requirements.",
+      answer: "No. Standards, test reports and submittal formats vary by project. Vishomecarpet can provide the available product documents for review, but the buyer, consultant or contractor must confirm that the nominated specification satisfies the actual tender and local requirements.",
     },
     {
       question: "How should freight and delivery be compared?",
@@ -63,7 +63,7 @@ function goldFaqs(page: CountryMarketPage) {
       answer: "Sí. El nivel Trial Order publicado es un rollo estándar. Confirme medida, color, empaque y transporte en la cotización antes del pago.",
     },
     {
-      question: "¿VISHOME puede fabricar medidas o empaque OEM?",
+      question: "¿Vishomecarpet puede fabricar medidas o empaque OEM?",
       answer: "Hay opciones de medidas y empaque personalizados, sujetas a revisión técnica, cantidad y confirmación escrita en la oferta del proyecto.",
     },
   ];
@@ -106,7 +106,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
   const faqs = pageFaqs(page);
   const quoteProduct = page.kind === "gold" ? `Gold mining carpet mat - ${page.countryName}` : `Commercial carpet project - ${page.countryName}`;
   const quoteHref = `/contact?product=${encodeURIComponent(quoteProduct)}&country=${encodeURIComponent(page.countryName)}#quote-form`;
-  const emailHref = `mailto:${brandInfo.email}?subject=${encodeURIComponent(`VISHOME ${quoteProduct} inquiry`)}`;
+  const emailHref = `mailto:${brandInfo.email}?subject=${encodeURIComponent(`Vishomecarpet ${quoteProduct} inquiry`)}`;
 
   const webpageJsonLd = {
     "@context": "https://schema.org",
@@ -138,7 +138,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "VISHOME", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 1, name: "Vishomecarpet", item: absoluteUrl("/") },
       { "@type": "ListItem", position: 2, name: "Global Markets", item: absoluteUrl("/markets") },
       { "@type": "ListItem", position: 3, name: page.countryName, item: absoluteUrl(page.path) },
     ],
@@ -217,7 +217,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
         <div className="absolute inset-0 bg-primary/65" />
         <div className="container-fox relative z-10 w-full pb-32 pt-28 sm:pb-16 md:pb-20">
           <nav className="mb-8 flex flex-wrap items-center gap-2 text-xs font-bold text-white/65" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">VISHOME</Link>
+            <Link href="/" className="hover:text-white">Vishomecarpet</Link>
             <span>/</span>
             <Link href="/markets" className="hover:text-white">Global Markets</Link>
             <span>/</span>
@@ -225,7 +225,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
           </nav>
           <div className="max-w-4xl">
             <p className="mb-4 text-xs font-black uppercase tracking-[0.14em] text-accent">
-              {page.kind === "gold" ? "Gold recovery mat sourcing" : "Commercial carpet project sourcing"} · {page.countryNameLocal}
+            {page.kind === "gold" ? "Gold recovery mat sourcing" : "Commercial carpet project sourcing"} · {page.countryNameLocal}
             </p>
             <h1 className="text-4xl font-black leading-tight md:text-6xl">{page.title}</h1>
             <p className="mt-6 max-w-3xl text-base font-semibold leading-8 text-white/85 md:text-lg">{page.directAnswer}</p>
@@ -263,7 +263,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
             {page.kind === "gold" ? "Gold recovery mat specification" : "Project carpet options to compare"}
           </h2>
           <p className="mt-5 max-w-4xl leading-8 text-muted">
-            The values below come from the current VISHOME product records. Final colour, construction, documentation,
+            The values below come from the current Vishomecarpet product records. Final colour, construction, documentation,
             packing and commercial terms must match the written quotation.
           </p>
 
@@ -386,7 +386,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
             <dl className="mt-5 grid gap-4 text-sm sm:grid-cols-2">
               <div><dt className="font-black">Published by</dt><dd className="mt-1 text-muted">{brandInfo.name}</dd></div>
               <div><dt className="font-black">Last reviewed</dt><dd className="mt-1 text-muted">August 2, 2026</dd></div>
-              <div><dt className="font-black">Product facts</dt><dd className="mt-1 text-muted">Current VISHOME product records linked above</dd></div>
+              <div><dt className="font-black">Product facts</dt><dd className="mt-1 text-muted">Current Vishomecarpet product records linked above</dd></div>
               <div><dt className="font-black">Limitations</dt><dd className="mt-1 text-muted">Final compliance, freight and installation are project-specific</dd></div>
             </dl>
           </div>
@@ -406,7 +406,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
             Send the project country, application, quantity and target delivery date
           </h2>
           <p className="mx-auto mt-5 max-w-3xl leading-7 text-white/75">
-            VISHOME will respond using the current product specification and available project information. No price,
+            Vishomecarpet will respond using the current product specification and available project information. No price,
             document or delivery promise is final until it appears in the written quotation.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
