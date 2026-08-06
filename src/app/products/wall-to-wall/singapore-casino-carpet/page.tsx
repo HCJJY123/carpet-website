@@ -12,11 +12,11 @@ const images = product.gallery ?? [{ src: product.image, alt: product.imageAlt |
 const faqs = [
   {
     question: "What is the best carpet type for a casino project in Singapore?",
-    answer: "A Singapore casino carpet should be specified around continuous foot traffic, visual soil-hiding, pattern approval, backing stability, cleaning access, sample timing, and the fire or technical documents required by the project. Vishomecarpet can quote a custom polyester loop pile casino carpet after reviewing area, pattern, backing, delivery address, and sample requirements.",
+    answer: "A Singapore casino carpet should be specified around continuous foot traffic, visual soil-hiding, pattern approval, backing stability, cleaning access, sample timing, and the fire or technical documents required by the project. Vishomecarpet can quote a custom oriental flower luxury casino carpet after reviewing area, pattern, backing, delivery address, and sample requirements.",
   },
   {
     question: "Can the casino carpet pattern and colors be customized?",
-    answer: "Yes. Pattern scale, blue and gold color direction, logo-related artwork, border effects, and OEM packing can be reviewed. Bulk production should start only after the buyer approves the sample or strike-off.",
+    answer: "Yes. Oriental flower pattern scale, gold accent direction, logo-related artwork, border effects, grey or beige colorways, and OEM packing can be reviewed. Bulk production should start only after the buyer approves the sample or strike-off.",
   },
   {
     question: "Is this product only for gaming floors?",
@@ -33,7 +33,7 @@ const faqs = [
 ];
 
 const specificationRows = [
-  ["Primary search intent", "Singapore casino carpet supplier for custom gaming floor and hotel entertainment projects"],
+  ["Primary search intent", "Singapore casino carpet supplier for custom oriental flower gaming floor and hotel entertainment projects"],
   ["Recommended buyer", "Casino developers, hospitality designers, flooring contractors, procurement teams and distributors"],
   ["High-intent buyer questions", "Price per SQM, sample speed, Singapore shipping, MOQ, backing, pattern approval and delivery schedule"],
   ["Main construction", product.technicalSpecs.yarnSystem],
@@ -60,12 +60,12 @@ const faqJsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: "Singapore Casino Carpet | Custom Gaming Floor Carpet | Vishomecarpet",
-  description: "Custom Singapore casino carpet for gaming floors, VIP rooms, clubs and hotel entertainment zones. Polyester loop pile, OEM pattern support, samples and quote.",
+  title: "Custom Oriental Flower Casino Carpet Singapore | Vishomecarpet",
+  description: "Custom oriental flower luxury casino carpet for Singapore gaming floors, VIP rooms, clubs and hotel entertainment zones. OEM pattern support, samples and quote.",
   alternates: { canonical: absoluteUrl(path) },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Singapore Casino Carpet | Custom Gaming Floor Carpet | Vishomecarpet",
+    title: "Custom Oriental Flower Casino Carpet Singapore | Vishomecarpet",
     description: "Custom casino carpet for Singapore gaming floors, VIP rooms and hospitality entertainment projects.",
     url: absoluteUrl(path),
     type: "website",
@@ -73,8 +73,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Singapore Casino Carpet | Custom Gaming Floor Carpet",
-    description: "Made-to-order casino carpet with custom pattern, polyester loop pile and project quotation support.",
+    title: "Custom Oriental Flower Casino Carpet Singapore",
+    description: "Made-to-order casino carpet with oriental flower pattern, OEM support and project quotation support.",
     images: [absoluteUrl(product.image)],
   },
 };
@@ -94,7 +94,7 @@ export default function SingaporeCasinoCarpetPage() {
           <li aria-hidden="true">/</li>
           <li><Link href="/products/wall-to-wall">Wall-to-Wall Carpets</Link></li>
           <li aria-hidden="true">/</li>
-          <li aria-current="page" className="text-primary">Singapore Casino Carpet</li>
+          <li aria-current="page" className="text-primary">Oriental Flower Casino Carpet</li>
         </ol>
       </nav>
 
@@ -118,9 +118,9 @@ export default function SingaporeCasinoCarpetPage() {
 
           <div>
             <p className="mb-4 text-xs font-black uppercase tracking-[0.18em] text-accent">Singapore casino carpet supplier</p>
-            <h1 className="text-4xl font-black uppercase leading-tight md:text-6xl">Singapore Casino Carpet for Custom Gaming Floors</h1>
+            <h1 className="text-4xl font-black uppercase leading-tight md:text-6xl">Custom Oriental Flower Casino Carpet for Singapore Gaming Floors</h1>
             <p className="mt-6 text-lg leading-8 text-muted">
-              Answer first: a casino carpet for Singapore should be selected by traffic, visual soil control, sample approval speed, backing stability, cleaning plan, delivery access and project documents, not by pattern alone. Vishomecarpet supplies custom polyester loop pile casino carpet with OEM pattern support for gaming floors, VIP rooms, clubs and hotel entertainment spaces.
+              Answer first: a casino carpet for Singapore should be selected by traffic, visual soil control, sample approval speed, backing stability, cleaning plan, delivery access and project documents, not by pattern alone. Vishomecarpet supplies custom oriental flower luxury casino carpet with OEM pattern support for gaming floors, VIP rooms, clubs and hotel entertainment spaces.
             </p>
             <div className="mt-8">
               <ProductSpecCards product={product} />
@@ -140,7 +140,7 @@ export default function SingaporeCasinoCarpetPage() {
             <div className="mt-7 space-y-5 text-base leading-8 text-muted">
               <p>For a Singapore casino carpet project, start with the area schedule: gaming floor, slot area, VIP room, lift lobby, corridor, club, or hotel entertainment zone. Each space may need a different pattern scale, backing, seam plan, cleaning access, replacement reserve and delivery stage.</p>
               <p>High-quality B2B buyers usually ask first about price per SQM, sample lead time, shipping to Singapore, MOQ, exact quantity, backing, pattern approval, and whether the supplier can support distributors or installation teams. This page is structured around those purchasing questions.</p>
-              <p>This product is positioned for buyers who want a custom casino carpet supplier rather than a stock decorative floor covering. The blue and gold visual direction can be adjusted for interior concepts, while the final construction is confirmed through sample approval and written quotation.</p>
+              <p>This product is positioned for buyers who want a custom casino carpet supplier rather than a stock decorative floor covering. The oriental flower, beige, grey, charcoal and gold visual direction can be adjusted for interior concepts, while the final construction is confirmed through sample approval and written quotation.</p>
               <p>Vishomecarpet can support Singapore procurement teams with sample discussion, OEM pattern review, packing information and export supply. Final fire, antistatic, backing and installation requirements should be checked against the project specification before ordering.</p>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function SingaporeCasinoCarpetPage() {
           <div className="mb-10 max-w-4xl">
             <p className="mb-3 text-xs font-black uppercase tracking-[0.18em] text-accent">Product gallery</p>
             <h2 className="text-3xl font-black uppercase leading-tight md:text-5xl">Casino Carpet Images, Backing and OEM Details</h2>
-            <p className="mt-5 leading-8 text-muted">The gallery keeps the provided casino carpet visuals in one product record. The image with outside branding was not used, so the page stays consistent with the Vishomecarpet brand.</p>
+            <p className="mt-5 leading-8 text-muted">The gallery keeps the provided casino carpet visuals in one product record: artistic pattern options, gaming floor scenes, non-slip backing details, loop pile close-ups, OEM support and source-factory supply views. All product text is presented under the Vishomecarpet brand.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {images.slice(4).map((image) => (
@@ -181,7 +181,7 @@ export default function SingaporeCasinoCarpetPage() {
           <div>
             <p className="mb-3 text-xs font-black uppercase tracking-[0.18em] text-accent">RFQ checklist</p>
             <h2 className="text-3xl font-black uppercase leading-tight md:text-5xl">What to Send for a Fast Casino Carpet Quote</h2>
-            <p className="mt-5 leading-8 text-muted">A useful Singapore casino carpet RFQ should include total area, application zone, pattern reference, target opening schedule, sample requirement, backing preference, Singapore delivery address, delivery floor, loading restrictions and required documentation. This helps avoid a generic quote that does not match the gaming floor use case.</p>
+            <p className="mt-5 leading-8 text-muted">A useful Singapore casino carpet RFQ should include total area, application zone, oriental flower or custom pattern reference, target opening schedule, sample requirement, backing preference, Singapore delivery address, delivery floor, loading restrictions and required documentation. This helps avoid a generic quote that does not match the gaming floor use case.</p>
           </div>
           <ul className="grid gap-px border border-border bg-border sm:grid-cols-2">
             {["Singapore project address and contact phone", "Gaming floor, VIP room, club or corridor area", "Total SQM, room schedule and floor plan", "Pattern artwork or reference image", "Backing, cleaning and installation preference", "Sample deadline, packing plan and delivery floor"].map((item) => (
@@ -211,7 +211,7 @@ export default function SingaporeCasinoCarpetPage() {
         <div className="container-fox">
           <div className="bg-primary p-8 text-white md:p-10">
             <h2 className="text-2xl font-black uppercase md:text-4xl">Request Singapore Casino Carpet Specification Support</h2>
-            <p className="mt-4 max-w-3xl leading-8 text-white/75">Send your area, pattern reference, sample request, Singapore delivery details and target delivery schedule. Vishomecarpet will confirm the suitable construction, MOQ, packing and written quotation.</p>
+            <p className="mt-4 max-w-3xl leading-8 text-white/75">Send your area, oriental flower or custom pattern reference, sample request, Singapore delivery details and target delivery schedule. Vishomecarpet will confirm the suitable construction, MOQ, packing and written quotation.</p>
             <div className="mt-8 flex flex-wrap gap-4">
               {relatedLinks.map((item) => (
                 <Link key={item.href} href={item.href} className="btn-fox-orange !text-xs !tracking-[0.16em]">{item.label}</Link>

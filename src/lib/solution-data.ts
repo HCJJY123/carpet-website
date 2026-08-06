@@ -116,7 +116,7 @@ export const solutionPages: SolutionPageData[] = [
       "Strike-off samples before final design approval.",
     ],
     recommendedProducts: [
-      { name: "Singapore Casino Carpet", href: "/products/wall-to-wall/singapore-casino-carpet", fit: "Custom polyester loop pile casino carpet for Singapore gaming floors" },
+      { name: "Oriental Flower Singapore Casino Carpet", href: "/products/wall-to-wall/singapore-casino-carpet", fit: "Custom luxury casino carpet for Singapore gaming floors and VIP rooms" },
       { name: "Custom 3D Printed Banquet Hall Carpet", href: "/products/wall-to-wall/3d-printed-banquet-hall-carpet", fit: "Custom casino and entertainment patterns" },
       { name: "3D HD Printed Nylon Hotel Carpet", href: "/products/wall-to-wall/3d-printed-hotel-carpet", fit: "Fast design iteration and corridor use" },
     ],
