@@ -8,6 +8,7 @@ import { getContactBridgeUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 export default function WhatsAppFloating() {
   const pathname = usePathname();
   const [showMobileCta, setShowMobileCta] = useState(false);
+  const isContactPath = pathname === "/contact" || pathname.startsWith("/contact/");
 
   useEffect(() => {
     const updateVisibility = () => {
@@ -25,7 +26,7 @@ export default function WhatsAppFloating() {
     };
   }, []);
 
-  if (isLocalizedCampaignPath(pathname)) return null;
+  if (isContactPath || isLocalizedCampaignPath(pathname)) return null;
 
   const whatsappUrl = getContactBridgeUrl(whatsappBusinessMessages.floating, {
     placement: "floating_whatsapp",

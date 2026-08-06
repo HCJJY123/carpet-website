@@ -22,6 +22,7 @@ const quoteLabels: Record<SiteLocale, string> = {
 export default function SendInquiryFloating() {
   const pathname = usePathname();
 
+  if (pathname === "/contact" || pathname.startsWith("/contact/")) return null;
   if (isLocalizedCampaignPath(pathname)) return null;
 
   return <InquiryFloatingLink showOnMobile />;
