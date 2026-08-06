@@ -1,0 +1,8 @@
+field,value,verification_status
+company,Vishome Global Commercial Carpet Co. Ltd.,website_public
+brand,VISHOME,website_public
+website,https://www.vishomecarpet.com/,website_public
+email,sales@vishomecarpet.com,website_public
+whatsapp,+86 152 2288 5400,website_public
+address,"Cuihuangkou Town, Wuqing District, Tianjin 301700, China",website_public
+primary_contact_person,CONFIRM_PRIMARY_CONTACT,manual_required

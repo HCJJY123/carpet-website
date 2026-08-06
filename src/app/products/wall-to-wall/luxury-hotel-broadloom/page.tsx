@@ -5,6 +5,7 @@ import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJ
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 import AnswerFirst from "@/components/AnswerFirst";
+import ProductTrustLinks from "@/components/ProductTrustLinks";
 
 const productId = "luxury-hotel-broadloom";
 const product = products.find((prod) => prod.id === productId);
@@ -194,6 +195,7 @@ export default function ProductDetailPage() {
         quoteHref={`/contact?product=${encodeURIComponent(p.name)}#quote-form`}
         quoteLabel="Request Axminster Project Review"
       />
+      <ProductTrustLinks productName="luxury hotel broadloom" quoteHref={`/contact?product=${encodeURIComponent(p.name)}#quote-form`} />
       <section className="section-padding border-y border-border bg-surface">
         <div className="container-fox">
           <h2 className="mb-8 text-center text-2xl font-bold uppercase tracking-[0.08em] text-primary md:mb-12 md:text-3xl md:tracking-widest">

@@ -4,6 +4,7 @@ import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 import AnswerFirst from "@/components/AnswerFirst";
+import ProductTrustLinks from "@/components/ProductTrustLinks";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 import ProcurementSnapshot from "@/components/ProcurementSnapshot";
 
@@ -258,6 +259,8 @@ export default function GoldMiningCarpetMatPage() {
         quoteHref="/contact?product=Gold%20Mining%20Carpet%20Mat#quote-form"
         quoteLabel="Request a Sluice Mat Recommendation"
       />
+
+      <ProductTrustLinks productName="gold mining carpet mat" quoteHref="/contact?product=Gold%20Mining%20Carpet%20Mat#quote-form" />
 
       <ProcurementSnapshot
         title="Gold Mining Mat Wholesale Facts"

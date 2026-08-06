@@ -7,6 +7,9 @@ import { solutionPages } from "@/lib/solution-data";
 import { getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 import { ruB2BPages } from "@/lib/ru-b2b-pages";
 import { countryMarketPages } from "@/lib/country-market-pages";
+import { applicationPages } from "@/lib/application-data";
+import { productLinePages } from "@/lib/product-line-data";
+import { resourceCategories, technicalDocuments } from "@/lib/resource-data";
 
 const BASE = "https://www.vishomecarpet.com";
 
@@ -19,24 +22,34 @@ type StaticRoute = {
 
 const staticRoutes: StaticRoute[] = [
   { url: "/", modified: "2026-07-27", priority: 1.0, changeFrequency: "weekly" },
-  { url: "/products", modified: "2026-07-23", priority: 0.9, changeFrequency: "monthly" },
+  { url: "/products", modified: "2026-08-04", priority: 0.9, changeFrequency: "monthly" },
   { url: "/markets", modified: "2026-08-02", priority: 0.86, changeFrequency: "monthly" },
   { url: "/commercial-carpet-manufacturer", modified: "2026-07-28", priority: 0.9, changeFrequency: "monthly" },
-  { url: "/hotel-carpet", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/carpet-tiles-50x50", modified: "2026-07-27", priority: 0.8, changeFrequency: "monthly" },
-  { url: "/projects", modified: "2026-07-30", priority: 0.85, changeFrequency: "monthly" },
-  { url: "/blog", modified: "2026-07-30", priority: 0.85, changeFrequency: "weekly" },
+  { url: "/commercial-carpet-tiles", modified: "2026-08-04", priority: 0.88, changeFrequency: "monthly" },
+  { url: "/hotel-carpet", modified: "2026-08-04", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/carpet-tiles-50x50", modified: "2026-08-04", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/projects", modified: "2026-08-04", priority: 0.85, changeFrequency: "monthly" },
+  { url: "/blog", modified: "2026-08-05", priority: 0.85, changeFrequency: "weekly" },
   { url: "/about-us", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/factory", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/faq", modified: "2026-07-26", priority: 0.8, changeFrequency: "monthly" },
+  { url: "/technical-documents", modified: "2026-08-02", priority: 0.76, changeFrequency: "monthly" },
+  { url: "/resources", modified: "2026-08-06", priority: 0.78, changeFrequency: "monthly" },
+  { url: "/resources/technical-library", modified: "2026-08-06", priority: 0.76, changeFrequency: "monthly" },
+  { url: "/architects-designers", modified: "2026-08-06", priority: 0.74, changeFrequency: "monthly" },
+  { url: "/media/press-kit", modified: "2026-08-06", priority: 0.5, changeFrequency: "monthly" },
+  { url: "/applications", modified: "2026-08-06", priority: 0.78, changeFrequency: "monthly" },
+  { url: "/quality-control", modified: "2026-08-06", priority: 0.7, changeFrequency: "monthly" },
+  { url: "/certifications", modified: "2026-08-06", priority: 0.58, changeFrequency: "monthly" },
+  { url: "/commercial-terms", modified: "2026-08-02", priority: 0.64, changeFrequency: "monthly" },
   { url: "/contact", modified: "2026-07-25", priority: 0.7, changeFrequency: "yearly" },
   { url: "/privacy-policy", modified: "2026-07-25", priority: 0.3, changeFrequency: "yearly" },
   { url: "/request-sample-box", modified: "2026-07-25", priority: 0.8, changeFrequency: "monthly" },
   { url: "/solutions", modified: "2026-07-27", priority: 0.75, changeFrequency: "monthly" },
   { url: "/solutions/hotel-hospitality", modified: "2026-07-23", priority: 0.75, changeFrequency: "monthly" },
-  { url: "/llms.txt", modified: "2026-07-30", priority: 0.2, changeFrequency: "weekly" },
-  { url: "/llms-full.txt", modified: "2026-07-30", priority: 0.2, changeFrequency: "weekly" },
-  { url: "/ai-sources.json", modified: "2026-07-30", priority: 0.2, changeFrequency: "weekly" },
+  { url: "/llms.txt", modified: "2026-08-04", priority: 0.2, changeFrequency: "weekly" },
+  { url: "/llms-full.txt", modified: "2026-08-04", priority: 0.2, changeFrequency: "weekly" },
+  { url: "/ai-sources.json", modified: "2026-08-04", priority: 0.2, changeFrequency: "weekly" },
   { url: "/ru", modified: "2026-07-23", priority: 0.8, changeFrequency: "monthly" },
   { url: "/ru/products/carpet-tiles/nylon-office-carpet-tile", modified: "2026-07-23", priority: 0.85, changeFrequency: "monthly" },
   { url: "/ru/products/public-area/public-area-heavy-duty", modified: "2026-07-23", priority: 0.85, changeFrequency: "monthly" },
@@ -45,20 +58,22 @@ const staticRoutes: StaticRoute[] = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const contentDates = {
-    catalog: new Date("2026-07-28T00:00:00.000Z"),
+    catalog: new Date("2026-08-04T00:00:00.000Z"),
     contentTrust: new Date("2026-07-28T00:00:00.000Z"),
     localizedLandings: new Date("2026-07-24T00:00:00.000Z"),
     solutions: new Date("2026-07-26T00:00:00.000Z"),
   };
   const categoryLastModified: Record<string, Date> = {
-    "carpet-tiles": new Date("2026-07-31T00:00:00.000Z"),
-    "wall-to-wall": new Date("2026-07-31T00:00:00.000Z"),
+    "carpet-tiles": new Date("2026-08-05T00:00:00.000Z"),
+    "wall-to-wall": new Date("2026-08-04T00:00:00.000Z"),
+    "public-area": new Date("2026-08-04T00:00:00.000Z"),
   };
   const productLastModified: Record<string, Date> = {
     "ecocore-pe-backing-carpet-tiles": new Date("2026-07-31T00:00:00.000Z"),
     "public-area-heavy-duty": new Date("2026-07-31T00:00:00.000Z"),
     "gold-mining-carpet-mat": new Date("2026-07-31T00:00:00.000Z"),
     "custom-sculpted-wool-lobby-rug": new Date("2026-07-31T00:00:00.000Z"),
+    "pp-bitumen-backed-office-carpet-tiles": new Date("2026-08-05T00:00:00.000Z"),
   };
   const imageUrl = (path: string) => (path.startsWith("http") ? path : `${BASE}${path}`);
   const uniqueImages = (images: Array<string | undefined>) => [
@@ -88,9 +103,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: uniqueImages([product.image, ...(product.gallery?.map((image) => image.src) ?? [])]),
   }));
 
+  const productLineEntries: MetadataRoute.Sitemap = productLinePages.map((page) => ({
+    url: `${BASE}/products/${page.slug}`,
+    lastModified: new Date("2026-08-06T00:00:00.000Z"),
+    changeFrequency: "monthly",
+    priority: 0.84,
+    images: uniqueImages([page.image]),
+  }));
+
   const projectEntries: MetadataRoute.Sitemap = caseStudies.map((project) => ({
     url: `${BASE}${projectPath(project.id)}`,
-    lastModified: new Date("2026-07-30T00:00:00.000Z"),
+    lastModified: new Date("2026-08-04T00:00:00.000Z"),
     changeFrequency: "monthly",
     priority: 0.78,
     images: uniqueImages([
@@ -106,6 +129,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: 0.84,
   }));
+
+  const applicationEntries: MetadataRoute.Sitemap = applicationPages.map((page) => ({
+    url: `${BASE}/applications/${page.slug}`,
+    lastModified: new Date("2026-08-06T00:00:00.000Z"),
+    changeFrequency: "monthly" as const,
+    priority: 0.76,
+    images: uniqueImages([page.image]),
+  }));
+
+  const resourceEntries: MetadataRoute.Sitemap = [
+    ...resourceCategories.map((category) => ({
+      url: `${BASE}${category.href}`,
+      lastModified: new Date("2026-08-06T00:00:00.000Z"),
+      changeFrequency: "monthly" as const,
+      priority: category.href === "/resources/bim-cad" ? 0.58 : 0.68,
+    })),
+    ...technicalDocuments.map((document) => ({
+      url: `${BASE}/resources/downloads/${document.slug}`,
+      lastModified: new Date(`${document.reviewDate}T00:00:00.000Z`),
+      changeFrequency: "monthly" as const,
+      priority: 0.66,
+    })),
+  ];
 
   const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${BASE}/blog/${post.slug}`,
@@ -156,5 +202,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticEntries, ...categoryEntries, ...productEntries, ...projectEntries, ...solutionEntries, ...blogEntries, ...localizedLandingEntries, ...ruB2BEntries, ...countryMarketEntries];
+  return [...staticEntries, ...categoryEntries, ...productLineEntries, ...productEntries, ...projectEntries, ...solutionEntries, ...applicationEntries, ...resourceEntries, ...blogEntries, ...localizedLandingEntries, ...ruB2BEntries, ...countryMarketEntries];
 }

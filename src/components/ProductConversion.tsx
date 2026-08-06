@@ -3,7 +3,7 @@ import ProductImage from "@/components/ProductImage";
 import { blogPosts } from "@/lib/blog-data";
 import { brandInfo, products, type ProductMoqTiers } from "@/lib/data";
 import { productPath } from "@/lib/seo";
-import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
+import { getContactBridgeUrl } from "@/lib/whatsapp";
 
 type ConversionProduct = {
   id?: string;
@@ -110,22 +110,22 @@ function specCards(product: ConversionProduct) {
 }
 
 export function ProductConversionPanel({ product }: { product: ConversionProduct }) {
-  const whatsappUrl = getWhatsAppBusinessUrl(productMessage(product, "I would like to discuss a project inquiry"), {
+  const whatsappUrl = getContactBridgeUrl(productMessage(product, "I would like to discuss a project inquiry"), {
     placement: "product_conversion_panel",
     product: product.name,
     intent: "project_quote",
   });
-  const drawingUrl = getWhatsAppBusinessUrl(productMessage(product, "I want to send my project drawing or floor plan"), {
+  const drawingUrl = getContactBridgeUrl(productMessage(product, "I want to send my project drawing or floor plan"), {
     placement: "product_conversion_panel",
     product: product.name,
     intent: "send_project_drawing",
   });
-  const sampleUrl = getWhatsAppBusinessUrl(productMessage(product, "I want to get a sample before bulk order"), {
+  const sampleUrl = getContactBridgeUrl(productMessage(product, "I want to get a sample before bulk order"), {
     placement: "product_conversion_panel",
     product: product.name,
     intent: "sample_request",
   });
-  const priceUrl = getWhatsAppBusinessUrl(productMessage(product, "I want to ask the factory price"), {
+  const priceUrl = getContactBridgeUrl(productMessage(product, "I want to ask the factory price"), {
     placement: "product_conversion_panel",
     product: product.name,
     intent: "factory_price",
@@ -147,37 +147,39 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
         </p>
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-3">
+      <div className="grid gap-3 sm:grid-cols-2">
         <Link
           href={`/contact?product=${encodeURIComponent(product.name)}#quote-form`}
-          className="flex min-h-12 items-center justify-center rounded-sm bg-[#d9480f] px-4 py-3 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[#b83a08]"
+          data-track-event="request_quote_cta_click"
+          data-item-name={product.name}
+          data-item-category={product.category}
+          data-item-id={product.id}
+          className="flex min-h-14 items-center justify-center rounded-sm bg-[#d9480f] px-5 py-4 text-center text-[13px] font-black uppercase tracking-[0.08em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#b83a08] sm:col-span-2"
         >
-          Request Quote
+          Request Project Quote
         </Link>
         <a
+          href={`mailto:${brandInfo.email}?subject=${emailSubject}&body=${emailBody}`}
+          data-email-placement="product_conversion_panel"
+          data-email-product={product.name}
+          className="flex min-h-12 items-center justify-center rounded-sm border border-[#C8752A]/35 bg-white px-4 py-3 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-[#9a5a20] transition-all hover:border-[#C8752A] hover:bg-[#FFF8F1]"
+        >
+          Email Sales
+        </a>
+        <a
           href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           data-whatsapp-placement="product_conversion_panel"
           data-whatsapp-product={product.name}
           data-whatsapp-intent="project_quote"
-          className="flex min-h-12 items-center justify-center rounded-sm bg-[#25D366] px-4 py-3 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
+          className="flex min-h-12 items-center justify-center rounded-sm border border-[#25D366]/35 bg-white px-4 py-3 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-[#168a42] transition-all hover:-translate-y-0.5 hover:bg-[#25D366] hover:text-white"
         >
           WhatsApp
-        </a>
-        <a
-          href={`mailto:${brandInfo.email}?subject=${emailSubject}&body=${emailBody}`}
-          className="flex min-h-12 items-center justify-center rounded-sm border border-border bg-white px-4 py-3 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-primary transition-all hover:border-primary hover:bg-surface"
-        >
-          Email
         </a>
       </div>
 
       <div className="grid gap-3 md:grid-cols-3">
         <a
           href={drawingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           data-whatsapp-placement="product_conversion_panel"
           data-whatsapp-product={product.name}
           data-whatsapp-intent="send_project_drawing"
@@ -187,8 +189,6 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
         </a>
         <a
           href={sampleUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           data-whatsapp-placement="product_conversion_panel"
           data-whatsapp-product={product.name}
           data-whatsapp-intent="sample_request"
@@ -198,8 +198,6 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
         </a>
         <a
           href={priceUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           data-whatsapp-placement="product_conversion_panel"
           data-whatsapp-product={product.name}
           data-whatsapp-intent="factory_price"

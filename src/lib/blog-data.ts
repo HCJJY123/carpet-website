@@ -1,10 +1,14 @@
 import { hotelCarpetPatternsGuide } from "@/lib/blog-posts/hotel-carpet-patterns-guide";
+import { hotelCorridorCarpetMexicoGuide } from "@/lib/blog-posts/hotel-corridor-carpet-mexico-guide";
+import { officeCarpetTilesRomaniaGuide } from "@/lib/blog-posts/office-carpet-tiles-romania-guide";
 import { carpetTilesOverConcreteGuide } from "@/lib/blog-posts/carpet-tiles-over-concrete-guide";
 import { sluiceMattingGuide } from "@/lib/blog-posts/sluice-matting-guide";
 import { officeCarpetTilesVsHardFlooringGuide } from "@/lib/blog-posts/office-carpet-tiles-vs-hard-flooring-guide";
 import { hotelCorridorCarpetDesignGuide } from "@/lib/blog-posts/hotel-corridor-carpet-design-guide";
 import { commercialCarpetTileMoqGuide } from "@/lib/blog-posts/commercial-carpet-tile-moq-guide";
 import { hotelCarpetSupplierChecklistGuide } from "@/lib/blog-posts/hotel-carpet-supplier-checklist-guide";
+import { redditHotelOfficeCarpetComplaintsGuide } from "@/lib/blog-posts/reddit-hotel-office-carpet-complaints-guide";
+import { redditCountryCarpetBuyingGuides } from "@/lib/blog-posts/reddit-country-carpet-buying-guides";
 
 export interface BlogSection {
   title: string;
@@ -50,6 +54,10 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  officeCarpetTilesRomaniaGuide,
+  hotelCorridorCarpetMexicoGuide,
+  ...redditCountryCarpetBuyingGuides,
+  redditHotelOfficeCarpetComplaintsGuide,
   hotelCarpetSupplierChecklistGuide,
   commercialCarpetTileMoqGuide,
   officeCarpetTilesVsHardFlooringGuide,

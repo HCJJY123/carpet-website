@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { trackInteractionConversion } from "@/lib/tracking";
-import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
+import { getContactBridgeUrl } from "@/lib/whatsapp";
 
 interface FormSuccess {
   token?: number;
@@ -73,7 +73,7 @@ export default function ThankYouPage() {
     formSuccess.name ? ` (${formSuccess.name})` : ""
   } on your website. I'd like to follow up on WhatsApp for a faster response.`;
 
-  const whatsappFollowUpUrl = getWhatsAppBusinessUrl(followUpMessage, {
+  const whatsappFollowUpUrl = getContactBridgeUrl(followUpMessage, {
     placement: "thank_you_follow_up",
     product: formSuccess.product,
     quantity: formSuccess.quantity,
@@ -99,8 +99,6 @@ export default function ThankYouPage() {
 
           <a
             href={whatsappFollowUpUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             data-whatsapp-placement="thank_you_follow_up"
             data-whatsapp-product={formSuccess.product || ""}
             data-whatsapp-intent="post_form_follow_up"

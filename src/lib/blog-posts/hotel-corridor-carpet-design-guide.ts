@@ -18,6 +18,7 @@ export const hotelCorridorCarpetDesignGuide: BlogPost = {
     "hotel carpet maintenance",
   ],
   date: "2026-07-29",
+  dateModified: "2026-08-03",
   author: "Vishome Technical Team",
   category: "Hospitality Flooring",
   image:
@@ -189,6 +190,63 @@ export const hotelCorridorCarpetDesignGuide: BlogPost = {
       ],
     },
     {
+      title: "Hotel Corridor Carpet Procurement Table",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "A good corridor carpet decision is not only a design decision. It should connect guest comfort, maintenance visibility, roll planning, installation access, fire documentation and spare material into one buying record.",
+        },
+        {
+          type: "table",
+          headers: ["Procurement item", "Why it affects ranking and real projects", "What to ask the supplier"],
+          rows: [
+            ["Fiber and construction", "Controls appearance retention, cleaning response and traffic suitability", "Is this broadloom, Axminster, printed carpet or modular tile, and what traffic level is it for?"],
+            ["Pattern scale", "Determines whether the corridor feels calm, dated, too busy or unable to hide soil", "Can the repeat be checked against corridor width, door rhythm and elevator lobby view?"],
+            ["Roll and cutting plan", "Prevents shortage, seam surprises and installation delay", "Can roll width, roll length, seam direction and spare material be planned before production?"],
+            ["Commercial terms", "Prevents confusion around MOQ, sales unit, lead time and price validity", "Which details are final quotation terms rather than website reference information?"],
+          ],
+        },
+      ],
+    },
+    {
+      title: "Corridor Carpet Risk Checklist",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "list",
+          items: [
+            { title: "Too little color depth.", text: "A very plain corridor carpet may show wheel paths, spots and housekeeping traffic quickly." },
+            { title: "Pattern not checked at corridor scale.", text: "A design that looks balanced in a render can become too dense or too empty in a long four-metre corridor." },
+            { title: "No spare roll material.", text: "Hotels need repair stock from the same production batch for future maintenance." },
+            { title: "Unconfirmed document requirements.", text: "Fire, acoustic, backing and project documents should be requested before production approval." },
+            { title: "Quote based only on area.", text: "Area alone can miss pattern allowance, roll planning, spare stock and destination packing." },
+          ],
+        },
+        {
+          type: "callout",
+          label: "Useful next step",
+          text: "Prepare corridor width, room-door rhythm, elevator lobby photos, target pattern style, required documents and destination before requesting a hotel carpet quotation.",
+        },
+      ],
+    },
+    {
+      title: "Hotel Corridor Carpet Buyer FAQ",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "table",
+          headers: ["Question", "Short answer"],
+          rows: [
+            ["Is broadloom better than carpet tile for hotel corridors?", "Broadloom often gives a more continuous hospitality look, while carpet tiles can simplify localized replacement."],
+            ["Should corridor carpet be darker than guestroom carpet?", "Usually it needs more soil-hiding depth, but the final palette should match lighting and brand style."],
+            ["What should be confirmed before ordering?", "Pattern repeat, roll width, backing, fire documentation, spare material, MOQ, lead time and written quotation validity."],
+            ["Can the same carpet be used in corridors and rooms?", "Sometimes, but corridors usually need stronger traffic and maintenance planning than guestrooms."],
+          ],
+        },
+      ],
+    },
+    {
       title: "Final Recommendation",
       paragraphs: [],
       blocks: [
@@ -220,6 +278,18 @@ export const hotelCorridorCarpetDesignGuide: BlogPost = {
     {
       label: "Hotel Hospitality Solutions",
       href: "/solutions/hotel-hospitality",
+    },
+    {
+      label: "Luxury Hotel Broadloom Carpet",
+      href: "/products/wall-to-wall/luxury-hotel-broadloom",
+    },
+    {
+      label: "Technical Documents",
+      href: "/technical-documents",
+    },
+    {
+      label: "Commercial Terms",
+      href: "/commercial-terms",
     },
     {
       label: "Request Hotel Carpet Quote",

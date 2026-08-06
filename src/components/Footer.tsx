@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { brandInfo } from "@/lib/data";
-import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
+import { getContactBridgeUrl } from "@/lib/whatsapp";
 
 export default function Footer() {
-  const footerWhatsAppUrl = getWhatsAppBusinessUrl(
+  const footerWhatsAppUrl = getContactBridgeUrl(
     "Hello VISHOME, I would like to share my commercial carpet project details. Please help with price, MOQ, samples, lead time, and technical documents.",
     {
       placement: "footer_support",
@@ -33,7 +33,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 font-medium">
-              Vishome Global Commercial Carpet Co. Ltd. is a premier B2B manufacturer specializing in high-performance flooring solutions since 2005.
+              Vishome Global Commercial Carpet Co., Ltd. is a B2B commercial carpet manufacturer supplying carpet tiles, hotel carpet, public-area carpet, samples and project quotation support since 2005.
             </p>
           </div>
 
@@ -63,6 +63,8 @@ export default function Footer() {
               <li><Link href="/solutions/hotel-carpet-manufacturer" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Hotel Carpet Manufacturer</Link></li>
               <li><Link href="/projects" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Case Studies</Link></li>
               <li><Link href="/blog" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">B2B Insights</Link></li>
+              <li><Link href="/technical-documents" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Technical Documents</Link></li>
+              <li><Link href="/commercial-terms" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Commercial Terms</Link></li>
               <li><Link href="/faq" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">FAQ</Link></li>
             </ul>
           </div>
@@ -111,7 +113,7 @@ export default function Footer() {
         <div className="border-t border-white/5 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-xs font-normal tracking-normal text-white/40">
-              &copy; {new Date().getFullYear()} Vishome Global Commercial Carpet Co. Ltd.
+              &copy; {new Date().getFullYear()} Vishome Global Commercial Carpet Co., Ltd.
             </p>
             <p className="mt-2 text-xs font-medium tracking-normal text-white/45">Established 2005</p>
           </div>

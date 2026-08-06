@@ -8,7 +8,7 @@ import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Commercial Carpet Case Studies & Specification Guides | VISHOME",
-  description: "Explore 12 commercial carpet application guides for hotels, offices, retail, airports, healthcare, education, exhibitions and gold-recovery projects.",
+  description: "Explore 14 commercial carpet application guides for hotels, offices, retail, airports, healthcare, education, exhibitions and gold-recovery projects.",
   alternates: { canonical: "/projects" },
 };
 export default function ProjectsPage() {
@@ -40,7 +40,7 @@ export default function ProjectsPage() {
       <PageHero
         title="Commercial Carpet Case Studies & Buyer Guides"
         eyebrow="Application-Based Flooring Decisions"
-        description="Twelve specification and procurement guides covering hospitality, office, retail, airport, healthcare, education, exhibition, residential and industrial carpet applications."
+        description="Fourteen specification and procurement guides covering hospitality, office, retail, airport, healthcare, education, exhibition, residential, industrial and gold-recovery carpet applications."
         image="/images/case-series/case-1/Case_1_Lobby_Grand_Reveal.webp"
         imageAlt="Luxury hotel lobby carpet project background"
         objectPosition="center 48%"

@@ -112,8 +112,11 @@ const productJsonLd = {
   "@type": "Product",
   "@id": `${siteUrl}${canonicalPath}#product`,
   "name": "Glitter Hotel Corridor Broadloom Carpet",
+  "sku": product.id,
+  "mpn": product.id,
   "image": product.mainImages.map((image) => `${siteUrl}${image.src}`),
   "url": `${siteUrl}${canonicalPath}`,
+  "mainEntityOfPage": `${siteUrl}${canonicalPath}`,
   "description": "Custom blue and gold glitter-pattern wall-to-wall broadloom carpet for hotel corridors, lobbies, ballrooms, and luxury hospitality projects.",
   "brand": { "@type": "Brand", "name": "Vishomecarpet" },
   "category": "Wall-to-Wall Hotel Broadloom Carpet",
@@ -125,12 +128,13 @@ const productJsonLd = {
     "lowPrice": product.fobPrice.lowPrice,
     "highPrice": product.fobPrice.highPrice,
     "offerCount": 1,
-    "availability": "https://schema.org/InStock",
-    "seller": { "@type": "Organization", "name": "Vishome Global Commercial Carpet Co. Ltd.", "url": siteUrl }
+    "availability": "https://schema.org/PreOrder",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": { "@type": "Organization", "name": "Vishome Global Commercial Carpet Co., Ltd.", "url": siteUrl }
   },
   "manufacturer": {
     "@type": "Organization",
-    "name": "Vishome Global Commercial Carpet Co. Ltd.",
+    "name": "Vishome Global Commercial Carpet Co., Ltd.",
     "url": siteUrl
   },
   "additionalProperty": [
@@ -138,6 +142,9 @@ const productJsonLd = {
     { "@type": "PropertyValue", "name": "Traffic Class", "value": "High-Traffic Commercial" },
     { "@type": "PropertyValue", "name": "Yarn System", "value": "Patterned Tufted Broadloom" },
     { "@type": "PropertyValue", "name": "Backing", "value": "Commercial Woven Backing" },
+    { "@type": "PropertyValue", "name": "Availability", "value": "Quotation required / made to order" },
+    { "@type": "PropertyValue", "name": "Sales Unit", "value": product.fobPrice.unit },
+    { "@type": "PropertyValue", "name": "Price Basis", "value": "Reference FOB range; final price and validity require a written quotation" },
     { "@type": "PropertyValue", "name": "Roll Width", "value": "4m" },
     { "@type": "PropertyValue", "name": "FOB Price Range", "value": "US$4.20-8.60 / SQM" },
     { "@type": "PropertyValue", "name": "Project MOQ", "value": "300 SQM" },

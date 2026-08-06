@@ -8,6 +8,7 @@ import ProductImage from "@/components/ProductImage";
 import RelatedCategoryLinks from "@/components/RelatedCategoryLinks";
 import ContentTrustPanel from "@/components/ContentTrustPanel";
 import CaseBuyerAnswer from "@/components/CaseBuyerAnswer";
+import ConversionLiftPanel from "@/components/ConversionLiftPanel";
 import { caseIdFromRoute, caseSeoProfiles, getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 
 interface Props {
@@ -353,6 +354,16 @@ export default async function ProjectDetailPage({ params }: Props) {
               ))}
             </div>
           </section>
+
+          <ConversionLiftPanel
+            eyebrow="Similar Project Inquiry"
+            title="Send Your Floor Plan, Area and Delivery Country"
+            body="Use this case as a reference, then submit your own application area, traffic level, design direction, and required timeline. Vishome can suggest matching products and quote the project rather than only a single item."
+            product={profile.cardTitle}
+            quoteHref={`/contact?product=${encodeURIComponent(profile.cardTitle)}#quote-form`}
+            className="mb-14 overflow-hidden rounded-xl border-y-0"
+            compact
+          />
 
           {recommendedProducts.length ? (
             <section className="mb-14">

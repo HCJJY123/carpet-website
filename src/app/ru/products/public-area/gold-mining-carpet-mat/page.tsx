@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { products } from "@/lib/data";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
-import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
+import { getContactBridgeUrl } from "@/lib/whatsapp";
 import ProductImage from "@/components/ProductImage";
 import RuLeadCaptureForm from "@/components/RuLeadCaptureForm";
 
@@ -90,15 +90,20 @@ const productJsonLd = product
             lowPrice: product.fobPrice.lowPrice,
             highPrice: product.fobPrice.highPrice,
             offerCount: 1,
-            availability: "https://schema.org/InStock",
+            availability: "https://schema.org/PreOrder",
           }
         : undefined,
+      additionalProperty: [
+        { "@type": "PropertyValue", name: "Availability", value: "Quotation required / made to order" },
+        { "@type": "PropertyValue", name: "Sales Unit", value: product.fobPrice?.unit ?? "Roll" },
+        { "@type": "PropertyValue", name: "Price Basis", value: "Reference FOB range; final price and validity require a written quotation" },
+      ],
     }
   : null;
 
 export const metadata: Metadata = product
   ? {
-      title: "Коврик для золотодобычи (miners moss) для шлюзовых лотков | Поставка DAP Алматы | VISHOME",
+      title: "Коврик для золотодобычи miners moss | VISHOME",
       description:
         "ПВХ-коврик miners moss для шлюзовых лотков, промывки золотоносного песка и старательской добычи. Толщина 10/15/20 мм, рулон 1×15 м. Поставка DAP Алматы, Казахстан.",
       alternates: {
@@ -123,7 +128,7 @@ export const metadata: Metadata = product
 export default function GoldMiningRuPage() {
   if (!product) return <div>Product not found</div>;
 
-  const whatsappUrl = getWhatsAppBusinessUrl(
+  const whatsappUrl = getContactBridgeUrl(
     "Здравствуйте! Меня интересует коврик для золотодобычи (miners moss) для шлюзового лотка. Прошу выслать цену FOB, условия DAP до Алматы, МОЗ и срок производства.",
     { placement: "ru_gold_mining_hero", product: "Gold Mining Carpet Mat for Sluice Box", intent: "ru_project_quote", pagePath: ruPath }
   );
@@ -181,8 +186,6 @@ export default function GoldMiningRuPage() {
               <div className="grid gap-3 sm:grid-cols-2">
                 <a
                   href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   data-whatsapp-placement="ru_gold_mining_hero"
                   data-whatsapp-intent="ru_project_quote"
                   className="flex min-h-12 items-center justify-center rounded-sm bg-[#25D366] px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.12em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"

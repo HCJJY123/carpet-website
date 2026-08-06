@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ProductSpecCards } from "@/components/ProductConversion";
 import { products } from "@/lib/data";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
-import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
+import { getContactBridgeUrl } from "@/lib/whatsapp";
 
 const productId = "custom-floral-printed-hotel-carpet";
 const product = products.find((item) => item.id === productId);
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
 };
 
 function InquiryActions() {
-  const message = (request: string) => getWhatsAppBusinessUrl(`Hello Zara, I am interested in ${name}. ${request}. My country, total area, application, material preference, pattern reference and target delivery date are:`);
+  const message = (request: string) => getContactBridgeUrl(`Hello Zara, I am interested in ${name}. ${request}. My country, total area, application, material preference, pattern reference and target delivery date are:`);
   return (
     <div className="grid gap-3 sm:grid-cols-3">
       <Link href={`/contact?product=${encodeURIComponent(name)}#quote-form`} className="flex min-h-12 items-center justify-center bg-[#d9480f] px-4 py-3 text-center text-[11px] font-black uppercase tracking-wider text-white transition-colors hover:bg-[#b83a08]">Send Inquiry</Link>
@@ -76,16 +76,18 @@ export default function CustomFloralPrintedHotelCarpetPage() {
   if (!product) return null;
 
   const productJsonLd = {
-    "@context": "https://schema.org", "@type": "Product", name, sku: "VHC-WTW-FPC-001",
+    "@context": "https://schema.org", "@type": "Product", "@id": `${absoluteUrl(path)}#product`, name, sku: "VHC-WTW-FPC-001", mpn: "VHC-WTW-FPC-001",
     brand: { "@type": "Brand", name: "Vishomecarpet" }, category: "Wall-to-Wall Carpet",
     description: "Made-to-order custom floral printed wall-to-wall carpet for hotel corridors, guestrooms, banquet halls, lobbies and office projects.",
-    material: "Polypropylene, nylon, polyester or wool-blend options", url: absoluteUrl(path), image: images.map((item) => absoluteUrl(item.src)),
+    material: "Polypropylene, nylon, polyester or wool-blend options", url: absoluteUrl(path), mainEntityOfPage: absoluteUrl(path), image: images.map((item) => absoluteUrl(item.src)),
     additionalProperty: [
       { "@type": "PropertyValue", name: "Sample", value: product.moqTiers.sample },
       { "@type": "PropertyValue", name: "Trial Order", value: product.moqTiers.trialOrder },
       { "@type": "PropertyValue", name: "Project MOQ", value: product.moqTiers.project },
+      { "@type": "PropertyValue", name: "Sales Unit", value: "SQM" },
+      { "@type": "PropertyValue", name: "Price Basis", value: "Reference FOB range; final price and validity require a written quotation" },
     ],
-    offers: { "@type": "AggregateOffer", priceCurrency: "USD", lowPrice: "3.60", highPrice: "6.40", offerCount: 1, availability: "https://schema.org/PreOrder", seller: { "@type": "Organization", name: "Vishomecarpet" } },
+    offers: { "@type": "AggregateOffer", url: absoluteUrl(path), priceCurrency: "USD", lowPrice: "3.60", highPrice: "6.40", offerCount: 1, availability: "https://schema.org/PreOrder", itemCondition: "https://schema.org/NewCondition", seller: { "@type": "Organization", name: "Vishomecarpet" } },
   };
   const breadcrumbJsonLd = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },

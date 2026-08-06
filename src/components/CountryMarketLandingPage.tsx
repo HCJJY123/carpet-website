@@ -121,11 +121,10 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
       ? { "@type": "ImageObject", url: absoluteUrl(heroProduct.image) }
       : undefined,
     about: resolvedProducts.map((product) => ({
-      "@type": "Product",
+      "@type": "Thing",
       name: product.name,
       url: absoluteUrl(productPath(product.id)),
-      category: product.category,
-      material: product.spec.material,
+      description: product.description,
     })),
     publisher: {
       "@type": "Organization",

@@ -2,7 +2,7 @@ export interface ProductColor { name: string; hex: string; }
 export interface TechnicalSpecs { fireRating: string; trafficClass: string; fiber?: string; yarnSystem: string; backing: string; pileWeight: string; totalThickness: string; rollWidth?: string; soundInsulation?: string; antistatic: string; }
 export interface FobPriceRange { display: string; lowPrice: string; highPrice: string; currency: "USD"; unit: string; }
 export interface ProductMoqTiers { sample: string; trialOrder: string; project: string; }
-export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; moqTiers: ProductMoqTiers; leadTime: string; fobPrice?: FobPriceRange; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
+export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; moqTiers: ProductMoqTiers; leadTime: string; fobPrice?: FobPriceRange; availability?: "preorder" | "in-stock"; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
 export interface CaseSpecItem { label: string; value: string; }
 export type CaseSectionBlock =
   | { type: "paragraph"; text: string }
@@ -20,7 +20,7 @@ export const brandInfo = {
   whatsapp: "+86 152 2288 5400",
   wechat: "8615222885400",
   address: "Cuihuangkou Town, Wuqing District, Tianjin 301700, China",
-  stats: { area: "50,000㎡", employees: "900+", markets: "45+", experience: "15+ Years" }
+  stats: { area: "50,000㎡", employees: "900+", markets: "45+", experience: "Since 2005" }
 };
 
 export const products: Product[] = [
@@ -150,6 +150,48 @@ export const products: Product[] = [
       antistatic: "Low Static Office Use"
     },
     features: ["50x50 Carpet Tiles", "Nylon / PP Option", "Office Carpet", "Interlocking Modular Floor"]
+  },
+  {
+    id: "pp-bitumen-backed-office-carpet-tiles",
+    name: "PP Bitumen Backed Office Carpet Tiles 50x50cm",
+    category: "carpet-tiles",
+    description: "Vishomecarpet 100% PP fiber bitumen backed office carpet tiles in 50x50cm squares for commercial offices, meeting rooms, home offices, retail, and OEM flooring projects.",
+    longDescription: "Vishomecarpet PP Bitumen Backed Office Carpet Tiles 50x50cm are cost-effective modular carpet squares for office buildings, meeting rooms, home offices, retail spaces, corridors, and light-to-medium commercial interiors. The 100% PP fiber surface supports practical color and pattern options, while the bitumen backing helps dimensional stability, non-slip installation support, easy replacement, carton-based logistics, and factory OEM supply for B2B buyers comparing commercial flooring by specification, MOQ, lead time, and landed cost.",
+    image: "/images/products/pp-bitumen-backed-office-carpet-tiles/01-hero-office-meeting-room.webp",
+    imageAlt: "Vishomecarpet PP bitumen backed office carpet tiles 50x50cm installed in a modern meeting room",
+    gallery: [
+      { src: "/images/products/pp-bitumen-backed-office-carpet-tiles/01-hero-office-meeting-room.webp", alt: "Vishomecarpet PP bitumen backed office carpet tiles 50x50cm installed in a modern meeting room" },
+      { src: "/images/products/pp-bitumen-backed-office-carpet-tiles/02-blue-meeting-room-carpet-tiles.webp", alt: "Blue and gray PP office carpet tiles with bitumen backing in a meeting room" },
+      { src: "/images/products/pp-bitumen-backed-office-carpet-tiles/03-executive-office-carpet-tiles.webp", alt: "Gray 50x50cm polypropylene carpet tiles for executive office flooring" },
+      { src: "/images/products/pp-bitumen-backed-office-carpet-tiles/04-open-office-lounge-carpet-tiles.webp", alt: "Modular PP carpet tiles for open office lounge and commercial flooring projects" }
+    ],
+    moq: "200 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Standard Color", project: "200 SQM" },
+    leadTime: "10-20 Days",
+    fobPrice: { display: "US$3.20-7.80 / SQM", lowPrice: "3.20", highPrice: "7.80", currency: "USD", unit: "SQM" },
+    availability: "preorder",
+    spec: {
+      material: "100% PP Fiber",
+      size: "50x50 cm",
+      colors: [
+        { name: "Graphite Gray", hex: "#4B4F52" },
+        { name: "Charcoal", hex: "#272B2F" },
+        { name: "Silver Gray", hex: "#8B9094" },
+        { name: "Office Blue", hex: "#466C86" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "Confirm Required Standard for Exact Construction",
+      trafficClass: "Commercial Office / Medium to Heavy Contract Use",
+      fiber: "100% PP Fiber",
+      yarnSystem: "Tufted Loop / Patterned Modular Tile",
+      backing: "Bitumen Backing",
+      pileWeight: "450-650 g/sqm Option",
+      totalThickness: "Approx. 5.0-7.0mm Option",
+      soundInsulation: "Office Acoustic Comfort Option",
+      antistatic: "Available / Project Confirmation"
+    },
+    features: ["100% PP Fiber", "Bitumen Backing", "50x50cm Modular Tile", "Non-Slip Commercial Flooring", "OEM Factory Supply"]
   },
   {
     id: "nylon-office-carpet-tile",
@@ -713,9 +755,27 @@ export const products: Product[] = [
 ];
 
 export const productCategories = [
-  { id: "carpet-tiles", name: "Commercial Carpet Tiles", description: "Modular solutions.", image: "/images/category-tiles.webp", slug: "carpet-tiles" },
-  { id: "wall-to-wall", name: "Wall-to-Wall Carpets", description: "Seamless broadloom.", image: "/images/category-broadloom.webp", slug: "wall-to-wall" },
-  { id: "public-area", name: "Public Area Carpets", description: "Heavy-duty specialized flooring.", image: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp", slug: "public-area" }
+  {
+    id: "carpet-tiles",
+    name: "Commercial Carpet Tiles",
+    description: "50x50 modular carpet tiles for offices, hotels, schools, healthcare areas, retail floors, samples, MOQ planning, and bulk project quotes.",
+    image: "/images/category-tiles.webp",
+    slug: "carpet-tiles"
+  },
+  {
+    id: "wall-to-wall",
+    name: "Wall-to-Wall Carpets",
+    description: "Custom hotel broadloom and wall-to-wall carpet for guestrooms, corridors, lobbies, ballrooms, samples, design approval, and project quotes.",
+    image: "/images/category-broadloom.webp",
+    slug: "wall-to-wall"
+  },
+  {
+    id: "public-area",
+    name: "Public Area Carpets",
+    description: "Heavy-duty carpet systems for airports, exhibitions, corridors, custom wool lobby rugs, natural sisal carpets, and gold mining carpet mats.",
+    image: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp",
+    slug: "public-area"
+  }
 ];
 
 export const faqSections = [
@@ -1772,5 +1832,179 @@ export const caseStudies: CaseStudy[] = [
       }
     ],
     recommendedProductIds: ["gold-mining-carpet-mat"]
+  },
+  {
+    id: "case-13",
+    title: "Gold Mining Carpet Distributor Roll Planning - Colombia",
+    subtitle: "A procurement guide for Colombia mining-supply distributors comparing stocked pile weights, sample validation, custom roll length, wet handling and container loading before a bulk order.",
+    category: "public-area",
+    image: "/images/projects/case-13/colombia-gold-mining-carpet-hero.webp",
+    imageAlt: "Gold mining carpet mat used in an alluvial washing setup for Colombia distributor planning",
+    description: "A Colombia-focused gold mining carpet procurement scenario covering stocked sample weights, distributor roll sizing, reinforced backing, FOB quotation details and 40HC loading decisions.",
+    specificationTitle: "Gold Mining Carpet Procurement Snapshot",
+    projectSpecs: [
+      { label: "Country Focus", value: "Colombia" },
+      { label: "Buyer Type", value: "Mining-supply distributor and repeat bulk buyer" },
+      { label: "Application", value: "Alluvial gold sluice mats and resale roll programs" },
+      { label: "Material", value: "100% polyester entrapment pile with reinforced anti-tear backing" },
+      { label: "Stocked Weight References", value: "1400, 1700 and 2100 g/m² sample routes" },
+      { label: "Order Planning", value: "Custom roll length, FOB packing and 40HC loading calculation" }
+    ],
+    sections: [
+      {
+        title: "Project Brief",
+        paragraphs: [
+          "A Colombia distributor preparing to sell gold mining carpet needs more than a generic miners moss replacement. The buyer has to support different alluvial operations, different sluice widths and different cleaning habits while still keeping a manageable stock program.",
+          "The practical starting point is to test stocked pile weights before changing the specification. Samples in 1400, 1700 and 2100 g/m² allow the distributor to compare fibre hold, drainage, sediment release and backing strength without paying for a custom production setup too early.",
+          "This guide frames the order as a repeatable distributor program: confirm field conditions, choose a stocked or custom weight, align roll length with local equipment, then calculate carton or roll loading before the FOB quotation is fixed."
+        ]
+      },
+      {
+        title: "Sample and Weight Selection",
+        paragraphs: [
+          "Gold mining carpet selection should follow the way the sluice is actually used. Fine material, high water velocity and frequent cleanup call for a different balance than coarser feed, slower flow and longer operating cycles.",
+          "For a first Colombia order, stocked samples reduce decision risk. The distributor can send samples to several field users, collect feedback on gold retention, cleaning effort and pile recovery, then decide whether a stocked weight is enough or a custom-weight run is justified.",
+          "A custom weight can be useful when a market has a dominant sluice configuration, but it should be treated as a second-step decision. The setup cost and lead time only make sense after field users agree on the target behaviour."
+        ],
+        image: "/images/projects/case-13/colombia-gold-mining-carpet-sample-comparison.webp",
+        imageAlt: "Close-up texture of gold mining carpet pile used for sample weight comparison"
+      },
+      {
+        title: "Distributor Roll Planning",
+        paragraphs: [
+          "Roll size is a commercial decision, not only a production detail. If the roll length does not match common sluice equipment in the local market, the distributor may create unnecessary off-cuts and weaken resale margins.",
+          "A standard 2 m wide roll can be converted into several resale formats, but the buyer should confirm the most common downstream cut sizes before ordering. If a custom length such as 24 m or another market-specific length improves resale efficiency, the change should be checked against rolled diameter and container space.",
+          "Color, label, roll wrapping and pallet or loose-roll handling should also be stated in the quotation. These small details affect warehouse control and make repeat orders easier to manage."
+        ],
+        image: "/images/projects/case-13/colombia-gold-mining-carpet-roll-packing.webp",
+        imageAlt: "OEM roll size and packaging planning for gold mining carpet distributor orders"
+      },
+      {
+        title: "FOB Quotation and Loading Control",
+        paragraphs: [
+          "For Colombia buyers comparing suppliers, the FOB offer should clearly state fibre composition, pile weight, thickness range, backing, roll width, roll length, square metres per roll, total square metres and packing method.",
+          "Container loading should not be estimated from a previous order unless the roll length and weight are identical. Heavier or longer rolls change diameter, and that changes the number of rolls that can be loaded safely in a 40HC container.",
+          "Before confirming the order, the distributor should ask for a loading calculation tied to the final specification. This prevents landed-cost surprises and gives the sales team a more reliable resale price in the Colombia market."
+        ]
+      }
+    ],
+    technicalDetails: [
+      "Stocked sample weights help avoid unnecessary custom setup cost before field validation.",
+      "Reinforced backing matters because saturated mats are lifted with trapped sediment during cleanup.",
+      "Roll length affects both downstream cutting waste and container loading efficiency.",
+      "FOB quotations should state square metres per roll and total square metres, not only roll count."
+    ],
+    designHighlights: [
+      "Distributor-first roll planning for Colombia resale channels",
+      "Sample sequence designed to compare field behaviour before bulk commitment",
+      "Product links stay focused on the Gold Mining Carpet Mat page to avoid authority dilution"
+    ],
+    results: [
+      "A clearer sample-to-bulk decision path for Colombia gold-recovery buyers.",
+      "Reduced off-cut risk by matching roll length to common local sluice sizes.",
+      "More reliable landed-cost planning through specification-based container loading."
+    ],
+    faqs: [
+      {
+        question: "Is one gold mining carpet weight suitable for every Colombia sluice operation?",
+        answer: "No. Flow velocity, feed size, riffle design and cleaning frequency change the best pile weight. A distributor should test stocked samples with real field users before standardising a bulk specification."
+      },
+      {
+        question: "Can a Colombia distributor order custom roll lengths?",
+        answer: "Yes. Custom lengths can reduce off-cut waste when they match common local sluice sizes, but the final length should be checked against rolled diameter and 40HC loading before the purchase order is confirmed."
+      },
+      {
+        question: "What should be included in the gold mining carpet enquiry?",
+        answer: "Send destination country, target roll width and length, expected order quantity, preferred weight, field conditions, resale needs and any label or packing requirements."
+      }
+    ],
+    recommendedProductIds: ["gold-mining-carpet-mat"]
+  },
+  {
+    id: "case-14",
+    title: "Office Carpet Tiles Phased Renovation - Canada",
+    subtitle: "A Canada-focused office flooring guide for buyers planning 50x50 commercial carpet tiles, phased installation, acoustic comfort, attic stock and long-term replacement strategy.",
+    category: "carpet-tiles",
+    image: "/images/projects/case-14/canada-office-carpet-tiles-hero.webp",
+    imageAlt: "Commercial office carpet tiles for a Canada phased renovation procurement guide",
+    description: "A Canada office carpet tile planning scenario covering 50x50 modular format, occupied-site installation, backing stability, spare-tile planning, winter delivery and replacement control.",
+    specificationTitle: "Office Carpet Tile Procurement Snapshot",
+    projectSpecs: [
+      { label: "Country Focus", value: "Canada" },
+      { label: "Application", value: "Corporate offices, meeting rooms, open work areas and corridors" },
+      { label: "Format", value: "50 x 50 cm modular commercial carpet tiles" },
+      { label: "Performance Priority", value: "Heavy commercial traffic, acoustic comfort and local replacement" },
+      { label: "Installation Mode", value: "Phased installation for occupied or partially occupied offices" },
+      { label: "Buyer Control", value: "Attic stock, color batch tracking and adhesive compatibility" }
+    ],
+    sections: [
+      {
+        title: "Project Brief",
+        paragraphs: [
+          "Canada office renovation buyers often need to upgrade flooring without taking the whole workplace offline. This makes modular office carpet tiles a practical option because installation can be split by floor, department or evening work window.",
+          "The buyer's decision should not stop at color. For commercial use, the specification needs to cover yarn, backing stability, tile size, traffic class, acoustic comfort, fire documents, adhesive compatibility and replacement planning.",
+          "This case frames the purchase as a tenant-improvement or property-management decision, where long-term maintenance and local tile replacement are just as important as the first installation."
+        ]
+      },
+      {
+        title: "Why Modular Tiles Fit Occupied Offices",
+        paragraphs: [
+          "A 50x50 carpet tile format supports phased work because installers can open one zone, replace or install tiles, and return the area to use faster than a full broadloom replacement. This is useful for offices where staff, furniture and IT equipment cannot all be moved at once.",
+          "Carpet tiles also help with future churn. If a meeting room chair area stains or a corridor tile wears faster than the surrounding field, maintenance can replace selected tiles from attic stock instead of removing a complete floor section.",
+          "For Canada projects, winter delivery and site storage should be planned early. Cartons need dry handling, and the flooring should acclimate according to the adhesive and site-condition requirements before installation."
+        ],
+        image: "/images/projects/case-14/canada-office-carpet-tiles-phased-installation.webp",
+        imageAlt: "Blue gray office carpet tiles installed in a commercial corridor"
+      },
+      {
+        title: "Specification and Attic Stock Control",
+        paragraphs: [
+          "A complete quotation should list tile size, yarn system, backing, pile weight, carton quantity, square metres per carton, fire rating, lead time and packing method. These details allow the buyer to compare offers by installed value rather than headline price alone.",
+          "Attic stock should come from the same color batch as the main order. Even neutral gray or blue-gray tiles can show batch difference under office lighting, so replacement stock should be planned while the first order is produced.",
+          "If the office uses multiple color zones, attic stock should be split by color. This keeps future repairs clean and avoids using an almost-right tile in a visible traffic path."
+        ],
+        image: "/images/projects/case-14/canada-office-carpet-tiles-attic-stock.webp",
+        imageAlt: "Stacked 50x50 office carpet tiles for carton and attic stock planning"
+      },
+      {
+        title: "Procurement Questions Before Order Approval",
+        paragraphs: [
+          "Before issuing a purchase order, the buyer should confirm whether the existing floor has adhesive residue, moisture concerns or uneven patches. These site conditions can affect installation quality even when the tile itself is correctly specified.",
+          "The buyer should also confirm whether the project requires nylon carpet tiles, PP carpet tiles or a blended specification. Nylon is often preferred for heavier commercial use, while budget-sensitive areas may use different constructions where traffic is lighter.",
+          "A practical Canada office enquiry should include floor area, layout drawings, target color family, traffic level, installation schedule, delivery city, attic stock requirement and any building compliance documents required by the contractor."
+        ]
+      }
+    ],
+    technicalDetails: [
+      "50x50 modular format supports staged installation and local tile replacement.",
+      "Backing stability and adhesive compatibility should be checked against the existing slab.",
+      "Attic stock should be reserved from the same color batch as the main order.",
+      "Winter delivery and indoor storage planning reduce installation-condition risk."
+    ],
+    designHighlights: [
+      "Neutral office palette designed for long-term corporate interiors",
+      "Phased renovation logic suitable for occupied buildings",
+      "Internal links support commercial carpet tile product and category authority"
+    ],
+    results: [
+      "A clearer quotation checklist for Canada office carpet tile buyers.",
+      "Better maintenance planning through same-batch attic stock.",
+      "Lower disruption risk by planning installation in phases rather than full-floor closure."
+    ],
+    faqs: [
+      {
+        question: "Are carpet tiles better than broadloom for office renovation?",
+        answer: "For many occupied offices, yes. Carpet tiles support phased installation and local replacement, while broadloom may be preferred where a seamless large-field appearance is the main design goal."
+      },
+      {
+        question: "What information should a Canada office buyer send for a quote?",
+        answer: "Send floor area, layout plan, preferred color, traffic level, delivery city, installation schedule, attic stock percentage and any required fire or building documents."
+      },
+      {
+        question: "Why does attic stock matter for office carpet tiles?",
+        answer: "Future replacement tiles look best when they come from the same color batch. Reserving attic stock during the first order avoids visible patching later."
+      }
+    ],
+    recommendedProductIds: ["nylon-office-carpet-tile", "commercial-nylon-tiles", "ecocore-pe-backing-carpet-tiles"]
   }
 ];

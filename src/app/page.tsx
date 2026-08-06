@@ -3,10 +3,11 @@ import Link from "next/link";
 import { productCategories as categories, caseStudies, certifications, products } from "@/lib/data";
 import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
-import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
+import { getContactBridgeUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 import { productPath } from "@/lib/seo";
 import HomeHeroCarousel from "@/components/HomeHeroCarousel";
 import AnswerFirst from "@/components/AnswerFirst";
+import ConversionLiftPanel from "@/components/ConversionLiftPanel";
 import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 import { getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 
@@ -21,9 +22,9 @@ const homeCategoryImages: Record<string, string> = {
 };
 
 export default function Home() {
-  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header);
+  const whatsappUrl = getContactBridgeUrl(whatsappBusinessMessages.header, { placement: "home_hero", intent: "project_support", pagePath: "/" });
   const featuredProduct = products.find((product) => product.id === "3d-printed-hotel-carpet");
-  const categoryPriority = ["wall-to-wall", "public-area", "carpet-tiles"];
+  const categoryPriority = ["carpet-tiles", "wall-to-wall", "public-area"];
   const prioritizedCategories = categoryPriority
     .map((id) => categories.find((category) => category.id === id))
     .filter((category): category is (typeof categories)[number] => Boolean(category));
@@ -62,6 +63,15 @@ export default function Home() {
         ]}
         evidence="Published product pages show construction, reference FOB range, lead time, three-stage MOQ, technical data, and application images. Final compliance, availability, and delivered cost are confirmed against the buyer's written project requirements."
         quoteHref="/contact?product=Commercial%20Carpet%20Project#quote-form"
+      />
+
+      <ConversionLiftPanel
+        eyebrow="Buyer Activity Focus"
+        title="Most Visitors Compare Carpet Tiles and Hotel Broadloom Before Asking for Price"
+        body="If your project is an office, hotel, corridor, ballroom, retail, or public interior, send the area, application, destination, and deadline first. Vishome can reply with the right category path, sample suggestion, and quotation inputs."
+        product="Commercial Carpet Project"
+        quoteHref="/contact?product=Commercial%20Carpet%20Project#quote-form"
+        compact
       />
 
       <section className="bg-white border-b border-border">
@@ -170,7 +180,7 @@ export default function Home() {
                 Corporate Profile
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 uppercase leading-tight">
-                Tianjin Vishome Global Commercial Carpet Co. Ltd.
+                Tianjin-Based Vishome Global Commercial Carpet Co., Ltd.
               </h2>
               <div className="prose prose-slate max-w-none">
                 <p className="text-muted text-lg leading-relaxed mb-6 font-medium">

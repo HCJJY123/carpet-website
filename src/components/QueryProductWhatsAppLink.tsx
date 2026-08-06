@@ -2,7 +2,7 @@
 
 import { Suspense, type ReactNode } from "react";
 import { useSearchParams } from "next/navigation";
-import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
+import { getContactBridgeUrl } from "@/lib/whatsapp";
 
 type QueryProductWhatsAppLinkProps = {
   message: string;
@@ -25,7 +25,7 @@ function WhatsAppLink({
   ariaLabel,
   children,
 }: Omit<QueryProductWhatsAppLinkProps, "fallbackProduct"> & { product: string }) {
-  const whatsappUrl = getWhatsAppBusinessUrl(message, {
+  const whatsappUrl = getContactBridgeUrl(message, {
     placement,
     product,
     intent,

@@ -3,6 +3,7 @@ import { products } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import ProcurementSnapshot from "@/components/ProcurementSnapshot";
+import ConversionLiftPanel from "@/components/ConversionLiftPanel";
 import TechnicalSourcePanel from "@/components/TechnicalSourcePanel";
 import AnswerFirst from "@/components/AnswerFirst";
 import FactoryCtaBackground from "@/components/FactoryCtaBackground";
@@ -201,6 +202,16 @@ export default function CategoryPage() {
         quoteHref="/contact?product=Wall-to-Wall%20Carpet#quote-form"
         quoteLabel="Request Broadloom Recommendation"
       />
+
+      <ConversionLiftPanel
+        eyebrow="Hotel Project Inquiry Shortcut"
+        title="Send Room Area, Corridor Length, Pattern Need and Destination"
+        body="Hotel broadloom buyers often need a roll plan, pattern repeat check, sample or strike-off, fire document review, and export packing. Submit these basics early so the quote can match your actual project instead of a generic carpet price."
+        product="Wall-to-Wall Carpet"
+        quoteHref="/contact?product=Wall-to-Wall%20Carpet#quote-form"
+        compact
+      />
+
       <ProcurementSnapshot
         title="Hotel Broadloom Buying Facts"
         facts={[

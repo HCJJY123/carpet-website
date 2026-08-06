@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AnswerFirst from "@/components/AnswerFirst";
 import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
+import ProductTrustLinks from "@/components/ProductTrustLinks";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 
 const productId = "natural-sisal-carpet";
@@ -177,6 +179,30 @@ export default function NaturalSisalCarpetPage() {
           </div>
         </div>
       </section>
+
+      <AnswerFirst
+        eyebrow="Natural Sisal Buying Answer"
+        title="Use natural sisal when texture and low-VOC aesthetics are more important than wet-cleaning tolerance"
+        answer="Natural sisal carpet is a strong choice for offices, reception areas, boutique retail and design-led public spaces where buyers want plant-fiber texture and neutral colorways. It should be specified carefully for moisture, spill risk and maintenance method; for harder cleaning conditions, request a synthetic sisal-look option in the quotation."
+        facts={[
+          { label: "Best Use", value: "Dry indoor offices, galleries, retail, lobbies and public-area design projects" },
+          { label: "Key Risk", value: "Using natural sisal in wet, spill-heavy or aggressive cleaning environments" },
+          { label: "Document Check", value: "Confirm backing, roll width, sample, binding, packing and maintenance notes" },
+          { label: "Quote Basis", value: "Reference FOB range only; final validity requires written quotation" },
+        ]}
+        moq={[
+          { label: "Sample", value: p.moqTiers.sample },
+          { label: "Trial Order", value: p.moqTiers.trialOrder },
+          { label: "Project MOQ", value: p.moqTiers.project },
+        ]}
+        suitableFor={["Biophilic commercial interiors", "Hotel public areas with controlled maintenance", "Boutique retail and gallery floors"]}
+        notSuitableFor={["Outdoor or wet areas", "Food-service zones with frequent liquid spills", "Projects requiring one fixed stock claim without written confirmation"]}
+        evidence="Natural sisal has visible fiber variation and maintenance limits. Confirm sample, backing, edge finish, sales unit and project documents before production."
+        quoteHref={`/contact?product=${encodeURIComponent(p.name)}#quote-form`}
+        quoteLabel="Request Sisal Project Quote"
+      />
+
+      <ProductTrustLinks productName="natural sisal carpet" quoteHref={`/contact?product=${encodeURIComponent(p.name)}#quote-form`} />
 
       <section className="section-padding bg-primary text-white">
         <div className="container-fox grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
