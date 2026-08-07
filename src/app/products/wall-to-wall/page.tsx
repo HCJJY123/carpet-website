@@ -64,8 +64,8 @@ const constructionOptions = [
     href: "/products/wall-to-wall/3d-printed-banquet-hall-carpet"
   },
   {
-    title: "Singapore Casino Carpet",
-    text: "Custom polyester loop pile carpet for Singapore gaming floors, VIP rooms, clubs, lift lobbies, and hotel entertainment zones.",
+    title: "Oriental Flower Casino Carpet",
+    text: "Custom luxury casino carpet for Singapore gaming floors, VIP rooms, clubs, lift lobbies, and hotel entertainment zones.",
     href: "/products/wall-to-wall/singapore-casino-carpet"
   },
   {
@@ -106,7 +106,7 @@ const contractCarpetSelector = [
   },
   {
     area: "Singapore Casinos & VIP Rooms",
-    construction: "Custom polyester loop pile casino carpet",
+    construction: "Custom oriental flower luxury casino carpet",
     buyingRange: "MOQ from 300 SQM · FOB from US$4.60/SQM",
     href: "/products/wall-to-wall/singapore-casino-carpet"
   },
