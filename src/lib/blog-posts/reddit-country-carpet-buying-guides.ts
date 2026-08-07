@@ -611,12 +611,6 @@ export const kazakhstanGoldMiningCarpetGuide: BlogPost = {
             ["Cleaning rhythm", "Fine material and black sand change the recovery routine", "How should the mat be rinsed, handled and stored after clean-out?"],
           ],
         },
-        {
-          type: "image",
-          src: "/images/blog-series/gold-mining-carpet-kazakhstan-fine-gold-recovery-guide/gold-mining-carpet-kazakhstan-fine-gold-recovery-1600.webp",
-          alt: "Gold mining carpet sluice box in Kazakhstan with flowing water and outdoor recovery site",
-          caption: "Use the real recovery scene to judge how the carpet sits inside a working sluice box and field environment.",
-        },
       ],
     },
     {
@@ -744,12 +738,6 @@ export const croatiaCustomSculptedWoolRugGuide: BlogPost = {
             ["Maintenance", "Feature rugs need a practical cleaning route", "What cleaning method and replacement plan should the hotel use?"],
           ],
         },
-        {
-          type: "image",
-          src: "/images/blog-series/custom-sculpted-wool-rugs-croatia-hotel-lobby-guide/custom-sculpted-wool-rugs-croatia-hotel-lobby-1600.webp",
-          alt: "Custom sculpted wool rug in a Croatian hotel lobby with a luxury reception setting",
-          caption: "The final rug should be reviewed against the reception layout, furniture footprint and walking path.",
-        },
       ],
     },
     {
@@ -876,12 +864,6 @@ export const nepalCustomSculptedWoolRugGuide: BlogPost = {
             ["Packing and access", "Large rugs must move through the real delivery path", "Loading point, lift or stair limits and target site date"],
             ["Material confirmation", "The final composition affects approval and care", "Required material direction and project documentation"],
           ],
-        },
-        {
-          type: "image",
-          src: "/images/blog-series/custom-sculpted-wool-rugs-nepal-hospitality-guide/custom-sculpted-wool-rugs-nepal-hospitality-1600.avif",
-          alt: "Custom sculpted wool rug in a Nepal hospitality lounge with carved geometric texture",
-          caption: "A lounge reference helps the buyer judge the rug against furniture, walking space and the actual visual scale of the room.",
         },
       ],
     },
