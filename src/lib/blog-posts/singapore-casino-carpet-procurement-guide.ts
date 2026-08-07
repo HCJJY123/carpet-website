@@ -89,13 +89,6 @@ export const singaporeCasinoCarpetProcurementChecklist: BlogPost = {
       paragraphs: [],
       blocks: [
         {
-          type: "image",
-          src: "/images/blog-series/singapore-casino-carpet-procurement-checklist/singapore-casino-carpet-procurement-checklist-1600.avif",
-          alt: "Singapore casino floor with oriental floral carpet and warm gaming corridor lighting",
-          caption:
-            "Backing, installation method and cleaning access should all be checked before the order is confirmed.",
-        },
-        {
           type: "list",
           items: [
             { title: "Only approving the artwork.", text: "A casino carpet can look impressive in a render and still fail if the backing or cleaning plan is wrong." },
