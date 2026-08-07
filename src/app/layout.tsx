@@ -78,38 +78,6 @@ export const metadata: Metadata = {
   },
 };
 
-const enhancedFormConversionScript = `
-window.addEventListener('load', function () {
-  document.addEventListener('click', function (e) {
-    var button = e.target && e.target.closest ? e.target.closest('button[type="submit"]') : null;
-    if (button === null) return;
-
-    var form = button.closest('form');
-    if (form === null) return;
-
-    var quantityField = form.querySelector('[name="quantity"]');
-    var productField = form.querySelector('[name="product"]');
-    var companyField = form.querySelector('[name="company"]');
-    var emailField = form.querySelector('[name="email"]');
-
-    var quantity = quantityField && quantityField.value ? quantityField.value : '';
-    var product = productField && productField.value ? productField.value : '';
-    var company = companyField && companyField.value ? companyField.value : '';
-    var email = emailField && emailField.value ? emailField.value.trim().toLowerCase() : '';
-
-    if (quantity !== '' && product !== '' && company !== '' && email !== '' && typeof window.gtag === 'function') {
-      window.gtag('set', 'user_data', {
-        email: email,
-      });
-
-      window.gtag('event', '表单提交', {
-        send_to: 'G-T2VYHXTK1F',
-      });
-    }
-  });
-});
-`;
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -120,12 +88,6 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
-        <script
-          id="enhanced-form-conversion-click-tracking"
-          dangerouslySetInnerHTML={{ __html: enhancedFormConversionScript }}
-        />
-      </head>
       <body className="min-h-full flex flex-col font-sans">
         <LocaleExperience />
         <JsonLd />

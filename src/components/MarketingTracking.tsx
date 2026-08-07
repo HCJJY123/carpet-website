@@ -82,6 +82,45 @@ export default function MarketingTracking() {
   useEffect(() => {
     if (!analyticsAllowed) return;
 
+    const recentlyTrackedForms = new WeakMap<HTMLFormElement, number>();
+
+    function handleValidatedFormClick(event: MouseEvent) {
+      if (typeof window.gtag !== "function") return;
+      if (!(event.target instanceof Element)) return;
+
+      const submitButton = event.target.closest<HTMLButtonElement | HTMLInputElement>(
+        'button[type="submit"], input[type="submit"]'
+      );
+      if (!submitButton) return;
+
+      const form = submitButton.form || submitButton.closest("form");
+      if (!(form instanceof HTMLFormElement)) return;
+      if (!form.checkValidity()) return;
+
+      const email = String(new FormData(form).get("email") || "").trim().toLowerCase();
+      if (!email) return;
+
+      const now = Date.now();
+      const lastTrackedAt = recentlyTrackedForms.get(form) || 0;
+      if (now - lastTrackedAt < 3000) return;
+      recentlyTrackedForms.set(form, now);
+
+      window.gtag("set", "user_data", {
+        email,
+      });
+
+      window.gtag("event", "表单提交", {
+        send_to: "G-T2VYHXTK1F",
+      });
+    }
+
+    document.addEventListener("click", handleValidatedFormClick, true);
+    return () => document.removeEventListener("click", handleValidatedFormClick, true);
+  }, [analyticsAllowed]);
+
+  useEffect(() => {
+    if (!analyticsAllowed) return;
+
     const productMatch = pathname.match(/^\/(?:[a-z]{2}\/)?products\/([^/]+)\/([^/]+)$/);
 
     function maybeTrackHighIntentSession() {
