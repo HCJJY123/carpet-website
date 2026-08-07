@@ -3704,42 +3704,42 @@ export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
   "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/01-main-oriental-flower-luxury-casino-carpet.webp": {
     "width": 1024,
     "height": 1024,
-    "originalBytes": 283150,
+    "originalBytes": 235710,
     "avif": [
       {
-        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-239cb841c3-480w.avif",
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-8c6ec82e37-480w.avif",
         "width": 480,
-        "bytes": 49443
+        "bytes": 46901
       },
       {
-        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-239cb841c3-768w.avif",
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-8c6ec82e37-768w.avif",
         "width": 768,
-        "bytes": 99140
+        "bytes": 95258
       },
       {
-        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-239cb841c3-1024w.avif",
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-8c6ec82e37-1024w.avif",
         "width": 1024,
-        "bytes": 170666
+        "bytes": 157646
       }
     ],
     "webp": [
       {
-        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-239cb841c3-480w.webp",
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-8c6ec82e37-480w.webp",
         "width": 480,
-        "bytes": 53426
+        "bytes": 52120
       },
       {
-        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-239cb841c3-768w.webp",
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-8c6ec82e37-768w.webp",
         "width": 768,
-        "bytes": 115142
+        "bytes": 111126
       },
       {
-        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-239cb841c3-1024w.webp",
+        "src": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-8c6ec82e37-1024w.webp",
         "width": 1024,
-        "bytes": 217570
+        "bytes": 198322
       }
     ],
-    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-239cb841c3-1024w.webp"
+    "fallback": "/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-01-main-oriental-flower-luxury-casino-carpet-8c6ec82e37-1024w.webp"
   },
   "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/02-professional-casino-hotel-flooring.webp": {
     "width": 1024,

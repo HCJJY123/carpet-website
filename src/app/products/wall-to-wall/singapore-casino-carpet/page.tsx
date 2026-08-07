@@ -99,7 +99,7 @@ export default function SingaporeCasinoCarpetPage() {
       </nav>
 
       <section className="border-b border-border bg-slate-50 py-14 md:py-22">
-        <div className="container-fox grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
+        <div className="container-fox grid items-start gap-12 lg:grid-cols-[1.08fr_0.92fr]">
           <div className="space-y-4">
             <ProductImage
               src={images[0].src}
