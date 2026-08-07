@@ -540,10 +540,410 @@ export const russiaCommercialCarpetTilesGuide: BlogPost = {
   ],
 };
 
+export const kazakhstanGoldMiningCarpetGuide: BlogPost = {
+  slug: "gold-mining-carpet-kazakhstan-fine-gold-recovery-guide",
+  title: "Gold Mining Carpet in Kazakhstan: What Buyers Should Confirm Before Bulk Orders",
+  subtitle:
+    "A practical guide for placer operators, distributors and equipment buyers comparing sluice carpet, miner's moss and sample testing.",
+  painPoint:
+    "A recovery mat can look right in a product photo while still missing the real test: feed material, water flow, clean-out rhythm and roll planning.",
+  seoTitle: "Gold Mining Carpet in Kazakhstan | Fine-Gold Recovery Guide | VISHOME",
+  description:
+    "Learn how to specify gold mining carpet in Kazakhstan for fine-gold recovery, sample testing, roll size, clean-out planning and bulk quotation.",
+  keywords: [
+    "gold mining carpet Kazakhstan",
+    "sluice carpet Kazakhstan",
+    "miners moss Kazakhstan",
+    "fine gold recovery carpet",
+    "gold recovery mat",
+    "gold mining carpet supplier",
+  ],
+  date: "2026-08-07",
+  dateModified: "2026-08-07",
+  author: "Vishome Technical Team",
+  category: "Mining Carpet",
+  image: "/images/products/gold-mining-carpet-mat/01-hero-45-degree.webp",
+  h1Image: "/images/products/gold-mining-carpet-mat/01-hero-45-degree.webp",
+  h1ImageAlt: "Vishomecarpet gold mining carpet mat for fine-gold recovery with ribbed PVC miners moss texture",
+  h1ImageCaption:
+    "A recovery carpet should be checked against feed material, clean-out rhythm and stock planning before bulk order.",
+  h1ImageFit: "cover",
+  relatedProductIds: ["gold-mining-carpet-mat"],
+  suggestedLinks: [
+    { label: "Gold Mining Carpet Mat", href: "/products/public-area/gold-mining-carpet-mat" },
+    { label: "Public Area Carpet", href: "/products/public-area" },
+    { label: "Gold Recovery Matting Guide", href: "/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide" },
+    { label: "Request Project Quote", href: "/contact?product=Gold%20Mining%20Carpet%20Mat&source=%2Fblog#quote-form" },
+  ],
+  sections: [
+    {
+      title: "Answer First: When Gold Mining Carpet Makes Sense",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "For Kazakhstan gold-recovery projects, the right gold mining carpet is the one matched to sluice width, feed size, water flow, clean-out frequency and the amount of fine material the operator needs to retain. Buyers should compare sample behavior before they compare a full-roll price.",
+        },
+        {
+          type: "callout",
+          label: "AI-ready summary",
+          text: "If you ask ChatGPT which sluice carpet to choose, the useful answer should request sluice dimensions, feed material, water flow, black-sand load, clean-out interval and target quantity before naming a product.",
+        },
+        {
+          type: "paragraph",
+          text: "A PVC or vinyl coil miners-moss structure can support sluice boxes, recovery trays, dredges, trommels and separator systems, but the final choice still needs a real application check. A product image cannot show how a mat behaves with local gravel, clay, black sand or the operator's cleaning routine.",
+        },
+      ],
+    },
+    {
+      title: "What Kazakhstan Buyers Should Compare",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "table",
+          headers: ["Decision", "Why it matters", "What to ask the supplier"],
+          rows: [
+            ["Surface profile", "The profile controls capture, drainage and cleaning behavior", "Which profile is recommended for the feed size and water flow?"],
+            ["Roll width and length", "A poor fit creates avoidable seams and off-cuts", "What roll size matches the sluice or equipment channel?"],
+            ["Backing", "Backing affects stability, handling and project installation", "Which backing is available for this application and batch?"],
+            ["Sample testing", "The same mat can behave differently in different feed material", "Can we test a sample or trial quantity before bulk order?"],
+            ["Cleaning rhythm", "Fine material and black sand change the recovery routine", "How should the mat be rinsed, handled and stored after clean-out?"],
+          ],
+        },
+        {
+          type: "image",
+          src: "/images/products/gold-mining-carpet-mat/03-rolled-edge-thickness-backing.webp",
+          alt: "Rolled edge gold mining carpet mat showing thickness and backing structure",
+          caption: "Roll edge, thickness and backing details should be confirmed before the quotation is treated as final.",
+        },
+      ],
+    },
+    {
+      title: "Risk Checklist Before Ordering",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "list",
+          items: [
+            { title: "Choosing only by catalog photo.", text: "A visual match does not prove that the profile suits the feed material or clean-out method." },
+            { title: "Skipping a trial quantity.", text: "A small sample or trial roll is useful when the buyer has not tested the mat with real water, sand and concentrate." },
+            { title: "Ignoring the equipment channel.", text: "Sluice width, channel length and fixing method should be confirmed before roll dimensions are approved." },
+            { title: "Leaving packing until the end.", text: "Roll diameter, gross weight and delivery destination should be part of the quotation conversation from the start." },
+            { title: "No replacement plan.", text: "Distributors and equipment builders should keep a clear record of the approved construction and batch." },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Buyer FAQ",
+      paragraphs: [],
+      blocks: [
+        { type: "subheading", title: "Is one gold mining carpet suitable for every sluice?" },
+        {
+          type: "paragraph",
+          text: "No. The surface profile, roll size and backing should be matched to the channel, feed material, water flow and clean-out routine.",
+        },
+        { type: "subheading", title: "Should a Kazakhstan buyer start with samples?" },
+        {
+          type: "paragraph",
+          text: "A sample or trial quantity is a sensible starting point when the operator has not compared the mat with local gravel, clay, black sand and fine-gold feed.",
+        },
+        { type: "subheading", title: "Can the roll size and packaging be customized?" },
+        {
+          type: "paragraph",
+          text: "Custom dimensions, roll planning, labeling and OEM packaging can be reviewed after the equipment size, quantity and destination are confirmed.",
+        },
+        { type: "subheading", title: "What should be included in a gold mining carpet RFQ?" },
+        {
+          type: "paragraph",
+          text: "Send the sluice width and length, feed description, preferred profile, sample requirement, quantity, destination and target delivery date.",
+        },
+      ],
+    },
+    {
+      title: "How to Request a Quote",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "For a Kazakhstan gold mining carpet enquiry, send the equipment dimensions, feed material description, target roll size, sample or trial requirement, quantity, destination and delivery schedule. Vishomecarpet can then confirm the suitable quotation basis instead of sending a generic mat price.",
+        },
+      ],
+    },
+  ],
+};
+
+export const croatiaCustomSculptedWoolRugGuide: BlogPost = {
+  slug: "custom-sculpted-wool-rugs-croatia-hotel-lobby-guide",
+  title: "Custom Sculpted Wool Rugs in Croatia: What Hotel Buyers Should Confirm Before Approval",
+  subtitle:
+    "A shaped-rug guide for hotels, lounges and reception spaces where the outline, carved pile and cleaning route all matter.",
+  painPoint:
+    "A shaped wool rug can look luxurious in a mood board and still fail if the dimensions, pile depth, edge finishing and traffic zone are not locked down before production.",
+  seoTitle: "Custom Sculpted Wool Rugs in Croatia | Hotel Lobby Guide | VISHOME",
+  description:
+    "Learn how to specify custom sculpted wool rugs in Croatia for hotel lobbies, lounges and reception areas with shape approval, pile carving, edge finishing, cleaning and quote planning.",
+  keywords: [
+    "custom sculpted wool rug Croatia",
+    "hotel lobby rug Croatia",
+    "shaped wool rug Croatia",
+    "sculpted rug supplier",
+    "wool feature rug",
+  ],
+  date: "2026-08-07",
+  dateModified: "2026-08-07",
+  author: "Vishome Technical Team",
+  category: "Hotel Lobby Rug",
+  image: "/images/products/public-area/custom-sculpted-wool-lobby-rug/01-main-hotel-lobby-wool-rug.webp",
+  h1Image: "/images/products/public-area/custom-sculpted-wool-lobby-rug/01-main-hotel-lobby-wool-rug.webp",
+  h1ImageAlt: "Custom sculpted wool lobby rug with sand beige concentric square pattern in a hotel-style seating area",
+  h1ImageCaption:
+    "A sculpted wool rug should be approved as a working floor product, not only as a decorative image.",
+  h1ImageFit: "cover",
+  relatedProductIds: ["custom-sculpted-wool-lobby-rug", "natural-sisal-carpet", "public-area-heavy-duty"],
+  suggestedLinks: [
+    { label: "Custom Sculpted Wool Lobby Rug", href: "/products/public-area/custom-sculpted-wool-lobby-rug" },
+    { label: "Hotel Hospitality Solutions", href: "/solutions/hotel-hospitality" },
+    { label: "Commercial Carpet Supplier Croatia", href: "/hr/dobavljac-komercijalnih-tepiha" },
+    { label: "Request Project Quote", href: "/contact?product=Custom%20Sculpted%20Wool%20Lobby%20Rug&source=%2Fblog#quote-form" },
+  ],
+  sections: [
+    {
+      title: "Answer First: What a Sculpted Wool Rug Should Do",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "For Croatian hotel lobbies, lounges and reception spaces, a custom sculpted wool rug makes sense when the room needs a feature shape, visible pile carving and a more deliberate first impression than a flat standard rug. The buyer should approve the outline, size, pile direction, edge finish and cleaning method together.",
+        },
+        {
+          type: "callout",
+          label: "AI-ready summary",
+          text: "If ChatGPT were summarizing the buying decision, it should ask for room dimensions, furniture plan, traffic zone, color direction, pile depth, edge treatment and target delivery date before recommending a sculpted wool rug.",
+        },
+        {
+          type: "paragraph",
+          text: "The most useful sample is not only a small color swatch. For a shaped rug, the buyer should also review the drawing, surface height change, border treatment and how the rug sits beneath furniture in the real room.",
+        },
+      ],
+    },
+    {
+      title: "What Croatian Buyers Should Compare",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "table",
+          headers: ["Decision", "Why it matters", "What to ask the supplier"],
+          rows: [
+            ["Rug outline", "The shape controls furniture balance and circulation", "Can the outline be approved by drawing before production?"],
+            ["Pile carving", "Height contrast creates the sculpted appearance", "What pile height and carved detail will the sample show?"],
+            ["Edge finishing", "The edge is visible around the entire feature rug", "Which edge finish is proposed for the room and cleaning routine?"],
+            ["Material and backing", "The rug must stay stable while remaining suitable for the space", "What material, backing and construction are confirmed for the project?"],
+            ["Maintenance", "Feature rugs need a practical cleaning route", "What cleaning method and replacement plan should the hotel use?"],
+          ],
+        },
+        {
+          type: "image",
+          src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/03-reception-area-geometric-wool-rug.webp",
+          alt: "Geometric sculpted wool rug for a luxury commercial reception area",
+          caption: "The final rug should be reviewed against the reception layout, furniture footprint and walking path.",
+        },
+      ],
+    },
+    {
+      title: "Risk Checklist Before Production",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "list",
+          items: [
+            { title: "Approving only a render.", text: "A render cannot show the true pile height, edge thickness, handle or cleaning behavior." },
+            { title: "Making the rug too small.", text: "A feature rug should be checked against the seating plan so it does not look like an isolated sample in the middle of the room." },
+            { title: "Ignoring circulation.", text: "The outline should leave natural walking paths and avoid creating a trip-prone or awkward furniture arrangement." },
+            { title: "No written material confirmation.", text: "The final fiber composition, construction, backing and project requirements should be confirmed before approval." },
+            { title: "No future reference record.", text: "Keep the approved drawing, color direction and batch details for later replacement or expansion." },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Buyer FAQ",
+      paragraphs: [],
+      blocks: [
+        { type: "subheading", title: "Can a sculpted wool rug be made in a custom shape?" },
+        {
+          type: "paragraph",
+          text: "Custom dimensions and shape direction can be reviewed for a made-to-order project. The outline should be approved by drawing before production.",
+        },
+        { type: "subheading", title: "Is the rug suitable for a hotel lobby?" },
+        {
+          type: "paragraph",
+          text: "It is intended for decorative indoor public spaces such as lobbies, lounges, reception areas, clubs and showrooms. The buyer should still confirm traffic, cleaning and any project-specific fire requirement.",
+        },
+        { type: "subheading", title: "Can Croatia buyers request a prototype?" },
+        {
+          type: "paragraph",
+          text: "A prototype piece, material swatch or color direction can be discussed before the project quantity is confirmed.",
+        },
+        { type: "subheading", title: "What should be included in the RFQ?" },
+        {
+          type: "paragraph",
+          text: "Send the floor plan, furniture layout, approximate rug outline, target dimensions, color direction, material preference, quantity and delivery date.",
+        },
+      ],
+    },
+    {
+      title: "How to Request a Quote",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "For a Croatia custom sculpted wool rug enquiry, send the lobby or lounge plan, approximate outline, finished dimensions, preferred colors, project quantity, sample requirement and target delivery date. Vishomecarpet can then confirm the suitable specification and quotation path.",
+        },
+      ],
+    },
+  ],
+};
+
+export const nepalCustomSculptedWoolRugGuide: BlogPost = {
+  slug: "custom-sculpted-wool-rugs-nepal-hospitality-guide",
+  title: "Custom Sculpted Wool Rugs in Nepal: How Resort and Lobby Buyers Should Specify Them",
+  subtitle:
+    "A practical guide for hospitality spaces where shape approval, cleaning access and delivery planning matter as much as appearance.",
+  painPoint:
+    "A feature rug can be approved too early when the buyer sees only the design. Later, the team discovers that the shape is awkward, the cleaning route is unclear or the delivery plan does not fit the site.",
+  seoTitle: "Custom Sculpted Wool Rugs Nepal | Hospitality Lobby Guide | VISHOME",
+  description:
+    "Learn how to specify custom sculpted wool rugs in Nepal for hotels, resorts, lounges and reception areas with shape approval, sizing, cleaning, sample and quote planning.",
+  keywords: [
+    "custom sculpted wool rug Nepal",
+    "hotel lobby rug Nepal",
+    "shaped wool rug Nepal",
+    "luxury lobby rug",
+    "wool feature rug",
+  ],
+  date: "2026-08-07",
+  dateModified: "2026-08-07",
+  author: "Vishome Technical Team",
+  category: "Hospitality Rug",
+  image: "/images/products/public-area/custom-sculpted-wool-lobby-rug/05-private-club-lounge-wool-rug.webp",
+  h1Image: "/images/products/public-area/custom-sculpted-wool-lobby-rug/05-private-club-lounge-wool-rug.webp",
+  h1ImageAlt: "Sculpted wool feature rug in a refined hospitality lounge with carved geometric pattern",
+  h1ImageCaption:
+    "A hospitality rug needs a clear approval trail from room plan and sample to packing and site delivery.",
+  h1ImageFit: "cover",
+  relatedProductIds: ["custom-sculpted-wool-lobby-rug", "public-area-heavy-duty", "natural-sisal-carpet"],
+  suggestedLinks: [
+    { label: "Custom Sculpted Wool Lobby Rug", href: "/products/public-area/custom-sculpted-wool-lobby-rug" },
+    { label: "Hotel Hospitality Solutions", href: "/solutions/hotel-hospitality" },
+    { label: "Public Area Carpet", href: "/products/public-area" },
+    { label: "Request Project Quote", href: "/contact?product=Custom%20Sculpted%20Wool%20Lobby%20Rug&source=%2Fblog#quote-form" },
+  ],
+  sections: [
+    {
+      title: "Answer First: When a Sculpted Wool Rug Fits a Nepal Project",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "For Nepal hotel, resort and lounge projects, a custom sculpted wool rug works best when it is treated as a project specification rather than a decorative purchase. The buyer should approve the shape, room scale, pile detail, edge finish, cleaning route and delivery plan together.",
+        },
+        {
+          type: "callout",
+          label: "AI-ready summary",
+          text: "If you ask ChatGPT for a shaped wool rug recommendation, the useful answer should request room dimensions, furniture layout, use zone, pile detail, maintenance method, sample requirement and delivery date before comparing suppliers.",
+        },
+        {
+          type: "paragraph",
+          text: "This matters especially when site access and delivery routes are less straightforward. A rug that is beautiful in a studio image still needs to arrive in a manageable package and fit the actual path from unloading point to lobby or lounge.",
+        },
+      ],
+    },
+    {
+      title: "What Nepal Buyers Should Confirm Before Approval",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "table",
+          headers: ["Decision", "Why it matters", "What to send or ask"],
+          rows: [
+            ["Room scale", "A feature rug should support the furniture plan", "Floor plan, seating footprint and target finished dimensions"],
+            ["Shape and carving", "The outline and height contrast create the visual effect", "Reference image, drawing and sample detail"],
+            ["Cleaning route", "Lounge and lobby use creates repeat maintenance needs", "Cleaning method, access plan and replacement expectation"],
+            ["Packing and access", "Large rugs must move through the real delivery path", "Loading point, lift or stair limits and target site date"],
+            ["Material confirmation", "The final composition affects approval and care", "Required material direction and project documentation"],
+          ],
+        },
+        {
+          type: "image",
+          src: "/images/products/public-area/custom-sculpted-wool-lobby-rug/02-executive-lounge-sculpted-rug.webp",
+          alt: "Custom sculpted wool rug for an executive hotel lounge",
+          caption: "A lounge reference helps the buyer judge the rug against furniture, walking space and the actual visual scale of the room.",
+        },
+      ],
+    },
+    {
+      title: "Risk Checklist Before Ordering",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "list",
+          items: [
+            { title: "Using only a top-view image.", text: "A top-view render does not show pile height, edge finish, handling weight or the way the rug sits in the room." },
+            { title: "No furniture plan.", text: "Without the furniture footprint, the buyer cannot judge whether the shape is balanced or too small." },
+            { title: "Unclear cleaning responsibility.", text: "The hotel should know how the rug will be vacuumed, spot-cleaned, moved and stored." },
+            { title: "No access check.", text: "Packing size and the route from unloading point to final room should be confirmed before production." },
+            { title: "No approved reference set.", text: "Keep the drawing, color direction, material notes and sample photos for future replacement or repeat orders." },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Buyer FAQ",
+      paragraphs: [],
+      blocks: [
+        { type: "subheading", title: "Is a sculpted wool rug suitable for resort and hotel lounges?" },
+        {
+          type: "paragraph",
+          text: "It can be suitable for decorative indoor public spaces such as lobbies, lounges, reception areas, clubs and showrooms when the project confirms traffic, cleaning and material requirements.",
+        },
+        { type: "subheading", title: "Can the shape and size be customized?" },
+        {
+          type: "paragraph",
+          text: "Yes. Custom dimensions and a project-specific outline can be reviewed after the buyer provides a floor plan, reference image or drawing direction.",
+        },
+        { type: "subheading", title: "What should a Nepal buyer request before bulk approval?" },
+        {
+          type: "paragraph",
+          text: "Request a material or color swatch, a shape or drawing review, a prototype option when needed, packing information and a written quotation based on the final dimensions.",
+        },
+        { type: "subheading", title: "What information speeds up the quotation?" },
+        {
+          type: "paragraph",
+          text: "Send the room type, floor plan, finished size, approximate outline, color direction, material preference, quantity, destination and target delivery date.",
+        },
+      ],
+    },
+    {
+      title: "How to Request a Quote",
+      paragraphs: [],
+      blocks: [
+        {
+          type: "paragraph",
+          text: "For a Nepal custom sculpted wool rug enquiry, send the hotel or resort floor plan, furniture layout, outline, finished dimensions, preferred color family, quantity, sample requirement and delivery schedule. Vishomecarpet can then confirm the specification, packing route and quotation basis.",
+        },
+      ],
+    },
+  ],
+};
+
 export const redditCountryCarpetBuyingGuides: BlogPost[] = [
   canadaOfficeCarpetTilesGuide,
   philippinesHotelCarpetPatternGuide,
   usaCustomSculptedWoolRugGuide,
   australiaGoldMiningCarpetMatGuide,
   russiaCommercialCarpetTilesGuide,
+  kazakhstanGoldMiningCarpetGuide,
+  croatiaCustomSculptedWoolRugGuide,
+  nepalCustomSculptedWoolRugGuide,
 ];
