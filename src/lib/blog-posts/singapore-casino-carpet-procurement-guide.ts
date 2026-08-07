@@ -22,9 +22,10 @@ export const singaporeCasinoCarpetProcurementChecklist: BlogPost = {
   dateModified: "2026-08-07",
   author: "Vishome Technical Team",
   category: "Casino Carpet",
-  image: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/01-main-oriental-flower-luxury-casino-carpet.webp",
-  h1Image: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/01-main-oriental-flower-luxury-casino-carpet.webp",
-  h1ImageAlt: "Custom oriental flower luxury casino carpet for Singapore gaming floors by Vishomecarpet",
+  image: "/images/blog-series/singapore-casino-carpet-procurement-checklist/singapore-casino-carpet-procurement-checklist-1600.avif",
+  h1Image: "/images/blog-series/singapore-casino-carpet-procurement-checklist/singapore-casino-carpet-procurement-checklist-1600.avif",
+  h1ImageMobile: "/images/blog-series/singapore-casino-carpet-procurement-checklist/singapore-casino-carpet-procurement-checklist-900.avif",
+  h1ImageAlt: "Singapore casino floor with oriental floral carpet and warm gaming corridor lighting",
   h1ImageCaption:
     "A Singapore casino floor needs pattern depth, cleanable texture and a delivery plan that fits the project stage.",
   h1ImageFit: "cover",
@@ -89,8 +90,8 @@ export const singaporeCasinoCarpetProcurementChecklist: BlogPost = {
       blocks: [
         {
           type: "image",
-          src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/04-durable-non-slip-backing-easy-installation.webp",
-          alt: "Durable non-slip backing and easy installation detail for casino carpet",
+          src: "/images/blog-series/singapore-casino-carpet-procurement-checklist/singapore-casino-carpet-procurement-checklist-1600.avif",
+          alt: "Singapore casino floor with oriental floral carpet and warm gaming corridor lighting",
           caption:
             "Backing, installation method and cleaning access should all be checked before the order is confirmed.",
         },
@@ -143,4 +144,3 @@ export const singaporeCasinoCarpetProcurementChecklist: BlogPost = {
     },
   ],
 };
-
