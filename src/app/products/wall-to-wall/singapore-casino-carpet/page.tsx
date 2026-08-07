@@ -45,6 +45,7 @@ const specificationRows = [
 const relatedLinks = [
   { label: "Singapore Casino Carpet Supplier", href: "/sg/singapore-casino-carpet-supplier" },
   { label: "Casino Carpet Solution", href: "/solutions/casino-carpet-supplier" },
+  { label: "Casino Carpet Buying Guide", href: "/blog/casino-carpet-singapore-gaming-floor-buying-guide" },
   { label: "Wall-to-Wall Carpets", href: "/products/wall-to-wall" },
   { label: "Request Quote", href: `/contact?product=${encodeURIComponent(product.name)}#quote-form` },
 ];
