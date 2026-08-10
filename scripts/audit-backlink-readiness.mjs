@@ -93,9 +93,12 @@ function auditLinks() {
   for (const file of requiredFiles) {
     if (!fs.existsSync(path.join(ROOT, file))) messages.push(`Missing sitemap/robots file: ${file}`);
   }
-  const sitemapText = read(path.join(ROOT, "src/app/sitemap.ts"));
+  const sitemapText = requiredFiles
+    .filter((file) => file.includes("sitemap"))
+    .map((file) => read(path.join(ROOT, file)))
+    .join("\n");
   ["/resources/technical-library", "/architects-designers", "/media/press-kit", "/applications", "/quality-control", "/certifications"].forEach((route) => {
-    if (!sitemapText.includes(route)) messages.push(`Route missing from main sitemap source: ${route}`);
+    if (!sitemapText.includes(route)) messages.push(`Route missing from sitemap sources: ${route}`);
   });
   fail(messages);
   console.log("Link and sitemap audit passed.");

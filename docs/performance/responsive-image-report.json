@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T11:32:17.268Z",
+  "generatedAt": "2026-08-10T12:40:47.880Z",
   "images": [
     {
       "source": "/images/home/hero-home.webp",
@@ -2527,6 +2527,116 @@
             "src": "/images/optimized/blog-series-office-carpet-tiles-romania-office-carpet-tiles-romania-detail-ea60f8ed5a-1600w.webp",
             "width": 1600,
             "bytes": 289890
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/blog-series/hotel-carpet-renovation-hard-flooring-decision-guide/hotel-carpet-renovation-hard-flooring-decision-guide.png",
+      "references": 3,
+      "originalBytes": 3319459,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 182578,
+      "reductionPercent": 94.5,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/blog-series-hotel-carpet-renovation-hard-flooring-decision-guide-hotel-carpet-renovation-hard-flooring-decision-guide-d4463a4f0e-480w.avif",
+            "width": 480,
+            "bytes": 22906
+          },
+          {
+            "src": "/images/optimized/blog-series-hotel-carpet-renovation-hard-flooring-decision-guide-hotel-carpet-renovation-hard-flooring-decision-guide-d4463a4f0e-768w.avif",
+            "width": 768,
+            "bytes": 55515
+          },
+          {
+            "src": "/images/optimized/blog-series-hotel-carpet-renovation-hard-flooring-decision-guide-hotel-carpet-renovation-hard-flooring-decision-guide-d4463a4f0e-1200w.avif",
+            "width": 1200,
+            "bytes": 121608
+          },
+          {
+            "src": "/images/optimized/blog-series-hotel-carpet-renovation-hard-flooring-decision-guide-hotel-carpet-renovation-hard-flooring-decision-guide-d4463a4f0e-1536w.avif",
+            "width": 1536,
+            "bytes": 182578
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/blog-series-hotel-carpet-renovation-hard-flooring-decision-guide-hotel-carpet-renovation-hard-flooring-decision-guide-d4463a4f0e-480w.webp",
+            "width": 480,
+            "bytes": 26574
+          },
+          {
+            "src": "/images/optimized/blog-series-hotel-carpet-renovation-hard-flooring-decision-guide-hotel-carpet-renovation-hard-flooring-decision-guide-d4463a4f0e-768w.webp",
+            "width": 768,
+            "bytes": 65236
+          },
+          {
+            "src": "/images/optimized/blog-series-hotel-carpet-renovation-hard-flooring-decision-guide-hotel-carpet-renovation-hard-flooring-decision-guide-d4463a4f0e-1200w.webp",
+            "width": 1200,
+            "bytes": 157350
+          },
+          {
+            "src": "/images/optimized/blog-series-hotel-carpet-renovation-hard-flooring-decision-guide-hotel-carpet-renovation-hard-flooring-decision-guide-d4463a4f0e-1536w.webp",
+            "width": 1536,
+            "bytes": 252716
+          }
+        ]
+      }
+    },
+    {
+      "source": "/images/blog-series/office-carpet-tiles-rolling-chairs-fitout-guide/office-carpet-tiles-rolling-chairs-fitout-guide.png",
+      "references": 3,
+      "originalBytes": 2766444,
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "desktopAvifBytes": 175995,
+      "reductionPercent": 93.6,
+      "variants": {
+        "avif": [
+          {
+            "src": "/images/optimized/blog-series-office-carpet-tiles-rolling-chairs-fitout-guide-office-carpet-tiles-rolling-chairs-fitout-guide-23dee13a2e-480w.avif",
+            "width": 480,
+            "bytes": 21114
+          },
+          {
+            "src": "/images/optimized/blog-series-office-carpet-tiles-rolling-chairs-fitout-guide-office-carpet-tiles-rolling-chairs-fitout-guide-23dee13a2e-768w.avif",
+            "width": 768,
+            "bytes": 56168
+          },
+          {
+            "src": "/images/optimized/blog-series-office-carpet-tiles-rolling-chairs-fitout-guide-office-carpet-tiles-rolling-chairs-fitout-guide-23dee13a2e-1200w.avif",
+            "width": 1200,
+            "bytes": 121218
+          },
+          {
+            "src": "/images/optimized/blog-series-office-carpet-tiles-rolling-chairs-fitout-guide-office-carpet-tiles-rolling-chairs-fitout-guide-23dee13a2e-1536w.avif",
+            "width": 1536,
+            "bytes": 175995
+          }
+        ],
+        "webp": [
+          {
+            "src": "/images/optimized/blog-series-office-carpet-tiles-rolling-chairs-fitout-guide-office-carpet-tiles-rolling-chairs-fitout-guide-23dee13a2e-480w.webp",
+            "width": 480,
+            "bytes": 27196
+          },
+          {
+            "src": "/images/optimized/blog-series-office-carpet-tiles-rolling-chairs-fitout-guide-office-carpet-tiles-rolling-chairs-fitout-guide-23dee13a2e-768w.webp",
+            "width": 768,
+            "bytes": 70256
+          },
+          {
+            "src": "/images/optimized/blog-series-office-carpet-tiles-rolling-chairs-fitout-guide-office-carpet-tiles-rolling-chairs-fitout-guide-23dee13a2e-1200w.webp",
+            "width": 1200,
+            "bytes": 162188
+          },
+          {
+            "src": "/images/optimized/blog-series-office-carpet-tiles-rolling-chairs-fitout-guide-office-carpet-tiles-rolling-chairs-fitout-guide-23dee13a2e-1536w.webp",
+            "width": 1536,
+            "bytes": 250472
           }
         ]
       }
