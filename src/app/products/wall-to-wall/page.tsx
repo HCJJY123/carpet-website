@@ -246,6 +246,7 @@ export default function CategoryPage() {
           { label: "Factory & Production", href: "/factory" },
           { label: "Hotel Acoustic Guide", href: "/blog/hotel-noise-acoustic-carpet-specification-guide" },
           { label: "Hotel Pattern Guide", href: "/blog/why-hotel-carpet-patterns-look-busy" },
+          { label: "Renovation Decision Guide", href: "/blog/hotel-carpet-renovation-hard-flooring-decision-guide" },
           { label: "Request a Quote", href: "/contact?product=Wall-to-Wall%20Carpet#quote-form" },
         ]}
       />

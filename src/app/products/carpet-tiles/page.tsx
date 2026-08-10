@@ -218,6 +218,7 @@ export default function CategoryPage() {
           { label: "Manufacturer Profile", href: "/commercial-carpet-manufacturer" },
           { label: "Factory & Production", href: "/factory" },
           { label: "Concrete Installation Guide", href: "/blog/carpet-tiles-over-concrete-installation-guide" },
+          { label: "Rolling Chair Fit-Out Guide", href: "/blog/office-carpet-tiles-rolling-chairs-fitout-guide" },
           { label: "Request a Quote", href: "/contact?product=Commercial%20Carpet%20Tiles#quote-form" },
         ]}
       />

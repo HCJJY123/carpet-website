@@ -1,21 +1,13 @@
 {
-  "task": "Sync production Singapore casino carpet product, market page and Phase 0 audit report",
-  "approvedBy": "Site owner approval in Codex task on 2026-08-07 to organize tonight's production content into one commit/PR",
-  "approvedCategories": ["governance", "content", "seo-global", "conversion", "media", "country-market", "product-page", "documentation"],
+  "task": "Strengthen category-to-guide internal links for the two merged procurement blogs",
+  "approvedBy": "Site owner continuation approval in Codex task on 2026-08-10 after PR #11 production merge",
+  "approvedCategories": ["governance", "seo-global", "documentation"],
   "allowedPaths": [
     "CHANGELOG_OPS.md",
-    "docs/reports/**",
-    "ops/**",
-    "public/images/optimized/products-wall-to-wall-custom-polyester-loop-casino-carpet-*",
-    "public/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/**",
-    "src/app/products/wall-to-wall/page.tsx",
-    "src/app/products/wall-to-wall/singapore-casino-carpet/**",
-    "src/components/CountryMarketLandingPage.tsx",
-    "src/lib/country-market-pages.ts",
-    "src/lib/data.ts",
-    "src/lib/responsive-image-manifest.ts",
-    "src/lib/solution-data.ts"
+    "ops/change-request.json",
+    "src/app/products/carpet-tiles/page.tsx",
+    "src/app/products/wall-to-wall/page.tsx"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Large image variant set is expected because the production product page uses responsive AVIF/WebP variants. Existing indexed URLs are preserved; one new product URL and one new country market URL are added."
+  "notes": "Existing indexed URLs are preserved. This change only adds contextual links from two existing category pages to two existing procurement guides."
 }
