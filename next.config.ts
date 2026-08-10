@@ -47,6 +47,16 @@ const nextConfig: NextConfig = {
         destination: "/projects/gold-mining-sluice-carpet-peru",
         permanent: true,
       },
+      {
+        source: "/natural-sisal-carpet",
+        destination: "/products/public-area/natural-sisal-carpet",
+        permanent: true,
+      },
+      {
+        source: "/about-us/about",
+        destination: "/about-us",
+        permanent: true,
+      },
     ];
   },
   async headers() {

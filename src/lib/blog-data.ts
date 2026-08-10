@@ -11,6 +11,8 @@ import { commercialCarpetTileMoqGuide } from "@/lib/blog-posts/commercial-carpet
 import { hotelCarpetSupplierChecklistGuide } from "@/lib/blog-posts/hotel-carpet-supplier-checklist-guide";
 import { redditHotelOfficeCarpetComplaintsGuide } from "@/lib/blog-posts/reddit-hotel-office-carpet-complaints-guide";
 import { redditCountryCarpetBuyingGuides } from "@/lib/blog-posts/reddit-country-carpet-buying-guides";
+import { hotelCarpetRenovationHardFlooringDecisionGuide } from "@/lib/blog-posts/hotel-carpet-renovation-hard-flooring-decision-guide";
+import { officeCarpetTilesRollingChairsFitoutGuide } from "@/lib/blog-posts/office-carpet-tiles-rolling-chairs-fitout-guide";
 
 export interface BlogSection {
   title: string;
@@ -56,6 +58,8 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  hotelCarpetRenovationHardFlooringDecisionGuide,
+  officeCarpetTilesRollingChairsFitoutGuide,
   singaporeCasinoCarpetProcurementChecklist,
   singaporeCasinoCarpetBuyingGuide,
   officeCarpetTilesRomaniaGuide,
