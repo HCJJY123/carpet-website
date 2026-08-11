@@ -1,13 +1,12 @@
 {
-  "task": "Strengthen category-to-guide internal links for the two merged procurement blogs",
-  "approvedBy": "Site owner continuation approval in Codex task on 2026-08-10 after PR #11 production merge",
-  "approvedCategories": ["governance", "seo-global", "documentation"],
+  "task": "Improve cookie consent messaging to increase analytics opt-in while keeping consent controls",
+  "approvedBy": "Site owner continuation approval in Codex task on 2026-08-11 after Bing and GSC submission work",
+  "approvedCategories": ["governance", "conversion", "documentation"],
   "allowedPaths": [
     "CHANGELOG_OPS.md",
     "ops/change-request.json",
-    "src/app/products/carpet-tiles/page.tsx",
-    "src/app/products/wall-to-wall/page.tsx"
+    "src/components/CookieConsent.tsx"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing indexed URLs are preserved. This change only adds contextual links from two existing category pages to two existing procurement guides."
+  "notes": "Existing indexed URLs are preserved. This change only updates the cookie consent banner copy and button emphasis to encourage analytics consent without removing the necessary-only choice."
 }

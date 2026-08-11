@@ -2,6 +2,26 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-11 `conversion/cookie-consent-analytics-20260811`
+
+**Type:** Conversion / Consent UX / Analytics
+
+**Scope:** Improved the site-wide cookie consent banner to make analytics opt-in easier to understand while keeping the Necessary only choice.
+
+**Changed URLs:**
+
+- Global site chrome only
+
+**What changed:** Reworded the cookie notice to explain that analytics help measure pages that lead to quote requests, promoted the Accept analytics button, and kept the privacy policy link visible.
+
+**Why:** Increase analytics consent rate so GA4, Microsoft UET, Clarity and related lead tracking can observe more real sessions without removing the user’s control over consent.
+
+**URL mapping:** No URL changes.
+
+**Rollback point:** Revert this commit if the banner becomes too assertive or if consent analytics need to return to the previous copy.
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, and `npm run build`, then confirm the cookie banner still hides after either choice and that analytics remain disabled until Accept analytics is chosen.
+
 ## 2026-08-10 `seo/category-guide-internal-links`
 
 **Type:** SEO / Internal linking
