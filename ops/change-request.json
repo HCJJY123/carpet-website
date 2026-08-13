@@ -1,12 +1,17 @@
 {
-  "task": "Improve cookie consent messaging to increase analytics opt-in while keeping consent controls",
-  "approvedBy": "Site owner continuation approval in Codex task on 2026-08-11 after Bing and GSC submission work",
-  "approvedCategories": ["governance", "conversion", "documentation"],
+  "task": "Publish two Reddit-informed hotel and office carpet procurement blogs with Accio Work images",
+  "approvedBy": "Site owner request in Codex task on 2026-08-14 to upload two blogs using the provided Accio Work images",
+  "approvedCategories": ["governance", "content", "documentation", "seo-global"],
   "allowedPaths": [
-    "CHANGELOG_OPS.md",
     "ops/change-request.json",
-    "src/components/CookieConsent.tsx"
+    "CHANGELOG_OPS.md",
+    "docs/seo/**",
+    "drafts/blogs/**",
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/**",
+    "src/app/blog/[slug]/page.tsx",
+    "src/components/ProductImage.tsx"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing indexed URLs are preserved. This change only updates the cookie consent banner copy and button emphasis to encourage analytics consent without removing the necessary-only choice."
+  "notes": "Existing indexed URLs are preserved. This change publishes two additive Blog URLs, registers them in the blog list/sitemap source, and allows remote Accio image URLs to render through ProductImage until the user provides local source images for WebP/AVIF ingestion."
 }

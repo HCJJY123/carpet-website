@@ -79,6 +79,8 @@ function RichBlogBlock({ block, index }: { block: BlogContentBlock; index: numbe
     );
   }
 
+  const unoptimized = block.src.startsWith("http://") || block.src.startsWith("https://");
+
   return (
     <figure className="my-8">
       <div className="aspect-[16/9] overflow-hidden rounded-xl border border-border bg-white shadow-md">
@@ -88,6 +90,7 @@ function RichBlogBlock({ block, index }: { block: BlogContentBlock; index: numbe
           className="h-full w-full"
           fit="cover"
           sizes="(max-width: 1000px) 100vw, 1000px"
+          unoptimized={unoptimized}
         />
       </div>
       {block.caption ? (

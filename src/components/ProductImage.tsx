@@ -27,6 +27,7 @@ export default function ProductImage({
   loading?: "eager" | "lazy";
   objectPosition?: string;
 }) {
+  const isExternalDirectImage = /^https?:\/\//.test(src) && unoptimized;
   const responsive = responsiveImageManifest[src];
   const [loadState, setLoadState] = useState<{
     src: string;
@@ -35,6 +36,24 @@ export default function ProductImage({
   const defaultMode = responsive ? "responsive" : unoptimized ? "direct" : "optimized";
   const loadMode = loadState.src === src ? loadState.mode : defaultMode;
   const useDirectImage = unoptimized || loadMode === "direct";
+
+  if (isExternalDirectImage && loadMode !== "failed") {
+    return (
+      <div className={`relative overflow-hidden ${className}`}>
+        <img
+          src={src}
+          alt={alt}
+          loading={loading ?? (priority ? "eager" : "lazy")}
+          fetchPriority={priority ? "high" : "low"}
+          decoding="async"
+          draggable={false}
+          className={`absolute inset-0 h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"}`}
+          style={{ objectPosition }}
+          onError={() => setLoadState({ src, mode: "failed" })}
+        />
+      </div>
+    );
+  }
 
   if (loadMode === "responsive" && responsive) {
     const avifSrcSet = responsive.avif.map((item) => `${item.src} ${item.width}w`).join(", ");
