@@ -14,7 +14,7 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Added `/blog/office-carpet-tiles-renovation-cycle-procurement-guide`
 - Updated `/blog` through the shared Blog registry
 
-**What changed:** Added two BlogPost records with answer-first introductions, procurement comparison tables, risk checklists, buyer FAQ sections, related product links, category links, and quote-form entry points. ProductImage now renders explicitly unoptimized external image URLs through a plain image element while local optimized assets are pending.
+**What changed:** Added two BlogPost records with answer-first introductions, procurement comparison tables, risk checklists, buyer FAQ sections, related product links, category links, and quote-form entry points. ProductImage now renders explicitly unoptimized external image URLs through a plain image element while local optimized assets are pending. Added AI-ready procurement modules and related-guide links to the nylon office carpet tile and glitter hotel corridor broadloom product pages, plus internal AI recommendation benchmark and backlink asset planning documents.
 
 **Why:** Strengthen the hotel corridor carpet and office carpet tile topic clusters with high-intent procurement content that supports Google search, AEO/GEO answer extraction, and AI-tool recommendation relevance.
 

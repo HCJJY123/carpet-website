@@ -1,6 +1,6 @@
 {
-  "task": "Publish two Reddit-informed hotel and office carpet procurement blogs with Accio Work images",
-  "approvedBy": "Site owner request in Codex task on 2026-08-14 to upload two blogs using the provided Accio Work images",
+  "task": "Publish two Reddit-informed blogs and strengthen SEO/AI recommendation assets",
+  "approvedBy": "Site owner request in Codex task on 2026-08-14 to upload two blogs and execute today's SEO/AI recommendation optimization work",
   "approvedCategories": ["governance", "content", "documentation", "seo-global"],
   "allowedPaths": [
     "ops/change-request.json",
@@ -10,8 +10,10 @@
     "src/lib/blog-data.ts",
     "src/lib/blog-posts/**",
     "src/app/blog/[slug]/page.tsx",
-    "src/components/ProductImage.tsx"
+    "src/components/ProductImage.tsx",
+    "src/app/products/carpet-tiles/nylon-office-carpet-tile/page.tsx",
+    "src/app/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet/page.tsx"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing indexed URLs are preserved. This change publishes two additive Blog URLs, registers them in the blog list/sitemap source, and allows remote Accio image URLs to render through ProductImage until the user provides local source images for WebP/AVIF ingestion."
+  "notes": "Existing indexed URLs are preserved. This change publishes two additive Blog URLs, registers them in the blog list/sitemap source, allows remote Accio image URLs to render through ProductImage until local WebP/AVIF ingestion, and adds answer-first procurement modules plus AI recommendation documentation for priority hotel and office carpet pages."
 }

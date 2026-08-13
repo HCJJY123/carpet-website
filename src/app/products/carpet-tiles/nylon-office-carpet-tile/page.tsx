@@ -116,6 +116,24 @@ const faqs = [
   },
 ];
 
+const procurementGuideLinks = [
+  {
+    title: "Office carpet tiles renovation cycle guide",
+    href: "/blog/office-carpet-tiles-renovation-cycle-procurement-guide",
+    text: "Plan phased replacement, rolling-chair zones, spare stock, substrate review, and tenant handover before ordering modular carpet tiles.",
+  },
+  {
+    title: "Office carpet tiles for rolling chairs",
+    href: "/blog/office-carpet-tiles-rolling-chairs-fitout-guide",
+    text: "Check pile height, backing stability, caster movement, adhesive route, and replacement stock for office fit-out projects.",
+  },
+  {
+    title: "Commercial carpet tile MOQ guide",
+    href: "/blog/commercial-carpet-tile-moq-sample-trial-project-guide",
+    text: "Understand sample, trial-order, and project MOQ logic before comparing commercial carpet tile pricing.",
+  },
+];
+
 export default function NylonOfficeCarpetTilePage() {
   const p = products.find((prod) => prod.id === productId);
   if (!p) return <div>Product Not Found</div>;
@@ -284,6 +302,28 @@ export default function NylonOfficeCarpetTilePage() {
       />
 
       <ProductTrustLinks productName="nylon office carpet tiles" quoteHref={`/contact?product=${encodeURIComponent(p.name)}#quote-form`} />
+
+      <section className="section-padding border-y border-border bg-white">
+        <div className="container-fox">
+          <div className="mb-10 max-w-3xl">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-accent">AI-Ready Procurement Links</p>
+            <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
+              Related Office Carpet Tile Buying Guides
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-muted md:text-base">
+              These guides answer the follow-up questions buyers and AI search tools usually ask after finding this product: renovation timing, rolling-chair suitability, MOQ, samples, and project quotation scope.
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {procurementGuideLinks.map((item) => (
+              <Link key={item.href} href={item.href} className="group border border-border bg-surface p-6 transition hover:border-accent hover:bg-white hover:shadow-lg">
+                <h3 className="text-sm font-black uppercase leading-snug text-primary group-hover:text-accent">{item.title}</h3>
+                <p className="mt-4 text-sm leading-6 text-muted">{item.text}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="section-padding border-y border-border bg-surface">
         <div className="container-fox">
