@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AnswerFirst from "@/components/AnswerFirst";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel, ProductSpecCards } from "@/components/ProductConversion";
 import { products } from "@/lib/data";
@@ -45,6 +46,7 @@ const specificationRows = [
 const relatedLinks = [
   { label: "Singapore Casino Carpet Supplier", href: "/sg/singapore-casino-carpet-supplier" },
   { label: "Casino Carpet Solution", href: "/solutions/casino-carpet-supplier" },
+  { label: "Casino Procurement Checklist", href: "/blog/singapore-casino-carpet-procurement-checklist" },
   { label: "Casino Carpet Buying Guide", href: "/blog/casino-carpet-singapore-gaming-floor-buying-guide" },
   { label: "Wall-to-Wall Carpets", href: "/products/wall-to-wall" },
   { label: "Request Quote", href: `/contact?product=${encodeURIComponent(product.name)}#quote-form` },
@@ -132,6 +134,28 @@ export default function SingaporeCasinoCarpetPage() {
           </div>
         </div>
       </section>
+
+      <AnswerFirst
+        eyebrow="Singapore Casino Carpet Buying Answer"
+        title="Choose custom broadloom when casino zones need pattern impact, soil control and project approval discipline"
+        answer="For Singapore casino and entertainment flooring, a custom wall-to-wall casino carpet should be specified by traffic zone, pattern scale, visual soil-hiding, backing stability, cleaning access, sample approval and required project documents. The safest buying path is to confirm artwork, sample or strike-off, area by zone, packing, delivery access and written quotation validity before comparing price per square metre."
+        facts={[
+          { label: "Best Use", value: "Gaming floors, VIP rooms, clubs, lift lobbies, corridors and hotel entertainment zones" },
+          { label: "Key Risk", value: "Approving artwork without testing pattern scale, traffic zone, cleaning access and sample timing" },
+          { label: "Document Check", value: "Request TDS, backing, packing data, sample basis, required project documents and quote validity" },
+          { label: "Quote Basis", value: "Area, pattern, backing, packing, delivery schedule and written quotation terms" },
+        ]}
+        moq={[
+          { label: "Sample", value: product.moqTiers.sample },
+          { label: "Trial Order", value: product.moqTiers.trialOrder },
+          { label: "Project MOQ", value: product.moqTiers.project },
+        ]}
+        suitableFor={["Singapore casino and hospitality entertainment projects", "Custom pattern broadloom where the floor is part of the guest experience", "Projects with enough time for artwork, sample approval and production planning"]}
+        notSuitableFor={["Outdoor or wet-service areas", "Projects needing tile-by-tile replacement as the main requirement", "Orders that require final stock, certification or delivery promises without written confirmation"]}
+        evidence="Product facts and commercial guidance are based on the listed Vishomecarpet page data. Final construction, sample path, documents, stock or production status, delivery terms and quotation validity must be confirmed in writing for each project."
+        quoteHref={`/contact?product=${encodeURIComponent(product.name)}#quote-form`}
+        quoteLabel="Request Casino Carpet Quote"
+      />
 
       <section className="section-padding" data-funnel-section="singapore_casino_specification">
         <div className="container-fox grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">

@@ -2,6 +2,27 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-14 `seo/ai-product-pages-20260814`
+
+**Type:** SEO-AEO-GEO / Product page content / Internal linking
+
+**Scope:** Strengthened two high-intent product pages for AI recommendation and procurement answer extraction.
+
+**Changed URLs:**
+
+- Updated `/products/wall-to-wall/singapore-casino-carpet`
+- Updated `/products/public-area/gold-mining-carpet-mat`
+
+**What changed:** Added a structured Answer-first procurement block to the Singapore casino carpet page and added clearer related procurement guide links to the gold mining carpet mat page. The changes reinforce best-use, not-suitable, sample/trial/project MOQ, RFQ, country guide and resource-page paths without changing product facts, prices, certifications, contact details or URLs.
+
+**Why:** Improve the likelihood that Google, Bing and AI tools can identify Vishomecarpet pages as useful B2B procurement answers for Singapore casino carpet and gold mining sluice matting queries.
+
+**URL mapping:** No existing URL is removed, renamed, redirected or canonicalized differently.
+
+**Rollback point:** Revert this change set if the added procurement modules need to be withdrawn.
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, and `npm run build`; verify both changed product pages return HTTP 200 after deployment.
+
 ## 2026-08-14 `content/reddit-hotel-office-topics-20260814`
 
 **Type:** Blog / SEO-AEO-GEO / Content

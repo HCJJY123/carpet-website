@@ -375,12 +375,21 @@ export default function GoldMiningCarpetMatPage() {
       <BuyerReasons product={p} />
       <section className="section-padding bg-surface">
         <div className="container-fox">
-          <h2 className="mb-8 text-3xl font-black uppercase text-primary">Related Mining Resources and Product Links</h2>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mb-8 max-w-3xl">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">AI-Ready Mining Procurement Paths</p>
+            <h2 className="text-3xl font-black uppercase text-primary">Related Mining Resources and Product Links</h2>
+            <p className="mt-4 text-sm leading-7 text-muted md:text-base">
+              These links connect the product page with country examples, Reddit-informed buying guides, RFQ resources and the broader public-area product collection so buyers can compare application, trial order and wholesale planning paths.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {[
               ["Public Area Product Collection", "/products/public-area"],
-              ["Gold Mining Sluice Project Case", "/projects/gold-mining-sluice-carpet-peru"],
+              ["Peru Sluice Carpet Project Case", "/projects/gold-mining-sluice-carpet-peru"],
+              ["Colombia Distributor Case", "/projects/gold-mining-carpet-colombia-distributor-guide"],
+              ["Kazakhstan Fine Gold Guide", "/blog/gold-mining-carpet-kazakhstan-fine-gold-recovery-guide"],
               ["Sluice Matting Selection Guide", "/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide"],
+              ["Gold Mining Mat RFQ Checklist", "/resources/downloads/gold-mining-mat-rfq-checklist"],
               ["Request Mining Mat Quote", "/contact?product=Gold%20Mining%20Carpet%20Mat#quote-form"],
             ].map(([label, href]) => (
               <Link key={href} href={href} className="border border-border bg-white p-6 font-black uppercase transition-colors hover:border-accent hover:text-accent">
