@@ -2,6 +2,28 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-14 `content/reddit-hotel-office-topics-20260814`
+
+**Type:** Blog / SEO-AEO-GEO / Content
+
+**Scope:** Published two Reddit-informed procurement Blog guides for hotel corridor carpet stain hiding and office carpet tile renovation-cycle buying decisions.
+
+**Changed URLs:**
+
+- Added `/blog/hotel-corridor-carpet-stain-hiding-procurement-guide`
+- Added `/blog/office-carpet-tiles-renovation-cycle-procurement-guide`
+- Updated `/blog` through the shared Blog registry
+
+**What changed:** Added two BlogPost records with answer-first introductions, procurement comparison tables, risk checklists, buyer FAQ sections, related product links, category links, and quote-form entry points. ProductImage now renders explicitly unoptimized external image URLs through a plain image element while local optimized assets are pending. Added AI-ready procurement modules and related-guide links to the nylon office carpet tile and glitter hotel corridor broadloom product pages, plus internal AI recommendation benchmark and backlink asset planning documents.
+
+**Why:** Strengthen the hotel corridor carpet and office carpet tile topic clusters with high-intent procurement content that supports Google search, AEO/GEO answer extraction, and AI-tool recommendation relevance.
+
+**URL mapping:** No existing URL is removed, renamed, or redirected. New Blog URLs are additive only.
+
+**Rollback point:** Revert this change set if either Blog topic or externally hosted image handling needs to be withdrawn.
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, and `npm run build`; then verify both new Blog URLs and `/blog` return HTTP 200 in Preview and Production.
+
 ## 2026-08-11 `conversion/cookie-consent-analytics-20260811`
 
 **Type:** Conversion / Consent UX / Analytics
