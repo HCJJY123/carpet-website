@@ -2,6 +2,29 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-14 `seo/linkable-assets-20260814`
+
+**Type:** SEO / AEO-GEO / Procurement documentation
+
+**Scope:** Added two linkable buyer worksheets that support the existing hotel corridor carpet and office carpet tile content clusters.
+
+**Changed URLs:**
+
+- Added `/resources/downloads/hotel-corridor-carpet-stain-hiding-checklist`
+- Added `/resources/downloads/office-carpet-tiles-renovation-rfq-template`
+- Added `/downloads/hotel-corridor-carpet-stain-hiding-checklist.pdf`
+- Added `/downloads/office-carpet-tiles-renovation-rfq-template.pdf`
+
+**What changed:** Registered two downloadable one-page procurement worksheets in the shared technical-document registry. The hotel checklist covers stain visibility, lighting, traffic zones, cleaning access, roll planning and spare material before a quotation. The office template covers phased work, rolling-chair zones, substrate review, spare stock and handover timing.
+
+**Why:** Create useful, citable planning assets that can earn relevant references, improve buyer confidence and give search engines and AI answer tools concise first-party procurement material.
+
+**URL mapping:** No existing URL is removed, renamed or redirected. All four URLs are additive only.
+
+**Rollback point:** Revert this change set if either worksheet needs replacement or withdrawal.
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, and `npm run build`; then verify both resource pages and both PDF URLs return HTTP 200 in Preview and Production.
+
 ## 2026-08-14 `content/reddit-hotel-office-topics-20260814`
 
 **Type:** Blog / SEO-AEO-GEO / Content
