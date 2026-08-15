@@ -2,6 +2,30 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-15 `seo/ai-source-map-refresh-20260815`
+
+**Type:** SEO / GEO / AEO / AI-readable documentation
+
+**Scope:** Synchronized the current procurement articles and two live buyer worksheets into the site's machine-readable source maps.
+
+**Changed URLs:**
+
+- Updated `/llms.txt`
+- Updated `/llms-full.txt`
+- Updated `/ai-sources.json`
+- Registered `/resources/downloads/hotel-corridor-carpet-stain-hiding-checklist` in keyword ownership
+- Registered `/resources/downloads/office-carpet-tiles-renovation-rfq-template` in keyword ownership
+
+**What changed:** Added the two recently published hotel corridor and office carpet tile procurement guides, both procurement worksheet landing pages, and both PDF URLs to the AI citation and routing references. The source maps now state which official pages should answer each buyer question and route buyers to the contact and sample paths for confirmation.
+
+**Why:** Improve crawl discovery, answer extraction and citation accuracy for search engines and AI assistants without creating duplicate pages or making unsupported product claims.
+
+**URL mapping:** No existing URL is removed, renamed or redirected. All changes are additive references to already-live URLs.
+
+**Rollback point:** Revert this commit if the source-map references need to be withdrawn or corrected.
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, and `npm run build`; validate JSON parsing, source-map links, split resource sitemap coverage and production HTTP 200 responses.
+
 ## 2026-08-14 `seo/linkable-assets-20260814`
 
 **Type:** SEO / AEO-GEO / Procurement documentation
