@@ -1,14 +1,15 @@
 {
-  "task": "Create linkable procurement download assets for SEO and AI recommendations",
-  "approvedBy": "Site owner request in Codex task on 2026-08-14 to continue SEO and AI recommendation optimization work after PR #14 was merged",
+  "task": "Refresh AI-readable source maps and indexable procurement resource ownership",
+  "approvedBy": "Site owner request in Codex task on 2026-08-15 to continue SEO, GEO, AEO and AI recommendation optimization and deploy the completed work",
   "approvedCategories": ["governance", "content", "documentation", "seo-global"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/lib/resource-data.ts",
-    "public/downloads/hotel-corridor-carpet-stain-hiding-checklist.pdf",
-    "public/downloads/office-carpet-tiles-renovation-rfq-template.pdf"
+    "public/llms.txt",
+    "public/llms-full.txt",
+    "public/ai-sources.json",
+    "keyword-map.csv"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing indexed URLs are preserved. This change adds two additive procurement download landing pages and PDF files for hotel corridor carpet stain-hiding and office carpet tile renovation RFQ planning. No product facts, certifications, contact details or existing URLs are changed."
+  "notes": "Existing indexed URLs are preserved. This change synchronizes already-live procurement articles and download resources into the site's AI-readable source maps and keyword ownership records. No product facts, certifications, contact details, page content, redirects or conversion paths are changed."
 }
