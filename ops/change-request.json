@@ -1,15 +1,14 @@
 {
-  "task": "Refresh AI-readable source maps and indexable procurement resource ownership",
-  "approvedBy": "Site owner request in Codex task on 2026-08-15 to continue SEO, GEO, AEO and AI recommendation optimization and deploy the completed work",
+  "task": "Strengthen technical document hub discovery for SEO, GEO and AI search",
+  "approvedBy": "Site owner daily SEO / GEO / AI Search optimization instruction on 2026-08-16 for the VISHOME carpet website",
   "approvedCategories": ["governance", "content", "documentation", "seo-global"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "public/llms.txt",
-    "public/llms-full.txt",
-    "public/ai-sources.json",
-    "keyword-map.csv"
+    "src/app/technical-documents/page.tsx",
+    "ops/change-request.json",
+    "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing indexed URLs are preserved. This change synchronizes already-live procurement articles and download resources into the site's AI-readable source maps and keyword ownership records. No product facts, certifications, contact details, page content, redirects or conversion paths are changed."
+  "notes": "Existing indexed URLs are preserved. This change updates the technical documents hub to list all published document landing pages from the shared resource registry, add answer-first buyer routing, and strengthen AI-readable schema without changing product facts, certifications, contact details, redirects or conversion paths."
 }
