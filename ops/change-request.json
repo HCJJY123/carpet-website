@@ -8,6 +8,7 @@
     "src/lib/blog-posts/carpet-tiles-vs-broadloom-commercial-projects-guide.ts",
     "src/lib/blog-data.ts",
     "keyword-map.csv",
+    "src/app/sitemap.ts",
     "public/llms.txt",
     "public/llms-full.txt",
     "public/ai-sources.json",

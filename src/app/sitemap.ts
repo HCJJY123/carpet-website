@@ -19,9 +19,9 @@ const rootOnlyRoutes = [
   { url: "/solutions/hotel-hospitality", modified: "2026-07-23", priority: 0.75, changeFrequency: "monthly" as const },
   { url: "/resources/technical-library", modified: "2026-08-06", priority: 0.76, changeFrequency: "monthly" as const },
   { url: "/request-sample-box", modified: "2026-07-25", priority: 0.8, changeFrequency: "monthly" as const },
-  { url: "/llms.txt", modified: "2026-08-04", priority: 0.2, changeFrequency: "weekly" as const },
-  { url: "/llms-full.txt", modified: "2026-08-04", priority: 0.2, changeFrequency: "weekly" as const },
-  { url: "/ai-sources.json", modified: "2026-08-04", priority: 0.2, changeFrequency: "weekly" as const },
+  { url: "/llms.txt", modified: "2026-08-17", priority: 0.2, changeFrequency: "weekly" as const },
+  { url: "/llms-full.txt", modified: "2026-08-17", priority: 0.2, changeFrequency: "weekly" as const },
+  { url: "/ai-sources.json", modified: "2026-08-17", priority: 0.2, changeFrequency: "weekly" as const },
 ] satisfies RootOnlyRoute[];
 
 export default function sitemap(): MetadataRoute.Sitemap {

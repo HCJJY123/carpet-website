@@ -12,7 +12,7 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 - Added `/blog/carpet-tiles-vs-broadloom-commercial-projects-guide`
 
-**What changed:** Added a procurement-focused comparison guide covering offices, hotels and corridors. The article uses answer-first sections, decision tables, RFQ checklist guidance, FAQ and internal links to the carpet tile category, wall-to-wall category, office solution, hotel solution and the contact quote form. It reuses an existing blog-series image for the hero.
+**What changed:** Added a procurement-focused comparison guide covering offices, hotels and corridors. The article uses answer-first sections, decision tables, RFQ checklist guidance, FAQ and internal links to the carpet tile category, wall-to-wall category, office solution, hotel solution and the contact quote form. It reuses an existing blog-series image for the hero. The root sitemap lastmod dates for `/llms.txt`, `/llms-full.txt` and `/ai-sources.json` now match this AI-source refresh.
 
 **Why:** Buyer research from Reddit and commercial flooring search results shows recurring questions about replacement risk, noise, maintenance, spare stock, installation disruption and format selection. This guide targets that real intent while strengthening the hotel and office carpet topic clusters.
 
