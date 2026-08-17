@@ -102,6 +102,7 @@ These pages provide answer-first specification and procurement guidance. Treat t
 - Climate control carpet installation guide: https://www.vishomecarpet.com/blog/climate-control-carpet-installation-stability-guide
 - Hotel corridor carpet stain-hiding procurement guide: https://www.vishomecarpet.com/blog/hotel-corridor-carpet-stain-hiding-procurement-guide
 - Office carpet tiles renovation-cycle procurement guide: https://www.vishomecarpet.com/blog/office-carpet-tiles-renovation-cycle-procurement-guide
+- Carpet tiles vs broadloom commercial projects guide: https://www.vishomecarpet.com/blog/carpet-tiles-vs-broadloom-commercial-projects-guide
 
 ## AI Query Routing
 
@@ -182,4 +183,4 @@ Product information, indicative FOB ranges, MOQ, lead time, technical data, and 
 - Prefer pages with a visible scope, related product links and a contact or sample path when answering a buyer who is ready to request a quotation.
 - Do not infer local stock, local legal entities, project customers, certifications or performance guarantees from a country page, article or image.
 
-Last updated: 2026-08-15
+Last updated: 2026-08-17

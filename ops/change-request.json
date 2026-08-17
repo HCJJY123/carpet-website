@@ -1,14 +1,19 @@
 {
-  "task": "Strengthen technical document hub discovery for SEO, GEO and AI search",
-  "approvedBy": "Site owner daily SEO / GEO / AI Search optimization instruction on 2026-08-16 for the VISHOME carpet website",
+  "task": "Publish one high-intent commercial carpet comparison buying guide for buyer demand growth",
+  "approvedBy": "Site owner daily buyer content growth instruction on 2026-08-17 for the VISHOME carpet website",
   "approvedCategories": ["governance", "content", "documentation", "seo-global"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/technical-documents/page.tsx",
+    "src/lib/blog-posts/carpet-tiles-vs-broadloom-commercial-projects-guide.ts",
+    "src/lib/blog-data.ts",
+    "keyword-map.csv",
+    "public/llms.txt",
+    "public/llms-full.txt",
+    "public/ai-sources.json",
     "ops/change-request.json",
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing indexed URLs are preserved. This change updates the technical documents hub to list all published document landing pages from the shared resource registry, add answer-first buyer routing, and strengthen AI-readable schema without changing product facts, certifications, contact details, redirects or conversion paths."
+  "notes": "Existing indexed URLs are preserved. This change adds one comparison buying guide for commercial carpet buyers, updates the shared blog registry, keyword ownership and AI-readable source maps, and preserves all current product facts, certifications, contact details, redirects and conversion paths."
 }

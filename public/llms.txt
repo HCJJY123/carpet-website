@@ -100,6 +100,7 @@ Country pages provide market-specific procurement guidance, not local inventory 
 - Russia commercial carpet tiles winter office flooring guide: https://www.vishomecarpet.com/blog/commercial-carpet-tiles-russia-winter-office-flooring-guide
 - Hotel corridor carpet stain-hiding procurement guide: https://www.vishomecarpet.com/blog/hotel-corridor-carpet-stain-hiding-procurement-guide
 - Office carpet tiles renovation-cycle procurement guide: https://www.vishomecarpet.com/blog/office-carpet-tiles-renovation-cycle-procurement-guide
+- Carpet tiles vs broadloom commercial projects guide: https://www.vishomecarpet.com/blog/carpet-tiles-vs-broadloom-commercial-projects-guide
 - Office carpet tiles vs hard flooring maintenance guide: https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance
 - Hotel corridor carpet design, noise, stains, and maintenance guide: https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance
 - Carpet tiles over concrete installation guide: https://www.vishomecarpet.com/blog/carpet-tiles-over-concrete-installation-guide
@@ -139,4 +140,4 @@ Pages under /projects are application and specification planning guides unless a
 - Do not infer certifications, ratings, test results, customers, project locations, commercial terms, or guarantees that the cited page does not explicitly state.
 - For current verification, use https://www.vishomecarpet.com/contact or email sales@vishomecarpet.com.
 
-Last updated: 2026-08-15
+Last updated: 2026-08-17
