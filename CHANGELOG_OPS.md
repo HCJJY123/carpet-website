@@ -2,6 +2,26 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-17 `content/buyer-growth-carpet-tiles-vs-broadloom`
+
+**Type:** Blog / Buyer demand growth / SEO / GEO-AEO / AI Search
+
+**Scope:** Published one high-intent comparison guide for commercial flooring buyers choosing between carpet tiles and broadloom carpet.
+
+**Changed URLs:**
+
+- Added `/blog/carpet-tiles-vs-broadloom-commercial-projects-guide`
+
+**What changed:** Added a procurement-focused comparison guide covering offices, hotels and corridors. The article uses answer-first sections, decision tables, RFQ checklist guidance, FAQ and internal links to the carpet tile category, wall-to-wall category, office solution, hotel solution and the contact quote form. It reuses an existing blog-series image for the hero.
+
+**Why:** Buyer research from Reddit and commercial flooring search results shows recurring questions about replacement risk, noise, maintenance, spare stock, installation disruption and format selection. This guide targets that real intent while strengthening the hotel and office carpet topic clusters.
+
+**URL mapping:** No existing URL is removed, renamed or redirected. All changes are additive only.
+
+**Rollback point:** Revert this commit if the comparison guide needs to be withdrawn or rewritten.
+
+**Verification:** Run `npm run ops:check`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:placeholders`, `npm run lint`, and `npm run build`; then verify the new Blog URL and `/blog` return HTTP 200 in Preview and Production.
+
 ## 2026-08-16 `seo/technical-document-hub-ai-routing`
 
 **Type:** SEO / GEO-AEO / Internal linking / Buyer evidence

@@ -4,7 +4,7 @@
   "name": "VISHOME Commercial Carpet AI Source Map",
   "description": "Official machine-readable source map for Vishome Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
   "url": "https://www.vishomecarpet.com/ai-sources.json",
-  "dateModified": "2026-08-15",
+  "dateModified": "2026-08-17",
   "publisher": {
     "@type": "Organization",
     "name": "Vishome Global Commercial Carpet Co., Ltd.",
@@ -194,6 +194,17 @@
     }
   ],
   "procurementResources": [
+    {
+      "topic": "Commercial carpet tiles vs broadloom carpet for offices and hospitality projects",
+      "article": "https://www.vishomecarpet.com/blog/carpet-tiles-vs-broadloom-commercial-projects-guide",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/solutions/office-carpet-tiles-supplier",
+        "https://www.vishomecarpet.com/solutions/hotel-hospitality"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
     {
       "topic": "Hotel corridor carpet stain visibility and quotation planning",
       "article": "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-stain-hiding-procurement-guide",
