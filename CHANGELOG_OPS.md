@@ -2,6 +2,26 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-16 `seo/technical-document-hub-ai-routing`
+
+**Type:** SEO / GEO-AEO / Internal linking / Buyer evidence
+
+**Scope:** Strengthened `/technical-documents` as the central buyer evidence hub.
+
+**Changed URLs:**
+
+- Updated `/technical-documents`
+
+**What changed:** The page now reads all published technical documents from the shared resource registry, including the newest hotel corridor stain-hiding checklist and office carpet tile renovation RFQ template. It links to each document landing page and PDF, adds answer-first buyer-question routing, and exposes ItemList plus FAQ structured data that matches visible page content.
+
+**Why:** Competitor review shows strong B2B flooring sites make specifications, installation, maintenance, warranty and download paths easy to find. This update improves crawl discovery, internal linking, buyer confidence and AI-source extraction without creating duplicate pages or unsupported claims.
+
+**URL mapping:** No existing URL is removed, renamed or redirected. All document URLs are preserved.
+
+**Rollback point:** Revert this commit if the document hub layout or routing copy needs to be withdrawn.
+
+**Verification:** Run `npm run ops:check`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:placeholders`, `npm run lint`, and `npm run build`; then verify `/technical-documents` returns HTTP 200 in Preview and Production.
+
 ## 2026-08-15 `seo/ai-source-map-refresh-20260815`
 
 **Type:** SEO / GEO / AEO / AI-readable documentation
