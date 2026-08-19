@@ -1,5 +1,5 @@
 {
-  "task": "Upgrade country market pages with supply scope, quote inputs and supporting application/guide links for SEO/GEO expansion",
+  "task": "Upgrade country market pages and markets directory with supply scope, quote inputs and supporting application/guide links for SEO/GEO expansion",
   "approvedBy": "Site owner daily SEO/GEO/AI search expansion instruction on 2026-08-19 for the VISHOME carpet website",
   "approvedCategories": ["governance", "content", "documentation", "seo-global", "navigation", "conversion"],
   "allowedPaths": [
@@ -9,6 +9,7 @@
     "src/lib/blog-data.ts",
     "keyword-map.csv",
     "src/components/CountryMarketLandingPage.tsx",
+    "src/app/markets/page.tsx",
     "src/app/sitemap.ts",
     "src/components/Header.tsx",
     "src/components/SendInquiryFloating.tsx",

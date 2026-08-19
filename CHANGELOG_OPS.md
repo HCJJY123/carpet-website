@@ -6,13 +6,14 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Type:** SEO / GEO-AEO / International market routing / Conversion architecture
 
-**Scope:** Upgraded the reusable country market page template to better match the country × product × application expansion specification.
+**Scope:** Upgraded the reusable country market page template and the `/markets` directory to better match the country × product × application expansion specification.
 
 **Changed URLs:**
 
-- Updated country market pages rendered through `/{market}/{slug}` and `/markets`
+- Updated country market pages rendered through `/{market}/{slug}`
+- Updated `/markets`
 
-**What changed:** Added explicit supply-scope, local-contractor boundary and quote-input modules to the country market landing page template. Added supporting application-page links and buyer guide links so each country hub routes more clearly into product, application and problem-solving content.
+**What changed:** Added explicit supply-scope, local-contractor boundary and quote-input modules to the country market landing page template. Added supporting application-page links and buyer guide links so each country hub routes more clearly into product, application and problem-solving content. The `/markets` directory now highlights the Wave 1 priority markets before the full directory grid.
 
 **Why:** The expansion specification requires country hubs to explain who the page is for, what Vishomecarpet supplies, what the buyer should send for a quote, and which application and guide pages support the decision path. This also strengthens internal-link depth and AI-readable routing without creating doorway pages.
 
