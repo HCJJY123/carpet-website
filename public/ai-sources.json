@@ -50,7 +50,9 @@
         "https://www.vishomecarpet.com/markets/se/office-carpet-tiles-sweden",
         "https://www.vishomecarpet.com/markets/hu/office-carpet-tiles-hungary",
         "https://www.vishomecarpet.com/markets/cz/office-carpet-tiles-czech-republic",
-        "https://www.vishomecarpet.com/markets/sk/office-carpet-tiles-slovakia"
+        "https://www.vishomecarpet.com/markets/sk/office-carpet-tiles-slovakia",
+        "https://www.vishomecarpet.com/markets/rs/office-carpet-tiles-serbia",
+        "https://www.vishomecarpet.com/markets/by/office-carpet-tiles-belarus"
       ]
     },
     {
@@ -64,7 +66,9 @@
         "https://www.vishomecarpet.com/markets/mx/hotel-corridor-carpet",
         "https://www.vishomecarpet.com/markets/no/hotel-carpet-norway",
         "https://www.vishomecarpet.com/markets/fi/hotel-carpet-finland",
-        "https://www.vishomecarpet.com/markets/hr/hotel-carpet-croatia"
+        "https://www.vishomecarpet.com/markets/hr/hotel-carpet-croatia",
+        "https://www.vishomecarpet.com/markets/si/hotel-carpet-slovenia",
+        "https://www.vishomecarpet.com/markets/ge/hotel-carpet-georgia"
       ]
     },
     {
@@ -157,7 +161,11 @@
         "https://www.vishomecarpet.com/markets/hu/office-carpet-tiles-hungary",
         "https://www.vishomecarpet.com/markets/cz/office-carpet-tiles-czech-republic",
         "https://www.vishomecarpet.com/markets/sk/office-carpet-tiles-slovakia",
-        "https://www.vishomecarpet.com/markets/hr/hotel-carpet-croatia"
+        "https://www.vishomecarpet.com/markets/hr/hotel-carpet-croatia",
+        "https://www.vishomecarpet.com/markets/rs/office-carpet-tiles-serbia",
+        "https://www.vishomecarpet.com/markets/by/office-carpet-tiles-belarus",
+        "https://www.vishomecarpet.com/markets/si/hotel-carpet-slovenia",
+        "https://www.vishomecarpet.com/markets/ge/hotel-carpet-georgia"
       ]
     },
     {
@@ -426,6 +434,62 @@
       "relatedGuides": [
         "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",
         "https://www.vishomecarpet.com/blog/hotel-carpet-supplier-checklist-project-order-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/rs/office-carpet-tiles-serbia",
+      "topic": "Serbia office carpet tiles sourcing for chair wheels and phased replacement",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance",
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-renovation-cycle-procurement-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/by/office-carpet-tiles-belarus",
+      "topic": "Belarus office carpet tiles sourcing for chair wheels and spare stock",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/commercial-nylon-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance",
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-rolling-chairs-fitout-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/si/hotel-carpet-slovenia",
+      "topic": "Slovenia hotel carpet sourcing for guestrooms, corridors and refurbishment cycles",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/custom-luxury-hotel-room-carpet",
+        "https://www.vishomecarpet.com/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",
+        "https://www.vishomecarpet.com/blog/hotel-carpet-supplier-checklist-project-order-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/ge/hotel-carpet-georgia",
+      "topic": "Georgia hotel carpet sourcing for guestrooms, corridors and refurbishment cycles",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/custom-luxury-hotel-room-carpet",
+        "https://www.vishomecarpet.com/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",
+        "https://www.vishomecarpet.com/blog/hotel-carpet-renovation-hard-flooring-decision-guide"
       ],
       "inquiry": "https://www.vishomecarpet.com/contact"
     }
