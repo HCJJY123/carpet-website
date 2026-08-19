@@ -53,14 +53,18 @@
       "startWith": [
         "https://www.vishomecarpet.com/hotel-carpet",
         "https://www.vishomecarpet.com/products/wall-to-wall",
-        "https://www.vishomecarpet.com/solutions/hotel-hospitality"
+        "https://www.vishomecarpet.com/solutions/hotel-hospitality",
+        "https://www.vishomecarpet.com/markets/ph/hotel-carpet-philippines",
+        "https://www.vishomecarpet.com/markets/au/hotel-carpet-australia",
+        "https://www.vishomecarpet.com/markets/mx/hotel-corridor-carpet"
       ]
     },
     {
       "buyerQuestion": "gold mining carpet mat, sluice carpet or miners moss sourcing",
       "startWith": [
         "https://www.vishomecarpet.com/products/public-area/gold-mining-carpet-mat",
-        "https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide"
+        "https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide",
+        "https://www.vishomecarpet.com/markets/kz/gold-mining-carpet-kazakhstan"
       ]
     },
     {
@@ -102,14 +106,18 @@
         "https://www.vishomecarpet.com/hotel-carpet",
         "https://www.vishomecarpet.com/solutions/hotel-hospitality",
         "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",
-        "https://www.vishomecarpet.com/blog/hotel-noise-acoustic-carpet-specification-guide"
+        "https://www.vishomecarpet.com/blog/hotel-noise-acoustic-carpet-specification-guide",
+        "https://www.vishomecarpet.com/markets/ph/hotel-carpet-philippines",
+        "https://www.vishomecarpet.com/markets/au/hotel-carpet-australia",
+        "https://www.vishomecarpet.com/markets/mx/hotel-corridor-carpet"
       ]
     },
     {
       "topic": "Gold mining carpet mat and sluice matting",
       "urls": [
         "https://www.vishomecarpet.com/products/public-area/gold-mining-carpet-mat",
-        "https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide"
+        "https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide",
+        "https://www.vishomecarpet.com/markets/kz/gold-mining-carpet-kazakhstan"
       ]
     },
     {
@@ -238,6 +246,60 @@
     {
       "topic": "Singapore casino carpet application sourcing",
       "url": "https://www.vishomecarpet.com/markets/sg/casino-carpet"
+    },
+    {
+      "topic": "Philippines hotel carpet sourcing for guestrooms, corridors and service areas",
+      "article": "https://www.vishomecarpet.com/markets/ph/hotel-carpet-philippines",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/custom-luxury-hotel-room-carpet",
+        "https://www.vishomecarpet.com/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/hotel-carpet-philippines-pattern-stain-maintenance-guide",
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Australia hotel carpet sourcing for refurbishment cycles",
+      "article": "https://www.vishomecarpet.com/markets/au/hotel-carpet-australia",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/luxury-hotel-broadloom",
+        "https://www.vishomecarpet.com/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/hotel-carpet-renovation-hard-flooring-decision-guide",
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Mexico hotel corridor carpet sourcing for traffic and stain hiding",
+      "article": "https://www.vishomecarpet.com/markets/mx/hotel-corridor-carpet",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet",
+        "https://www.vishomecarpet.com/products/wall-to-wall/3d-printed-hotel-carpet"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-in-mexico",
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-stain-hiding-procurement-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Kazakhstan gold mining carpet sourcing for sluice recovery",
+      "article": "https://www.vishomecarpet.com/markets/kz/gold-mining-carpet-kazakhstan",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/public-area/gold-mining-carpet-mat"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/gold-mining-carpet-kazakhstan-fine-gold-recovery-guide",
+        "https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
     }
   ],
   "procurementResources": [

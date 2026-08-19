@@ -168,7 +168,7 @@ function supportingGuideLinks(page: CountryMarketPage) {
   }
   return [
     { href: "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide", label: "Carpet Tiles vs Broadloom", description: "A buying guide for offices, hotels and corridors." },
-    { href: "/blog/commercial-carpet-tile-moq-guide", label: "Commercial Carpet MOQ Guide", description: "How to plan samples, trial orders and project MOQ." },
+    { href: "/blog/commercial-carpet-tile-moq-sample-trial-project-guide", label: "Commercial Carpet MOQ Guide", description: "How to plan samples, trial orders and project MOQ." },
   ];
 }
 
