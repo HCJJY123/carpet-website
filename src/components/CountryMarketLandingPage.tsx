@@ -81,6 +81,30 @@ function supportingApplicationLinks(page: CountryMarketPage) {
     ];
   }
 
+  if (page.market === "ro") {
+    return [
+      { href: "/markets/ro/office-carpet-tiles", label: "Office Carpet Tiles in Romania", description: "Chair-wheel wear, phased replacement and spare tile planning for Romania office projects." },
+      { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
+      { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Useful for luggage-wheel wear, long visual runs and replacement planning." },
+    ];
+  }
+
+  if (page.market === "ca") {
+    return [
+      { href: "/markets/ca/office-carpet-tiles", label: "Office Carpet Tiles in Canada", description: "Winter moisture, snow and salt ingress, chair-wheel wear and phased replacement planning." },
+      { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
+      { href: "/applications/public-space", label: "Public Space Carpet Specification", description: "Useful for entrance, lobby and shared interior circulation areas." },
+    ];
+  }
+
+  if (page.market === "pl") {
+    return [
+      { href: "/markets/pl/office-carpet-tiles", label: "Office Carpet Tiles in Poland", description: "Phased office refurbishment, chair-wheel zones and spare-stock planning." },
+      { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
+      { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Useful for hospitality and corridor procurement routes." },
+    ];
+  }
+
   const shared = [
     { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
     { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Useful for luggage-wheel wear, long visual runs and replacement planning." },
@@ -89,9 +113,9 @@ function supportingApplicationLinks(page: CountryMarketPage) {
 
   if (page.countryName === "Singapore") {
     return [
+      { href: "/markets/sg/casino-carpet", label: "Casino Carpet in Singapore", description: "Gaming floors, VIP rooms, traffic planning and staged delivery for casino projects." },
       { href: "/solutions/hotel-hospitality", label: "Hotel & Hospitality Solution", description: "Use this for casino-adjacent, hospitality and public interior project planning." },
       { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Useful for long runs, luggage traffic and maintenance planning." },
-      { href: "/applications/public-space", label: "Public Space Carpet Specification", description: "Useful for lobby, event and shared interior circulation areas." },
     ];
   }
 

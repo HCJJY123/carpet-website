@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { countryApplicationPages } from "@/lib/country-application-pages";
 import { countryMarketPages } from "@/lib/country-market-pages";
 
 const BASE = "https://www.vishomecarpet.com";
@@ -11,9 +12,10 @@ export function GET() {
   const urls = [
     { path: "/markets", priority: "0.9" },
     ...countryMarketPages.map((page) => ({ path: page.path, priority: page.kind === "gold" ? "0.86" : "0.84" })),
+    ...countryApplicationPages.map((page) => ({ path: page.path, priority: page.market === "sg" ? "0.85" : "0.83" })),
   ];
   const body = urls
-    .map(({ path, priority }) => `  <url><loc>${escapeXml(`${BASE}${path}`)}</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>${priority}</priority></url>`)
+    .map(({ path, priority }) => `  <url><loc>${escapeXml(`${BASE}${path}`)}</loc><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>${priority}</priority></url>`)
     .join("\n");
 
   return new NextResponse(

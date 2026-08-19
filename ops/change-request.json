@@ -1,5 +1,5 @@
 {
-  "task": "Upgrade country market pages and markets directory with supply scope, quote inputs and supporting application/guide links for SEO/GEO expansion",
+  "task": "Add first country application pages and upgrade market routing for SEO/GEO expansion",
   "approvedBy": "Site owner daily SEO/GEO/AI search expansion instruction on 2026-08-19 for the VISHOME carpet website",
   "approvedCategories": ["governance", "content", "documentation", "seo-global", "navigation", "conversion"],
   "allowedPaths": [
@@ -9,8 +9,12 @@
     "src/lib/blog-data.ts",
     "keyword-map.csv",
     "src/components/CountryMarketLandingPage.tsx",
+    "src/components/CountryApplicationLandingPage.tsx",
+    "src/lib/country-application-pages.ts",
     "src/app/markets/page.tsx",
+    "src/app/markets/[market]/[slug]/page.tsx",
     "src/app/sitemap.ts",
+    "src/app/sitemap-markets.xml/route.ts",
     "src/components/Header.tsx",
     "src/components/SendInquiryFloating.tsx",
     "src/components/WhatsAppFloating.tsx",
@@ -21,5 +25,5 @@
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing indexed URLs are preserved. This change upgrades the reusable country market page template, keeps the header and floating inquiry controls reliable, adds a comparison buying guide for commercial carpet buyers, updates the shared blog registry, keyword ownership, sitemap lastmod timestamps and AI-readable source maps, and preserves all current product facts, certifications, contact details, redirects and conversion paths."
+  "notes": "Existing indexed URLs are preserved. This change adds the first country x application pages under /markets/{market}/{application}, upgrades the reusable country market page template and /markets directory, keeps the header and floating inquiry controls reliable, adds a comparison buying guide for commercial carpet buyers, updates the shared blog registry, keyword ownership, sitemap lastmod timestamps and AI-readable source maps, and preserves all current product facts, certifications, contact details, redirects and conversion paths."
 }
