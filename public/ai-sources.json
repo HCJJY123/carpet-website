@@ -52,7 +52,10 @@
         "https://www.vishomecarpet.com/markets/cz/office-carpet-tiles-czech-republic",
         "https://www.vishomecarpet.com/markets/sk/office-carpet-tiles-slovakia",
         "https://www.vishomecarpet.com/markets/rs/office-carpet-tiles-serbia",
-        "https://www.vishomecarpet.com/markets/by/office-carpet-tiles-belarus"
+        "https://www.vishomecarpet.com/markets/by/office-carpet-tiles-belarus",
+        "https://www.vishomecarpet.com/markets/au/office-carpet-tiles-australia",
+        "https://www.vishomecarpet.com/markets/ph/office-carpet-tiles-philippines",
+        "https://www.vishomecarpet.com/markets/mx/office-carpet-tiles-mexico"
       ]
     },
     {
@@ -173,7 +176,10 @@
         "https://www.vishomecarpet.com/markets/uz/hotel-carpet-uzbekistan",
         "https://www.vishomecarpet.com/markets/am/hotel-carpet-armenia",
         "https://www.vishomecarpet.com/markets/kg/hotel-carpet-kyrgyzstan",
-        "https://www.vishomecarpet.com/markets/az/hotel-carpet-azerbaijan"
+        "https://www.vishomecarpet.com/markets/az/hotel-carpet-azerbaijan",
+        "https://www.vishomecarpet.com/markets/au/office-carpet-tiles-australia",
+        "https://www.vishomecarpet.com/markets/ph/office-carpet-tiles-philippines",
+        "https://www.vishomecarpet.com/markets/mx/office-carpet-tiles-mexico"
       ]
     },
     {
@@ -554,6 +560,48 @@
       "relatedGuides": [
         "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",
         "https://www.vishomecarpet.com/blog/hotel-carpet-renovation-hard-flooring-decision-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/au/office-carpet-tiles-australia",
+      "topic": "Australia office carpet tiles sourcing for chair wheels and replacement cycles",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance",
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-renovation-cycle-procurement-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/ph/office-carpet-tiles-philippines",
+      "topic": "Philippines office carpet tiles sourcing for phased replacement and spare stock",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/commercial-nylon-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance",
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-moq-sample-trial-project-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/mx/office-carpet-tiles-mexico",
+      "topic": "Mexico office carpet tiles sourcing for phased fit-out and spare stock",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance",
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-rolling-chairs-fitout-guide"
       ],
       "inquiry": "https://www.vishomecarpet.com/contact"
     }

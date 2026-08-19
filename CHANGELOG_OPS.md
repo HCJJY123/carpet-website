@@ -30,6 +30,10 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Country application expansion continued again:** Added Uzbekistan, Armenia, Kyrgyzstan and Azerbaijan hotel carpet pages, then refreshed the keyword map, AI citation map and llms files so the new market URLs are visible to crawlers and AI tools.
 
+**Country application expansion continued once more:** Added Australia, Philippines and Mexico office carpet tile pages, then refreshed the keyword map, AI citation map and llms files so these office-market URLs can route buyer queries into the correct product and guide pages.
+
+**Country application expansion continued yet again:** Added office carpet tile pages for Australia, Philippines and Mexico, strengthening the office application cluster and routing country-specific office queries toward the matching product, guide and quote pages.
+
 **Why:** The expansion specification requires country hubs to explain who the page is for, what Vishomecarpet supplies, what the buyer should send for a quote, and which application and guide pages support the decision path. This also strengthens internal-link depth and AI-readable routing without creating doorway pages.
 
 **URL mapping:** No URLs were removed or renamed. New URLs are additive and are included in the markets sitemap.
