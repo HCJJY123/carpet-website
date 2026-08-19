@@ -68,7 +68,11 @@
         "https://www.vishomecarpet.com/markets/fi/hotel-carpet-finland",
         "https://www.vishomecarpet.com/markets/hr/hotel-carpet-croatia",
         "https://www.vishomecarpet.com/markets/si/hotel-carpet-slovenia",
-        "https://www.vishomecarpet.com/markets/ge/hotel-carpet-georgia"
+        "https://www.vishomecarpet.com/markets/ge/hotel-carpet-georgia",
+        "https://www.vishomecarpet.com/markets/uz/hotel-carpet-uzbekistan",
+        "https://www.vishomecarpet.com/markets/am/hotel-carpet-armenia",
+        "https://www.vishomecarpet.com/markets/kg/hotel-carpet-kyrgyzstan",
+        "https://www.vishomecarpet.com/markets/az/hotel-carpet-azerbaijan"
       ]
     },
     {
@@ -165,7 +169,11 @@
         "https://www.vishomecarpet.com/markets/rs/office-carpet-tiles-serbia",
         "https://www.vishomecarpet.com/markets/by/office-carpet-tiles-belarus",
         "https://www.vishomecarpet.com/markets/si/hotel-carpet-slovenia",
-        "https://www.vishomecarpet.com/markets/ge/hotel-carpet-georgia"
+        "https://www.vishomecarpet.com/markets/ge/hotel-carpet-georgia",
+        "https://www.vishomecarpet.com/markets/uz/hotel-carpet-uzbekistan",
+        "https://www.vishomecarpet.com/markets/am/hotel-carpet-armenia",
+        "https://www.vishomecarpet.com/markets/kg/hotel-carpet-kyrgyzstan",
+        "https://www.vishomecarpet.com/markets/az/hotel-carpet-azerbaijan"
       ]
     },
     {
@@ -486,6 +494,62 @@
         "https://www.vishomecarpet.com/products/wall-to-wall",
         "https://www.vishomecarpet.com/products/wall-to-wall/custom-luxury-hotel-room-carpet",
         "https://www.vishomecarpet.com/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",
+        "https://www.vishomecarpet.com/blog/hotel-carpet-renovation-hard-flooring-decision-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/uz/hotel-carpet-uzbekistan",
+      "topic": "Uzbekistan hotel carpet sourcing for guestrooms, corridors and delivery planning",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/luxury-hotel-broadloom",
+        "https://www.vishomecarpet.com/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",
+        "https://www.vishomecarpet.com/blog/hotel-carpet-supplier-checklist-project-order-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/am/hotel-carpet-armenia",
+      "topic": "Armenia hotel carpet sourcing for guestrooms, corridors and refurbishment cycles",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/custom-luxury-hotel-room-carpet",
+        "https://www.vishomecarpet.com/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",
+        "https://www.vishomecarpet.com/blog/hotel-carpet-renovation-hard-flooring-decision-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/kg/hotel-carpet-kyrgyzstan",
+      "topic": "Kyrgyzstan hotel carpet sourcing for guestrooms, corridors and sample planning",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/luxury-hotel-broadloom",
+        "https://www.vishomecarpet.com/products/wall-to-wall/custom-luxury-hotel-room-carpet"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",
+        "https://www.vishomecarpet.com/blog/hotel-carpet-supplier-checklist-project-order-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/az/hotel-carpet-azerbaijan",
+      "topic": "Azerbaijan hotel carpet sourcing for guestrooms, corridors and design approval",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/custom-luxury-hotel-room-carpet",
+        "https://www.vishomecarpet.com/products/wall-to-wall/3d-printed-hotel-carpet"
       ],
       "relatedGuides": [
         "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",

@@ -28,6 +28,8 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Country application expansion further continued:** Added Serbia and Belarus office carpet tile pages plus Slovenia and Georgia hotel carpet pages, then refreshed `keyword-map.csv`, `llms.txt`, `llms-full.txt` and `ai-sources.json` so the new URLs can be reached by crawlers and AI answer engines.
 
+**Country application expansion continued again:** Added Uzbekistan, Armenia, Kyrgyzstan and Azerbaijan hotel carpet pages, then refreshed the keyword map, AI citation map and llms files so the new market URLs are visible to crawlers and AI tools.
+
 **Why:** The expansion specification requires country hubs to explain who the page is for, what Vishomecarpet supplies, what the buyer should send for a quote, and which application and guide pages support the decision path. This also strengthens internal-link depth and AI-readable routing without creating doorway pages.
 
 **URL mapping:** No URLs were removed or renamed. New URLs are additive and are included in the markets sitemap.
