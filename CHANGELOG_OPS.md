@@ -34,6 +34,29 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Verification:** Run `npm run ops:check`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:placeholders`, `npm run lint`, and `npm run build`; then verify representative market pages such as Romania, Canada, Singapore and Kazakhstan render the new modules with HTTP 200.
 
+## 2026-08-19 `seo/country-market-page-expansion-wave-2`
+
+**Type:** SEO / GEO-AEO / International market routing / Conversion architecture
+
+**Scope:** Extended the country × application page set with additional office and hotel market pages for Central Europe and the Nordics, then refreshed the AI citation map and keyword ownership file.
+
+**Changed URLs:**
+
+- Added `/markets/hu/office-carpet-tiles-hungary`
+- Added `/markets/cz/office-carpet-tiles-czech-republic`
+- Added `/markets/sk/office-carpet-tiles-slovakia`
+- Added `/markets/hr/hotel-carpet-croatia`
+
+**What changed:** Added answer-first country application pages for Hungary, the Czech Republic, Slovakia and Croatia with buyer risks, zone decision tables, RFQ inputs, FAQs, product links and supporting blog links. Updated `keyword-map.csv`, `llms.txt`, `llms-full.txt` and `ai-sources.json` so AI tools and crawlers can route country-specific office and hotel questions to the best page first.
+
+**Why:** The next wave of country × application content strengthens office carpet tile and hotel carpet clusters in markets that already have country hubs, while keeping the content useful for B2B buyers and avoiding low-value doorway pages.
+
+**URL mapping:** No existing URLs were removed or renamed. All new URLs are additive and included in the markets sitemap.
+
+**Rollback point:** Revert this commit if any of the new country application pages or AI citation mappings need to be withdrawn.
+
+**Verification:** Run `npm run ops:check`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:placeholders`, `npm run lint`, and `npm run build`; then verify the four new market pages render with HTTP 200 and appear in `/sitemap-markets.xml`.
+
 ## 2026-08-17 `content/buyer-growth-carpet-tiles-vs-broadloom`
 
 **Type:** Blog / Buyer demand growth / SEO / GEO-AEO / AI Search
