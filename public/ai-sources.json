@@ -45,7 +45,9 @@
         "https://www.vishomecarpet.com/solutions/office-carpet-tiles-supplier",
         "https://www.vishomecarpet.com/markets/ro/office-carpet-tiles",
         "https://www.vishomecarpet.com/markets/pl/office-carpet-tiles",
-        "https://www.vishomecarpet.com/markets/ca/office-carpet-tiles"
+        "https://www.vishomecarpet.com/markets/ca/office-carpet-tiles",
+        "https://www.vishomecarpet.com/markets/dk/office-carpet-tiles-denmark",
+        "https://www.vishomecarpet.com/markets/se/office-carpet-tiles-sweden"
       ]
     },
     {
@@ -56,7 +58,9 @@
         "https://www.vishomecarpet.com/solutions/hotel-hospitality",
         "https://www.vishomecarpet.com/markets/ph/hotel-carpet-philippines",
         "https://www.vishomecarpet.com/markets/au/hotel-carpet-australia",
-        "https://www.vishomecarpet.com/markets/mx/hotel-corridor-carpet"
+        "https://www.vishomecarpet.com/markets/mx/hotel-corridor-carpet",
+        "https://www.vishomecarpet.com/markets/no/hotel-carpet-norway",
+        "https://www.vishomecarpet.com/markets/fi/hotel-carpet-finland"
       ]
     },
     {
@@ -141,7 +145,11 @@
         "https://www.vishomecarpet.com/markets/ro/office-carpet-tiles",
         "https://www.vishomecarpet.com/markets/pl/office-carpet-tiles",
         "https://www.vishomecarpet.com/markets/ca/office-carpet-tiles",
-        "https://www.vishomecarpet.com/markets/sg/casino-carpet"
+        "https://www.vishomecarpet.com/markets/sg/casino-carpet",
+        "https://www.vishomecarpet.com/markets/dk/office-carpet-tiles-denmark",
+        "https://www.vishomecarpet.com/markets/se/office-carpet-tiles-sweden",
+        "https://www.vishomecarpet.com/markets/no/hotel-carpet-norway",
+        "https://www.vishomecarpet.com/markets/fi/hotel-carpet-finland"
       ]
     },
     {
@@ -300,6 +308,62 @@
         "https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide"
       ],
       "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Denmark office carpet tiles sourcing for acoustic comfort and phased replacement",
+      "article": "https://www.vishomecarpet.com/markets/dk/office-carpet-tiles-denmark",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance",
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-renovation-cycle-procurement-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Sweden office carpet tiles sourcing for replacement cycles and chair-wheel wear",
+      "article": "https://www.vishomecarpet.com/markets/se/office-carpet-tiles-sweden",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/commercial-nylon-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance",
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-rolling-chairs-fitout-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Norway hotel carpet sourcing for guestrooms and corridors",
+      "article": "https://www.vishomecarpet.com/markets/no/hotel-carpet-norway",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/luxury-hotel-broadloom",
+        "https://www.vishomecarpet.com/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",
+        "https://www.vishomecarpet.com/blog/hotel-carpet-supplier-checklist-project-order-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Finland hotel carpet sourcing for refurbishment cycles and spare stock",
+      "article": "https://www.vishomecarpet.com/markets/fi/hotel-carpet-finland",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet",
+        "https://www.vishomecarpet.com/products/wall-to-wall/custom-luxury-hotel-room-carpet"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/hotel-corridor-carpet-design-noise-stain-maintenance",
+        "https://www.vishomecarpet.com/blog/hotel-carpet-renovation-hard-flooring-decision-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
     }
   ],
   "procurementResources": [
@@ -367,7 +431,8 @@
     "https://www.vishomecarpet.com/faq",
     "https://www.vishomecarpet.com/technical-documents",
     "https://www.vishomecarpet.com/commercial-terms",
-    "https://www.vishomecarpet.com/privacy-policy"
+    "https://www.vishomecarpet.com/privacy-policy",
+    "https://www.vishomecarpet.com/markets"
   ],
   "aiReadableFiles": [
     "https://www.vishomecarpet.com/llms.txt",
