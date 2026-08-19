@@ -34,6 +34,10 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Country application expansion continued yet again:** Added office carpet tile pages for Australia, Philippines and Mexico, strengthening the office application cluster and routing country-specific office queries toward the matching product, guide and quote pages.
 
+**Country application expansion finalised for this round:** Added gold mining carpet application pages for Peru and Colombia, linked them to the mining product and field/specification resources, and refreshed the keyword map and AI citation files.
+
+**Country application expansion extended once more:** Added office carpet tile pages for Australia, the Philippines and Mexico, expanding the office application cluster and connecting those markets to the modular office flooring product path.
+
 **Why:** The expansion specification requires country hubs to explain who the page is for, what Vishomecarpet supplies, what the buyer should send for a quote, and which application and guide pages support the decision path. This also strengthens internal-link depth and AI-readable routing without creating doorway pages.
 
 **URL mapping:** No URLs were removed or renamed. New URLs are additive and are included in the markets sitemap.

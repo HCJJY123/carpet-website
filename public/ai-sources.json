@@ -83,7 +83,9 @@
       "startWith": [
         "https://www.vishomecarpet.com/products/public-area/gold-mining-carpet-mat",
         "https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide",
-        "https://www.vishomecarpet.com/markets/kz/gold-mining-carpet-kazakhstan"
+        "https://www.vishomecarpet.com/markets/kz/gold-mining-carpet-kazakhstan",
+        "https://www.vishomecarpet.com/markets/pe/gold-mining-carpet-peru",
+        "https://www.vishomecarpet.com/markets/co/gold-mining-carpet-colombia"
       ]
     },
     {
@@ -179,7 +181,9 @@
         "https://www.vishomecarpet.com/markets/az/hotel-carpet-azerbaijan",
         "https://www.vishomecarpet.com/markets/au/office-carpet-tiles-australia",
         "https://www.vishomecarpet.com/markets/ph/office-carpet-tiles-philippines",
-        "https://www.vishomecarpet.com/markets/mx/office-carpet-tiles-mexico"
+        "https://www.vishomecarpet.com/markets/mx/office-carpet-tiles-mexico",
+        "https://www.vishomecarpet.com/markets/pe/gold-mining-carpet-peru",
+        "https://www.vishomecarpet.com/markets/co/gold-mining-carpet-colombia"
       ]
     },
     {
@@ -602,6 +606,30 @@
       "relatedGuides": [
         "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance",
         "https://www.vishomecarpet.com/blog/office-carpet-tiles-rolling-chairs-fitout-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/pe/gold-mining-carpet-peru",
+      "topic": "Peru gold mining carpet sourcing for sluice width, flow control and field testing",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/public-area/gold-mining-carpet-mat"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide",
+        "https://www.vishomecarpet.com/projects/gold-mining-sluice-carpet-peru"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/co/gold-mining-carpet-colombia",
+      "topic": "Colombia gold mining carpet sourcing for sample testing, roll planning and distributor supply",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/public-area/gold-mining-carpet-mat"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/projects/gold-mining-carpet-colombia-distributor-guide",
+        "https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide"
       ],
       "inquiry": "https://www.vishomecarpet.com/contact"
     }
