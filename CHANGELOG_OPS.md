@@ -2,6 +2,26 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-19 `seo/country-market-page-expansion`
+
+**Type:** SEO / GEO-AEO / International market routing / Conversion architecture
+
+**Scope:** Upgraded the reusable country market page template to better match the country × product × application expansion specification.
+
+**Changed URLs:**
+
+- Updated country market pages rendered through `/{market}/{slug}` and `/markets`
+
+**What changed:** Added explicit supply-scope, local-contractor boundary and quote-input modules to the country market landing page template. Added supporting application-page links and buyer guide links so each country hub routes more clearly into product, application and problem-solving content.
+
+**Why:** The expansion specification requires country hubs to explain who the page is for, what Vishomecarpet supplies, what the buyer should send for a quote, and which application and guide pages support the decision path. This also strengthens internal-link depth and AI-readable routing without creating doorway pages.
+
+**URL mapping:** No URLs were removed or renamed. This is a template-level improvement that applies to all existing country market pages.
+
+**Rollback point:** Revert this commit if the new country market module layout needs to be withdrawn.
+
+**Verification:** Run `npm run ops:check`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:placeholders`, `npm run lint`, and `npm run build`; then verify representative market pages such as Romania, Canada, Singapore and Kazakhstan render the new modules with HTTP 200.
+
 ## 2026-08-17 `content/buyer-growth-carpet-tiles-vs-broadloom`
 
 **Type:** Blog / Buyer demand growth / SEO / GEO-AEO / AI Search

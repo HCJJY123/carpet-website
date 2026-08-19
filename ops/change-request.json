@@ -1,13 +1,18 @@
 {
-  "task": "Publish one high-intent commercial carpet comparison buying guide for buyer demand growth",
-  "approvedBy": "Site owner daily buyer content growth instruction on 2026-08-17 for the VISHOME carpet website",
-  "approvedCategories": ["governance", "content", "documentation", "seo-global"],
+  "task": "Upgrade country market pages with supply scope, quote inputs and supporting application/guide links for SEO/GEO expansion",
+  "approvedBy": "Site owner daily SEO/GEO/AI search expansion instruction on 2026-08-19 for the VISHOME carpet website",
+  "approvedCategories": ["governance", "content", "documentation", "seo-global", "navigation", "conversion"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
     "src/lib/blog-posts/carpet-tiles-vs-broadloom-commercial-projects-guide.ts",
     "src/lib/blog-data.ts",
     "keyword-map.csv",
+    "src/components/CountryMarketLandingPage.tsx",
+    "src/app/sitemap.ts",
+    "src/components/Header.tsx",
+    "src/components/SendInquiryFloating.tsx",
+    "src/components/WhatsAppFloating.tsx",
     "public/llms.txt",
     "public/llms-full.txt",
     "public/ai-sources.json",
@@ -15,5 +20,5 @@
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing indexed URLs are preserved. This change adds one comparison buying guide for commercial carpet buyers, updates the shared blog registry, keyword ownership and AI-readable source maps, and preserves all current product facts, certifications, contact details, redirects and conversion paths."
+  "notes": "Existing indexed URLs are preserved. This change upgrades the reusable country market page template, keeps the header and floating inquiry controls reliable, adds a comparison buying guide for commercial carpet buyers, updates the shared blog registry, keyword ownership, sitemap lastmod timestamps and AI-readable source maps, and preserves all current product facts, certifications, contact details, redirects and conversion paths."
 }

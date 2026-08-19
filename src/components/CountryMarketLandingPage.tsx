@@ -5,7 +5,7 @@ import { brandInfo, products, type Product } from "@/lib/data";
 import type { CountryMarketPage } from "@/lib/country-market-pages";
 import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
 
-const UPDATED_DATE = "2026-08-02";
+const UPDATED_DATE = "2026-08-19";
 
 function resolveProducts(page: CountryMarketPage) {
   return page.productIds
@@ -71,6 +71,81 @@ function goldFaqs(page: CountryMarketPage) {
 
 function pageFaqs(page: CountryMarketPage) {
   return page.kind === "gold" ? goldFaqs(page) : commercialFaqs(page);
+}
+
+function supportingApplicationLinks(page: CountryMarketPage) {
+  if (page.kind === "gold") {
+    return [
+      { href: "/applications/public-space", label: "Public Space Carpet Specification", description: "Use this for public interiors where heavy-duty project planning and maintenance access matter." },
+      { href: "/products/public-area/gold-mining-carpet-mat", label: "Gold Mining Carpet Mat", description: "Review the product record, available sizes and trial order options before the RFQ." },
+    ];
+  }
+
+  const shared = [
+    { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
+    { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Useful for luggage-wheel wear, long visual runs and replacement planning." },
+    { href: "/applications/hotel-guestroom", label: "Hotel Guestroom Carpet Support", description: "Useful where comfort, acoustic feel and room coordination matter." },
+  ];
+
+  if (page.countryName === "Singapore") {
+    return [
+      { href: "/solutions/hotel-hospitality", label: "Hotel & Hospitality Solution", description: "Use this for casino-adjacent, hospitality and public interior project planning." },
+      { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Useful for long runs, luggage traffic and maintenance planning." },
+      { href: "/applications/public-space", label: "Public Space Carpet Specification", description: "Useful for lobby, event and shared interior circulation areas." },
+    ];
+  }
+
+  return shared;
+}
+
+function supportingGuideLinks(page: CountryMarketPage) {
+  if (page.kind === "gold") {
+    if (page.market === "au") {
+      return [
+        { href: "/blog/gold-mining-carpet-mat-australia-fine-gold-recovery", label: "Australia Gold Mining Carpet Guide", description: "Buyer questions about sluice width, fine-gold recovery and roll planning." },
+        { href: "/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide", label: "Gold Recovery Matting Guide", description: "Compare sluice carpet, miners moss and vortex matting by recovery and cleanup." },
+      ];
+    }
+    if (page.market === "kz") {
+      return [
+        { href: "/blog/gold-mining-carpet-kazakhstan-fine-gold-recovery-guide", label: "Kazakhstan Gold Mining Carpet Guide", description: "A practical gold-recovery guide for Kazakhstan buyers and distributors." },
+        { href: "/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide", label: "Gold Recovery Matting Guide", description: "Compare recovery behavior, cleanup and bulk-buyer quality testing." },
+      ];
+    }
+    return [
+      { href: "/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide", label: "Gold Recovery Matting Guide", description: "Compare sluice carpet, miners moss and vortex matting for fine-gold recovery." },
+      { href: "/blog/gold-mining-carpet-kazakhstan-fine-gold-recovery-guide", label: "Gold Mining Carpet Buying Guide", description: "Use this for roll planning, clean-out logic and sample testing." },
+    ];
+  }
+
+  if (page.market === "ro") {
+    return [
+      { href: "/blog/office-carpet-tiles-romania-chair-wheel-replacement-guide", label: "Romania Office Carpet Guide", description: "Chair-wheel wear, phased replacement and spare tile planning." },
+      { href: "/blog/office-carpet-tiles-vs-hard-flooring-guide", label: "Carpet Tiles vs Hard Flooring", description: "A useful comparison when buyers are weighing maintenance and noise." },
+    ];
+  }
+  if (page.market === "ca") {
+    return [
+      { href: "/blog/office-carpet-tiles-canada-phased-renovation-reddit-guide", label: "Canada Office Carpet Guide", description: "Winter moisture, phased renovation and spare-stock planning." },
+      { href: "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide", label: "Carpet Tiles vs Broadloom", description: "Buyer-level comparison of maintenance, replacement and quotation risk." },
+    ];
+  }
+  if (page.market === "ph") {
+    return [
+      { href: "/blog/hotel-carpet-philippines-pattern-stain-maintenance-guide", label: "Philippines Hotel Carpet Guide", description: "Pattern, stain maintenance and humid-market procurement issues." },
+      { href: "/blog/hotel-carpet-supplier-checklist-guide", label: "Hotel Carpet Supplier Checklist", description: "A buyer checklist for samples, lead time, MOQ and technical documents." },
+    ];
+  }
+  if (page.market === "sg") {
+    return [
+      { href: "/blog/casino-carpet-singapore-gaming-floor-buying-guide", label: "Singapore Casino Carpet Guide", description: "Gaming-floor specification, traffic and design continuity." },
+      { href: "/blog/singapore-casino-carpet-procurement-checklist", label: "Singapore Casino Carpet Checklist", description: "RFQ questions for casino and hospitality procurement teams." },
+    ];
+  }
+  return [
+    { href: "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide", label: "Carpet Tiles vs Broadloom", description: "A buying guide for offices, hotels and corridors." },
+    { href: "/blog/commercial-carpet-tile-moq-guide", label: "Commercial Carpet MOQ Guide", description: "How to plan samples, trial orders and project MOQ." },
+  ];
 }
 
 export function countryMarketMetadata(page: CountryMarketPage): Metadata {
@@ -342,6 +417,65 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
             <div className="mt-8 border-t border-border pt-6">
               <h3 className="font-black">Local search terminology</h3>
               <p className="mt-3 text-sm leading-7 text-muted">{page.localTerms.join(" · ")}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding">
+        <div className="container-fox grid gap-6 lg:grid-cols-3">
+          <div className="rounded-md border border-border bg-white p-6 shadow-sm">
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Who we serve</p>
+            <h2 className="mt-3 text-2xl font-black leading-tight">Project buyers, contractors and distributors</h2>
+            <p className="mt-4 leading-7 text-muted">
+              Vishomecarpet supports import-capable project buyers, flooring contractors, fit-out teams and distributors who need a manufacturer-exporter partner for commercial carpet projects in {page.countryName}.
+            </p>
+          </div>
+          <div className="rounded-md border border-border bg-white p-6 shadow-sm">
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Supply scope</p>
+            <h2 className="mt-3 text-2xl font-black leading-tight">China manufacturer, samples and export delivery</h2>
+            <p className="mt-4 leading-7 text-muted">
+              Supply scope includes verified product records, samples or trial orders where published, technical data for review, project quantities and export delivery. Local installation and removal are normally handled by the buyer&apos;s local contractor unless a verified arrangement exists.
+            </p>
+          </div>
+          <div className="rounded-md border border-border bg-white p-6 shadow-sm">
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">What to send for a quote</p>
+            <h2 className="mt-3 text-2xl font-black leading-tight">Country, application, quantity and timing</h2>
+            <ul className="mt-4 space-y-3 text-sm leading-7 text-muted">
+              <li>Country and city</li>
+              <li>Application and project type</li>
+              <li>Estimated area or quantity</li>
+              <li>Target delivery date</li>
+              <li>Sample and technical document requirements</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding border-y border-border bg-surface">
+        <div className="container-fox grid gap-12 lg:grid-cols-2">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Supporting application pages</p>
+            <h2 className="mt-3 text-3xl font-black md:text-4xl">Route this market to the right application page</h2>
+            <div className="mt-8 grid gap-4">
+              {supportingApplicationLinks(page).map((link) => (
+                <Link key={link.href} href={link.href} className="block rounded-md border border-border bg-white p-5 transition hover:border-accent hover:shadow-md">
+                  <h3 className="text-base font-black leading-snug text-primary">{link.label}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted">{link.description}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Supporting guides</p>
+            <h2 className="mt-3 text-3xl font-black md:text-4xl">Buyer questions and decision guides</h2>
+            <div className="mt-8 grid gap-4">
+              {supportingGuideLinks(page).map((link) => (
+                <Link key={link.href} href={link.href} className="block rounded-md border border-border bg-white p-5 transition hover:border-accent hover:shadow-md">
+                  <h3 className="text-base font-black leading-snug text-primary">{link.label}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted">{link.description}</p>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
