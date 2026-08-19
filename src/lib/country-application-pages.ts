@@ -94,7 +94,7 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     guideLinks: [
       { href: "/blog/office-carpet-tiles-canada-phased-renovation-reddit-guide", label: "Canada office carpet guide", description: "Winter moisture, phased renovation and spare-stock planning." },
       { href: "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide", label: "Carpet tiles vs broadloom", description: "Compare replacement risk and maintenance planning." },
-      { href: "/blog/office-carpet-tiles-vs-hard-flooring-guide", label: "Carpet tiles vs hard flooring", description: "Useful when the buyer compares noise, comfort and maintenance." },
+      { href: "/blog/office-carpet-tiles-vs-hard-flooring-maintenance", label: "Carpet tiles vs hard flooring", description: "Useful when the buyer compares noise, comfort and maintenance." },
     ],
     faq: [
       { question: "What should Canadian buyers mention in the RFQ?", answer: "Send city, office area by zone, winter ingress risk, sample needs and target delivery date so the quote reflects the real office conditions." },
@@ -129,7 +129,7 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     heroProductId: "nylon-office-carpet-tile",
     productIds: ["nylon-office-carpet-tile", "commercial-nylon-tiles", "pp-bitumen-backed-office-carpet-tiles"],
     guideLinks: [
-      { href: "/blog/office-carpet-tiles-vs-hard-flooring-guide", label: "Carpet tiles vs hard flooring", description: "Good for buying teams weighing noise, comfort and maintenance." },
+      { href: "/blog/office-carpet-tiles-vs-hard-flooring-maintenance", label: "Carpet tiles vs hard flooring", description: "Good for buying teams weighing noise, comfort and maintenance." },
       { href: "/blog/office-carpet-tiles-renovation-cycle-procurement-guide", label: "Office carpet renovation cycle", description: "Useful for phased procurement and project timing." },
       { href: "/blog/commercial-carpet-tile-moq-guide", label: "Commercial carpet MOQ guide", description: "Use this for sample and project order planning." },
     ],
@@ -182,4 +182,3 @@ export const countryApplicationPages: CountryApplicationPage[] = [
 export const countryApplicationPageMap = Object.fromEntries(
   countryApplicationPages.map((page) => [`${page.market}/${page.slug}`, page] as const),
 ) as Record<string, CountryApplicationPage>;
-

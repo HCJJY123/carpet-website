@@ -145,7 +145,7 @@ function supportingGuideLinks(page: CountryMarketPage) {
   if (page.market === "ro") {
     return [
       { href: "/blog/office-carpet-tiles-romania-chair-wheel-replacement-guide", label: "Romania Office Carpet Guide", description: "Chair-wheel wear, phased replacement and spare tile planning." },
-      { href: "/blog/office-carpet-tiles-vs-hard-flooring-guide", label: "Carpet Tiles vs Hard Flooring", description: "A useful comparison when buyers are weighing maintenance and noise." },
+      { href: "/blog/office-carpet-tiles-vs-hard-flooring-maintenance", label: "Carpet Tiles vs Hard Flooring", description: "A useful comparison when buyers are weighing maintenance and noise." },
     ];
   }
   if (page.market === "ca") {

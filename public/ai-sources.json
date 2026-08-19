@@ -4,11 +4,14 @@
   "name": "VISHOME Commercial Carpet AI Source Map",
   "description": "Official machine-readable source map for Vishome Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
   "url": "https://www.vishomecarpet.com/ai-sources.json",
-  "dateModified": "2026-08-17",
+  "dateModified": "2026-08-19",
   "publisher": {
     "@type": "Organization",
     "name": "Vishome Global Commercial Carpet Co., Ltd.",
-    "alternateName": ["VISHOME", "Vishomecarpet"],
+    "alternateName": [
+      "VISHOME",
+      "Vishomecarpet"
+    ],
     "url": "https://www.vishomecarpet.com",
     "email": "sales@vishomecarpet.com",
     "telephone": "+86 152 2288 5400",
@@ -39,7 +42,10 @@
       "startWith": [
         "https://www.vishomecarpet.com/products/carpet-tiles",
         "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles",
-        "https://www.vishomecarpet.com/solutions/office-carpet-tiles-supplier"
+        "https://www.vishomecarpet.com/solutions/office-carpet-tiles-supplier",
+        "https://www.vishomecarpet.com/markets/ro/office-carpet-tiles",
+        "https://www.vishomecarpet.com/markets/pl/office-carpet-tiles",
+        "https://www.vishomecarpet.com/markets/ca/office-carpet-tiles"
       ]
     },
     {
@@ -55,6 +61,14 @@
       "startWith": [
         "https://www.vishomecarpet.com/products/public-area/gold-mining-carpet-mat",
         "https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide"
+      ]
+    },
+    {
+      "buyerQuestion": "Singapore casino carpet or gaming floor carpet sourcing",
+      "startWith": [
+        "https://www.vishomecarpet.com/markets/sg/casino-carpet",
+        "https://www.vishomecarpet.com/products/wall-to-wall/singapore-casino-carpet",
+        "https://www.vishomecarpet.com/blog/casino-carpet-singapore-gaming-floor-buying-guide"
       ]
     }
   ],
@@ -75,7 +89,10 @@
         "https://www.vishomecarpet.com/commercial-carpet-tiles",
         "https://www.vishomecarpet.com/solutions/office-carpet-tiles-supplier",
         "https://www.vishomecarpet.com/projects/office-carpet-tiles-canada-phased-renovation-guide",
-        "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance"
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance",
+        "https://www.vishomecarpet.com/markets/ro/office-carpet-tiles",
+        "https://www.vishomecarpet.com/markets/pl/office-carpet-tiles",
+        "https://www.vishomecarpet.com/markets/ca/office-carpet-tiles"
       ]
     },
     {
@@ -112,7 +129,11 @@
         "https://www.vishomecarpet.com/blog/hotel-carpet-philippines-pattern-stain-maintenance-guide",
         "https://www.vishomecarpet.com/blog/custom-sculpted-wool-rugs-us-hotel-lobbies",
         "https://www.vishomecarpet.com/blog/gold-mining-carpet-mat-australia-fine-gold-recovery",
-        "https://www.vishomecarpet.com/blog/commercial-carpet-tiles-russia-winter-office-flooring-guide"
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tiles-russia-winter-office-flooring-guide",
+        "https://www.vishomecarpet.com/markets/ro/office-carpet-tiles",
+        "https://www.vishomecarpet.com/markets/pl/office-carpet-tiles",
+        "https://www.vishomecarpet.com/markets/ca/office-carpet-tiles",
+        "https://www.vishomecarpet.com/markets/sg/casino-carpet"
       ]
     },
     {
@@ -132,6 +153,16 @@
         "https://www.vishomecarpet.com/products/public-area/gold-mining-carpet-mat",
         "https://www.vishomecarpet.com/projects/gold-mining-sluice-carpet-peru",
         "https://www.vishomecarpet.com/projects/gold-mining-carpet-colombia-distributor-guide"
+      ]
+    },
+    {
+      "topic": "Singapore casino carpet and gaming floor procurement",
+      "urls": [
+        "https://www.vishomecarpet.com/markets/sg/casino-carpet",
+        "https://www.vishomecarpet.com/sg/singapore-casino-carpet-supplier",
+        "https://www.vishomecarpet.com/products/wall-to-wall/singapore-casino-carpet",
+        "https://www.vishomecarpet.com/blog/casino-carpet-singapore-gaming-floor-buying-guide",
+        "https://www.vishomecarpet.com/blog/singapore-casino-carpet-procurement-checklist"
       ]
     }
   ],
@@ -191,6 +222,22 @@
     {
       "topic": "Canada office carpet tiles phased renovation planning",
       "url": "https://www.vishomecarpet.com/projects/office-carpet-tiles-canada-phased-renovation-guide"
+    },
+    {
+      "topic": "Romania office carpet tiles application sourcing",
+      "url": "https://www.vishomecarpet.com/markets/ro/office-carpet-tiles"
+    },
+    {
+      "topic": "Poland office carpet tiles application sourcing",
+      "url": "https://www.vishomecarpet.com/markets/pl/office-carpet-tiles"
+    },
+    {
+      "topic": "Canada office carpet tiles application sourcing",
+      "url": "https://www.vishomecarpet.com/markets/ca/office-carpet-tiles"
+    },
+    {
+      "topic": "Singapore casino carpet application sourcing",
+      "url": "https://www.vishomecarpet.com/markets/sg/casino-carpet"
     }
   ],
   "procurementResources": [
@@ -219,6 +266,36 @@
       "worksheet": "https://www.vishomecarpet.com/resources/downloads/office-carpet-tiles-renovation-rfq-template",
       "pdf": "https://www.vishomecarpet.com/downloads/office-carpet-tiles-renovation-rfq-template.pdf",
       "relatedProduct": "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Country-specific office carpet tile sourcing for Romania, Poland and Canada",
+      "article": "https://www.vishomecarpet.com/markets/ro/office-carpet-tiles",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles",
+        "https://www.vishomecarpet.com/solutions/office-carpet-tiles-supplier"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/markets/pl/office-carpet-tiles",
+        "https://www.vishomecarpet.com/markets/ca/office-carpet-tiles",
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-renovation-cycle-procurement-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Singapore casino carpet sourcing for gaming floors and hospitality entertainment zones",
+      "article": "https://www.vishomecarpet.com/markets/sg/casino-carpet",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall/singapore-casino-carpet",
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/solutions/hotel-hospitality"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/casino-carpet-singapore-gaming-floor-buying-guide",
+        "https://www.vishomecarpet.com/blog/singapore-casino-carpet-procurement-checklist"
+      ],
       "inquiry": "https://www.vishomecarpet.com/contact"
     }
   ],
