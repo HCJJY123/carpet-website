@@ -19,6 +19,8 @@ export interface CountryMarketPage {
   deliveryNote: string;
   applications: string[];
   localTerms: string[];
+  heroImage?: string;
+  heroImageAlt?: string;
   primaryProductId: string;
   productIds: string[];
 }
@@ -76,6 +78,8 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Ask for packing dimensions, pallet count, gross weight and destination details before choosing sea freight or a consolidated sample shipment.",
     applications: ["Hotels and resorts", "Corporate offices", "Retail and mixed-use interiors", "Airports and public corridors"],
     localTerms: ["commercial carpet Philippines", "hotel carpet supplier Philippines", "office carpet tiles Philippines"],
+    heroImage: "/images/markets/generated/philippines-hotel-carpet-hero.webp",
+    heroImageAlt: "Philippines commercial carpet supplier samples for hotel and office projects",
     productSet: "humid",
   }),
   commercialPage({
@@ -95,6 +99,8 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "For Sydney, Melbourne, Brisbane and other destinations, compare full-container and consolidated shipping using the final roll or pallet plan rather than square metres alone.",
     applications: ["Office fit-outs", "Hotels and serviced apartments", "Education projects", "Public and transport interiors"],
     localTerms: ["commercial carpet supplier Australia", "carpet tiles Australia wholesale", "hotel carpet manufacturer Australia"],
+    heroImage: "/images/markets/generated/australia-hotel-carpet-hero.webp",
+    heroImageAlt: "Australia commercial carpet supplier for hospitality and office refurbishment",
     productSet: "office",
   }),
   commercialPage({
@@ -133,6 +139,8 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Confirm packing, pallet count, delivery city, seasonal receiving constraints and target installation window before comparing freight options.",
     applications: ["Office renovations", "Corporate corridors", "Hotel guestrooms and corridors", "Public and commercial interiors"],
     localTerms: ["commercial carpet Canada", "office carpet tiles Canada", "hotel carpet supplier Canada"],
+    heroImage: "/images/markets/generated/canada-office-carpet-tiles-hero.webp",
+    heroImageAlt: "Canada commercial carpet supplier for office tile and project flooring",
     productSet: "cold",
   }),
   commercialPage({
@@ -152,6 +160,8 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Compare freight, packing and delivery timing only after the roll or pallet plan, gross weight, destination city and Incoterm are known.",
     applications: ["Office renovations", "Hotel corridors", "Commercial interiors", "Public and mixed-use spaces"],
     localTerms: ["commercial carpet Romania", "office carpet supplier Romania", "hotel carpet supplier Romania"],
+    heroImage: "/images/markets/generated/romania-commercial-carpet-supplier-hub.webp",
+    heroImageAlt: "Romania commercial carpet supplier sample review for B2B projects",
     productSet: "cold",
   }),
   commercialPage({
@@ -190,6 +200,8 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Confirm pallet count, roll length, delivery city and target installation window before comparing freight choices.",
     applications: ["Office spaces", "Hotel corridors", "Education facilities", "Retail and public interiors"],
     localTerms: ["commercial carpet Poland", "office carpet supplier Poland", "hotel carpet supplier Poland"],
+    heroImage: "/images/markets/generated/poland-commercial-carpet-supplier-hub.webp",
+    heroImageAlt: "Poland commercial carpet supplier sample review for B2B projects",
     productSet: "cold",
   }),
   commercialPage({
@@ -342,6 +354,8 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Use confirmed carton, roll and pallet data together with the final delivery address when comparing freight options.",
     applications: ["Offices", "Hotels", "Education projects", "Public and shared areas"],
     localTerms: ["commercial carpet Czech Republic", "office carpet tiles Czech Republic", "hotel carpet supplier Czech Republic"],
+    heroImage: "/images/markets/generated/central-europe-commercial-carpet-supplier-hub.webp",
+    heroImageAlt: "Central Europe commercial carpet supplier sample review for office and hotel projects",
     productSet: "cold",
   }),
   commercialPage({
@@ -361,6 +375,8 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Confirm pallet count, roll length, delivery city and target installation window before comparing freight choices.",
     applications: ["Offices", "Hotels", "Corporate corridors", "Public interiors"],
     localTerms: ["commercial carpet Hungary", "office carpet tiles Hungary", "hotel carpet supplier Hungary"],
+    heroImage: "/images/markets/generated/central-europe-commercial-carpet-supplier-hub.webp",
+    heroImageAlt: "Central Europe commercial carpet supplier sample review for office and hotel projects",
     productSet: "cold",
   }),
   commercialPage({
@@ -513,6 +529,8 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Include delivery floor, loading access, pallet restrictions and phased handover dates when requesting the project quotation.",
     applications: ["High-rise offices", "Hotels and serviced apartments", "Retail interiors", "Airports and public buildings"],
     localTerms: ["commercial carpet supplier Singapore", "office carpet tiles Singapore", "hotel carpet supplier Singapore"],
+    heroImage: "/images/markets/generated/singapore-casino-carpet-hero.webp",
+    heroImageAlt: "Singapore commercial carpet supplier for casino and hospitality projects",
     productSet: "humid",
   }),
   commercialPage({
@@ -532,6 +550,8 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Send the Singapore site address, delivery floor, loading access, contact phone, project phase, roll or pallet restrictions, required sample date and target installation date when requesting a casino carpet quotation.",
     applications: ["Casino gaming floors", "VIP rooms and clubs", "Hotel entertainment zones", "Lift lobbies and gaming corridors"],
     localTerms: ["Singapore casino carpet", "casino carpet supplier Singapore", "custom gaming floor carpet Singapore", "oriental flower casino carpet", "hotel casino carpet Singapore", "casino carpet sample Singapore"],
+    heroImage: "/images/markets/generated/singapore-casino-carpet-hero.webp",
+    heroImageAlt: "Singapore casino carpet supplier for gaming floor and VIP hospitality zones",
     productSet: "casino",
   }),
   commercialPage({
@@ -645,6 +665,8 @@ export const countryMarketPages: CountryMarketPage[] = [
     environmentNote: "El rendimiento depende del diseño de riffles, distribución del agua, granulometría y limpieza. La alfombra no sustituye las pruebas operativas del equipo.",
     deliveryNote: "Indique ancho útil, longitud, espesor, cantidad de rollos, color y destino para calcular empaque y transporte sin asumir dimensiones estándar incorrectas.",
     applications: ["Canaletas de lavado", "Plantas aluviales", "Trommels y concentradores", "Fabricantes de equipos mineros"],
+    heroImage: "/images/markets/generated/peru-gold-mining-carpet-hero.webp",
+    heroImageAlt: "Alfombra para mineria de oro en Peru con prueba de canaleta",
     localTerms: ["alfombra minería de oro Perú", "miners moss Perú", "alfombra para canaleta de oro"],
   }),
   goldPage({
@@ -663,6 +685,8 @@ export const countryMarketPages: CountryMarketPage[] = [
     environmentNote: "La humedad y el material arcilloso pueden cambiar la limpieza y el flujo; pruebe la configuración con material representativo antes de definir una compra mayor.",
     deliveryNote: "Incluya cantidad, espesor, ancho, longitud, color, tipo de respaldo y ciudad de entrega en la solicitud de cotización.",
     applications: ["Canaletas de recuperación", "Lavado aluvial", "Trommels y dragas", "Distribuidores de equipos"],
+    heroImage: "/images/markets/generated/colombia-gold-mining-carpet-hero.webp",
+    heroImageAlt: "Alfombra para mineria de oro en Colombia con rollos y canaleta",
     localTerms: ["alfombra minería de oro Colombia", "miners moss Colombia", "tapete para canaleta de oro"],
   }),
 ];

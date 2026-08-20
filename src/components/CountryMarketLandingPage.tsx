@@ -208,6 +208,8 @@ function supportingGuideLinks(page: CountryMarketPage) {
 
 export function countryMarketMetadata(page: CountryMarketPage): Metadata {
   const hero = products.find((product) => product.id === page.primaryProductId);
+  const heroImage = page.heroImage ?? hero?.image;
+  const heroImageAlt = page.heroImageAlt ?? page.title;
   const fallback = defaultPath(page);
 
   return {
@@ -228,7 +230,7 @@ export function countryMarketMetadata(page: CountryMarketPage): Metadata {
       url: absoluteUrl(page.path),
       type: "website",
       locale: page.openGraphLocale,
-      images: hero ? [{ url: absoluteUrl(hero.image), alt: page.title }] : undefined,
+      images: heroImage ? [{ url: absoluteUrl(heroImage), alt: heroImageAlt }] : undefined,
     },
   };
 }
@@ -236,6 +238,8 @@ export function countryMarketMetadata(page: CountryMarketPage): Metadata {
 export default function CountryMarketLandingPage({ page }: { page: CountryMarketPage }) {
   const resolvedProducts = resolveProducts(page);
   const heroProduct = resolvedProducts[0];
+  const heroImage = page.heroImage ?? heroProduct?.image ?? "/images/hero-home.webp";
+  const heroImageAlt = page.heroImageAlt ?? page.title;
   const faqs = pageFaqs(page);
   const quoteProduct = page.kind === "gold" ? `Gold mining carpet mat - ${page.countryName}` : `Commercial carpet project - ${page.countryName}`;
   const quoteHref = `/contact?product=${encodeURIComponent(quoteProduct)}&country=${encodeURIComponent(page.countryName)}#quote-form`;
@@ -250,9 +254,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
     description: page.metadataDescription,
     inLanguage: page.language,
     dateModified: UPDATED_DATE,
-    primaryImageOfPage: heroProduct
-      ? { "@type": "ImageObject", url: absoluteUrl(heroProduct.image) }
-      : undefined,
+    primaryImageOfPage: { "@type": "ImageObject", url: absoluteUrl(heroImage) },
     about: resolvedProducts.map((product) => ({
       "@type": "Thing",
       name: product.name,
@@ -338,8 +340,8 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
       <section className="relative flex min-h-[620px] items-end overflow-hidden bg-primary text-white">
         <div className="absolute inset-0">
           <ProductImage
-            src={heroProduct?.image || "/images/hero-home.webp"}
-            alt={page.title}
+            src={heroImage}
+            alt={heroImageAlt}
             className="h-full w-full"
             fit="cover"
             priority
