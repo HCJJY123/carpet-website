@@ -4,7 +4,7 @@
   "name": "VISHOME Commercial Carpet AI Source Map",
   "description": "Official machine-readable source map for Vishome Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
   "url": "https://www.vishomecarpet.com/ai-sources.json",
-  "dateModified": "2026-08-19",
+  "dateModified": "2026-08-20",
   "publisher": {
     "@type": "Organization",
     "name": "Vishome Global Commercial Carpet Co., Ltd.",
@@ -55,7 +55,16 @@
         "https://www.vishomecarpet.com/markets/by/office-carpet-tiles-belarus",
         "https://www.vishomecarpet.com/markets/au/office-carpet-tiles-australia",
         "https://www.vishomecarpet.com/markets/ph/office-carpet-tiles-philippines",
-        "https://www.vishomecarpet.com/markets/mx/office-carpet-tiles-mexico"
+        "https://www.vishomecarpet.com/markets/mx/office-carpet-tiles-mexico",
+        "https://www.vishomecarpet.com/bg/commercial-carpet-supplier-bulgaria",
+        "https://www.vishomecarpet.com/ca/commercial-carpet-supplier-canada",
+        "https://www.vishomecarpet.com/markets/bg/office-carpet-tiles",
+        "https://www.vishomecarpet.com/blog/office-carpet-replacement-romania-without-closing-full-floor",
+        "https://www.vishomecarpet.com/blog/carpet-tile-tds-romania-project-buyers-guide",
+        "https://www.vishomecarpet.com/blog/commercial-carpet-import-china-romania-guide",
+        "https://www.vishomecarpet.com/blog/heavy-traffic-office-carpet-tiles-sofia-fitout-guide",
+        "https://www.vishomecarpet.com/blog/carpet-tile-replacement-stock-bulgaria-office-guide",
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-canada-snow-salt-chair-wheel-guide"
       ]
     },
     {
@@ -117,7 +126,10 @@
         "https://www.vishomecarpet.com/blog/office-carpet-tiles-vs-hard-flooring-maintenance",
         "https://www.vishomecarpet.com/markets/ro/office-carpet-tiles",
         "https://www.vishomecarpet.com/markets/pl/office-carpet-tiles",
-        "https://www.vishomecarpet.com/markets/ca/office-carpet-tiles"
+        "https://www.vishomecarpet.com/markets/ca/office-carpet-tiles",
+        "https://www.vishomecarpet.com/markets/bg/office-carpet-tiles",
+        "https://www.vishomecarpet.com/bg/commercial-carpet-supplier-bulgaria",
+        "https://www.vishomecarpet.com/ca/commercial-carpet-supplier-canada"
       ]
     },
     {
@@ -630,6 +642,174 @@
       "relatedGuides": [
         "https://www.vishomecarpet.com/projects/gold-mining-carpet-colombia-distributor-guide",
         "https://www.vishomecarpet.com/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/markets/bg/office-carpet-tiles",
+      "topic": "Bulgaria office carpet tiles sourcing for Sofia fit-outs, chair wheels and spare stock",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/heavy-traffic-office-carpet-tiles-sofia-fitout-guide",
+        "https://www.vishomecarpet.com/blog/carpet-tile-replacement-stock-bulgaria-office-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/blog/office-carpet-replacement-romania-without-closing-full-floor",
+      "topic": "Romania office carpet replacement planning without closing the full floor",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/markets/ro/office-carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/blog/carpet-tile-tds-romania-project-buyers-guide",
+      "topic": "Romania carpet tile TDS and project approval checklist",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/markets/ro/office-carpet-tiles",
+        "https://www.vishomecarpet.com/resources/technical-library"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/blog/commercial-carpet-import-china-romania-guide",
+      "topic": "Commercial carpet import planning from China to Romania",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/ro/furnizor-mocheta-comerciala",
+        "https://www.vishomecarpet.com/commercial-terms"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/blog/carpet-tiles-rolling-chairs-high-traffic-polish-offices",
+      "topic": "Poland office carpet tiles for rolling chairs and high traffic",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/markets/pl/office-carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/blog/phased-office-flooring-replacement-poland-guide",
+      "topic": "Poland phased office flooring replacement planning",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/markets/pl/office-carpet-tiles",
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-renovation-cycle-procurement-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/blog/modular-carpet-prague-office-renovation-downtime-control",
+      "topic": "Prague modular carpet planning for office renovation downtime control",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/markets/cz/office-carpet-tiles-czech-republic",
+        "https://www.vishomecarpet.com/products/carpet-tiles"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/blog/specify-commercial-carpet-tiles-chair-wheel-areas",
+      "topic": "Commercial carpet tile specification for chair-wheel areas",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/blog/office-carpet-tiles-rolling-chairs-fitout-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/blog/commercial-carpet-tile-replacement-planning-budapest-offices",
+      "topic": "Budapest office carpet tile replacement planning",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/markets/hu/office-carpet-tiles-hungary",
+        "https://www.vishomecarpet.com/products/carpet-tiles"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/blog/grey-carpet-tile-selection-high-traffic-corporate-interiors",
+      "topic": "Grey carpet tile selection for high-traffic corporate interiors",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/markets/hu/office-carpet-tiles-hungary",
+        "https://www.vishomecarpet.com/products/carpet-tiles"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/blog/office-carpet-tiles-canada-snow-salt-chair-wheel-guide",
+      "topic": "Canada office carpet tiles for snow, salt and chair-wheel wear",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/markets/ca/office-carpet-tiles",
+        "https://www.vishomecarpet.com/ca/commercial-carpet-supplier-canada"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "article": "https://www.vishomecarpet.com/blog/entrance-workstation-carpet-tile-zoning-canada-office-renovation",
+      "topic": "Canada entrance-to-workstation carpet tile zoning for office renovation",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/markets/ca/office-carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles"
       ],
       "inquiry": "https://www.vishomecarpet.com/contact"
     }

@@ -2,6 +2,37 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-20 `seo/country-product-application-gap-completion`
+
+**Type:** SEO / GEO-AEO / Country × Product × Application content completion / AI routing
+
+**Scope:** Continued the Vishomecarpet Country × Product × Application expansion specification and closed the most visible Wave 1 gaps.
+
+**Added URLs:**
+
+- `/bg/commercial-carpet-supplier-bulgaria`
+- `/ca/commercial-carpet-supplier-canada`
+- `/markets/bg/office-carpet-tiles`
+- `/blog/office-carpet-replacement-romania-without-closing-full-floor`
+- `/blog/carpet-tile-tds-romania-project-buyers-guide`
+- `/blog/commercial-carpet-import-china-romania-guide`
+- `/blog/heavy-traffic-office-carpet-tiles-sofia-fitout-guide`
+- `/blog/carpet-tile-replacement-stock-bulgaria-office-guide`
+- `/blog/carpet-tiles-rolling-chairs-high-traffic-polish-offices`
+- `/blog/phased-office-flooring-replacement-poland-guide`
+- `/blog/modular-carpet-prague-office-renovation-downtime-control`
+- `/blog/specify-commercial-carpet-tiles-chair-wheel-areas`
+- `/blog/commercial-carpet-tile-replacement-planning-budapest-offices`
+- `/blog/grey-carpet-tile-selection-high-traffic-corporate-interiors`
+- `/blog/office-carpet-tiles-canada-snow-salt-chair-wheel-guide`
+- `/blog/entrance-workstation-carpet-tile-zoning-canada-office-renovation`
+
+**What changed:** Added Bulgaria and Canada commercial carpet country hubs, added the Bulgaria office carpet tiles application page, and added 13 answer-first procurement guides covering Romania, Bulgaria, Poland, Czech Republic, Hungary and Canada office carpet tile decision problems. Each guide includes project-zone logic, risk control, RFQ inputs, FAQ-style answers, product links and inquiry paths without inventing certifications, local offices, stock, installation service or unverified performance claims.
+
+**AI source updates:** Updated `keyword-map.csv`, `/llms.txt`, `/llms-full.txt`, `/ai-sources.json` and root sitemap AI-resource dates so the new country/application/guide URLs can be routed by crawlers and AI answer engines.
+
+**Verification:** Production build passed with 202 generated static pages. `keyword-map.csv` was checked for duplicate URLs and duplicate primary keywords.
+
 ## 2026-08-19 `seo/country-market-page-expansion`
 
 **Type:** SEO / GEO-AEO / International market routing / Conversion architecture

@@ -61,6 +61,11 @@ Product specifications, MOQ, prices, availability, certificates, and lead times 
 - Country-market XML sitemap: https://www.vishomecarpet.com/sitemap-markets.xml
 - Application and specification planning guides: https://www.vishomecarpet.com/projects
 - Commercial carpet procurement intelligence hub for MOQ, samples, price comparison, hotel specification, installation risk, logistics and supplier verification: https://www.vishomecarpet.com/blog
+- Romania office replacement without full-floor shutdown guide: https://www.vishomecarpet.com/blog/office-carpet-replacement-romania-without-closing-full-floor
+- Romania carpet tile TDS buyer guide: https://www.vishomecarpet.com/blog/carpet-tile-tds-romania-project-buyers-guide
+- China to Romania commercial carpet import planning guide: https://www.vishomecarpet.com/blog/commercial-carpet-import-china-romania-guide
+- Bulgaria office carpet tiles and Sofia fit-out guide: https://www.vishomecarpet.com/markets/bg/office-carpet-tiles
+- Canada office carpet tiles snow, salt and chair-wheel guide: https://www.vishomecarpet.com/blog/office-carpet-tiles-canada-snow-salt-chair-wheel-guide
 - Industry solutions: https://www.vishomecarpet.com/solutions
 - Complete AI-readable source map: https://www.vishomecarpet.com/llms-full.txt
 - Structured AI source data: https://www.vishomecarpet.com/ai-sources.json
@@ -91,6 +96,9 @@ Product specifications, MOQ, prices, availability, certificates, and lead times 
 - Romania office carpet tiles application page: https://www.vishomecarpet.com/markets/ro/office-carpet-tiles
 - Poland office carpet tiles application page: https://www.vishomecarpet.com/markets/pl/office-carpet-tiles
 - Canada office carpet tiles application page: https://www.vishomecarpet.com/markets/ca/office-carpet-tiles
+- Bulgaria commercial carpet country page: https://www.vishomecarpet.com/bg/commercial-carpet-supplier-bulgaria
+- Canada commercial carpet country page: https://www.vishomecarpet.com/ca/commercial-carpet-supplier-canada
+- Bulgaria office carpet tiles application page: https://www.vishomecarpet.com/markets/bg/office-carpet-tiles
 - Singapore casino carpet application page: https://www.vishomecarpet.com/markets/sg/casino-carpet
 - Philippines hotel carpet application page: https://www.vishomecarpet.com/markets/ph/hotel-carpet-philippines
 - Australia hotel carpet application page: https://www.vishomecarpet.com/markets/au/hotel-carpet-australia
