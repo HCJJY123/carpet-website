@@ -4280,5 +4280,805 @@ export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
       }
     ],
     "fallback": "/images/optimized/blog-series-office-carpet-tiles-rolling-chairs-fitout-guide-office-carpet-tiles-rolling-chairs-fitout-guide-23dee13a2e-1536w.webp"
+  },
+  "/images/markets/generated/singapore-casino-carpet-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 395020,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-singapore-casino-carpet-hero-1616ce9ae5-480w.avif",
+        "width": 480,
+        "bytes": 37168
+      },
+      {
+        "src": "/images/optimized/markets-generated-singapore-casino-carpet-hero-1616ce9ae5-768w.avif",
+        "width": 768,
+        "bytes": 115518
+      },
+      {
+        "src": "/images/optimized/markets-generated-singapore-casino-carpet-hero-1616ce9ae5-1200w.avif",
+        "width": 1200,
+        "bytes": 185766
+      },
+      {
+        "src": "/images/optimized/markets-generated-singapore-casino-carpet-hero-1616ce9ae5-1536w.avif",
+        "width": 1536,
+        "bytes": 342238
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-singapore-casino-carpet-hero-1616ce9ae5-480w.webp",
+        "width": 480,
+        "bytes": 41154
+      },
+      {
+        "src": "/images/optimized/markets-generated-singapore-casino-carpet-hero-1616ce9ae5-768w.webp",
+        "width": 768,
+        "bytes": 110894
+      },
+      {
+        "src": "/images/optimized/markets-generated-singapore-casino-carpet-hero-1616ce9ae5-1200w.webp",
+        "width": 1200,
+        "bytes": 208500
+      },
+      {
+        "src": "/images/optimized/markets-generated-singapore-casino-carpet-hero-1616ce9ae5-1536w.webp",
+        "width": 1536,
+        "bytes": 377784
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-singapore-casino-carpet-hero-1616ce9ae5-1536w.webp"
+  },
+  "/images/markets/generated/mexico-hotel-corridor-carpet-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 103558,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-mexico-hotel-corridor-carpet-hero-da051f5286-480w.avif",
+        "width": 480,
+        "bytes": 9890
+      },
+      {
+        "src": "/images/optimized/markets-generated-mexico-hotel-corridor-carpet-hero-da051f5286-768w.avif",
+        "width": 768,
+        "bytes": 23916
+      },
+      {
+        "src": "/images/optimized/markets-generated-mexico-hotel-corridor-carpet-hero-da051f5286-1200w.avif",
+        "width": 1200,
+        "bytes": 38779
+      },
+      {
+        "src": "/images/optimized/markets-generated-mexico-hotel-corridor-carpet-hero-da051f5286-1536w.avif",
+        "width": 1536,
+        "bytes": 78011
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-mexico-hotel-corridor-carpet-hero-da051f5286-480w.webp",
+        "width": 480,
+        "bytes": 12472
+      },
+      {
+        "src": "/images/optimized/markets-generated-mexico-hotel-corridor-carpet-hero-da051f5286-768w.webp",
+        "width": 768,
+        "bytes": 30144
+      },
+      {
+        "src": "/images/optimized/markets-generated-mexico-hotel-corridor-carpet-hero-da051f5286-1200w.webp",
+        "width": 1200,
+        "bytes": 52172
+      },
+      {
+        "src": "/images/optimized/markets-generated-mexico-hotel-corridor-carpet-hero-da051f5286-1536w.webp",
+        "width": 1536,
+        "bytes": 93734
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-mexico-hotel-corridor-carpet-hero-da051f5286-1536w.webp"
+  },
+  "/images/markets/generated/romania-office-carpet-tiles-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 291030,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-romania-office-carpet-tiles-hero-3e323ed451-480w.avif",
+        "width": 480,
+        "bytes": 22189
+      },
+      {
+        "src": "/images/optimized/markets-generated-romania-office-carpet-tiles-hero-3e323ed451-768w.avif",
+        "width": 768,
+        "bytes": 63193
+      },
+      {
+        "src": "/images/optimized/markets-generated-romania-office-carpet-tiles-hero-3e323ed451-1200w.avif",
+        "width": 1200,
+        "bytes": 114855
+      },
+      {
+        "src": "/images/optimized/markets-generated-romania-office-carpet-tiles-hero-3e323ed451-1536w.avif",
+        "width": 1536,
+        "bytes": 220338
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-romania-office-carpet-tiles-hero-3e323ed451-480w.webp",
+        "width": 480,
+        "bytes": 26920
+      },
+      {
+        "src": "/images/optimized/markets-generated-romania-office-carpet-tiles-hero-3e323ed451-768w.webp",
+        "width": 768,
+        "bytes": 76242
+      },
+      {
+        "src": "/images/optimized/markets-generated-romania-office-carpet-tiles-hero-3e323ed451-1200w.webp",
+        "width": 1200,
+        "bytes": 151180
+      },
+      {
+        "src": "/images/optimized/markets-generated-romania-office-carpet-tiles-hero-3e323ed451-1536w.webp",
+        "width": 1536,
+        "bytes": 277946
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-romania-office-carpet-tiles-hero-3e323ed451-1536w.webp"
+  },
+  "/images/markets/generated/poland-office-carpet-tiles-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 188126,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-poland-office-carpet-tiles-hero-6a3f3e8f92-480w.avif",
+        "width": 480,
+        "bytes": 17775
+      },
+      {
+        "src": "/images/optimized/markets-generated-poland-office-carpet-tiles-hero-6a3f3e8f92-768w.avif",
+        "width": 768,
+        "bytes": 42956
+      },
+      {
+        "src": "/images/optimized/markets-generated-poland-office-carpet-tiles-hero-6a3f3e8f92-1200w.avif",
+        "width": 1200,
+        "bytes": 68056
+      },
+      {
+        "src": "/images/optimized/markets-generated-poland-office-carpet-tiles-hero-6a3f3e8f92-1536w.avif",
+        "width": 1536,
+        "bytes": 125736
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-poland-office-carpet-tiles-hero-6a3f3e8f92-480w.webp",
+        "width": 480,
+        "bytes": 22534
+      },
+      {
+        "src": "/images/optimized/markets-generated-poland-office-carpet-tiles-hero-6a3f3e8f92-768w.webp",
+        "width": 768,
+        "bytes": 54834
+      },
+      {
+        "src": "/images/optimized/markets-generated-poland-office-carpet-tiles-hero-6a3f3e8f92-1200w.webp",
+        "width": 1200,
+        "bytes": 93642
+      },
+      {
+        "src": "/images/optimized/markets-generated-poland-office-carpet-tiles-hero-6a3f3e8f92-1536w.webp",
+        "width": 1536,
+        "bytes": 170474
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-poland-office-carpet-tiles-hero-6a3f3e8f92-1536w.webp"
+  },
+  "/images/markets/generated/czech-office-carpet-tiles-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 336730,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-czech-office-carpet-tiles-hero-3e0e1955cc-480w.avif",
+        "width": 480,
+        "bytes": 17621
+      },
+      {
+        "src": "/images/optimized/markets-generated-czech-office-carpet-tiles-hero-3e0e1955cc-768w.avif",
+        "width": 768,
+        "bytes": 61727
+      },
+      {
+        "src": "/images/optimized/markets-generated-czech-office-carpet-tiles-hero-3e0e1955cc-1200w.avif",
+        "width": 1200,
+        "bytes": 124092
+      },
+      {
+        "src": "/images/optimized/markets-generated-czech-office-carpet-tiles-hero-3e0e1955cc-1536w.avif",
+        "width": 1536,
+        "bytes": 258935
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-czech-office-carpet-tiles-hero-3e0e1955cc-480w.webp",
+        "width": 480,
+        "bytes": 22298
+      },
+      {
+        "src": "/images/optimized/markets-generated-czech-office-carpet-tiles-hero-3e0e1955cc-768w.webp",
+        "width": 768,
+        "bytes": 75266
+      },
+      {
+        "src": "/images/optimized/markets-generated-czech-office-carpet-tiles-hero-3e0e1955cc-1200w.webp",
+        "width": 1200,
+        "bytes": 161030
+      },
+      {
+        "src": "/images/optimized/markets-generated-czech-office-carpet-tiles-hero-3e0e1955cc-1536w.webp",
+        "width": 1536,
+        "bytes": 317858
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-czech-office-carpet-tiles-hero-3e0e1955cc-1536w.webp"
+  },
+  "/images/markets/generated/hungary-office-carpet-tiles-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 239226,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-hungary-office-carpet-tiles-hero-cb4e3ff9ea-480w.avif",
+        "width": 480,
+        "bytes": 15333
+      },
+      {
+        "src": "/images/optimized/markets-generated-hungary-office-carpet-tiles-hero-cb4e3ff9ea-768w.avif",
+        "width": 768,
+        "bytes": 46362
+      },
+      {
+        "src": "/images/optimized/markets-generated-hungary-office-carpet-tiles-hero-cb4e3ff9ea-1200w.avif",
+        "width": 1200,
+        "bytes": 87653
+      },
+      {
+        "src": "/images/optimized/markets-generated-hungary-office-carpet-tiles-hero-cb4e3ff9ea-1536w.avif",
+        "width": 1536,
+        "bytes": 189727
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-hungary-office-carpet-tiles-hero-cb4e3ff9ea-480w.webp",
+        "width": 480,
+        "bytes": 18764
+      },
+      {
+        "src": "/images/optimized/markets-generated-hungary-office-carpet-tiles-hero-cb4e3ff9ea-768w.webp",
+        "width": 768,
+        "bytes": 54438
+      },
+      {
+        "src": "/images/optimized/markets-generated-hungary-office-carpet-tiles-hero-cb4e3ff9ea-1200w.webp",
+        "width": 1200,
+        "bytes": 108486
+      },
+      {
+        "src": "/images/optimized/markets-generated-hungary-office-carpet-tiles-hero-cb4e3ff9ea-1536w.webp",
+        "width": 1536,
+        "bytes": 224210
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-hungary-office-carpet-tiles-hero-cb4e3ff9ea-1536w.webp"
+  },
+  "/images/markets/generated/kazakhstan-gold-mining-carpet-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 247222,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-kazakhstan-gold-mining-carpet-hero-77ff2c0b1f-480w.avif",
+        "width": 480,
+        "bytes": 27680
+      },
+      {
+        "src": "/images/optimized/markets-generated-kazakhstan-gold-mining-carpet-hero-77ff2c0b1f-768w.avif",
+        "width": 768,
+        "bytes": 70991
+      },
+      {
+        "src": "/images/optimized/markets-generated-kazakhstan-gold-mining-carpet-hero-77ff2c0b1f-1200w.avif",
+        "width": 1200,
+        "bytes": 104240
+      },
+      {
+        "src": "/images/optimized/markets-generated-kazakhstan-gold-mining-carpet-hero-77ff2c0b1f-1536w.avif",
+        "width": 1536,
+        "bytes": 187270
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-kazakhstan-gold-mining-carpet-hero-77ff2c0b1f-480w.webp",
+        "width": 480,
+        "bytes": 34232
+      },
+      {
+        "src": "/images/optimized/markets-generated-kazakhstan-gold-mining-carpet-hero-77ff2c0b1f-768w.webp",
+        "width": 768,
+        "bytes": 81760
+      },
+      {
+        "src": "/images/optimized/markets-generated-kazakhstan-gold-mining-carpet-hero-77ff2c0b1f-1200w.webp",
+        "width": 1200,
+        "bytes": 140968
+      },
+      {
+        "src": "/images/optimized/markets-generated-kazakhstan-gold-mining-carpet-hero-77ff2c0b1f-1536w.webp",
+        "width": 1536,
+        "bytes": 232206
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-kazakhstan-gold-mining-carpet-hero-77ff2c0b1f-1536w.webp"
+  },
+  "/images/markets/generated/peru-gold-mining-carpet-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 273912,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-peru-gold-mining-carpet-hero-68c1339cb2-480w.avif",
+        "width": 480,
+        "bytes": 23277
+      },
+      {
+        "src": "/images/optimized/markets-generated-peru-gold-mining-carpet-hero-68c1339cb2-768w.avif",
+        "width": 768,
+        "bytes": 67139
+      },
+      {
+        "src": "/images/optimized/markets-generated-peru-gold-mining-carpet-hero-68c1339cb2-1200w.avif",
+        "width": 1200,
+        "bytes": 108960
+      },
+      {
+        "src": "/images/optimized/markets-generated-peru-gold-mining-carpet-hero-68c1339cb2-1536w.avif",
+        "width": 1536,
+        "bytes": 209679
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-peru-gold-mining-carpet-hero-68c1339cb2-480w.webp",
+        "width": 480,
+        "bytes": 29352
+      },
+      {
+        "src": "/images/optimized/markets-generated-peru-gold-mining-carpet-hero-68c1339cb2-768w.webp",
+        "width": 768,
+        "bytes": 79110
+      },
+      {
+        "src": "/images/optimized/markets-generated-peru-gold-mining-carpet-hero-68c1339cb2-1200w.webp",
+        "width": 1200,
+        "bytes": 143180
+      },
+      {
+        "src": "/images/optimized/markets-generated-peru-gold-mining-carpet-hero-68c1339cb2-1536w.webp",
+        "width": 1536,
+        "bytes": 252838
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-peru-gold-mining-carpet-hero-68c1339cb2-1536w.webp"
+  },
+  "/images/markets/generated/colombia-gold-mining-carpet-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 278890,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-colombia-gold-mining-carpet-hero-0b47f97e14-480w.avif",
+        "width": 480,
+        "bytes": 30111
+      },
+      {
+        "src": "/images/optimized/markets-generated-colombia-gold-mining-carpet-hero-0b47f97e14-768w.avif",
+        "width": 768,
+        "bytes": 75382
+      },
+      {
+        "src": "/images/optimized/markets-generated-colombia-gold-mining-carpet-hero-0b47f97e14-1200w.avif",
+        "width": 1200,
+        "bytes": 122900
+      },
+      {
+        "src": "/images/optimized/markets-generated-colombia-gold-mining-carpet-hero-0b47f97e14-1536w.avif",
+        "width": 1536,
+        "bytes": 222466
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-colombia-gold-mining-carpet-hero-0b47f97e14-480w.webp",
+        "width": 480,
+        "bytes": 34754
+      },
+      {
+        "src": "/images/optimized/markets-generated-colombia-gold-mining-carpet-hero-0b47f97e14-768w.webp",
+        "width": 768,
+        "bytes": 84342
+      },
+      {
+        "src": "/images/optimized/markets-generated-colombia-gold-mining-carpet-hero-0b47f97e14-1200w.webp",
+        "width": 1200,
+        "bytes": 149800
+      },
+      {
+        "src": "/images/optimized/markets-generated-colombia-gold-mining-carpet-hero-0b47f97e14-1536w.webp",
+        "width": 1536,
+        "bytes": 260112
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-colombia-gold-mining-carpet-hero-0b47f97e14-1536w.webp"
+  },
+  "/images/markets/generated/romania-commercial-carpet-supplier-hub.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 245872,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-romania-commercial-carpet-supplier-hub-dfe50d2320-480w.avif",
+        "width": 480,
+        "bytes": 27935
+      },
+      {
+        "src": "/images/optimized/markets-generated-romania-commercial-carpet-supplier-hub-dfe50d2320-768w.avif",
+        "width": 768,
+        "bytes": 65988
+      },
+      {
+        "src": "/images/optimized/markets-generated-romania-commercial-carpet-supplier-hub-dfe50d2320-1200w.avif",
+        "width": 1200,
+        "bytes": 102854
+      },
+      {
+        "src": "/images/optimized/markets-generated-romania-commercial-carpet-supplier-hub-dfe50d2320-1536w.avif",
+        "width": 1536,
+        "bytes": 178516
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-romania-commercial-carpet-supplier-hub-dfe50d2320-480w.webp",
+        "width": 480,
+        "bytes": 32068
+      },
+      {
+        "src": "/images/optimized/markets-generated-romania-commercial-carpet-supplier-hub-dfe50d2320-768w.webp",
+        "width": 768,
+        "bytes": 77732
+      },
+      {
+        "src": "/images/optimized/markets-generated-romania-commercial-carpet-supplier-hub-dfe50d2320-1200w.webp",
+        "width": 1200,
+        "bytes": 141362
+      },
+      {
+        "src": "/images/optimized/markets-generated-romania-commercial-carpet-supplier-hub-dfe50d2320-1536w.webp",
+        "width": 1536,
+        "bytes": 232984
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-romania-commercial-carpet-supplier-hub-dfe50d2320-1536w.webp"
+  },
+  "/images/markets/generated/poland-commercial-carpet-supplier-hub.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 200228,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-poland-commercial-carpet-supplier-hub-a82d46c165-480w.avif",
+        "width": 480,
+        "bytes": 18302
+      },
+      {
+        "src": "/images/optimized/markets-generated-poland-commercial-carpet-supplier-hub-a82d46c165-768w.avif",
+        "width": 768,
+        "bytes": 47817
+      },
+      {
+        "src": "/images/optimized/markets-generated-poland-commercial-carpet-supplier-hub-a82d46c165-1200w.avif",
+        "width": 1200,
+        "bytes": 77397
+      },
+      {
+        "src": "/images/optimized/markets-generated-poland-commercial-carpet-supplier-hub-a82d46c165-1536w.avif",
+        "width": 1536,
+        "bytes": 139090
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-poland-commercial-carpet-supplier-hub-a82d46c165-480w.webp",
+        "width": 480,
+        "bytes": 23794
+      },
+      {
+        "src": "/images/optimized/markets-generated-poland-commercial-carpet-supplier-hub-a82d46c165-768w.webp",
+        "width": 768,
+        "bytes": 60548
+      },
+      {
+        "src": "/images/optimized/markets-generated-poland-commercial-carpet-supplier-hub-a82d46c165-1200w.webp",
+        "width": 1200,
+        "bytes": 105164
+      },
+      {
+        "src": "/images/optimized/markets-generated-poland-commercial-carpet-supplier-hub-a82d46c165-1536w.webp",
+        "width": 1536,
+        "bytes": 186372
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-poland-commercial-carpet-supplier-hub-a82d46c165-1536w.webp"
+  },
+  "/images/markets/generated/central-europe-commercial-carpet-supplier-hub.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 139278,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-central-europe-commercial-carpet-supplier-hub-d463e0591f-480w.avif",
+        "width": 480,
+        "bytes": 18535
+      },
+      {
+        "src": "/images/optimized/markets-generated-central-europe-commercial-carpet-supplier-hub-d463e0591f-768w.avif",
+        "width": 768,
+        "bytes": 39680
+      },
+      {
+        "src": "/images/optimized/markets-generated-central-europe-commercial-carpet-supplier-hub-d463e0591f-1200w.avif",
+        "width": 1200,
+        "bytes": 58204
+      },
+      {
+        "src": "/images/optimized/markets-generated-central-europe-commercial-carpet-supplier-hub-d463e0591f-1536w.avif",
+        "width": 1536,
+        "bytes": 93316
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-central-europe-commercial-carpet-supplier-hub-d463e0591f-480w.webp",
+        "width": 480,
+        "bytes": 22204
+      },
+      {
+        "src": "/images/optimized/markets-generated-central-europe-commercial-carpet-supplier-hub-d463e0591f-768w.webp",
+        "width": 768,
+        "bytes": 48492
+      },
+      {
+        "src": "/images/optimized/markets-generated-central-europe-commercial-carpet-supplier-hub-d463e0591f-1200w.webp",
+        "width": 1200,
+        "bytes": 81250
+      },
+      {
+        "src": "/images/optimized/markets-generated-central-europe-commercial-carpet-supplier-hub-d463e0591f-1536w.webp",
+        "width": 1536,
+        "bytes": 129852
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-central-europe-commercial-carpet-supplier-hub-d463e0591f-1536w.webp"
+  },
+  "/images/markets/generated/philippines-hotel-carpet-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 197004,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-philippines-hotel-carpet-hero-0bbec1cd73-480w.avif",
+        "width": 480,
+        "bytes": 19470
+      },
+      {
+        "src": "/images/optimized/markets-generated-philippines-hotel-carpet-hero-0bbec1cd73-768w.avif",
+        "width": 768,
+        "bytes": 53125
+      },
+      {
+        "src": "/images/optimized/markets-generated-philippines-hotel-carpet-hero-0bbec1cd73-1200w.avif",
+        "width": 1200,
+        "bytes": 81273
+      },
+      {
+        "src": "/images/optimized/markets-generated-philippines-hotel-carpet-hero-0bbec1cd73-1536w.avif",
+        "width": 1536,
+        "bytes": 151996
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-philippines-hotel-carpet-hero-0bbec1cd73-480w.webp",
+        "width": 480,
+        "bytes": 22766
+      },
+      {
+        "src": "/images/optimized/markets-generated-philippines-hotel-carpet-hero-0bbec1cd73-768w.webp",
+        "width": 768,
+        "bytes": 56348
+      },
+      {
+        "src": "/images/optimized/markets-generated-philippines-hotel-carpet-hero-0bbec1cd73-1200w.webp",
+        "width": 1200,
+        "bytes": 99810
+      },
+      {
+        "src": "/images/optimized/markets-generated-philippines-hotel-carpet-hero-0bbec1cd73-1536w.webp",
+        "width": 1536,
+        "bytes": 182370
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-philippines-hotel-carpet-hero-0bbec1cd73-1536w.webp"
+  },
+  "/images/markets/generated/australia-hotel-carpet-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 200960,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-australia-hotel-carpet-hero-ba84b710c2-480w.avif",
+        "width": 480,
+        "bytes": 18343
+      },
+      {
+        "src": "/images/optimized/markets-generated-australia-hotel-carpet-hero-ba84b710c2-768w.avif",
+        "width": 768,
+        "bytes": 47958
+      },
+      {
+        "src": "/images/optimized/markets-generated-australia-hotel-carpet-hero-ba84b710c2-1200w.avif",
+        "width": 1200,
+        "bytes": 80762
+      },
+      {
+        "src": "/images/optimized/markets-generated-australia-hotel-carpet-hero-ba84b710c2-1536w.avif",
+        "width": 1536,
+        "bytes": 158972
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-australia-hotel-carpet-hero-ba84b710c2-480w.webp",
+        "width": 480,
+        "bytes": 21796
+      },
+      {
+        "src": "/images/optimized/markets-generated-australia-hotel-carpet-hero-ba84b710c2-768w.webp",
+        "width": 768,
+        "bytes": 55348
+      },
+      {
+        "src": "/images/optimized/markets-generated-australia-hotel-carpet-hero-ba84b710c2-1200w.webp",
+        "width": 1200,
+        "bytes": 100622
+      },
+      {
+        "src": "/images/optimized/markets-generated-australia-hotel-carpet-hero-ba84b710c2-1536w.webp",
+        "width": 1536,
+        "bytes": 185734
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-australia-hotel-carpet-hero-ba84b710c2-1536w.webp"
+  },
+  "/images/markets/generated/australia-office-carpet-tiles-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 278484,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-australia-office-carpet-tiles-hero-ccaca14557-480w.avif",
+        "width": 480,
+        "bytes": 18238
+      },
+      {
+        "src": "/images/optimized/markets-generated-australia-office-carpet-tiles-hero-ccaca14557-768w.avif",
+        "width": 768,
+        "bytes": 55047
+      },
+      {
+        "src": "/images/optimized/markets-generated-australia-office-carpet-tiles-hero-ccaca14557-1200w.avif",
+        "width": 1200,
+        "bytes": 105873
+      },
+      {
+        "src": "/images/optimized/markets-generated-australia-office-carpet-tiles-hero-ccaca14557-1536w.avif",
+        "width": 1536,
+        "bytes": 214307
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-australia-office-carpet-tiles-hero-ccaca14557-480w.webp",
+        "width": 480,
+        "bytes": 22362
+      },
+      {
+        "src": "/images/optimized/markets-generated-australia-office-carpet-tiles-hero-ccaca14557-768w.webp",
+        "width": 768,
+        "bytes": 65470
+      },
+      {
+        "src": "/images/optimized/markets-generated-australia-office-carpet-tiles-hero-ccaca14557-1200w.webp",
+        "width": 1200,
+        "bytes": 133434
+      },
+      {
+        "src": "/images/optimized/markets-generated-australia-office-carpet-tiles-hero-ccaca14557-1536w.webp",
+        "width": 1536,
+        "bytes": 263366
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-australia-office-carpet-tiles-hero-ccaca14557-1536w.webp"
+  },
+  "/images/markets/generated/canada-office-carpet-tiles-hero.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 354494,
+    "avif": [
+      {
+        "src": "/images/optimized/markets-generated-canada-office-carpet-tiles-hero-202810eb03-480w.avif",
+        "width": 480,
+        "bytes": 19222
+      },
+      {
+        "src": "/images/optimized/markets-generated-canada-office-carpet-tiles-hero-202810eb03-768w.avif",
+        "width": 768,
+        "bytes": 64180
+      },
+      {
+        "src": "/images/optimized/markets-generated-canada-office-carpet-tiles-hero-202810eb03-1200w.avif",
+        "width": 1200,
+        "bytes": 129287
+      },
+      {
+        "src": "/images/optimized/markets-generated-canada-office-carpet-tiles-hero-202810eb03-1536w.avif",
+        "width": 1536,
+        "bytes": 273247
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/markets-generated-canada-office-carpet-tiles-hero-202810eb03-480w.webp",
+        "width": 480,
+        "bytes": 25978
+      },
+      {
+        "src": "/images/optimized/markets-generated-canada-office-carpet-tiles-hero-202810eb03-768w.webp",
+        "width": 768,
+        "bytes": 80598
+      },
+      {
+        "src": "/images/optimized/markets-generated-canada-office-carpet-tiles-hero-202810eb03-1200w.webp",
+        "width": 1200,
+        "bytes": 170628
+      },
+      {
+        "src": "/images/optimized/markets-generated-canada-office-carpet-tiles-hero-202810eb03-1536w.webp",
+        "width": 1536,
+        "bytes": 337320
+      }
+    ],
+    "fallback": "/images/optimized/markets-generated-canada-office-carpet-tiles-hero-202810eb03-1536w.webp"
   }
 };
