@@ -136,6 +136,25 @@ export const countryMarketPages: CountryMarketPage[] = [
     productSet: "cold",
   }),
   commercialPage({
+    market: "ro",
+    slug: "commercial-carpet-supplier-romania",
+    language: "en",
+    hreflang: "en-RO",
+    openGraphLocale: "en_RO",
+    countryName: "Romania",
+    countryNameLocal: "România",
+    title: "Commercial Carpet Supplier for Romania Projects",
+    metadataTitle: "Commercial Carpet Supplier Romania | VISHOME",
+    metadataDescription: "Commercial carpet tiles and hotel broadloom for Romania projects. Compare samples, TDS, MOQ, replacement planning and project quotation inputs.",
+    directAnswer: "A commercial carpet supplier for Romania should help buyers compare chair-wheel wear, phased replacement, TDS review, sample approval and freight planning before the order is placed. Vishomecarpet supplies project-based carpet tiles, hotel broadloom and public-area carpet from China, while the final specification must still be checked against the tender and site conditions.",
+    marketContext: "Projects in Bucharest, Cluj-Napoca and Timișoara often combine office refurbishment, hotel corridors and public interiors. Buyers should send floor plans, room schedules and required documents early so samples and technical submittals can be coordinated without rework.",
+    environmentNote: "Seasonal temperature changes mean rolls and tiles should be protected from moisture and acclimated in the conditioned installation area before installation.",
+    deliveryNote: "Compare freight, packing and delivery timing only after the roll or pallet plan, gross weight, destination city and Incoterm are known.",
+    applications: ["Office renovations", "Hotel corridors", "Commercial interiors", "Public and mixed-use spaces"],
+    localTerms: ["commercial carpet Romania", "office carpet supplier Romania", "hotel carpet supplier Romania"],
+    productSet: "cold",
+  }),
+  commercialPage({
     market: "pl",
     slug: "dostawca-wykladzin-komercyjnych",
     language: "pl",
@@ -152,6 +171,25 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Request carton or roll dimensions, pallet configuration, gross weight and Incoterm options before comparing road, rail or sea-linked delivery routes.",
     applications: ["Biura i centra biznesowe", "Hotele i korytarze", "Obiekty edukacyjne", "Przestrzenie handlowe i publiczne"],
     localTerms: ["wykładziny komercyjne", "płytki dywanowe do biura", "wykładzina hotelowa producent"],
+    productSet: "cold",
+  }),
+  commercialPage({
+    market: "pl",
+    slug: "commercial-carpet-supplier-poland",
+    language: "en",
+    hreflang: "en-PL",
+    openGraphLocale: "en_PL",
+    countryName: "Poland",
+    countryNameLocal: "Polska",
+    title: "Commercial Carpet Supplier for Poland Projects",
+    metadataTitle: "Commercial Carpet Supplier Poland | VISHOME",
+    metadataDescription: "Commercial carpet tiles and hotel broadloom for Poland projects. Review samples, technical files, MOQ, packing and project quotation needs.",
+    directAnswer: "A commercial carpet supplier for Poland should help buyers evaluate fiber construction, backing, traffic class, maintenance needs and project documents before a quotation is approved. Vishomecarpet can prepare project options for offices, hotels and public interiors, but the nominated specification must still be checked by the buyer or consultant.",
+    marketContext: "Projects in Warsaw, Kraków and Wrocław often need phased office refurbishment, corridor planning and replacement coordination across occupied floors.",
+    environmentNote: "Cold-weather delivery and conditioned interiors make dry storage and acclimation important before installation.",
+    deliveryNote: "Confirm pallet count, roll length, delivery city and target installation window before comparing freight choices.",
+    applications: ["Office spaces", "Hotel corridors", "Education facilities", "Retail and public interiors"],
+    localTerms: ["commercial carpet Poland", "office carpet supplier Poland", "hotel carpet supplier Poland"],
     productSet: "cold",
   }),
   commercialPage({
@@ -286,6 +324,44 @@ export const countryMarketPages: CountryMarketPage[] = [
     applications: ["Irodák", "Szállodák", "Konferencia- és rendezvényterek", "Közösségi terek"],
     localTerms: ["kereskedelmi szőnyeg", "modulszőnyeg iroda", "szállodai padlószőnyeg"],
     productSet: "office",
+  }),
+  commercialPage({
+    market: "cz",
+    slug: "commercial-carpet-supplier-czech-republic",
+    language: "en",
+    hreflang: "en-CZ",
+    openGraphLocale: "en_CZ",
+    countryName: "Czech Republic",
+    countryNameLocal: "Česko",
+    title: "Commercial Carpet Supplier for Czech Republic Projects",
+    metadataTitle: "Commercial Carpet Supplier Czech Republic | VISHOME",
+    metadataDescription: "Commercial carpet tiles and hotel broadloom for Czech Republic projects. Review samples, technical data, MOQ, delivery and quotation inputs.",
+    directAnswer: "A commercial carpet supplier for Czech Republic projects should help buyers compare fiber construction, backing, traffic class, maintenance and document requirements before the specification is frozen. Vishomecarpet supports project RFQs for offices, hotels and public interiors, but the final product selection must match the building specification.",
+    marketContext: "Prague, Brno and Ostrava projects often require phased office fit-outs, hospitality refurbishment and clear replacement planning.",
+    environmentNote: "Winter transport and heated interiors require dry storage and acclimation; subfloor moisture still needs to be checked on site.",
+    deliveryNote: "Use confirmed carton, roll and pallet data together with the final delivery address when comparing freight options.",
+    applications: ["Offices", "Hotels", "Education projects", "Public and shared areas"],
+    localTerms: ["commercial carpet Czech Republic", "office carpet tiles Czech Republic", "hotel carpet supplier Czech Republic"],
+    productSet: "cold",
+  }),
+  commercialPage({
+    market: "hu",
+    slug: "commercial-carpet-supplier-hungary",
+    language: "en",
+    hreflang: "en-HU",
+    openGraphLocale: "en_HU",
+    countryName: "Hungary",
+    countryNameLocal: "Magyarország",
+    title: "Commercial Carpet Supplier for Hungary Projects",
+    metadataTitle: "Commercial Carpet Supplier Hungary | VISHOME",
+    metadataDescription: "Commercial carpet tiles and hotel broadloom for Hungary projects. Compare samples, technical files, MOQ, packing and project quotation needs.",
+    directAnswer: "A commercial carpet supplier for Hungary should help buyers evaluate product construction, backing, traffic performance, maintenance needs and project documents before a quotation is approved. Vishomecarpet can prepare project options for offices, hotels and public interiors, but the nominated specification must still be checked by the buyer or consultant.",
+    marketContext: "Budapest, Debrecen and Szeged projects often combine office refurbishment, hotel corridors and mixed-use interiors that need phased execution and replacement planning.",
+    environmentNote: "Cold-weather delivery and conditioned interiors make dry storage and acclimation important before installation.",
+    deliveryNote: "Confirm pallet count, roll length, delivery city and target installation window before comparing freight choices.",
+    applications: ["Offices", "Hotels", "Corporate corridors", "Public interiors"],
+    localTerms: ["commercial carpet Hungary", "office carpet tiles Hungary", "hotel carpet supplier Hungary"],
+    productSet: "cold",
   }),
   commercialPage({
     market: "kg",
@@ -596,11 +672,11 @@ export const countryMarketPageMap = Object.fromEntries(
 ) as Record<string, CountryMarketPage>;
 
 export const countryMarketLanguages = Object.fromEntries(
-  countryMarketPages.map((page) => [page.market, page.language]),
+  countryMarketPages.map((page) => [page.path, page.language]),
 ) as Record<string, string>;
 
 export function getCountryMarketLanguage(pathname: string) {
   const [market, slug] = pathname.split("/").filter(Boolean);
   if (!market || !slug || !countryMarketPageMap[`${market}/${slug}`]) return null;
-  return countryMarketLanguages[market] ?? null;
+  return countryMarketLanguages[`/${market}/${slug}`] ?? null;
 }
