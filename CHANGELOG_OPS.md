@@ -2,6 +2,104 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-20 `seo/country-product-application-gap-completion`
+
+**Type:** SEO / GEO-AEO / Country × Product × Application content completion / AI routing
+
+**Scope:** Continued the Vishomecarpet Country × Product × Application expansion specification and closed the most visible Wave 1 gaps.
+
+**Added URLs:**
+
+- `/bg/commercial-carpet-supplier-bulgaria`
+- `/ca/commercial-carpet-supplier-canada`
+- `/markets/bg/office-carpet-tiles`
+- `/blog/office-carpet-replacement-romania-without-closing-full-floor`
+- `/blog/carpet-tile-tds-romania-project-buyers-guide`
+- `/blog/commercial-carpet-import-china-romania-guide`
+- `/blog/heavy-traffic-office-carpet-tiles-sofia-fitout-guide`
+- `/blog/carpet-tile-replacement-stock-bulgaria-office-guide`
+- `/blog/carpet-tiles-rolling-chairs-high-traffic-polish-offices`
+- `/blog/phased-office-flooring-replacement-poland-guide`
+- `/blog/modular-carpet-prague-office-renovation-downtime-control`
+- `/blog/specify-commercial-carpet-tiles-chair-wheel-areas`
+- `/blog/commercial-carpet-tile-replacement-planning-budapest-offices`
+- `/blog/grey-carpet-tile-selection-high-traffic-corporate-interiors`
+- `/blog/office-carpet-tiles-canada-snow-salt-chair-wheel-guide`
+- `/blog/entrance-workstation-carpet-tile-zoning-canada-office-renovation`
+
+**What changed:** Added Bulgaria and Canada commercial carpet country hubs, added the Bulgaria office carpet tiles application page, and added 13 answer-first procurement guides covering Romania, Bulgaria, Poland, Czech Republic, Hungary and Canada office carpet tile decision problems. Each guide includes project-zone logic, risk control, RFQ inputs, FAQ-style answers, product links and inquiry paths without inventing certifications, local offices, stock, installation service or unverified performance claims.
+
+**AI source updates:** Updated `keyword-map.csv`, `/llms.txt`, `/llms-full.txt`, `/ai-sources.json` and root sitemap AI-resource dates so the new country/application/guide URLs can be routed by crawlers and AI answer engines.
+
+**Verification:** Production build passed with 202 generated static pages. `keyword-map.csv` was checked for duplicate URLs and duplicate primary keywords.
+
+## 2026-08-19 `seo/country-market-page-expansion`
+
+**Type:** SEO / GEO-AEO / International market routing / Conversion architecture
+
+**Scope:** Added the first country × application pages, upgraded the reusable country market page template and improved the `/markets` directory to better match the country × product × application expansion specification.
+
+**Changed URLs:**
+
+- Updated country market pages rendered through `/{market}/{slug}`
+- Updated `/markets`
+- Added `/markets/ro/office-carpet-tiles`
+- Added `/markets/pl/office-carpet-tiles`
+- Added `/markets/ca/office-carpet-tiles`
+- Added `/markets/sg/casino-carpet`
+- Updated `/sitemap-markets.xml`
+
+**What changed:** Added explicit supply-scope, local-contractor boundary and quote-input modules to the country market landing page template. Added supporting application-page links and buyer guide links so each country hub routes more clearly into product, application and problem-solving content. The `/markets` directory now highlights the Wave 1 priority markets before the full directory grid. Added four country × application pages for Romania, Poland, Canada and Singapore, each with an answer-first section, buyer risks, zone decision table, product links, guide links, FAQ, and quote path.
+
+**AI source updates:** Added the four country × application pages to `keyword-map.csv`, `/llms.txt`, `/llms-full.txt` and `/ai-sources.json`; refreshed AI resource `lastmod` values in the root sitemap.
+
+**Country application expansion:** Added Philippines hotel carpet, Australia hotel carpet, Mexico hotel corridor carpet, and Kazakhstan gold mining carpet application pages with answer-first copy, buyer risks, RFQ inputs, FAQs and product/guide links.
+
+**Country application expansion continued:** Added Denmark and Sweden office carpet tile pages plus Norway and Finland hotel carpet pages, then refreshed AI citation routing and country keywords so the new URLs are discoverable by search and AI tools.
+
+**Country application expansion further continued:** Added Serbia and Belarus office carpet tile pages plus Slovenia and Georgia hotel carpet pages, then refreshed `keyword-map.csv`, `llms.txt`, `llms-full.txt` and `ai-sources.json` so the new URLs can be reached by crawlers and AI answer engines.
+
+**Country application expansion continued again:** Added Uzbekistan, Armenia, Kyrgyzstan and Azerbaijan hotel carpet pages, then refreshed the keyword map, AI citation map and llms files so the new market URLs are visible to crawlers and AI tools.
+
+**Country application expansion continued once more:** Added Australia, Philippines and Mexico office carpet tile pages, then refreshed the keyword map, AI citation map and llms files so these office-market URLs can route buyer queries into the correct product and guide pages.
+
+**Country application expansion continued yet again:** Added office carpet tile pages for Australia, Philippines and Mexico, strengthening the office application cluster and routing country-specific office queries toward the matching product, guide and quote pages.
+
+**Country application expansion finalised for this round:** Added gold mining carpet application pages for Peru and Colombia, linked them to the mining product and field/specification resources, and refreshed the keyword map and AI citation files.
+
+**Country application expansion extended once more:** Added office carpet tile pages for Australia, the Philippines and Mexico, expanding the office application cluster and connecting those markets to the modular office flooring product path.
+
+**Why:** The expansion specification requires country hubs to explain who the page is for, what Vishomecarpet supplies, what the buyer should send for a quote, and which application and guide pages support the decision path. This also strengthens internal-link depth and AI-readable routing without creating doorway pages.
+
+**URL mapping:** No URLs were removed or renamed. New URLs are additive and are included in the markets sitemap.
+
+**Rollback point:** Revert this commit if the new country market module layout needs to be withdrawn.
+
+**Verification:** Run `npm run ops:check`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:placeholders`, `npm run lint`, and `npm run build`; then verify representative market pages such as Romania, Canada, Singapore and Kazakhstan render the new modules with HTTP 200.
+
+## 2026-08-19 `seo/country-market-page-expansion-wave-2`
+
+**Type:** SEO / GEO-AEO / International market routing / Conversion architecture
+
+**Scope:** Extended the country × application page set with additional office and hotel market pages for Central Europe and the Nordics, then refreshed the AI citation map and keyword ownership file.
+
+**Changed URLs:**
+
+- Added `/markets/hu/office-carpet-tiles-hungary`
+- Added `/markets/cz/office-carpet-tiles-czech-republic`
+- Added `/markets/sk/office-carpet-tiles-slovakia`
+- Added `/markets/hr/hotel-carpet-croatia`
+
+**What changed:** Added answer-first country application pages for Hungary, the Czech Republic, Slovakia and Croatia with buyer risks, zone decision tables, RFQ inputs, FAQs, product links and supporting blog links. Updated `keyword-map.csv`, `llms.txt`, `llms-full.txt` and `ai-sources.json` so AI tools and crawlers can route country-specific office and hotel questions to the best page first.
+
+**Why:** The next wave of country × application content strengthens office carpet tile and hotel carpet clusters in markets that already have country hubs, while keeping the content useful for B2B buyers and avoiding low-value doorway pages.
+
+**URL mapping:** No existing URLs were removed or renamed. All new URLs are additive and included in the markets sitemap.
+
+**Rollback point:** Revert this commit if any of the new country application pages or AI citation mappings need to be withdrawn.
+
+**Verification:** Run `npm run ops:check`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:placeholders`, `npm run lint`, and `npm run build`; then verify the four new market pages render with HTTP 200 and appear in `/sitemap-markets.xml`.
+
 ## 2026-08-17 `content/buyer-growth-carpet-tiles-vs-broadloom`
 
 **Type:** Blog / Buyer demand growth / SEO / GEO-AEO / AI Search
