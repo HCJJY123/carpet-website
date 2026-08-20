@@ -105,6 +105,22 @@ function supportingApplicationLinks(page: CountryMarketPage) {
     ];
   }
 
+  if (page.market === "cz") {
+    return [
+      { href: "/markets/cz/office-carpet-tiles", label: "Office Carpet Tiles in Czech Republic", description: "Phased office refurbishment, chair-wheel areas and project specification planning." },
+      { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
+      { href: "/blog/modular-carpet-prague-office-renovation-downtime-control", label: "Prague Renovation Guide", description: "Downtime control and phased renovation planning for Czech office projects." },
+    ];
+  }
+
+  if (page.market === "hu") {
+    return [
+      { href: "/markets/hu/office-carpet-tiles-hungary", label: "Office Carpet Tiles in Hungary", description: "Phased office refurbishment, chair-wheel areas and project planning." },
+      { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
+      { href: "/blog/commercial-carpet-tile-replacement-planning-budapest-offices", label: "Budapest Replacement Guide", description: "Office replacement planning and phased handover logic for Hungary projects." },
+    ];
+  }
+
   const shared = [
     { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
     { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Useful for luggage-wheel wear, long visual runs and replacement planning." },
@@ -152,6 +168,24 @@ function supportingGuideLinks(page: CountryMarketPage) {
     return [
       { href: "/blog/office-carpet-tiles-canada-phased-renovation-reddit-guide", label: "Canada Office Carpet Guide", description: "Winter moisture, phased renovation and spare-stock planning." },
       { href: "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide", label: "Carpet Tiles vs Broadloom", description: "Buyer-level comparison of maintenance, replacement and quotation risk." },
+    ];
+  }
+  if (page.market === "pl") {
+    return [
+      { href: "/blog/carpet-tiles-rolling-chairs-high-traffic-polish-offices", label: "Poland Office Carpet Guide", description: "Rolling-chair wear, high traffic and phased replacement planning." },
+      { href: "/blog/phased-office-flooring-replacement-poland-guide", label: "Poland Phased Replacement Guide", description: "A practical guide for occupied offices and renovation sequencing." },
+    ];
+  }
+  if (page.market === "cz") {
+    return [
+      { href: "/blog/modular-carpet-prague-office-renovation-downtime-control", label: "Prague Office Renovation Guide", description: "Downtime control and phased renovation planning for Czech office projects." },
+      { href: "/blog/specify-commercial-carpet-tiles-chair-wheel-areas", label: "Chair-Wheel Specification Guide", description: "A technical guide for rolling-chair zones and specification approval." },
+    ];
+  }
+  if (page.market === "hu") {
+    return [
+      { href: "/blog/commercial-carpet-tile-replacement-planning-budapest-offices", label: "Budapest Carpet Replacement Guide", description: "Phased replacement planning and occupied-floor sequencing." },
+      { href: "/blog/grey-carpet-tile-selection-high-traffic-corporate-interiors", label: "High-Traffic Carpet Tile Guide", description: "Buyer-level guidance for busy corporate interiors and maintenance planning." },
     ];
   }
   if (page.market === "ph") {
