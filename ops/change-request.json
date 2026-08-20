@@ -1,6 +1,6 @@
 {
-  "task": "Continue country market and procurement-guide SEO/GEO expansion for office carpet buyer intent",
-  "approvedBy": "Site owner request to absorb and continue the prior VISHOME country x application SEO/GEO expansion work on 2026-08-21",
+  "task": "Execute AI assistant channel playbook items for VISHOME GEO/AEO growth",
+  "approvedBy": "Site owner request on 2026-08-21 to review the AI assistant channel growth handbook and execute applicable items for the VISHOME carpet website",
   "approvedCategories": ["governance", "content", "documentation", "seo-global", "navigation", "conversion"],
   "allowedPaths": [
     "ops/change-request.json",
@@ -15,8 +15,14 @@
     "src/lib/country-market-pages.ts",
     "src/app/markets/page.tsx",
     "src/app/markets/[market]/[slug]/page.tsx",
+    "src/app/resources/page.tsx",
+    "src/app/resources/commercial-carpet-rfq-calculator/page.tsx",
     "src/app/sitemap.ts",
     "src/app/sitemap-markets.xml/route.ts",
+    "src/app/sitemaps/resources.xml/route.ts",
+    "src/components/CommercialCarpetRfqCalculator.tsx",
+    "src/lib/resource-data.ts",
+    "src/lib/seo.ts",
     "src/components/Header.tsx",
     "src/components/SendInquiryFloating.tsx",
     "src/components/WhatsAppFloating.tsx",
@@ -27,5 +33,5 @@
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing indexed URLs are preserved. This continuation adds Bulgaria and Canada country landing coverage, adds a Bulgaria office carpet tiles country x application page, registers country-specific office procurement guides for Romania, Bulgaria, Poland, Czech Republic, Hungary and Canada, updates the shared blog registry, keyword ownership, sitemap lastmod timestamps and AI-readable source maps, and preserves all current product facts, certifications, contact details, redirects and conversion paths."
+  "notes": "Existing indexed URLs are preserved. This continuation executes applicable AI assistant channel playbook items: add an interactive commercial carpet RFQ quantity calculator as a zero-click-resistant tool, surface it in resources and AI-readable files, preserve enterprise contact credibility, keep AI crawler access unchanged, and enrich product structured data with priceSpecification while preserving all current product facts, certifications, contact details, redirects and conversion paths."
 }

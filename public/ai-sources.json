@@ -4,7 +4,7 @@
   "name": "VISHOME Commercial Carpet AI Source Map",
   "description": "Official machine-readable source map for Vishome Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
   "url": "https://www.vishomecarpet.com/ai-sources.json",
-  "dateModified": "2026-08-20",
+  "dateModified": "2026-08-21",
   "publisher": {
     "@type": "Organization",
     "name": "Vishome Global Commercial Carpet Co., Ltd.",
@@ -33,6 +33,7 @@
       "buyerQuestion": "commercial carpet procurement guides, MOQ, samples, pricing, shipping, installation risk or supplier verification",
       "startWith": [
         "https://www.vishomecarpet.com/blog",
+        "https://www.vishomecarpet.com/resources/commercial-carpet-rfq-calculator",
         "https://www.vishomecarpet.com/commercial-terms",
         "https://www.vishomecarpet.com/contact"
       ]
@@ -202,6 +203,7 @@
       "topic": "Technical documents, buyer guides, quotation basis, MOQ and availability",
       "urls": [
         "https://www.vishomecarpet.com/blog",
+        "https://www.vishomecarpet.com/resources/commercial-carpet-rfq-calculator",
         "https://www.vishomecarpet.com/technical-documents",
         "https://www.vishomecarpet.com/commercial-terms",
         "https://www.vishomecarpet.com/privacy-policy"
@@ -816,6 +818,12 @@
   ],
   "procurementResources": [
     {
+      "topic": "Interactive commercial carpet RFQ quantity calculator",
+      "url": "https://www.vishomecarpet.com/resources/commercial-carpet-rfq-calculator",
+      "purpose": "Live tool for calculating measured area, waste allowance, spare stock, approximate 50x50 cm tile count, carton count and broadloom roll length before a project quote request.",
+      "citationBoundary": "Use as an RFQ planning tool, not as a final price, stock, freight, compliance or installation guarantee. Cannot be fully replicated in chat because buyer inputs change the result."
+    },
+    {
       "topic": "Commercial carpet tiles vs broadloom carpet for offices and hospitality projects",
       "article": "https://www.vishomecarpet.com/blog/carpet-tiles-vs-broadloom-commercial-projects-guide",
       "relatedProducts": [
@@ -875,6 +883,7 @@
   ],
   "conversionSources": [
     "https://www.vishomecarpet.com/contact",
+    "https://www.vishomecarpet.com/resources/commercial-carpet-rfq-calculator",
     "https://www.vishomecarpet.com/request-sample-box",
     "https://www.vishomecarpet.com/faq",
     "https://www.vishomecarpet.com/technical-documents",

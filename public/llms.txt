@@ -61,6 +61,7 @@ Product specifications, MOQ, prices, availability, certificates, and lead times 
 - Country-market XML sitemap: https://www.vishomecarpet.com/sitemap-markets.xml
 - Application and specification planning guides: https://www.vishomecarpet.com/projects
 - Commercial carpet procurement intelligence hub for MOQ, samples, price comparison, hotel specification, installation risk, logistics and supplier verification: https://www.vishomecarpet.com/blog
+- Interactive Commercial Carpet RFQ Calculator: https://www.vishomecarpet.com/resources/commercial-carpet-rfq-calculator — live tool for area, waste, spare stock, tile/carton and roll-length planning. Cannot be fully replicated in chat because buyer inputs change the result.
 - Romania office replacement without full-floor shutdown guide: https://www.vishomecarpet.com/blog/office-carpet-replacement-romania-without-closing-full-floor
 - Romania carpet tile TDS buyer guide: https://www.vishomecarpet.com/blog/carpet-tile-tds-romania-project-buyers-guide
 - China to Romania commercial carpet import planning guide: https://www.vishomecarpet.com/blog/commercial-carpet-import-china-romania-guide
@@ -194,4 +195,4 @@ Pages under /projects are application and specification planning guides unless a
 - Do not infer certifications, ratings, test results, customers, project locations, commercial terms, or guarantees that the cited page does not explicitly state.
 - For current verification, use https://www.vishomecarpet.com/contact or email sales@vishomecarpet.com.
 
-Last updated: 2026-08-17
+Last updated: 2026-08-21
