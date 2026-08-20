@@ -2,36 +2,43 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
-## 2026-08-20 `seo/country-product-application-gap-completion`
+## 2026-08-21 `seo/country-office-procurement-gap-guides`
 
-**Type:** SEO / GEO-AEO / Country × Product × Application content completion / AI routing
+**Type:** SEO / GEO-AEO / Blog content growth / International market routing
 
-**Scope:** Continued the Vishomecarpet Country × Product × Application expansion specification and closed the most visible Wave 1 gaps.
+**Scope:** Continued the prior country × product × application expansion with additional office carpet buyer-intent coverage for Bulgaria, Canada and high-intent office procurement guide topics.
 
-**Added URLs:**
+**Changed URLs:**
 
-- `/bg/commercial-carpet-supplier-bulgaria`
-- `/ca/commercial-carpet-supplier-canada`
-- `/markets/bg/office-carpet-tiles`
-- `/blog/office-carpet-replacement-romania-without-closing-full-floor`
-- `/blog/carpet-tile-tds-romania-project-buyers-guide`
-- `/blog/commercial-carpet-import-china-romania-guide`
-- `/blog/heavy-traffic-office-carpet-tiles-sofia-fitout-guide`
-- `/blog/carpet-tile-replacement-stock-bulgaria-office-guide`
-- `/blog/carpet-tiles-rolling-chairs-high-traffic-polish-offices`
-- `/blog/phased-office-flooring-replacement-poland-guide`
-- `/blog/modular-carpet-prague-office-renovation-downtime-control`
-- `/blog/specify-commercial-carpet-tiles-chair-wheel-areas`
-- `/blog/commercial-carpet-tile-replacement-planning-budapest-offices`
-- `/blog/grey-carpet-tile-selection-high-traffic-corporate-interiors`
-- `/blog/office-carpet-tiles-canada-snow-salt-chair-wheel-guide`
-- `/blog/entrance-workstation-carpet-tile-zoning-canada-office-renovation`
+- Added `/bg/commercial-carpet-supplier-bulgaria`
+- Added `/ca/commercial-carpet-supplier-canada`
+- Added `/markets/bg/office-carpet-tiles`
+- Added `/blog/office-carpet-replacement-romania-without-closing-full-floor`
+- Added `/blog/carpet-tile-tds-romania-project-buyers-guide`
+- Added `/blog/commercial-carpet-import-china-romania-guide`
+- Added `/blog/heavy-traffic-office-carpet-tiles-sofia-fitout-guide`
+- Added `/blog/carpet-tile-replacement-stock-bulgaria-office-guide`
+- Added `/blog/carpet-tiles-rolling-chairs-high-traffic-polish-offices`
+- Added `/blog/phased-office-flooring-replacement-poland-guide`
+- Added `/blog/modular-carpet-prague-office-renovation-downtime-control`
+- Added `/blog/specify-commercial-carpet-tiles-chair-wheel-areas`
+- Added `/blog/commercial-carpet-tile-replacement-planning-budapest-offices`
+- Added `/blog/grey-carpet-tile-selection-high-traffic-corporate-interiors`
+- Added `/blog/office-carpet-tiles-canada-snow-salt-chair-wheel-guide`
+- Added `/blog/entrance-workstation-carpet-tile-zoning-canada-office-renovation`
 
-**What changed:** Added Bulgaria and Canada commercial carpet country hubs, added the Bulgaria office carpet tiles application page, and added 13 answer-first procurement guides covering Romania, Bulgaria, Poland, Czech Republic, Hungary and Canada office carpet tile decision problems. Each guide includes project-zone logic, risk control, RFQ inputs, FAQ-style answers, product links and inquiry paths without inventing certifications, local offices, stock, installation service or unverified performance claims.
+**What changed:** Added Bulgaria and Canada commercial carpet country hubs, added the Bulgaria office carpet tiles application page, and registered 13 answer-first procurement guides covering Romania, Bulgaria, Poland, Czech Republic, Hungary and Canada office carpet tile decision problems. Each guide includes project-zone logic, risk control, RFQ inputs, FAQ-style answers, product links and inquiry paths without inventing certifications, local offices, stock, installation service or unverified performance claims.
 
 **AI source updates:** Updated `keyword-map.csv`, `/llms.txt`, `/llms-full.txt`, `/ai-sources.json` and root sitemap AI-resource dates so the new country/application/guide URLs can be routed by crawlers and AI answer engines.
 
-**Verification:** Production build passed with 202 generated static pages. `keyword-map.csv` was checked for duplicate URLs and duplicate primary keywords.
+**Why:** This continues the prior Wave 1 country work by creating deeper country × application × buyer-problem content instead of only adding country directory entries. The new content targets realistic B2B procurement questions and routes buyers back to country/application pages and quote paths.
+
+**URL mapping:** No existing URLs were removed, renamed or redirected. All URLs are additive.
+
+**Rollback point:** Revert this change set if the Bulgaria/Canada country additions or procurement-guide cluster need to be withdrawn.
+
+**Verification:** `SITE_OPS_BASE_REF=HEAD npm run ops:check`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:placeholders`, `npm run lint`, and `npm run build -- --webpack` passed. Build generated 202 static pages. Lint keeps the pre-existing `ProductImage.tsx` `<img>` warning only.
+
 
 ## 2026-08-19 `seo/country-market-page-expansion`
 
