@@ -1,27 +1,22 @@
 {
-  "task": "Improve AI recommendation signals for the VISHOME independent website",
-  "approvedBy": "Site owner request on 2026-08-21 to increase AI recommendations for vishomecarpet.com",
+  "task": "Optimize mobile PageSpeed issues reported for https://www.vishomecarpet.com",
+  "approvedBy": "Site owner request on 2026-08-21 to fix PageSpeed mobile report issues from the provided PageSpeed Insights URL",
   "approvedCategories": [
     "governance",
-    "content",
-    "documentation",
+    "performance",
     "seo-global",
-    "navigation"
+    "navigation",
+    "build-config"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "keyword-map.csv",
-    "src/app/resources/ai-commercial-carpet-source-guide/page.tsx",
-    "src/app/resources/page.tsx",
-    "src/app/sitemap.ts",
-    "src/app/sitemaps/resources.xml/route.ts",
-    "src/components/JsonLd.tsx",
-    "src/lib/resource-data.ts",
-    "public/llms.txt",
-    "public/llms-full.txt",
-    "public/ai-sources.json"
+    "src/app/layout.tsx",
+    "src/components/DeferredSiteEnhancements.tsx",
+    "src/components/HomeHeroCarousel.tsx",
+    "src/app/page.tsx",
+    "next.config.ts"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing indexed URLs are preserved. This change adds an official AI source-selection guide for vishomecarpet.com, strengthens structured Organization/WebSite references to AI-readable files, and updates llms/source-map/resource links so AI assistants can identify the independent site as the official VISHOME source for commercial carpet sourcing and RFQ questions."
+  "notes": "Existing URLs, content and UI styling are preserved. This change targets mobile PageSpeed issues by deferring non-critical analytics/visitor/cookie/image-protection client bundles until after initial rendering, preloading the mobile LCP hero image, loading carousel slides only when needed, lowering priority for the decorative hero logo mark, and adding long-lived cache headers for stable root static assets such as logos and favicons."
 }

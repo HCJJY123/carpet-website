@@ -2,6 +2,26 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-21 `fix/mobile-pagespeed-followup`
+
+**Type:** Mobile performance / PageSpeed follow-up
+
+**Scope:** Addressed the mobile PageSpeed report for the VISHOME homepage without changing published URLs, page copy or UI styling.
+
+**Changed URLs:**
+
+- Updated `/` through shared layout and homepage hero components
+
+**What changed:** Deferred non-critical analytics, visitor beacon, cookie consent and image-protection client bundles until after initial rendering. Preloaded the mobile LCP hero image, loaded carousel slide images only when needed instead of preloading hidden slides early, lowered the decorative hero logo mark from priority loading to lazy loading, and added long-lived cache headers for stable root static assets such as logos and favicons.
+
+**Why:** The PageSpeed mobile report indicated performance opportunities consistent with JavaScript main-thread work and critical image priority. These changes reduce initial client work and competing image requests while preserving the existing page design and conversion controls.
+
+**URL mapping:** No existing URLs were removed, renamed or redirected.
+
+**Rollback point:** Revert this change set if delayed enhancement loading causes analytics, consent or image-protection regressions.
+
+**Verification:** Run `SITE_OPS_BASE_REF=origin/main npm run ops:check`, `npm run lint`, and `npm run build -- --webpack`; then verify the homepage and PageSpeed mobile report in Preview.
+
 ## 2026-08-21 `seo/ai-recommendation-official-site-signals`
 
 **Type:** GEO-AEO / AI recommendation signals / Official source guide

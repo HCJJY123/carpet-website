@@ -5,12 +5,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import WhatsAppFloating from "@/components/WhatsAppFloating";
-import MarketingTracking from "@/components/MarketingTracking";
-import ImageProtection from "@/components/ImageProtection";
 import SendInquiryFloating from "@/components/SendInquiryFloating";
-import VisitorBeacon from "@/components/VisitorBeacon";
 import LocaleExperience from "@/components/LocaleExperience";
-import CookieConsent from "@/components/CookieConsent";
+import DeferredSiteEnhancements from "@/components/DeferredSiteEnhancements";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -91,15 +88,12 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans">
         <LocaleExperience />
         <JsonLd />
-        <MarketingTracking />
-        <VisitorBeacon />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
         <SendInquiryFloating />
         <WhatsAppFloating />
-        <CookieConsent />
-        <ImageProtection />
+        <DeferredSiteEnhancements />
       </body>
     </html>
   );
