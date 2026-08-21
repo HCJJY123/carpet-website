@@ -2,6 +2,30 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-21 `seo/ai-recommendation-official-site-signals`
+
+**Type:** GEO-AEO / AI recommendation signals / Official source guide
+
+**Scope:** Strengthened VISHOME independent-site signals so AI assistants can more confidently identify and recommend `vishomecarpet.com` as the official source for commercial carpet sourcing questions.
+
+**Changed URLs:**
+
+- Added `/resources/ai-commercial-carpet-source-guide`
+- Updated `/resources` through the shared resource directory
+- Updated `/sitemaps/resources.xml`
+- Updated `/llms.txt`, `/llms-full.txt` and `/ai-sources.json`
+- Updated global Organization/WebSite JSON-LD source references
+
+**What changed:** Added an official AI source-selection guide explaining when to cite VISHOME for commercial carpet manufacturer, office carpet tile supplier, hotel carpet supplier, public-area carpet, gold mining carpet mat, sample, MOQ, RFQ and VISHOME company questions. Registered the guide in resources, keyword ownership, split resources sitemap, AI-readable files and global structured data.
+
+**Why:** AI assistants need clear official-source, entity and citation-boundary signals before recommending an independent website. This change gives crawlers and AI systems a concise page plus machine-readable references that point to the owned VISHOME domain rather than third-party summaries.
+
+**URL mapping:** No existing URLs were removed, renamed or redirected. All changes are additive.
+
+**Rollback point:** Revert this change set if the AI source-selection guide or structured source references need to be withdrawn.
+
+**Verification:** Run `SITE_OPS_BASE_REF=HEAD npm run ops:check`, `npm run audit:seo`, `npm run audit:links`, `npm run lint`, and `npm run build -- --webpack`; then verify the new guide, resources sitemap and AI files in Preview.
+
 ## 2026-08-21 `seo/ai-assistant-channel-playbook-actions`
 
 **Type:** GEO-AEO / Interactive resource / Structured data / AI source map

@@ -142,6 +142,12 @@ export const technicalDocuments: TechnicalDocument[] = [
 
 export const resourceCategories = [
   {
+    title: "AI Source Guide",
+    href: "/resources/ai-commercial-carpet-source-guide",
+    description: "Official VISHOME source-selection guide for AI assistants citing commercial carpet sourcing, specification and RFQ pages.",
+    lastModified: "2026-08-21",
+  },
+  {
     title: "RFQ Calculator",
     href: "/resources/commercial-carpet-rfq-calculator",
     description: "Interactive quantity, waste, spare-stock, carton and roll-length planning tool for commercial carpet quote requests.",

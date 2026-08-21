@@ -45,6 +45,7 @@ export default function JsonLd() {
       "Commercial carpet project procurement",
     ],
     subjectOf: [
+      { "@type": "CreativeWork", name: "Official AI source guide", url: absoluteUrl("/resources/ai-commercial-carpet-source-guide") },
       { "@type": "CreativeWork", name: "AI-readable source map", url: absoluteUrl("/llms.txt") },
       { "@type": "CreativeWork", name: "Full AI source map", url: absoluteUrl("/llms-full.txt") },
       {
@@ -143,6 +144,7 @@ export default function JsonLd() {
     publisher: {
       "@id": `${brandInfo.url}/#organization`,
     },
+    publishingPrinciples: absoluteUrl("/resources/ai-commercial-carpet-source-guide"),
     inLanguage: "en",
     about: [
       "Commercial carpet tiles",

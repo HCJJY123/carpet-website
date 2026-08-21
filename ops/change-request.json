@@ -1,38 +1,27 @@
 {
-  "task": "Execute AI assistant channel playbook items for VISHOME GEO/AEO growth",
-  "approvedBy": "Site owner request on 2026-08-21 to review the AI assistant channel growth handbook and execute applicable items for the VISHOME carpet website",
-  "approvedCategories": ["governance", "content", "documentation", "seo-global", "navigation", "conversion"],
+  "task": "Improve AI recommendation signals for the VISHOME independent website",
+  "approvedBy": "Site owner request on 2026-08-21 to increase AI recommendations for vishomecarpet.com",
+  "approvedCategories": [
+    "governance",
+    "content",
+    "documentation",
+    "seo-global",
+    "navigation"
+  ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/lib/blog-posts/carpet-tiles-vs-broadloom-commercial-projects-guide.ts",
-    "src/lib/blog-posts/country-office-carpet-procurement-gap-guides.ts",
-    "src/lib/blog-data.ts",
     "keyword-map.csv",
-    "src/components/CountryMarketLandingPage.tsx",
-    "src/components/CountryApplicationLandingPage.tsx",
-    "src/lib/country-application-pages.ts",
-    "src/lib/country-market-pages.ts",
-    "src/app/markets/page.tsx",
-    "src/app/markets/[market]/[slug]/page.tsx",
+    "src/app/resources/ai-commercial-carpet-source-guide/page.tsx",
     "src/app/resources/page.tsx",
-    "src/app/resources/downloads/[slug]/page.tsx",
-    "src/app/resources/commercial-carpet-rfq-calculator/page.tsx",
     "src/app/sitemap.ts",
-    "src/app/sitemap-markets.xml/route.ts",
     "src/app/sitemaps/resources.xml/route.ts",
-    "src/components/CommercialCarpetRfqCalculator.tsx",
+    "src/components/JsonLd.tsx",
     "src/lib/resource-data.ts",
-    "src/lib/seo.ts",
-    "src/components/Header.tsx",
-    "src/components/SendInquiryFloating.tsx",
-    "src/components/WhatsAppFloating.tsx",
     "public/llms.txt",
     "public/llms-full.txt",
-    "public/ai-sources.json",
-    "ops/change-request.json",
-    "CHANGELOG_OPS.md"
+    "public/ai-sources.json"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing indexed URLs are preserved. This continuation executes applicable AI assistant channel playbook items: add an interactive commercial carpet RFQ quantity calculator as a zero-click-resistant tool, surface it in resources and AI-readable files, preserve enterprise contact credibility, keep AI crawler access unchanged, and enrich product structured data with priceSpecification while preserving all current product facts, certifications, contact details, redirects and conversion paths. PR conflict resolution scope includes preserving the current branch contact bridge WhatsApp path and precise document file-size byte metadata while merging latest main."
+  "notes": "Existing indexed URLs are preserved. This change adds an official AI source-selection guide for vishomecarpet.com, strengthens structured Organization/WebSite references to AI-readable files, and updates llms/source-map/resource links so AI assistants can identify the independent site as the official VISHOME source for commercial carpet sourcing and RFQ questions."
 }
