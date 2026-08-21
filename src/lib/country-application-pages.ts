@@ -18,6 +18,8 @@ export type CountryApplicationPage = {
   decisionRows: { zone: string; issue: string; recommendation: string }[];
   quoteInputs: string[];
   localTerms: string[];
+  heroImage?: string;
+  heroImageAlt?: string;
   heroProductId: string;
   productIds: string[];
   guideLinks: { href: string; label: string; description: string }[];
@@ -52,6 +54,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Country and city", "Office area by zone", "Sample requirement", "Technical document list", "Target installation date"],
     localTerms: ["office carpet tiles Romania", "commercial carpet Romania", "Romania office flooring supplier"],
+    heroImage: "/images/markets/generated/romania-office-carpet-tiles-hero.webp",
+    heroImageAlt: "Romania office carpet tiles installed in a modern commercial workspace",
     heroProductId: "nylon-office-carpet-tile",
     productIds: ["nylon-office-carpet-tile", "pp-bitumen-backed-office-carpet-tiles", "commercial-nylon-tiles"],
     guideLinks: [
@@ -89,6 +93,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Country and city", "Area by zone", "Winter ingress risk", "Sample requirement", "Installation phase date"],
     localTerms: ["office carpet tiles Canada", "commercial carpet Canada", "Canada office flooring supplier"],
+    heroImage: "/images/markets/generated/canada-office-carpet-tiles-hero.webp",
+    heroImageAlt: "Canada office carpet tiles with entrance and workstation planning",
     heroProductId: "nylon-office-carpet-tile",
     productIds: ["nylon-office-carpet-tile", "pp-bitumen-backed-office-carpet-tiles", "ecocore-pe-backing-carpet-tiles"],
     guideLinks: [
@@ -163,6 +169,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Country and city", "Area per zone", "Phased schedule", "Sample request", "Target completion date"],
     localTerms: ["office carpet tiles Poland", "commercial carpet Poland", "Poland office refurbishment carpet"],
+    heroImage: "/images/markets/generated/poland-office-carpet-tiles-hero.webp",
+    heroImageAlt: "Poland office carpet tiles for phased commercial renovation",
     heroProductId: "nylon-office-carpet-tile",
     productIds: ["nylon-office-carpet-tile", "commercial-nylon-tiles", "pp-bitumen-backed-office-carpet-tiles"],
     guideLinks: [
@@ -200,6 +208,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Singapore site address", "Delivery floor and access", "Project phase", "Sample date", "Target installation date"],
     localTerms: ["Singapore casino carpet", "casino carpet supplier Singapore", "gaming floor carpet Singapore"],
+    heroImage: "/images/markets/generated/singapore-casino-carpet-hero.webp",
+    heroImageAlt: "Singapore casino carpet for gaming floor and VIP hospitality zones",
     heroProductId: "singapore-casino-carpet",
     productIds: ["singapore-casino-carpet", "3d-printed-banquet-hall-carpet", "glitter-hotel-corridor-broadloom-carpet"],
     guideLinks: [
@@ -237,6 +247,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Philippines city and hotel zone", "Room schedule or floor plan", "Sample requirement", "Document list", "Target installation date"],
     localTerms: ["hotel carpet Philippines", "hospitality carpet Philippines", "Philippines hotel flooring supplier"],
+    heroImage: "/images/markets/generated/philippines-hotel-carpet-hero.webp",
+    heroImageAlt: "Philippines hotel carpet for guestrooms and corridor refurbishment",
     heroProductId: "custom-luxury-hotel-room-carpet",
     productIds: ["custom-luxury-hotel-room-carpet", "glitter-hotel-corridor-broadloom-carpet", "luxury-hotel-broadloom"],
     guideLinks: [
@@ -274,6 +286,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Australia city", "Zone quantity and floor plan", "Refurbishment phase schedule", "Sample requirement", "Target delivery window"],
     localTerms: ["hotel carpet Australia", "hospitality carpet Australia", "Australia hotel flooring supplier"],
+    heroImage: "/images/markets/generated/australia-hotel-carpet-hero.webp",
+    heroImageAlt: "Australia hotel carpet for guestroom and corridor refurbishment projects",
     heroProductId: "luxury-hotel-broadloom",
     productIds: ["luxury-hotel-broadloom", "custom-luxury-hotel-room-carpet", "glitter-hotel-corridor-broadloom-carpet"],
     guideLinks: [
@@ -311,6 +325,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Mexico city and hotel type", "Corridor and lobby areas", "Pattern sample requirement", "Phase schedule", "Target delivery date"],
     localTerms: ["hotel corridor carpet Mexico", "Mexico hotel carpet supplier", "hospitality corridor carpet Mexico"],
+    heroImage: "/images/markets/generated/mexico-hotel-corridor-carpet-hero.webp",
+    heroImageAlt: "Mexico hotel corridor carpet with stain-hiding hospitality pattern",
     heroProductId: "glitter-hotel-corridor-broadloom-carpet",
     productIds: ["glitter-hotel-corridor-broadloom-carpet", "3d-printed-hotel-carpet", "luxury-hotel-broadloom"],
     guideLinks: [
@@ -348,6 +364,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Kazakhstan destination", "Sluice width and required mat length", "Expected feed and recovery target", "Sample or trial order request", "Packing and shipping terms"],
     localTerms: ["gold mining carpet Kazakhstan", "sluice carpet Kazakhstan", "gold recovery mat supplier"],
+    heroImage: "/images/markets/generated/kazakhstan-gold-mining-carpet-hero.webp",
+    heroImageAlt: "Kazakhstan gold mining carpet mat in a sluice testing setup",
     heroProductId: "gold-mining-carpet-mat",
     productIds: ["gold-mining-carpet-mat"],
     guideLinks: [
@@ -533,6 +551,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Hungary city", "Office area by zone", "Chair-wheel exposure", "Sample requirement", "Target installation date"],
     localTerms: ["office carpet tiles Hungary", "commercial carpet Hungary", "Hungary office flooring supplier"],
+    heroImage: "/images/markets/generated/hungary-office-carpet-tiles-hero.webp",
+    heroImageAlt: "Hungary office carpet tiles for commercial workspace replacement planning",
     heroProductId: "nylon-office-carpet-tile",
     productIds: ["nylon-office-carpet-tile", "pp-bitumen-backed-office-carpet-tiles", "commercial-nylon-tiles"],
     guideLinks: [
@@ -570,6 +590,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Czech city", "Office area by zone", "Phase schedule", "Sample requirement", "Target installation date"],
     localTerms: ["office carpet tiles Czech Republic", "commercial carpet Czech Republic", "Czech office flooring supplier"],
+    heroImage: "/images/markets/generated/czech-office-carpet-tiles-hero.webp",
+    heroImageAlt: "Czech Republic office carpet tiles for chair-wheel and phased fit-out zones",
     heroProductId: "pp-bitumen-backed-office-carpet-tiles",
     productIds: ["pp-bitumen-backed-office-carpet-tiles", "nylon-office-carpet-tile", "commercial-nylon-tiles"],
     guideLinks: [
@@ -977,6 +999,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Australia city", "Zone quantities", "Chair-wheel exposure", "Sample requirement", "Target installation date"],
     localTerms: ["office carpet tiles Australia", "commercial carpet Australia", "Australia office flooring supplier"],
+    heroImage: "/images/markets/generated/australia-office-carpet-tiles-hero.webp",
+    heroImageAlt: "Australia office carpet tiles for chair-wheel zones and replacement cycles",
     heroProductId: "50x50-nylon-pp-office-carpet-tiles",
     productIds: ["50x50-nylon-pp-office-carpet-tiles", "nylon-office-carpet-tile", "commercial-nylon-tiles"],
     guideLinks: [
@@ -1088,6 +1112,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Destino en Perú", "Ancho y largo de la canaleta", "Caudal y tamaño de alimentación", "Muestra o pedido de prueba", "Condiciones de empaque y envío"],
     localTerms: ["alfombra minería de oro Perú", "miners moss Perú", "alfombra para canaleta de oro"],
+    heroImage: "/images/markets/generated/peru-gold-mining-carpet-hero.webp",
+    heroImageAlt: "Peru gold mining carpet mat for sluice and alluvial recovery testing",
     heroProductId: "gold-mining-carpet-mat",
     productIds: ["gold-mining-carpet-mat"],
     guideLinks: [
@@ -1125,6 +1151,8 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     ],
     quoteInputs: ["Ciudad y canal de venta", "Peso de muestra o pedido de prueba", "Largo de rollo preferido", "Requerimiento de empaque", "Destino y fecha de entrega"],
     localTerms: ["alfombra minería de oro Colombia", "miners moss Colombia", "tapete para canaleta de oro"],
+    heroImage: "/images/markets/generated/colombia-gold-mining-carpet-hero.webp",
+    heroImageAlt: "Colombia gold mining carpet mat rolls and sluice tray testing setup",
     heroProductId: "gold-mining-carpet-mat",
     productIds: ["gold-mining-carpet-mat"],
     guideLinks: [

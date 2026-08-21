@@ -14,6 +14,8 @@ function resolveProducts(page: CountryApplicationPage) {
 
 export function countryApplicationMetadata(page: CountryApplicationPage): Metadata {
   const hero = products.find((product) => product.id === page.heroProductId) ?? products.find((product) => product.id === page.productIds[0]);
+  const heroImage = page.heroImage ?? hero?.image;
+  const heroImageAlt = page.heroImageAlt ?? page.title;
 
   return {
     title: page.metadataTitle,
@@ -33,7 +35,7 @@ export function countryApplicationMetadata(page: CountryApplicationPage): Metada
       url: absoluteUrl(page.path),
       type: "website",
       locale: page.openGraphLocale,
-      images: hero ? [{ url: absoluteUrl(hero.image), alt: page.title }] : undefined,
+      images: heroImage ? [{ url: absoluteUrl(heroImage), alt: heroImageAlt }] : undefined,
     },
   };
 }
@@ -41,6 +43,8 @@ export function countryApplicationMetadata(page: CountryApplicationPage): Metada
 export default function CountryApplicationLandingPage({ page }: { page: CountryApplicationPage }) {
   const resolvedProducts = resolveProducts(page);
   const heroProduct = products.find((product) => product.id === page.heroProductId) ?? resolvedProducts[0];
+  const heroImage = page.heroImage ?? heroProduct?.image ?? "/images/hero-home.webp";
+  const heroImageAlt = page.heroImageAlt ?? page.title;
   const quoteHref = `/contact?country=${encodeURIComponent(page.countryName)}&application=${encodeURIComponent(page.applicationName)}#quote-form`;
 
   const breadcrumbJsonLd = {
@@ -87,8 +91,8 @@ export default function CountryApplicationLandingPage({ page }: { page: CountryA
         eyebrow={`${page.countryNameLocal} · ${page.applicationName}`}
         title={page.title}
         description={page.metadataDescription}
-        image={heroProduct?.image || "/images/hero-home.webp"}
-        imageAlt={page.title}
+        image={heroImage}
+        imageAlt={heroImageAlt}
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <Link href={quoteHref} className="btn-fox-orange min-h-13 text-center">
