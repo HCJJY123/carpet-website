@@ -1,22 +1,23 @@
 {
-  "task": "Optimize mobile PageSpeed issues reported for https://www.vishomecarpet.com",
-  "approvedBy": "Site owner request on 2026-08-21 to fix PageSpeed mobile report issues from the provided PageSpeed Insights URL",
+  "task": "Fix Google Search Console indexing cleanup issues reported for https://www.vishomecarpet.com",
+  "approvedBy": "Site owner request on 2026-08-21 to fix the GSC indexing issue screenshots one by one",
   "approvedCategories": [
     "governance",
-    "performance",
     "seo-global",
     "navigation",
-    "build-config"
+    "content",
+    "redirects"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/layout.tsx",
-    "src/components/DeferredSiteEnhancements.tsx",
-    "src/components/HomeHeroCarousel.tsx",
-    "src/app/page.tsx",
+    "src/proxy.ts",
+    "src/app/**",
+    "src/components/**",
+    "src/lib/**",
+    "keyword-map.csv",
     "next.config.ts"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing URLs, content and UI styling are preserved. This change targets mobile PageSpeed issues by deferring non-critical analytics/visitor/cookie/image-protection client bundles until after initial rendering, preloading the mobile LCP hero image, loading carousel slides only when needed, lowering priority for the decorative hero logo mark, and adding long-lived cache headers for stable root static assets such as logos and favicons."
+  "notes": "Existing URLs and UI styling are preserved. This change audits and fixes GSC-reported index coverage noise by redirecting non-native locale-prefixed duplicate URLs to their canonical English paths, replacing internal links to redirecting URLs with final destinations, keeping canonical cleanup for query-parameter inquiry URLs, and removing non-HTML AI/TXT/JSON files from the XML page sitemap while keeping the files live for crawlers."
 }

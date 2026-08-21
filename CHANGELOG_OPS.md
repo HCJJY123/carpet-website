@@ -297,6 +297,29 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Verification:** Run `npm run ops:check`, `npm run lint`, and `npm run build`, then confirm the cookie banner still hides after either choice and that analytics remain disabled until Accept analytics is chosen.
 
+## 2026-08-21 `fix/gsc-indexing-cleanup-20260821`
+
+**Type:** SEO / Indexing cleanup / Navigation
+
+**Scope:** Cleaned up Google Search Console indexing coverage issues reported from screenshots without changing UI styling or inquiry forms.
+
+**Changed URLs:**
+
+- Preserved native localized URLs such as `/ru`, `/ru/hotelnyy-kovrolin`, `/fr/moquette-hotel-sur-mesure`, and similar campaign pages
+- Canonicalized non-native locale-prefixed duplicates such as `/ru/factory`, `/ru/contact`, `/es/hotel-carpet`, and `/ja/contact` back to their English source URLs
+- Updated internal links that still pointed at `/natural-sisal-carpet` and `/?lang=en`
+- Removed `/llms.txt`, `/llms-full.txt`, and `/ai-sources.json` from the XML page sitemap while keeping the root files available for AI crawlers
+
+**What changed:** Non-native language-prefixed paths now redirect to the canonical English path instead of serving rewritten duplicate pages with `X-Robots-Tag: noindex`. The client language layer no longer rewrites every internal link into `/locale/...` variants. Header, footer and priority route references now point to final canonical destinations instead of redirecting URLs.
+
+**Why:** Reduce GSC noindex and redirect coverage noise caused by auto-generated translated URL duplicates and old internal links, while keeping intentional canonical handling for inquiry query URLs and preserving indexable native localized campaign pages.
+
+**URL mapping:** No published URL was removed. Existing legacy redirects remain in place; non-native locale-prefixed duplicates now resolve to their canonical English equivalents.
+
+**Rollback point:** Revert this branch commit if localized navigation needs to restore full translated-path persistence.
+
+**Verification:** Run `SITE_OPS_BASE_REF=origin/main npm run ops:check`, `npm run audit:seo`, `npm run audit:links`, `npm run lint`, and `npm run build -- --webpack`; then verify sample duplicate paths, legacy redirects, sitemaps, and native localized URLs in Preview before merging.
+
 ## 2026-08-10 `seo/category-guide-internal-links`
 
 **Type:** SEO / Internal linking
