@@ -2,6 +2,27 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-22 `content/carpet-tile-spec-checklist-20260822`
+
+**Type:** B2B buyer topic intelligence / Buying Guide / SEO-GEO-AI Search
+
+**Scope:** Added one commercial carpet tile specification checklist article and a separate Accio Work image-generation prompt package. No UI styling, inquiry form, WhatsApp, email or deployment behavior changed.
+
+**Changed URLs:**
+
+- Added `/blog/commercial-carpet-tile-specification-checklist-b2b-buyers`
+- Updated `/blog` planning tools entry
+
+**What changed:** Added a B2B Buying Guide covering project zone selection, fiber, pile, backing, fire/VOC document checks, concrete subfloor risk, adhesive planning, RFQ fields, spare stock and supplier approval checks. Added keyword ownership and prepared seven realistic professional image prompts for Accio Work generation only.
+
+**Why:** Convert buyer-topic intelligence from procurement questions, installation risk discussions and specification standards into a commercial-intent content asset that can support Google SEO, AI Search answers and higher-quality carpet tile inquiries.
+
+**URL mapping:** New URL only. No existing URL was removed or redirected.
+
+**Rollback point:** Revert this branch commit if the new article should be withdrawn before publication.
+
+**Verification:** Run `SITE_OPS_BASE_REF=origin/main npm run ops:check`, `npm run audit:seo`, `npm run audit:links`, `npm run lint`, and `npm run build -- --webpack`. Accio Work image generation remains review-only and is not deployed in this change.
+
 ## 2026-08-21 `fix/mobile-pagespeed-followup`
 
 **Type:** Mobile performance / PageSpeed follow-up

@@ -24,6 +24,12 @@ export const metadata: Metadata = {
 
 const planningTools = [
   {
+    title: "Carpet Tile Specification Checklist",
+    label: "Spec / RFQ",
+    href: "/blog/commercial-carpet-tile-specification-checklist-b2b-buyers",
+    text: "Check fiber, backing, fire, VOC, concrete risk, chair-wheel zones and RFQ fields before comparing suppliers.",
+  },
+  {
     title: "Carpet Tile MOQ Guide",
     label: "MOQ / Samples",
     href: "/blog/commercial-carpet-tile-moq-sample-trial-project-guide",
@@ -34,12 +40,6 @@ const planningTools = [
     label: "Hotel Spec",
     href: "/blog/hotel-carpet-supplier-checklist-project-order-guide",
     text: "12 questions to verify construction, documents, samples, roll plan and project order risk.",
-  },
-  {
-    title: "High-Traffic Tile Specification",
-    label: "Materials",
-    href: "/blog/carpet-tile-specifications-high-traffic-durability-guide",
-    text: "Compare fiber, backing, pile, traffic use and replacement strategy for commercial zones.",
   },
   {
     title: "Shipping & Project Delivery",

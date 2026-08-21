@@ -1,23 +1,22 @@
 {
-  "task": "Fix Google Search Console indexing cleanup issues reported for https://www.vishomecarpet.com",
-  "approvedBy": "Site owner request on 2026-08-21 to fix the GSC indexing issue screenshots one by one",
+  "task": "Create the first B2B buyer topic intelligence article for commercial carpet tile specifications",
+  "approvedBy": "Site owner request on 2026-08-22 to start the first B2B buyer topic and generate professional Accio Work image prompts only, without deployment",
   "approvedCategories": [
     "governance",
     "seo-global",
-    "navigation",
     "content",
-    "redirects"
+    "navigation"
   ],
   "allowedPaths": [
     "ops/change-request.json",
+    "ops/accio-image-prompts-commercial-carpet-tile-spec-checklist.md",
     "CHANGELOG_OPS.md",
-    "src/proxy.ts",
-    "src/app/**",
-    "src/components/**",
-    "src/lib/**",
+    "src/app/blog/page.tsx",
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/commercial-carpet-tile-specification-checklist-guide.ts",
     "keyword-map.csv",
-    "next.config.ts"
+    "public/images/blog-series/commercial-carpet-tile-specification-checklist/**"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing URLs and UI styling are preserved. This change audits and fixes GSC-reported index coverage noise by redirecting non-native locale-prefixed duplicate URLs to their canonical English paths, replacing internal links to redirecting URLs with final destinations, keeping canonical cleanup for query-parameter inquiry URLs, and removing non-HTML AI/TXT/JSON files from the XML page sitemap while keeping the files live for crawlers."
+  "notes": "Existing URLs, UI styling, forms, WhatsApp and email behavior are preserved. This change adds one B2B Buying Guide based on buyer-topic intelligence for commercial carpet tile specification checks, maps the target keyword, adds a relevant blog entry point, and prepares Accio Work image-generation prompts only. Generated images are not deployed in this change unless separately approved after review."
 }
