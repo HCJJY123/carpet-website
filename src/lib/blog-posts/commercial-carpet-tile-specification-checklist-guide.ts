@@ -20,9 +20,9 @@ export const commercialCarpetTileSpecificationChecklistGuide: BlogPost = {
   date: "2026-08-22",
   author: "Vishome Technical Team",
   category: "Buying Guide",
-  image: "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-carpet-samples-procurement-specification-0a1dfad2aa-1280w.avif",
+  image: "/images/blog-series/commercial-carpet-tile-specification-checklist/commercial-carpet-tile-specification-checklist-hero.webp",
   imageUnoptimized: true,
-  h1Image: "/images/optimized/blog-series-reddit-hotel-office-carpet-decisions-carpet-samples-procurement-specification-0a1dfad2aa-1280w.avif",
+  h1Image: "/images/blog-series/commercial-carpet-tile-specification-checklist/commercial-carpet-tile-specification-checklist-hero.webp",
   h1ImageAlt:
     "Commercial carpet tile samples, specification documents and project drawings prepared for B2B procurement review",
   h1ImageCaption:
@@ -87,6 +87,12 @@ export const commercialCarpetTileSpecificationChecklistGuide: BlogPost = {
           type: "paragraph",
           text: "This zone-first method helps the supplier recommend a construction instead of guessing from a mood board. It also helps the buyer decide whether a lower-cost PP carpet tile is enough or whether a nylon option is safer for high-use areas.",
         },
+        {
+          type: "image",
+          src: "/images/blog-series/commercial-carpet-tile-specification-checklist/office-carpet-tile-chair-wheel-traffic-zone.webp",
+          alt: "Modular office carpet tiles installed below rolling office chairs in a commercial workstation zone",
+          caption: "Workstation zones need carpet tile specifications that account for chair wheels, furniture movement and replacement planning.",
+        },
       ],
     },
     {
@@ -112,6 +118,12 @@ export const commercialCarpetTileSpecificationChecklistGuide: BlogPost = {
           label: "Do not assume",
           text: "A sample tile can show color and touch, but it does not prove fire class, VOC status, backing compatibility, carton consistency or large-order repeatability unless those items are documented.",
         },
+        {
+          type: "image",
+          src: "/images/blog-series/commercial-carpet-tile-specification-checklist/commercial-carpet-tile-backing-pile-detail.webp",
+          alt: "Close-up of commercial carpet tile pile texture and layered backing structure",
+          caption: "A specification should describe pile construction and backing behavior, not only the visible surface color.",
+        },
       ],
     },
     {
@@ -136,6 +148,12 @@ export const commercialCarpetTileSpecificationChecklistGuide: BlogPost = {
             ["Layout", "Will the installer follow the approved direction and starting lines?", "Incorrect layout can increase waste and make pattern issues visible."],
             ["Transitions", "How will doorways, hard-surface edges and expansion joints be handled?", "Weak transition details are common sources of edge damage."],
           ],
+        },
+        {
+          type: "image",
+          src: "/images/blog-series/commercial-carpet-tile-specification-checklist/carpet-tile-concrete-subfloor-adhesive-review.webp",
+          alt: "Commercial carpet tile lifted during concrete subfloor and adhesive review before installation",
+          caption: "Subfloor and adhesive assumptions should be settled before the buyer approves a bulk carpet tile order.",
         },
       ],
     },
@@ -163,6 +181,12 @@ export const commercialCarpetTileSpecificationChecklistGuide: BlogPost = {
           type: "paragraph",
           text: "For public projects, corporate fit-outs and education facilities, document readiness can be as important as the tile itself. A lower unit price may not help if the buyer cannot submit a complete approval package.",
         },
+        {
+          type: "image",
+          src: "/images/blog-series/commercial-carpet-tile-specification-checklist/commercial-carpet-tile-qc-sample-approval.webp",
+          alt: "Commercial carpet tile sample approval and quality control measurement in a factory workspace",
+          caption: "Sample approval works best when dimensions, color, backing and required documents are reviewed together.",
+        },
       ],
     },
     {
@@ -187,6 +211,12 @@ export const commercialCarpetTileSpecificationChecklistGuide: BlogPost = {
           label: "Copy this into your inquiry",
           text: "We are sourcing commercial carpet tiles for a B2B project. Please recommend options based on project area, traffic level, backing, document requirements, sample plan, spare stock and destination. Include MOQ, lead time, packing and available technical documents.",
         },
+        {
+          type: "image",
+          src: "/images/blog-series/commercial-carpet-tile-specification-checklist/commercial-carpet-tile-rfq-checklist-flat-lay.webp",
+          alt: "Commercial carpet tile RFQ checklist with samples, ruler, calculator and procurement notes",
+          caption: "A complete RFQ helps suppliers quote the same scope instead of guessing from a generic product request.",
+        },
       ],
     },
     {
@@ -206,6 +236,12 @@ export const commercialCarpetTileSpecificationChecklistGuide: BlogPost = {
             { text: "For phased renovations, check whether later phases need the same batch or a reserved production plan." },
             { text: "Tell the supplier if the facility team expects tile-by-tile replacement during operation." },
           ],
+        },
+        {
+          type: "image",
+          src: "/images/blog-series/commercial-carpet-tile-specification-checklist/carpet-tile-spare-stock-carton-planning.webp",
+          alt: "Commercial carpet tile spare stock cartons and matching replacement tiles in a warehouse aisle",
+          caption: "Spare stock should be planned with cartons, batch labels and high-risk replacement zones in mind.",
         },
       ],
     },
