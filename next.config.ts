@@ -79,6 +79,15 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: "/:asset(logo|logo-mark|favicon|apple-touch-icon).:ext(svg|ico|png)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
     ];
   },
 };

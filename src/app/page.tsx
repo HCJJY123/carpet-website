@@ -36,6 +36,15 @@ export default function Home() {
 
   return (
     <div className="bg-white">
+      <link
+        rel="preload"
+        as="image"
+        href="/images/optimized/home-hero-home-552dc7b8e3-768w.avif"
+        imageSrcSet="/images/optimized/home-hero-home-552dc7b8e3-480w.avif 480w, /images/optimized/home-hero-home-552dc7b8e3-768w.avif 768w, /images/optimized/home-hero-home-552dc7b8e3-1200w.avif 1200w, /images/optimized/home-hero-home-552dc7b8e3-1600w.avif 1600w"
+        imageSizes="100vw"
+        fetchPriority="high"
+        type="image/avif"
+      />
       <HomeHeroCarousel whatsappUrl={whatsappUrl} />
 
       <AnswerFirst

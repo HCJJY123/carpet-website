@@ -140,17 +140,16 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
   }, []);
 
   useEffect(() => {
-    const preloadTimer = window.setTimeout(() => {
-      setRenderedSlides(new Set(slides.map((_, index) => index)));
-    }, 1_200);
-
-    return () => window.clearTimeout(preloadTimer);
-  }, []);
-
-  useEffect(() => {
     if (paused || reducedMotion || dragging || settling) return;
     const timer = window.setTimeout(() => {
-      setActiveIndex((current) => (current + 1) % slides.length);
+      const nextIndex = (activeIndex + 1) % slides.length;
+      setRenderedSlides((current) => {
+        if (current.has(nextIndex)) return current;
+        const updated = new Set(current);
+        updated.add(nextIndex);
+        return updated;
+      });
+      setActiveIndex(nextIndex);
     }, ROTATION_MS);
     return () => window.clearTimeout(timer);
   }, [activeIndex, dragging, paused, reducedMotion, settling]);
@@ -340,7 +339,9 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
           width={550}
           height={550}
           className="pointer-events-none absolute bottom-[-60px] right-[-80px] h-auto w-[400px] select-none opacity-[0.06] md:w-[550px]"
-          priority
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
         />
       </div>
 
