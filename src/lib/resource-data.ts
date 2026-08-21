@@ -142,6 +142,12 @@ export const technicalDocuments: TechnicalDocument[] = [
 
 export const resourceCategories = [
   {
+    title: "RFQ Calculator",
+    href: "/resources/commercial-carpet-rfq-calculator",
+    description: "Interactive quantity, waste, spare-stock, carton and roll-length planning tool for commercial carpet quote requests.",
+    lastModified: "2026-08-21",
+  },
+  {
     title: "Specification Guides",
     href: "/resources/specification-guides",
     description: "Buyer guides for carpet tile, hotel broadloom and public-area carpet specifications.",

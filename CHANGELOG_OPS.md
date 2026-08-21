@@ -2,6 +2,30 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-21 `seo/ai-assistant-channel-playbook-actions`
+
+**Type:** GEO-AEO / Interactive resource / Structured data / AI source map
+
+**Scope:** Executed the low-risk, site-editable items from the AI assistant channel traffic growth handbook for the VISHOME carpet website.
+
+**Changed URLs:**
+
+- Added `/resources/commercial-carpet-rfq-calculator`
+- Updated `/resources` to include the RFQ calculator entry
+- Updated `/sitemaps/resources.xml`
+- Updated `/llms.txt`, `/llms-full.txt` and `/ai-sources.json`
+- Updated product JSON-LD generated for product pages
+
+**What changed:** Added a live commercial carpet RFQ quantity calculator for measured area, waste allowance, spare stock, approximate 50x50 cm tile count, carton count and broadloom roll-length planning. The page includes visible last-updated/source text and clear boundaries that calculator output is not a final quote, stock confirmation, freight quote or installation guarantee. Added the tool to the resource directory, resource sitemap, keyword map and AI-readable source files. Product structured data now includes `priceSpecification` on AggregateOffer entries while keeping reference FOB ranges as confirmation fields.
+
+**Why:** The handbook recommends giving AI-referred buyers a useful live tool that cannot be fully replicated inside chat, adding visible freshness/source notes, keeping AI source files credible, and enriching product schema beyond basic Product markup.
+
+**URL mapping:** No existing URLs were removed, renamed or redirected. All changes are additive.
+
+**Rollback point:** Revert this change set if the RFQ calculator or schema enrichment needs to be withdrawn.
+
+**Verification:** Run `SITE_OPS_BASE_REF=HEAD npm run ops:check`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets`, `npm run audit:placeholders`, `npm run lint`, and `npm run build -- --webpack`; then verify the new calculator page and resource sitemap in Preview.
+
 ## 2026-08-20 `seo/country-product-application-gap-completion`
 
 **Type:** SEO / GEO-AEO / Country × Product × Application content completion / AI routing

@@ -67,6 +67,15 @@ export function productJsonLd(product: Product) {
             lowPrice: product.fobPrice.lowPrice,
             highPrice: product.fobPrice.highPrice,
             offerCount: 1,
+            priceSpecification: {
+              "@type": "UnitPriceSpecification",
+              priceCurrency: product.fobPrice.currency,
+              minPrice: product.fobPrice.lowPrice,
+              maxPrice: product.fobPrice.highPrice,
+              unitText: product.fobPrice.unit,
+              valueAddedTaxIncluded: false,
+              description: "Reference FOB range only; final price and validity require a written quotation for the selected construction, quantity and destination.",
+            },
             seller: { "@id": `${brandInfo.url}/#organization` },
           },
         }
