@@ -16,6 +16,7 @@
     "src/app/markets/page.tsx",
     "src/app/markets/[market]/[slug]/page.tsx",
     "src/app/resources/page.tsx",
+    "src/app/resources/downloads/[slug]/page.tsx",
     "src/app/resources/commercial-carpet-rfq-calculator/page.tsx",
     "src/app/sitemap.ts",
     "src/app/sitemap-markets.xml/route.ts",
@@ -33,5 +34,5 @@
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing indexed URLs are preserved. This continuation executes applicable AI assistant channel playbook items: add an interactive commercial carpet RFQ quantity calculator as a zero-click-resistant tool, surface it in resources and AI-readable files, preserve enterprise contact credibility, keep AI crawler access unchanged, and enrich product structured data with priceSpecification while preserving all current product facts, certifications, contact details, redirects and conversion paths."
+  "notes": "Existing indexed URLs are preserved. This continuation executes applicable AI assistant channel playbook items: add an interactive commercial carpet RFQ quantity calculator as a zero-click-resistant tool, surface it in resources and AI-readable files, preserve enterprise contact credibility, keep AI crawler access unchanged, and enrich product structured data with priceSpecification while preserving all current product facts, certifications, contact details, redirects and conversion paths. PR conflict resolution scope includes preserving the current branch contact bridge WhatsApp path and precise document file-size byte metadata while merging latest main."
 }
