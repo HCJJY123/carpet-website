@@ -199,7 +199,7 @@ export const priorityRoutes = [
   "/products/public-area",
   "/solutions",
   "/solutions/hotel-hospitality",
-  "/natural-sisal-carpet",
+  "/products/public-area/natural-sisal-carpet",
   "/projects",
   "/blog",
   "/about-us",

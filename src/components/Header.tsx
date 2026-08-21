@@ -28,7 +28,7 @@ const languageGroups: LanguageGroup[] = [
   {
     code: "EN",
     name: "English",
-    links: [{ href: "/?lang=en", label: "Main website" }],
+    links: [{ href: "/", label: "Main website" }],
   },
   {
     code: "RU",
@@ -112,7 +112,7 @@ const navLinks: NavItem[] = [
       { href: "/solutions/hotel-carpet-manufacturer", label: "Hotel Carpet Manufacturer" },
       { href: "/carpet-tiles-50x50", label: "50x50 Carpet Tile Guide" },
       { href: "/hotel-carpet", label: "Hotel Carpet Applications" },
-      { href: "/natural-sisal-carpet", label: "Natural Sisal Applications" },
+      { href: "/products/public-area/natural-sisal-carpet", label: "Natural Sisal Applications" },
     ],
   },
   {

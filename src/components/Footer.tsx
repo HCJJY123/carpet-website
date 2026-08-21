@@ -46,7 +46,7 @@ export default function Footer() {
               <li><Link href="/products/carpet-tiles" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Commercial Carpet Tiles</Link></li>
               <li><Link href="/products/wall-to-wall" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Wall-to-Wall Carpets</Link></li>
               <li><Link href="/products/public-area" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Public Area Carpets</Link></li>
-              <li><Link href="/natural-sisal-carpet" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Natural Sisal Carpet</Link></li>
+              <li><Link href="/products/public-area/natural-sisal-carpet" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Natural Sisal Carpet</Link></li>
             </ul>
           </div>
 
