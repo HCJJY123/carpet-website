@@ -146,8 +146,8 @@ const blogFaqs = [
 ];
 
 function wordsInPost(post: BlogPost) {
-  const values = [post.title, post.subtitle, post.description, post.painPoint];
-  post.sections.forEach((section) => {
+  const values = [post.title, post.subtitle, post.description, post.painPoint || ""];
+  (post.sections || []).forEach((section) => {
     values.push(section.title, ...section.paragraphs);
     section.blocks?.forEach((block) => {
       if (block.type === "paragraph") values.push(block.text);
@@ -167,7 +167,7 @@ function readMinutes(post: BlogPost) {
 }
 
 function buyerIntent(post: BlogPost) {
-  const text = `${post.slug} ${post.title} ${post.description} ${post.category}`.toLowerCase();
+  const text = `${post.slug} ${post.title} ${post.description || post.subtitle} ${post.category}`.toLowerCase();
   if (text.includes("hotel") || text.includes("hospitality") || text.includes("axminster")) return "Hotel buyer";
   if (text.includes("office") || text.includes("carpet tile") || text.includes("concrete")) return "Office / tile buyer";
   if (text.includes("sluice") || text.includes("gold") || text.includes("miners")) return "Mining buyer";
@@ -177,7 +177,7 @@ function buyerIntent(post: BlogPost) {
 
 function postsForCluster(cluster: (typeof topicClusters)[number]) {
   return blogPosts.filter((post) => {
-    const haystack = `${post.slug} ${post.title} ${post.description} ${post.category}`.toLowerCase();
+    const haystack = `${post.slug} ${post.title} ${post.description || post.subtitle} ${post.category}`.toLowerCase();
     return cluster.match.some((term) => haystack.includes(term));
   });
 }
@@ -208,7 +208,7 @@ function BlogCard({ post, compact = false }: { post: BlogPost; compact?: boolean
         <h2 className="text-lg font-black leading-tight text-primary transition-colors group-hover:text-accent md:text-xl">
           {post.title}
         </h2>
-        <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-muted">{post.description}</p>
+        <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-muted">{post.description || post.subtitle}</p>
         <div className="mt-5 grid gap-2 border-t border-border pt-4 text-[10px] font-black uppercase tracking-[0.12em] text-primary sm:grid-cols-2">
           <span>{buyerIntent(post)}</span>
           <span className="text-accent sm:text-right">{post.dateModified || post.date}</span>

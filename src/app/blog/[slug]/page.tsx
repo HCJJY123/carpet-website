@@ -142,11 +142,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: post.seoTitle,
-    description: post.description,
+    description: post.description || post.subtitle,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.title,
-      description: post.description,
+      description: post.description || post.subtitle,
       url: absoluteUrl(`/blog/${post.slug}`),
       type: "article",
       publishedTime: post.date,
@@ -165,19 +165,19 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  const relatedProducts = post.relatedProductIds
+  const relatedProducts = (post.relatedProductIds || [])
     .map((id) => products.find((product) => product.id === id))
     .filter((product): product is NonNullable<typeof product> => Boolean(product));
   const relatedCategories = relatedCategoryIds(relatedProducts);
   const relatedProductPaths = new Set(relatedProducts.map((product) => productPath(product.id)));
-  const nextStepLinks = post.suggestedLinks.filter((item) => !relatedProductPaths.has(item.href));
+  const nextStepLinks = (post.suggestedLinks || []).filter((item) => !relatedProductPaths.has(item.href));
 
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     "@id": `${absoluteUrl(`/blog/${post.slug}`)}#article`,
     headline: post.title,
-    description: post.description,
+    description: post.description || post.subtitle,
     image: absoluteUrl(post.image),
     datePublished: post.date,
     dateModified: post.dateModified ?? post.date,
@@ -288,11 +288,11 @@ export default async function BlogPostPage({ params }: Props) {
 
         <div className="bg-surface border border-border rounded-xl p-6 md:p-8 mt-8">
           <p className="text-[10px] font-black uppercase tracking-[0.25em] text-primary/60 mb-2">Pain Point Addressed</p>
-          <p className="text-muted leading-relaxed">{post.painPoint}</p>
+          <p className="text-muted leading-relaxed">{post.painPoint || post.description}</p>
         </div>
 
         <div className="mt-10 space-y-12">
-          {post.sections.map((section) => (
+          {(post.sections || []).map((section) => (
             <section key={section.title} className="article-section border-b border-border pb-10">
               <h2 className="text-2xl font-bold text-primary mb-5 uppercase tracking-tight">{section.title}</h2>
               {section.blocks ? (

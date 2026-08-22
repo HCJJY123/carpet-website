@@ -41,15 +41,19 @@ export interface BlogPost {
   slug: string;
   title: string;
   subtitle: string;
-  painPoint: string;
+  painPoint?: string;
   seoTitle: string;
-  description: string;
-  keywords: string[];
+  description?: string;
+  keywords?: string[];
   date: string;
   dateModified?: string;
   author: string;
   category: string;
   image: string;
+  imageAlt?: string;
+  excerpt?: string;
+  seoDescription?: string;
+  content?: BlogSection[];
   imageUnoptimized?: boolean;
   h1Image?: string;
   h1ImageMobile?: string;
@@ -57,9 +61,9 @@ export interface BlogPost {
   h1ImageCaption?: string;
   h1ImageFit?: "cover" | "contain";
   h1ImageUnoptimized?: boolean;
-  sections: BlogSection[];
-  relatedProductIds: string[];
-  suggestedLinks: { label: string; href: string }[];
+  sections?: BlogSection[];
+  relatedProductIds?: string[];
+  suggestedLinks?: { label: string; href: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -375,6 +379,95 @@ export const blogPosts: BlogPost[] = [
       { label: "Hospitality Lifecycle Cost Guide", href: "/blog/hidden-cost-of-cheap-carpets-hospitality-roi-guide" },
       { label: "Request Acoustic Project Quote", href: "/contact?product=Hotel%20Acoustic%20Carpet#quote-form" },
     ],
+  },
+  {
+    slug: "commercial-carpet-tile-rfq-checklist-b2b-buyers",
+    title: "Commercial Carpet Tile RFQ Checklist for B2B Buyers",
+    subtitle: "A practical RFQ template for buyers who want suppliers to quote the same project scope, same documents and same delivery assumptions.",
+    date: "2026-08-22",
+    author: "Vishome Technical Team",
+    category: "Buying Guide",
+    image: "/images/blog-series/commercial-carpet-tile-rfq-checklist/commercial-carpet-tile-rfq-intake-desk.webp",
+    imageAlt: "Commercial carpet tile RFQ desk with samples, quotation sheet and project tools prepared for buyer review",
+    excerpt: "Use this commercial carpet tile RFQ checklist to define scope, construction, sample approval, subfloor condition, spare stock and commercial terms before asking suppliers for price.",
+    seoTitle: "Commercial Carpet Tile RFQ Checklist | B2B Buyers | VISHOME",
+    seoDescription: "Use this RFQ checklist to define project scope, construction, sample approval, subfloor condition, spare stock and commercial terms before requesting carpet tile quotations.",
+    content: [
+      {
+        title: "Why a Clear RFQ Matters",
+        paragraphs: [
+          "Many carpet tile inquiries stay too vague: the buyer asks for price, but the factory still does not know the project zone, traffic level, backing, sample stage, adhesive condition or spare-stock plan.",
+          "A useful RFQ helps both sides compare the same scope. It reduces wrong quotations, repeated sample rounds, missed document requirements and last-minute delivery surprises.",
+          "Before requesting a factory quote, prepare eight fields: project location, application zone, product construction, quantity, installation condition, sample requirement, document requirement and target delivery date."
+        ]
+      },
+      {
+        title: "Confirm Project Scope and Quantity",
+        paragraphs: [
+          "Start with the building type, installation area and expected traffic. Office workstations, corridors, meeting rooms, education spaces and retail areas can require different carpet tile constructions even when the color looks similar.",
+          "Send the net area, estimated waste allowance, tile size, phase plan and whether spare stock is required. For renovation projects, note whether work must be staged around occupied spaces or weekend installation windows.",
+          "If the final drawing is not ready, give the best working estimate and mark it as provisional. Suppliers can then quote a sensible range instead of treating the inquiry as a generic square-meter price."
+        ],
+        image: "/images/blog-series/commercial-carpet-tile-rfq-checklist/carpet-tile-project-scope-measurement-review.webp",
+        imageAlt: "Commercial carpet tile project scope and floor measurement review",
+        imageCaption: "Scope, quantity and installation phases should be visible before price comparison starts."
+      },
+      {
+        title: "Specify Construction, Backing and Pile Details",
+        paragraphs: [
+          "A carpet tile RFQ should identify fiber, pile style, backing type, tile size, pile weight target, color family and any performance documents required by the destination market.",
+          "Do not compare prices unless the construction basis is clear. A PP tile, nylon tile, bitumen backing, PVC backing or PVC-free backing can solve different project needs and lead to different cost structures.",
+          "Ask suppliers to confirm the construction in writing, not only by photo. Photos help with appearance, but the quotation should still name the material, backing and sample approval route."
+        ],
+        image: "/images/blog-series/commercial-carpet-tile-rfq-checklist/commercial-carpet-tile-backing-pile-detail-rfq.webp",
+        imageAlt: "Commercial carpet tile backing and pile detail for RFQ review",
+        imageCaption: "Construction details keep supplier quotations comparable."
+      },
+      {
+        title: "Describe Subfloor and Adhesive Conditions",
+        paragraphs: [
+          "Subfloor condition can change the installation method and risk level. Tell the supplier whether the floor is concrete, raised access floor, old adhesive, existing carpet, tile surface or another substrate.",
+          "Mention moisture risk, dust, uneven areas, previous adhesive residue and whether the installer plans full-spread adhesive, tackifier or another method. These details help avoid claims that start after installation.",
+          "If the project is still in planning, ask the supplier what site information they need from the installer before final production or shipment."
+        ],
+        image: "/images/blog-series/commercial-carpet-tile-rfq-checklist/carpet-tile-concrete-subfloor-adhesive-check.webp",
+        imageAlt: "Concrete subfloor and adhesive condition check before carpet tile installation",
+        imageCaption: "Subfloor details are part of a serious RFQ, not a minor installation note."
+      },
+      {
+        title: "Control Sample Approval and Color Matching",
+        paragraphs: [
+          "State whether the buyer needs stock samples, custom color samples, mock-up material, production sample approval or a physical sample board before purchase order confirmation.",
+          "For office, education and retail projects, color variation, lighting and furniture context can affect final approval. Ask who approves the sample and how many days the review normally takes.",
+          "A clear sample path prevents the factory from planning bulk production too early and helps procurement align quotation validity with real approval timing."
+        ],
+        image: "/images/blog-series/commercial-carpet-tile-rfq-checklist/commercial-carpet-tile-sample-approval-color-match.webp",
+        imageAlt: "Commercial carpet tile sample approval and color matching for buyer review",
+        imageCaption: "Sample approval should be part of the RFQ timeline."
+      },
+      {
+        title: "Plan Spare Stock, Cartons and Delivery",
+        paragraphs: [
+          "Include the destination country, delivery city, preferred Incoterms, target arrival date, packaging request and whether the buyer wants spare tiles for maintenance after handover.",
+          "For phased projects, ask whether cartons need to be marked by floor, zone or installation sequence. This can save time on site and reduce confusion for contractors.",
+          "Spare stock is not only a cost item. It protects future replacement work when a tenant area, corridor or chair-wheel zone needs localized repair."
+        ],
+        image: "/images/blog-series/commercial-carpet-tile-rfq-checklist/carpet-tile-spare-stock-carton-planning-rfq.webp",
+        imageAlt: "Commercial carpet tile spare stock and carton planning for project delivery",
+        imageCaption: "Packing and spare stock planning should be confirmed before shipment."
+      },
+      {
+        title: "RFQ Fields to Send to Vishome",
+        paragraphs: [
+          "Send buyer name, company, email, phone or WhatsApp, country, project type, product type, quantity, expected delivery date and message. If available, include floor plan, installation photo, target color, required documents and previous sample references.",
+          "For faster handling, use a short format: product, quantity, country, application, backing preference, sample need, delivery target and special documents. This gives the sales and technical team enough context to respond with a practical quotation path.",
+          "Use the contact form or email sales@vishomecarpet.com when the RFQ includes files or multiple project zones. Use WhatsApp for quick clarification, then keep final price and technical confirmations in written quotation form."
+        ],
+        image: "/images/blog-series/commercial-carpet-tile-rfq-checklist/commercial-carpet-tile-rfq-checklist-flat-lay-clean.webp",
+        imageAlt: "Commercial carpet tile RFQ checklist with samples, calculator and project notes",
+        imageCaption: "A complete RFQ helps suppliers quote the same scope instead of guessing from a generic request."
+      }
+    ]
   },
   {
     slug: "commercial-space-carpet-tiles-maintenance-cost-guide",
