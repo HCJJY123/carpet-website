@@ -41,15 +41,19 @@ export interface BlogPost {
   slug: string;
   title: string;
   subtitle: string;
-  painPoint: string;
+  painPoint?: string;
   seoTitle: string;
-  description: string;
-  keywords: string[];
+  description?: string;
+  keywords?: string[];
   date: string;
   dateModified?: string;
   author: string;
   category: string;
   image: string;
+  imageAlt?: string;
+  excerpt?: string;
+  seoDescription?: string;
+  content?: BlogSection[];
   imageUnoptimized?: boolean;
   h1Image?: string;
   h1ImageMobile?: string;
@@ -57,9 +61,9 @@ export interface BlogPost {
   h1ImageCaption?: string;
   h1ImageFit?: "cover" | "contain";
   h1ImageUnoptimized?: boolean;
-  sections: BlogSection[];
-  relatedProductIds: string[];
-  suggestedLinks: { label: string; href: string }[];
+  sections?: BlogSection[];
+  relatedProductIds?: string[];
+  suggestedLinks?: { label: string; href: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
