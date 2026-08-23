@@ -27,7 +27,7 @@ export default function ProjectsPage() {
         return {
           "@type": "ListItem",
           position: index + 1,
-          name: profile?.cardTitle ?? project.title,
+          name: profile.cardTitle,
           url: absoluteUrl(projectPath(project.id)),
         };
       }),
@@ -64,24 +64,24 @@ export default function ProjectsPage() {
             {caseStudies.map((cs) => {
               const profile = getCaseSeoProfile(cs.id);
               return (
-                <Link key={cs.id} href={projectPath(cs.id)} className="group block border-b border-border pb-10 md:pb-16">
-                  <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-sm shadow-xl md:mb-10">
-                    <ProductImage
-                      src={profile?.cardImage ?? profile?.heroImage ?? cs.image}
-                      alt={profile?.cardImageAlt ?? profile?.heroImageAlt ?? cs.imageAlt ?? profile?.cardTitle ?? cs.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                    <div className="absolute top-6 left-6 bg-primary px-4 py-2 text-[10px] font-black text-white uppercase tracking-widest">
-                      {(profile?.eyebrow ?? cs.tag ?? "Project Reference").replace(" Application Guide", "").replace(" Guide", "")}
-                    </div>
+              <Link key={cs.id} href={projectPath(cs.id)} className="group block border-b border-border pb-10 md:pb-16">
+                <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-sm shadow-xl md:mb-10">
+                  <ProductImage
+                    src={profile.cardImage ?? profile.heroImage ?? cs.image}
+                    alt={profile.cardImageAlt ?? profile.heroImageAlt ?? cs.imageAlt ?? profile.cardTitle}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute top-6 left-6 bg-primary px-4 py-2 text-[10px] font-black text-white uppercase tracking-widest">
+                    {profile.eyebrow.replace(" Application Guide", "").replace(" Guide", "")}
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 uppercase tracking-tight group-hover:text-accent transition-colors">{profile?.cardTitle ?? cs.title}</h2>
-                  <p className="mb-6 text-base leading-relaxed text-muted md:mb-10 md:h-24 md:overflow-hidden md:text-lg">{profile?.metadataDescription ?? cs.description}</p>
-                  <div className="flex items-center gap-4 text-xs font-black text-primary uppercase tracking-[0.2em]">
-                    View Buyer Guide <span className="text-accent">→</span>
-                  </div>
-                </Link>
+                </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 uppercase tracking-tight group-hover:text-accent transition-colors">{profile.cardTitle}</h2>
+              <p className="mb-6 text-base leading-relaxed text-muted md:mb-10 md:h-24 md:overflow-hidden md:text-lg">{profile.metadataDescription}</p>
+              <div className="flex items-center gap-4 text-xs font-black text-primary uppercase tracking-[0.2em]">
+                   View Buyer Guide <span className="text-accent">→</span>
+                </div>
+              </Link>
               );
             })}
           </div>
