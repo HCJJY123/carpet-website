@@ -53,6 +53,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/blog/event-hall-ballroom-carpet-planning-romania",
+        destination: "/projects/event-hall-ballroom-carpet-planning-romania",
+        permanent: true,
+      },
+      {
+        source: "/blog/sisal-natural-fiber-rug-wholesale-sourcing",
+        destination: "/projects/sisal-natural-fiber-rug-wholesale-sourcing",
+        permanent: true,
+      },
+      {
         source: "/about-us/about",
         destination: "/about-us",
         permanent: true,

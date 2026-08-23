@@ -11,6 +11,8 @@ export type CaseBuyerQuestion = {
 export type CaseSeoProfile = {
   slug: string;
   cardTitle: string;
+  cardImage?: string;
+  cardImageAlt?: string;
   h1: string;
   metadataTitle: string;
   metadataDescription: string;
@@ -374,6 +376,96 @@ export const caseSeoProfiles: Record<string, CaseSeoProfile> = {
     topics: ["office carpet tiles Canada", "commercial carpet tiles", "50x50 carpet tiles", "phased office renovation flooring"],
     heroImage: "/images/projects/case-14/canada-office-carpet-tiles-hero.webp",
     heroImageAlt: "Commercial office carpet tiles used for a Canada phased renovation planning guide",
+  },
+  "case-15": {
+    slug: "event-hall-ballroom-carpet-planning-romania",
+    cardTitle: "Event Hall & Ballroom Carpet Planning - Romania",
+    cardImage: "/images/cases/event-hall-ballroom-romania/thumb.webp",
+    cardImageAlt: "Event hall and ballroom carpet planning reference for Romania",
+    h1: "Event Hall & Ballroom Carpet Planning - Romania",
+    metadataTitle: "Event Hall & Ballroom Carpet Planning - Romania | Vishomecarpet",
+    metadataDescription: "A procurement guide for banquet hall and ballroom carpet: pattern design, acoustic backing, fire ratings, and seaming for large-format event venues.",
+    eyebrow: "Hospitality & Events",
+    directAnswer: "For a large event hall or ballroom, the buyer should specify pattern scale, seam layout, acoustic underlay, fire classification, cleanability and spare-roll planning before approving production. A custom broadloom program works best when the design needs a strong visual identity and reliable performance under banquet turnover, AV carts and mixed event lighting.",
+    decisionFacts: [
+      { label: "Application", value: "Banquet halls, ballrooms and pre-function event spaces" },
+      { label: "Planning Scale", value: "900㎡ reference scenario" },
+      { label: "Construction Direction", value: "Custom woven or jacquard broadloom" },
+      { label: "Primary Decision", value: "Pattern repeat, acoustic backing and fire compliance" },
+    ],
+    buyerChecks: [
+      "Confirm fiber blend, density and pile weight against traffic expectations",
+      "Approve pattern repeat, border logic and CAD matching before production",
+      "Check fire classification, roll width, seam layout and waste allowance",
+      "Reserve spare stock for future repairs and matching event-floor replacements",
+    ],
+    suitableFor: [
+      "Large banquet halls, ballrooms and multipurpose hospitality venues",
+      "Projects that need a strong photographic finish and coordinated installation planning",
+    ],
+    limitations: [
+      "Stock-only buyers who need immediate delivery without design approval",
+      "Budget programs that cannot support custom weaving or seam planning",
+    ],
+    evidenceNote: "This is a procurement-planning reference for event venues. Final suitability should be confirmed against the quoted construction, fire documents, site conditions and installation method.",
+    buyerQuestions: [
+      { question: "What should a buyer confirm before ordering ballroom carpet?", answer: "Confirm pattern repeat, seam layout, acoustic underlay, fire classification, traffic class, cleanability and spare-stock planning before production is released." },
+      { question: "Why does seam planning matter in a large event hall?", answer: "Large halls need a seam layout that respects the pattern and minimizes visual disruption. Poor seam planning can weaken both the look of the floor and the installation efficiency." },
+    ],
+    topics: ["event hall carpet", "ballroom carpet", "Romania banquet flooring", "custom broadloom specification"],
+    heroImage: "/images/cases/event-hall-ballroom-romania/hero.webp",
+    heroImageAlt: "Event hall ballroom carpet reference showing a premium banquet-flooring installation",
+    sectionImages: {
+      "Recommended Specification": {
+        src: "/images/cases/event-hall-ballroom-romania/pattern-detail.webp",
+        alt: "Close-up pattern detail for event hall and ballroom carpet planning",
+      },
+    },
+  },
+  "case-16": {
+    slug: "sisal-natural-fiber-rug-wholesale-sourcing",
+    cardTitle: "Sisal & Natural Fiber Rug Wholesale Sourcing Guide",
+    cardImage: "/images/cases/sisal-natural-fiber-sourcing/thumb.webp",
+    cardImageAlt: "Wholesale sourcing guide for sisal and natural fiber rugs",
+    h1: "Sisal & Natural Fiber Rug Wholesale Sourcing Guide",
+    metadataTitle: "Sisal & Natural Fiber Rug Wholesale Sourcing Guide | Vishomecarpet",
+    metadataDescription: "A buyer's guide to sisal and natural-fiber-look rugs for wholesale import: weave types, backing options, humidity handling, and border binding specs.",
+    eyebrow: "Product Sourcing Guide",
+    directAnswer: "For wholesale buyers, the first decision is whether the order needs true sisal or a sisal-look synthetic rug. True sisal brings a natural texture but needs careful moisture handling, while synthetic flatweave alternatives are more stable for humid climates and repeatable bulk supply. The quotation should lock weave type, backing, binding, custom sizing and packing method before the order moves forward.",
+    decisionFacts: [
+      { label: "Application", value: "Wholesale import and distributor supply for rugs" },
+      { label: "Product Line", value: "True sisal and sisal-look synthetic rugs" },
+      { label: "Backing Direction", value: "Natural latex/jute or synthetic backing depending on construction" },
+      { label: "Primary Decision", value: "Humidity handling, weave type and border binding" },
+    ],
+    buyerChecks: [
+      "Confirm whether the order is true sisal or a sisal-look synthetic alternative",
+      "Review weave type, batch variation, backing and border binding before quoting",
+      "Check humidity exposure, shipping route and packaging requirements for sea freight",
+      "Request a physical swatch when color consistency and texture matter for the buyer",
+    ],
+    suitableFor: [
+      "Wholesale importers and distributors serving home, boutique hospitality and retail channels",
+      "Buyers comparing natural fiber texture against more climate-stable synthetic alternatives",
+    ],
+    limitations: [
+      "High-humidity or coastal projects that cannot support moisture-sensitive natural fiber handling",
+      "Orders that need instant stock without confirming weave and binding options",
+    ],
+    evidenceNote: "This is a buyer-due-diligence reference for rug sourcing. Final suitability depends on the selected fiber, backing, humidity exposure, packaging and destination market requirements.",
+    buyerQuestions: [
+      { question: "What is the main difference between true sisal and sisal-look synthetic rugs?", answer: "True sisal uses natural agave fiber and has a more organic surface, while sisal-look synthetic rugs are usually PP or polyester flatweaves with better moisture tolerance and more consistent bulk supply." },
+      { question: "Why should humidity be checked before buying sisal rugs?", answer: "Natural sisal is moisture-sensitive. If the destination has high humidity or coastal exposure, the buyer should confirm whether the backing and product line are suitable before ordering in volume." },
+    ],
+    topics: ["sisal rug wholesale", "natural fiber rug sourcing", "sisal look synthetic", "humidity handling rugs"],
+    heroImage: "/images/cases/sisal-natural-fiber-sourcing/hero.webp",
+    heroImageAlt: "Natural fiber rug sourcing guide for wholesale buyers",
+    sectionImages: {
+      "Product Line Distinction": {
+        src: "/images/cases/sisal-natural-fiber-sourcing/warehouse-detail.webp",
+        alt: "Warehouse detail for sisal and natural fiber rug wholesale planning",
+      },
+    },
   },
 };
 

@@ -17,6 +17,8 @@ export const caseProductRelations: Record<string, string[]> = {
   "case-12": ["gold-mining-carpet-mat"],
   "case-13": ["gold-mining-carpet-mat"],
   "case-14": ["nylon-office-carpet-tile", "commercial-nylon-tiles", "ecocore-pe-backing-carpet-tiles"],
+  "case-15": ["luxury-hotel-broadloom", "3d-printed-banquet-hall-carpet", "custom-floral-printed-hotel-carpet"],
+  "case-16": ["natural-sisal-carpet", "custom-sculpted-wool-lobby-rug", "commercial-stair-carpet-runner"],
 };
 
 const fallbackProductRelations: Record<ProductCategoryId, string[]> = {
