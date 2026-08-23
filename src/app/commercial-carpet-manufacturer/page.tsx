@@ -6,7 +6,7 @@ import { brandInfo, products } from "@/lib/data";
 import { absoluteUrl, productItemListJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "China Commercial Carpet Manufacturer | VISHOME",
+  title: "Commercial Carpet Manufacturer in China | Carpet Tiles & Hotel Carpet | VISHOME",
   description:
     "Compare a China commercial carpet manufacturer by product fit, MOQ, price basis, lead time, samples, test documents, customization, and export support. Review VISHOME factory capabilities.",
   alternates: { canonical: "/commercial-carpet-manufacturer" },

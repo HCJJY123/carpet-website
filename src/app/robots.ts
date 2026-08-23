@@ -36,11 +36,6 @@ export default function robots(): MetadataRoute.Robots {
     ],
     sitemap: [
       "https://www.vishomecarpet.com/sitemap.xml",
-      "https://www.vishomecarpet.com/sitemaps/pages.xml",
-      "https://www.vishomecarpet.com/sitemaps/products.xml",
-      "https://www.vishomecarpet.com/sitemaps/projects.xml",
-      "https://www.vishomecarpet.com/sitemaps/resources.xml",
-      "https://www.vishomecarpet.com/sitemaps/blog.xml",
       "https://www.vishomecarpet.com/sitemap-ru.xml",
       "https://www.vishomecarpet.com/sitemap-markets.xml",
     ],

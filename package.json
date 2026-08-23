@@ -7,14 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "ops:check": "node scripts/site-ops-check.mjs",
-    "ops:verify": "node scripts/site-ops-check.mjs",
-    "indexnow": "node scripts/indexnow-submit.mjs",
-    "images:responsive": "node scripts/generate-responsive-images.mjs",
-    "audit:seo": "node scripts/audit-backlink-readiness.mjs seo",
-    "audit:links": "node scripts/audit-backlink-readiness.mjs links",
-    "audit:assets": "node scripts/audit-backlink-readiness.mjs assets",
-    "audit:placeholders": "node scripts/audit-backlink-readiness.mjs placeholders"
+    "indexnow": "node scripts/indexnow-submit.mjs"
   },
   "dependencies": {
     "next": "16.2.9",
@@ -28,7 +21,6 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
-    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

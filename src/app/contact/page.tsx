@@ -3,7 +3,6 @@ import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
 import QueryProductLeadCaptureForm from "@/components/QueryProductLeadCaptureForm";
 import QueryProductWhatsAppLink from "@/components/QueryProductWhatsAppLink";
-import WhatsAppBridgePrompt from "@/components/WhatsAppBridgePrompt";
 import { brandInfo } from "@/lib/data";
 import { whatsappBusinessMessages } from "@/lib/whatsapp";
 
@@ -11,9 +10,9 @@ export default function ContactPage() {
   return (
     <div className="bg-white">
       <PageHero
-        title="Request a Project Quote"
+        title="Start Your Procurement"
         eyebrow="Factory Direct Project Support"
-        description="Send product type, project area, destination, and business email in one form. Vishomecarpet will reply with pricing basis, MOQ, samples, lead time, and technical documents."
+        description="Submit destination, carpet type, and estimated area for project pricing, MOQ, samples, lead time, and technical documents."
         image="/images/contact-hero.webp"
         imageAlt="Commercial carpet procurement consultation background"
         objectPosition="center 42%"
@@ -24,27 +23,10 @@ export default function ContactPage() {
           <div className="grid gap-10 lg:grid-cols-3 lg:gap-16">
             {/* Form Column */}
             <div className="lg:col-span-2">
-              <WhatsAppBridgePrompt />
               <div className="mb-6 border-l-4 border-[#C8752A] pl-5">
                 <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#C8752A]">Recommended Inquiry Channel</p>
-                <h2 className="mt-2 text-2xl font-black uppercase text-primary md:text-3xl">Use the Form for the Fastest Accurate Quote</h2>
-                <p className="mt-2 text-sm leading-relaxed text-muted">The form keeps your product, quantity, destination, and business email together. This is the clearest path for factory pricing, MOQ, sample options, and technical documents.</p>
-                <div className="mt-5 flex flex-wrap gap-3">
-                  <a
-                    href={`mailto:${brandInfo.email}?subject=${encodeURIComponent("Project quote request")}&body=${encodeURIComponent("Hello Vishome team,\n\nPlease help quote this carpet project.\n\nProduct / application:\nEstimated area:\nDestination country:\nTarget delivery date:\n\nThank you.")}`}
-                    data-email-placement="contact_form_intro"
-                    className="inline-flex min-h-11 items-center justify-center gap-2 rounded-sm border border-[#C8752A]/30 bg-white px-5 py-3 text-xs font-black uppercase tracking-[0.12em] text-[#C8752A] transition-colors hover:border-[#C8752A] hover:bg-[#FFF8F1]"
-                  >
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <rect x="3" y="5" width="18" height="14" rx="2" />
-                      <path d="m3 7 9 6 9-6" />
-                    </svg>
-                    Email Sales Directly
-                  </a>
-                  <span className="inline-flex min-h-11 items-center rounded-sm bg-surface px-4 py-3 text-xs font-bold text-primary">
-                    {brandInfo.email}
-                  </span>
-                </div>
+                <h2 className="mt-2 text-2xl font-black uppercase text-primary md:text-3xl">Send Complete Project Details for an Accurate Quote</h2>
+                <p className="mt-2 text-sm leading-relaxed text-muted">The form keeps your product, destination, quantity, and timeline together so the factory can reply with a comparable quotation.</p>
                 <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-bold text-primary">
                   <span className="relative flex h-3 w-3 shrink-0" aria-hidden="true">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#25D366] opacity-40" />
@@ -58,7 +40,7 @@ export default function ContactPage() {
                 formName="contact_project_quote"
                 fallbackProduct=""
                 submitLabel="REQUEST PROJECT QUOTE"
-                introText="Complete the four required fields first. Extra details are optional, but they help us quote a closer price and recommend the right carpet construction."
+                introText="Send your project area, carpet type, quantity, country, and target delivery date. We will reply with FOB price, sample options, technical data sheet, and production lead time."
               />
             </div>
 

@@ -19,15 +19,13 @@ export interface CountryMarketPage {
   deliveryNote: string;
   applications: string[];
   localTerms: string[];
-  heroImage?: string;
-  heroImageAlt?: string;
   primaryProductId: string;
   productIds: string[];
 }
 
 function commercialPage(
   page: Omit<CountryMarketPage, "kind" | "path" | "primaryProductId" | "productIds"> & {
-    productSet?: "humid" | "hospitality" | "office" | "cold" | "casino";
+    productSet?: "humid" | "hospitality" | "office" | "cold";
   },
 ): CountryMarketPage {
   const productSets = {
@@ -35,7 +33,6 @@ function commercialPage(
     hospitality: ["3d-printed-hotel-carpet", "luxury-hotel-broadloom", "commercial-nylon-tiles"],
     office: ["nylon-office-carpet-tile", "commercial-nylon-tiles", "public-area-heavy-duty"],
     cold: ["nylon-office-carpet-tile", "luxury-hotel-broadloom", "public-area-heavy-duty"],
-    casino: ["singapore-casino-carpet", "3d-printed-banquet-hall-carpet", "glitter-hotel-corridor-broadloom-carpet"],
   } as const;
   const productIds = [...productSets[page.productSet ?? "office"]];
 
@@ -78,8 +75,6 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Ask for packing dimensions, pallet count, gross weight and destination details before choosing sea freight or a consolidated sample shipment.",
     applications: ["Hotels and resorts", "Corporate offices", "Retail and mixed-use interiors", "Airports and public corridors"],
     localTerms: ["commercial carpet Philippines", "hotel carpet supplier Philippines", "office carpet tiles Philippines"],
-    heroImage: "/images/markets/generated/philippines-hotel-carpet-hero.webp",
-    heroImageAlt: "Philippines commercial carpet supplier samples for hotel and office projects",
     productSet: "humid",
   }),
   commercialPage({
@@ -99,70 +94,7 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "For Sydney, Melbourne, Brisbane and other destinations, compare full-container and consolidated shipping using the final roll or pallet plan rather than square metres alone.",
     applications: ["Office fit-outs", "Hotels and serviced apartments", "Education projects", "Public and transport interiors"],
     localTerms: ["commercial carpet supplier Australia", "carpet tiles Australia wholesale", "hotel carpet manufacturer Australia"],
-    heroImage: "/images/markets/generated/australia-hotel-carpet-hero.webp",
-    heroImageAlt: "Australia commercial carpet supplier for hospitality and office refurbishment",
     productSet: "office",
-  }),
-  commercialPage({
-    market: "bg",
-    slug: "commercial-carpet-supplier-bulgaria",
-    language: "en",
-    hreflang: "en-BG",
-    openGraphLocale: "en_BG",
-    countryName: "Bulgaria",
-    countryNameLocal: "Bulgaria",
-    title: "Commercial Carpet Supplier for Bulgaria Projects",
-    metadataTitle: "Commercial Carpet Supplier Bulgaria | Vishomecarpet",
-    metadataDescription: "Commercial carpet tiles and hotel carpet for Bulgaria projects. Compare office fit-out options, samples, MOQ, TDS, packing and export quotation inputs.",
-    directAnswer: "A commercial carpet supplier for Bulgaria should help project buyers compare office carpet tiles, hospitality broadloom, backing options, spare stock, sample approval and export packing before order confirmation. Vishomecarpet supports Bulgaria project inquiries from China, while final suitability must be checked against the buyer's tender, local contractor and installation conditions.",
-    marketContext: "Sofia, Plovdiv and Varna projects can include office fit-outs, hotels, retail interiors and public corridors. Buyers usually get a better quotation when they separate workstation areas, corridors, reception zones and hospitality spaces instead of sending only one total floor area.",
-    environmentNote: "Seasonal temperature changes and winter delivery make dry storage, acclimation and subfloor moisture checks important before installation.",
-    deliveryNote: "Request the carton or roll plan, gross weight, pallet dimensions, destination city and Incoterm before comparing freight and local delivery timing.",
-    applications: ["Office fit-outs", "Hotel corridors and guestrooms", "Retail and commercial interiors", "Public corridors and reception areas"],
-    localTerms: ["commercial carpet Bulgaria", "office carpet tiles Bulgaria", "hotel carpet supplier Bulgaria"],
-    productSet: "office",
-  }),
-  commercialPage({
-    market: "ca",
-    slug: "commercial-carpet-supplier-canada",
-    language: "en",
-    hreflang: "en-CA",
-    openGraphLocale: "en_CA",
-    countryName: "Canada",
-    countryNameLocal: "Canada",
-    title: "Commercial Carpet Supplier for Canada Projects",
-    metadataTitle: "Commercial Carpet Supplier Canada | Vishomecarpet",
-    metadataDescription: "Commercial carpet tiles and hotel carpet for Canada projects. Review snow, salt, chair-wheel wear, samples, MOQ, TDS, packing and quotation inputs.",
-    directAnswer: "A commercial carpet supplier for Canada should help buyers plan moisture, snow and salt exposure, chair-wheel wear, phased renovation, spare stock and technical document review before the quotation is approved. Vishomecarpet can support carpet tile and hospitality carpet sourcing from China, but the final construction must match the building specification and local installation conditions.",
-    marketContext: "Toronto, Vancouver, Calgary, Montreal and other Canadian project locations can require different logistics, winter delivery and maintenance planning. Office buyers should provide floor plans by zone, while hospitality buyers should separate guestrooms, corridors and public areas.",
-    environmentNote: "Winter moisture, salt carry-in and heated indoor conditions make entrance zoning, dry storage and product acclimation especially important.",
-    deliveryNote: "Confirm packing, pallet count, delivery city, seasonal receiving constraints and target installation window before comparing freight options.",
-    applications: ["Office renovations", "Corporate corridors", "Hotel guestrooms and corridors", "Public and commercial interiors"],
-    localTerms: ["commercial carpet Canada", "office carpet tiles Canada", "hotel carpet supplier Canada"],
-    heroImage: "/images/markets/generated/canada-office-carpet-tiles-hero.webp",
-    heroImageAlt: "Canada commercial carpet supplier for office tile and project flooring",
-    productSet: "cold",
-  }),
-  commercialPage({
-    market: "ro",
-    slug: "commercial-carpet-supplier-romania",
-    language: "en",
-    hreflang: "en-RO",
-    openGraphLocale: "en_RO",
-    countryName: "Romania",
-    countryNameLocal: "România",
-    title: "Commercial Carpet Supplier for Romania Projects",
-    metadataTitle: "Commercial Carpet Supplier Romania | VISHOME",
-    metadataDescription: "Commercial carpet tiles and hotel broadloom for Romania projects. Compare samples, TDS, MOQ, replacement planning and project quotation inputs.",
-    directAnswer: "A commercial carpet supplier for Romania should help buyers compare chair-wheel wear, phased replacement, TDS review, sample approval and freight planning before the order is placed. Vishomecarpet supplies project-based carpet tiles, hotel broadloom and public-area carpet from China, while the final specification must still be checked against the tender and site conditions.",
-    marketContext: "Projects in Bucharest, Cluj-Napoca and Timișoara often combine office refurbishment, hotel corridors and public interiors. Buyers should send floor plans, room schedules and required documents early so samples and technical submittals can be coordinated without rework.",
-    environmentNote: "Seasonal temperature changes mean rolls and tiles should be protected from moisture and acclimated in the conditioned installation area before installation.",
-    deliveryNote: "Compare freight, packing and delivery timing only after the roll or pallet plan, gross weight, destination city and Incoterm are known.",
-    applications: ["Office renovations", "Hotel corridors", "Commercial interiors", "Public and mixed-use spaces"],
-    localTerms: ["commercial carpet Romania", "office carpet supplier Romania", "hotel carpet supplier Romania"],
-    heroImage: "/images/markets/generated/romania-commercial-carpet-supplier-hub.webp",
-    heroImageAlt: "Romania commercial carpet supplier sample review for B2B projects",
-    productSet: "cold",
   }),
   commercialPage({
     market: "pl",
@@ -181,27 +113,6 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Request carton or roll dimensions, pallet configuration, gross weight and Incoterm options before comparing road, rail or sea-linked delivery routes.",
     applications: ["Biura i centra biznesowe", "Hotele i korytarze", "Obiekty edukacyjne", "Przestrzenie handlowe i publiczne"],
     localTerms: ["wykładziny komercyjne", "płytki dywanowe do biura", "wykładzina hotelowa producent"],
-    productSet: "cold",
-  }),
-  commercialPage({
-    market: "pl",
-    slug: "commercial-carpet-supplier-poland",
-    language: "en",
-    hreflang: "en-PL",
-    openGraphLocale: "en_PL",
-    countryName: "Poland",
-    countryNameLocal: "Polska",
-    title: "Commercial Carpet Supplier for Poland Projects",
-    metadataTitle: "Commercial Carpet Supplier Poland | VISHOME",
-    metadataDescription: "Commercial carpet tiles and hotel broadloom for Poland projects. Review samples, technical files, MOQ, packing and project quotation needs.",
-    directAnswer: "A commercial carpet supplier for Poland should help buyers evaluate fiber construction, backing, traffic class, maintenance needs and project documents before a quotation is approved. Vishomecarpet can prepare project options for offices, hotels and public interiors, but the nominated specification must still be checked by the buyer or consultant.",
-    marketContext: "Projects in Warsaw, Kraków and Wrocław often need phased office refurbishment, corridor planning and replacement coordination across occupied floors.",
-    environmentNote: "Cold-weather delivery and conditioned interiors make dry storage and acclimation important before installation.",
-    deliveryNote: "Confirm pallet count, roll length, delivery city and target installation window before comparing freight choices.",
-    applications: ["Office spaces", "Hotel corridors", "Education facilities", "Retail and public interiors"],
-    localTerms: ["commercial carpet Poland", "office carpet supplier Poland", "hotel carpet supplier Poland"],
-    heroImage: "/images/markets/generated/poland-commercial-carpet-supplier-hub.webp",
-    heroImageAlt: "Poland commercial carpet supplier sample review for B2B projects",
     productSet: "cold",
   }),
   commercialPage({
@@ -336,48 +247,6 @@ export const countryMarketPages: CountryMarketPage[] = [
     applications: ["Irodák", "Szállodák", "Konferencia- és rendezvényterek", "Közösségi terek"],
     localTerms: ["kereskedelmi szőnyeg", "modulszőnyeg iroda", "szállodai padlószőnyeg"],
     productSet: "office",
-  }),
-  commercialPage({
-    market: "cz",
-    slug: "commercial-carpet-supplier-czech-republic",
-    language: "en",
-    hreflang: "en-CZ",
-    openGraphLocale: "en_CZ",
-    countryName: "Czech Republic",
-    countryNameLocal: "Česko",
-    title: "Commercial Carpet Supplier for Czech Republic Projects",
-    metadataTitle: "Commercial Carpet Supplier Czech Republic | VISHOME",
-    metadataDescription: "Commercial carpet tiles and hotel broadloom for Czech Republic projects. Review samples, technical data, MOQ, delivery and quotation inputs.",
-    directAnswer: "A commercial carpet supplier for Czech Republic projects should help buyers compare fiber construction, backing, traffic class, maintenance and document requirements before the specification is frozen. Vishomecarpet supports project RFQs for offices, hotels and public interiors, but the final product selection must match the building specification.",
-    marketContext: "Prague, Brno and Ostrava projects often require phased office fit-outs, hospitality refurbishment and clear replacement planning.",
-    environmentNote: "Winter transport and heated interiors require dry storage and acclimation; subfloor moisture still needs to be checked on site.",
-    deliveryNote: "Use confirmed carton, roll and pallet data together with the final delivery address when comparing freight options.",
-    applications: ["Offices", "Hotels", "Education projects", "Public and shared areas"],
-    localTerms: ["commercial carpet Czech Republic", "office carpet tiles Czech Republic", "hotel carpet supplier Czech Republic"],
-    heroImage: "/images/markets/generated/central-europe-commercial-carpet-supplier-hub.webp",
-    heroImageAlt: "Central Europe commercial carpet supplier sample review for office and hotel projects",
-    productSet: "cold",
-  }),
-  commercialPage({
-    market: "hu",
-    slug: "commercial-carpet-supplier-hungary",
-    language: "en",
-    hreflang: "en-HU",
-    openGraphLocale: "en_HU",
-    countryName: "Hungary",
-    countryNameLocal: "Magyarország",
-    title: "Commercial Carpet Supplier for Hungary Projects",
-    metadataTitle: "Commercial Carpet Supplier Hungary | VISHOME",
-    metadataDescription: "Commercial carpet tiles and hotel broadloom for Hungary projects. Compare samples, technical files, MOQ, packing and project quotation needs.",
-    directAnswer: "A commercial carpet supplier for Hungary should help buyers evaluate product construction, backing, traffic performance, maintenance needs and project documents before a quotation is approved. Vishomecarpet can prepare project options for offices, hotels and public interiors, but the nominated specification must still be checked by the buyer or consultant.",
-    marketContext: "Budapest, Debrecen and Szeged projects often combine office refurbishment, hotel corridors and mixed-use interiors that need phased execution and replacement planning.",
-    environmentNote: "Cold-weather delivery and conditioned interiors make dry storage and acclimation important before installation.",
-    deliveryNote: "Confirm pallet count, roll length, delivery city and target installation window before comparing freight choices.",
-    applications: ["Offices", "Hotels", "Corporate corridors", "Public interiors"],
-    localTerms: ["commercial carpet Hungary", "office carpet tiles Hungary", "hotel carpet supplier Hungary"],
-    heroImage: "/images/markets/generated/central-europe-commercial-carpet-supplier-hub.webp",
-    heroImageAlt: "Central Europe commercial carpet supplier sample review for office and hotel projects",
-    productSet: "cold",
   }),
   commercialPage({
     market: "kg",
@@ -521,38 +390,15 @@ export const countryMarketPages: CountryMarketPage[] = [
     countryName: "Singapore",
     countryNameLocal: "Singapore",
     title: "Commercial Carpet Supplier for Singapore Projects",
-    metadataTitle: "Commercial Carpet Supplier Singapore | Vishomecarpet",
+    metadataTitle: "Commercial Carpet Supplier Singapore | VISHOME",
     metadataDescription: "Commercial carpet tiles and hotel broadloom for Singapore offices, hotels and public interiors. Samples, MOQ and project quotation.",
-    directAnswer: "Singapore commercial carpet projects should evaluate traffic, backing, fire-document requirements, maintenance access, indoor humidity and replacement strategy before approval. Vishomecarpet supplies project carpet options with samples and specification records, while final compliance must be confirmed for the nominated building and installation system.",
+    directAnswer: "Singapore commercial carpet projects should evaluate traffic, backing, fire-document requirements, maintenance access, indoor humidity and replacement strategy before approval. VISHOME supplies project carpet options with samples and specification records, while final compliance must be confirmed for the nominated building and installation system.",
     marketContext: "High-rise offices, hotels and public interiors need clear lift access, delivery staging, room schedules and replacement planning before production quantities are fixed.",
     environmentNote: "Tropical humidity makes substrate testing, conditioned storage, acclimation and compatible adhesive selection critical site responsibilities.",
     deliveryNote: "Include delivery floor, loading access, pallet restrictions and phased handover dates when requesting the project quotation.",
     applications: ["High-rise offices", "Hotels and serviced apartments", "Retail interiors", "Airports and public buildings"],
     localTerms: ["commercial carpet supplier Singapore", "office carpet tiles Singapore", "hotel carpet supplier Singapore"],
-    heroImage: "/images/markets/generated/singapore-casino-carpet-hero.webp",
-    heroImageAlt: "Singapore commercial carpet supplier for casino and hospitality projects",
     productSet: "humid",
-  }),
-  commercialPage({
-    market: "sg",
-    slug: "singapore-casino-carpet-supplier",
-    language: "en",
-    hreflang: "en-SG",
-    openGraphLocale: "en_SG",
-    countryName: "Singapore",
-    countryNameLocal: "Singapore",
-    title: "Singapore Casino Carpet Supplier for Oriental Flower Gaming Floors",
-    metadataTitle: "Singapore Casino Carpet Supplier | Oriental Flower Carpet | Vishomecarpet",
-    metadataDescription: "Custom oriental flower luxury casino carpet for Singapore gaming floors, VIP rooms, clubs and hotel entertainment areas. Review samples, MOQ, backing, shipping and quote.",
-    directAnswer: "A Singapore casino carpet supplier should help buyers confirm price per SQM, sample timing, traffic level, oriental flower or custom pattern approval, visual soil control, backing stability, cleaning access, fire-document requirements and staged delivery before production. Vishomecarpet supplies custom luxury casino carpet options with high-density loop pile appearance, non-slip backing options, OEM design support, samples and quotation support for gaming floors, VIP rooms and hotel entertainment zones.",
-    marketContext: "Singapore casino, hotel and entertainment projects often combine gaming floors, VIP rooms, clubs, lift lobbies and corridors in one procurement package. High-quality B2B buyers usually need sample speed, price basis, MOQ, exact quantity planning, distributor support, installation-team coordination, packing data, freight clarity and pattern approval before an internal purchasing decision can move forward.",
-    environmentNote: "Indoor humidity, high air-conditioning use, heavy foot traffic, gaming chairs, service carts and frequent cleaning make backing selection, product acclimation, substrate checks and maintenance planning important before installation.",
-    deliveryNote: "Send the Singapore site address, delivery floor, loading access, contact phone, project phase, roll or pallet restrictions, required sample date and target installation date when requesting a casino carpet quotation.",
-    applications: ["Casino gaming floors", "VIP rooms and clubs", "Hotel entertainment zones", "Lift lobbies and gaming corridors"],
-    localTerms: ["Singapore casino carpet", "casino carpet supplier Singapore", "custom gaming floor carpet Singapore", "oriental flower casino carpet", "hotel casino carpet Singapore", "casino carpet sample Singapore"],
-    heroImage: "/images/markets/generated/singapore-casino-carpet-hero.webp",
-    heroImageAlt: "Singapore casino carpet supplier for gaming floor and VIP hospitality zones",
-    productSet: "casino",
   }),
   commercialPage({
     market: "ge",
@@ -665,8 +511,6 @@ export const countryMarketPages: CountryMarketPage[] = [
     environmentNote: "El rendimiento depende del diseño de riffles, distribución del agua, granulometría y limpieza. La alfombra no sustituye las pruebas operativas del equipo.",
     deliveryNote: "Indique ancho útil, longitud, espesor, cantidad de rollos, color y destino para calcular empaque y transporte sin asumir dimensiones estándar incorrectas.",
     applications: ["Canaletas de lavado", "Plantas aluviales", "Trommels y concentradores", "Fabricantes de equipos mineros"],
-    heroImage: "/images/markets/generated/peru-gold-mining-carpet-hero.webp",
-    heroImageAlt: "Alfombra para mineria de oro en Peru con prueba de canaleta",
     localTerms: ["alfombra minería de oro Perú", "miners moss Perú", "alfombra para canaleta de oro"],
   }),
   goldPage({
@@ -685,8 +529,6 @@ export const countryMarketPages: CountryMarketPage[] = [
     environmentNote: "La humedad y el material arcilloso pueden cambiar la limpieza y el flujo; pruebe la configuración con material representativo antes de definir una compra mayor.",
     deliveryNote: "Incluya cantidad, espesor, ancho, longitud, color, tipo de respaldo y ciudad de entrega en la solicitud de cotización.",
     applications: ["Canaletas de recuperación", "Lavado aluvial", "Trommels y dragas", "Distribuidores de equipos"],
-    heroImage: "/images/markets/generated/colombia-gold-mining-carpet-hero.webp",
-    heroImageAlt: "Alfombra para mineria de oro en Colombia con rollos y canaleta",
     localTerms: ["alfombra minería de oro Colombia", "miners moss Colombia", "tapete para canaleta de oro"],
   }),
 ];
@@ -696,11 +538,11 @@ export const countryMarketPageMap = Object.fromEntries(
 ) as Record<string, CountryMarketPage>;
 
 export const countryMarketLanguages = Object.fromEntries(
-  countryMarketPages.map((page) => [page.path, page.language]),
+  countryMarketPages.map((page) => [page.market, page.language]),
 ) as Record<string, string>;
 
 export function getCountryMarketLanguage(pathname: string) {
   const [market, slug] = pathname.split("/").filter(Boolean);
   if (!market || !slug || !countryMarketPageMap[`${market}/${slug}`]) return null;
-  return countryMarketLanguages[`/${market}/${slug}`] ?? null;
+  return countryMarketLanguages[market] ?? null;
 }

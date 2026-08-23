@@ -4,11 +4,9 @@ import Link from "next/link";
 import { brandInfo, products } from "@/lib/data";
 import ProductImage from "@/components/ProductImage";
 import AnswerFirst from "@/components/AnswerFirst";
-import ProductTrustLinks from "@/components/ProductTrustLinks";
 import { ProductTrackedLink, ProductViewEvent } from "@/components/ProductAnalytics";
 import { ProductSpecCards } from "@/components/ProductConversion";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
-import { getContactBridgeUrl } from "@/lib/whatsapp";
 
 const productId = "custom-sculpted-wool-lobby-rug";
 const product = products.find((item) => item.id === productId);
@@ -171,9 +169,9 @@ const faqs = [
   ["How long does production take?", "Production time is confirmed after the size, material, construction, color, quantity and technical specification have been approved."],
 ];
 
-const inquiryText =
+const inquiryText = encodeURIComponent(
   "Hello, I am interested in Custom Sculpted Wool Lobby Rug. Please help confirm size options, material options, MOQ, starting price and project quotation.\n\nProduct / Topic: Custom Sculpted Wool Lobby Rug\nInquiry Type: custom wool lobby rug inquiry\nSource Page: /products/public-area/custom-sculpted-wool-lobby-rug"
-;
+);
 
 const mailBody = encodeURIComponent(
   "Send the destination country, required rug quantity, target dimensions, application space, preferred color, material requirement and project delivery date. Vishomecarpet will confirm the suitable specification, sample option, packing method and final quotation."
@@ -191,12 +189,7 @@ function cta(location: string) {
         Get Project Quote
       </ProductTrackedLink>
       <ProductTrackedLink
-        href={getContactBridgeUrl(inquiryText, {
-          placement: "custom_wool_rug_product_cta",
-          product: "Custom Sculpted Wool Lobby Rug",
-          intent: "floor_plan_review",
-          pagePath: path,
-        })}
+        href={`https://wa.me/8615222885400?text=${inquiryText}`}
         event="contact"
         payload={{ contact_method: "whatsapp", product_id: sku }}
         target="_blank"
@@ -257,15 +250,11 @@ export default function CustomSculptedWoolLobbyRugPage() {
       { "@type": "PropertyValue", name: "Sample", value: product.moqTiers.sample },
       { "@type": "PropertyValue", name: "Trial Order", value: product.moqTiers.trialOrder },
       { "@type": "PropertyValue", name: "Project MOQ", value: product.moqTiers.project },
-      { "@type": "PropertyValue", name: "Sales Unit", value: product.fobPrice?.unit ?? "Project" },
-      { "@type": "PropertyValue", name: "Price Basis", value: "Reference FOB range; final price and validity require a written quotation" },
     ],
     offers: {
-      "@type": "AggregateOffer",
+      "@type": "Offer",
       priceCurrency: "USD",
-      lowPrice: product.fobPrice?.lowPrice,
-      highPrice: product.fobPrice?.highPrice,
-      offerCount: 1,
+      price: "500",
       url: canonical,
       availability: "https://schema.org/PreOrder",
       itemCondition: "https://schema.org/NewCondition",
@@ -391,7 +380,6 @@ export default function CustomSculptedWoolLobbyRugPage() {
         quoteHref="/contact?product=Custom%20Sculpted%20Wool%20Lobby%20Rug#quote-form"
         quoteLabel="Request a Rug Specification Review"
       />
-      <ProductTrustLinks productName="custom sculpted wool lobby rug" quoteHref="/contact?product=Custom%20Sculpted%20Wool%20Lobby%20Rug#quote-form" />
 
       <section className="section-padding bg-primary text-white">
         <div className="container-fox">

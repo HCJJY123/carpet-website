@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
-import { responsiveImageManifest } from "@/lib/responsive-image-manifest";
 
 type HomeHeroCarouselProps = {
   whatsappUrl: string;
@@ -21,7 +20,7 @@ const slides = [
     productHref: "/request-sample-box",
     bannerHref: "/commercial-carpet-tiles",
     badges: ["Factory Direct Pricing", "Sample Box Available", "Custom Project Support"],
-    overlay: "bg-gradient-to-r from-[#102A43]/88 via-[#102A43]/58 to-[#102A43]/18",
+    overlay: "bg-[#102A43]/65",
     objectPosition: "center 50%",
     quality: 90,
   },
@@ -36,7 +35,7 @@ const slides = [
     productHref: "/products/wall-to-wall",
     bannerHref: "/products/wall-to-wall",
     badges: ["Custom Printed Patterns", "Contract Grade Construction", "Hotel Project Support"],
-    overlay: "bg-gradient-to-r from-[#102A43]/82 via-[#102A43]/48 to-[#102A43]/12",
+    overlay: "bg-[#102A43]/42",
     objectPosition: "center 58%",
     quality: 75,
   },
@@ -51,7 +50,7 @@ const slides = [
     productHref: "/products/public-area/custom-sculpted-wool-lobby-rug",
     bannerHref: "/products/public-area/public-area-heavy-duty",
     badges: ["Custom Sizes & Colors", "Sculpted Wool Surface", "Project-Made Production"],
-    overlay: "bg-gradient-to-r from-[#102A43]/80 via-[#102A43]/45 to-[#102A43]/10",
+    overlay: "bg-[#102A43]/38",
     objectPosition: "center 62%",
     quality: 75,
   },
@@ -67,56 +66,6 @@ type DragState = {
   startTime: number;
   horizontal: boolean;
 };
-
-function HeroBackgroundImage({
-  src,
-  alt,
-  priority,
-  objectPosition,
-}: {
-  src: string;
-  alt: string;
-  priority: boolean;
-  objectPosition: string;
-}) {
-  const responsive = responsiveImageManifest[src];
-
-  if (!responsive) {
-    return (
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        priority={priority}
-        quality={82}
-        sizes="100vw"
-        unoptimized
-        className="object-cover"
-        style={{ objectPosition }}
-      />
-    );
-  }
-
-  return (
-    <picture className="absolute inset-0 block h-full w-full">
-      <source type="image/avif" srcSet={responsive.avif.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
-      <source type="image/webp" srcSet={responsive.webp.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
-      <img
-        src={responsive.fallback}
-        alt={alt}
-        width={responsive.width}
-        height={responsive.height}
-        sizes="100vw"
-        loading={priority ? "eager" : "lazy"}
-        fetchPriority={priority ? "high" : "low"}
-        decoding="async"
-        draggable={false}
-        className="h-full w-full object-cover"
-        style={{ objectPosition }}
-      />
-    </picture>
-  );
-}
 
 export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -140,16 +89,17 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
   }, []);
 
   useEffect(() => {
+    const preloadTimer = window.setTimeout(() => {
+      setRenderedSlides(new Set(slides.map((_, index) => index)));
+    }, 1_200);
+
+    return () => window.clearTimeout(preloadTimer);
+  }, []);
+
+  useEffect(() => {
     if (paused || reducedMotion || dragging || settling) return;
     const timer = window.setTimeout(() => {
-      const nextIndex = (activeIndex + 1) % slides.length;
-      setRenderedSlides((current) => {
-        if (current.has(nextIndex)) return current;
-        const updated = new Set(current);
-        updated.add(nextIndex);
-        return updated;
-      });
-      setActiveIndex(nextIndex);
+      setActiveIndex((current) => (current + 1) % slides.length);
     }, ROTATION_MS);
     return () => window.clearTimeout(timer);
   }, [activeIndex, dragging, paused, reducedMotion, settling]);
@@ -323,11 +273,18 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
             aria-label={`Open ${slide.title}`}
             aria-hidden={index !== activeIndex}
           >
-            <HeroBackgroundImage
+            <Image
               src={slide.image}
               alt={index === activeIndex ? slide.alt : ""}
+              fill
               priority={index === 0}
-              objectPosition={slide.objectPosition}
+              loading={index === 0 ? undefined : "eager"}
+              fetchPriority={index === 0 ? "high" : "low"}
+              quality={slide.quality}
+              sizes="100vw"
+              className="object-cover"
+              style={{ objectPosition: slide.objectPosition }}
+              draggable={false}
             />
             <div className={`absolute inset-0 ${slide.overlay}`} />
           </Link>
@@ -339,9 +296,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
           width={550}
           height={550}
           className="pointer-events-none absolute bottom-[-60px] right-[-80px] h-auto w-[400px] select-none opacity-[0.06] md:w-[550px]"
-          loading="lazy"
-          decoding="async"
-          aria-hidden="true"
+          priority
         />
       </div>
 

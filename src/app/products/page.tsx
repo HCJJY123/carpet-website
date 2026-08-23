@@ -6,7 +6,7 @@ import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Products | VISHOME",
+  title: "Commercial Carpet Products | Carpet Tiles, Broadloom & Public Area Carpet | VISHOME",
   description: "Explore VISHOME commercial carpet products including modular carpet tiles, wall-to-wall hotel broadloom, and heavy-duty public area carpet systems for global B2B projects.",
   alternates: { canonical: "/products" },
 };

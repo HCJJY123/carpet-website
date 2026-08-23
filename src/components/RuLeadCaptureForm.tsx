@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { getAttributionForEvent } from "@/lib/attribution";
 import { getFunnelSessionSignals, scoreLead } from "@/lib/funnel";
-import { trackAnalyticsEvent, trackLeadConversion } from "@/lib/tracking";
+import { trackAnalyticsEvent, trackFormSubmitEmail, trackLeadConversion } from "@/lib/tracking";
 
 type RuLeadCaptureFormProps = {
   formName: string;
@@ -63,6 +63,15 @@ export default function RuLeadCaptureForm({
     formData.set("session_product_views", String(signals.productViewCount));
     formData.set("session_max_engaged_seconds", String(signals.maxEngagedSeconds));
     formData.set("session_section_views", String(signals.sectionViewCount));
+
+    trackFormSubmitEmail({
+      formName,
+      email: String(formData.get("email") || ""),
+      pagePath: window.location.pathname,
+      pageUrl: window.location.href,
+      product: String(formData.get("product") || productDefault || ""),
+      country: String(formData.get("country") || market),
+    });
 
     try {
       const response = await fetch("/api/lead", {

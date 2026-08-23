@@ -305,38 +305,3 @@ body[data-image-zoom-enabled="true"] button img {
     line-height: 1.65;
   }
 }
-
-@keyframes vishome-wa-pulse {
-  0%, 100% {
-    box-shadow: 0 8px 30px rgba(16, 42, 67, 0.13), 0 0 0 0 rgba(37, 211, 102, 0.32);
-  }
-
-  70% {
-    box-shadow: 0 8px 30px rgba(16, 42, 67, 0.13), 0 0 0 13px rgba(37, 211, 102, 0);
-  }
-}
-
-@keyframes vishome-quote-pulse {
-  0%, 100% {
-    box-shadow: 0 8px 32px rgba(201, 168, 76, 0.48);
-  }
-
-  50% {
-    box-shadow: 0 8px 44px rgba(201, 168, 76, 0.72);
-  }
-}
-
-.vishome-wa-float {
-  animation: vishome-wa-pulse 2.4s infinite;
-}
-
-.vishome-quote-float {
-  animation: vishome-quote-pulse 2.7s infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .vishome-wa-float,
-  .vishome-quote-float {
-    animation: none;
-  }
-}

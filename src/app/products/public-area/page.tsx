@@ -7,8 +7,8 @@ import AnswerFirst from "@/components/AnswerFirst";
 import { categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Public Area Carpet Supplier | VISHOME",
-  description: "Source public area carpet for airports, exhibitions, corridors, custom wool lobby rugs, natural sisal carpets and gold mining mats with samples and project quote support.",
+  title: "Public Area Carpet | Heavy-Duty Commercial Flooring Systems | VISHOME",
+  description: "Heavy-duty public area carpet systems for airports, exhibition centers, corridors, and high-traffic commercial projects requiring durability and fire-rated performance.",
   alternates: { canonical: "/products/public-area" },
 };
 export default function CategoryPage() {
@@ -18,7 +18,7 @@ export default function CategoryPage() {
   const customRugId = "custom-sculpted-wool-lobby-rug";
   const jsonLd = productItemListJsonLd({
     name: "Public Area Commercial Carpet",
-    description: "Heavy-duty public area carpet systems for airports, exhibition centers, corridors, custom wool lobby rugs, natural sisal carpets, gold mining mats, and high-traffic commercial projects.",
+    description: "Heavy-duty public area carpet systems for airports, exhibition centers, corridors, retail, and high-traffic commercial projects.",
     url: "/products/public-area",
     items: categoryProducts,
   });

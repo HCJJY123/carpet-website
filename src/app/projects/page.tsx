@@ -40,7 +40,7 @@ export default function ProjectsPage() {
       <PageHero
         title="Commercial Carpet Case Studies & Buyer Guides"
         eyebrow="Application-Based Flooring Decisions"
-        description="Fourteen specification and procurement guides covering hospitality, office, retail, airport, healthcare, education, exhibition, residential, industrial and gold-recovery carpet applications."
+        description="Fourteen specification and procurement guides covering hospitality, office, retail, airport, healthcare, education, exhibition, residential and industrial carpet applications."
         image="/images/case-series/case-1/Case_1_Lobby_Grand_Reveal.webp"
         imageAlt="Luxury hotel lobby carpet project background"
         objectPosition="center 48%"
@@ -67,8 +67,8 @@ export default function ProjectsPage() {
               <Link key={cs.id} href={projectPath(cs.id)} className="group block border-b border-border pb-10 md:pb-16">
                 <div className="relative mb-6 aspect-[16/10] overflow-hidden rounded-sm shadow-xl md:mb-10">
                   <ProductImage
-                    src={profile.heroImage ?? cs.image}
-                    alt={profile.heroImageAlt ?? cs.imageAlt ?? profile.cardTitle}
+                    src={profile.cardImage ?? profile.heroImage ?? cs.image}
+                    alt={profile.cardImageAlt ?? profile.heroImageAlt ?? cs.imageAlt ?? profile.cardTitle}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />

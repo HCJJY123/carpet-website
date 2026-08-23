@@ -18,7 +18,6 @@ export const officeCarpetTilesVsHardFlooringGuide: BlogPost = {
     "office acoustic flooring",
   ],
   date: "2026-07-29",
-  dateModified: "2026-08-03",
   author: "Vishome Technical Team",
   category: "Office Flooring",
   image:
@@ -190,63 +189,6 @@ export const officeCarpetTilesVsHardFlooringGuide: BlogPost = {
       ],
     },
     {
-      title: "Procurement Comparison Before You Ask for Price",
-      paragraphs: [],
-      blocks: [
-        {
-          type: "paragraph",
-          text: "Before comparing office carpet tiles with hard flooring by square metre, procurement teams should define how the floor will be used. The same office can need hard flooring near wet service zones and carpet tiles in work areas where acoustic control, chair comfort, and repair speed matter more.",
-        },
-        {
-          type: "table",
-          headers: ["Buyer decision", "Office carpet tile check", "Hard flooring check"],
-          rows: [
-            ["Noise control", "Ask for dense low-pile construction and acoustic underlay options where needed", "Check whether the room will need extra acoustic panels or rugs"],
-            ["Chair traffic", "Confirm traffic class, backing stability, chair-caster suitability and spare tiles", "Confirm scratch resistance, chair mats and long-term surface repair method"],
-            ["Replacement plan", "Keep same-batch spare tiles and define high-risk zones", "Confirm whether damaged boards, planks or sheets can be replaced locally"],
-            ["Quotation basis", "Confirm sales unit, MOQ tiers, packing and written price validity", "Confirm substrate preparation, transition strips and installation accessories"],
-          ],
-        },
-      ],
-    },
-    {
-      title: "Office Flooring RFQ Risk Checklist",
-      paragraphs: [],
-      blocks: [
-        {
-          type: "list",
-          items: [
-            { title: "Unmatched specifications.", text: "Do not compare a nylon carpet tile quotation with a lower-grade PP or residential carpet specification." },
-            { title: "No spare stock plan.", text: "A modular floor loses much of its value if the buyer does not keep replacement tiles from the same production batch." },
-            { title: "Unclear backing.", text: "Backing affects dimensional stability, installation method, comfort and future replacement." },
-            { title: "Missing maintenance owner.", text: "Cleaning frequency, stain response and traffic-lane care should be assigned before the office opens." },
-            { title: "Website price treated as final price.", text: "Published price ranges are references. Final price, unit, availability and validity require a written quotation." },
-          ],
-        },
-        {
-          type: "callout",
-          label: "Useful next step",
-          text: "Shortlist the office carpet tile construction, then request technical documents, commercial terms and a project quotation through the Contact form.",
-        },
-      ],
-    },
-    {
-      title: "Office Carpet Tile Buyer FAQ",
-      paragraphs: [],
-      blocks: [
-        {
-          type: "table",
-          headers: ["Question", "Short answer"],
-          rows: [
-            ["Are office carpet tiles better than hard flooring for open offices?", "Often yes when acoustic comfort, chair traffic and local replacement are important."],
-            ["Should every office area use carpet tiles?", "No. Wet service areas, kitchens and high liquid-spill zones usually need another floor finish."],
-            ["What should be confirmed before ordering?", "Traffic class, backing, tile size, color, sample, MOQ, spare stock, packing and quotation validity."],
-            ["How many spare tiles should be kept?", "A practical starting point is 3-5%, adjusted by layout, traffic risk and future tenant changes."],
-          ],
-        },
-      ],
-    },
-    {
       title: "Final Recommendation",
       paragraphs: [],
       blocks: [
@@ -278,18 +220,6 @@ export const officeCarpetTilesVsHardFlooringGuide: BlogPost = {
     {
       label: "50 x 50 Carpet Tile Guide",
       href: "/carpet-tiles-50x50",
-    },
-    {
-      label: "Heavy-Duty Nylon Office Carpet Tiles",
-      href: "/products/carpet-tiles/nylon-office-carpet-tile",
-    },
-    {
-      label: "Technical Documents",
-      href: "/technical-documents",
-    },
-    {
-      label: "Commercial Terms",
-      href: "/commercial-terms",
     },
     {
       label: "Request Project Quote",

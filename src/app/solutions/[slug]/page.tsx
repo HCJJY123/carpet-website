@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ProductImage from "@/components/ProductImage";
-import { getContactBridgeUrl } from "@/lib/whatsapp";
+import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
 import { getSolutionPage, solutionPages } from "@/lib/solution-data";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 
@@ -49,7 +49,7 @@ export default async function SolutionDetailPage({ params }: Props) {
   const usesOfficeCarpetTileHero = page.slug === "office-carpet-tiles-supplier";
   const pageUrl = absoluteUrl(`/solutions/${page.slug}`);
   const whatsappMessage = `Hello, I am interested in ${page.title}. Please recommend products, MOQ, sample options, price range, lead time, fire-rating documents, packing, and shipping support.`;
-  const whatsappUrl = getContactBridgeUrl(whatsappMessage, {
+  const whatsappUrl = getWhatsAppBusinessUrl(whatsappMessage, {
     placement: `solution_${page.slug}`,
     product: page.title,
     intent: "solution_page_quote",
@@ -122,6 +122,8 @@ export default async function SolutionDetailPage({ params }: Props) {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 data-whatsapp-placement={`solution_${page.slug}`}
                 data-whatsapp-product={page.title}
                 data-whatsapp-intent="solution_page_quote"

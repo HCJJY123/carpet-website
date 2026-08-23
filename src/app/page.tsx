@@ -3,11 +3,10 @@ import Link from "next/link";
 import { productCategories as categories, caseStudies, certifications, products } from "@/lib/data";
 import { blogPosts } from "@/lib/blog-data";
 import ProductImage from "@/components/ProductImage";
-import { getContactBridgeUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
+import { getWhatsAppBusinessUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 import { productPath } from "@/lib/seo";
 import HomeHeroCarousel from "@/components/HomeHeroCarousel";
 import AnswerFirst from "@/components/AnswerFirst";
-import ConversionLiftPanel from "@/components/ConversionLiftPanel";
 import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 import { getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 
@@ -22,9 +21,9 @@ const homeCategoryImages: Record<string, string> = {
 };
 
 export default function Home() {
-  const whatsappUrl = getContactBridgeUrl(whatsappBusinessMessages.header, { placement: "home_hero", intent: "project_support", pagePath: "/" });
+  const whatsappUrl = getWhatsAppBusinessUrl(whatsappBusinessMessages.header);
   const featuredProduct = products.find((product) => product.id === "3d-printed-hotel-carpet");
-  const categoryPriority = ["carpet-tiles", "wall-to-wall", "public-area"];
+  const categoryPriority = ["wall-to-wall", "public-area", "carpet-tiles"];
   const prioritizedCategories = categoryPriority
     .map((id) => categories.find((category) => category.id === id))
     .filter((category): category is (typeof categories)[number] => Boolean(category));
@@ -36,15 +35,6 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <link
-        rel="preload"
-        as="image"
-        href="/images/optimized/home-hero-home-552dc7b8e3-768w.avif"
-        imageSrcSet="/images/optimized/home-hero-home-552dc7b8e3-480w.avif 480w, /images/optimized/home-hero-home-552dc7b8e3-768w.avif 768w, /images/optimized/home-hero-home-552dc7b8e3-1200w.avif 1200w, /images/optimized/home-hero-home-552dc7b8e3-1600w.avif 1600w"
-        imageSizes="100vw"
-        fetchPriority="high"
-        type="image/avif"
-      />
       <HomeHeroCarousel whatsappUrl={whatsappUrl} />
 
       <AnswerFirst
@@ -72,15 +62,6 @@ export default function Home() {
         ]}
         evidence="Published product pages show construction, reference FOB range, lead time, three-stage MOQ, technical data, and application images. Final compliance, availability, and delivered cost are confirmed against the buyer's written project requirements."
         quoteHref="/contact?product=Commercial%20Carpet%20Project#quote-form"
-      />
-
-      <ConversionLiftPanel
-        eyebrow="Buyer Activity Focus"
-        title="Most Visitors Compare Carpet Tiles and Hotel Broadloom Before Asking for Price"
-        body="If your project is an office, hotel, corridor, ballroom, retail, or public interior, send the area, application, destination, and deadline first. Vishome can reply with the right category path, sample suggestion, and quotation inputs."
-        product="Commercial Carpet Project"
-        quoteHref="/contact?product=Commercial%20Carpet%20Project#quote-form"
-        compact
       />
 
       <section className="bg-white border-b border-border">
@@ -189,7 +170,7 @@ export default function Home() {
                 Corporate Profile
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 uppercase leading-tight">
-                Tianjin-Based Vishome Global Commercial Carpet Co., Ltd.
+                Tianjin Vishome Global Commercial Carpet Co. Ltd.
               </h2>
               <div className="prose prose-slate max-w-none">
                 <p className="text-muted text-lg leading-relaxed mb-6 font-medium">
@@ -240,8 +221,8 @@ export default function Home() {
               <Link key={cs.id} href={projectPath(cs.id)} className="group flex flex-col">
                 <div className="aspect-[4/3] overflow-hidden bg-surface mb-6">
                   <ProductImage
-                    src={getCaseSeoProfile(cs.id).heroImage ?? cs.image}
-                    alt={getCaseSeoProfile(cs.id).heroImageAlt ?? cs.imageAlt ?? getCaseSeoProfile(cs.id).cardTitle}
+                    src={getCaseSeoProfile(cs.id).cardImage ?? getCaseSeoProfile(cs.id).heroImage ?? cs.image}
+                    alt={getCaseSeoProfile(cs.id).cardImageAlt ?? getCaseSeoProfile(cs.id).heroImageAlt ?? cs.imageAlt ?? getCaseSeoProfile(cs.id).cardTitle}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                   />
                 </div>
@@ -293,17 +274,9 @@ export default function Home() {
           <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg font-light leading-relaxed">
             Contact our factory for project-based customization, bulk pricing, and international fire-rating documentation.
           </p>
-          <p className="mx-auto mb-8 max-w-2xl text-sm font-medium leading-relaxed text-gray-300">
-            Start with the RFQ checklist if you want a quotation that matches the real project scope, documents, sample approval and spare-stock plan.
-          </p>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers" className="inline-block rounded-sm bg-accent px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-2xl transition-all hover:bg-accent/90 md:px-12 md:py-6 md:tracking-[0.22em]">
-              Open RFQ Checklist
-            </Link>
-            <Link href="/contact?product=Commercial%20Carpet%20Tiles&source=%2Fblog%2Fcommercial-carpet-tile-rfq-checklist-b2b-buyers#quote-form" className="inline-block rounded-sm bg-white px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-primary shadow-2xl transition-all hover:bg-gray-100 md:px-12 md:py-6 md:tracking-[0.22em]">
-              Request Factory Quote
-            </Link>
-          </div>
+          <Link href="/contact" className="inline-block rounded-sm bg-white px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-primary shadow-2xl transition-all hover:bg-gray-100 md:px-16 md:py-6 md:tracking-[0.3em]">
+            Contact Our Factory
+          </Link>
         </div>
       </FactoryCtaBackground>
     </div>

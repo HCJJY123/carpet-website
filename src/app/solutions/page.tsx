@@ -5,7 +5,7 @@ import { solutionPages } from "@/lib/solution-data";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Solutions | VISHOME",
+  title: "Commercial Carpet Solutions by Application | Hotel, Office & Public Area | VISHOME",
   description:
     "Commercial carpet solutions for hotels, offices, airports, casinos, retail stores, and public-area projects. Compare carpet tiles, broadloom, MOQ, samples, and specification support.",
   alternates: {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { products } from "@/lib/data";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
-import { getContactBridgeUrl } from "@/lib/whatsapp";
+import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
 import ProductImage from "@/components/ProductImage";
 import RuLeadCaptureForm from "@/components/RuLeadCaptureForm";
 
@@ -74,7 +74,7 @@ const breadcrumbJsonLd = {
 
 export const metadata: Metadata = product
   ? {
-      title: "Коммерческий ковролин в рулонах | VISHOME",
+      title: "Коммерческий ковролин в рулонах | Поставка DAP Алматы/Ташкент | VISHOME",
       description:
         "Коммерческий ковролин (broadloom) в рулонах шириной 4 м для торговых центров, офисов и складов. Класс огнестойкости ASTM E648 Class I. Поставка DAP Алматы и Ташкент.",
       alternates: {
@@ -99,7 +99,7 @@ export const metadata: Metadata = product
 export default function BroadloomRuPage() {
   if (!product) return <div>Product not found</div>;
 
-  const whatsappUrl = getContactBridgeUrl(
+  const whatsappUrl = getWhatsAppBusinessUrl(
     "Здравствуйте! Меня интересует ковролин в рулонах для коммерческого объекта. Прошу выслать цену FOB, условия DAP до Алматы/Ташкента, МОЗ и срок производства.",
     { placement: "ru_broadloom_hero", product: "High-Traffic Public Area Corridor Carpet", intent: "ru_project_quote", pagePath: ruPath }
   );
@@ -156,6 +156,8 @@ export default function BroadloomRuPage() {
               <div className="grid gap-3 sm:grid-cols-2">
                 <a
                   href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-whatsapp-placement="ru_broadloom_hero"
                   data-whatsapp-intent="ru_project_quote"
                   className="flex min-h-12 items-center justify-center rounded-sm bg-[#25D366] px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.12em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"

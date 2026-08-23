@@ -14,9 +14,8 @@ function QueryProductLeadCaptureFormContent({
 }: QueryProductLeadCaptureFormProps) {
   const searchParams = useSearchParams();
   const product = searchParams.get("product")?.trim() || fallbackProduct;
-  const sourcePage = searchParams.get("source")?.trim() || "";
 
-  return <LeadCaptureForm {...formProps} key={`${product}-${sourcePage}`} productDefault={product} sourcePageDefault={sourcePage} />;
+  return <LeadCaptureForm {...formProps} key={product} productDefault={product} />;
 }
 
 export default function QueryProductLeadCaptureForm({

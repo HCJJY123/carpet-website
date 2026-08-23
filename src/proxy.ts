@@ -5,6 +5,7 @@ import {
   googleTranslateCookieName,
   isLocaleRoutingExcluded,
   isNativeLocalizedPath,
+  isTranslatedSiteLocale,
   localeCookieMaxAge,
   localeCookieName,
   sharedLocaleCookieDomain,
@@ -90,12 +91,6 @@ export function proxy(request: NextRequest) {
     return clearLocaleCookies(NextResponse.redirect(url), secure, hostname);
   }
 
-  if (pathname === "/") {
-    const response = NextResponse.next();
-    response.headers.set("Content-Language", "en");
-    return clearLocaleCookies(response, secure, hostname);
-  }
-
   const pathLocale = getPathLocale(pathname);
 
   if (pathLocale) {
@@ -104,7 +99,9 @@ export function proxy(request: NextRequest) {
     }
 
     url.pathname = stripLocaleFromPath(pathname);
-    return clearLocaleCookies(NextResponse.redirect(url, 308), secure, hostname);
+    const response = NextResponse.rewrite(url);
+    response.headers.set("X-Robots-Tag", "noindex, follow");
+    return applyLocaleCookies(response, pathLocale, secure, hostname);
   }
 
   const countryMarketLanguage = getCountryMarketContentLanguage(pathname);
@@ -112,6 +109,12 @@ export function proxy(request: NextRequest) {
     const response = NextResponse.next();
     response.headers.set("Content-Language", countryMarketLanguage);
     return response;
+  }
+
+  const preferredLocale = request.cookies.get(localeCookieName)?.value;
+  if (isTranslatedSiteLocale(preferredLocale)) {
+    url.pathname = pathname === "/" ? `/${preferredLocale}` : `/${preferredLocale}${pathname}`;
+    return NextResponse.redirect(url);
   }
 
   return NextResponse.next();

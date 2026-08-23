@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { products } from "@/lib/data";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
-import { getContactBridgeUrl } from "@/lib/whatsapp";
+import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
 import ProductImage from "@/components/ProductImage";
 import RuLeadCaptureForm from "@/components/RuLeadCaptureForm";
 
@@ -73,7 +73,7 @@ const breadcrumbJsonLd = {
 
 export const metadata: Metadata = product
   ? {
-      title: "Ковровая плитка 50×50 для офисов | VISHOME",
+      title: "Ковровая плитка 50×50 см для офисов | Нейлон, поставка DAP Алматы/Ташкент | VISHOME",
       description:
         "Коммерческая ковровая плитка 50×50 см из 100% нейлона для офисов, коридоров и мест с высокой проходимостью. Класс огнестойкости ASTM E648 Class I. Поставка DAP Алматы и Ташкент, оплата на объект.",
       alternates: {
@@ -99,7 +99,7 @@ export const metadata: Metadata = product
 export default function CarpetTilesRuPage() {
   if (!product) return <div>Product not found</div>;
 
-  const whatsappUrl = getContactBridgeUrl(
+  const whatsappUrl = getWhatsAppBusinessUrl(
     "Здравствуйте! Меня интересует ковровая плитка для коммерческого объекта. Прошу выслать цену FOB, условия DAP до Алматы/Ташкента, МОЗ и срок производства.",
     { placement: "ru_carpet_tiles_hero", product: "Nylon 50x50 Commercial Office Carpet Tile", intent: "ru_project_quote", pagePath: ruPath }
   );
@@ -156,6 +156,8 @@ export default function CarpetTilesRuPage() {
               <div className="grid gap-3 sm:grid-cols-2">
                 <a
                   href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-whatsapp-placement="ru_carpet_tiles_hero"
                   data-whatsapp-intent="ru_project_quote"
                   className="flex min-h-12 items-center justify-center rounded-sm bg-[#25D366] px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.12em] text-white shadow-md transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"

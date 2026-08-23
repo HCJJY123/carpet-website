@@ -8,7 +8,6 @@ import ProductImage from "@/components/ProductImage";
 import RelatedCategoryLinks from "@/components/RelatedCategoryLinks";
 import ContentTrustPanel from "@/components/ContentTrustPanel";
 import CaseBuyerAnswer from "@/components/CaseBuyerAnswer";
-import ConversionLiftPanel from "@/components/ConversionLiftPanel";
 import { caseIdFromRoute, caseSeoProfiles, getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 
 interface Props {
@@ -341,6 +340,20 @@ export default async function ProjectDetailPage({ params }: Props) {
             </section>
           ) : null}
 
+          {profile.relatedLinks?.length ? (
+            <section className="mb-14">
+              <h2 className="mb-6 text-xl font-black uppercase tracking-wider text-primary">Related Internal References</h2>
+              <div className="grid gap-5 md:grid-cols-2">
+                {profile.relatedLinks.map((item) => (
+                  <Link key={item.href} href={item.href} className="border-t-2 border-primary bg-surface p-5 transition-colors hover:border-accent hover:bg-white">
+                    <p className="text-[9px] font-black uppercase tracking-[0.16em] text-accent">Reference Link</p>
+                    <h3 className="mt-3 text-sm font-black uppercase leading-snug text-primary">{item.label}</h3>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
+
           <section className="mb-14">
             <h2 className="mb-8 text-2xl font-black uppercase tracking-tight text-primary md:text-3xl">
               Buyer Questions
@@ -354,16 +367,6 @@ export default async function ProjectDetailPage({ params }: Props) {
               ))}
             </div>
           </section>
-
-          <ConversionLiftPanel
-            eyebrow="Similar Project Inquiry"
-            title="Send Your Floor Plan, Area and Delivery Country"
-            body="Use this case as a reference, then submit your own application area, traffic level, design direction, and required timeline. Vishome can suggest matching products and quote the project rather than only a single item."
-            product={profile.cardTitle}
-            quoteHref={`/contact?product=${encodeURIComponent(profile.cardTitle)}#quote-form`}
-            className="mb-14 overflow-hidden rounded-xl border-y-0"
-            compact
-          />
 
           {recommendedProducts.length ? (
             <section className="mb-14">

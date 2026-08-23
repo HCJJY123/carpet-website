@@ -47,9 +47,8 @@ const sections = [
   {
     title: "Cookies",
     body: [
-      "Our website may use cookies and similar technologies to keep the site functional, remember choices, understand visitor behavior, measure advertising performance, and improve the user experience.",
-      "Analytics, advertising measurement, visitor intelligence and session-recording tools are not loaded until you choose Accept analytics in the cookie notice. If you choose Necessary only, these tools remain disabled for that browser unless you later change your preference.",
-      "After analytics consent, we may store a random first-party visitor identifier in local storage and a random session identifier in session storage. These identifiers help connect website engagement records with the corresponding analytics session without storing a raw IP address in our visitor database.",
+      "Our website may use cookies and similar technologies to keep the site functional, understand visitor behavior, measure advertising performance, and improve the user experience.",
+      "We may store a random first-party visitor identifier in local storage and a random session identifier in session storage. These identifiers help connect website engagement records with the corresponding analytics session without storing a raw IP address in our visitor database.",
       "When you enter or select a translated website experience, we use a language preference cookie to keep subsequent pages in the same language. Google Translate may also set a translation preference cookie so that the selected language remains active while you navigate the website.",
       "You can control cookies through your browser settings. Disabling cookies may affect some website features, analytics, or form-related functionality.",
     ],
@@ -57,7 +56,7 @@ const sections = [
   {
     title: "Third-party Services",
     body: [
-      "With analytics consent, we may use third-party services such as Google Ads, Google Analytics, Microsoft Advertising UET, Microsoft Clarity, Yandex Metrica, website hosting providers, form processing tools, email systems, and communication platforms to operate the website, process inquiries, analyze traffic, and manage marketing campaigns.",
+      "We may use third-party services such as Google Ads, Google Analytics, website hosting providers, form processing tools, email systems, and communication platforms to operate the website, process inquiries, analyze traffic, and manage marketing campaigns.",
       "For translated browsing outside our manually translated landing pages, we may use Google Translate. Google may receive the page text needed for translation, the selected language, and standard technical request information such as IP address, browser, and device data. Information typed into inquiry form fields is not intentionally submitted to Google Translate by Vishome.",
       "We may also use Microsoft Clarity, Cloudflare, and IPinfo Lite to understand website behavior, classify network traffic, estimate company-level interest where technically possible, protect the website, and improve B2B sales follow-up.",
       "Website inquiry details are delivered through Formspree and may also be stored in Vishome's access-controlled Cloudflare D1 database so our team can manage quotations, follow-up status, lead quality, and advertising attribution in one record.",
