@@ -2,6 +2,8 @@ import { getAttributionForEvent } from "@/lib/attribution";
 
 type LeadConversionPayload = {
   formName: string;
+  email?: string;
+  phone?: string;
   product?: string;
   quantity?: string;
   country?: string;
@@ -13,15 +15,6 @@ type LeadConversionPayload = {
   leadGrade?: "A" | "B" | "C";
   productViewCount?: number;
   maxEngagedSeconds?: number;
-};
-
-type FormSubmitPayload = {
-  formName: string;
-  email?: string;
-  pagePath?: string;
-  pageUrl?: string;
-  product?: string;
-  country?: string;
 };
 
 type ClickConversionType =
@@ -65,6 +58,16 @@ function conversionSendToFor(type: ClickConversionType) {
   return map[type];
 }
 
+function normalizeEnhancedConversionEmail(value?: string) {
+  const email = value?.trim().toLowerCase();
+  return email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? email : undefined;
+}
+
+function normalizeEnhancedConversionPhone(value?: string) {
+  const phone = value?.replace(/[\s().-]/g, "").trim();
+  return phone && /^\+?\d{8,15}$/.test(phone) ? phone : undefined;
+}
+
 export function pushTrackingEvent(event: string, payload: Record<string, unknown>) {
   if (typeof window === "undefined") return;
   window.dataLayer = window.dataLayer || [];
@@ -93,6 +96,8 @@ export function trackAnalyticsEvent(event: string, payload: Record<string, unkno
 
 export function trackLeadConversion({
   formName,
+  email,
+  phone,
   product,
   quantity,
   country,
@@ -134,6 +139,16 @@ export function trackLeadConversion({
     window.gtag("event", "generate_lead", leadPayload);
 
     if (conversionSendTo) {
+      const enhancedConversionEmail = normalizeEnhancedConversionEmail(email);
+      const enhancedConversionPhone = normalizeEnhancedConversionPhone(phone);
+
+      if (enhancedConversionEmail || enhancedConversionPhone) {
+        window.gtag("set", "user_data", {
+          ...(enhancedConversionEmail ? { email: enhancedConversionEmail } : {}),
+          ...(enhancedConversionPhone ? { phone_number: enhancedConversionPhone } : {}),
+        });
+      }
+
       window.gtag("event", "conversion", {
         send_to: conversionSendTo,
         event_category: "lead",
@@ -160,43 +175,6 @@ export function trackLeadConversion({
 
   pushTrackingEvent("lead_form_submit_success", leadPayload);
   if (leadGrade === "A") pushTrackingEvent("high_intent_lead", leadPayload);
-}
-
-export function trackFormSubmitEmail({
-  formName,
-  email,
-  pagePath,
-  pageUrl,
-  product,
-  country,
-}: FormSubmitPayload) {
-  if (typeof window === "undefined") return;
-
-  const normalizedEmail = email?.trim().toLowerCase();
-  if (!normalizedEmail) return;
-
-  const payload = {
-    form_name: formName,
-    email: normalizedEmail,
-    page_path: pagePath,
-    page_url: pageUrl,
-    product,
-    country,
-    ...getAttributionForEvent(),
-  };
-
-  if (typeof window.gtag === "function") {
-    window.gtag("set", "user_data", {
-      email: normalizedEmail,
-    });
-
-    window.gtag("event", "表单提交", {
-      send_to: "G-T2VYHXTK1F",
-      ...payload,
-    });
-  }
-
-  pushTrackingEvent("form_submit", payload);
 }
 
 export function trackInteractionConversion(type: ClickConversionType, payload: Record<string, unknown> = {}) {

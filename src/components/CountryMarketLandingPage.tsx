@@ -5,7 +5,7 @@ import { brandInfo, products, type Product } from "@/lib/data";
 import type { CountryMarketPage } from "@/lib/country-market-pages";
 import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
 
-const UPDATED_DATE = "2026-08-02";
+const UPDATED_DATE = "2026-08-19";
 
 function resolveProducts(page: CountryMarketPage) {
   return page.productIds
@@ -35,7 +35,7 @@ function commercialFaqs(page: CountryMarketPage) {
     },
     {
       question: "Does the product automatically comply with every local project standard?",
-      answer: "No. Standards, test reports and submittal formats vary by project. VISHOME can provide the available product documents for review, but the buyer, consultant or contractor must confirm that the nominated specification satisfies the actual tender and local requirements.",
+      answer: "No. Standards, test reports and submittal formats vary by project. Vishomecarpet can provide the available product documents for review, but the buyer, consultant or contractor must confirm that the nominated specification satisfies the actual tender and local requirements.",
     },
     {
       question: "How should freight and delivery be compared?",
@@ -63,7 +63,7 @@ function goldFaqs(page: CountryMarketPage) {
       answer: "Sí. El nivel Trial Order publicado es un rollo estándar. Confirme medida, color, empaque y transporte en la cotización antes del pago.",
     },
     {
-      question: "¿VISHOME puede fabricar medidas o empaque OEM?",
+      question: "¿Vishomecarpet puede fabricar medidas o empaque OEM?",
       answer: "Hay opciones de medidas y empaque personalizados, sujetas a revisión técnica, cantidad y confirmación escrita en la oferta del proyecto.",
     },
   ];
@@ -73,8 +73,143 @@ function pageFaqs(page: CountryMarketPage) {
   return page.kind === "gold" ? goldFaqs(page) : commercialFaqs(page);
 }
 
+function supportingApplicationLinks(page: CountryMarketPage) {
+  if (page.kind === "gold") {
+    return [
+      { href: "/applications/public-space", label: "Public Space Carpet Specification", description: "Use this for public interiors where heavy-duty project planning and maintenance access matter." },
+      { href: "/products/public-area/gold-mining-carpet-mat", label: "Gold Mining Carpet Mat", description: "Review the product record, available sizes and trial order options before the RFQ." },
+    ];
+  }
+
+  if (page.market === "ro") {
+    return [
+      { href: "/markets/ro/office-carpet-tiles", label: "Office Carpet Tiles in Romania", description: "Chair-wheel wear, phased replacement and spare tile planning for Romania office projects." },
+      { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
+      { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Useful for luggage-wheel wear, long visual runs and replacement planning." },
+    ];
+  }
+
+  if (page.market === "ca") {
+    return [
+      { href: "/markets/ca/office-carpet-tiles", label: "Office Carpet Tiles in Canada", description: "Winter moisture, snow and salt ingress, chair-wheel wear and phased replacement planning." },
+      { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
+      { href: "/applications/public-space", label: "Public Space Carpet Specification", description: "Useful for entrance, lobby and shared interior circulation areas." },
+    ];
+  }
+
+  if (page.market === "pl") {
+    return [
+      { href: "/markets/pl/office-carpet-tiles", label: "Office Carpet Tiles in Poland", description: "Phased office refurbishment, chair-wheel zones and spare-stock planning." },
+      { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
+      { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Useful for hospitality and corridor procurement routes." },
+    ];
+  }
+
+  if (page.market === "cz") {
+    return [
+      { href: "/markets/cz/office-carpet-tiles", label: "Office Carpet Tiles in Czech Republic", description: "Phased office refurbishment, chair-wheel areas and project specification planning." },
+      { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
+      { href: "/blog/modular-carpet-prague-office-renovation-downtime-control", label: "Prague Renovation Guide", description: "Downtime control and phased renovation planning for Czech office projects." },
+    ];
+  }
+
+  if (page.market === "hu") {
+    return [
+      { href: "/markets/hu/office-carpet-tiles-hungary", label: "Office Carpet Tiles in Hungary", description: "Phased office refurbishment, chair-wheel areas and project planning." },
+      { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
+      { href: "/blog/commercial-carpet-tile-replacement-planning-budapest-offices", label: "Budapest Replacement Guide", description: "Office replacement planning and phased handover logic for Hungary projects." },
+    ];
+  }
+
+  const shared = [
+    { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
+    { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Useful for luggage-wheel wear, long visual runs and replacement planning." },
+    { href: "/applications/hotel-guestroom", label: "Hotel Guestroom Carpet Support", description: "Useful where comfort, acoustic feel and room coordination matter." },
+  ];
+
+  if (page.countryName === "Singapore") {
+    return [
+      { href: "/markets/sg/casino-carpet", label: "Casino Carpet in Singapore", description: "Gaming floors, VIP rooms, traffic planning and staged delivery for casino projects." },
+      { href: "/solutions/hotel-hospitality", label: "Hotel & Hospitality Solution", description: "Use this for casino-adjacent, hospitality and public interior project planning." },
+      { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Useful for long runs, luggage traffic and maintenance planning." },
+    ];
+  }
+
+  return shared;
+}
+
+function supportingGuideLinks(page: CountryMarketPage) {
+  if (page.kind === "gold") {
+    if (page.market === "au") {
+      return [
+        { href: "/blog/gold-mining-carpet-mat-australia-fine-gold-recovery", label: "Australia Gold Mining Carpet Guide", description: "Buyer questions about sluice width, fine-gold recovery and roll planning." },
+        { href: "/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide", label: "Gold Recovery Matting Guide", description: "Compare sluice carpet, miners moss and vortex matting by recovery and cleanup." },
+      ];
+    }
+    if (page.market === "kz") {
+      return [
+        { href: "/blog/gold-mining-carpet-kazakhstan-fine-gold-recovery-guide", label: "Kazakhstan Gold Mining Carpet Guide", description: "A practical gold-recovery guide for Kazakhstan buyers and distributors." },
+        { href: "/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide", label: "Gold Recovery Matting Guide", description: "Compare recovery behavior, cleanup and bulk-buyer quality testing." },
+      ];
+    }
+    return [
+      { href: "/blog/sluice-carpet-miners-moss-vortex-mat-gold-recovery-guide", label: "Gold Recovery Matting Guide", description: "Compare sluice carpet, miners moss and vortex matting for fine-gold recovery." },
+      { href: "/blog/gold-mining-carpet-kazakhstan-fine-gold-recovery-guide", label: "Gold Mining Carpet Buying Guide", description: "Use this for roll planning, clean-out logic and sample testing." },
+    ];
+  }
+
+  if (page.market === "ro") {
+    return [
+      { href: "/blog/office-carpet-tiles-romania-chair-wheel-replacement-guide", label: "Romania Office Carpet Guide", description: "Chair-wheel wear, phased replacement and spare tile planning." },
+      { href: "/blog/office-carpet-tiles-vs-hard-flooring-maintenance", label: "Carpet Tiles vs Hard Flooring", description: "A useful comparison when buyers are weighing maintenance and noise." },
+    ];
+  }
+  if (page.market === "ca") {
+    return [
+      { href: "/blog/office-carpet-tiles-canada-phased-renovation-reddit-guide", label: "Canada Office Carpet Guide", description: "Winter moisture, phased renovation and spare-stock planning." },
+      { href: "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide", label: "Carpet Tiles vs Broadloom", description: "Buyer-level comparison of maintenance, replacement and quotation risk." },
+    ];
+  }
+  if (page.market === "pl") {
+    return [
+      { href: "/blog/carpet-tiles-rolling-chairs-high-traffic-polish-offices", label: "Poland Office Carpet Guide", description: "Rolling-chair wear, high traffic and phased replacement planning." },
+      { href: "/blog/phased-office-flooring-replacement-poland-guide", label: "Poland Phased Replacement Guide", description: "A practical guide for occupied offices and renovation sequencing." },
+    ];
+  }
+  if (page.market === "cz") {
+    return [
+      { href: "/blog/modular-carpet-prague-office-renovation-downtime-control", label: "Prague Office Renovation Guide", description: "Downtime control and phased renovation planning for Czech office projects." },
+      { href: "/blog/specify-commercial-carpet-tiles-chair-wheel-areas", label: "Chair-Wheel Specification Guide", description: "A technical guide for rolling-chair zones and specification approval." },
+    ];
+  }
+  if (page.market === "hu") {
+    return [
+      { href: "/blog/commercial-carpet-tile-replacement-planning-budapest-offices", label: "Budapest Carpet Replacement Guide", description: "Phased replacement planning and occupied-floor sequencing." },
+      { href: "/blog/grey-carpet-tile-selection-high-traffic-corporate-interiors", label: "High-Traffic Carpet Tile Guide", description: "Buyer-level guidance for busy corporate interiors and maintenance planning." },
+    ];
+  }
+  if (page.market === "ph") {
+    return [
+      { href: "/blog/hotel-carpet-philippines-pattern-stain-maintenance-guide", label: "Philippines Hotel Carpet Guide", description: "Pattern, stain maintenance and humid-market procurement issues." },
+      { href: "/blog/hotel-carpet-supplier-checklist-guide", label: "Hotel Carpet Supplier Checklist", description: "A buyer checklist for samples, lead time, MOQ and technical documents." },
+    ];
+  }
+  if (page.market === "sg") {
+    return [
+      { href: "/blog/casino-carpet-singapore-gaming-floor-buying-guide", label: "Singapore Casino Carpet Guide", description: "Gaming-floor specification, traffic and design continuity." },
+      { href: "/blog/singapore-casino-carpet-procurement-checklist", label: "Singapore Casino Carpet Checklist", description: "RFQ questions for casino and hospitality procurement teams." },
+    ];
+  }
+  return [
+    { href: "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide", label: "Carpet Tiles vs Broadloom", description: "A buying guide for offices, hotels and corridors." },
+    { href: "/blog/commercial-carpet-tile-moq-sample-trial-project-guide", label: "Commercial Carpet MOQ Guide", description: "How to plan samples, trial orders and project MOQ." },
+  ];
+}
+
 export function countryMarketMetadata(page: CountryMarketPage): Metadata {
   const hero = products.find((product) => product.id === page.primaryProductId);
+  const heroImage = page.heroImage ?? hero?.image;
+  const heroImageAlt = page.heroImageAlt ?? page.title;
   const fallback = defaultPath(page);
 
   return {
@@ -95,7 +230,7 @@ export function countryMarketMetadata(page: CountryMarketPage): Metadata {
       url: absoluteUrl(page.path),
       type: "website",
       locale: page.openGraphLocale,
-      images: hero ? [{ url: absoluteUrl(hero.image), alt: page.title }] : undefined,
+      images: heroImage ? [{ url: absoluteUrl(heroImage), alt: heroImageAlt }] : undefined,
     },
   };
 }
@@ -103,10 +238,12 @@ export function countryMarketMetadata(page: CountryMarketPage): Metadata {
 export default function CountryMarketLandingPage({ page }: { page: CountryMarketPage }) {
   const resolvedProducts = resolveProducts(page);
   const heroProduct = resolvedProducts[0];
+  const heroImage = page.heroImage ?? heroProduct?.image ?? "/images/hero-home.webp";
+  const heroImageAlt = page.heroImageAlt ?? page.title;
   const faqs = pageFaqs(page);
   const quoteProduct = page.kind === "gold" ? `Gold mining carpet mat - ${page.countryName}` : `Commercial carpet project - ${page.countryName}`;
   const quoteHref = `/contact?product=${encodeURIComponent(quoteProduct)}&country=${encodeURIComponent(page.countryName)}#quote-form`;
-  const emailHref = `mailto:${brandInfo.email}?subject=${encodeURIComponent(`VISHOME ${quoteProduct} inquiry`)}`;
+  const emailHref = `mailto:${brandInfo.email}?subject=${encodeURIComponent(`Vishomecarpet ${quoteProduct} inquiry`)}`;
 
   const webpageJsonLd = {
     "@context": "https://schema.org",
@@ -117,15 +254,12 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
     description: page.metadataDescription,
     inLanguage: page.language,
     dateModified: UPDATED_DATE,
-    primaryImageOfPage: heroProduct
-      ? { "@type": "ImageObject", url: absoluteUrl(heroProduct.image) }
-      : undefined,
+    primaryImageOfPage: { "@type": "ImageObject", url: absoluteUrl(heroImage) },
     about: resolvedProducts.map((product) => ({
-      "@type": "Product",
+      "@type": "Thing",
       name: product.name,
       url: absoluteUrl(productPath(product.id)),
-      category: product.category,
-      material: product.spec.material,
+      description: product.description,
     })),
     publisher: {
       "@type": "Organization",
@@ -139,7 +273,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "VISHOME", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 1, name: "Vishomecarpet", item: absoluteUrl("/") },
       { "@type": "ListItem", position: 2, name: "Global Markets", item: absoluteUrl("/markets") },
       { "@type": "ListItem", position: 3, name: page.countryName, item: absoluteUrl(page.path) },
     ],
@@ -206,8 +340,8 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
       <section className="relative flex min-h-[620px] items-end overflow-hidden bg-primary text-white">
         <div className="absolute inset-0">
           <ProductImage
-            src={heroProduct?.image || "/images/hero-home.webp"}
-            alt={page.title}
+            src={heroImage}
+            alt={heroImageAlt}
             className="h-full w-full"
             fit="cover"
             priority
@@ -218,7 +352,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
         <div className="absolute inset-0 bg-primary/65" />
         <div className="container-fox relative z-10 w-full pb-32 pt-28 sm:pb-16 md:pb-20">
           <nav className="mb-8 flex flex-wrap items-center gap-2 text-xs font-bold text-white/65" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">VISHOME</Link>
+            <Link href="/" className="hover:text-white">Vishomecarpet</Link>
             <span>/</span>
             <Link href="/markets" className="hover:text-white">Global Markets</Link>
             <span>/</span>
@@ -226,7 +360,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
           </nav>
           <div className="max-w-4xl">
             <p className="mb-4 text-xs font-black uppercase tracking-[0.14em] text-accent">
-              {page.kind === "gold" ? "Gold recovery mat sourcing" : "Commercial carpet project sourcing"} · {page.countryNameLocal}
+            {page.kind === "gold" ? "Gold recovery mat sourcing" : "Commercial carpet project sourcing"} · {page.countryNameLocal}
             </p>
             <h1 className="text-4xl font-black leading-tight md:text-6xl">{page.title}</h1>
             <p className="mt-6 max-w-3xl text-base font-semibold leading-8 text-white/85 md:text-lg">{page.directAnswer}</p>
@@ -264,7 +398,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
             {page.kind === "gold" ? "Gold recovery mat specification" : "Project carpet options to compare"}
           </h2>
           <p className="mt-5 max-w-4xl leading-8 text-muted">
-            The values below come from the current VISHOME product records. Final colour, construction, documentation,
+            The values below come from the current Vishomecarpet product records. Final colour, construction, documentation,
             packing and commercial terms must match the written quotation.
           </p>
 
@@ -348,6 +482,65 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
         </div>
       </section>
 
+      <section className="section-padding">
+        <div className="container-fox grid gap-6 lg:grid-cols-3">
+          <div className="rounded-md border border-border bg-white p-6 shadow-sm">
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Who we serve</p>
+            <h2 className="mt-3 text-2xl font-black leading-tight">Project buyers, contractors and distributors</h2>
+            <p className="mt-4 leading-7 text-muted">
+              Vishomecarpet supports import-capable project buyers, flooring contractors, fit-out teams and distributors who need a manufacturer-exporter partner for commercial carpet projects in {page.countryName}.
+            </p>
+          </div>
+          <div className="rounded-md border border-border bg-white p-6 shadow-sm">
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Supply scope</p>
+            <h2 className="mt-3 text-2xl font-black leading-tight">China manufacturer, samples and export delivery</h2>
+            <p className="mt-4 leading-7 text-muted">
+              Supply scope includes verified product records, samples or trial orders where published, technical data for review, project quantities and export delivery. Local installation and removal are normally handled by the buyer&apos;s local contractor unless a verified arrangement exists.
+            </p>
+          </div>
+          <div className="rounded-md border border-border bg-white p-6 shadow-sm">
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">What to send for a quote</p>
+            <h2 className="mt-3 text-2xl font-black leading-tight">Country, application, quantity and timing</h2>
+            <ul className="mt-4 space-y-3 text-sm leading-7 text-muted">
+              <li>Country and city</li>
+              <li>Application and project type</li>
+              <li>Estimated area or quantity</li>
+              <li>Target delivery date</li>
+              <li>Sample and technical document requirements</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding border-y border-border bg-surface">
+        <div className="container-fox grid gap-12 lg:grid-cols-2">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Supporting application pages</p>
+            <h2 className="mt-3 text-3xl font-black md:text-4xl">Route this market to the right application page</h2>
+            <div className="mt-8 grid gap-4">
+              {supportingApplicationLinks(page).map((link) => (
+                <Link key={link.href} href={link.href} className="block rounded-md border border-border bg-white p-5 transition hover:border-accent hover:shadow-md">
+                  <h3 className="text-base font-black leading-snug text-primary">{link.label}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted">{link.description}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Supporting guides</p>
+            <h2 className="mt-3 text-3xl font-black md:text-4xl">Buyer questions and decision guides</h2>
+            <div className="mt-8 grid gap-4">
+              {supportingGuideLinks(page).map((link) => (
+                <Link key={link.href} href={link.href} className="block rounded-md border border-border bg-white p-5 transition hover:border-accent hover:shadow-md">
+                  <h3 className="text-base font-black leading-snug text-primary">{link.label}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted">{link.description}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding bg-primary text-white">
         <div className="container-fox grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
@@ -387,7 +580,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
             <dl className="mt-5 grid gap-4 text-sm sm:grid-cols-2">
               <div><dt className="font-black">Published by</dt><dd className="mt-1 text-muted">{brandInfo.name}</dd></div>
               <div><dt className="font-black">Last reviewed</dt><dd className="mt-1 text-muted">August 2, 2026</dd></div>
-              <div><dt className="font-black">Product facts</dt><dd className="mt-1 text-muted">Current VISHOME product records linked above</dd></div>
+              <div><dt className="font-black">Product facts</dt><dd className="mt-1 text-muted">Current Vishomecarpet product records linked above</dd></div>
               <div><dt className="font-black">Limitations</dt><dd className="mt-1 text-muted">Final compliance, freight and installation are project-specific</dd></div>
             </dl>
           </div>
@@ -407,7 +600,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
             Send the project country, application, quantity and target delivery date
           </h2>
           <p className="mx-auto mt-5 max-w-3xl leading-7 text-white/75">
-            VISHOME will respond using the current product specification and available project information. No price,
+            Vishomecarpet will respond using the current product specification and available project information. No price,
             document or delivery promise is final until it appears in the written quotation.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">

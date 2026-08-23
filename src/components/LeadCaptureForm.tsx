@@ -5,12 +5,13 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { getAttributionForEvent } from "@/lib/attribution";
 import { getFunnelSessionSignals, scoreLead } from "@/lib/funnel";
-import { trackAnalyticsEvent, trackFormSubmitEmail, trackLeadConversion } from "@/lib/tracking";
+import { trackAnalyticsEvent, trackLeadConversion } from "@/lib/tracking";
 import { getVisitorIdentity } from "@/lib/visitorIdentity";
 
 type LeadCaptureFormProps = {
   formName: string;
   productDefault?: string;
+  sourcePageDefault?: string;
   projectTypeDefault?: string;
   submitLabel: string;
   introText?: string;
@@ -20,6 +21,7 @@ type LeadCaptureFormProps = {
 export default function LeadCaptureForm({
   formName,
   productDefault = "",
+  sourcePageDefault = "",
   projectTypeDefault = "",
   submitLabel,
   introText,
@@ -82,6 +84,7 @@ export default function LeadCaptureForm({
     formData.set("form_name", formName);
     formData.set("page_url", window.location.href);
     formData.set("page_path", window.location.pathname);
+    if (sourcePageDefault) formData.set("source_page", sourcePageDefault);
     formData.set("submitted_at", new Date().toISOString());
     formData.set("privacy_policy", "Acknowledged at submission");
 
@@ -111,15 +114,6 @@ export default function LeadCaptureForm({
     formData.set("session_max_engaged_seconds", String(signals.maxEngagedSeconds));
     formData.set("session_section_views", String(signals.sectionViewCount));
 
-    trackFormSubmitEmail({
-      formName,
-      email: String(formData.get("email") || ""),
-      pagePath: window.location.pathname,
-      pageUrl: window.location.href,
-      product: String(formData.get("product") || productDefault || ""),
-      country: String(formData.get("country") || ""),
-    });
-
     try {
       const response = await fetch("/api/lead", {
         method: "POST",
@@ -134,6 +128,8 @@ export default function LeadCaptureForm({
 
       trackLeadConversion({
         formName,
+        email: String(formData.get("email") || ""),
+        phone: String(formData.get("whatsapp") || ""),
         product: String(formData.get("product") || ""),
         quantity: String(formData.get("quantity") || ""),
         country: String(formData.get("country") || ""),
@@ -165,7 +161,7 @@ export default function LeadCaptureForm({
         submitting: false,
         error: error instanceof Error && error.message !== "Submission failed"
           ? error.message
-          : "We could not send the request. Please check the fields and try again.",
+          : "We could not send the request. Please contact us by WhatsApp or email directly.",
       });
     }
   }
@@ -341,8 +337,21 @@ export default function LeadCaptureForm({
       className="space-y-6 rounded-lg border border-border bg-surface p-5 shadow-sm md:space-y-7 md:p-10"
     >
       <input name="_gotcha" type="text" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+      {sourcePageDefault ? <input name="source_page" type="hidden" value={sourcePageDefault} /> : null}
       {introText ? <p className="text-sm leading-relaxed text-muted">{introText}</p> : null}
       {state.error ? <p className="text-red-600 font-bold text-center text-sm" role="alert" aria-live="polite">{state.error}</p> : null}
+
+      {productDefault ? (
+        <div className="rounded-md border border-[#C8752A]/25 bg-white px-4 py-3 shadow-sm md:px-5 md:py-4">
+          <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#C8752A]">Quote Request Product</p>
+          <div className="mt-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm font-black leading-snug text-primary md:text-base">{productDefault}</p>
+            <span className="inline-flex w-fit rounded-sm bg-[#FFF8F1] px-3 py-2 text-[10px] font-black uppercase tracking-[0.12em] text-[#9a5a20]">
+              Form Preferred
+            </span>
+          </div>
+        </div>
+      ) : null}
 
       <div className="border-b border-border pb-6 md:pb-7">
         <div className="mb-5 flex flex-wrap items-baseline justify-between gap-2">

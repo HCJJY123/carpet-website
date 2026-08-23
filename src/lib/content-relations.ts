@@ -15,8 +15,8 @@ export const caseProductRelations: Record<string, string[]> = {
   "case-10": ["custom-floral-printed-hotel-carpet", "3d-printed-hotel-carpet", "custom-luxury-hotel-room-carpet"],
   "case-11": ["public-area-heavy-duty"],
   "case-12": ["gold-mining-carpet-mat"],
-  "case-13": ["3d-printed-banquet-hall-carpet", "glitter-hotel-corridor-broadloom-carpet", "luxury-hotel-broadloom"],
-  "case-14": ["natural-sisal-carpet", "custom-sculpted-wool-lobby-rug", "commercial-stair-carpet-runner"],
+  "case-13": ["gold-mining-carpet-mat"],
+  "case-14": ["nylon-office-carpet-tile", "commercial-nylon-tiles", "ecocore-pe-backing-carpet-tiles"],
 };
 
 const fallbackProductRelations: Record<ProductCategoryId, string[]> = {

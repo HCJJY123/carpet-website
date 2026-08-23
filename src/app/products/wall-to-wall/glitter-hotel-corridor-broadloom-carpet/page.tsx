@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AnswerFirst from "@/components/AnswerFirst";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 
@@ -80,7 +81,27 @@ const faqs = [
 const relatedLinks = [
   { label: "Wall-to-Wall Carpets", href: "/products/wall-to-wall" },
   { label: "Hotel Carpet Solutions", href: "/solutions/hotel-hospitality" },
+  { label: "Stain-Hiding Corridor Guide", href: "/blog/hotel-corridor-carpet-stain-hiding-procurement-guide" },
+  { label: "Mexico Corridor Carpet Guide", href: "/blog/hotel-corridor-carpet-in-mexico" },
   { label: "Contact Vishomecarpet", href: "/contact" }
+];
+
+const procurementGuideLinks = [
+  {
+    title: "Hotel corridor carpet that hides stains without looking dirty",
+    href: "/blog/hotel-corridor-carpet-stain-hiding-procurement-guide",
+    text: "Use this guide to compare color depth, pattern scale, cleaning access, and replacement stock before approving a corridor carpet order.",
+  },
+  {
+    title: "Hotel corridor carpet in Mexico",
+    href: "/blog/hotel-corridor-carpet-in-mexico",
+    text: "A country-focused corridor carpet buying guide covering guest traffic, lighting, broadloom planning, and maintenance-ready procurement.",
+  },
+  {
+    title: "Hotel carpet supplier checklist",
+    href: "/blog/hotel-carpet-supplier-checklist-project-order-guide",
+    text: "A supplier-verification checklist for sample approval, roll planning, documents, MOQ, lead time, and quotation control.",
+  },
 ];
 
 export const metadata: Metadata = {
@@ -112,8 +133,11 @@ const productJsonLd = {
   "@type": "Product",
   "@id": `${siteUrl}${canonicalPath}#product`,
   "name": "Glitter Hotel Corridor Broadloom Carpet",
+  "sku": product.id,
+  "mpn": product.id,
   "image": product.mainImages.map((image) => `${siteUrl}${image.src}`),
   "url": `${siteUrl}${canonicalPath}`,
+  "mainEntityOfPage": `${siteUrl}${canonicalPath}`,
   "description": "Custom blue and gold glitter-pattern wall-to-wall broadloom carpet for hotel corridors, lobbies, ballrooms, and luxury hospitality projects.",
   "brand": { "@type": "Brand", "name": "Vishomecarpet" },
   "category": "Wall-to-Wall Hotel Broadloom Carpet",
@@ -125,12 +149,13 @@ const productJsonLd = {
     "lowPrice": product.fobPrice.lowPrice,
     "highPrice": product.fobPrice.highPrice,
     "offerCount": 1,
-    "availability": "https://schema.org/InStock",
-    "seller": { "@type": "Organization", "name": "Vishome Global Commercial Carpet Co. Ltd.", "url": siteUrl }
+    "availability": "https://schema.org/PreOrder",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": { "@type": "Organization", "name": "Vishome Global Commercial Carpet Co., Ltd.", "url": siteUrl }
   },
   "manufacturer": {
     "@type": "Organization",
-    "name": "Vishome Global Commercial Carpet Co. Ltd.",
+    "name": "Vishome Global Commercial Carpet Co., Ltd.",
     "url": siteUrl
   },
   "additionalProperty": [
@@ -138,6 +163,9 @@ const productJsonLd = {
     { "@type": "PropertyValue", "name": "Traffic Class", "value": "High-Traffic Commercial" },
     { "@type": "PropertyValue", "name": "Yarn System", "value": "Patterned Tufted Broadloom" },
     { "@type": "PropertyValue", "name": "Backing", "value": "Commercial Woven Backing" },
+    { "@type": "PropertyValue", "name": "Availability", "value": "Quotation required / made to order" },
+    { "@type": "PropertyValue", "name": "Sales Unit", "value": product.fobPrice.unit },
+    { "@type": "PropertyValue", "name": "Price Basis", "value": "Reference FOB range; final price and validity require a written quotation" },
     { "@type": "PropertyValue", "name": "Roll Width", "value": "4m" },
     { "@type": "PropertyValue", "name": "FOB Price Range", "value": "US$4.20-8.60 / SQM" },
     { "@type": "PropertyValue", "name": "Project MOQ", "value": "300 SQM" },
@@ -253,6 +281,28 @@ export default function ProductDetailPage() {
         </div>
       </section>
 
+      <AnswerFirst
+        eyebrow="Hotel Corridor Carpet Buying Answer"
+        title="Choose patterned broadloom when guest corridors need a premium look and controlled stain visibility"
+        answer="For hotel corridors, patterned wall-to-wall broadloom is usually the stronger choice when the buyer wants a continuous hospitality look, softer guest footfall, and better visual control of luggage-wheel paths, small spills, and daily soil. Confirm corridor width, lighting, roll plan, cleaning method, spare material, and written quotation terms before comparing only color or square-metre price."
+        facts={[
+          { label: "Best Use", value: "Hotel corridors, elevator halls, casino walkways, lobbies, and connected public areas" },
+          { label: "Key Risk", value: "Approving a sample without checking lighting, pattern scale, seam plan, and cleaning access" },
+          { label: "Document Check", value: "Request TDS, roll width, backing, fire requirement, packing data, and quotation validity" },
+          { label: "Quote Basis", value: "Reference FOB range only; final validity requires a written quotation" },
+        ]}
+        moq={[
+          { label: "Sample", value: product.moqTiers.sample },
+          { label: "Trial Order", value: product.moqTiers.trialOrder },
+          { label: "Project MOQ", value: product.moqTiers.project },
+        ]}
+        suitableFor={["Long hotel corridors needing a continuous broadloom look", "Hospitality zones where pattern can reduce visible daily soil", "Projects that can plan roll direction, seams, and spare stock before ordering"]}
+        notSuitableFor={["Wet or outdoor areas", "Projects requiring tile-by-tile replacement as the main priority", "Orders needing confirmed stock or final compliance documents without written confirmation"]}
+        evidence="Specifications, FOB ranges, availability, and optional treatments on this page are sourcing references. Request written confirmation for final construction, fire requirement, stock or production status, lead time, and quotation validity."
+        quoteHref={`/contact?product=${encodeURIComponent(product.name)}#quote-form`}
+        quoteLabel="Request Corridor Carpet Quote"
+      />
+
       <section className="section-padding bg-surface border-y border-border">
         <div className="container-fox">
           <h2 className="text-3xl font-bold text-primary mb-12 uppercase text-center tracking-widest">Technical Data Sheet (TDS)</h2>
@@ -273,6 +323,28 @@ export default function ProductDetailPage() {
           <div className="space-y-5">
             {descriptionParagraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 42)} className="text-muted text-lg leading-relaxed">{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-surface border-y border-border">
+        <div className="container-fox">
+          <div className="mb-10 max-w-3xl">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-accent">AI-Ready Procurement Links</p>
+            <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
+              Related Hotel Carpet Buying Guides
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-muted md:text-base">
+              These supporting guides explain the purchase questions behind this corridor broadloom product: stain visibility, supplier verification, roll planning, and maintenance-ready approval.
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {procurementGuideLinks.map((item) => (
+              <Link key={item.href} href={item.href} className="group border border-border bg-white p-6 transition hover:border-accent hover:shadow-lg">
+                <h3 className="text-sm font-black uppercase leading-snug text-primary group-hover:text-accent">{item.title}</h3>
+                <p className="mt-4 text-sm leading-6 text-muted">{item.text}</p>
+              </Link>
             ))}
           </div>
         </div>

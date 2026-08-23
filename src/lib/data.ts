@@ -2,14 +2,14 @@ export interface ProductColor { name: string; hex: string; }
 export interface TechnicalSpecs { fireRating: string; trafficClass: string; fiber?: string; yarnSystem: string; backing: string; pileWeight: string; totalThickness: string; rollWidth?: string; soundInsulation?: string; antistatic: string; }
 export interface FobPriceRange { display: string; lowPrice: string; highPrice: string; currency: "USD"; unit: string; }
 export interface ProductMoqTiers { sample: string; trialOrder: string; project: string; }
-export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; moqTiers: ProductMoqTiers; leadTime: string; fobPrice?: FobPriceRange; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
+export interface Product { id: string; name: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; description: string; longDescription: string; image: string; imageAlt?: string; gallery?: { src: string; alt: string; }[]; moq: string; moqTiers: ProductMoqTiers; leadTime: string; fobPrice?: FobPriceRange; availability?: "preorder" | "in-stock"; spec: { material: string; size: string; colors: ProductColor[]; }; technicalSpecs: TechnicalSpecs; features: string[]; }
 export interface CaseSpecItem { label: string; value: string; }
 export type CaseSectionBlock =
   | { type: "paragraph"; text: string }
   | { type: "list"; items: { label: string; text: string }[] };
 export interface CaseSection { title: string; paragraphs: string[]; blocks?: CaseSectionBlock[]; image?: string; imageAlt?: string; imageCaption?: string; }
 export interface CaseCostItem { item: string; amount: string; }
-export interface CaseStudy { id: string; title: string; metadataTitle?: string; h1?: string; tag?: string; subtitle?: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; image: string; imageAlt?: string; description: string; specificationTitle?: string; projectSpecs: CaseSpecItem[]; sections: CaseSection[]; technicalDetails: string[]; designHighlights: string[]; results: string[]; gallery?: string[]; costAnalysis?: CaseCostItem[]; faqs?: { question: string; answer: string; }[]; recommendedProductIds?: string[]; order?: number; relatedLinks?: { label: string; href: string }[]; }
+export interface CaseStudy { id: string; title: string; metadataTitle?: string; h1?: string; tag?: string; subtitle?: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; image: string; imageAlt?: string; description: string; specificationTitle?: string; projectSpecs: CaseSpecItem[]; sections: CaseSection[]; technicalDetails: string[]; designHighlights: string[]; results: string[]; gallery?: string[]; costAnalysis?: CaseCostItem[]; faqs?: { question: string; answer: string; }[]; recommendedProductIds?: string[]; }
 
 export const brandInfo = {
   name: "Vishome Global Commercial Carpet Co., Ltd.",
@@ -20,7 +20,7 @@ export const brandInfo = {
   whatsapp: "+86 152 2288 5400",
   wechat: "8615222885400",
   address: "Cuihuangkou Town, Wuqing District, Tianjin 301700, China",
-  stats: { area: "50,000㎡", employees: "900+", markets: "45+", experience: "15+ Years" }
+  stats: { area: "50,000㎡", employees: "900+", markets: "45+", experience: "Since 2005" }
 };
 
 export const products: Product[] = [
@@ -150,6 +150,48 @@ export const products: Product[] = [
       antistatic: "Low Static Office Use"
     },
     features: ["50x50 Carpet Tiles", "Nylon / PP Option", "Office Carpet", "Interlocking Modular Floor"]
+  },
+  {
+    id: "pp-bitumen-backed-office-carpet-tiles",
+    name: "PP Bitumen Backed Office Carpet Tiles 50x50cm",
+    category: "carpet-tiles",
+    description: "Vishomecarpet 100% PP fiber bitumen backed office carpet tiles in 50x50cm squares for commercial offices, meeting rooms, home offices, retail, and OEM flooring projects.",
+    longDescription: "Vishomecarpet PP Bitumen Backed Office Carpet Tiles 50x50cm are cost-effective modular carpet squares for office buildings, meeting rooms, home offices, retail spaces, corridors, and light-to-medium commercial interiors. The 100% PP fiber surface supports practical color and pattern options, while the bitumen backing helps dimensional stability, non-slip installation support, easy replacement, carton-based logistics, and factory OEM supply for B2B buyers comparing commercial flooring by specification, MOQ, lead time, and landed cost.",
+    image: "/images/products/pp-bitumen-backed-office-carpet-tiles/01-hero-office-meeting-room.webp",
+    imageAlt: "Vishomecarpet PP bitumen backed office carpet tiles 50x50cm installed in a modern meeting room",
+    gallery: [
+      { src: "/images/products/pp-bitumen-backed-office-carpet-tiles/01-hero-office-meeting-room.webp", alt: "Vishomecarpet PP bitumen backed office carpet tiles 50x50cm installed in a modern meeting room" },
+      { src: "/images/products/pp-bitumen-backed-office-carpet-tiles/02-blue-meeting-room-carpet-tiles.webp", alt: "Blue and gray PP office carpet tiles with bitumen backing in a meeting room" },
+      { src: "/images/products/pp-bitumen-backed-office-carpet-tiles/03-executive-office-carpet-tiles.webp", alt: "Gray 50x50cm polypropylene carpet tiles for executive office flooring" },
+      { src: "/images/products/pp-bitumen-backed-office-carpet-tiles/04-open-office-lounge-carpet-tiles.webp", alt: "Modular PP carpet tiles for open office lounge and commercial flooring projects" }
+    ],
+    moq: "200 SQM",
+    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Standard Color", project: "200 SQM" },
+    leadTime: "10-20 Days",
+    fobPrice: { display: "US$3.20-7.80 / SQM", lowPrice: "3.20", highPrice: "7.80", currency: "USD", unit: "SQM" },
+    availability: "preorder",
+    spec: {
+      material: "100% PP Fiber",
+      size: "50x50 cm",
+      colors: [
+        { name: "Graphite Gray", hex: "#4B4F52" },
+        { name: "Charcoal", hex: "#272B2F" },
+        { name: "Silver Gray", hex: "#8B9094" },
+        { name: "Office Blue", hex: "#466C86" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "Confirm Required Standard for Exact Construction",
+      trafficClass: "Commercial Office / Medium to Heavy Contract Use",
+      fiber: "100% PP Fiber",
+      yarnSystem: "Tufted Loop / Patterned Modular Tile",
+      backing: "Bitumen Backing",
+      pileWeight: "450-650 g/sqm Option",
+      totalThickness: "Approx. 5.0-7.0mm Option",
+      soundInsulation: "Office Acoustic Comfort Option",
+      antistatic: "Available / Project Confirmation"
+    },
+    features: ["100% PP Fiber", "Bitumen Backing", "50x50cm Modular Tile", "Non-Slip Commercial Flooring", "OEM Factory Supply"]
   },
   {
     id: "nylon-office-carpet-tile",
@@ -400,6 +442,56 @@ export const products: Product[] = [
       antistatic: "Available on Request"
     },
     features: ["Glitter Hotel Carpet", "Custom Corridor Pattern", "Wall-to-Wall Broadloom"]
+  },
+  {
+    id: "singapore-casino-carpet",
+    name: "Custom Oriental Flower Luxury Casino Carpet for Singapore",
+    category: "wall-to-wall",
+    description: "Custom oriental flower luxury casino carpet for Singapore gaming floors, VIP rooms, clubs, hotel corridors, and entertainment public areas.",
+    longDescription: "Vishomecarpet Custom Oriental Flower Luxury Casino Carpet for Singapore is a made-to-order commercial carpet program for casino flooring, hotel entertainment spaces, VIP rooms, clubs, corridors, and high-traffic hospitality interiors. The visual direction combines oriental floral patterning, gold accent effects, and high-density loop pile texture for buyers who need a premium casino carpet supplier with OEM pattern support. Final fiber, backing, roll or modular format, fire-document requirements, packing, delivery schedule, and project quotation are confirmed by written specification and sample approval.",
+    image: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/01-main-oriental-flower-luxury-casino-carpet.webp",
+    imageAlt: "Custom oriental flower luxury casino carpet patterns for Singapore gaming floors by Vishomecarpet",
+    gallery: [
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/01-main-oriental-flower-luxury-casino-carpet.webp", alt: "Oriental flower luxury casino carpet pattern options for Singapore gaming floors" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/02-professional-casino-hotel-flooring.webp", alt: "Professional casino and hotel flooring scene with custom patterned commercial carpet" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/03-customization-oem-service-casino-carpet.webp", alt: "Customization and OEM service carpet for Singapore casino corridor projects" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/04-durable-non-slip-backing-easy-installation.webp", alt: "Durable non slip backing and easy installation detail for casino carpet" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/05-high-density-loop-pile-stain-resistant.webp", alt: "High density loop pile stain resistant texture for luxury casino carpet" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/06-source-factory-global-supply-rolls.webp", alt: "Vishomecarpet source factory global supply rolls for custom casino carpet projects" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/07-non-slip-backing-structure-detail.webp", alt: "Non slip backing structure detail for custom casino carpet installation" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/08-various-artistic-patterns-casino-flooring.webp", alt: "Various artistic patterns available for casino and hotel entertainment carpet" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/09-beige-loop-pile-stain-resistant-closeup.webp", alt: "Beige and gold high density loop pile close up for stain resistant casino carpet" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/10-custom-oem-casino-corridor-carpet.webp", alt: "Custom OEM casino corridor carpet for hotel entertainment zones" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/11-professional-casino-club-flooring.webp", alt: "Professional casino and club flooring with custom patterned commercial carpet" },
+      { src: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/12-source-factory-carpet-roll-supply.webp", alt: "Vishomecarpet source factory carpet roll supply for casino carpet projects" }
+    ],
+    moq: "300 SQM",
+    moqTiers: { sample: "Material Swatch / Strike-Off Available", trialOrder: "100 SQM Approved Pattern", project: "300 SQM Custom Casino Project" },
+    leadTime: "Confirmed After Pattern, Backing and Sample Approval",
+    fobPrice: { display: "US$4.60-9.80 / SQM", lowPrice: "4.60", highPrice: "9.80", currency: "USD", unit: "SQM" },
+    spec: {
+      material: "High-Density Loop Pile with Project-Confirmed Backing",
+      size: "Custom Roll or Modular Project Format Confirmed by Quotation",
+      colors: [
+        { name: "Oriental Gold", hex: "#C69B38" },
+        { name: "Warm Champagne", hex: "#D7C3A1" },
+        { name: "Casino Charcoal", hex: "#1D2026" },
+        { name: "Gaming Gold", hex: "#C69B38" },
+        { name: "Soft Beige", hex: "#BBAA8C" }
+      ]
+    },
+    technicalSpecs: {
+      fireRating: "Confirmed by Project Specification",
+      trafficClass: "High-Traffic Commercial / Casino Use",
+      fiber: "High-Density Loop Pile, Final Fiber Confirmed by Sample",
+      yarnSystem: "High-Density Loop Pile",
+      backing: "Non-Slip Backing Option Shown; Final Backing Confirmed by Project",
+      pileWeight: "Confirmed by Project Specification",
+      totalThickness: "Confirmed by Project Specification",
+      rollWidth: "Confirmed According to Project Format",
+      antistatic: "Available by Project Specification"
+    },
+    features: ["Singapore Casino Carpet", "Oriental Flower Pattern", "Custom OEM Design", "High-Density Loop Pile", "Non-Slip Backing Option", "Gaming Floor Specification Support"]
   },
   {
     id: "custom-floral-printed-hotel-carpet",
@@ -713,9 +805,27 @@ export const products: Product[] = [
 ];
 
 export const productCategories = [
-  { id: "carpet-tiles", name: "Commercial Carpet Tiles", description: "Modular solutions.", image: "/images/category-tiles.webp", slug: "carpet-tiles" },
-  { id: "wall-to-wall", name: "Wall-to-Wall Carpets", description: "Seamless broadloom.", image: "/images/category-broadloom.webp", slug: "wall-to-wall" },
-  { id: "public-area", name: "Public Area Carpets", description: "Heavy-duty specialized flooring.", image: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp", slug: "public-area" }
+  {
+    id: "carpet-tiles",
+    name: "Commercial Carpet Tiles",
+    description: "50x50 modular carpet tiles for offices, hotels, schools, healthcare areas, retail floors, samples, MOQ planning, and bulk project quotes.",
+    image: "/images/category-tiles.webp",
+    slug: "carpet-tiles"
+  },
+  {
+    id: "wall-to-wall",
+    name: "Wall-to-Wall Carpets",
+    description: "Custom hotel broadloom and wall-to-wall carpet for guestrooms, corridors, lobbies, ballrooms, samples, design approval, and project quotes.",
+    image: "/images/category-broadloom.webp",
+    slug: "wall-to-wall"
+  },
+  {
+    id: "public-area",
+    name: "Public Area Carpets",
+    description: "Heavy-duty carpet systems for airports, exhibitions, corridors, custom wool lobby rugs, natural sisal carpets, and gold mining carpet mats.",
+    image: "/images/products/public-area/public-area-heavy-duty/01-main-public-area-heavy-duty-carpet.webp",
+    slug: "public-area"
+  }
 ];
 
 export const faqSections = [
@@ -1775,211 +1885,176 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "case-13",
-    title: "Event Hall & Ballroom Carpet Planning - Romania",
-    subtitle: "A wall-to-wall broadloom planning guide for banquet halls and ballrooms that need pattern continuity, acoustic balance, and formal event presentation.",
-    category: "wall-to-wall",
-    image: "/images/cases/event-hall-ballroom-romania/hero.jpg",
-    imageAlt: "Gray placeholder for an event hall and ballroom carpet planning case in Romania",
-    description: "A procurement guide for banquet hall and ballroom carpet: pattern design, acoustic backing, fire ratings, and seaming for large-format event venues.",
-    specificationTitle: "Recommended Specification",
+    title: "Gold Mining Carpet Distributor Roll Planning - Colombia",
+    subtitle: "A procurement guide for Colombia mining-supply distributors comparing stocked pile weights, sample validation, custom roll length, wet handling and container loading before a bulk order.",
+    category: "public-area",
+    image: "/images/projects/case-13/colombia-gold-mining-carpet-hero.webp",
+    imageAlt: "Gold mining carpet mat used in an alluvial washing setup for Colombia distributor planning",
+    description: "A Colombia-focused gold mining carpet procurement scenario covering stocked sample weights, distributor roll sizing, reinforced backing, FOB quotation details and 40HC loading decisions.",
+    specificationTitle: "Gold Mining Carpet Procurement Snapshot",
     projectSpecs: [
-      { label: "Location", value: "Romania" },
-      { label: "Project Scope", value: "Banquet hall, ballroom, and pre-function corridor" },
-      { label: "Size", value: "900㎡ reference scenario" },
-      { label: "Face Fiber", value: "Solution-dyed nylon 6,6" },
-      { label: "Pile Construction", value: "Cut-pile / cut-loop combination" },
-      { label: "Pile Weight", value: "900–1200 g/㎡" },
-      { label: "Backing", value: "Action-back or PVC-reinforced" },
-      { label: "Fire Rating", value: "EN 13501-1 Bfl-s1" },
-      { label: "Colorfastness", value: "ISO 105, grade 4+" },
-      { label: "Pattern", value: "Custom CAD-matched border/medallion repeat" },
+      { label: "Country Focus", value: "Colombia" },
+      { label: "Buyer Type", value: "Mining-supply distributor and repeat bulk buyer" },
+      { label: "Application", value: "Alluvial gold sluice mats and resale roll programs" },
+      { label: "Material", value: "100% polyester entrapment pile with reinforced anti-tear backing" },
+      { label: "Stocked Weight References", value: "1400, 1700 and 2100 g/m² sample routes" },
+      { label: "Order Planning", value: "Custom roll length, FOB packing and 40HC loading calculation" }
     ],
     sections: [
       {
-        title: "Project Overview",
+        title: "Project Brief",
         paragraphs: [
-          "Ballroom and multi-purpose event hall flooring needs to handle heavy guest movement, stage changes, rolling AV equipment, and rapid room resets without losing its visual discipline. The floor must look polished in photographs, stay readable under warm chandelier light and LED stage light, and still perform like a true commercial surface.",
-          "For a 900㎡ venue in Romania, the most reliable direction is a custom wall-to-wall broadloom program with controlled repeat logic and a pattern that can support both formal banquet seating and open event layouts. The specification has to balance presentation and practicality rather than leaning too far toward either one.",
-          "The right result is not just a decorative carpet. It is a venue asset that helps the hall transition between conferences, dinners, weddings, and live performances while keeping maintenance, cleaning, and replacement planning manageable."
+          "A Colombia distributor preparing to sell gold mining carpet needs more than a generic miners moss replacement. The buyer has to support different alluvial operations, different sluice widths and different cleaning habits while still keeping a manageable stock program.",
+          "The practical starting point is to test stocked pile weights before changing the specification. Samples in 1400, 1700 and 2100 g/m² allow the distributor to compare fibre hold, drainage, sediment release and backing strength without paying for a custom production setup too early.",
+          "This guide frames the order as a repeatable distributor program: confirm field conditions, choose a stocked or custom weight, align roll length with local equipment, then calculate carton or roll loading before the FOB quotation is fixed."
         ]
       },
       {
-        title: "Application Requirements",
+        title: "Sample and Weight Selection",
         paragraphs: [
-          "The project should be specified for heavy commercial traffic because banquet turnover creates constant chair movement, guest circulation, and repeated rolling loads from staging and audiovisual equipment.",
-          "Acoustic performance matters, but the construction should not become so deep that it slows cleaning or complicates seaming. A balanced backing or underlay choice can improve speech comfort and reduce hollow sound without sacrificing serviceability.",
-          "The visual language should support border zoning, medallion placement, and a calm center field so the ballroom can work with different table plans and event formats. Pattern continuity is especially important across dance-floor edges and pre-function transitions.",
-          "Spill recovery also needs to be part of the brief. Wine, catering, and beverage service are normal event conditions, so the top surface should support fast cleanup and resist obvious traffic shading."
+          "Gold mining carpet selection should follow the way the sluice is actually used. Fine material, high water velocity and frequent cleanup call for a different balance than coarser feed, slower flow and longer operating cycles.",
+          "For a first Colombia order, stocked samples reduce decision risk. The distributor can send samples to several field users, collect feedback on gold retention, cleaning effort and pile recovery, then decide whether a stocked weight is enough or a custom-weight run is justified.",
+          "A custom weight can be useful when a market has a dominant sluice configuration, but it should be treated as a second-step decision. The setup cost and lead time only make sense after field users agree on the target behaviour."
         ],
-        image: "/images/cases/event-hall-ballroom-romania/pattern-detail.jpg",
-        imageAlt: "Gray placeholder for ballroom carpet pattern detail"
+        image: "/images/projects/case-13/colombia-gold-mining-carpet-sample-comparison.webp",
+        imageAlt: "Close-up texture of gold mining carpet pile used for sample weight comparison"
       },
       {
-        title: "Recommended Specification",
+        title: "Distributor Roll Planning",
         paragraphs: [
-          "A solution-dyed nylon 6,6 face fiber gives the project a durable commercial surface with better color control than decorative materials chosen only for appearance. The cut-pile and cut-loop combination helps the carpet present cleanly while remaining practical for repeated event use.",
-          "Pile weight in the 900–1200 g/㎡ range keeps the floor substantial enough for hospitality presentation while remaining manageable for maintenance and seaming. Action-back or PVC-reinforced backing can then be selected according to the installation method and site conditions.",
-          "The fire standard should be confirmed before production, not after. For this type of venue, EN 13501-1 Bfl-s1 is the level buyers usually want to lock down early in the procurement sequence.",
-          "For the final look, a custom CAD-matched border and medallion repeat gives the venue a more formal identity and keeps the floor aligned with event photography and hospitality expectations."
-        ]
+          "Roll size is a commercial decision, not only a production detail. If the roll length does not match common sluice equipment in the local market, the distributor may create unnecessary off-cuts and weaken resale margins.",
+          "A standard 2 m wide roll can be converted into several resale formats, but the buyer should confirm the most common downstream cut sizes before ordering. If a custom length such as 24 m or another market-specific length improves resale efficiency, the change should be checked against rolled diameter and container space.",
+          "Color, label, roll wrapping and pallet or loose-roll handling should also be stated in the quotation. These small details affect warehouse control and make repeat orders easier to manage."
+        ],
+        image: "/images/projects/case-13/colombia-gold-mining-carpet-roll-packing.webp",
+        imageAlt: "OEM roll size and packaging planning for gold mining carpet distributor orders"
       },
       {
-        title: "Procurement & Logistics",
+        title: "FOB Quotation and Loading Control",
         paragraphs: [
-          "Roll width should stay at 4m standard unless the installation plan proves another dimension is more efficient. The seam layout needs to be defined before cutting so the border and medallion relationship stays consistent across the hall and adjoining circulation areas.",
-          "Underlay selection should be set at the same time as the carpet specification. A 6mm PU foam or felt layer can improve acoustic comfort and underfoot feel, but only if the installation strategy and threshold details support it.",
-          "Packaging should protect the rolls from moisture in sea freight and on site. A cardboard core and moisture-barrier wrap are the simplest way to reduce transit risk while keeping handling straightforward at destination.",
-          "Lead time needs to account for artwork approval and custom weaving or production. Ballroom programs with repeat and border control almost always take longer than stock broadloom, so the buyer should confirm the calendar before committing to an event date."
-        ]
-      },
-      {
-        title: "Why Vishomecarpet",
-        paragraphs: [
-          "Vishomecarpet can support CAD pattern matching, fire-rated broadloom planning, and seam-layout review so the procurement team has a clearer path from concept to installation. That combination reduces the risk of a good design failing at the technical handoff stage.",
-          "For event venues, the value is in being able to align appearance, compliance, and maintenance with a single specification rather than juggling three separate decisions. The result is a floor that performs under pressure and still photographs like a premium hospitality space."
+          "For Colombia buyers comparing suppliers, the FOB offer should clearly state fibre composition, pile weight, thickness range, backing, roll width, roll length, square metres per roll, total square metres and packing method.",
+          "Container loading should not be estimated from a previous order unless the roll length and weight are identical. Heavier or longer rolls change diameter, and that changes the number of rolls that can be loaded safely in a 40HC container.",
+          "Before confirming the order, the distributor should ask for a loading calculation tied to the final specification. This prevents landed-cost surprises and gives the sales team a more reliable resale price in the Colombia market."
         ]
       }
     ],
     technicalDetails: [
-      "Solution-dyed nylon 6,6 supports stronger commercial color stability.",
-      "Cut-pile and cut-loop construction balances visual texture and traffic tolerance.",
-      "EN 13501-1 Bfl-s1 fire compliance should be confirmed before production release.",
-      "Border and medallion repeat control help the ballroom support multiple event layouts.",
-      "Moisture-barrier packaging reduces freight and handling risk for export supply."
+      "Stocked sample weights help avoid unnecessary custom setup cost before field validation.",
+      "Reinforced backing matters because saturated mats are lifted with trapped sediment during cleanup.",
+      "Roll length affects both downstream cutting waste and container loading efficiency.",
+      "FOB quotations should state square metres per roll and total square metres, not only roll count."
     ],
     designHighlights: [
-      "Formal banquet styling with a controlled center field and border framing.",
-      "Pattern continuity suited to event photography and stage presentation.",
-      "Acoustic planning that supports speech clarity without excess pile depth.",
-      "A finish that remains legible through mixed chandelier and LED lighting."
+      "Distributor-first roll planning for Colombia resale channels",
+      "Sample sequence designed to compare field behaviour before bulk commitment",
+      "Product links stay focused on the Gold Mining Carpet Mat page to avoid authority dilution"
     ],
     results: [
-      "The venue gains a floor that can move between banquet, conference, and performance use more gracefully.",
-      "Pattern zoning supports cleaner photography and a stronger first impression for guests.",
-      "The buyer gets a specification that links traffic, fire, and cleaning requirements instead of treating them separately.",
-      "Seam planning and repeat control reduce installation uncertainty during a live event schedule."
+      "A clearer sample-to-bulk decision path for Colombia gold-recovery buyers.",
+      "Reduced off-cut risk by matching roll length to common local sluice sizes.",
+      "More reliable landed-cost planning through specification-based container loading."
     ],
     faqs: [
       {
-        question: "Is broadloom better than carpet tiles for a ballroom?",
-        answer: "For a large formal ballroom, broadloom often gives a more continuous visual field and fewer seam interruptions. Carpet tiles can still be useful in some event zones, but the brief here is built around a wall-to-wall appearance and a controlled pattern repeat."
+        question: "Is one gold mining carpet weight suitable for every Colombia sluice operation?",
+        answer: "No. Flow velocity, feed size, riffle design and cleaning frequency change the best pile weight. A distributor should test stocked samples with real field users before standardising a bulk specification."
       },
       {
-        question: "Why does pattern repeat matter in event flooring?",
-        answer: "Large event rooms show pattern mismatch quickly because tables, lights, and camera angles expose every seam. A controlled repeat helps the border, medallion, and field stay visually aligned across the hall and its transitions."
+        question: "Can a Colombia distributor order custom roll lengths?",
+        answer: "Yes. Custom lengths can reduce off-cut waste when they match common local sluice sizes, but the final length should be checked against rolled diameter and 40HC loading before the purchase order is confirmed."
       },
       {
-        question: "What fire standard should be confirmed first?",
-        answer: "The venue requirement should always be confirmed first, then matched to the quoted construction. For this project brief, EN 13501-1 Bfl-s1 is the reference point to lock down during procurement."
-      },
-      {
-        question: "What information should be sent for a ballroom RFQ?",
-        answer: "Send the floor plan, total area, event use model, fire standard, desired pattern direction, lighting conditions, installation window, and any acoustic or cleaning requirement. That gives the supplier enough detail to quote the correct build rather than a generic carpet."
+        question: "What should be included in the gold mining carpet enquiry?",
+        answer: "Send destination country, target roll width and length, expected order quantity, preferred weight, field conditions, resale needs and any label or packing requirements."
       }
     ],
-    recommendedProductIds: ["3d-printed-banquet-hall-carpet", "glitter-hotel-corridor-broadloom-carpet", "luxury-hotel-broadloom"],
-    order: 13,
+    recommendedProductIds: ["gold-mining-carpet-mat"]
   },
   {
     id: "case-14",
-    title: "Sisal & Natural Fiber Rug Wholesale Sourcing Guide",
-    subtitle: "A wholesale buyer guide that separates true sisal from sisal-look alternatives and maps the right backing, binding, and climate controls.",
-    category: "public-area",
-    image: "/images/cases/sisal-natural-fiber-sourcing/hero.jpg",
-    imageAlt: "Gray placeholder for sisal and natural fiber rug wholesale sourcing",
-    description: "A buyer's guide to sisal and natural-fiber-look rugs for wholesale import: weave types, backing options, humidity handling, and border binding specs.",
-    specificationTitle: "Wholesale Specification Table",
+    title: "Office Carpet Tiles Phased Renovation - Canada",
+    subtitle: "A Canada-focused office flooring guide for buyers planning 50x50 commercial carpet tiles, phased installation, acoustic comfort, attic stock and long-term replacement strategy.",
+    category: "carpet-tiles",
+    image: "/images/projects/case-14/canada-office-carpet-tiles-hero.webp",
+    imageAlt: "Commercial office carpet tiles for a Canada phased renovation procurement guide",
+    description: "A Canada office carpet tile planning scenario covering 50x50 modular format, occupied-site installation, backing stability, spare-tile planning, winter delivery and replacement control.",
+    specificationTitle: "Office Carpet Tile Procurement Snapshot",
     projectSpecs: [
-      { label: "Product Line", value: "True sisal and sisal-look natural fiber rugs" },
-      { label: "Weave Types", value: "Herringbone, basketweave, and boucle loop" },
-      { label: "Backing (True Sisal)", value: "Natural latex or jute backing" },
-      { label: "Backing (Sisal-Look)", value: "Synthetic backing" },
-      { label: "Border Binding", value: "Cotton, canvas, or leather-corner binding" },
-      { label: "Moisture Handling", value: "True sisal is not recommended for high-humidity sites without sealed backing" },
-      { label: "Custom Sizing", value: "Room-size cutting and runner formats available" },
+      { label: "Country Focus", value: "Canada" },
+      { label: "Application", value: "Corporate offices, meeting rooms, open work areas and corridors" },
+      { label: "Format", value: "50 x 50 cm modular commercial carpet tiles" },
+      { label: "Performance Priority", value: "Heavy commercial traffic, acoustic comfort and local replacement" },
+      { label: "Installation Mode", value: "Phased installation for occupied or partially occupied offices" },
+      { label: "Buyer Control", value: "Attic stock, color batch tracking and adhesive compatibility" }
     ],
     sections: [
       {
-        title: "Project Overview",
+        title: "Project Brief",
         paragraphs: [
-          "Natural-fiber-look rugs occupy a different sourcing lane from tufted carpet tiles. Buyers usually choose them for residential accent programs, boutique hospitality, retail display, and imported rug assortments where texture and a more natural visual language matter.",
-          "For wholesale distribution, the real decision is not whether a sample looks attractive. It is whether the rug construction, backing, binding, and packing method fit the destination climate and the buyer's market model.",
-          "This guide separates true sisal from sisal-look synthetic alternatives so a wholesale buyer can quote the right product family the first time instead of treating all natural-fiber-looking rugs as interchangeable."
+          "Canada office renovation buyers often need to upgrade flooring without taking the whole workplace offline. This makes modular office carpet tiles a practical option because installation can be split by floor, department or evening work window.",
+          "The buyer's decision should not stop at color. For commercial use, the specification needs to cover yarn, backing stability, tile size, traffic class, acoustic comfort, fire documents, adhesive compatibility and replacement planning.",
+          "This case frames the purchase as a tenant-improvement or property-management decision, where long-term maintenance and local tile replacement are just as important as the first installation."
+        ]
+      },
+      {
+        title: "Why Modular Tiles Fit Occupied Offices",
+        paragraphs: [
+          "A 50x50 carpet tile format supports phased work because installers can open one zone, replace or install tiles, and return the area to use faster than a full broadloom replacement. This is useful for offices where staff, furniture and IT equipment cannot all be moved at once.",
+          "Carpet tiles also help with future churn. If a meeting room chair area stains or a corridor tile wears faster than the surrounding field, maintenance can replace selected tiles from attic stock instead of removing a complete floor section.",
+          "For Canada projects, winter delivery and site storage should be planned early. Cartons need dry handling, and the flooring should acclimate according to the adhesive and site-condition requirements before installation."
         ],
-        image: "/images/cases/sisal-natural-fiber-sourcing/warehouse-detail.jpg",
-        imageAlt: "Gray placeholder for sisal rug warehouse detail"
+        image: "/images/projects/case-14/canada-office-carpet-tiles-phased-installation.webp",
+        imageAlt: "Blue gray office carpet tiles installed in a commercial corridor"
       },
       {
-        title: "Product Line Distinction",
+        title: "Specification and Attic Stock Control",
         paragraphs: [
-          "True sisal is a natural agave fiber product with authentic texture and a naturally variable surface. It works well when the buyer wants a real plant-fiber look, but it is more sensitive to moisture and climate than most synthetic constructions.",
-          "Sisal-look synthetic rugs made from PP or polyester flatweave are often better for humid destinations or repeat wholesale programs because they provide a more stable dye lot and simpler maintenance expectations.",
-          "Common weave families include herringbone, basketweave, and boucle loop. The buyer should confirm which weave family the order belongs to because MOQ, pricing, and handling often change by weave rather than by length alone."
-        ]
+          "A complete quotation should list tile size, yarn system, backing, pile weight, carton quantity, square metres per carton, fire rating, lead time and packing method. These details allow the buyer to compare offers by installed value rather than headline price alone.",
+          "Attic stock should come from the same color batch as the main order. Even neutral gray or blue-gray tiles can show batch difference under office lighting, so replacement stock should be planned while the first order is produced.",
+          "If the office uses multiple color zones, attic stock should be split by color. This keeps future repairs clean and avoids using an almost-right tile in a visible traffic path."
+        ],
+        image: "/images/projects/case-14/canada-office-carpet-tiles-attic-stock.webp",
+        imageAlt: "Stacked 50x50 office carpet tiles for carton and attic stock planning"
       },
       {
-        title: "Recommended Specification",
+        title: "Procurement Questions Before Order Approval",
         paragraphs: [
-          "True sisal should normally be paired with natural latex or jute backing. That keeps the product line consistent with the fiber choice and avoids implying synthetic moisture tolerance that the rug does not actually have.",
-          "Sisal-look synthetic rugs should use a synthetic backing and be positioned as the more practical choice for climate-controlled wholesale markets that need repeatable supply.",
-          "Border binding also needs to be locked down before pricing. Cotton, canvas, and leather-corner binding each carry different MOQ implications, so the wholesale quote should make that clear rather than hiding it in a generic note.",
-          "Where destination markets are humid or coastal, the buyer should ask for sealed backing or a synthetic alternative instead of assuming true sisal will behave like a washable flatweave."
-        ]
-      },
-      {
-        title: "Procurement & Packaging",
-        paragraphs: [
-          "MOQ is usually set per colorway or weave combination, not simply by the total order size. That means a wholesale buyer should separate the assortment plan before requesting price, otherwise one strong seller can be hidden by a weak one.",
-          "Packaging should include edge protection and moisture-barrier wrap for sea freight. This matters most for true sisal because the material can pick up climate stress before it reaches the customer if it is packed carelessly.",
-          "A physical swatch is still the best way to approve the look because natural fiber color variation can differ from batch to batch. Wholesale buyers should not rely on screen images alone when they plan to re-order later."
-        ]
-      },
-      {
-        title: "Why Vishomecarpet",
-        paragraphs: [
-          "Vishomecarpet can help buyers separate the natural and synthetic options before the order is fixed, which reduces the risk of stocking the wrong product for the target market.",
-          "That upfront guidance matters because the most expensive rug problem is often not price but returns, climate mismatch, or a product that cannot be reordered with the same performance expectation."
+          "Before issuing a purchase order, the buyer should confirm whether the existing floor has adhesive residue, moisture concerns or uneven patches. These site conditions can affect installation quality even when the tile itself is correctly specified.",
+          "The buyer should also confirm whether the project requires nylon carpet tiles, PP carpet tiles or a blended specification. Nylon is often preferred for heavier commercial use, while budget-sensitive areas may use different constructions where traffic is lighter.",
+          "A practical Canada office enquiry should include floor area, layout drawings, target color family, traffic level, installation schedule, delivery city, attic stock requirement and any building compliance documents required by the contractor."
         ]
       }
     ],
     technicalDetails: [
-      "True sisal and sisal-look synthetic rugs are handled as separate product lines.",
-      "Backing choice should match the fiber family and climate exposure.",
-      "Border binding can change MOQ and wholesale pricing structure.",
-      "Humidity tolerance must be checked before importing into coastal or tropical markets.",
-      "Physical swatches are preferable to screen-only approval for repeat wholesale supply."
+      "50x50 modular format supports staged installation and local tile replacement.",
+      "Backing stability and adhesive compatibility should be checked against the existing slab.",
+      "Attic stock should be reserved from the same color batch as the main order.",
+      "Winter delivery and indoor storage planning reduce installation-condition risk."
     ],
     designHighlights: [
-      "Natural texture that works in residential and boutique settings.",
-      "Wholesale assortment logic based on weave, binding, and climate fit.",
-      "Clear split between true sisal and sisal-look synthetic alternatives.",
-      "Better re-order control for distribution and retail rug programs."
+      "Neutral office palette designed for long-term corporate interiors",
+      "Phased renovation logic suitable for occupied buildings",
+      "Internal links support commercial carpet tile product and category authority"
     ],
     results: [
-      "Buyers can quote the right rug family for humid and climate-controlled markets.",
-      "The wholesale offer becomes easier to explain to distributors and retail partners.",
-      "Packing and binding requirements are clarified before the bulk order is fixed.",
-      "Return risk drops because the product line is matched to actual destination conditions."
+      "A clearer quotation checklist for Canada office carpet tile buyers.",
+      "Better maintenance planning through same-batch attic stock.",
+      "Lower disruption risk by planning installation in phases rather than full-floor closure."
     ],
     faqs: [
       {
-        question: "Is true sisal suitable for humid climates?",
-        answer: "True sisal is more sensitive to moisture, so humid or coastal markets need extra caution. Buyers should consider sealed backing or switch to a sisal-look synthetic construction when moisture exposure is likely."
+        question: "Are carpet tiles better than broadloom for office renovation?",
+        answer: "For many occupied offices, yes. Carpet tiles support phased installation and local replacement, while broadloom may be preferred where a seamless large-field appearance is the main design goal."
       },
       {
-        question: "What is the difference between sisal and sisal-look rugs?",
-        answer: "True sisal is a natural plant-fiber rug with authentic texture and some moisture sensitivity. Sisal-look rugs are usually synthetic flatweaves that mimic the appearance while offering more consistent supply and easier handling.",
+        question: "What information should a Canada office buyer send for a quote?",
+        answer: "Send floor area, layout plan, preferred color, traffic level, delivery city, installation schedule, attic stock percentage and any required fire or building documents."
       },
       {
-        question: "Why does border binding matter in wholesale quoting?",
-        answer: "Binding type changes production time, finishing cost, and MOQ. Cotton, canvas, and leather-corner options are not interchangeable if the buyer wants a repeatable wholesale program."
-      },
-      {
-        question: "What should a wholesale buyer sample first?",
-        answer: "Sample the exact weave and fiber family first, then confirm backing and binding. That sequence reduces the chance of approving the wrong feel or performance level before a larger import order."
+        question: "Why does attic stock matter for office carpet tiles?",
+        answer: "Future replacement tiles look best when they come from the same color batch. Reserving attic stock during the first order avoids visible patching later."
       }
     ],
-    recommendedProductIds: ["natural-sisal-carpet", "custom-sculpted-wool-lobby-rug", "commercial-stair-carpet-runner"],
-    order: 14,
+    recommendedProductIds: ["nylon-office-carpet-tile", "commercial-nylon-tiles", "ecocore-pe-backing-carpet-tiles"]
   }
 ];

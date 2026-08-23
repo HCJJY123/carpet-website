@@ -47,6 +47,16 @@ const nextConfig: NextConfig = {
         destination: "/projects/gold-mining-sluice-carpet-peru",
         permanent: true,
       },
+      {
+        source: "/natural-sisal-carpet",
+        destination: "/products/public-area/natural-sisal-carpet",
+        permanent: true,
+      },
+      {
+        source: "/about-us/about",
+        destination: "/about-us",
+        permanent: true,
+      },
     ];
   },
   async headers() {
@@ -57,6 +67,24 @@ const nextConfig: NextConfig = {
           {
             key: "Cache-Control",
             value: "public, max-age=86400, s-maxage=31536000, stale-while-revalidate=604800",
+          },
+        ],
+      },
+      {
+        source: "/images/optimized/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:asset(logo|logo-mark|favicon|apple-touch-icon).:ext(svg|ico|png)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
           },
         ],
       },

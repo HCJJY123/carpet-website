@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { getAttributionForEvent } from "@/lib/attribution";
 import { syncClarityIdentity } from "@/lib/visitorIdentity";
+import { useAnalyticsAllowed } from "@/lib/useAnalyticsConsent";
 
 const visitorBeaconUrl = "/api/visit";
 
@@ -41,8 +42,10 @@ function sendPayload(url: string, payload: Record<string, string | number>) {
 
 export default function VisitorBeacon() {
   const pathname = usePathname();
+  const analyticsAllowed = useAnalyticsAllowed();
 
   useEffect(() => {
+    if (!analyticsAllowed) return;
     if (navigator.webdriver) return;
 
     const startedAt = Date.now();
@@ -95,7 +98,7 @@ export default function VisitorBeacon() {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       window.removeEventListener("pagehide", handlePageHide);
     };
-  }, [pathname]);
+  }, [analyticsAllowed, pathname]);
 
   return null;
 }

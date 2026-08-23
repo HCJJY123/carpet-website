@@ -4,6 +4,7 @@ import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 import AnswerFirst from "@/components/AnswerFirst";
+import ProductTrustLinks from "@/components/ProductTrustLinks";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 
 const productId = "public-area-heavy-duty";
@@ -64,7 +65,7 @@ const faqJsonLd = {
 
 export const metadata: Metadata = product
   ? {
-      title: `${product.name} | Commercial Carpet Product | VISHOME`,
+      title: "Heavy-Duty Public Area Carpet | VISHOME",
       description: product.description,
       alternates: {
         canonical: productPath(product.id),
@@ -202,6 +203,7 @@ export default function ProductDetailPage() {
         quoteHref="/contact?product=Public%20Area%20Heavy%20Duty%20Carpet#quote-form"
         quoteLabel="Request a Public-Area Specification"
       />
+      <ProductTrustLinks productName="heavy-duty public area carpet" quoteHref="/contact?product=Public%20Area%20Heavy%20Duty%20Carpet#quote-form" />
       <section className="section-padding border-y border-border bg-surface">
         <div className="container-fox">
           <h2 className="mb-8 text-center text-2xl font-bold uppercase tracking-[0.08em] text-primary md:mb-12 md:text-3xl md:tracking-widest">

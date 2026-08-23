@@ -175,7 +175,7 @@ export const localizedLandings: LocalizedLanding[] = [
     path: "/fr/moquette-hotel-sur-mesure",
     direction: "ltr",
     openGraphLocale: "fr_FR",
-    metadataTitle: "Moquette d'hôtel sur mesure | Fabricant de moquette hôtelière VISHOME",
+    metadataTitle: "Moquette d'hôtel sur mesure | VISHOME",
     metadataDescription: "Moquette Axminster, moquette nylon imprimée et revêtement mural sur mesure pour hôtels, couloirs et salles de banquet. Échantillons, plans de rouleaux et devis export.",
     keywords: ["moquette hôtel", "moquette hôtelière sur mesure", "moquette couloir hôtel", "fabricant moquette Axminster", "moquette mur à mur"],
     alternates: {
@@ -293,7 +293,7 @@ export const localizedLandings: LocalizedLanding[] = [
     path: "/fr/tapis-recuperation-or",
     direction: "ltr",
     openGraphLocale: "fr_FR",
-    metadataTitle: "Tapis de récupération d'or pour rampe de lavage | Miners Moss VISHOME",
+    metadataTitle: "Tapis de récupération d'or | VISHOME",
     metadataDescription: "Tapis PVC miners moss pour sluice box, rampes de lavage, concentrateurs et récupération d'or alluvionnaire. Rouleaux 1x15 m, épaisseurs 10/15/20 mm.",
     keywords: ["tapis récupération or", "tapis rampe de lavage or", "miners moss", "tapis sluice box", "moquette pour lavage d'or"],
     alternates: {
@@ -697,7 +697,7 @@ export const localizedLandings: LocalizedLanding[] = [
     path: "/ru/hotelnyy-kovrolin",
     direction: "ltr",
     openGraphLocale: "ru_RU",
-    metadataTitle: "Гостиничный ковролин на заказ | Axminster и печатный ковролин VISHOME",
+    metadataTitle: "Гостиничный ковролин на заказ | VISHOME",
     metadataDescription: "Гостиничный ковролин для номеров, коридоров, лобби и банкетных залов. Axminster, HD-печать, индивидуальный рисунок и расчёт поставки в страны СНГ.",
     keywords: ["гостиничный ковролин", "ковролин для отеля", "ковролин для коридора", "Axminster ковролин", "ковролин на заказ"],
     alternates: {

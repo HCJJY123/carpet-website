@@ -15,7 +15,7 @@ export const solutionPages: SolutionPageData[] = [
   {
     slug: "hotel-carpet-manufacturer",
     title: "Hotel Carpet Manufacturer",
-    seoTitle: "Hotel Carpet Manufacturer | Custom Broadloom & Carpet Tiles | VISHOME",
+    seoTitle: "Hotel Carpet Manufacturer | VISHOME",
     description:
       "China hotel carpet manufacturer for guestrooms, corridors, lobbies, ballrooms, banquet halls, and hospitality renovation projects.",
     image: "/images/3d-printed-hotel-carpet-corridor.webp",
@@ -45,7 +45,7 @@ export const solutionPages: SolutionPageData[] = [
   {
     slug: "office-carpet-tiles-supplier",
     title: "Office Carpet Tiles Supplier",
-    seoTitle: "Office Carpet Tiles Supplier | 50x50 Modular Carpet Tiles | VISHOME",
+    seoTitle: "Office Carpet Tiles Supplier | VISHOME",
     description:
       "Office carpet tiles supplier for corporate offices, coworking spaces, raised floors, meeting rooms, and rolling-chair traffic areas.",
     image: "/images/solutions/office-carpet-tiles-supplier-hero-a9b57e72.webp",
@@ -75,7 +75,7 @@ export const solutionPages: SolutionPageData[] = [
   {
     slug: "airport-carpet-flooring",
     title: "Airport Carpet Flooring",
-    seoTitle: "Airport Carpet Flooring | Heavy-Traffic Public Area Carpet | VISHOME",
+    seoTitle: "Airport Carpet Flooring | VISHOME",
     description:
       "Airport carpet flooring for terminals, lounges, corridors, waiting areas, and high-footfall transport interiors.",
     image: "/images/public-area-carpets.webp",
@@ -105,7 +105,7 @@ export const solutionPages: SolutionPageData[] = [
   {
     slug: "casino-carpet-supplier",
     title: "Casino Carpet Supplier",
-    seoTitle: "Casino Carpet Supplier | Custom Printed & Broadloom Carpet | VISHOME",
+    seoTitle: "Casino Carpet Supplier | Vishomecarpet",
     description:
       "Casino carpet supplier for gaming floors, hotel corridors, VIP rooms, restaurants, and entertainment public areas.",
     image: "/images/products/3d-printed-banquet-carpet/02-banquet-hall.webp",
@@ -116,9 +116,9 @@ export const solutionPages: SolutionPageData[] = [
       "Strike-off samples before final design approval.",
     ],
     recommendedProducts: [
+      { name: "Oriental Flower Singapore Casino Carpet", href: "/products/wall-to-wall/singapore-casino-carpet", fit: "Custom luxury casino carpet for Singapore gaming floors and VIP rooms" },
       { name: "Custom 3D Printed Banquet Hall Carpet", href: "/products/wall-to-wall/3d-printed-banquet-hall-carpet", fit: "Custom casino and entertainment patterns" },
       { name: "3D HD Printed Nylon Hotel Carpet", href: "/products/wall-to-wall/3d-printed-hotel-carpet", fit: "Fast design iteration and corridor use" },
-      { name: "Glitter Hotel Corridor Broadloom Carpet", href: "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet", fit: "Luxury corridor and public-area effects" },
     ],
     specs: [
       { label: "Design", value: "Custom print or patterned broadloom" },
@@ -135,7 +135,7 @@ export const solutionPages: SolutionPageData[] = [
   {
     slug: "retail-store-carpet-flooring",
     title: "Retail Store Carpet Flooring",
-    seoTitle: "Retail Store Carpet Flooring | Commercial Carpet Tiles & Broadloom | VISHOME",
+    seoTitle: "Retail Store Carpet Flooring | VISHOME",
     description:
       "Retail store carpet flooring for boutiques, showrooms, corridors, brand zones, fitting rooms, and commercial shopping interiors.",
     image: "/images/about/custom-design-support.webp",

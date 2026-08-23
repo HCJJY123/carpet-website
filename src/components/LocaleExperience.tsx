@@ -10,7 +10,6 @@ import {
   isTranslatedSiteLocale,
   localeCookieMaxAge,
   localeCookieName,
-  localizePath,
   sharedLocaleCookieDomain,
   translatedSiteLocales,
   type TranslatedSiteLocale,
@@ -77,12 +76,6 @@ function shouldLocalizeUrl(url: URL) {
   return url.origin === window.location.origin && !isLocaleRoutingExcluded(url.pathname);
 }
 
-function translatedHref(url: URL, locale: TranslatedSiteLocale) {
-  if (url.searchParams.get("lang") === "en") return `${url.pathname}${url.search}${url.hash}`;
-  url.pathname = localizePath(url.pathname, locale);
-  return `${url.pathname}${url.search}${url.hash}`;
-}
-
 export default function LocaleExperience() {
   const pathname = usePathname();
 
@@ -91,6 +84,12 @@ export default function LocaleExperience() {
     if (!locale) {
       document.documentElement.lang = "en";
       document.documentElement.dir = "ltr";
+      delete document.documentElement.dataset.siteLocale;
+      clearClientCookie(localeCookieName);
+      clearClientCookie(googleTranslateCookieName);
+      const main = document.querySelector("main");
+      main?.classList.remove("notranslate");
+      main?.removeAttribute("translate");
       return;
     }
 
@@ -109,37 +108,6 @@ export default function LocaleExperience() {
       main?.classList.remove("notranslate");
       main?.removeAttribute("translate");
     }
-
-    const rewriteLinks = (root: ParentNode = document) => {
-      const anchors = [
-        ...(root instanceof HTMLAnchorElement && root.matches("a[href]") ? [root] : []),
-        ...root.querySelectorAll<HTMLAnchorElement>("a[href]"),
-      ];
-
-      anchors.forEach((anchor) => {
-        const rawHref = anchor.getAttribute("href");
-        if (!rawHref || rawHref.startsWith("#") || anchor.hasAttribute("download")) return;
-        if (/^(mailto:|tel:|sms:|javascript:)/i.test(rawHref)) return;
-
-        try {
-          const url = new URL(rawHref, window.location.href);
-          if (!shouldLocalizeUrl(url) || getPathLocale(url.pathname)) return;
-          anchor.setAttribute("href", translatedHref(url, locale));
-        } catch {
-          // Ignore malformed third-party links.
-        }
-      });
-    };
-
-    rewriteLinks();
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (node instanceof Element) rewriteLinks(node);
-        });
-      });
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
 
     const handleInternalNavigation = (event: MouseEvent) => {
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -208,7 +176,6 @@ export default function LocaleExperience() {
     }
 
     return () => {
-      observer.disconnect();
       document.removeEventListener("click", handleInternalNavigation, true);
     };
   }, [pathname]);

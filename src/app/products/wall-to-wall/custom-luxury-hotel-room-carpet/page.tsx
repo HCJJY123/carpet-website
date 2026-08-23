@@ -5,7 +5,7 @@ import { ProductTrackedLink, ProductViewEvent } from "@/components/ProductAnalyt
 import { ProductSpecCards } from "@/components/ProductConversion";
 import { brandInfo, products } from "@/lib/data";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
-import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
+import { getContactBridgeUrl } from "@/lib/whatsapp";
 
 const productId = "custom-luxury-hotel-room-carpet";
 const sku = "VHC-WTW-HRC-001";
@@ -34,7 +34,7 @@ const analyticsPayload = {
 
 const inquiryPrompt = "Send your hotel location, total carpet area, room quantity, preferred design, material requirement and target delivery date. Vishomecarpet will confirm the suitable construction, price, MOQ and production schedule.";
 
-const whatsappHref = getWhatsAppBusinessUrl(
+const whatsappHref = getContactBridgeUrl(
   `Hello, I am interested in ${name}. Please help confirm material options, reference price, MOQ and production schedule.`,
   { product: name, intent: "custom hotel room carpet inquiry", pagePath: path }
 );
@@ -148,12 +148,15 @@ const faqs = [
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
+  "@id": `${absoluteUrl(path)}#product`,
   name,
   sku,
+  mpn: sku,
   brand: { "@type": "Brand", name: "Vishomecarpet" },
   category: "Wall-to-Wall Hotel Carpet",
   description: "Made-to-order luxury wall-to-wall hotel room carpet for guestrooms, suites, corridors, serviced apartments, and hospitality renovation projects.",
   url: absoluteUrl(path),
+  mainEntityOfPage: absoluteUrl(path),
   image: images.map((item) => absoluteUrl(item.src)),
   material: "Project-specific nylon or wool-nylon options",
   additionalProperty: [
@@ -163,14 +166,18 @@ const productJsonLd = {
     { "@type": "PropertyValue", name: "Pattern", value: "Custom" },
     { "@type": "PropertyValue", name: "Application", value: "Hotel guestrooms, suites and corridors" },
     { "@type": "PropertyValue", name: "Availability", value: "Made to Order" },
+    { "@type": "PropertyValue", name: "Sales Unit", value: "SQM" },
+    { "@type": "PropertyValue", name: "Price Basis", value: "Reference FOB range; final price and validity require a written quotation" },
   ],
   offers: {
     "@type": "AggregateOffer",
+    url: absoluteUrl(path),
     priceCurrency: "USD",
     lowPrice: "3.10",
     highPrice: "9.70",
     offerCount: 1,
     availability: "https://schema.org/PreOrder",
+    itemCondition: "https://schema.org/NewCondition",
     seller: { "@type": "Organization", name: "Vishomecarpet" },
   },
 };
@@ -225,7 +232,7 @@ function InquiryButtons({ compact = false }: { compact?: boolean }) {
       <ProductTrackedLink href={`/contact?product=${encodeURIComponent(name)}#quote-form`} event="generate_lead" payload={leadPayload} className={`${buttonBase} bg-[#d9480f] text-white hover:bg-[#b83a08]`}>
         Send Inquiry
       </ProductTrackedLink>
-      <ProductTrackedLink href={whatsappHref} event="contact" payload={{ ...contactPayload, contact_method: "whatsapp" }} target="_blank" rel="noopener noreferrer" className={`${buttonBase} border border-border bg-white text-primary hover:border-accent hover:text-accent`}>
+      <ProductTrackedLink href={whatsappHref} event="contact" payload={{ ...contactPayload, contact_method: "whatsapp" }} className={`${buttonBase} border border-border bg-white text-primary hover:border-accent hover:text-accent`}>
         Send Your Hotel Design
       </ProductTrackedLink>
       <ProductTrackedLink href={`mailto:${brandInfo.email}?subject=${encodeURIComponent(name)}&body=${encodeURIComponent(inquiryPrompt)}`} event="contact" payload={{ ...contactPayload, contact_method: "email" }} className={`${buttonBase} border border-border bg-white text-primary hover:border-accent hover:text-accent`}>

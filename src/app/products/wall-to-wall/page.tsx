@@ -3,6 +3,7 @@ import { products } from "@/lib/data";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import ProcurementSnapshot from "@/components/ProcurementSnapshot";
+import ConversionLiftPanel from "@/components/ConversionLiftPanel";
 import TechnicalSourcePanel from "@/components/TechnicalSourcePanel";
 import AnswerFirst from "@/components/AnswerFirst";
 import FactoryCtaBackground from "@/components/FactoryCtaBackground";
@@ -21,7 +22,7 @@ const categoryFaqs = [
   },
   {
     question: "What is the wall-to-wall carpet price?",
-    answer: "The seven products on this page currently show reference FOB prices from US$3.10 to US$38.00 per square meter. Final commercial carpet price depends on yarn, construction, pile weight, pattern, quantity, backing, testing, and delivery requirements."
+    answer: "The products on this page currently show reference FOB prices from US$3.10 to US$38.00 per square meter. Final commercial carpet price depends on yarn, construction, pile weight, pattern, quantity, backing, testing, and delivery requirements."
   },
   {
     question: "Which carpet is suitable for hotel rooms and corridors?",
@@ -63,6 +64,11 @@ const constructionOptions = [
     href: "/products/wall-to-wall/3d-printed-banquet-hall-carpet"
   },
   {
+    title: "Oriental Flower Casino Carpet",
+    text: "Custom luxury casino carpet for Singapore gaming floors, VIP rooms, clubs, lift lobbies, and hotel entertainment zones.",
+    href: "/products/wall-to-wall/singapore-casino-carpet"
+  },
+  {
     title: "Hotel Corridor Broadloom",
     text: "Patterned commercial carpet rolls for hotel hallways, elevator lobbies, long corridors, and high-traffic guest circulation.",
     href: "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet"
@@ -99,6 +105,12 @@ const contractCarpetSelector = [
     href: "/products/wall-to-wall/3d-printed-banquet-hall-carpet"
   },
   {
+    area: "Singapore Casinos & VIP Rooms",
+    construction: "Custom oriental flower luxury casino carpet",
+    buyingRange: "MOQ from 300 SQM · FOB from US$4.60/SQM",
+    href: "/products/wall-to-wall/singapore-casino-carpet"
+  },
+  {
     area: "Luxury Hotels & Casinos",
     construction: "Woven 80% wool / 20% nylon Axminster",
     buyingRange: "MOQ from 500 SQM · FOB from US$18.00/SQM",
@@ -118,7 +130,7 @@ export const metadata: Metadata = {
   alternates: { canonical: categoryPath },
   openGraph: {
     title: "Contract Carpet Supplier | Hotel Wall-to-Wall Broadloom",
-    description: "Compare seven contract carpet and broadloom options by construction, factory price, MOQ, samples, and hospitality or entertainment application.",
+    description: "Compare contract carpet and broadloom options by construction, factory price, MOQ, samples, and hospitality or entertainment application.",
     url: absoluteUrl(categoryPath),
     type: "website",
     images: [{ url: absoluteUrl("/images/category-broadloom.webp"), alt: "Commercial wall-to-wall hotel broadloom carpet by Vishomecarpet" }]
@@ -166,7 +178,7 @@ export default function CategoryPage() {
           <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Commercial Carpet Manufacturer & Export Supplier</p>
           <h1 className="text-4xl font-black uppercase text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.72)] md:text-6xl">Contract Carpet & Hotel Broadloom</h1>
           <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/82 drop-shadow-[0_1px_5px_rgba(0,0,0,0.72)]">
-            Custom commercial wall-to-wall carpet for hotel rooms, corridors, lobbies, ballrooms, casinos, cinemas, theaters, restaurants, and contract interiors. Compare construction, FOB price, MOQ, and lead time across seven project-ready broadloom options.
+            Custom commercial wall-to-wall carpet for hotel rooms, corridors, lobbies, ballrooms, casinos, cinemas, theaters, restaurants, and contract interiors. Compare construction, FOB price, MOQ, and lead time across project-ready broadloom and casino carpet options.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <Link href="/contact?product=Wall-to-Wall%20Carpet#quote-form" className="btn-fox-orange">Get Project Quote in 24 Hours</Link>
@@ -197,10 +209,20 @@ export default function CategoryPage() {
           "Wet or outdoor areas without a purpose-built flooring system",
           "Ordering from artwork alone without site measurements and fire requirements",
         ]}
-        evidence="The ranges are derived from the seven products currently listed on this category page and were reviewed on July 31, 2026. Final price, availability, fire documentation, pattern feasibility, roll planning, and lead time are confirmed only after specification and sample review."
+        evidence="The ranges are derived from the products currently listed on this category page and were reviewed on July 31, 2026. Final price, availability, fire documentation, pattern feasibility, roll planning, and lead time are confirmed only after specification and sample review."
         quoteHref="/contact?product=Wall-to-Wall%20Carpet#quote-form"
         quoteLabel="Request Broadloom Recommendation"
       />
+
+      <ConversionLiftPanel
+        eyebrow="Hotel Project Inquiry Shortcut"
+        title="Send Room Area, Corridor Length, Pattern Need and Destination"
+        body="Hotel broadloom buyers often need a roll plan, pattern repeat check, sample or strike-off, fire document review, and export packing. Submit these basics early so the quote can match your actual project instead of a generic carpet price."
+        product="Wall-to-Wall Carpet"
+        quoteHref="/contact?product=Wall-to-Wall%20Carpet#quote-form"
+        compact
+      />
+
       <ProcurementSnapshot
         title="Hotel Broadloom Buying Facts"
         facts={[
@@ -224,6 +246,7 @@ export default function CategoryPage() {
           { label: "Factory & Production", href: "/factory" },
           { label: "Hotel Acoustic Guide", href: "/blog/hotel-noise-acoustic-carpet-specification-guide" },
           { label: "Hotel Pattern Guide", href: "/blog/why-hotel-carpet-patterns-look-busy" },
+          { label: "Renovation Decision Guide", href: "/blog/hotel-carpet-renovation-hard-flooring-decision-guide" },
           { label: "Request a Quote", href: "/contact?product=Wall-to-Wall%20Carpet#quote-form" },
         ]}
       />
@@ -268,7 +291,7 @@ export default function CategoryPage() {
       <section id="wall-to-wall-products" className="section-padding scroll-mt-24">
         <div className="container-fox">
           <div className="mb-12 max-w-3xl">
-            <h2 className="mb-4 text-3xl font-black uppercase text-primary md:text-4xl">Seven Commercial Broadloom Carpet Options</h2>
+            <h2 className="mb-4 text-3xl font-black uppercase text-primary md:text-4xl">Commercial Broadloom and Casino Carpet Options</h2>
             <p className="leading-relaxed text-muted">Select a product by construction and application. Each page includes reference pricing, minimum order quantity, technical data, project images, and a direct inquiry form.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -318,7 +341,7 @@ export default function CategoryPage() {
             <div className="space-y-5 text-base leading-8 text-muted">
               <p>Vishomecarpet manufactures and supplies commercial carpet rolls for hospitality and contract projects. The collection covers woven Axminster carpet, 80 wool 20 nylon carpet, custom printed carpet, patterned broadloom carpet, machine-tufted hotel room carpet, and high-traffic corridor carpet.</p>
               <p>Project applications include carpet for hotel rooms, hotel hallway carpet, hotel lobby carpet, banquet room carpet, ballroom carpet, casino style carpet, restaurant carpet, conference room carpet, club carpet, cinema carpet, theatre carpet, showroom carpet, office carpet rolls, church carpet, mosque carpet, and mosque carpet rolls. Final construction, fire performance, and installation requirements must be confirmed for the intended building.</p>
-              <p>For Wilton carpet, solution dyed nylon carpet, Saxony carpet rolls, machine tufted carpet, cut pile carpet rolls, polyester carpet rolls, wool carpet wholesale, exhibition carpet flooring, needle punch carpet, marine carpet rolls, or another construction not shown in the seven products, send the exact specification. The factory will confirm feasibility rather than substituting a different product without approval.</p>
+              <p>For Wilton carpet, solution dyed nylon carpet, Saxony carpet rolls, machine tufted carpet, cut pile carpet rolls, polyester carpet rolls, wool carpet wholesale, exhibition carpet flooring, needle punch carpet, marine carpet rolls, casino carpet, or another construction not shown in the listed products, send the exact specification. The factory will confirm feasibility rather than substituting a different product without approval.</p>
               <p>Vishomecarpet supports wholesale hotel carpet orders as a commercial carpet manufacturer, broadloom carpet manufacturer, hospitality carpet manufacturer, and export supplier. Buyers comparing commercial carpet suppliers or hotel carpet suppliers can review product-level prices and specifications before requesting a factory quotation.</p>
             </div>
           </div>
@@ -338,7 +361,7 @@ export default function CategoryPage() {
           <div>
             <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Transparent Buying Information</p>
             <h2 className="mb-6 text-3xl font-black uppercase text-primary md:text-5xl">Wall-to-Wall Carpet Price & Quote Requirements</h2>
-            <p className="leading-8 text-muted">Reference FOB prices across the seven products range from US$3.10 to US$38.00 per square meter. Send the information below for an accurate commercial carpet quotation and cutting plan.</p>
+            <p className="leading-8 text-muted">Reference FOB prices across the listed products range from US$3.10 to US$38.00 per square meter. Send the information below for an accurate commercial carpet quotation and cutting plan.</p>
           </div>
           <dl className="grid gap-px border border-border bg-border sm:grid-cols-2">
             {[

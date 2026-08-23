@@ -13,57 +13,15 @@ import {
   recordSectionView,
 } from "@/lib/funnel";
 import { getVisitorIdentity } from "@/lib/visitorIdentity";
+import { useAnalyticsAllowed } from "@/lib/useAnalyticsConsent";
 
 const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-T2VYHXTK1F";
 const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "GT-NMDDTW67";
 const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18306142236";
 const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "xgg9z07tsm";
+const microsoftUetTagId = process.env.NEXT_PUBLIC_MICROSOFT_UET_TAG_ID || "97259674";
 const gtmContainerId = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID;
 const yandexMetricaId = process.env.NEXT_PUBLIC_YANDEX_METRICA_ID;
-const emailFeedbackId = "vishome-email-copy-feedback";
-
-type EmailFeedbackElement = HTMLDivElement & { hideTimer?: number };
-
-function emailAddressFromMailto(href: string) {
-  const address = href.replace(/^mailto:/i, "").split("?")[0];
-  try {
-    return decodeURIComponent(address);
-  } catch {
-    return address;
-  }
-}
-
-function copyEmailAddress(email: string) {
-  if (!email || typeof navigator === "undefined" || !navigator.clipboard?.writeText) return;
-  void navigator.clipboard.writeText(email).catch(() => undefined);
-}
-
-function showEmailFallbackNotice(email: string) {
-  if (!email || typeof document === "undefined") return;
-
-  window.setTimeout(() => {
-    if (document.visibilityState !== "visible") return;
-
-    let notice = document.getElementById(emailFeedbackId) as EmailFeedbackElement | null;
-    if (!notice) {
-      notice = document.createElement("div") as EmailFeedbackElement;
-      notice.id = emailFeedbackId;
-      notice.setAttribute("role", "status");
-      notice.setAttribute("aria-live", "polite");
-      notice.className =
-        "fixed left-1/2 top-24 z-[9999] max-w-[calc(100vw-2rem)] -translate-x-1/2 rounded-full bg-[#102A43] px-5 py-3 text-center text-sm font-bold text-white opacity-0 shadow-2xl ring-1 ring-white/20 transition-opacity duration-200";
-      notice.style.pointerEvents = "none";
-      document.body.appendChild(notice);
-    }
-
-    notice.textContent = `Email copied: ${email}. If your mail app does not open, paste it into your inbox.`;
-    notice.style.opacity = "1";
-    if (notice.hideTimer) window.clearTimeout(notice.hideTimer);
-    notice.hideTimer = window.setTimeout(() => {
-      if (notice) notice.style.opacity = "0";
-    }, 5200);
-  }, 600);
-}
 
 declare global {
   interface Window {
@@ -71,13 +29,17 @@ declare global {
     gtag?: (...args: unknown[]) => void;
     clarity?: (...args: unknown[]) => void;
     ym?: (...args: unknown[]) => void;
+    uetq?: unknown[];
   }
 }
 
 export default function MarketingTracking() {
   const pathname = usePathname();
+  const analyticsAllowed = useAnalyticsAllowed();
 
   useEffect(() => {
+    if (!analyticsAllowed) return;
+
     captureAttributionOnce();
 
     const attribution = getAttributionForEvent();
@@ -92,9 +54,10 @@ export default function MarketingTracking() {
         page_path: window.location.pathname,
       });
     }
-  }, []);
+  }, [analyticsAllowed]);
 
   useEffect(() => {
+    if (!analyticsAllowed) return;
     if (typeof window.gtag !== "function") return;
 
     const pageViewPayload = {
@@ -114,9 +77,50 @@ export default function MarketingTracking() {
     if (googleAdsId) {
       window.gtag("config", googleAdsId, pageViewPayload);
     }
-  }, [pathname]);
+  }, [analyticsAllowed, pathname]);
 
   useEffect(() => {
+    if (!analyticsAllowed) return;
+
+    const recentlyTrackedForms = new WeakMap<HTMLFormElement, number>();
+
+    function handleValidatedFormClick(event: MouseEvent) {
+      if (typeof window.gtag !== "function") return;
+      if (!(event.target instanceof Element)) return;
+
+      const submitButton = event.target.closest<HTMLButtonElement | HTMLInputElement>(
+        'button[type="submit"], input[type="submit"]'
+      );
+      if (!submitButton) return;
+
+      const form = submitButton.form || submitButton.closest("form");
+      if (!(form instanceof HTMLFormElement)) return;
+      if (!form.checkValidity()) return;
+
+      const email = String(new FormData(form).get("email") || "").trim().toLowerCase();
+      if (!email) return;
+
+      const now = Date.now();
+      const lastTrackedAt = recentlyTrackedForms.get(form) || 0;
+      if (now - lastTrackedAt < 3000) return;
+      recentlyTrackedForms.set(form, now);
+
+      window.gtag("set", "user_data", {
+        email,
+      });
+
+      window.gtag("event", "表单提交", {
+        send_to: "G-T2VYHXTK1F",
+      });
+    }
+
+    document.addEventListener("click", handleValidatedFormClick, true);
+    return () => document.removeEventListener("click", handleValidatedFormClick, true);
+  }, [analyticsAllowed]);
+
+  useEffect(() => {
+    if (!analyticsAllowed) return;
+
     const productMatch = pathname.match(/^\/(?:[a-z]{2}\/)?products\/([^/]+)\/([^/]+)$/);
 
     function maybeTrackHighIntentSession() {
@@ -213,9 +217,11 @@ export default function MarketingTracking() {
       window.clearInterval(engagementTimer);
       observer.disconnect();
     };
-  }, [pathname]);
+  }, [analyticsAllowed, pathname]);
 
   useEffect(() => {
+    if (!analyticsAllowed) return;
+
     function handleClick(event: MouseEvent) {
       const target = event.target as HTMLElement | null;
       const anchor = target?.closest("a");
@@ -239,6 +245,14 @@ export default function MarketingTracking() {
           item_name: anchor.dataset.itemName,
           item_category: anchor.dataset.itemCategory,
           item_variant: anchor.dataset.itemVariant,
+          page_type: anchor.dataset.pageType,
+          product_category: anchor.dataset.productCategory,
+          product_name: anchor.dataset.productName,
+          document_type: anchor.dataset.documentType,
+          document_slug: anchor.dataset.documentSlug,
+          project_country: anchor.dataset.projectCountry,
+          source_platform: anchor.dataset.sourcePlatform,
+          cta_location: anchor.dataset.ctaLocation,
           price: anchor.dataset.price ? Number(anchor.dataset.price) : undefined,
           currency: anchor.dataset.currency,
           href,
@@ -248,10 +262,16 @@ export default function MarketingTracking() {
       }
 
       if (href === "#quote-form" || (isSameOrigin && (resolvedUrl.pathname === "/contact" || normalizedPath.startsWith("/contact")))) {
+        const signals = getFunnelSessionSignals();
         trackAnalyticsEvent("quote_form_click", {
           href: isSameOrigin ? normalizedPath : href,
           link_text: text,
           page_path: window.location.pathname,
+          quote_product: resolvedUrl.searchParams.get("product") || anchor.dataset.itemName || "",
+          quote_source: resolvedUrl.searchParams.get("source") || window.location.pathname,
+          product_view_count: signals.productViewCount,
+          max_engaged_seconds: signals.maxEngagedSeconds,
+          section_view_count: signals.sectionViewCount,
         });
       }
 
@@ -281,9 +301,6 @@ export default function MarketingTracking() {
       }
 
       if (href.startsWith("mailto:")) {
-        const email = emailAddressFromMailto(href);
-        copyEmailAddress(email);
-        showEmailFallbackNotice(email);
         trackInteractionConversion("email_click", {
           href,
           link_text: text,
@@ -312,11 +329,11 @@ export default function MarketingTracking() {
 
     document.addEventListener("click", handleClick, true);
     return () => document.removeEventListener("click", handleClick, true);
-  }, []);
+  }, [analyticsAllowed]);
 
   return (
     <>
-      {gtmContainerId ? (
+      {analyticsAllowed && gtmContainerId ? (
         <>
           <Script id="gtm-init" strategy="afterInteractive">
             {`
@@ -331,7 +348,7 @@ export default function MarketingTracking() {
         </>
       ) : null}
 
-      {(googleTagId || ga4MeasurementId || googleAdsId) && (
+      {analyticsAllowed && (googleTagId || ga4MeasurementId || googleAdsId) && (
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId || ga4MeasurementId || googleAdsId}`}
@@ -351,7 +368,7 @@ export default function MarketingTracking() {
         </>
       )}
 
-      {clarityProjectId && (
+      {analyticsAllowed && clarityProjectId && (
         <Script id="microsoft-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
@@ -363,7 +380,36 @@ export default function MarketingTracking() {
         </Script>
       )}
 
-      {yandexMetricaId ? (
+      {analyticsAllowed && microsoftUetTagId ? (
+        <Script id="microsoft-uet" strategy="afterInteractive">
+          {`
+            (function(w,d,t,r,u){
+              var f,n,i;
+              w[u]=w[u]||[];
+              f=function(){
+                var o={ti:"${microsoftUetTagId}", enableAutoSpaTracking:true};
+                o.q=w[u];
+                w[u]=new UET(o);
+                w[u].push("pageLoad");
+              };
+              n=d.createElement(t);
+              n.src=r;
+              n.async=1;
+              n.onload=n.onreadystatechange=function(){
+                var s=this.readyState;
+                if(!s||s==="loaded"||s==="complete"){
+                  f();
+                  n.onload=n.onreadystatechange=null;
+                }
+              };
+              i=d.getElementsByTagName(t)[0];
+              i.parentNode.insertBefore(n,i);
+            })(window,document,"script","https://bat.bing.com/bat.js","uetq");
+          `}
+        </Script>
+      ) : null}
+
+      {analyticsAllowed && yandexMetricaId ? (
         <Script id="yandex-metrica" strategy="afterInteractive">
           {`
             (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

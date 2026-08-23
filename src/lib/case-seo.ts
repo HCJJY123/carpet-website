@@ -23,12 +23,9 @@ export type CaseSeoProfile = {
   evidenceNote: string;
   buyerQuestions: CaseBuyerQuestion[];
   topics: string[];
-  cardImage?: string;
-  cardImageAlt?: string;
   heroImage?: string;
   heroImageAlt?: string;
   sectionImages?: Record<string, { src: string; alt: string }>;
-  relatedLinks?: { label: string; href: string }[];
 };
 
 export const caseSeoProfiles: Record<string, CaseSeoProfile> = {
@@ -326,81 +323,57 @@ export const caseSeoProfiles: Record<string, CaseSeoProfile> = {
     ],
     topics: ["gold mining sluice carpet", "gold recovery mat", "miners moss alternative", "Peru alluvial mining"],
   },
-  "event-hall-ballroom-carpet-planning-romania": {
-    slug: "event-hall-ballroom-carpet-planning-romania",
-    cardTitle: "Event Hall & Ballroom Carpet Planning – Romania",
-    h1: "Event Hall & Ballroom Carpet Planning – Romania",
-    metadataTitle: "Event Hall & Ballroom Carpet Planning – Romania | Vishomecarpet",
-    metadataDescription: "A procurement guide for banquet hall and ballroom carpet: pattern design, acoustic backing, fire ratings, and seaming for large-format event venues.",
-    eyebrow: "Hospitality & Events Guide",
-    directAnswer: "For a banquet hall or ballroom in Romania, a custom wall-to-wall broadloom program works best when the buyer controls traffic durability, acoustic backing, seam layout, fire compliance, and pattern repeat before production. The specification should support changing event layouts, rolling AV equipment, fast cleanup, and a strong visual finish under mixed lighting.",
+  "case-13": {
+    slug: "gold-mining-carpet-colombia-distributor-guide",
+    cardTitle: "Gold Mining Carpet Distributor Planning - Colombia",
+    h1: "Gold Mining Carpet: Colombia Distributor Roll and Sample Guide",
+    metadataTitle: "Gold Mining Carpet Colombia | Distributor Roll Guide",
+    metadataDescription: "Plan gold mining carpet for Colombia distributors: stocked weights, sample testing, custom roll length, wet handling, FOB packing and container loading.",
+    eyebrow: "Gold Recovery Mat Procurement Guide",
+    directAnswer: "For Colombia gold-recovery distributors, gold mining carpet should be specified by feed size, sluice width, water flow, stocked pile weight, backing strength, roll length, packing volume and sample route. Buyers should test 1400, 1700 and 2100 g/m² samples before committing to a custom weight, then align roll dimensions with common local sluice equipment to reduce off-cut waste.",
     decisionFacts: [
-      { label: "Application", value: "Banquet hall, ballroom, and pre-function circulation" },
-      { label: "Planning Scale", value: "900㎡ reference scenario" },
-      { label: "Construction Direction", value: "Custom wall-to-wall broadloom" },
-      { label: "Primary Decision", value: "Pattern continuity, acoustic control, and fire compliance" },
+      { label: "Application", value: "Alluvial gold sluices and distributor resale programs" },
+      { label: "Country Focus", value: "Colombia mining supply and regional reselling" },
+      { label: "Material Direction", value: "Polyester entrapment pile with reinforced anti-tear backing" },
+      { label: "Primary Decision", value: "Sample validation, roll fit and container efficiency" },
     ],
-    buyerChecks: ["Confirm heavy commercial traffic tolerance for banquet turnover", "Approve pattern repeat, border zoning, and medallion placement", "Verify acoustic underlay, fire standard, and seam plan", "Plan cleaning recovery for beverage spill and event reset"],
-    suitableFor: ["Ballrooms, banquet halls, pre-function corridors, and event venues", "Projects needing a strong visual identity with practical maintenance"],
-    limitations: ["Spaces without final fire-code confirmation", "Projects that need stock delivery before artwork and repeat approval"],
-    evidenceNote: "This guide is an event-flooring planning reference, not a named venue endorsement. Final performance depends on the quoted construction, installation method, lighting, and maintenance plan.",
+    buyerChecks: ["Compare stocked pile weights before requesting a custom run", "Match roll width and length to local sluice box sizes", "Confirm wet lifting, backing tear resistance and cleaning frequency", "Calculate rolled diameter before confirming 40HC loading"],
+    suitableFor: ["Colombia mining-supply distributors selling into alluvial recovery users", "Bulk buyers needing repeatable roll sizes, packing data and sample-based selection"],
+    limitations: ["Projects asking for a guaranteed recovery rate without field testing", "Small one-off orders where container economics and custom roll planning are not needed"],
+    evidenceNote: "This is a procurement-planning reference for gold-recovery matting. Capture performance depends on the complete sluice system, feed preparation, water velocity, operator cleaning method and selected mat construction.",
     buyerQuestions: [
-      { question: "What carpet construction suits a ballroom with mixed event use?", answer: "A dense custom broadloom construction with controlled repeat, suitable backing, and a seam plan can support banquet, staging, and AV traffic. The quoted build should be checked against the actual fire and acoustic requirements." },
-      { question: "Why does seam layout matter in a ballroom project?", answer: "Large event floors often span changing layouts, stage positions, and dance-floor zones. A coordinated seam plan reduces visual interruption, helps pattern alignment, and makes future access or partial replacement more manageable." },
+      { question: "Should Colombia distributors start with stocked or custom gold mining carpet weights?", answer: "Start with stocked 1400, 1700 and 2100 g/m² samples. They give a fast comparison of fibre hold, drainage, cleaning and backing feel before paying for a custom-weight production setup." },
+      { question: "What information is needed for a Colombia gold carpet quotation?", answer: "Send target roll width and length, expected order quantity, destination port, preferred pile weight, feed conditions, color preference and whether the order is for direct mine use or distributor resale." },
     ],
-    topics: ["ballroom carpet", "banquet hall carpet", "Romania event flooring", "hospitality broadloom"],
-    cardImage: "/images/cases/event-hall-ballroom-romania/thumb.jpg",
-    cardImageAlt: "Gray placeholder for Event Hall and Ballroom Carpet Planning Romania thumbnail",
-    heroImage: "/images/cases/event-hall-ballroom-romania/hero.jpg",
-    heroImageAlt: "Gray placeholder for Event Hall and Ballroom Carpet Planning Romania hero image",
-    sectionImages: {
-      "Project Overview": {
-        src: "/images/cases/event-hall-ballroom-romania/pattern-detail.jpg",
-        alt: "Gray placeholder for Event Hall and Ballroom Carpet Planning Romania detail image",
-      },
-    },
-    relatedLinks: [
-      { label: "Hotel Lobby Axminster Carpet Planning - Dubai", href: "/projects/case-1" },
-      { label: "Casino Nylon Broadloom Carpet Planning - Las Vegas", href: "/projects/case-3" },
-    ],
+    topics: ["gold mining carpet Colombia", "gold recovery mat", "sluice carpet distributor", "alluvial mining carpet"],
+    heroImage: "/images/projects/case-13/colombia-gold-mining-carpet-hero.webp",
+    heroImageAlt: "Gold mining carpet mat used in an alluvial recovery washing setup for Colombia distributor planning",
   },
-  "sisal-natural-fiber-rug-wholesale-sourcing": {
-    slug: "sisal-natural-fiber-rug-wholesale-sourcing",
-    cardTitle: "Sisal & Natural Fiber Rug Wholesale Sourcing Guide",
-    h1: "Sisal & Natural Fiber Rug Wholesale Sourcing Guide",
-    metadataTitle: "Sisal & Natural Fiber Rug Wholesale Sourcing Guide | Vishomecarpet",
-    metadataDescription: "A buyer's guide to sisal and natural-fiber-look rugs for wholesale import: weave types, backing options, humidity handling, and border binding specs.",
-    eyebrow: "Product Sourcing Guide",
-    directAnswer: "Wholesale sisal and natural-fiber-look rugs should be specified by fiber type, weave structure, backing, humidity tolerance, border binding, and packaging rather than by appearance alone. True sisal offers a natural plant-fiber look, while sisal-look synthetic constructions are often better for humid markets, repeat orders, and broader import distribution.",
+  "case-14": {
+    slug: "office-carpet-tiles-canada-phased-renovation-guide",
+    cardTitle: "Office Carpet Tiles Phased Renovation - Canada",
+    h1: "Office Carpet Tiles: Canada Phased Renovation Procurement Guide",
+    metadataTitle: "Canada Office Carpet Tiles Case | Phased Renovation Planning",
+    metadataDescription: "Plan office carpet tiles for Canada projects: 50x50 modular format, low-disruption installation, attic stock, winter delivery and replacement strategy.",
+    eyebrow: "Office Carpet Tile Procurement Guide",
+    directAnswer: "For Canada office renovation projects, 50x50 commercial carpet tiles are a practical choice when the buyer needs phased installation, local replacement, stable backing, neutral design, acoustic comfort and clear spare-tile planning. The quotation should define yarn, backing, tile size, carton quantity, attic stock, winter delivery timing, adhesive compatibility and replacement rules before the purchase order is fixed.",
     decisionFacts: [
-      { label: "Application", value: "Wholesale rug import and distribution" },
-      { label: "Product Line", value: "True sisal and sisal-look natural-fiber rugs" },
-      { label: "Construction Direction", value: "Flatweave, basketweave, or herringbone" },
-      { label: "Primary Decision", value: "Humidity control, binding choice, and MOQ by weave" },
+      { label: "Application", value: "Corporate office floors, meeting rooms and circulation corridors" },
+      { label: "Country Focus", value: "Canada commercial renovation and tenant-improvement projects" },
+      { label: "Format", value: "50 x 50 cm modular commercial carpet tiles" },
+      { label: "Primary Decision", value: "Phased installation, acoustic comfort and long-term replacement" },
     ],
-    buyerChecks: ["Separate true sisal from sisal-look synthetic before quoting", "Confirm border binding, packaging, and moisture protection", "Check climate fit for humid or coastal destination markets", "Approve swatch quality before committing to bulk colors"],
-    suitableFor: ["Import distributors, retail rug programs, boutique hospitality, and home furnishings", "Buyers needing natural texture with controlled wholesale supply"],
-    limitations: ["True sisal in high-humidity or wet zones without protection", "Ordering by color alone without confirming weave and backing"],
-    evidenceNote: "This guide is a wholesale sourcing reference. Final suitability depends on the selected fiber, backing, climate, handling, and destination requirements.",
+    buyerChecks: ["Confirm tile construction, backing stability and traffic class", "Reserve attic stock by color batch for future repairs", "Plan delivery timing around winter weather and site access", "Check adhesive or tackifier compatibility with the existing slab"],
+    suitableFor: ["Office renovations that must stay partially occupied during installation", "Property managers needing easy replacement by tile rather than full-floor removal"],
+    limitations: ["Areas requiring a single seamless broadloom appearance", "Sites where subfloor moisture or adhesive residue has not been checked"],
+    evidenceNote: "This is a procurement and installation planning guide for office carpet tile projects. Final suitability should be confirmed against site conditions, traffic level, fire documents, adhesive system and maintenance plan.",
     buyerQuestions: [
-      { question: "Is true sisal the same as sisal-look rug material?", answer: "No. True sisal is a natural agave-fiber construction with a genuine plant-fiber surface. Sisal-look rug material is typically a synthetic flatweave designed to mimic the appearance while improving moisture tolerance and consistency." },
-      { question: "What should a wholesale buyer confirm before importing sisal rugs?", answer: "Confirm fiber type, weave, backing, binding, packing method, humidity exposure, sample approval, and MOQ by colorway or construction. Those details determine whether the rug is actually suitable for the target market." },
+      { question: "Why use carpet tiles instead of broadloom for Canada office renovation?", answer: "Carpet tiles allow phased work, local replacement and easier attic-stock control. This matters when offices remain occupied or when future tenant changes may require isolated repairs." },
+      { question: "How much attic stock should an office carpet tile buyer keep?", answer: "Many projects reserve extra tiles from the same color batch for future repairs. The exact percentage depends on floor area, layout complexity, expected churn and whether the design uses multiple colors." },
     ],
-    topics: ["sisal rug wholesale", "natural fiber rug sourcing", "sisal look rug", "wholesale area rug"],
-    cardImage: "/images/cases/sisal-natural-fiber-sourcing/thumb.jpg",
-    cardImageAlt: "Gray placeholder for sisal natural fiber sourcing thumbnail",
-    heroImage: "/images/cases/sisal-natural-fiber-sourcing/hero.jpg",
-    heroImageAlt: "Gray placeholder for sisal natural fiber sourcing hero image",
-    sectionImages: {
-      "Project Overview": {
-        src: "/images/cases/sisal-natural-fiber-sourcing/warehouse-detail.jpg",
-        alt: "Gray placeholder for sisal natural fiber sourcing warehouse detail image",
-      },
-    },
-    relatedLinks: [
-      { label: "Luxury Residential Custom Carpet Planning - Mumbai", href: "/projects/case-7" },
-      { label: "Luxury Retail Custom Carpet Planning - Paris", href: "/projects/case-10" },
-    ],
+    topics: ["office carpet tiles Canada", "commercial carpet tiles", "50x50 carpet tiles", "phased office renovation flooring"],
+    heroImage: "/images/projects/case-14/canada-office-carpet-tiles-hero.webp",
+    heroImageAlt: "Commercial office carpet tiles used for a Canada phased renovation planning guide",
   },
 };
 

@@ -8,6 +8,7 @@ import { relatedCategoryIds } from "@/lib/content-relations";
 import ProductImage from "@/components/ProductImage";
 import RelatedCategoryLinks from "@/components/RelatedCategoryLinks";
 import ContentTrustPanel from "@/components/ContentTrustPanel";
+import ConversionLiftPanel from "@/components/ConversionLiftPanel";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -78,6 +79,8 @@ function RichBlogBlock({ block, index }: { block: BlogContentBlock; index: numbe
     );
   }
 
+  const unoptimized = block.src.startsWith("http://") || block.src.startsWith("https://");
+
   return (
     <figure className="my-8">
       <div className="aspect-[16/9] overflow-hidden rounded-xl border border-border bg-white shadow-md">
@@ -87,6 +90,7 @@ function RichBlogBlock({ block, index }: { block: BlogContentBlock; index: numbe
           className="h-full w-full"
           fit="cover"
           sizes="(max-width: 1000px) 100vw, 1000px"
+          unoptimized={unoptimized}
         />
       </div>
       {block.caption ? (
@@ -138,11 +142,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: post.seoTitle,
-    description: post.description,
+    description: post.description || post.subtitle,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.title,
-      description: post.description,
+      description: post.description || post.subtitle,
       url: absoluteUrl(`/blog/${post.slug}`),
       type: "article",
       publishedTime: post.date,
@@ -161,19 +165,19 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  const relatedProducts = post.relatedProductIds
+  const relatedProducts = (post.relatedProductIds || [])
     .map((id) => products.find((product) => product.id === id))
     .filter((product): product is NonNullable<typeof product> => Boolean(product));
   const relatedCategories = relatedCategoryIds(relatedProducts);
   const relatedProductPaths = new Set(relatedProducts.map((product) => productPath(product.id)));
-  const nextStepLinks = post.suggestedLinks.filter((item) => !relatedProductPaths.has(item.href));
+  const nextStepLinks = (post.suggestedLinks || []).filter((item) => !relatedProductPaths.has(item.href));
 
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     "@id": `${absoluteUrl(`/blog/${post.slug}`)}#article`,
     headline: post.title,
-    description: post.description,
+    description: post.description || post.subtitle,
     image: absoluteUrl(post.image),
     datePublished: post.date,
     dateModified: post.dateModified ?? post.date,
@@ -284,11 +288,11 @@ export default async function BlogPostPage({ params }: Props) {
 
         <div className="bg-surface border border-border rounded-xl p-6 md:p-8 mt-8">
           <p className="text-[10px] font-black uppercase tracking-[0.25em] text-primary/60 mb-2">Pain Point Addressed</p>
-          <p className="text-muted leading-relaxed">{post.painPoint}</p>
+          <p className="text-muted leading-relaxed">{post.painPoint || post.description}</p>
         </div>
 
         <div className="mt-10 space-y-12">
-          {post.sections.map((section) => (
+          {(post.sections || []).map((section) => (
             <section key={section.title} className="article-section border-b border-border pb-10">
               <h2 className="text-2xl font-bold text-primary mb-5 uppercase tracking-tight">{section.title}</h2>
               {section.blocks ? (
@@ -334,6 +338,16 @@ export default async function BlogPostPage({ params }: Props) {
             </section>
           ))}
         </div>
+
+        <ConversionLiftPanel
+          eyebrow="Turn This Guide Into a Quote"
+          title="Send Your Project Requirements After Reading This Guide"
+          body="If this topic matches your project, send the carpet application, estimated area, destination, and required date. Vishome can recommend the related product path and reply with sample, MOQ, lead time, and quotation details."
+          product={relatedProducts[0]?.name ?? post.title}
+          quoteHref={`/contact?product=${encodeURIComponent(relatedProducts[0]?.name ?? post.title)}#quote-form`}
+          className="mt-12 overflow-hidden rounded-xl border-y-0"
+          compact
+        />
 
         <section className="mt-12" aria-labelledby="related-products-heading">
           <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-accent">Continue Your Specification</p>
