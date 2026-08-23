@@ -88,17 +88,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: uniqueImages([product.image, ...(product.gallery?.map((image) => image.src) ?? [])]),
   }));
 
-  const projectEntries: MetadataRoute.Sitemap = caseStudies.map((project) => ({
-    url: `${BASE}${projectPath(project.id)}`,
-    lastModified: new Date("2026-07-30T00:00:00.000Z"),
-    changeFrequency: "monthly",
-    priority: 0.78,
-    images: uniqueImages([
-      getCaseSeoProfile(project.id).heroImage ?? project.image,
-      ...project.sections.map((section) => section.image),
-      ...(project.gallery ?? []),
-    ]),
-  }));
+  const projectEntries: MetadataRoute.Sitemap = caseStudies.map((project) => {
+    const profile = getCaseSeoProfile(project.id);
+
+    return {
+      url: `${BASE}${projectPath(project.id)}`,
+      lastModified: new Date("2026-07-30T00:00:00.000Z"),
+      changeFrequency: "monthly",
+      priority: 0.78,
+      images: uniqueImages([
+        profile?.heroImage ?? project.image,
+        ...project.sections.map((section) => section.image),
+        ...(project.gallery ?? []),
+      ]),
+    };
+  });
 
   const solutionEntries: MetadataRoute.Sitemap = solutionPages.map((page) => ({
     url: `${BASE}/solutions/${page.slug}`,
