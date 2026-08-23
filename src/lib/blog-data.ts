@@ -18,6 +18,7 @@ import { hotelCorridorCarpetStainHidingProcurementGuide } from "@/lib/blog-posts
 import { officeCarpetTilesRenovationCycleProcurementGuide } from "@/lib/blog-posts/office-carpet-tiles-renovation-cycle-procurement-guide";
 import { carpetTilesVsBroadloomCommercialProjectsGuide } from "@/lib/blog-posts/carpet-tiles-vs-broadloom-commercial-projects-guide";
 import { countryOfficeCarpetProcurementGapGuides } from "@/lib/blog-posts/country-office-carpet-procurement-gap-guides";
+import { commercialCarpetPricingMoqDataCenterGuide } from "@/lib/blog-posts/commercial-carpet-pricing-moq-data-center-guide";
 
 export interface BlogSection {
   title: string;
@@ -67,6 +68,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  commercialCarpetPricingMoqDataCenterGuide,
   commercialCarpetTileSpecificationChecklistGuide,
   carpetTilesVsBroadloomCommercialProjectsGuide,
   hotelCorridorCarpetStainHidingProcurementGuide,

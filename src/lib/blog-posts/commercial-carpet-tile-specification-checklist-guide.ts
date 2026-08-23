@@ -284,6 +284,10 @@ export const commercialCarpetTileSpecificationChecklistGuide: BlogPost = {
       href: "/blog/commercial-carpet-tile-moq-sample-trial-project-guide",
     },
     {
+      label: "Pricing Data Center",
+      href: "/blog/commercial-carpet-pricing-moq-data-center-guide",
+    },
+    {
       label: "RFQ Calculator",
       href: "/resources/commercial-carpet-rfq-calculator",
     },

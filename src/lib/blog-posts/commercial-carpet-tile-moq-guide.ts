@@ -379,6 +379,10 @@ export const commercialCarpetTileMoqGuide: BlogPost = {
       href: "/solutions/office-carpet-tiles-supplier",
     },
     {
+      label: "Pricing Data Center",
+      href: "/blog/commercial-carpet-pricing-moq-data-center-guide",
+    },
+    {
       label: "Request Project Quote",
       href: "/contact?product=Commercial%20Carpet%20Tiles#quote-form",
     },
