@@ -4,12 +4,14 @@ import PageHero from "@/components/PageHero";
 import QueryProductLeadCaptureForm from "@/components/QueryProductLeadCaptureForm";
 import QueryProductWhatsAppLink from "@/components/QueryProductWhatsAppLink";
 import WhatsAppBridgePrompt from "@/components/WhatsAppBridgePrompt";
+import ContactQuoteHashScroll from "@/components/ContactQuoteHashScroll";
 import { brandInfo } from "@/lib/data";
 import { whatsappBusinessMessages } from "@/lib/whatsapp";
 
 export default function ContactPage() {
   return (
     <div className="bg-white">
+      <ContactQuoteHashScroll />
       <PageHero
         title="Request a Project Quote"
         eyebrow="Factory Direct Project Support"
@@ -19,7 +21,7 @@ export default function ContactPage() {
         objectPosition="center 42%"
       />
 
-      <section id="quote-form" className="section-padding scroll-mt-28">
+      <section id="quote-form" data-quote-section-anchor className="section-padding scroll-mt-20 md:scroll-mt-24">
         <div className="container-fox">
           <div className="grid gap-10 lg:grid-cols-3 lg:gap-16">
             {/* Form Column */}
@@ -54,12 +56,14 @@ export default function ContactPage() {
                   <span className="text-muted">Submit at any time for a prompt professional response.</span>
                 </div>
               </div>
-              <QueryProductLeadCaptureForm
-                formName="contact_project_quote"
-                fallbackProduct=""
-                submitLabel="REQUEST PROJECT QUOTE"
-                introText="Complete the four required fields first. Extra details are optional, but they help us quote a closer price and recommend the right carpet construction."
-              />
+              <div data-quote-form-anchor>
+                <QueryProductLeadCaptureForm
+                  formName="contact_project_quote"
+                  fallbackProduct=""
+                  submitLabel="REQUEST PROJECT QUOTE"
+                  introText="Complete the four required fields first. Extra details are optional, but they help us quote a closer price and recommend the right carpet construction."
+                />
+              </div>
             </div>
 
             {/* Info Column */}

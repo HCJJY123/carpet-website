@@ -156,6 +156,7 @@ export default function Header() {
   const [languageOpen, setLanguageOpen] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
   const [emailPanelOpen, setEmailPanelOpen] = useState(false);
+  const [suppressedDesktopMenu, setSuppressedDesktopMenu] = useState("");
   const [openSections, setOpenSections] = useState<Set<string>>(() => new Set(sectionsWithChildren));
   const pathname = usePathname();
   const navigationPathname = stripLocaleFromPath(pathname);
@@ -218,6 +219,25 @@ export default function Header() {
     setLanguageOpen(false);
     setMenuOpen(false);
     setEmailPanelOpen(false);
+  };
+
+  const isQuoteFormHref = (href: string) => href === "/contact#quote-form" || href.endsWith("/contact#quote-form");
+
+  const handleQuoteFormNavigation = (event: ReactMouseEvent<HTMLAnchorElement>, href: string, menuHref?: string) => {
+    if (!isQuoteFormHref(href)) {
+      setMenuOpen(false);
+      return;
+    }
+
+    closeMenus();
+    if (menuHref) setSuppressedDesktopMenu(menuHref);
+    event.currentTarget.blur();
+
+    if (navigationPathname !== "/contact") return;
+
+    event.preventDefault();
+    window.history.pushState(null, "", "/contact#quote-form");
+    window.dispatchEvent(new Event("hashchange"));
   };
 
   const copyEmailAddress = () => {
@@ -309,7 +329,11 @@ export default function Header() {
                 const hasChildren = Boolean(link.children?.length);
 
                 return (
-                  <div key={link.href} className="group relative">
+                  <div
+                    key={link.href}
+                    className="group relative"
+                    onMouseLeave={() => setSuppressedDesktopMenu((current) => (current === link.href ? "" : current))}
+                  >
                     <Link
                       href={link.href}
                       aria-haspopup={hasChildren ? "menu" : undefined}
@@ -330,7 +354,7 @@ export default function Header() {
                       ) : null}
                     </Link>
 
-                    {hasChildren ? (
+                    {hasChildren && suppressedDesktopMenu !== link.href ? (
                       <div
                         className="invisible absolute left-1/2 top-full z-[70] mt-4 w-[310px] -translate-x-1/2 translate-y-1 bg-black py-3 opacity-0 shadow-[0_22px_55px_rgba(0,0,0,0.28)] transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100"
                         role="menu"
@@ -344,6 +368,7 @@ export default function Header() {
                             <Link
                               key={`${link.href}-${child.label}`}
                               href={child.href}
+                              onClick={(event) => handleQuoteFormNavigation(event, child.href, link.href)}
                               className={`block px-9 py-3.5 text-[14px] font-medium leading-tight transition-colors ${
                                 childActive ? "text-white" : "text-white/78 hover:bg-white/10 hover:text-white"
                               }`}
@@ -362,7 +387,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden items-center justify-end gap-3 min-[1420px]:flex min-[1536px]:translate-x-4 min-[1536px]:gap-5 min-[1900px]:translate-x-6 min-[1900px]:gap-6">
-            <Link href="/contact#quote-form" className="whitespace-nowrap rounded-lg bg-[#C8752A] px-6 py-3 text-[13px] font-bold uppercase tracking-[0.08em] text-white shadow-[0_3px_10px_rgba(72,43,18,0.16)] transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_5px_14px_rgba(72,43,18,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2">Send Inquiry</Link>
+            <Link href="/contact#quote-form" onClick={(event) => handleQuoteFormNavigation(event, "/contact#quote-form")} className="whitespace-nowrap rounded-lg bg-[#C8752A] px-6 py-3 text-[13px] font-bold uppercase tracking-[0.08em] text-white shadow-[0_3px_10px_rgba(72,43,18,0.16)] transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_5px_14px_rgba(72,43,18,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2">Send Inquiry</Link>
             <a
               href={whatsappUrl}
               target="_blank"
@@ -545,7 +570,7 @@ export default function Header() {
                           <Link
                             key={`${link.href}-${child.label}`}
                             href={child.href}
-                            onClick={() => setMenuOpen(false)}
+                            onClick={(event) => handleQuoteFormNavigation(event, child.href, link.href)}
                             className="block border-b border-border/60 px-5 py-2.5 text-[13px] font-semibold text-[#102A43]/70 last:border-b-0"
                           >
                             {child.label}
@@ -559,7 +584,7 @@ export default function Header() {
             })}
           </div>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            <Link href="/contact#quote-form" onClick={() => setMenuOpen(false)} className="btn-fox-orange text-center">
+            <Link href="/contact#quote-form" onClick={(event) => handleQuoteFormNavigation(event, "/contact#quote-form")} className="btn-fox-orange text-center">
               Get Factory Quote
             </Link>
             <a
