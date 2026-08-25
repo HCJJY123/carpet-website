@@ -61,6 +61,11 @@ const procurementGuideLinks = [
     text: "Compare bitumen, PVC-free PE, and cushion-backed systems before approving a tile specification or RFQ.",
   },
   {
+    title: "Fire rating and VOC document guide",
+    href: "/blog/commercial-carpet-tile-fire-rating-voc-documents-guide",
+    text: "Check fire-performance references, low-VOC expectations, adhesive assumptions and technical submittal fields before purchase.",
+  },
+  {
     title: "Commercial carpet tile MOQ guide",
     href: "/blog/commercial-carpet-tile-moq-sample-trial-project-guide",
     text: "Check sample, trial-order, and project MOQ logic before comparing square-metre prices.",

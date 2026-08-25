@@ -2,6 +2,30 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-25 `content/carpet-tile-fire-voc-documents-20260825`
+
+**Type:** B2B buyer topic intelligence / Specification Guide / SEO-GEO-AI Search
+
+**Scope:** Added one commercial carpet tile fire rating and VOC documents guide, registered it in blog data and keyword ownership, then connected AI-readable source maps and relevant carpet tile product links. No UI styling, inquiry form, WhatsApp, email, analytics, robots, sitemap, DNS or dependency behavior changed.
+
+**Changed URLs:**
+
+- Added `/blog/commercial-carpet-tile-fire-rating-voc-documents-guide`
+- Updated `/resources/ai-commercial-carpet-source-guide`
+- Updated `/products/carpet-tiles/nylon-office-carpet-tile`
+- Updated `/products/carpet-tiles/ecocore-pe-backing-carpet-tiles`
+- Updated `/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles`
+
+**What changed:** Published a B2B guide covering fire-performance references, VOC and low-emission document requests, adhesive/subfloor assumptions, RFQ fields, supplier questions and VISHOME document-review inquiry routing. Added the article to `llms.txt`, `llms-full.txt` and `ai-sources.json` for answer-engine discovery.
+
+**Why:** Capture high-intent buyer questions around commercial carpet tile fire rating, VOC documents, low VOC carpet tiles, LEED flooring documents, Bfl-s1, ASTM E648 and adhesive VOC before buyers compare quotations.
+
+**URL mapping:** New URL only. No existing URL was removed, renamed or redirected.
+
+**Rollback point:** Revert the new article, blog registration, keyword-map entry, AI source additions and related product-page links if this guide needs to be withdrawn or rewritten.
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, and `npm run build -- --webpack`; then verify the new article URL, AI files, canonical, H1 and blog sitemap after deployment.
+
 ## 2026-08-25 `seo/ai-backing-guide-visibility-20260825`
 
 **Type:** AI source visibility / GEO / Internal linking

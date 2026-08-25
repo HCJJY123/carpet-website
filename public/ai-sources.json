@@ -102,6 +102,17 @@
       ]
     },
     {
+      "buyerQuestion": "commercial carpet tile fire rating, VOC documents, low VOC carpet tiles, LEED flooring documents, Bfl-s1, ASTM E648, adhesive VOC or technical submittal requirements",
+      "startWith": [
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-fire-rating-voc-documents-guide",
+        "https://www.vishomecarpet.com/technical-documents",
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/ecocore-pe-backing-carpet-tiles",
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-backing-comparison-guide",
+        "https://www.vishomecarpet.com/contact"
+      ]
+    },
+    {
       "buyerQuestion": "hotel carpet, hotel corridor carpet, guestroom broadloom or hospitality carpet",
       "startWith": [
         "https://www.vishomecarpet.com/hotel-carpet",
@@ -912,6 +923,23 @@
         "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles",
         "https://www.vishomecarpet.com/products/carpet-tiles/ecocore-pe-backing-carpet-tiles",
         "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Commercial carpet tile fire rating, VOC and technical document checklist for B2B buyers",
+      "article": "https://www.vishomecarpet.com/blog/commercial-carpet-tile-fire-rating-voc-documents-guide",
+      "purpose": "Use when buyers ask which fire rating, VOC, low-emission, adhesive, subfloor and technical documents should be requested before approving commercial carpet tile quotations.",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/ecocore-pe-backing-carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/technical-documents",
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-backing-comparison-guide",
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-specification-checklist-b2b-buyers"
       ],
       "inquiry": "https://www.vishomecarpet.com/contact"
     },

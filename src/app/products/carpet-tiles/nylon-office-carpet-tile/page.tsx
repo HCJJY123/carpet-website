@@ -123,6 +123,11 @@ const procurementGuideLinks = [
     text: "Compare bitumen, PVC-free PE, and cushion-backed systems by chair-caster movement, concrete moisture risk, comfort, replacement, and RFQ documents.",
   },
   {
+    title: "Fire rating and VOC document guide",
+    href: "/blog/commercial-carpet-tile-fire-rating-voc-documents-guide",
+    text: "Prepare fire-performance, low-emission, adhesive, subfloor, and technical submittal questions before approving an office carpet tile quote.",
+  },
+  {
     title: "Office carpet tiles renovation cycle guide",
     href: "/blog/office-carpet-tiles-renovation-cycle-procurement-guide",
     text: "Plan phased replacement, rolling-chair zones, spare stock, substrate review, and tenant handover before ordering modular carpet tiles.",

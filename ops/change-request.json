@@ -1,16 +1,20 @@
 {
-  "task": "Enhance AI recommendation visibility for the latest commercial carpet tile backing comparison guide",
-  "approvedBy": "Site owner request on 2026-08-25 to start today's AI recommendation optimization for Vishome carpet website based on live version d552d24",
+  "task": "Create Day 2 B2B buyer intelligence article about commercial carpet tile fire rating and VOC documents",
+  "approvedBy": "Site owner request on 2026-08-25 to start today's Vishome AI recommendation optimization based on current live version 29df7af",
   "approvedCategories": [
     "content",
     "seo",
     "ai-source-files",
     "internal-links",
+    "blog",
     "direct-main-sync"
   ],
   "allowedPaths": [
     "CHANGELOG_OPS.md",
     "ops/change-request.json",
+    "keyword-map.csv",
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/commercial-carpet-tile-fire-rating-voc-documents-guide.ts",
     "public/llms.txt",
     "public/llms-full.txt",
     "public/ai-sources.json",
@@ -21,5 +25,5 @@
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": true,
-  "notes": "Content-only AI/GEO visibility update based on current live baseline d552d24. Add the latest backing comparison guide to AI-readable source maps, the AI source-selection page and relevant carpet tile product links. No UI styling, forms, analytics, sitemap, robots, email, WhatsApp, DNS or dependency changes."
+  "notes": "Content-only SEO/GEO/AI Search update based on current live baseline 29df7af. Add a B2B buying guide about commercial carpet tile fire rating, VOC, low-emission documents, adhesive/subfloor checks and RFQ fields; register it in blog data, keyword map, AI source maps and relevant carpet tile product links. No UI styling, forms, analytics, sitemap, robots, email, WhatsApp, DNS or dependency changes."
 }
