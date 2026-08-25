@@ -1,22 +1,25 @@
 {
-  "task": "Create the first B2B buyer topic intelligence article for commercial carpet tile specifications",
-  "approvedBy": "Site owner request on 2026-08-22 to start the first B2B buyer topic and generate professional Accio Work image prompts only, without deployment",
+  "task": "Write, image, publish and deploy a new commercial carpet tile backing comparison article for the Vishome blog",
+  "approvedBy": "Site owner request on 2026-08-25 to create the backing comparison article, connect the Accio-generated images, then commit, push and deploy directly",
   "approvedCategories": [
-    "governance",
-    "seo-global",
     "content",
-    "navigation"
+    "seo",
+    "blog",
+    "image-assets",
+    "direct-main-sync"
   ],
   "allowedPaths": [
-    "ops/change-request.json",
-    "ops/accio-image-prompts-commercial-carpet-tile-spec-checklist.md",
     "CHANGELOG_OPS.md",
-    "src/app/blog/page.tsx",
-    "src/lib/blog-data.ts",
-    "src/lib/blog-posts/commercial-carpet-tile-specification-checklist-guide.ts",
+    "ops/change-request.json",
     "keyword-map.csv",
-    "public/images/blog-series/commercial-carpet-tile-specification-checklist/**"
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/commercial-carpet-tile-backing-comparison-guide.ts",
+    "public/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-backing-comparison-hero.webp",
+    "public/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-backing-pile-cross-section-detail.webp",
+    "public/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-rolling-chair-traffic-zone.webp",
+    "public/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-sample-approval-qc.webp"
   ],
   "protectedUrlsChanged": false,
-  "notes": "Existing URLs, UI styling, forms, WhatsApp and email behavior are preserved. This change adds one B2B Buying Guide based on buyer-topic intelligence for commercial carpet tile specification checks, maps the target keyword, adds a relevant blog entry point, and prepares Accio Work image-generation prompts only. Generated images are not deployed in this change unless separately approved after review."
+  "directMainSyncApproved": true,
+  "notes": "Content-only SEO update based on current GitHub main/live baseline 7d4e151. Create a new informational blog article about commercial carpet tile backing comparison, add it to blog data and keyword map, connect four generated WebP image assets, then push directly to main to trigger Vercel production deployment. No UI styling, forms, analytics, sitemap, robots, email or WhatsApp behavior changes."
 }

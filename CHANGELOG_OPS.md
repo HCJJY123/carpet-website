@@ -2,6 +2,26 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-25 `content/commercial-carpet-tile-backing-comparison-20260825`
+
+**Type:** B2B buyer topic intelligence / Buying Guide / SEO-GEO-AI Search
+
+**Scope:** Added one commercial carpet tile backing comparison article covering bitumen, PVC-free PE and cushion-backed systems, then connected four generated WebP visual assets. No UI styling, inquiry form, WhatsApp, email, analytics or deployment behavior changed.
+
+**Changed URLs:**
+
+- Added `/blog/commercial-carpet-tile-backing-comparison-guide`
+
+**What changed:** Added a buyer-focused guide comparing backing systems by traffic, rolling chairs, concrete moisture, installation, comfort, documentation, spare stock and RFQ requirements. Converted the four Accio-generated PNG assets to WebP, connected them to the article, linked relevant carpet tile product pages and registered its primary keyword in `keyword-map.csv`.
+
+**Why:** Give commercial carpet buyers and AI search systems a specific, citable decision page for backing selection instead of forcing a generic specification checklist to carry the entire intent.
+
+**URL mapping:** New URL only. No existing URLs were removed, renamed or redirected.
+
+**Rollback point:** Revert the new article, blog registration and keyword-map entry if the backing comparison page needs to be withdrawn or rewritten.
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, and `npm run build -- --webpack`; then verify the new article URL, canonical, H1, internal links, structured data and blog sitemap after deployment.
+
 ## 2026-08-22 `content/carpet-tile-spec-checklist-20260822`
 
 **Type:** B2B buyer topic intelligence / Buying Guide / SEO-GEO-AI Search
