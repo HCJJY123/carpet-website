@@ -23,9 +23,9 @@ export const commercialCarpetTileFireRatingVocDocumentsGuide: BlogPost = {
   dateModified: "2026-08-25",
   author: "Vishome Technical Team",
   category: "Specification Guide",
-  image: "/images/blog-series/commercial-carpet-tile-specification-checklist/commercial-carpet-tile-qc-sample-approval.webp",
+  image: "/images/blog-series/commercial-carpet-tile-fire-rating-voc-documents/commercial-carpet-tile-fire-voc-document-review-hero.webp",
   imageUnoptimized: true,
-  h1Image: "/images/blog-series/commercial-carpet-tile-specification-checklist/commercial-carpet-tile-qc-sample-approval.webp",
+  h1Image: "/images/blog-series/commercial-carpet-tile-fire-rating-voc-documents/commercial-carpet-tile-fire-voc-document-review-hero.webp",
   h1ImageAlt:
     "Commercial carpet tile samples being checked with technical documents for fire rating and VOC requirements",
   h1ImageCaption:
@@ -92,7 +92,7 @@ export const commercialCarpetTileFireRatingVocDocumentsGuide: BlogPost = {
     {
       title: "Fire Rating: What Buyers Usually Need to Clarify",
       paragraphs: [],
-      image: "/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-backing-pile-cross-section-detail.webp",
+      image: "/images/blog-series/commercial-carpet-tile-fire-rating-voc-documents/commercial-carpet-tile-fire-rating-specification-detail.webp",
       imageAlt: "Close-up carpet tile cross section showing pile and backing layers relevant to fire and specification review",
       imageCaption:
         "Fire-performance questions should be tied to the exact tile construction, including fiber, backing and total build-up.",
@@ -132,6 +132,10 @@ export const commercialCarpetTileFireRatingVocDocumentsGuide: BlogPost = {
     {
       title: "VOC and Low-Emission Documents: Carpet Tile Is Only One Part of the Floor",
       paragraphs: [],
+      image: "/images/blog-series/commercial-carpet-tile-fire-rating-voc-documents/commercial-carpet-tile-low-voc-material-review.webp",
+      imageAlt: "Commercial carpet tile samples and adhesive container reviewed for low VOC and indoor air quality documents",
+      imageCaption:
+        "VOC and low-emission review should include the carpet tile, backing, adhesive route and project document target.",
       blocks: [
         {
           type: "paragraph",
@@ -172,7 +176,7 @@ export const commercialCarpetTileFireRatingVocDocumentsGuide: BlogPost = {
     {
       title: "Adhesive, Concrete and Moisture Checks Before Approval",
       paragraphs: [],
-      image: "/images/blog-series/commercial-carpet-tile-rfq-checklist/carpet-tile-concrete-subfloor-adhesive-check.webp",
+      image: "/images/blog-series/commercial-carpet-tile-fire-rating-voc-documents/commercial-carpet-tile-adhesive-concrete-subfloor-check.webp",
       imageAlt: "Installer reviewing concrete subfloor and adhesive plan before commercial carpet tile installation",
       imageCaption:
         "Subfloor and adhesive conditions can affect both performance and project acceptance, especially in occupied office renovations.",

@@ -2,6 +2,26 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-25 `content/fire-voc-guide-image-assets-20260825`
+
+**Type:** Image asset integration / Blog enhancement
+
+**Scope:** Converted four Accio-generated PNG assets to WebP and connected them to the existing commercial carpet tile fire rating and VOC documents guide. No UI styling, inquiry form, WhatsApp, email, analytics, robots, sitemap, DNS or dependency behavior changed.
+
+**Changed URLs:**
+
+- Updated `/blog/commercial-carpet-tile-fire-rating-voc-documents-guide`
+
+**What changed:** Added a dedicated image directory for the fire/VOC guide, processed the hero document area to avoid readable fake text, and replaced the article's generic images with dedicated B2B procurement, fire-rating review, low-VOC material review and adhesive/subfloor check visuals.
+
+**Why:** Improve article credibility, visual relevance, user engagement and AI/GEO content quality for high-intent fire rating, VOC document and technical submittal searches.
+
+**URL mapping:** Existing URL only. No existing URL was removed, renamed or redirected.
+
+**Rollback point:** Revert the four new WebP assets and article image-path updates if the generated visuals need to be replaced.
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, and `npm run build -- --webpack`; then verify the article and image URLs after deployment.
+
 ## 2026-08-25 `content/carpet-tile-fire-voc-documents-20260825`
 
 **Type:** B2B buyer topic intelligence / Specification Guide / SEO-GEO-AI Search
