@@ -54,6 +54,19 @@ const faqs = [
   },
 ];
 
+const procurementGuideLinks = [
+  {
+    title: "Commercial carpet tile backing comparison",
+    href: "/blog/commercial-carpet-tile-backing-comparison-guide",
+    text: "Compare bitumen, PVC-free PE, and cushion-backed systems before approving a tile specification or RFQ.",
+  },
+  {
+    title: "Commercial carpet tile MOQ guide",
+    href: "/blog/commercial-carpet-tile-moq-sample-trial-project-guide",
+    text: "Check sample, trial-order, and project MOQ logic before comparing square-metre prices.",
+  },
+];
+
 export const metadata: Metadata = product
   ? {
       title: "PP Bitumen Backed Office Carpet Tiles 50x50cm | Vishomecarpet",
@@ -232,6 +245,21 @@ export default function Page() {
                 <summary className="cursor-pointer font-black text-primary">{item.question}</summary>
                 <p className="mt-4 leading-relaxed text-muted">{item.answer}</p>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-white">
+        <div className="container-fox max-w-5xl">
+          <p className="mb-3 text-xs font-black uppercase tracking-[0.24em] text-accent">AI-Ready Procurement Links</p>
+          <h2 className="mb-8 text-3xl font-black uppercase text-primary md:text-4xl">Compare Backing Before Quotation</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            {procurementGuideLinks.map((item) => (
+              <Link key={item.href} href={item.href} className="border border-border bg-surface p-6 transition-colors hover:border-accent hover:bg-white">
+                <span className="block text-sm font-black uppercase leading-snug text-primary">{item.title}</span>
+                <span className="mt-3 block text-sm leading-6 text-muted">{item.text}</span>
+              </Link>
             ))}
           </div>
         </div>

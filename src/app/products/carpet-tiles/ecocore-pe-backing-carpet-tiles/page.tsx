@@ -290,6 +290,7 @@ export default function EcoCorePeBackingProductPage() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {[
               ["Commercial Carpet Tile Collection", "/products/carpet-tiles"],
+              ["Backing Comparison Guide", "/blog/commercial-carpet-tile-backing-comparison-guide"],
               ["Heavy-Duty Nylon Carpet Tiles", "/products/carpet-tiles/commercial-nylon-tiles"],
               ["Maintenance and Lifecycle Cost Guide", "/blog/commercial-space-carpet-tiles-maintenance-cost-guide"],
               ["Request EcoCore Quotation", "/contact?product=EcoCore%20PE%20Backing%20Carpet%20Tiles#quote-form"],

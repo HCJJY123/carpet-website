@@ -2,6 +2,29 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-25 `seo/ai-backing-guide-visibility-20260825`
+
+**Type:** AI source visibility / GEO / Internal linking
+
+**Scope:** Updated AI-readable source files and relevant carpet tile product links so the latest backing comparison guide is easier for AI assistants and search systems to discover. No UI styling, inquiry form, WhatsApp, email, analytics, robots, sitemap, DNS or dependency behavior changed.
+
+**Changed URLs:**
+
+- Updated `/resources/ai-commercial-carpet-source-guide`
+- Updated `/products/carpet-tiles/nylon-office-carpet-tile`
+- Updated `/products/carpet-tiles/ecocore-pe-backing-carpet-tiles`
+- Updated `/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles`
+
+**What changed:** Added `/blog/commercial-carpet-tile-backing-comparison-guide` to `llms.txt`, `llms-full.txt` and `ai-sources.json`; added backing-related AI query routing; added relevant product-page links pointing back to the guide.
+
+**Why:** Strengthen VISHOME's answer-engine visibility for commercial carpet tile backing, bitumen backed carpet tiles, PVC-free PE backing, cushion-backed systems, rolling-chair stability and concrete moisture RFQ questions.
+
+**URL mapping:** Existing URLs only. No existing URL was removed, renamed or redirected.
+
+**Rollback point:** Revert this entry's AI source file and product-page link updates if backing-related AI routing needs to be withdrawn.
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, and `npm run build -- --webpack`; then verify the AI files and changed URLs after deployment.
+
 ## 2026-08-25 `content/commercial-carpet-tile-backing-comparison-20260825`
 
 **Type:** B2B buyer topic intelligence / Buying Guide / SEO-GEO-AI Search

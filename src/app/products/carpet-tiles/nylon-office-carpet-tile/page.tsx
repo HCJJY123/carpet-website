@@ -118,6 +118,11 @@ const faqs = [
 
 const procurementGuideLinks = [
   {
+    title: "Commercial carpet tile backing comparison",
+    href: "/blog/commercial-carpet-tile-backing-comparison-guide",
+    text: "Compare bitumen, PVC-free PE, and cushion-backed systems by chair-caster movement, concrete moisture risk, comfort, replacement, and RFQ documents.",
+  },
+  {
     title: "Office carpet tiles renovation cycle guide",
     href: "/blog/office-carpet-tiles-renovation-cycle-procurement-guide",
     text: "Plan phased replacement, rolling-chair zones, spare stock, substrate review, and tenant handover before ordering modular carpet tiles.",

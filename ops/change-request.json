@@ -1,25 +1,25 @@
 {
-  "task": "Write, image, publish and deploy a new commercial carpet tile backing comparison article for the Vishome blog",
-  "approvedBy": "Site owner request on 2026-08-25 to create the backing comparison article, connect the Accio-generated images, then commit, push and deploy directly",
+  "task": "Enhance AI recommendation visibility for the latest commercial carpet tile backing comparison guide",
+  "approvedBy": "Site owner request on 2026-08-25 to start today's AI recommendation optimization for Vishome carpet website based on live version d552d24",
   "approvedCategories": [
     "content",
     "seo",
-    "blog",
-    "image-assets",
+    "ai-source-files",
+    "internal-links",
     "direct-main-sync"
   ],
   "allowedPaths": [
     "CHANGELOG_OPS.md",
     "ops/change-request.json",
-    "keyword-map.csv",
-    "src/lib/blog-data.ts",
-    "src/lib/blog-posts/commercial-carpet-tile-backing-comparison-guide.ts",
-    "public/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-backing-comparison-hero.webp",
-    "public/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-backing-pile-cross-section-detail.webp",
-    "public/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-rolling-chair-traffic-zone.webp",
-    "public/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-sample-approval-qc.webp"
+    "public/llms.txt",
+    "public/llms-full.txt",
+    "public/ai-sources.json",
+    "src/app/resources/ai-commercial-carpet-source-guide/page.tsx",
+    "src/app/products/carpet-tiles/nylon-office-carpet-tile/page.tsx",
+    "src/app/products/carpet-tiles/ecocore-pe-backing-carpet-tiles/page.tsx",
+    "src/app/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": true,
-  "notes": "Content-only SEO update based on current GitHub main/live baseline 7d4e151. Create a new informational blog article about commercial carpet tile backing comparison, add it to blog data and keyword map, connect four generated WebP image assets, then push directly to main to trigger Vercel production deployment. No UI styling, forms, analytics, sitemap, robots, email or WhatsApp behavior changes."
+  "notes": "Content-only AI/GEO visibility update based on current live baseline d552d24. Add the latest backing comparison guide to AI-readable source maps, the AI source-selection page and relevant carpet tile product links. No UI styling, forms, analytics, sitemap, robots, email, WhatsApp, DNS or dependency changes."
 }
