@@ -2,6 +2,27 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-26 `seo/dach-commercial-carpet-tiles-20260826`
+
+**Type:** International SEO / DACH commercial landing page / Sitemap discovery
+
+**Scope:** Added a German-language commercial carpet tile landing page for Germany, Austria and Switzerland, then added all existing localized landing pages to the pages Sitemap. No UI styling, inquiry form, WhatsApp, email, analytics, robots, DNS or dependency behavior changed.
+
+**Changed URLs:**
+
+- Added `/de/gewerbliche-teppichfliesen`
+- Updated `/sitemaps/pages.xml`
+
+**What changed:** Added a DACH-focused procurement page for `gewerbliche Teppichfliesen`, covering office and object use, nylon and PP options, bitumen or PVC-free PE backing, samples, technical documents, subfloor considerations, replacement stock and RFQ inputs. Updated `pages.xml` to include localized landing pages, including the existing German hotel carpet page, for consistent search-engine discovery.
+
+**Why:** SEMrush screenshots showed an Austria Google / German tracking setup with one keyword and no Top 100 position. The live technical audit found no status, canonical, title, description, H1 or noindex issue across 226 Sitemap URLs, but localized German pages were not listed in `pages.xml`. This update creates a relevant German commercial carpet tile answer page and removes that sitemap discovery gap.
+
+**URL mapping:** New URL only. Existing localized URLs remain unchanged; no URL was removed, renamed or redirected.
+
+**Rollback point:** Revert the German landing page, keyword-map entry and pages Sitemap localized landing inclusion if the DACH content needs to be revised.
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, and `npm run build -- --webpack`; then verify the new German page and `/sitemaps/pages.xml` after deployment.
+
 ## 2026-08-25 `content/fire-voc-guide-image-assets-20260825`
 
 **Type:** Image asset integration / Blog enhancement

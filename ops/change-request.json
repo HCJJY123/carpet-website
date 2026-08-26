@@ -1,34 +1,23 @@
 {
-  "task": "Connect Accio-generated WebP images to the commercial carpet tile fire rating and VOC documents guide",
-  "approvedBy": "Site owner request on 2026-08-25 confirming four Accio-generated PNG assets are ready for the Vishome fire rating and VOC article, based on current live version dc38dfc",
+  "task": "Improve Austria German search relevance and localized-page discoverability after SEMrush tracking review",
+  "approvedBy": "Site owner request on 2026-08-26 to start the targeted improvement work after reviewing SEMrush Position Tracking and SEO Dashboard screenshots, based on live version 47684c6",
   "approvedCategories": [
     "content",
     "seo",
-    "ai-source-files",
-    "internal-links",
-    "blog",
-    "image-assets",
+    "international-seo",
+    "seo-global",
+    "url-change",
     "direct-main-sync"
   ],
   "allowedPaths": [
     "CHANGELOG_OPS.md",
     "ops/change-request.json",
     "keyword-map.csv",
-    "src/lib/blog-data.ts",
-    "src/lib/blog-posts/commercial-carpet-tile-fire-rating-voc-documents-guide.ts",
-    "public/images/blog-series/commercial-carpet-tile-fire-rating-voc-documents/commercial-carpet-tile-fire-voc-document-review-hero.webp",
-    "public/images/blog-series/commercial-carpet-tile-fire-rating-voc-documents/commercial-carpet-tile-fire-rating-specification-detail.webp",
-    "public/images/blog-series/commercial-carpet-tile-fire-rating-voc-documents/commercial-carpet-tile-low-voc-material-review.webp",
-    "public/images/blog-series/commercial-carpet-tile-fire-rating-voc-documents/commercial-carpet-tile-adhesive-concrete-subfloor-check.webp",
-    "public/llms.txt",
-    "public/llms-full.txt",
-    "public/ai-sources.json",
-    "src/app/resources/ai-commercial-carpet-source-guide/page.tsx",
-    "src/app/products/carpet-tiles/nylon-office-carpet-tile/page.tsx",
-    "src/app/products/carpet-tiles/ecocore-pe-backing-carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles/page.tsx"
+    "src/lib/localized-landings.ts",
+    "src/app/de/gewerbliche-teppichfliesen/page.tsx",
+    "src/app/sitemaps/pages.xml/route.ts"
   ],
-  "protectedUrlsChanged": false,
+  "protectedUrlsChanged": true,
   "directMainSyncApproved": true,
-  "notes": "Image-only content enhancement based on current live baseline dc38dfc. Convert four Accio-generated PNG assets to WebP, place them under the fire rating and VOC article image directory, and update the existing article image paths. No UI styling, forms, analytics, sitemap, robots, email, WhatsApp, DNS or dependency changes."
+  "notes": "Targeted international SEO update based on current live baseline 47684c6. Add /de/gewerbliche-teppichfliesen as a German-language commercial carpet tile landing page for Germany, Austria and Switzerland; add all existing localized landing pages to pages.xml for consistent sitemap discovery. No UI styling, forms, analytics, robots, email, WhatsApp, DNS or dependency changes. Existing URLs remain unchanged."
 }
