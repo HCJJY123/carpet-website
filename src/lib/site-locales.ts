@@ -51,6 +51,7 @@ export const nativeLocalizedPaths = [
   "/es/losetas-alfombra-comerciales",
   "/ar/sajad-fanadi-mukhasas",
   "/ar/balat-sajad-tijari",
+  "/de/gewerbliche-teppichfliesen",
   "/de/hotel-teppichboden",
   "/pt/tapetes-personalizados-hotel",
   "/ja/custom-commercial-carpet",

@@ -13,11 +13,12 @@
     "CHANGELOG_OPS.md",
     "ops/change-request.json",
     "keyword-map.csv",
+    "src/lib/site-locales.ts",
     "src/lib/localized-landings.ts",
     "src/app/de/gewerbliche-teppichfliesen/page.tsx",
     "src/app/sitemaps/pages.xml/route.ts"
   ],
   "protectedUrlsChanged": true,
   "directMainSyncApproved": true,
-  "notes": "Targeted international SEO update based on current live baseline 47684c6. Add /de/gewerbliche-teppichfliesen as a German-language commercial carpet tile landing page for Germany, Austria and Switzerland; add all existing localized landing pages to pages.xml for consistent sitemap discovery. No UI styling, forms, analytics, robots, email, WhatsApp, DNS or dependency changes. Existing URLs remain unchanged."
+  "notes": "Targeted international SEO update based on current live baseline 47684c6. Add /de/gewerbliche-teppichfliesen as a German-language commercial carpet tile landing page for Germany, Austria and Switzerland; register it in native localized path routing; add all existing localized landing pages to pages.xml for consistent sitemap discovery. No UI styling, forms, analytics, robots, email, WhatsApp, DNS or dependency changes. Existing URLs remain unchanged."
 }

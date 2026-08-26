@@ -2,6 +2,26 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-26 `fix/dach-native-localized-route-20260826`
+
+**Type:** International SEO route correction
+
+**Scope:** Registered `/de/gewerbliche-teppichfliesen` as a native localized path in the locale-routing allowlist. No UI styling, inquiry form, analytics, robots, sitemap, DNS or dependency behavior changed.
+
+**Changed URLs:**
+
+- Fixed `/de/gewerbliche-teppichfliesen`
+
+**What changed:** The newly added German page was initially redirected by locale middleware to `/gewerbliche-teppichfliesen`, which does not exist. Added the native localized path allowlist entry so the published German URL returns its own page rather than a 404 destination.
+
+**Why:** Preserve the intended DACH landing page URL, canonical and discoverability after deployment.
+
+**URL mapping:** No URL was removed, renamed or redirected permanently. The existing `/de/gewerbliche-teppichfliesen` URL is restored as its canonical destination.
+
+**Rollback point:** Revert the allowlist addition only if the German landing page itself is removed through an approved URL-change process.
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:links`, and `npm run build -- --webpack`; then verify the German URL returns HTTP 200 with its self-canonical after deployment.
+
 ## 2026-08-26 `seo/dach-commercial-carpet-tiles-20260826`
 
 **Type:** International SEO / DACH commercial landing page / Sitemap discovery
