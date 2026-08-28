@@ -1,6 +1,6 @@
 {
-  "task": "Publish a B2B buying guide for commercial carpet tile adhesive and subfloor compatibility",
-  "approvedBy": "Site owner request on 2026-08-28 to continue the daily B2B buyer-topic optimization plan from the live baseline 8035e22 and integrate the Accio-generated visual assets",
+  "task": "Extend Poland and Bulgaria office carpet tile procurement guides with approved visual assets",
+  "approvedBy": "Site owner request on 2026-08-28 to extend the country-plus-product-plus-application SEO/GEO route from the live baseline 8035e22 and integrate the eight Accio-generated visual assets",
   "approvedCategories": [
     "content",
     "seo",
@@ -11,12 +11,12 @@
     "CHANGELOG_OPS.md",
     "ops/change-request.json",
     "keyword-map.csv",
-    "src/lib/blog-data.ts",
-    "src/lib/blog-posts/commercial-carpet-tile-adhesive-subfloor-guide.ts",
-    "public/images/blog-series/commercial-carpet-tile-adhesive-subfloor-guide/**"
+    "src/lib/blog-posts/country-office-carpet-procurement-gap-guides.ts",
+    "public/images/blog-series/poland-office-carpet-tile-phased-renovation-guide/**",
+    "public/images/blog-series/bulgaria-high-traffic-office-carpet-tile-fitout-guide/**"
   ],
   "protectedUrlsChanged": true,
   "directMainSyncApproved": false,
-  "rollbackCommit": "8035e22",
-  "notes": "Add /blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide with procurement-safe guidance on slab condition, moisture, pH, adhesive and backing compatibility, installation checks and RFQ documentation. Use only the four supplied Accio images after WebP conversion. Do not change UI styling, forms, analytics, conversion events, robots, DNS, email, WhatsApp, database or dependencies. Validate through feature branch, Vercel Preview and pull request before production."
+  "rollbackCommit": "02ef8f9",
+  "notes": "Update the existing /blog/phased-office-flooring-replacement-poland-guide and /blog/heavy-traffic-office-carpet-tiles-sofia-fitout-guide with four WebP visuals each. Keep existing URLs, country content, SEO data, links and conversion behavior unchanged. Do not change UI styling, forms, analytics, conversion events, robots, DNS, email, WhatsApp, database or dependencies. Validate through feature branch, Vercel Preview and pull request before production."
 }

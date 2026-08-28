@@ -2,6 +2,21 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-28 `content/poland-bulgaria-office-guides-20260828`
+
+**Type:** Country procurement guide enhancement / image optimization
+
+**Scope:** Updated the existing Poland phased-office-replacement guide and Sofia, Bulgaria high-traffic-office guide with four supplied illustrative WebP images each. The content continues to treat the images as generic B2B guide visuals, not verified customer projects, factory evidence, testing evidence or installation proof. No URL, UI styling, inquiry form, analytics, conversion event, robots, DNS, email, WhatsApp, database or dependency behavior changed.
+
+**Changed URLs:**
+
+- Updated `/blog/phased-office-flooring-replacement-poland-guide`
+- Updated `/blog/heavy-traffic-office-carpet-tiles-sofia-fitout-guide`
+
+**Rollback point:** `02ef8f9`
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets`, and `npm run build -- --webpack`; validate both updated guides and their eight image paths on the Vercel Preview before PR merge.
+
 ## 2026-08-28 `content/commercial-carpet-tile-adhesive-guide-20260828`
 
 **Type:** B2B buyer guide / installation compatibility / image optimization
