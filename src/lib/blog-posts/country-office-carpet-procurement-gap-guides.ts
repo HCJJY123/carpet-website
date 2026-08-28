@@ -16,6 +16,12 @@ type CountryGuideInput = {
   quoteFocus: string;
   marketHref: string;
   applicationHref?: string;
+  visuals?: {
+    hero: string;
+    zone: string;
+    detail: string;
+    installation: string;
+  };
 };
 
 const officeHero = "/images/products/gray-line-nylon-office-carpet-tiles/03-open-office-carpet-tiles.webp";
@@ -38,8 +44,13 @@ function buildGuide({
   quoteFocus,
   marketHref,
   applicationHref,
+  visuals,
 }: CountryGuideInput): BlogPost {
   const applicationLink = applicationHref ? [{ label: `${country} office application page`, href: applicationHref }] : [];
+  const heroImage = visuals?.hero ?? officeHero;
+  const zoneImage = visuals?.zone;
+  const approvalImage = visuals?.detail ?? detailImage;
+  const installImage = visuals?.installation ?? installationImage;
 
   return {
     slug,
@@ -60,8 +71,8 @@ function buildGuide({
     dateModified: "2026-08-20",
     author: "Vishomecarpet Technical Team",
     category: "Country Procurement Guide",
-    image: officeHero,
-    h1Image: officeHero,
+    image: heroImage,
+    h1Image: heroImage,
     h1ImageAlt: `${primaryKeyword} procurement planning for commercial office carpet projects`,
     h1ImageCaption: "Office carpet tile decisions should be based on zone use, sample approval, spare stock and project logistics.",
     sections: [
@@ -85,6 +96,9 @@ function buildGuide({
         title: "How to Compare the Project Zones",
         paragraphs: [],
         blocks: [
+          ...(zoneImage
+            ? [{ type: "image" as const, src: zoneImage, alt: `${primaryKeyword} office carpet tile zone planning`, caption: "Zone planning helps match carpet tile selection and installation sequencing to the way each part of the office is used." }]
+            : []),
           { type: "paragraph", text: scenario },
           {
             type: "table",
@@ -103,7 +117,7 @@ function buildGuide({
         title: "Approval and Risk Control",
         paragraphs: [],
         blocks: [
-          { type: "image", src: detailImage, alt: `${primaryKeyword} carpet tile texture and backing review`, caption: "Samples should be used to confirm texture, color direction, edge appearance and backing before production." },
+          { type: "image", src: approvalImage, alt: `${primaryKeyword} carpet tile texture and backing review`, caption: "Samples should be used to confirm texture, color direction, edge appearance and backing before production." },
           { type: "paragraph", text: approvalFocus },
           {
             type: "list",
@@ -121,7 +135,7 @@ function buildGuide({
         title: "RFQ Inputs and Buyer FAQ",
         paragraphs: [],
         blocks: [
-          { type: "image", src: installationImage, alt: `${primaryKeyword} office carpet tile phased installation planning`, caption: "A clear installation or replacement sequence helps the quotation include realistic quantities and packing details." },
+          { type: "image", src: installImage, alt: `${primaryKeyword} office carpet tile phased installation planning`, caption: "A clear installation or replacement sequence helps the quotation include realistic quantities and packing details." },
           { type: "paragraph", text: quoteFocus },
           {
             type: "table",
@@ -215,6 +229,12 @@ export const countryOfficeCarpetProcurementGapGuides: BlogPost[] = [
     quoteFocus: "Send the Sofia project area by zone, traffic notes, target date, sample requirement and document list. Vishomecarpet can respond with product options and commercial terms based on those inputs.",
     marketHref: "/bg/commercial-carpet-supplier-bulgaria",
     applicationHref: "/markets/bg/office-carpet-tiles",
+    visuals: {
+      hero: "/images/blog-series/bulgaria-high-traffic-office-carpet-tile-fitout-guide/bulgaria-high-traffic-office-carpet-tile-fitout-hero.webp",
+      zone: "/images/blog-series/bulgaria-high-traffic-office-carpet-tile-fitout-guide/office-entry-corridor-carpet-tile-zoning-detail.webp",
+      detail: "/images/blog-series/bulgaria-high-traffic-office-carpet-tile-fitout-guide/commercial-nylon-carpet-tile-high-traffic-backing-detail.webp",
+      installation: "/images/blog-series/bulgaria-high-traffic-office-carpet-tile-fitout-guide/commercial-carpet-tile-installation-seam-flatness-qc.webp",
+    },
   }),
   buildGuide({
     slug: "carpet-tile-replacement-stock-bulgaria-office-guide",
@@ -266,6 +286,12 @@ export const countryOfficeCarpetProcurementGapGuides: BlogPost[] = [
     quoteFocus: "Send phase quantities, handover dates, access limits and the target completion window. This allows the quotation to reflect staged project reality.",
     marketHref: "/pl/dostawca-wykladzin-komercyjnych",
     applicationHref: "/markets/pl/office-carpet-tiles",
+    visuals: {
+      hero: "/images/blog-series/poland-office-carpet-tile-phased-renovation-guide/poland-office-carpet-tile-phased-renovation-hero.webp",
+      zone: "/images/blog-series/poland-office-carpet-tile-phased-renovation-guide/office-carpet-tile-phased-installation-zone-planning.webp",
+      detail: "/images/blog-series/poland-office-carpet-tile-phased-renovation-guide/commercial-carpet-tile-sample-approval-office-renovation.webp",
+      installation: "/images/blog-series/poland-office-carpet-tile-phased-renovation-guide/office-carpet-tile-rolling-chair-replacement-planning.webp",
+    },
   }),
   buildGuide({
     slug: "modular-carpet-prague-office-renovation-downtime-control",
