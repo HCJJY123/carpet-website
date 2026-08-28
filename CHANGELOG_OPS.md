@@ -2,6 +2,20 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-28 `content/commercial-carpet-tile-adhesive-guide-20260828`
+
+**Type:** B2B buyer guide / installation compatibility / image optimization
+
+**Scope:** Added `/blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide` with procurement-safe guidance on concrete inspection, moisture and pH documentation, backing and adhesive compatibility, mock-up review and RFQ documentation. Added four supplied Accio visuals as optimized WebP assets. No UI styling, forms, analytics, conversion events, robots, DNS, email, WhatsApp, database or dependency behavior changed.
+
+**Changed URLs:**
+
+- Added `/blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide`
+
+**Rollback point:** `8035e22`
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets`, and `npm run build -- --webpack`; validate the article and image paths on the Vercel Preview before PR merge.
+
 ## 2026-08-26 `fix/dach-native-localized-route-20260826`
 
 **Type:** International SEO route correction

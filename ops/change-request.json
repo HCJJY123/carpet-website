@@ -1,24 +1,22 @@
 {
-  "task": "Improve Austria German search relevance and localized-page discoverability after SEMrush tracking review",
-  "approvedBy": "Site owner request on 2026-08-26 to start the targeted improvement work after reviewing SEMrush Position Tracking and SEO Dashboard screenshots, based on live version 47684c6",
+  "task": "Publish a B2B buying guide for commercial carpet tile adhesive and subfloor compatibility",
+  "approvedBy": "Site owner request on 2026-08-28 to continue the daily B2B buyer-topic optimization plan from the live baseline 8035e22 and integrate the Accio-generated visual assets",
   "approvedCategories": [
     "content",
     "seo",
-    "international-seo",
-    "seo-global",
-    "url-change",
-    "direct-main-sync"
+    "internal-links",
+    "image-optimization"
   ],
   "allowedPaths": [
     "CHANGELOG_OPS.md",
     "ops/change-request.json",
     "keyword-map.csv",
-    "src/lib/site-locales.ts",
-    "src/lib/localized-landings.ts",
-    "src/app/de/gewerbliche-teppichfliesen/page.tsx",
-    "src/app/sitemaps/pages.xml/route.ts"
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/commercial-carpet-tile-adhesive-subfloor-guide.ts",
+    "public/images/blog-series/commercial-carpet-tile-adhesive-subfloor-guide/**"
   ],
   "protectedUrlsChanged": true,
-  "directMainSyncApproved": true,
-  "notes": "Targeted international SEO update based on current live baseline 47684c6. Add /de/gewerbliche-teppichfliesen as a German-language commercial carpet tile landing page for Germany, Austria and Switzerland; register it in native localized path routing; add all existing localized landing pages to pages.xml for consistent sitemap discovery. No UI styling, forms, analytics, robots, email, WhatsApp, DNS or dependency changes. Existing URLs remain unchanged."
+  "directMainSyncApproved": false,
+  "rollbackCommit": "8035e22",
+  "notes": "Add /blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide with procurement-safe guidance on slab condition, moisture, pH, adhesive and backing compatibility, installation checks and RFQ documentation. Use only the four supplied Accio images after WebP conversion. Do not change UI styling, forms, analytics, conversion events, robots, DNS, email, WhatsApp, database or dependencies. Validate through feature branch, Vercel Preview and pull request before production."
 }
