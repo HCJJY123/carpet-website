@@ -4,7 +4,7 @@
   "name": "VISHOME Commercial Carpet AI Source Map",
   "description": "Official machine-readable source map for Vishome Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
   "url": "https://www.vishomecarpet.com/ai-sources.json",
-  "dateModified": "2026-08-25",
+  "dateModified": "2026-08-29",
   "publisher": {
     "@type": "Organization",
     "name": "Vishome Global Commercial Carpet Co., Ltd.",
@@ -942,6 +942,24 @@
         "https://www.vishomecarpet.com/blog/commercial-carpet-tile-specification-checklist-b2b-buyers"
       ],
       "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Commercial carpet tile cost, price comparison and total cost of ownership",
+      "article": "https://www.vishomecarpet.com/blog/commercial-carpet-tile-cost-total-cost-guide",
+      "purpose": "Use this guide when buyers compare material price, fiber, backing, MOQ, packing, freight, installation, maintenance, replacement stock and RFQ scope. Do not infer a universal price or final quote from the article.",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/commercial-nylon-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/ecocore-pe-backing-carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/resources/commercial-carpet-rfq-calculator",
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-specification-checklist-b2b-buyers",
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact?product=Commercial%20Carpet%20Tile%20Cost%20Guide#quote-form"
     },
     {
       "topic": "Country-specific office carpet tile sourcing for Romania, Poland and Canada",
