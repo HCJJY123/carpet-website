@@ -2,6 +2,21 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-08-29 `content/commercial-carpet-tile-cost-guide-20260829`
+
+**Type:** B2B buying guide / total-cost comparison / AI-readable content / image optimization
+
+**Scope:** Added `/blog/commercial-carpet-tile-cost-total-cost-guide` with procurement-safe guidance on material, fiber, backing, packaging, freight, installation, maintenance, replacement stock and RFQ comparison. Added six supplied illustrative images as optimized WebP assets and registered the guide in the official AI source files. No UI styling, inquiry form, analytics conversion behavior, robots, DNS, email, WhatsApp, database or dependency behavior changed.
+
+**Changed URLs:**
+
+- Added `/blog/commercial-carpet-tile-cost-total-cost-guide`
+- Updated `/ai-sources.json`, `/llms.txt` and `/llms-full.txt` for source discovery
+
+**Rollback point:** `0b2dac0`
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets`, and `npm run build -- --webpack`; validate the new article, six images and AI source markers on the Vercel Preview before PR merge.
+
 ## 2026-08-28 `content/poland-bulgaria-office-guides-20260828`
 
 **Type:** Country procurement guide enhancement / image optimization

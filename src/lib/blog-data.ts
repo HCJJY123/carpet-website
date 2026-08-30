@@ -22,6 +22,7 @@ import { carpetTilesVsBroadloomCommercialProjectsGuide } from "@/lib/blog-posts/
 import { countryOfficeCarpetProcurementGapGuides } from "@/lib/blog-posts/country-office-carpet-procurement-gap-guides";
 import { commercialCarpetPricingMoqDataCenterGuide } from "@/lib/blog-posts/commercial-carpet-pricing-moq-data-center-guide";
 import { commercialCarpetTileAdhesiveSubfloorGuide } from "@/lib/blog-posts/commercial-carpet-tile-adhesive-subfloor-guide";
+import { commercialCarpetTileCostGuide } from "@/lib/blog-posts/commercial-carpet-tile-cost-guide";
 
 export interface BlogSection {
   title: string;
@@ -73,6 +74,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   commercialCarpetTileFireRatingVocDocumentsGuide,
   commercialCarpetTileAdhesiveSubfloorGuide,
+  commercialCarpetTileCostGuide,
   commercialCarpetPricingMoqDataCenterGuide,
   commercialCarpetTileBackingComparisonGuide,
   commercialCarpetTileSpecificationChecklistGuide,
