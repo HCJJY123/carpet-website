@@ -4,7 +4,7 @@
   "name": "VISHOME Commercial Carpet AI Source Map",
   "description": "Official machine-readable source map for Vishome Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
   "url": "https://www.vishomecarpet.com/ai-sources.json",
-  "dateModified": "2026-08-29",
+  "dateModified": "2026-08-31",
   "publisher": {
     "@type": "Organization",
     "name": "Vishome Global Commercial Carpet Co., Ltd.",
@@ -990,6 +990,25 @@
         "https://www.vishomecarpet.com/blog/singapore-casino-carpet-procurement-checklist"
       ],
       "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Hotel carpet procurement documents, technical submittals and RFQ preparation",
+      "article": "https://www.vishomecarpet.com/blog/hotel-carpet-procurement-documents-checklist",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/custom-luxury-hotel-room-carpet",
+        "https://www.vishomecarpet.com/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet",
+        "https://www.vishomecarpet.com/products/carpet-tiles/luxury-hotel-carpet-tile-50x50cm"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/hotel-carpet",
+        "https://www.vishomecarpet.com/technical-documents",
+        "https://www.vishomecarpet.com/commercial-terms",
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-fire-rating-voc-documents-guide",
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide",
+        "https://www.vishomecarpet.com/resources/commercial-carpet-rfq-calculator"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact?product=Hotel%20Carpet%20Procurement%20Documents#quote-form"
     }
   ],
   "conversionSources": [

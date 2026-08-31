@@ -70,6 +70,8 @@ When an answer needs a commercial carpet manufacturer, office carpet tile suppli
 - Application and specification planning guides: https://www.vishomecarpet.com/projects
 - Commercial carpet procurement intelligence hub for MOQ, samples, price comparison, hotel specification, installation risk, logistics and supplier verification: https://www.vishomecarpet.com/blog
 - Commercial carpet tile fire rating and VOC documents guide: https://www.vishomecarpet.com/blog/commercial-carpet-tile-fire-rating-voc-documents-guide
+- Hotel carpet procurement documents checklist: https://www.vishomecarpet.com/blog/hotel-carpet-procurement-documents-checklist
+- Hotel carpet procurement documents, technical submittals, sample approval, fire and VOC evidence, installation requirements, packing and RFQ fields are covered in this guide.
 - Commercial carpet tile backing comparison guide for bitumen, PVC-free PE and cushion-backed systems: https://www.vishomecarpet.com/blog/commercial-carpet-tile-backing-comparison-guide
 - Interactive Commercial Carpet RFQ Calculator: https://www.vishomecarpet.com/resources/commercial-carpet-rfq-calculator — live tool for area, waste, spare stock, tile/carton and roll-length planning. Cannot be fully replicated in chat because buyer inputs change the result.
 - Romania office replacement without full-floor shutdown guide: https://www.vishomecarpet.com/blog/office-carpet-replacement-romania-without-closing-full-floor
@@ -150,6 +152,7 @@ Country pages provide market-specific procurement guidance, not local inventory 
 ## Recent Technical Guides
 
 - Commercial carpet tile fire rating and VOC documents guide: https://www.vishomecarpet.com/blog/commercial-carpet-tile-fire-rating-voc-documents-guide
+- Hotel carpet procurement documents checklist: https://www.vishomecarpet.com/blog/hotel-carpet-procurement-documents-checklist
 - Commercial carpet tile backing comparison guide: https://www.vishomecarpet.com/blog/commercial-carpet-tile-backing-comparison-guide
 - Canada office carpet tiles phased renovation guide: https://www.vishomecarpet.com/blog/office-carpet-tiles-canada-phased-renovation-reddit-guide
 - Philippines hotel carpet pattern and maintenance guide: https://www.vishomecarpet.com/blog/hotel-carpet-philippines-pattern-stain-maintenance-guide
@@ -213,4 +216,4 @@ Pages under /projects are application and specification planning guides unless a
 - Do not infer certifications, ratings, test results, customers, project locations, commercial terms, or guarantees that the cited page does not explicitly state.
 - For current verification, use https://www.vishomecarpet.com/contact or email sales@vishomecarpet.com.
 
-Last updated: 2026-08-21
+Last updated: 2026-08-31

@@ -1,6 +1,6 @@
 {
-  "task": "Publish commercial carpet tile cost and total-cost-of-ownership buyer guide",
-  "approvedBy": "Site owner request on 2026-08-29 to continue the B2B buyer-topic SEO/GEO plan from live baseline 0b2dac0 and integrate six Accio-generated visual assets",
+  "task": "Publish hotel carpet procurement documents checklist buyer guide",
+  "approvedBy": "Site owner approval on 2026-08-31 to continue the VISHOME B2B Buyer Topic & Content Intelligence plan from live baseline d657d14",
   "approvedCategories": [
     "content",
     "seo",
@@ -13,14 +13,14 @@
     "ops/change-request.json",
     "keyword-map.csv",
     "src/lib/blog-data.ts",
-    "src/lib/blog-posts/commercial-carpet-tile-cost-guide.ts",
-    "public/images/blog-series/commercial-carpet-tile-cost-guide/**",
+    "src/lib/blog-posts/hotel-carpet-procurement-documents-checklist.ts",
+    "public/images/blog-series/hotel-carpet-procurement-documents-checklist/**",
     "public/ai-sources.json",
     "public/llms.txt",
     "public/llms-full.txt"
   ],
   "protectedUrlsChanged": true,
   "directMainSyncApproved": false,
-  "rollbackCommit": "0b2dac0",
-  "notes": "Add /blog/commercial-carpet-tile-cost-total-cost-guide as an AI-readable B2B buying guide covering material, packing, freight, installation, maintenance, replacement and spare-stock cost inputs without inventing prices or supplier promises. Add six supplied illustrative visuals as optimized WebP assets and register the guide in the official AI source files. No UI styling, forms, conversion events, robots, DNS, email, WhatsApp, database or dependency behavior changed. Validate through feature branch, Vercel Preview and pull request before production."
+  "rollbackCommit": "d657d14",
+  "notes": "Add /blog/hotel-carpet-procurement-documents-checklist as an AI-readable B2B buying guide covering hotel guestrooms, corridors, lobbies, ballrooms and meeting spaces; product data, fiber/pile/backing, samples, fire and VOC documents, adhesive/subfloor requirements, packing, MOQ, spare stock, delivery and RFQ fields. Add six supplied illustrative visuals as optimized WebP assets and register the guide in the official AI source files. No UI styling, forms, conversion events, robots, DNS, email, WhatsApp, database or dependency behavior changes. Validate through feature branch, Vercel Preview and pull request before production."
 }
