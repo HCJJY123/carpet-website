@@ -574,3 +574,24 @@ This file is append-only. Do not delete or rewrite historical entries.
 **Rollback point:** `105c1ac`
 
 **Verification:** Scope guard passed; negative out-of-scope test was blocked; ESLint passed; 128-page production build passed; current production baseline verification passed. Preview network failures now produce a clear blocking result instead of an unhandled exception. Vercel Preview validation remains required before merge.
+## 2026-08-31 `content/hotel-carpet-procurement-documents-20260831`
+
+**Type:** B2B buyer guide / SEO / AI-readable sources / image optimization
+
+**Scope:** Added a hotel carpet procurement documents checklist article and six supplied illustrative WebP assets from the live `d657d14` baseline.
+
+**Changed URLs:**
+
+- Added `/blog/hotel-carpet-procurement-documents-checklist`
+
+**What changed:** Added a document-first hotel carpet procurement guide covering product data, fiber and pile, backing, sample approval, fire and VOC evidence, adhesive and subfloor requirements, packing, MOQ, spare stock, delivery and RFQ fields. Added contextual links to hotel carpet, wall-to-wall, carpet tile, technical document, commercial terms, RFQ calculator and related guide pages. Registered the page in the keyword map, `ai-sources.json`, `llms.txt` and `llms-full.txt`.
+
+**Media:** Converted six supplied PNG illustrations to WebP quality 82 under `public/images/blog-series/hotel-carpet-procurement-documents-checklist/`. The visuals are procurement workflow illustrations and are not represented as real hotel projects, client approvals, factory evidence or certification evidence.
+
+**Why:** Improve discovery for hotel carpet technical-submittal and RFQ questions while giving search engines and AI assistants a clearly scoped, internally linked source that routes qualified buyers to verified product and inquiry pages.
+
+**URL mapping:** New additive article URL only. No existing URL was removed, renamed or redirected.
+
+**Rollback point:** `d657d14`
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets` and `npm run build -- --webpack`; then validate the article, blog listing, blog sitemap, canonical, structured data and all six image requests in Vercel Preview before merging.
