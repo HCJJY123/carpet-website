@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import { brandInfo, products, type Product } from "@/lib/data";
-import type { CountryMarketPage } from "@/lib/country-market-pages";
+import { defaultLocalIntentSections, type CountryMarketPage } from "@/lib/country-market-pages";
 import { absoluteUrl, productPath, safeJsonLd } from "@/lib/seo";
 
 const UPDATED_DATE = "2026-08-19";
@@ -302,6 +302,8 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
     })),
   };
 
+  const localIntentSections = defaultLocalIntentSections(page);
+
   const takeaways = page.kind === "gold"
     ? [
         "Confirm sluice width, available mat thickness and retention system before selecting a roll.",
@@ -537,6 +539,30 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
                 </Link>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding" data-funnel-section="country_market_local_intent">
+        <div className="container-fox">
+          <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Local procurement intent</p>
+          <h2 className="mt-3 max-w-4xl text-3xl font-black leading-tight md:text-5xl">
+            How buyers in {page.countryName} usually move from search to RFQ
+          </h2>
+          <div className={`mt-10 grid gap-6 ${localIntentSections.length > 2 ? "lg:grid-cols-3" : "md:grid-cols-2"}`}>
+            {localIntentSections.map((section) => (
+              <article key={section.title} className="border border-border bg-white p-6 shadow-sm">
+                <h3 className="text-xl font-black leading-tight">{section.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-muted">{section.summary}</p>
+                <ul className="mt-5 space-y-4">
+                  {section.points.map((point) => (
+                    <li key={point} className="border-l-2 border-accent pl-4 text-sm leading-7 text-primary/90">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
         </div>
       </section>

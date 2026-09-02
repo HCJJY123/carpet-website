@@ -21,8 +21,15 @@ export interface CountryMarketPage {
   localTerms: string[];
   heroImage?: string;
   heroImageAlt?: string;
+  localIntentSections?: CountryMarketIntentSection[];
   primaryProductId: string;
   productIds: string[];
+}
+
+export interface CountryMarketIntentSection {
+  title: string;
+  summary: string;
+  points: string[];
 }
 
 function commercialPage(
@@ -58,6 +65,85 @@ function goldPage(
     primaryProductId: "gold-mining-carpet-mat",
     productIds: ["gold-mining-carpet-mat"],
   };
+}
+
+function defaultCommercialLocalIntentSections(page: CountryMarketPage): CountryMarketIntentSection[] {
+  return [
+    {
+      title: `Local procurement trigger in ${page.countryName}`,
+      summary: `These notes reflect how project buyers in ${page.countryName} usually move from first search to a ready-to-send RFQ.`,
+      points: [
+        page.marketContext,
+        `Project teams in ${page.countryName} typically define city, application, area and handover phase before they compare colour or decoration details.`,
+        `The first supplier filter usually checks whether the product category, backing, traffic level and maintenance path fit ${page.countryName} project conditions.`,
+      ],
+    },
+    {
+      title: "Local approval factors",
+      summary: "These are the checks that usually happen before the buyer moves from interest to quotation comparison.",
+      points: [
+        page.environmentNote,
+        "Sample approval should confirm colour, construction and backing together; a visual sample alone is not enough for project sign-off.",
+        `Delivery planning should follow the real project route, packing format and access conditions mentioned in the quotation request for ${page.countryName}.`,
+      ],
+    },
+    {
+      title: "Search wording buyers actually use",
+      summary: "Reuse these phrases in headings, FAQs and internal links so the page mirrors real buyer language.",
+      points: page.localTerms.map((term) => `${term} — use this phrase when the buyer is looking for a project supplier, not retail stock.`),
+    },
+    {
+      title: "What to include in a local RFQ",
+      summary: "A complete RFQ keeps the quotation aligned with the real project instead of a generic area-only estimate.",
+      points: [
+        `Project type and end use, such as ${page.applications[0]} or ${page.applications[1] ?? page.applications[0]}.`,
+        "Estimated area, installation phase and delivery city so freight and packing can be checked together.",
+        `Required documents, including sample approval, backing confirmation and any project fire or performance records that apply to ${page.countryName} tenders.`,
+      ],
+    },
+  ];
+}
+
+function defaultGoldLocalIntentSections(page: CountryMarketPage): CountryMarketIntentSection[] {
+  return [
+    {
+      title: `Intención local de compra en ${page.countryNameLocal}`,
+      summary: "Estos puntos resumen cómo suelen pasar de la búsqueda inicial al RFQ los compradores de este mercado.",
+      points: [
+        page.marketContext,
+        "El disparador de compra suele ser el ancho de la canaleta, el espesor disponible, el caudal y el tipo de equipo antes de hablar de color o empaque.",
+        "La aprobación comercial suele depender de muestra o rollo de prueba, cantidad, ciudad de entrega y condiciones de empaque.",
+      ],
+    },
+    {
+      title: "Revisión técnica y de operación",
+      summary: "La compra no se valida solo por el material; también depende del equipo y de las condiciones reales de lavado.",
+      points: [
+        "La revisión técnica suele comprobar la estructura, el respaldo, la limpieza y el comportamiento con material húmedo o arcilloso.",
+        page.environmentNote,
+        "La muestra debe probarse en el sistema real antes de una compra mayor, porque el resultado depende de todo el conjunto operativo.",
+      ],
+    },
+    {
+      title: "Términos que usa el comprador local",
+      summary: "Replica estas frases en títulos, FAQ e interlinks para que la página suene como una búsqueda real del mercado.",
+      points: page.localTerms.map((term) => `${term} — úselo cuando el comprador busca un proveedor de proyecto o una solución para canaleta.`),
+    },
+    {
+      title: "Datos que debe traer la solicitud",
+      summary: "Un RFQ completo evita cotizar solo por metros y mantiene el precio ligado a la configuración real.",
+      points: [
+        "Dimensiones de la canaleta o del equipo, cantidad requerida y ciudad de entrega.",
+        "Espesor, color, respaldo y tipo de empaque si la compra incluye muestra, rollo de prueba u OEM.",
+        "Tipo de material alimentado, frecuencia de limpieza y cualquier condición especial de operación.",
+      ],
+    },
+  ];
+}
+
+export function defaultLocalIntentSections(page: CountryMarketPage): CountryMarketIntentSection[] {
+  if (page.localIntentSections?.length) return page.localIntentSections;
+  return page.kind === "gold" ? defaultGoldLocalIntentSections(page) : defaultCommercialLocalIntentSections(page);
 }
 
 export const countryMarketPages: CountryMarketPage[] = [
@@ -181,6 +267,35 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Request carton or roll dimensions, pallet configuration, gross weight and Incoterm options before comparing road, rail or sea-linked delivery routes.",
     applications: ["Biura i centra biznesowe", "Hotele i korytarze", "Obiekty edukacyjne", "Przestrzenie handlowe i publiczne"],
     localTerms: ["wykładziny komercyjne", "płytki dywanowe do biura", "wykładzina hotelowa producent"],
+    localIntentSections: [
+      {
+        title: "Wstępny sygnał zakupowy w Polsce",
+        summary: "Kupujący w Polsce zwykle zaczynają od lokalizacji projektu, zakresu prac i trybu wymiany stref, a dopiero potem porównują wzór i cenę.",
+        points: [
+          "Warszawa, Kraków i Wrocław często wymagają oddzielnej oceny biur, hoteli i przestrzeni publicznych, ponieważ każdy typ obiektu ma inną logikę użytkową.",
+          "Zimą ważne są suche warunki składowania, aklimatyzacja i kontrola wilgotności podłoża przed montażem.",
+          "Do RFQ warto dołączyć plan pomieszczeń, zakres powierzchni, etap realizacji i wymagane dokumenty techniczne, aby oferta nie była wyłącznie orientacyjna.",
+        ],
+      },
+      {
+        title: "Frazy, których używają kupujący",
+        summary: "Te sformułowania pomagają dopasować nagłówki, FAQ i linki wewnętrzne do lokalnego sposobu wyszukiwania.",
+        points: [
+          "wykładziny komercyjne — użyj tej frazy, gdy klient szuka dostawcy projektu, a nie oferty detalicznej.",
+          "płytki dywanowe do biura — użyj tej frazy przy zapytaniach o fit-out biurowy i wymianę stref.",
+          "wykładzina hotelowa producent — użyj tej frazy, gdy projekt obejmuje hotel, korytarz lub strefę publiczną.",
+        ],
+      },
+      {
+        title: "Co powinno znaleźć się w lokalnym RFQ",
+        summary: "Pełny zestaw danych pozwala porównać ofertę z realnymi warunkami inwestycji.",
+        points: [
+          "Miasto inwestycji, typ obiektu i planowany termin montażu.",
+          "Ilość, format, podkład, klasa użytkowa oraz potwierdzenie próbki.",
+          "Dane logistyczne: wymiary kartonu lub rolki, palety, waga brutto i warunki dostawy.",
+        ],
+      },
+    ],
     productSet: "cold",
   }),
   commercialPage({
@@ -221,6 +336,35 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Compare delivery scenarios using the final packing list and destination, not an assumed freight rate based only on area.",
     applications: ["Birouri", "Hoteluri și coridoare", "Spații comerciale", "Clădiri publice"],
     localTerms: ["mochetă comercială", "dale mochetă birou", "mochetă hotelieră furnizor"],
+    localIntentSections: [
+      {
+        title: "Semnalul de achiziție local în România",
+        summary: "În România, cumpărătorii pornesc de obicei de la oraș, tipul clădirii și ritmul de implementare înainte de a aproba culoarea.",
+        points: [
+          "București, Cluj-Napoca și Timișoara includ frecvent proiecte de birouri, hoteluri și spații publice cu livrare eșalonată.",
+          "Mostra, suportul și documentele tehnice trebuie aliniate din timp, altfel apar revizii suplimentare înainte de comandă.",
+          "Pentru proiectele cu montaj în sezon rece trebuie verificate depozitarea uscată și aclimatizarea în spațiul final.",
+        ],
+      },
+      {
+        title: "Termeni de căutare și selecție",
+        summary: "Folosește expresiile reale ale cumpărătorilor în titluri, FAQ și interlinking intern.",
+        points: [
+          "mochetă comercială — folosește această expresie când clientul caută un furnizor pentru proiect, nu stoc retail.",
+          "dale mochetă birou — folosește-o la proiecte de birouri și înlocuiri pe zone.",
+          "mochetă hotelieră furnizor — folosește-o pentru hoteluri, coridoare și zone publice.",
+        ],
+      },
+      {
+        title: "Ce trebuie să conțină RFQ-ul",
+        summary: "O cerere completă de ofertă reduce riscul de preț orientativ și compară oferte pe aceeași bază.",
+        points: [
+          "Orașul proiectului, tipul de spațiu și suprafața estimată.",
+          "Confirmarea mostrei, construcției, suportului și cerințelor de documentație.",
+          "Detalii de livrare: listă de ambalare, greutate brută și adresă finală de descărcare.",
+        ],
+      },
+    ],
     productSet: "office",
   }),
   commercialPage({
@@ -335,6 +479,35 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Use the approved roll and pallet schedule to compare transport costs and installation sequencing.",
     applications: ["Irodák", "Szállodák", "Konferencia- és rendezvényterek", "Közösségi terek"],
     localTerms: ["kereskedelmi szőnyeg", "modulszőnyeg iroda", "szállodai padlószőnyeg"],
+    localIntentSections: [
+      {
+        title: "Helyi beszerzési szándék Magyarországon",
+        summary: "A magyar projektvevők általában a használati osztályt, a beépítés ütemezését és a dokumentumokat egyeztetik először.",
+        points: [
+          "Budapest, Debrecen és Szeged projektjeinél gyakori a szállodai felújítás, az irodai fit-out és a közösségi terek szakaszos átadása.",
+          "A végső jóváhagyás előtt érdemes együtt ellenőrizni a mintát, a hátoldalt, a karbantartási igényt és a használati osztályt.",
+          "Téli szállításnál a száraz tárolás és az akklimatizáció külön pont legyen a projektlistán.",
+        ],
+      },
+      {
+        title: "A vevők által használt keresési kifejezések",
+        summary: "Ezeket a kifejezéseket érdemes címsorokban, FAQ-ban és belső linkekben is visszahozni.",
+        points: [
+          "kereskedelmi szőnyeg — akkor használd, amikor a vevő projektbeszállítót keres, nem lakossági terméket.",
+          "modulszőnyeg iroda — irodai fit-out és szakaszos csere keresésekhez.",
+          "szállodai padlószőnyeg — szállodákhoz, konferenciaterekhez és közösségi terekhez.",
+        ],
+      },
+      {
+        title: "Mit kell tartalmaznia a helyi RFQ-nak",
+        summary: "A pontos ajánlatot az adja, ha a helyszín, a mennyiség és a csomagolás is együtt érkezik.",
+        points: [
+          "A projekt városa, az épület típusa és az érintett funkciók.",
+          "Mintaelvárás, szerkezet, hátoldal és a szükséges dokumentumok listája.",
+          "Pontos szállítási adatok: tekercshossz, raklapszám, bruttó súly és átadás helye.",
+        ],
+      },
+    ],
     productSet: "office",
   }),
   commercialPage({
@@ -472,6 +645,35 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Compare freight using approved carton, pallet and roll data together with the final delivery address.",
     applications: ["Kanceláře", "Hotely", "Školy a univerzity", "Veřejné prostory"],
     localTerms: ["komerční koberce", "kobercové čtverce kancelář", "hotelový koberec dodavatel"],
+    localIntentSections: [
+      {
+        title: "Lokální nákupní záměr v Česku",
+        summary: "Čeští kupující obvykle začínají typem objektu, etapami přístupu na stavbu a požadovanými dokumenty.",
+        points: [
+          "Praha, Brno a Ostrava často řeší renovace kanceláří, hotely i veřejné interiéry s postupným předáváním.",
+          "Před objednávkou je nutné sladit vzorek, konstrukci, podklad a seznam dokumentů s konkrétní specifikací projektu.",
+          "U zimních dodávek je potřeba hlídat suché skladování a aklimatizaci před montáží.",
+        ],
+      },
+      {
+        title: "Výrazy, které používají kupující",
+        summary: "Doplňte tyto fráze do nadpisů, FAQ i interních odkazů, aby text odpovídal reálnému vyhledávání.",
+        points: [
+          "komerční koberce — použijte, když zákazník hledá projektového dodavatele, ne retailovou nabídku.",
+          "kobercové čtverce kancelář — použijte pro kancelářské fit-outy a výměnu zón.",
+          "hotelový koberec dodavatel — použijte pro hotely, chodby a veřejné prostory.",
+        ],
+      },
+      {
+        title: "Co má obsahovat lokální RFQ",
+        summary: "Kompletní RFQ pomůže porovnat nabídky podle stejného technického podkladu.",
+        points: [
+          "Město projektu, typ objektu a očekávané termíny montáže.",
+          "Potvrzení vzorku, podkladu, provozní zátěže a požadovaných dokumentů.",
+          "Údaje k logistice: balení, palety, hmotnost a finální dodací adresa.",
+        ],
+      },
+    ],
     productSet: "office",
   }),
   commercialPage({
@@ -531,6 +733,35 @@ export const countryMarketPages: CountryMarketPage[] = [
     localTerms: ["commercial carpet supplier Singapore", "office carpet tiles Singapore", "hotel carpet supplier Singapore"],
     heroImage: "/images/markets/generated/singapore-casino-carpet-hero.webp",
     heroImageAlt: "Singapore commercial carpet supplier for casino and hospitality projects",
+    localIntentSections: [
+      {
+        title: "Local procurement intent in Singapore",
+        summary: "Singapore buyers usually move from compliance and access planning to sample approval before they lock production quantities.",
+        points: [
+          "High-rise offices, hotels and public interiors need lift booking, loading-bay access and floor-by-floor delivery planning.",
+          "Fire-document requirements, indoor humidity, maintenance access and replacement strategy are usually checked before approval.",
+          "A good RFQ should include delivery floor, project hours, pallet restrictions and the exact installation system.",
+        ],
+      },
+      {
+        title: "Search wording buyers actually use",
+        summary: "Keep these phrases visible in headings, FAQ blocks and internal links so the page mirrors market language.",
+        points: [
+          "commercial carpet supplier Singapore — use this phrase when the buyer is looking for a project supplier, not a retail listing.",
+          "office carpet tiles Singapore — use this phrase for office fit-out and phased replacement searches.",
+          "hotel carpet supplier Singapore — use this phrase for hotel, serviced-apartment and public-interior projects.",
+        ],
+      },
+      {
+        title: "What to include in a Singapore RFQ",
+        summary: "The more the quotation matches the site conditions, the easier it is to compare suppliers fairly.",
+        points: [
+          "Project type, delivery floor, lift access and loading sequence.",
+          "Sample approval, fire documents, humidity control and replacement scope.",
+          "Area, product format, packing plan and final handover timing.",
+        ],
+      },
+    ],
     productSet: "humid",
   }),
   commercialPage({
