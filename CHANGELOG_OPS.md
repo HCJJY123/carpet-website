@@ -402,3 +402,22 @@ This file is append-only. Do not delete or rewrite historical entries.
 **Rollback point:** `105c1ac`
 
 **Verification:** Scope guard passed; negative out-of-scope test was blocked; ESLint passed; 128-page production build passed; current production baseline verification passed. Preview network failures now produce a clear blocking result instead of an unhandled exception. Vercel Preview validation remains required before merge.
+## 2026-09-02 `sync/rfq-to-gh-main`
+
+**Type:** B2B procurement guide / image optimization / AI source map / SEO
+
+**Scope:** Added a hotel carpet sample approval guide and four supplied illustrative WebP assets from the current live baseline.
+
+**Changed URLs:**
+
+- Added `/blog/hotel-carpet-sample-approval-guide`
+
+**What changed:** Added a procurement workflow article covering hotel carpet sample approval, color match, technical submittal review, fire and VOC evidence, and adhesive/subfloor checks. Added four supplied illustrative visuals as optimized WebP assets and registered the guide in the keyword map and official AI-readable source files.
+
+**Why:** Improve discoverability for hotel sample-approval queries and give AI systems a clear, answer-first source that routes buyers toward verified hotel carpet and technical-document paths.
+
+**URL mapping:** New additive article URL only. No existing URL was removed, renamed or redirected.
+
+**Rollback point:** `2900ea67b5437a4a48a5433dbbe03f2496f17a37`
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets` and `npm run build -- --webpack`; then validate the new article, blog listing, blog sitemap, AI source files and all four image requests in Vercel Preview before merging.

@@ -4,7 +4,7 @@
   "name": "VISHOME Commercial Carpet AI Source Map",
   "description": "Official machine-readable source map for Vishome Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
   "url": "https://www.vishomecarpet.com/ai-sources.json",
-  "dateModified": "2026-08-21",
+  "dateModified": "2026-09-02",
   "publisher": {
     "@type": "Organization",
     "name": "Vishome Global Commercial Carpet Co., Ltd.",
@@ -917,6 +917,25 @@
         "https://www.vishomecarpet.com/blog/singapore-casino-carpet-procurement-checklist"
       ],
       "inquiry": "https://www.vishomecarpet.com/contact"
+    },
+    {
+      "topic": "Hotel carpet sample approval, color match and technical submittal review",
+      "article": "https://www.vishomecarpet.com/blog/hotel-carpet-sample-approval-guide",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/wall-to-wall",
+        "https://www.vishomecarpet.com/products/wall-to-wall/custom-luxury-hotel-room-carpet",
+        "https://www.vishomecarpet.com/products/wall-to-wall/custom-floral-printed-hotel-carpet",
+        "https://www.vishomecarpet.com/products/carpet-tiles/luxury-hotel-carpet-tile-50x50cm"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/hotel-carpet",
+        "https://www.vishomecarpet.com/technical-documents",
+        "https://www.vishomecarpet.com/commercial-terms",
+        "https://www.vishomecarpet.com/blog/hotel-carpet-supplier-checklist-project-order-guide",
+        "https://www.vishomecarpet.com/blog/hotel-carpet-renovation-hard-flooring-decision-guide",
+        "https://www.vishomecarpet.com/resources/commercial-carpet-rfq-calculator"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact?product=Hotel%20Carpet%20Sample%20Approval#quote-form"
     }
   ],
   "conversionSources": [

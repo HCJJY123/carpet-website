@@ -1,22 +1,24 @@
 {
-  "task": "Create the first B2B buyer topic intelligence article for commercial carpet tile specifications",
-  "approvedBy": "Site owner request on 2026-08-22 to start the first B2B buyer topic and generate professional Accio Work image prompts only, without deployment",
+  "task": "Publish hotel carpet sample approval guide with WebP images",
+  "approvedBy": "Site owner request on 2026-09-02 to convert the Accio-generated hotel carpet sample approval images into a blog article and AI-readable source entries",
   "approvedCategories": [
-    "governance",
     "seo-global",
     "content",
-    "navigation"
+    "internal-links",
+    "image-optimization"
   ],
   "allowedPaths": [
-    "ops/change-request.json",
-    "ops/accio-image-prompts-commercial-carpet-tile-spec-checklist.md",
     "CHANGELOG_OPS.md",
-    "src/app/blog/page.tsx",
+    "ops/change-request.json",
     "src/lib/blog-data.ts",
-    "src/lib/blog-posts/commercial-carpet-tile-specification-checklist-guide.ts",
+    "src/lib/blog-posts/hotel-carpet-sample-approval-guide.ts",
     "keyword-map.csv",
-    "public/images/blog-series/commercial-carpet-tile-specification-checklist/**"
+    "public/images/blog-series/hotel-carpet-sample-approval-guide/**",
+    "public/ai-sources.json",
+    "public/llms.txt",
+    "public/llms-full.txt"
   ],
-  "protectedUrlsChanged": false,
-  "notes": "Existing URLs, UI styling, forms, WhatsApp and email behavior are preserved. This change adds one B2B Buying Guide based on buyer-topic intelligence for commercial carpet tile specification checks, maps the target keyword, adds a relevant blog entry point, and prepares Accio Work image-generation prompts only. Generated images are not deployed in this change unless separately approved after review."
+  "protectedUrlsChanged": true,
+  "rollbackCommit": "2900ea67b5437a4a48a5433dbbe03f2496f17a37",
+  "notes": "Add /blog/hotel-carpet-sample-approval-guide as a procurement guide for hotel carpet sample approval, color match, technical review, fire and VOC evidence, adhesive compatibility and subfloor checks. Add four supplied illustrative visuals as optimized WebP assets and register the guide in the official AI source files. No UI styling, forms, conversion events, robots, DNS, email, WhatsApp, database or dependency behavior changed. Validate through feature branch, Vercel Preview and pull request before production."
 }
