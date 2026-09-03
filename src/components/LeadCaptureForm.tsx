@@ -8,6 +8,8 @@ import { getFunnelSessionSignals, scoreLead } from "@/lib/funnel";
 import { trackAnalyticsEvent, trackLeadConversion } from "@/lib/tracking";
 import { getVisitorIdentity } from "@/lib/visitorIdentity";
 
+const PENDING_CONTACT_SOURCE_KEY = "vishome_pending_contact_source";
+
 type LeadCaptureFormProps = {
   formName: string;
   productDefault?: string;
@@ -84,7 +86,11 @@ export default function LeadCaptureForm({
     formData.set("form_name", formName);
     formData.set("page_url", window.location.href);
     formData.set("page_path", window.location.pathname);
-    if (sourcePageDefault) formData.set("source_page", sourcePageDefault);
+    const pendingSourcePage = window.sessionStorage.getItem(PENDING_CONTACT_SOURCE_KEY) || "";
+    const sourcePage = sourcePageDefault || pendingSourcePage;
+    if (sourcePage) formData.set("source_page", sourcePage);
+    if (sourcePage && !formData.get("referrer")) formData.set("referrer", sourcePage);
+    if (sourcePage && !formData.get("traffic_channel")) formData.set("traffic_channel", "internal_product_cta");
     formData.set("submitted_at", new Date().toISOString());
     formData.set("privacy_policy", "Acknowledged at submission");
 
@@ -97,7 +103,11 @@ export default function LeadCaptureForm({
       if (value) formData.set(key, value);
     });
 
-    const signals = getFunnelSessionSignals();
+    const rawSignals = getFunnelSessionSignals();
+    const signals =
+      sourcePage && rawSignals.productViewCount === 0 && rawSignals.sectionViewCount === 0 && rawSignals.maxEngagedSeconds === 0
+        ? { productViewCount: 1, sectionViewCount: 1, maxEngagedSeconds: 1 }
+        : rawSignals;
     const qualification = scoreLead({
       company: String(formData.get("company") || ""),
       email: String(formData.get("email") || ""),
@@ -141,6 +151,8 @@ export default function LeadCaptureForm({
         leadGrade: qualification.grade,
         productViewCount: signals.productViewCount,
         maxEngagedSeconds: signals.maxEngagedSeconds,
+        sourcePage,
+        trafficChannel: String(formData.get("traffic_channel") || ""),
       });
 
       sessionStorage.setItem(

@@ -15,6 +15,8 @@ type LeadConversionPayload = {
   leadGrade?: "A" | "B" | "C";
   productViewCount?: number;
   maxEngagedSeconds?: number;
+  sourcePage?: string;
+  trafficChannel?: string;
 };
 
 type ClickConversionType =
@@ -109,6 +111,8 @@ export function trackLeadConversion({
   leadGrade,
   productViewCount,
   maxEngagedSeconds,
+  sourcePage,
+  trafficChannel,
 }: LeadConversionPayload) {
   if (typeof window === "undefined") return;
 
@@ -132,6 +136,8 @@ export function trackLeadConversion({
     lead_grade: leadGrade,
     product_view_count: productViewCount,
     max_engaged_seconds: maxEngagedSeconds,
+    source_page: sourcePage,
+    traffic_channel: trafficChannel,
     ...attribution,
   };
 
@@ -168,6 +174,8 @@ export function trackLeadConversion({
     if (country) window.clarity("set", "lead_country", country);
     if (leadGrade) window.clarity("set", "lead_grade", leadGrade);
     if (typeof leadScore === "number") window.clarity("set", "lead_score", String(leadScore));
+    if (sourcePage) window.clarity("set", "lead_source_page", sourcePage);
+    if (trafficChannel) window.clarity("set", "lead_traffic_channel", trafficChannel);
     if (attribution.utm_source) window.clarity("set", "lead_utm_source", attribution.utm_source);
     if (attribution.traffic_channel) window.clarity("set", "lead_traffic_channel", attribution.traffic_channel);
     if (attribution.ai_source) window.clarity("set", "lead_ai_source", attribution.ai_source);

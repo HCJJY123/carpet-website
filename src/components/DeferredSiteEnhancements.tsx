@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { lazy, Suspense, useEffect, useState } from "react";
 
 const MarketingTracking = lazy(() => import("@/components/MarketingTracking"));
@@ -14,8 +15,15 @@ type IdleWindow = Window & {
 
 export default function DeferredSiteEnhancements() {
   const [ready, setReady] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
+    const isHighIntentPage = pathname.startsWith("/products/") || pathname.startsWith("/contact");
+    if (isHighIntentPage) {
+      setReady(true);
+      return;
+    }
+
     const idleWindow = window as IdleWindow;
     const show = () => setReady(true);
 
@@ -26,7 +34,7 @@ export default function DeferredSiteEnhancements() {
 
     const timer = window.setTimeout(show, 1_800);
     return () => window.clearTimeout(timer);
-  }, []);
+  }, [pathname]);
 
   if (!ready) return null;
 

@@ -26,6 +26,7 @@ const ALLOWED_FIELDS = [
   "message",
   "page_url",
   "page_path",
+  "source_page",
   "landing_page",
   "referrer",
   "traffic_channel",

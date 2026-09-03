@@ -22,6 +22,7 @@ const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "xgg9z07t
 const microsoftUetTagId = process.env.NEXT_PUBLIC_MICROSOFT_UET_TAG_ID || "97259674";
 const gtmContainerId = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID;
 const yandexMetricaId = process.env.NEXT_PUBLIC_YANDEX_METRICA_ID;
+const pendingContactSourceKey = "vishome_pending_contact_source";
 
 declare global {
   interface Window {
@@ -263,6 +264,17 @@ export default function MarketingTracking() {
 
       if (href === "#quote-form" || (isSameOrigin && (resolvedUrl.pathname === "/contact" || normalizedPath.startsWith("/contact")))) {
         const signals = getFunnelSessionSignals();
+        if (isSameOrigin && (resolvedUrl.pathname === "/contact" || normalizedPath.startsWith("/contact"))) {
+          const sourcePage = `${window.location.pathname}${window.location.search}`;
+          if (sourcePage && !resolvedUrl.searchParams.get("source")) {
+            resolvedUrl.searchParams.set("source", sourcePage);
+            href = `${resolvedUrl.pathname}${resolvedUrl.search}${resolvedUrl.hash}`;
+            anchor.href = href;
+          }
+          if (sourcePage) {
+            window.sessionStorage.setItem(pendingContactSourceKey, sourcePage);
+          }
+        }
         trackAnalyticsEvent("quote_form_click", {
           href: isSameOrigin ? normalizedPath : href,
           link_text: text,
