@@ -163,20 +163,36 @@ export default function LocaleExperience() {
       );
     };
 
-    window.__vishomeGoogleTranslateInit = initializeTranslate;
-    if (window.google?.translate?.TranslateElement) {
-      initializeTranslate();
-    } else if (!document.getElementById(googleScriptId)) {
+    const loadGoogleTranslate = () => {
+      window.__vishomeGoogleTranslateInit = initializeTranslate;
+      if (window.google?.translate?.TranslateElement) {
+        initializeTranslate();
+        return;
+      }
+
+      if (document.getElementById(googleScriptId)) return;
+
       const script = document.createElement("script");
       script.id = googleScriptId;
       script.src = "https://translate.google.com/translate_a/element.js?cb=__vishomeGoogleTranslateInit";
       script.async = true;
       script.referrerPolicy = "no-referrer-when-downgrade";
       document.head.appendChild(script);
-    }
+    };
+
+    const handleLanguageSwitcherInteraction = (event: MouseEvent) => {
+      if (!(event.target instanceof Element)) return;
+      if (!event.target.closest("[data-language-switcher]")) return;
+      loadGoogleTranslate();
+    };
+
+    document.addEventListener("click", handleLanguageSwitcherInteraction, true);
+
+    if (locale) loadGoogleTranslate();
 
     return () => {
       document.removeEventListener("click", handleInternalNavigation, true);
+      document.removeEventListener("click", handleLanguageSwitcherInteraction, true);
     };
   }, [pathname]);
 

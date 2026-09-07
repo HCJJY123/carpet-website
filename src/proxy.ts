@@ -67,7 +67,14 @@ function applyLocaleCookies(response: NextResponse, locale: string, secure: bool
   return response;
 }
 
-function clearLocaleCookies(response: NextResponse, secure: boolean, hostname: string) {
+function clearLocaleCookies(
+  response: NextResponse,
+  secure: boolean,
+  hostname: string,
+  shouldClear: boolean,
+) {
+  if (!shouldClear) return response;
+
   clearPersistentCookie(response, localeCookieName, secure, hostname);
   clearPersistentCookie(response, googleTranslateCookieName, secure, hostname);
   if (usesSharedLocaleCookieDomain(hostname)) {
@@ -87,13 +94,23 @@ export function proxy(request: NextRequest) {
 
   if (url.searchParams.get("lang") === "en") {
     url.searchParams.delete("lang");
-    return clearLocaleCookies(NextResponse.redirect(url), secure, hostname);
+    return clearLocaleCookies(
+      NextResponse.redirect(url),
+      secure,
+      hostname,
+      request.cookies.has(localeCookieName) || request.cookies.has(googleTranslateCookieName),
+    );
   }
 
   if (pathname === "/") {
     const response = NextResponse.next();
     response.headers.set("Content-Language", "en");
-    return clearLocaleCookies(response, secure, hostname);
+    return clearLocaleCookies(
+      response,
+      secure,
+      hostname,
+      request.cookies.has(localeCookieName) || request.cookies.has(googleTranslateCookieName),
+    );
   }
 
   const pathLocale = getPathLocale(pathname);
@@ -104,7 +121,12 @@ export function proxy(request: NextRequest) {
     }
 
     url.pathname = stripLocaleFromPath(pathname);
-    return clearLocaleCookies(NextResponse.redirect(url, 308), secure, hostname);
+    return clearLocaleCookies(
+      NextResponse.redirect(url, 308),
+      secure,
+      hostname,
+      request.cookies.has(localeCookieName) || request.cookies.has(googleTranslateCookieName),
+    );
   }
 
   const countryMarketLanguage = getCountryMarketContentLanguage(pathname);

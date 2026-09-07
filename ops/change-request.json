@@ -1,26 +1,20 @@
 {
-  "task": "Publish hotel carpet procurement documents checklist buyer guide",
-  "approvedBy": "Site owner approval on 2026-08-31 to continue the VISHOME B2B Buyer Topic & Content Intelligence plan from live baseline d657d14",
+  "task": "Production performance hardening: reduce global translation script cost and preserve responsive image delivery",
+  "approvedBy": "Site owner approval on 2026-09-08 to improve live-site loading speed without UI changes",
   "approvedCategories": [
-    "content",
-    "seo",
-    "internal-links",
+    "performance",
     "image-optimization",
     "seo-global"
   ],
   "allowedPaths": [
     "CHANGELOG_OPS.md",
     "ops/change-request.json",
-    "keyword-map.csv",
-    "src/lib/blog-data.ts",
-    "src/lib/blog-posts/hotel-carpet-procurement-documents-checklist.ts",
-    "public/images/blog-series/hotel-carpet-procurement-documents-checklist/**",
-    "public/ai-sources.json",
-    "public/llms.txt",
-    "public/llms-full.txt"
+    "src/components/LocaleExperience.tsx",
+    "src/components/DeferredSiteEnhancements.tsx",
+    "src/proxy.ts"
   ],
-  "protectedUrlsChanged": true,
+  "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "d657d14",
-  "notes": "Add /blog/hotel-carpet-procurement-documents-checklist as an AI-readable B2B buying guide covering hotel guestrooms, corridors, lobbies, ballrooms and meeting spaces; product data, fiber/pile/backing, samples, fire and VOC documents, adhesive/subfloor requirements, packing, MOQ, spare stock, delivery and RFQ fields. Add six supplied illustrative visuals as optimized WebP assets and register the guide in the official AI source files. No UI styling, forms, conversion events, robots, DNS, email, WhatsApp, database or dependency behavior changes. Validate through feature branch, Vercel Preview and pull request before production."
+  "rollbackCommit": "6bc7ce7",
+  "notes": "Delay Google Translate script loading until the language switcher is opened on the English site. Preserve translated-route behavior, URLs, forms, analytics, image composition and UI styling. No dependency, DNS, robots, sitemap, canonical, database, email or WhatsApp changes."
 }

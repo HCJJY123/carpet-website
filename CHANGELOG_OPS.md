@@ -595,3 +595,17 @@ This file is append-only. Do not delete or rewrite historical entries.
 **Rollback point:** `d657d14`
 
 **Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets` and `npm run build -- --webpack`; then validate the article, blog listing, blog sitemap, canonical, structured data and all six image requests in Vercel Preview before merging.
+
+## 2026-09-08 — Performance hardening
+
+- Delayed Google Translate loading on the English site until the language switcher is opened.
+- Preserved immediate translation initialization for translated routes and existing navigation behavior.
+- Scope limited to `src/components/LocaleExperience.tsx` and `src/components/DeferredSiteEnhancements.tsx`; no UI styling, forms, tracking, SEO URLs, or deployment configuration changed.
+- Avoided synchronous state updates when enabling deferred enhancements on high-intent pages so the existing lint guard passes without changing enhancement timing.
+- Prevented the English homepage and locale redirects from issuing redundant locale-cookie deletion headers when no locale cookie exists.
+
+## 2026-09-08 — Image delivery and release validation
+
+- Verified the existing responsive image manifest delivers AVIF first, WebP fallback, explicit intrinsic dimensions, and mobile-aware `sizes` for the home hero and content imagery.
+- Confirmed image asset and link/sitemap audits pass without changing composition or UI styling.
+- Completed required operations, lint, TypeScript, and production build checks before Preview release.
