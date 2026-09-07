@@ -20,8 +20,8 @@ export default function DeferredSiteEnhancements() {
   useEffect(() => {
     const isHighIntentPage = pathname.startsWith("/products/") || pathname.startsWith("/contact");
     if (isHighIntentPage) {
-      setReady(true);
-      return;
+      const handle = window.setTimeout(() => setReady(true), 0);
+      return () => window.clearTimeout(handle);
     }
 
     const idleWindow = window as IdleWindow;
