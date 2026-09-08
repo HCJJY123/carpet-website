@@ -1,20 +1,29 @@
 {
-  "task": "Production performance hardening: reduce global translation script cost and preserve responsive image delivery",
-  "approvedBy": "Site owner approval on 2026-09-08 to improve live-site loading speed without UI changes",
+  "task": "Publish UAE commercial hotel carpet supplier market page and UAE hotel carpet procurement documents blog with optimized visuals and AI-readable discovery records",
+  "approvedBy": "Site owner approval on 2026-09-08 to publish Country 1 UAE commercial hotel carpet supplier page and Blog 1 UAE hotel carpet procurement documents checklist based on the current production baseline cde08b8",
   "approvedCategories": [
-    "performance",
+    "content",
     "image-optimization",
+    "seo",
+    "internal-links",
     "seo-global"
   ],
   "allowedPaths": [
     "CHANGELOG_OPS.md",
     "ops/change-request.json",
-    "src/components/LocaleExperience.tsx",
-    "src/components/DeferredSiteEnhancements.tsx",
-    "src/proxy.ts"
+    "src/lib/country-market-pages.ts",
+    "src/components/CountryMarketLandingPage.tsx",
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/uae-hotel-carpet-procurement-documents-checklist.ts",
+    "public/images/markets/generated/*",
+    "public/images/blog-series/uae-hotel-carpet-procurement-documents-checklist/*",
+    "keyword-map.csv",
+    "public/ai-sources.json",
+    "public/llms.txt",
+    "public/llms-full.txt"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "6bc7ce7",
-  "notes": "Delay Google Translate script loading until the language switcher is opened on the English site. Preserve translated-route behavior, URLs, forms, analytics, image composition and UI styling. No dependency, DNS, robots, sitemap, canonical, database, email or WhatsApp changes."
+  "rollbackCommit": "cde08b8",
+  "notes": "Add /ae/commercial-hotel-carpet-supplier-uae as an indexable country procurement page. Use UAE-specific illustrative B2B visuals only; do not use UK education images on this hotel page. Preserve existing product, form, analytics, robots, sitemap, canonical, database, email, WhatsApp and UI styling behavior."
 }

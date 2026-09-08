@@ -2,6 +2,24 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-09-08 `content/uae-hotel-carpet-market-page-20260908`
+
+**Type:** UAE country procurement page / hotel carpet sourcing / SEO / AI-readable sources / image optimization
+
+**Scope:** Added `/ae/commercial-hotel-carpet-supplier-uae` from the current production baseline `cde08b8`. The page covers Dubai and Abu Dhabi hotel procurement intent across guestrooms, corridors, lobbies and ballrooms, with sample approval, technical-submittal, climate, packing and RFQ guidance. Added three UAE-specific illustrative B2B procurement visuals as optimized WebP assets. The images are not represented as customer projects, factory evidence or certification evidence. No existing URL, UI styling, inquiry form, analytics conversion behavior, robots, DNS, email, WhatsApp, database or dependency behavior changed.
+
+**Changed URLs:**
+
+- Added `/ae/commercial-hotel-carpet-supplier-uae`
+- Updated `/markets` data output through the shared country-market registry
+- Updated `/ai-sources.json`, `/llms.txt`, `/llms-full.txt` and `keyword-map.csv`
+
+**Media:** Added `uae-commercial-hotel-carpet-supplier-hero.webp`, `uae-hotel-carpet-project-sample-review.webp` and `uae-hotel-carpet-shipping-rfq-review.webp` under `public/images/markets/generated/`. PNG source files remain in the Accio media-output directory.
+
+**Rollback point:** `cde08b8`
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets` and `npm run build -- --webpack`; then validate the UAE URL, canonical, H1, FAQ, CTA, sitemap entry, AI source markers and all three image requests on Vercel Preview before PR merge.
+
 ## 2026-08-29 `content/commercial-carpet-tile-cost-guide-20260829`
 
 **Type:** B2B buying guide / total-cost comparison / AI-readable content / image optimization
@@ -609,3 +627,24 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Verified the existing responsive image manifest delivers AVIF first, WebP fallback, explicit intrinsic dimensions, and mobile-aware `sizes` for the home hero and content imagery.
 - Confirmed image asset and link/sitemap audits pass without changing composition or UI styling.
 - Completed required operations, lint, TypeScript, and production build checks before Preview release.
+
+## 2026-09-08 `content/uae-hotel-carpet-procurement-documents-checklist-20260908`
+
+**Type:** UAE hotel procurement blog / SEO / AI-readable sources / image optimization
+
+**Scope:** Added `/blog/uae-hotel-carpet-procurement-documents-checklist` from the current production baseline `cde08b8`. The guide covers Dubai and Abu Dhabi hotel procurement documents, product and backing records, fire and VOC evidence, sample approval, installation readiness, packing, delivery, spare stock and RFQ fields. Added four supplied illustrative UAE B2B visuals as optimized WebP assets. The visuals are not represented as real hotel projects, client approvals, factory evidence or certification evidence.
+
+**Changed URLs:**
+
+- Added `/blog/uae-hotel-carpet-procurement-documents-checklist`
+- Updated `/ai-sources.json`, `/llms.txt`, `/llms-full.txt` and `keyword-map.csv`
+
+**Media:** Converted four supplied PNG illustrations to metadata-stripped WebP quality 82 under `public/images/blog-series/uae-hotel-carpet-procurement-documents-checklist/`. The corridor/sample image uses the supplied `uae-hotel-carpet-project-sample-review.png` source and the article-specific delivery filename.
+
+**Why:** Improve discovery for UAE hotel carpet technical-submittal and RFQ questions while routing qualified buyers to verified product, technical-document and inquiry pages.
+
+**URL mapping:** New additive article URL only. No existing URL was removed, renamed or redirected.
+
+**Rollback point:** `cde08b8`
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets` and `npm run build -- --webpack`; validate the article, blog listing, blog sitemap, canonical, structured data, AI source markers and all four image requests in Vercel Preview before PR merge.
