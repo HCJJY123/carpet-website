@@ -35,31 +35,6 @@ declare global {
   }
 }
 
-function conversionSendToFor(type: ClickConversionType) {
-  const legacyEmailConversionSendTo = "AW-18306142236/YUPmCKq-gc0cEJyghplE";
-  const emailConversionSendTo = process.env.NEXT_PUBLIC_GOOGLE_ADS_EMAIL_CONVERSION_SEND_TO;
-  const map: Record<ClickConversionType, string | undefined> = {
-    thank_you_page_view:
-      process.env.NEXT_PUBLIC_GOOGLE_ADS_THANK_YOU_CONVERSION_SEND_TO ||
-      "AW-18306142236/MKQzCMXB_swcEJyghplF",
-    whatsapp_click:
-      process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_CONVERSION_SEND_TO ||
-      "AW-18306142236/NqtSCK74gc0cEJyghplE",
-    email_click:
-      emailConversionSendTo && emailConversionSendTo !== legacyEmailConversionSendTo
-        ? emailConversionSendTo
-        : "AW-18306142236/jHA5COn46NkcEJyghplE",
-    phone_click:
-      process.env.NEXT_PUBLIC_GOOGLE_ADS_PHONE_CONVERSION_SEND_TO ||
-      "AW-18306142236/9VJZCK7t_swcEJyghplE",
-    request_sample_box_click:
-      process.env.NEXT_PUBLIC_GOOGLE_ADS_SAMPLE_BOX_CONVERSION_SEND_TO ||
-      "AW-18306142236/Co0OCK726MwcEJyghplE",
-  };
-
-  return map[type];
-}
-
 function normalizeEnhancedConversionEmail(value?: string) {
   const email = value?.trim().toLowerCase();
   return email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? email : undefined;
@@ -194,14 +169,6 @@ export function trackInteractionConversion(type: ClickConversionType, payload: R
 
   if (typeof window.gtag === "function") {
     window.gtag("event", type, fullPayload);
-
-    const sendTo = conversionSendToFor(type);
-    if (sendTo) {
-      window.gtag("event", "conversion", {
-        send_to: sendTo,
-        ...fullPayload,
-      });
-    }
   }
 
   if (typeof window.clarity === "function") {

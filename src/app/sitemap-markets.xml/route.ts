@@ -14,8 +14,9 @@ export function GET() {
     ...countryMarketPages.map((page) => ({ path: page.path, priority: page.kind === "gold" ? "0.86" : "0.84" })),
     ...countryApplicationPages.map((page) => ({ path: page.path, priority: page.market === "sg" ? "0.85" : "0.83" })),
   ];
+  const updatedMarketDates = new Map(countryMarketPages.filter((page) => page.updatedDate).map((page) => [page.path, page.updatedDate as string]));
   const body = urls
-    .map(({ path, priority }) => `  <url><loc>${escapeXml(`${BASE}${path}`)}</loc><lastmod>2026-08-19</lastmod><changefreq>monthly</changefreq><priority>${priority}</priority></url>`)
+    .map(({ path, priority }) => `  <url><loc>${escapeXml(`${BASE}${path}`)}</loc><lastmod>${updatedMarketDates.get(path) ?? "2026-08-19"}</lastmod><changefreq>monthly</changefreq><priority>${priority}</priority></url>`)
     .join("\n");
 
   return new NextResponse(

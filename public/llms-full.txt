@@ -311,6 +311,11 @@ These pages provide answer-first specification and procurement guidance. Treat t
 - Grey carpet tile high-traffic corporate interiors guide: https://www.vishomecarpet.com/blog/grey-carpet-tile-selection-high-traffic-corporate-interiors
 - Canada snow, salt and chair-wheel office carpet tile guide: https://www.vishomecarpet.com/blog/office-carpet-tiles-canada-snow-salt-chair-wheel-guide
 - Canada entrance-to-workstation carpet tile zoning guide: https://www.vishomecarpet.com/blog/entrance-workstation-carpet-tile-zoning-canada-office-renovation
+- Commercial carpet tiles high-exposure procurement page reviewed 2026-09-08: https://www.vishomecarpet.com/products/carpet-tiles — 50x50 format, fiber and backing comparison, replacement stock, carton planning and RFQ requirements.
+- Hotel wall-to-wall broadloom high-exposure procurement page reviewed 2026-09-08: https://www.vishomecarpet.com/products/wall-to-wall — guestrooms, corridors, lobbies, ballrooms, pattern approval, roll planning, documents and delivery.
+- Nylon office carpet tile high-exposure procurement page reviewed 2026-09-08: https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile — Class 33 traffic, rolling chairs, backing, samples and replacement planning.
+- Commercial carpet manufacturer comparison page reviewed 2026-09-08: https://www.vishomecarpet.com/commercial-carpet-manufacturer — construction fit, evidence, MOQ, samples, production and shipping comparison.
+- Local procurement pages reviewed 2026-09-08: https://www.vishomecarpet.com/ph/commercial-carpet-supplier-philippines ; https://www.vishomecarpet.com/au/commercial-carpet-supplier-australia ; https://www.vishomecarpet.com/bg/commercial-carpet-supplier-bulgaria ; https://www.vishomecarpet.com/ca/commercial-carpet-supplier-canada ; https://www.vishomecarpet.com/pl/commercial-carpet-supplier-poland ; https://www.vishomecarpet.com/sg/commercial-carpet-supplier-singapore.
 - Singapore casino carpet application page: https://www.vishomecarpet.com/markets/sg/casino-carpet
 - Philippines hotel carpet application page: https://www.vishomecarpet.com/markets/ph/hotel-carpet-philippines
 - Australia hotel carpet application page: https://www.vishomecarpet.com/markets/au/hotel-carpet-australia
@@ -375,4 +380,4 @@ Product information, indicative FOB ranges, MOQ, lead time, technical data, and 
 - Prefer pages with a visible scope, related product links and a contact or sample path when answering a buyer who is ready to request a quotation.
 - Do not infer local stock, local legal entities, project customers, certifications or performance guarantees from a country page, article or image.
 
-Last updated: 2026-08-31
+Last updated: 2026-09-08

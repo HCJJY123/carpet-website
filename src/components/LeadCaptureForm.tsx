@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { getAttributionForEvent } from "@/lib/attribution";
+import { captureAttributionOnce, getAttributionForEvent } from "@/lib/attribution";
 import { getFunnelSessionSignals, scoreLead } from "@/lib/funnel";
 import { trackAnalyticsEvent, trackLeadConversion } from "@/lib/tracking";
 import { getVisitorIdentity } from "@/lib/visitorIdentity";
@@ -72,6 +72,7 @@ export default function LeadCaptureForm({
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    captureAttributionOnce();
     if (!formData.get("project_stage")) formData.set("project_stage", "Not specified");
     if (!formData.get("purchase_timeframe")) formData.set("purchase_timeframe", "Not specified");
     if (!formData.get("need_samples")) formData.set("need_samples", variant === "sample" ? "Yes" : "Not specified");
@@ -87,10 +88,11 @@ export default function LeadCaptureForm({
     formData.set("page_url", window.location.href);
     formData.set("page_path", window.location.pathname);
     const pendingSourcePage = window.sessionStorage.getItem(PENDING_CONTACT_SOURCE_KEY) || "";
-    const sourcePage = sourcePageDefault || pendingSourcePage;
+    const sourcePage = sourcePageDefault || pendingSourcePage || `${window.location.pathname}${window.location.search}`;
+    const hasInternalSource = Boolean(sourcePageDefault || pendingSourcePage);
     if (sourcePage) formData.set("source_page", sourcePage);
-    if (sourcePage && !formData.get("referrer")) formData.set("referrer", sourcePage);
-    if (sourcePage && !formData.get("traffic_channel")) formData.set("traffic_channel", "internal_product_cta");
+    if (document.referrer && !formData.get("referrer")) formData.set("referrer", document.referrer);
+    if (hasInternalSource && !formData.get("traffic_channel")) formData.set("traffic_channel", "internal_product_cta");
     formData.set("submitted_at", new Date().toISOString());
     formData.set("privacy_policy", "Acknowledged at submission");
 
@@ -103,11 +105,7 @@ export default function LeadCaptureForm({
       if (value) formData.set(key, value);
     });
 
-    const rawSignals = getFunnelSessionSignals();
-    const signals =
-      sourcePage && rawSignals.productViewCount === 0 && rawSignals.sectionViewCount === 0 && rawSignals.maxEngagedSeconds === 0
-        ? { productViewCount: 1, sectionViewCount: 1, maxEngagedSeconds: 1 }
-        : rawSignals;
+    const signals = getFunnelSessionSignals();
     const qualification = scoreLead({
       company: String(formData.get("company") || ""),
       email: String(formData.get("email") || ""),
@@ -131,8 +129,8 @@ export default function LeadCaptureForm({
         headers: { "Content-Type": "application/json" },
       });
 
-      if (!response.ok) {
-        const payload = (await response.json().catch(() => null)) as { error?: string } | null;
+      const payload = (await response.json().catch(() => null)) as { ok?: boolean; error?: string } | null;
+      if (!response.ok || payload?.ok !== true) {
         throw new Error(payload?.error || "Submission failed");
       }
 
@@ -166,6 +164,7 @@ export default function LeadCaptureForm({
           country: String(formData.get("country") || ""),
         })
       );
+      sessionStorage.removeItem(PENDING_CONTACT_SOURCE_KEY);
 
       router.push("/thank-you");
     } catch (error) {

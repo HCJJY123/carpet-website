@@ -116,6 +116,25 @@ const faqs = [
   },
 ];
 
+const nylonBuyerChecks = [
+  {
+    title: "Rolling-chair and heavy-traffic fit",
+    detail: "For open-plan offices, corridors and meeting rooms, compare loop-pile density, traffic class, caster-chair exposure, seam stability and cleaning plan. A color sample cannot confirm performance by itself.",
+  },
+  {
+    title: "Backing, subfloor and replacement plan",
+    detail: "Bitumen, PVC and cushioned backings solve different project needs. Confirm subfloor condition, adhesive system, raised-floor access, acoustic targets and the number of spare tiles to hold for localized replacement.",
+  },
+  {
+    title: "Sample approval that procurement can record",
+    detail: "Approve the actual 50x50 cm tile, pile direction, color, backing, thickness, carton label and installation layout. Record the approved sample reference before releasing bulk production.",
+  },
+  {
+    title: "RFQ fields for a factory comparison",
+    detail: "Send area by zone, country and city, required tile format, fiber, backing, traffic target, fire or antistatic documents, installation date, packing preference and delivery term. This produces a more useful quotation than asking for a unit price only.",
+  },
+];
+
 const procurementGuideLinks = [
   {
     title: "Commercial carpet tile backing comparison",
@@ -312,6 +331,25 @@ export default function NylonOfficeCarpetTilePage() {
       />
 
       <ProductTrustLinks productName="nylon office carpet tiles" quoteHref={`/contact?product=${encodeURIComponent(p.name)}#quote-form`} />
+
+      <section className="section-padding border-y border-border bg-white" data-funnel-section="nylon_buyer_decisions">
+        <div className="container-fox">
+          <div className="mb-10 max-w-3xl">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-accent">Nylon Carpet Tile Buying Guide</p>
+            <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-5xl">Is This Nylon Carpet Tile Right for Your Office Project?</h2>
+            <p className="mt-5 leading-8 text-muted">The most useful comparison is between the operating conditions and the approved construction. Use these checks when reviewing samples, technical documents and replacement stock.</p>
+          </div>
+          <div className="grid gap-px border border-border bg-border md:grid-cols-2">
+            {nylonBuyerChecks.map((item) => (
+              <article key={item.title} className="bg-white p-7">
+                <h3 className="mb-3 text-lg font-black uppercase leading-tight text-primary">{item.title}</h3>
+                <p className="text-sm leading-7 text-muted">{item.detail}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 text-sm leading-7 text-muted">Need a broader comparison? Start with <Link href="/products/carpet-tiles" className="font-bold text-accent underline">commercial carpet tile options</Link>, compare <Link href="/blog/office-carpet-tiles-rolling-chairs-fitout-guide" className="font-bold text-accent underline">high-traffic rolling-chair specifications</Link>, or <Link href={`/contact?product=${encodeURIComponent(p.name)}#quote-form`} className="font-bold text-accent underline">request a nylon tile sample and quote</Link>.</p>
+        </div>
+      </section>
 
       <section className="section-padding border-y border-border bg-white">
         <div className="container-fox">

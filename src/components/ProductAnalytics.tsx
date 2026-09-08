@@ -38,14 +38,19 @@ export function ProductTrackedLink({
   payload: Record<string, unknown>;
   target?: string;
   rel?: string;
-}) {
+  }) {
+  const trackedEvent = event === "generate_lead" ? "quote_form_click" : event;
+
   return (
     <a
       href={href}
       className={className}
       target={target}
       rel={rel}
-      onClick={() => trackAnalyticsEvent(event, payload)}
+      onClick={() => trackAnalyticsEvent(trackedEvent, {
+        ...payload,
+        ...(event === "generate_lead" ? { conversion_stage: "cta_click" } : {}),
+      })}
     >
       {children}
     </a>

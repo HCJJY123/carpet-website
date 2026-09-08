@@ -124,6 +124,25 @@ const contractCarpetSelector = [
   }
 ];
 
+const hospitalityProcurementChecks = [
+  {
+    title: "Guestroom, corridor or public area",
+    detail: "Start with the zone because a guestroom, elevator lobby, corridor, ballroom and casino do not have the same traffic, pattern-repeat, cleaning or replacement requirements. Record each zone separately in the RFQ.",
+  },
+  {
+    title: "Broadloom construction and pattern approval",
+    detail: "Compare Axminster, printed nylon, tufted or wool-blend broadloom by pile, backing, pattern repeat, roll width and expected service conditions. Request a strike-off or physical sample before production artwork is released.",
+  },
+  {
+    title: "Roll plan, seams and installation risk",
+    detail: "A project quote should account for room dimensions, roll direction, pattern matching, seam locations, cutting waste, stair or lift access and phased handover. Area alone is not enough to finalize the quantity.",
+  },
+  {
+    title: "Documents and delivery sequence",
+    detail: "State the required fire, VOC or material-submittal documents, destination city, packing method, installation date and whether the project is new-build or renovation. This keeps technical approval and logistics visible before the price is compared.",
+  },
+];
+
 export const metadata: Metadata = {
   title: "Contract Carpet Supplier | Hotel Wall-to-Wall Broadloom",
   description: "Compare contract carpet for hotel rooms, corridors, ballrooms and casinos. Review Axminster, printed broadloom, MOQ, samples, lead time and factory FOB pricing.",
@@ -250,6 +269,24 @@ export default function CategoryPage() {
           { label: "Request a Quote", href: "/contact?product=Wall-to-Wall%20Carpet#quote-form" },
         ]}
       />
+      <section className="section-padding border-b border-border bg-white" data-funnel-section="hospitality_procurement_decisions">
+        <div className="container-fox">
+          <div className="mb-10 max-w-3xl">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Hospitality Buyer Decision Guide</p>
+            <h2 className="text-3xl font-black uppercase text-primary md:text-5xl">What Hotel Buyers Check Before Ordering Wall-to-Wall Carpet</h2>
+            <p className="mt-5 leading-8 text-muted">Hotel carpet searches often begin with a pattern or price, but procurement approval depends on zone use, construction, documents, installation and delivery control.</p>
+          </div>
+          <div className="grid gap-px border border-border bg-border md:grid-cols-2">
+            {hospitalityProcurementChecks.map((item) => (
+              <article key={item.title} className="bg-white p-7">
+                <h3 className="mb-3 text-lg font-black uppercase leading-tight text-primary">{item.title}</h3>
+                <p className="text-sm leading-7 text-muted">{item.detail}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 text-sm leading-7 text-muted">For a focused construction review, compare <Link href="/products/wall-to-wall/3d-printed-hotel-carpet" className="font-bold text-accent underline">custom printed hotel carpet</Link>, read the <Link href="/blog/commercial-carpet-tile-fire-rating-voc-documents-guide" className="font-bold text-accent underline">hotel fire and VOC document guide</Link>, or send a <Link href="/contact?product=Wall-to-Wall%20Carpet#quote-form" className="font-bold text-accent underline">hotel broadloom RFQ</Link>.</p>
+        </div>
+      </section>
       <section className="border-b border-border bg-white py-14 md:py-18" data-funnel-section="contract_carpet_selector">
         <div className="container-fox">
           <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">

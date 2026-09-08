@@ -199,21 +199,23 @@ export async function POST(request: NextRequest) {
     deliverToFormspree(formData),
   ]);
 
-  if (!archived && !delivered) {
+  if (!delivered) {
     return NextResponse.json(
       {
         ok: false,
         leadId,
         archived,
         delivered,
-        error: "Email delivery failed. Please contact us by WhatsApp or email directly.",
+        error: archived
+          ? "We saved your request, but email delivery is temporarily unavailable. Please contact us by WhatsApp or email directly."
+          : "Email delivery failed. Please contact us by WhatsApp or email directly.",
       },
       { status: 502, headers: { "Cache-Control": "no-store" } }
     );
   }
 
   return NextResponse.json(
-    { ok: true, leadId, archived, delivered, status: delivered ? "delivered" : "archived_pending_email" },
+    { ok: true, leadId, archived, delivered, status: "delivered" },
     { headers: { "Cache-Control": "no-store" } }
   );
 }

@@ -69,6 +69,25 @@ const quoteChecklist = [
   "Preferred Incoterm such as FOB, CIF, or DAP",
 ];
 
+const manufacturerWorkflow = [
+  {
+    title: "1. Match the construction to the application",
+    detail: "Start with the building zone, traffic, fiber, pile, backing, size and installation method. This prevents a low price from being compared against a different construction.",
+  },
+  {
+    title: "2. Approve the physical sample and documents",
+    detail: "Record the approved color, pattern, pile, backing, thickness, test-document requirement and any strike-off before production quantities are confirmed.",
+  },
+  {
+    title: "3. Lock commercial and delivery terms",
+    detail: "Confirm MOQ, production window, inspection point, carton or roll packing, gross weight, Incoterm, destination and receiving date in the same purchase record.",
+  },
+  {
+    title: "4. Keep the RFQ comparable",
+    detail: "Ask each supplier to quote the same product basis and list exclusions. Area, freight, sample charges, documents and installation assumptions should be visible rather than hidden in a headline price.",
+  },
+];
+
 const faqs = [
   {
     q: "What does VISHOME manufacture?",
@@ -294,6 +313,25 @@ export default function CommercialCarpetManufacturerPage() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      <section className="section-padding border-y border-border bg-white" data-funnel-section="manufacturer_procurement_workflow">
+        <div className="container-fox">
+          <div className="mb-10 max-w-3xl">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.24em] text-accent">Factory Buyer Workflow</p>
+            <h2 className="text-3xl font-black uppercase text-primary md:text-5xl">How to Compare a Commercial Carpet Manufacturer</h2>
+            <p className="mt-5 leading-8 text-muted">A reliable manufacturer comparison follows the same sequence as a good B2B RFQ: construction fit, evidence, commercial terms and delivery control.</p>
+          </div>
+          <div className="grid gap-px border border-border bg-border md:grid-cols-2">
+            {manufacturerWorkflow.map((item) => (
+              <article key={item.title} className="bg-white p-7">
+                <h3 className="mb-3 text-lg font-black uppercase leading-tight text-primary">{item.title}</h3>
+                <p className="text-sm leading-7 text-muted">{item.detail}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 text-sm leading-7 text-muted">Use the <Link href="/products/carpet-tiles" className="font-bold text-accent underline">commercial carpet tile range</Link> for modular flooring, the <Link href="/products/wall-to-wall" className="font-bold text-accent underline">hotel broadloom range</Link> for hospitality projects, or <Link href="/contact#quote-form" className="font-bold text-accent underline">send a comparable factory RFQ</Link>.</p>
         </div>
       </section>
 

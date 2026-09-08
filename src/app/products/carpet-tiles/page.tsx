@@ -94,6 +94,25 @@ const productOptions = [
   }
 ];
 
+const procurementDecisionPoints = [
+  {
+    title: "50x50 carpet tiles for phased projects",
+    detail: "Use 50x50 cm modular tiles when office, education, hotel or public-area work needs phased installation, access to raised floors or tile-by-tile replacement. Confirm the tile size in millimeters when a tender says 24x24 carpet tiles, because those formats are not automatically interchangeable.",
+  },
+  {
+    title: "Fiber and backing before color",
+    detail: "Compare nylon, Nylon 6.6 and polypropylene against traffic, caster-chair use, cleaning, antistatic needs and the subfloor. Then compare bitumen, PVC, cushion or PVC-free PE backing for dimensional stability, acoustic targets and maintenance access.",
+  },
+  {
+    title: "Replacement stock and carton planning",
+    detail: "For multi-floor offices, hotels and schools, ask for the recommended spare-tile percentage, dye-lot control, carton quantity, gross weight and storage conditions. These details make future localized replacement more predictable than choosing a color sample alone.",
+  },
+  {
+    title: "The fastest way to get a comparable quote",
+    detail: "Send total square meters, floor plan or zone split, application, preferred fiber and backing, installation method, destination city, target date and required documents. The factory can then return a product recommendation, sample path, packing basis and project quotation together.",
+  },
+];
+
 export const metadata: Metadata = {
   title: "Commercial Carpet Tiles 50x50 | Factory Price & Samples",
   description: "Compare 50x50 nylon and polypropylene commercial carpet tiles for offices and hotels. See factory price ranges, MOQ, backing, samples and export terms.",
@@ -222,6 +241,24 @@ export default function CategoryPage() {
           { label: "Request a Quote", href: "/contact?product=Commercial%20Carpet%20Tiles#quote-form" },
         ]}
       />
+      <section className="section-padding border-b border-border bg-white" data-funnel-section="carpet_tile_procurement_decisions">
+        <div className="container-fox">
+          <div className="mb-10 max-w-3xl">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Buyer Decision Guide</p>
+            <h2 className="text-3xl font-black uppercase text-primary md:text-5xl">How Project Buyers Compare 50x50 Carpet Tiles</h2>
+            <p className="mt-5 leading-8 text-muted">Commercial buyers usually shortlist modular carpet by project risk, not by appearance alone. Use these checks before requesting samples or comparing a factory quotation.</p>
+          </div>
+          <div className="grid gap-px border border-border bg-border md:grid-cols-2">
+            {procurementDecisionPoints.map((item) => (
+              <article key={item.title} className="bg-white p-7">
+                <h3 className="mb-3 text-lg font-black uppercase leading-tight text-primary">{item.title}</h3>
+                <p className="text-sm leading-7 text-muted">{item.detail}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 text-sm leading-7 text-muted">For construction-specific advice, compare the <Link href="/products/carpet-tiles/nylon-office-carpet-tile" className="font-bold text-accent underline">nylon office carpet tile specification</Link>, review the <Link href="/blog/carpet-tiles-over-concrete-installation-guide" className="font-bold text-accent underline">concrete subfloor installation guide</Link>, or send the complete scope through the <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="font-bold text-accent underline">commercial carpet tile RFQ form</Link>.</p>
+        </div>
+      </section>
       <section id="carpet-tile-products" className="section-padding scroll-mt-24">
         <div className="container-fox">
           <div className="mb-12 max-w-3xl">
