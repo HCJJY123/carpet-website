@@ -121,6 +121,14 @@ function supportingApplicationLinks(page: CountryMarketPage) {
     ];
   }
 
+  if (page.market === "ae") {
+    return [
+      { href: "/solutions/hotel-hospitality", label: "Hotel & Hospitality Carpet Solution", description: "Compare hospitality carpet formats for guestrooms, corridors, lobbies and public areas." },
+      { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Use this for luggage-wheel traffic, long visual runs, maintenance and replacement planning." },
+      { href: "/applications/hotel-guestroom", label: "Hotel Guestroom Carpet Support", description: "Use this where comfort, acoustics, room coordination and sample approval matter." },
+    ];
+  }
+
   const shared = [
     { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
     { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Useful for luggage-wheel wear, long visual runs and replacement planning." },
@@ -188,6 +196,12 @@ function supportingGuideLinks(page: CountryMarketPage) {
       { href: "/blog/grey-carpet-tile-selection-high-traffic-corporate-interiors", label: "High-Traffic Carpet Tile Guide", description: "Buyer-level guidance for busy corporate interiors and maintenance planning." },
     ];
   }
+  if (page.market === "ae") {
+    return [
+      { href: "/blog/hotel-carpet-procurement-documents-checklist", label: "Hotel Carpet Procurement Documents", description: "Technical submittals, samples, fire and VOC records, packing and RFQ preparation." },
+      { href: "/blog/commercial-carpet-tile-fire-rating-voc-documents-guide", label: "Fire Rating & VOC Documents Guide", description: "A document checklist for project-specific fire, VOC and installation review." },
+    ];
+  }
   if (page.market === "ph") {
     return [
       { href: "/blog/hotel-carpet-philippines-pattern-stain-maintenance-guide", label: "Philippines Hotel Carpet Guide", description: "Pattern, stain maintenance and humid-market procurement issues." },
@@ -240,6 +254,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
   const heroProduct = resolvedProducts[0];
   const heroImage = page.heroImage ?? heroProduct?.image ?? "/images/hero-home.webp";
   const heroImageAlt = page.heroImageAlt ?? page.title;
+  const pageUpdatedDate = page.updatedDate ?? UPDATED_DATE;
   const faqs = pageFaqs(page);
   const quoteProduct = page.kind === "gold" ? `Gold mining carpet mat - ${page.countryName}` : `Commercial carpet project - ${page.countryName}`;
   const quoteHref = `/contact?product=${encodeURIComponent(quoteProduct)}&country=${encodeURIComponent(page.countryName)}#quote-form`;
@@ -253,7 +268,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
     name: page.metadataTitle,
     description: page.metadataDescription,
     inLanguage: page.language,
-    dateModified: UPDATED_DATE,
+    dateModified: pageUpdatedDate,
     primaryImageOfPage: { "@type": "ImageObject", url: absoluteUrl(heroImage) },
     about: resolvedProducts.map((product) => ({
       "@type": "Thing",
@@ -484,6 +499,36 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
         </div>
       </section>
 
+      {page.supportingImages?.length ? (
+        <section className="section-padding" data-funnel-section="country_market_visuals">
+          <div className="container-fox">
+            <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Procurement visuals</p>
+            <h2 className="mt-3 max-w-4xl text-3xl font-black leading-tight md:text-5xl">Review the project inputs before requesting a UAE hotel carpet quote</h2>
+            <p className="mt-5 max-w-4xl leading-8 text-muted">
+              These are illustrative B2B procurement scenes for explaining the review workflow. They are not customer project photographs, factory evidence or certification evidence.
+            </p>
+            <div className="mt-10 grid gap-8 lg:grid-cols-2">
+              {page.supportingImages.map((image) => (
+                <figure key={image.src} className="overflow-hidden rounded-md border border-border bg-white shadow-sm">
+                  <ProductImage
+                    src={image.src}
+                    alt={image.alt}
+                    className="aspect-video w-full bg-surface"
+                    fit="cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    unoptimized={false}
+                  />
+                  <figcaption className="p-6">
+                    <h3 className="text-xl font-black leading-tight">{image.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-muted">{image.description}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section className="section-padding">
         <div className="container-fox grid gap-6 lg:grid-cols-3">
           <div className="rounded-md border border-border bg-white p-6 shadow-sm">
@@ -605,7 +650,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
             <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Content and evidence record</p>
             <dl className="mt-5 grid gap-4 text-sm sm:grid-cols-2">
               <div><dt className="font-black">Published by</dt><dd className="mt-1 text-muted">{brandInfo.name}</dd></div>
-              <div><dt className="font-black">Last reviewed</dt><dd className="mt-1 text-muted">August 2, 2026</dd></div>
+              <div><dt className="font-black">Last reviewed</dt><dd className="mt-1 text-muted">{pageUpdatedDate}</dd></div>
               <div><dt className="font-black">Product facts</dt><dd className="mt-1 text-muted">Current Vishomecarpet product records linked above</dd></div>
               <div><dt className="font-black">Limitations</dt><dd className="mt-1 text-muted">Final compliance, freight and installation are project-specific</dd></div>
             </dl>

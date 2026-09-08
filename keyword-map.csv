@@ -35,6 +35,7 @@ url,primary_keyword,search_intent,status,notes
 /request-sample-box,commercial carpet sample box,transactional,active,Sample conversion page
 /contact,commercial carpet project quotation,transactional,active,Primary inquiry page
 /markets,commercial carpet suppliers by country,commercial,active,Country market hub
+/ae/commercial-hotel-carpet-supplier-uae,commercial hotel carpet supplier uae,commercial,active,UAE hotel procurement page for Dubai and Abu Dhabi project delivery planning
 /ph/commercial-carpet-supplier-philippines,commercial carpet supplier philippines,commercial,active,Country landing page
 /au/commercial-carpet-supplier-australia,commercial carpet supplier australia,commercial,active,Country landing page
 /pl/dostawca-wykladzin-komercyjnych,dostawca wykladzin komercyjnych,commercial,active,Country landing page
@@ -115,3 +116,4 @@ url,primary_keyword,search_intent,status,notes
 /blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide,commercial carpet tile adhesive,commercial,active,Commercial carpet tile adhesive, subfloor and backing compatibility guide
 /blog/commercial-carpet-tile-cost-total-cost-guide,commercial carpet tile cost,commercial,active,Commercial carpet tile price comparison and total-cost-of-ownership buyer guide
 /blog/hotel-carpet-procurement-documents-checklist,hotel carpet procurement documents,informational,active,Hotel carpet technical submittal and RFQ document checklist
+/blog/uae-hotel-carpet-procurement-documents-checklist,uae hotel carpet procurement documents,informational,active,UAE hotel procurement document, technical submittal and RFQ checklist

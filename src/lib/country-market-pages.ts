@@ -13,6 +13,7 @@ export interface CountryMarketPage {
   title: string;
   metadataTitle: string;
   metadataDescription: string;
+  updatedDate?: string;
   directAnswer: string;
   marketContext: string;
   environmentNote: string;
@@ -21,6 +22,12 @@ export interface CountryMarketPage {
   localTerms: string[];
   heroImage?: string;
   heroImageAlt?: string;
+  supportingImages?: {
+    src: string;
+    alt: string;
+    title: string;
+    description: string;
+  }[];
   localIntentSections?: CountryMarketIntentSection[];
   primaryProductId: string;
   productIds: string[];
@@ -147,6 +154,80 @@ export function defaultLocalIntentSections(page: CountryMarketPage): CountryMark
 }
 
 export const countryMarketPages: CountryMarketPage[] = [
+  commercialPage({
+    market: "ae",
+    slug: "commercial-hotel-carpet-supplier-uae",
+    language: "en",
+    hreflang: "en-AE",
+    openGraphLocale: "en_AE",
+    countryName: "United Arab Emirates",
+    countryNameLocal: "United Arab Emirates",
+    title: "Commercial Hotel Carpet Supplier for UAE Projects",
+    metadataTitle: "Commercial Hotel Carpet Supplier UAE | VISHOME",
+    metadataDescription: "Commercial hotel carpet supplier for UAE projects in Dubai and Abu Dhabi. Compare guestroom, corridor, lobby and ballroom carpet, samples, technical documents, packing and RFQ requirements.",
+    updatedDate: "2026-09-08",
+    directAnswer: "A commercial hotel carpet supplier for the UAE should help the project team compare guestroom, corridor, lobby and ballroom constructions by traffic, pattern approval, backing, maintenance, fire and VOC documentation, and delivery plan. VISHOME supports project enquiries from Dubai, Abu Dhabi and other UAE destinations with hotel broadloom and commercial carpet options; final specifications, documents and shipping terms require project confirmation.",
+    marketContext: "Hotel procurement in Dubai and Abu Dhabi often separates design approval, technical submittal and delivery planning. The RFQ should identify each hotel zone, approved pattern direction, expected traffic, renovation or new-build phase, required documents and the delivery city before a supplier is compared.",
+    environmentNote: "UAE projects should account for dust at entrances, luggage-wheel traffic, strong air-conditioning, coastal humidity in some locations and protected storage before installation. Confirm the substrate, adhesive and acclimation plan with the local installer and project consultant.",
+    deliveryNote: "For Dubai, Abu Dhabi or another UAE destination, request the final roll or carton plan, gross weight, pallet count, Incoterm, import-document needs and site receiving window before comparing freight. This page does not represent a local warehouse or guaranteed local stock.",
+    applications: ["Hotel guestrooms", "Hotel corridors and lift lobbies", "Hotel lobbies and reception areas", "Ballrooms, meeting rooms and public areas"],
+    localTerms: ["commercial hotel carpet supplier UAE", "hotel carpet supplier Dubai", "hotel carpet supplier Abu Dhabi", "hotel broadloom carpet UAE", "hotel corridor carpet UAE"],
+    heroImage: "/images/markets/generated/uae-commercial-hotel-carpet-supplier-hero.webp",
+    heroImageAlt: "Illustrative UAE hotel carpet procurement review with samples and project documents",
+    supportingImages: [
+      {
+        src: "/images/markets/generated/uae-hotel-carpet-project-sample-review.webp",
+        alt: "Illustrative hotel carpet sample, pattern and technical approval review for a UAE project",
+        title: "Sample, pattern and technical approval",
+        description: "Use one approval record for colour, pattern direction, pile, backing and the technical documents required by the UAE hotel project.",
+      },
+      {
+        src: "/images/markets/generated/uae-hotel-carpet-shipping-rfq-review.webp",
+        alt: "Illustrative UAE hotel carpet packing and shipping RFQ review",
+        title: "Packing, delivery and RFQ review",
+        description: "Confirm delivery city, roll or carton dimensions, gross weight, packing, project phase and site receiving window before requesting freight.",
+      },
+    ],
+    localIntentSections: [
+      {
+        title: "Dubai and Abu Dhabi hotel RFQ trigger",
+        summary: "The strongest commercial intent usually starts with a hotel zone, project phase and delivery city rather than a generic carpet search.",
+        points: [
+          "State whether the project is a new hotel, refurbishment, extension, fit-out package or replacement programme.",
+          "Separate guestrooms, corridors, lift lobbies, reception, ballroom and meeting areas because traffic, pattern scale and replacement access can differ.",
+          "Name Dubai, Abu Dhabi or the actual UAE delivery destination so packing and freight can be reviewed against the project route.",
+        ],
+      },
+      {
+        title: "Consultant and design approval path",
+        summary: "Hotel buyers normally need a coordinated sample and submittal record before the nominated carpet can move into production.",
+        points: [
+          "Approve the physical sample for colour, pattern repeat, pile appearance and direction under the project lighting conditions.",
+          "Match the approved sample to the quoted fibre, construction, backing, width or tile format, batch and maintenance instructions.",
+          "List the project-specific fire, VOC, TDS, adhesive or installation documents requested by the consultant instead of assuming one universal compliance package.",
+        ],
+      },
+      {
+        title: "UAE climate and hotel traffic checks",
+        summary: "The environment affects both specification and installation readiness, especially where entrances, luggage traffic and air-conditioning meet.",
+        points: [
+          "Review entrance and corridor exposure to dust, luggage wheels and cleaning cycles separately from lower-traffic guestroom zones.",
+          "Confirm slab condition, moisture assessment, adhesive compatibility, protected storage and acclimation with the installation team.",
+          "Keep replacement or spare-stock planning in the RFQ when the hotel needs room-by-room maintenance without closing an entire floor.",
+        ],
+      },
+      {
+        title: "What a UAE hotel carpet quote should include",
+        summary: "A complete enquiry lets the export supplier price the construction and logistics basis without hiding project assumptions.",
+        points: [
+          "Hotel name or project type, delivery city, zone schedule, estimated square metres and whether carpet is broadloom, tile or a mixed package.",
+          "Pattern or colour reference, sample quantity, required approval date, target installation or handover date and any phased delivery requirement.",
+          "Packing dimensions, gross weight, destination, preferred Incoterm and the list of technical documents required for tender or submittal review.",
+        ],
+      },
+    ],
+    productSet: "hospitality",
+  }),
   commercialPage({
     market: "ph",
     slug: "commercial-carpet-supplier-philippines",
