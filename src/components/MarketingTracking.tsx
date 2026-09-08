@@ -81,47 +81,6 @@ export default function MarketingTracking() {
   }, [analyticsAllowed, pathname]);
 
   useEffect(() => {
-    if (!analyticsAllowed) return;
-
-    const recentlyTrackedForms = new WeakMap<HTMLFormElement, number>();
-
-    function handleValidatedFormClick(event: MouseEvent) {
-      if (typeof window.gtag !== "function") return;
-      if (!(event.target instanceof Element)) return;
-
-      const submitButton = event.target.closest<HTMLButtonElement | HTMLInputElement>(
-        'button[type="submit"], input[type="submit"]'
-      );
-      if (!submitButton) return;
-
-      const form = submitButton.form || submitButton.closest("form");
-      if (!(form instanceof HTMLFormElement)) return;
-      if (!form.checkValidity()) return;
-
-      const email = String(new FormData(form).get("email") || "").trim().toLowerCase();
-      if (!email) return;
-
-      const now = Date.now();
-      const lastTrackedAt = recentlyTrackedForms.get(form) || 0;
-      if (now - lastTrackedAt < 3000) return;
-      recentlyTrackedForms.set(form, now);
-
-      window.gtag("set", "user_data", {
-        email,
-      });
-
-      window.gtag("event", "表单提交", {
-        send_to: "G-T2VYHXTK1F",
-      });
-    }
-
-    document.addEventListener("click", handleValidatedFormClick, true);
-    return () => document.removeEventListener("click", handleValidatedFormClick, true);
-  }, [analyticsAllowed]);
-
-  useEffect(() => {
-    if (!analyticsAllowed) return;
-
     const productMatch = pathname.match(/^\/(?:[a-z]{2}\/)?products\/([^/]+)\/([^/]+)$/);
 
     function maybeTrackHighIntentSession() {
@@ -130,7 +89,7 @@ export default function MarketingTracking() {
         signals.productViewCount >= 2 &&
         (signals.maxEngagedSeconds >= 60 || signals.sectionViewCount > 0);
 
-      if (!highIntent || !markFunnelEventOnce("high_intent_session")) return;
+      if (!analyticsAllowed || !highIntent || !markFunnelEventOnce("high_intent_session")) return;
       trackAnalyticsEvent("high_intent_session", {
         page_path: pathname,
         product_view_count: signals.productViewCount,
@@ -143,7 +102,7 @@ export default function MarketingTracking() {
       const [, category, productId] = productMatch;
       const result = recordProductView(pathname);
 
-      if (result.isNew) {
+      if (analyticsAllowed && result.isNew) {
         trackAnalyticsEvent("product_detail_view", {
           item_id: productId,
           item_category: category,
@@ -154,6 +113,7 @@ export default function MarketingTracking() {
 
       for (const threshold of [2, 3]) {
         if (
+          analyticsAllowed &&
           result.signals.productViewCount >= threshold &&
           markFunnelEventOnce(`view_${threshold}_products`)
         ) {
@@ -175,7 +135,7 @@ export default function MarketingTracking() {
       if (visibleSeconds === 30 || visibleSeconds === 60) {
         const signals = recordEngagedSeconds(visibleSeconds);
         const eventName = `engaged_${visibleSeconds}s`;
-        if (markFunnelEventOnce(`${eventName}:${pathname}`)) {
+        if (analyticsAllowed && markFunnelEventOnce(`${eventName}:${pathname}`)) {
           trackAnalyticsEvent(eventName, {
             page_path: pathname,
             engaged_seconds: visibleSeconds,
@@ -196,7 +156,7 @@ export default function MarketingTracking() {
 
           const sectionKey = `${pathname}:${sectionName}`;
           const result = recordSectionView(sectionKey);
-          if (result.isNew) {
+          if (analyticsAllowed && result.isNew) {
             trackAnalyticsEvent(`${sectionName}_view`, {
               page_path: pathname,
               section_name: sectionName,
@@ -219,6 +179,32 @@ export default function MarketingTracking() {
       observer.disconnect();
     };
   }, [analyticsAllowed, pathname]);
+
+  useEffect(() => {
+    function handleContactSourceClick(event: MouseEvent) {
+      if (!(event.target instanceof Element)) return;
+
+      const anchor = event.target.closest<HTMLAnchorElement>("a");
+      if (!anchor) return;
+
+      const href = anchor.getAttribute("href") || "";
+      const resolvedUrl = new URL(anchor.href, window.location.origin);
+      const isSameOrigin = resolvedUrl.origin === window.location.origin;
+      const isQuoteAnchor = href === "#quote-form";
+      const isContactLink = isSameOrigin && resolvedUrl.pathname === "/contact";
+      if (!isQuoteAnchor && !isContactLink) return;
+
+      const sourcePage = `${window.location.pathname}${window.location.search}`;
+      if (isContactLink && sourcePage && !resolvedUrl.searchParams.get("source")) {
+        resolvedUrl.searchParams.set("source", sourcePage);
+        anchor.href = `${resolvedUrl.pathname}${resolvedUrl.search}${resolvedUrl.hash}`;
+      }
+      if (sourcePage) window.sessionStorage.setItem(pendingContactSourceKey, sourcePage);
+    }
+
+    document.addEventListener("click", handleContactSourceClick, true);
+    return () => document.removeEventListener("click", handleContactSourceClick, true);
+  }, []);
 
   useEffect(() => {
     if (!analyticsAllowed) return;
@@ -264,17 +250,6 @@ export default function MarketingTracking() {
 
       if (href === "#quote-form" || (isSameOrigin && (resolvedUrl.pathname === "/contact" || normalizedPath.startsWith("/contact")))) {
         const signals = getFunnelSessionSignals();
-        if (isSameOrigin && (resolvedUrl.pathname === "/contact" || normalizedPath.startsWith("/contact"))) {
-          const sourcePage = `${window.location.pathname}${window.location.search}`;
-          if (sourcePage && !resolvedUrl.searchParams.get("source")) {
-            resolvedUrl.searchParams.set("source", sourcePage);
-            href = `${resolvedUrl.pathname}${resolvedUrl.search}${resolvedUrl.hash}`;
-            anchor.href = href;
-          }
-          if (sourcePage) {
-            window.sessionStorage.setItem(pendingContactSourceKey, sourcePage);
-          }
-        }
         trackAnalyticsEvent("quote_form_click", {
           href: isSameOrigin ? normalizedPath : href,
           link_text: text,

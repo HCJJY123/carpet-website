@@ -2,6 +2,83 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-09-08 `seo/phase-4-discovery-freshness-20260908`
+
+**Type:** Technical SEO / AI-readable discovery / sitemap freshness / indexing support
+
+**Scope:** Refreshed last-modified signals for the updated manufacturer, product, country-market and Singapore pages. Updated `llms.txt` and `llms-full.txt` from the stale 2026-08-31 review date to 2026-09-08 and added direct references to the high-exposure commercial carpet, hotel broadloom, nylon tile, manufacturer and country procurement pages. Added a machine-readable AI source record describing the same official pages and their citation boundaries. No UI styling, public URL, form, analytics, robots policy, canonical logic, image bytes or deployment configuration changed.
+
+**Changed URLs:**
+
+- `/sitemaps/pages.xml`
+- `/sitemaps/products.xml`
+- `/sitemap-markets.xml`
+- `/llms.txt`
+- `/llms-full.txt`
+- `/ai-sources.json`
+
+**Why:** Make already-published content easier for search crawlers and answer engines to discover as recently reviewed, while giving AI tools a direct, bounded source path for commercial carpet procurement questions.
+
+**Rollback point:** `85523b8`
+
+**Verification:** `npm run ops:check`, `git diff --check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets` and `npm run build -- --webpack` passed. Lint reports one existing `ProductImage.tsx` `<img>` warning and no errors.
+
+## 2026-09-08 `content/phase-3-country-procurement-clusters-20260908`
+
+**Type:** Country-market content cluster / local procurement intent / SEO / GEO
+
+**Scope:** Extended existing Philippines, Australia, Bulgaria, Canada and Poland commercial carpet supplier pages from the current production baseline `85523b8`. Added local project triggers, application and climate checks, buyer search wording, sample and technical approval guidance, delivery-access planning and complete RFQ fields. No new URL was created; existing country-market paths, UI styling, product records, forms, analytics, canonical, robots and sitemap logic remain unchanged.
+
+**Changed URLs:**
+
+- Updated `/ph/commercial-carpet-supplier-philippines`
+- Updated `/au/commercial-carpet-supplier-australia`
+- Updated `/bg/commercial-carpet-supplier-bulgaria`
+- Updated `/ca/commercial-carpet-supplier-canada`
+- Updated `/pl/commercial-carpet-supplier-poland`
+
+**Why:** Improve local search-to-answer relevance and give commercial buyers a clearer path from country-specific queries to product comparison, sample approval and a qualified project RFQ.
+
+**Rollback point:** `85523b8`
+
+**Verification:** `npm run ops:check`, `git diff --check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links` and `npm run audit:assets` passed. Lint reports one existing `ProductImage.tsx` `<img>` warning and no errors.
+
+## 2026-09-08 `seo/phase-2-procurement-intent-20260908`
+
+**Type:** High-exposure page content / procurement intent / SEO / GEO / inquiry support
+
+**Scope:** Extended the current production baseline `85523b8` with procurement-first decision guidance on commercial carpet tiles, hotel wall-to-wall broadloom, nylon office carpet tiles, the commercial carpet manufacturer page, and the Singapore commercial carpet supplier page. Added buyer-language sections covering application fit, fiber and backing, rolling-chair traffic, replacement stock, pattern approval, subfloor and installation checks, RFQ fields, packing, delivery access and phased handover. Preserved existing URLs, UI styling, forms, analytics behavior, product facts, robots, sitemap and canonical logic.
+
+**Changed URLs:**
+
+- Updated `/products/carpet-tiles`
+- Updated `/products/wall-to-wall`
+- Updated `/products/carpet-tiles/nylon-office-carpet-tile`
+- Updated `/commercial-carpet-manufacturer`
+- Updated `/sg/commercial-carpet-supplier-singapore`
+
+**Why:** Improve search-to-answer relevance for high-impression B2B queries such as `50x50 carpet tiles`, `wall-to-wall carpet for hospitality`, `nylon carpet tiles`, `commercial carpet manufacturer` and `commercial carpet supplier Singapore`, while giving qualified buyers clearer paths to samples and comparable RFQs.
+
+**Rollback point:** `85523b8`
+
+**Verification:** `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets` and `npm run build -- --webpack` passed. Lint reports one existing `ProductImage.tsx` `<img>` warning and no errors.
+
+## 2026-09-08 `fix/lead-attribution-reliability-20260908`
+
+**Type:** Lead delivery reliability / attribution / conversion measurement
+
+**Scope:** Repaired the inquiry funnel from the current production baseline `85523b8`. Form conversion events now depend on a successful `/api/lead` response and confirmed email delivery. Product CTA clicks, WhatsApp, email, phone, sample and Thank You page events remain measurable as GA4/Clarity micro-events instead of standalone Google Ads lead conversions. First-party funnel signals continue to record locally without requiring analytics consent, and contact CTA source propagation works independently from analytics event collection. No UI styling, content, SEO URLs, WhatsApp destination, email destination, database schema, robots or sitemap behavior changed.
+
+**Changed URLs:**
+
+- Updated `/api/lead` behavior only; no public page URL was added, removed or redirected.
+
+**Why:** Prevent false or duplicate lead conversions, preserve product-to-contact attribution, and show an error when Formspree email delivery fails instead of presenting a false success state.
+
+**Rollback point:** `85523b8`
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets` and `npm run build -- --webpack`. Validate empty-payload API rejection, successful test delivery through the configured Preview endpoint, product CTA source propagation and conversion-event ordering before PR merge.
+
 ## 2026-09-08 `content/uae-hotel-carpet-market-page-20260908`
 
 **Type:** UAE country procurement page / hotel carpet sourcing / SEO / AI-readable sources / image optimization

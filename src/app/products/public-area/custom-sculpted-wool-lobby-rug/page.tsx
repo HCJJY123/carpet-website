@@ -184,7 +184,7 @@ function cta(location: string) {
     <div className="mt-8 grid gap-3 md:grid-cols-3">
       <ProductTrackedLink
         href="/contact?product=Custom%20Sculpted%20Wool%20Lobby%20Rug"
-        event="generate_lead"
+        event="quote_form_click"
         payload={{ product_id: sku, product_name: "Custom Sculpted Wool Lobby Rug", lead_source: "product_page", cta_location: location }}
         className="flex min-h-12 items-center justify-center bg-primary px-5 py-3 text-center text-[11px] font-black uppercase tracking-[0.16em] text-white transition-colors hover:bg-black"
       >
@@ -514,7 +514,7 @@ export default function CustomSculptedWoolLobbyRugPage() {
           <div className="mt-8">
             <ProductTrackedLink
               href="/contact?product=Custom%20Sculpted%20Wool%20Lobby%20Rug"
-              event="generate_lead"
+              event="quote_form_click"
               payload={{ product_id: sku, product_name: "Custom Sculpted Wool Lobby Rug", lead_source: "product_page", cta_location: "quote_requirements", lead_type: "floor_plan_review" }}
               className="inline-flex min-h-12 items-center justify-center bg-white px-6 py-3 text-[11px] font-black uppercase tracking-[0.16em] text-primary transition-colors hover:bg-accent hover:text-white"
             >

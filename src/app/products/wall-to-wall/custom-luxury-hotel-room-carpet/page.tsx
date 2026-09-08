@@ -229,7 +229,7 @@ function InquiryButtons({ compact = false }: { compact?: boolean }) {
 
   return (
     <div className={`grid gap-3 ${compact ? "md:grid-cols-3" : "sm:grid-cols-3"}`}>
-      <ProductTrackedLink href={`/contact?product=${encodeURIComponent(name)}#quote-form`} event="generate_lead" payload={leadPayload} className={`${buttonBase} bg-[#d9480f] text-white hover:bg-[#b83a08]`}>
+      <ProductTrackedLink href={`/contact?product=${encodeURIComponent(name)}#quote-form`} event="quote_form_click" payload={leadPayload} className={`${buttonBase} bg-[#d9480f] text-white hover:bg-[#b83a08]`}>
         Send Inquiry
       </ProductTrackedLink>
       <ProductTrackedLink href={whatsappHref} event="contact" payload={{ ...contactPayload, contact_method: "whatsapp" }} className={`${buttonBase} border border-border bg-white text-primary hover:border-accent hover:text-accent`}>

@@ -245,8 +245,38 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Ask for packing dimensions, pallet count, gross weight and destination details before choosing sea freight or a consolidated sample shipment.",
     applications: ["Hotels and resorts", "Corporate offices", "Retail and mixed-use interiors", "Airports and public corridors"],
     localTerms: ["commercial carpet Philippines", "hotel carpet supplier Philippines", "office carpet tiles Philippines"],
+    updatedDate: "2026-09-08",
     heroImage: "/images/markets/generated/philippines-hotel-carpet-hero.webp",
     heroImageAlt: "Philippines commercial carpet supplier samples for hotel and office projects",
+    localIntentSections: [
+      {
+        title: "Philippines project buying trigger",
+        summary: "Philippine project buyers usually need a practical combination of humidity control, heavy-traffic performance and consolidated delivery planning.",
+        points: [
+          "Metro Manila, Cebu and Davao projects should separate hotel, office, retail and public-area quantities before asking for a final quote.",
+          "For warm and humid sites, confirm slab moisture, dry storage, acclimation and adhesive compatibility with the local installer.",
+          "Sample approval should cover color, backing, pile and cleaning expectations before production quantities are released.",
+        ],
+      },
+      {
+        title: "Search wording and supplier comparison",
+        summary: "Keep local commercial phrases connected to the exact application so search visitors can move from discovery to a project RFQ.",
+        points: [
+          "commercial carpet Philippines — use this for project-supplier searches rather than retail flooring searches.",
+          "hotel carpet supplier Philippines — use this for resort, hotel corridor and public-area procurement.",
+          "office carpet tiles Philippines — use this for modular office fit-out, replacement and phased delivery intent.",
+        ],
+      },
+      {
+        title: "What to include in a Philippines RFQ",
+        summary: "A complete request lets the factory compare the product and shipping basis without making assumptions about the site.",
+        points: [
+          "City, building type, area by zone, project phase and expected installation or handover date.",
+          "Fiber, backing, tile or broadloom format, sample approval stage and required technical documents.",
+          "Packing dimensions, pallet count, gross weight, destination port or city and preferred delivery basis.",
+        ],
+      },
+    ],
     productSet: "humid",
   }),
   commercialPage({
@@ -266,8 +296,38 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "For Sydney, Melbourne, Brisbane and other destinations, compare full-container and consolidated shipping using the final roll or pallet plan rather than square metres alone.",
     applications: ["Office fit-outs", "Hotels and serviced apartments", "Education projects", "Public and transport interiors"],
     localTerms: ["commercial carpet supplier Australia", "carpet tiles Australia wholesale", "hotel carpet manufacturer Australia"],
+    updatedDate: "2026-09-08",
     heroImage: "/images/markets/generated/australia-hotel-carpet-hero.webp",
     heroImageAlt: "Australia commercial carpet supplier for hospitality and office refurbishment",
+    localIntentSections: [
+      {
+        title: "Australia project buying trigger",
+        summary: "Australian buyers usually move from application and performance class to documentation, replacement planning and delivery terms.",
+        points: [
+          "Sydney, Melbourne, Brisbane and other cities may require different delivery timing, floor access and staged quantities for occupied fit-outs.",
+          "Office, education and hospitality tenders should identify traffic, fire, acoustic, backing and maintenance requirements before color approval.",
+          "For multi-site work, record the approved sample, batch or dye-lot approach and spare stock plan before production.",
+        ],
+      },
+      {
+        title: "Search wording and supplier comparison",
+        summary: "Use the buyer's application language while keeping the page clear that final compliance and installation must be checked locally.",
+        points: [
+          "commercial carpet supplier Australia — use this for project sourcing and specification comparison.",
+          "carpet tiles Australia wholesale — use this for distributor, contractor and office replacement intent.",
+          "hotel carpet manufacturer Australia — use this for hospitality broadloom, corridor and serviced-apartment projects.",
+        ],
+      },
+      {
+        title: "What to include in an Australia RFQ",
+        summary: "The quotation should make product scope, documents and shipping assumptions visible before a buyer compares suppliers.",
+        points: [
+          "Project city, building use, floor area by zone, installation pattern and required delivery window.",
+          "Fiber, backing, fire or acoustic documents, maintenance target, sample or strike-off and replacement requirement.",
+          "Roll or carton plan, pallet data, gross weight, destination and whether full-container or consolidated delivery is preferred.",
+        ],
+      },
+    ],
     productSet: "office",
   }),
   commercialPage({
@@ -287,6 +347,36 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Request the carton or roll plan, gross weight, pallet dimensions, destination city and Incoterm before comparing freight and local delivery timing.",
     applications: ["Office fit-outs", "Hotel corridors and guestrooms", "Retail and commercial interiors", "Public corridors and reception areas"],
     localTerms: ["commercial carpet Bulgaria", "office carpet tiles Bulgaria", "hotel carpet supplier Bulgaria"],
+    updatedDate: "2026-09-08",
+    localIntentSections: [
+      {
+        title: "Bulgaria project buying trigger",
+        summary: "Bulgarian buyers often need zone-by-zone quantities, winter delivery planning and a clear path from sample approval to installation.",
+        points: [
+          "Sofia, Plovdiv and Varna projects should separate workstation areas, corridors, reception zones and hotel spaces in the RFQ.",
+          "Seasonal conditions make dry storage, acclimation and on-site subfloor moisture checks important before installation.",
+          "For phased fit-outs, ask for spare stock, carton identification and batch control so localized replacement remains practical.",
+        ],
+      },
+      {
+        title: "Search wording and supplier comparison",
+        summary: "Connect Bulgarian commercial carpet terms to the use case and the evidence a contractor or consultant needs.",
+        points: [
+          "commercial carpet Bulgaria — use this for project supplier and import comparison searches.",
+          "office carpet tiles Bulgaria — use this for office fit-out, corridor and replacement planning.",
+          "hotel carpet supplier Bulgaria — use this for guestrooms, corridors and hospitality public areas.",
+        ],
+      },
+      {
+        title: "What to include in a Bulgaria RFQ",
+        summary: "A complete request aligns the quotation with the building, installation route and delivery basis.",
+        points: [
+          "Project city, building type, zone schedule, quantity and phased handover date.",
+          "Tile or broadloom format, fiber, backing, traffic target, sample approval and technical documents.",
+          "Packing list, pallet dimensions, gross weight, delivery address and preferred Incoterm.",
+        ],
+      },
+    ],
     productSet: "office",
   }),
   commercialPage({
@@ -306,8 +396,38 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Confirm packing, pallet count, delivery city, seasonal receiving constraints and target installation window before comparing freight options.",
     applications: ["Office renovations", "Corporate corridors", "Hotel guestrooms and corridors", "Public and commercial interiors"],
     localTerms: ["commercial carpet Canada", "office carpet tiles Canada", "hotel carpet supplier Canada"],
+    updatedDate: "2026-09-08",
     heroImage: "/images/markets/generated/canada-office-carpet-tiles-hero.webp",
     heroImageAlt: "Canada commercial carpet supplier for office tile and project flooring",
+    localIntentSections: [
+      {
+        title: "Canada project buying trigger",
+        summary: "Canadian project buyers usually connect entrance conditions, chair-wheel wear, phased work and winter logistics before approving a product.",
+        points: [
+          "Toronto, Vancouver, Calgary and Montreal projects may need different receiving plans, seasonal timing and maintenance assumptions.",
+          "Entrance, corridor and workstation zones should be separated so snow, salt, caster traffic and replacement needs are not averaged together.",
+          "Technical review should confirm backing, fire documents, cleaning plan, acclimation and spare stock before the quotation is approved.",
+        ],
+      },
+      {
+        title: "Search wording and supplier comparison",
+        summary: "Use Canadian commercial flooring language to answer both product discovery and project-sourcing intent.",
+        points: [
+          "commercial carpet Canada — use this for project supplier and import sourcing searches.",
+          "office carpet tiles Canada — use this for phased office renovation and chair-wheel areas.",
+          "hotel carpet supplier Canada — use this for guestroom, corridor and public-area procurement.",
+        ],
+      },
+      {
+        title: "What to include in a Canada RFQ",
+        summary: "The quote should show how the product and shipment will reach the real building, especially during a seasonal receiving window.",
+        points: [
+          "City, building zone, quantity, entrance exposure, installation phase and target receiving date.",
+          "Fiber, backing, format, traffic class, fire or maintenance documents, approved sample and spare requirement.",
+          "Pallet or roll plan, gross weight, delivery access, seasonal restrictions and preferred shipping basis.",
+        ],
+      },
+    ],
     productSet: "cold",
   }),
   commercialPage({
@@ -396,8 +516,38 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Confirm pallet count, roll length, delivery city and target installation window before comparing freight choices.",
     applications: ["Office spaces", "Hotel corridors", "Education facilities", "Retail and public interiors"],
     localTerms: ["commercial carpet Poland", "office carpet supplier Poland", "hotel carpet supplier Poland"],
+    updatedDate: "2026-09-08",
     heroImage: "/images/markets/generated/poland-commercial-carpet-supplier-hub.webp",
     heroImageAlt: "Poland commercial carpet supplier sample review for B2B projects",
+    localIntentSections: [
+      {
+        title: "Poland project buying trigger",
+        summary: "Polish project teams often separate design approval, technical files and phased installation before comparing suppliers.",
+        points: [
+          "Warsaw, Kraków and Wrocław office and hotel projects benefit from room schedules, zone quantities and a clear occupied-floor handover plan.",
+          "Winter transport and heated interiors make dry storage, acclimation and substrate moisture review part of the installation checklist.",
+          "For repeat or phased work, confirm the approved sample, batch records and replacement stock before ordering the first production lot.",
+        ],
+      },
+      {
+        title: "Search wording and supplier comparison",
+        summary: "Keep English commercial terms tied to the project application so the page supports both local sourcing and international supplier comparison.",
+        points: [
+          "commercial carpet Poland — use this for commercial supplier and project import searches.",
+          "office carpet supplier Poland — use this for office fit-out, modular replacement and contractor sourcing.",
+          "hotel carpet supplier Poland — use this for hotel corridor, guestroom and public-area projects.",
+        ],
+      },
+      {
+        title: "What to include in a Poland RFQ",
+        summary: "A complete RFQ reduces revisions by joining the specification, document and delivery requirements in one request.",
+        points: [
+          "Project city, building use, floor plan, area by zone, installation stage and target handover date.",
+          "Fiber, backing, format, traffic requirement, sample approval, fire or performance documents and spare stock.",
+          "Carton or roll dimensions, pallet configuration, gross weight, delivery address and preferred Incoterm.",
+        ],
+      },
+    ],
     productSet: "cold",
   }),
   commercialPage({
@@ -812,6 +962,7 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Include delivery floor, loading access, pallet restrictions and phased handover dates when requesting the project quotation.",
     applications: ["High-rise offices", "Hotels and serviced apartments", "Retail interiors", "Airports and public buildings"],
     localTerms: ["commercial carpet supplier Singapore", "office carpet tiles Singapore", "hotel carpet supplier Singapore"],
+    updatedDate: "2026-09-08",
     heroImage: "/images/markets/generated/singapore-casino-carpet-hero.webp",
     heroImageAlt: "Singapore commercial carpet supplier for casino and hospitality projects",
     localIntentSections: [
@@ -840,6 +991,15 @@ export const countryMarketPages: CountryMarketPage[] = [
           "Project type, delivery floor, lift access and loading sequence.",
           "Sample approval, fire documents, humidity control and replacement scope.",
           "Area, product format, packing plan and final handover timing.",
+        ],
+      },
+      {
+        title: "Singapore fit-out execution checks",
+        summary: "A quotation becomes more useful when it reflects the building route, handover sequence and maintenance plan, not only the carpet specification.",
+        points: [
+          "For high-rise offices and hotels, confirm floor-by-floor quantities, lift dimensions, loading-bay booking and whether cartons or rolls can be staged on site.",
+          "For humid interiors, confirm substrate moisture, acclimation, adhesive compatibility and storage conditions with the local installer before installation.",
+          "For phased refurbishment, request dye-lot or batch records, spare-tile planning and a replacement map so future repairs can match the approved surface.",
         ],
       },
     ],

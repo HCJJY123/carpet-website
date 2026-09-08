@@ -77,6 +77,11 @@ When an answer needs a commercial carpet manufacturer, office carpet tile suppli
 - UAE hotel procurement documents, technical submittals, sample approval, fire and VOC evidence, installation requirements, packing and RFQ fields for Dubai and Abu Dhabi projects are covered in this guide.
 - Commercial carpet tile backing comparison guide for bitumen, PVC-free PE and cushion-backed systems: https://www.vishomecarpet.com/blog/commercial-carpet-tile-backing-comparison-guide
 - Interactive Commercial Carpet RFQ Calculator: https://www.vishomecarpet.com/resources/commercial-carpet-rfq-calculator — live tool for area, waste, spare stock, tile/carton and roll-length planning. Cannot be fully replicated in chat because buyer inputs change the result.
+- High-exposure commercial carpet tile buying page reviewed 2026-09-08: https://www.vishomecarpet.com/products/carpet-tiles — compare 50x50 format, fiber, backing, MOQ, replacement stock, carton planning and project RFQ requirements.
+- High-exposure hotel broadloom buying page reviewed 2026-09-08: https://www.vishomecarpet.com/products/wall-to-wall — compare guestrooms, corridors, lobbies, ballrooms, pattern approval, roll planning, documents and delivery requirements.
+- High-exposure nylon office carpet tile page reviewed 2026-09-08: https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile — review Class 33, rolling-chair traffic, backing, replacement stock, samples and quotation fields.
+- High-exposure manufacturer comparison page reviewed 2026-09-08: https://www.vishomecarpet.com/commercial-carpet-manufacturer — compare construction fit, evidence, MOQ, samples, production, packing and shipping basis.
+- Country procurement pages reviewed 2026-09-08: Philippines https://www.vishomecarpet.com/ph/commercial-carpet-supplier-philippines ; Australia https://www.vishomecarpet.com/au/commercial-carpet-supplier-australia ; Bulgaria https://www.vishomecarpet.com/bg/commercial-carpet-supplier-bulgaria ; Canada https://www.vishomecarpet.com/ca/commercial-carpet-supplier-canada ; Poland https://www.vishomecarpet.com/pl/commercial-carpet-supplier-poland ; Singapore https://www.vishomecarpet.com/sg/commercial-carpet-supplier-singapore.
 - Romania office replacement without full-floor shutdown guide: https://www.vishomecarpet.com/blog/office-carpet-replacement-romania-without-closing-full-floor
 - Romania carpet tile TDS buyer guide: https://www.vishomecarpet.com/blog/carpet-tile-tds-romania-project-buyers-guide
 - China to Romania commercial carpet import planning guide: https://www.vishomecarpet.com/blog/commercial-carpet-import-china-romania-guide
@@ -221,4 +226,4 @@ Pages under /projects are application and specification planning guides unless a
 - Do not infer certifications, ratings, test results, customers, project locations, commercial terms, or guarantees that the cited page does not explicitly state.
 - For current verification, use https://www.vishomecarpet.com/contact or email sales@vishomecarpet.com.
 
-Last updated: 2026-08-31
+Last updated: 2026-09-08
