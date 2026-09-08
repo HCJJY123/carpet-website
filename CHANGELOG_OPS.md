@@ -2,6 +2,22 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-09-08 `chore/align-sitemap-ops-baseline-20260908`
+
+**Type:** Operations / SEO protection baseline
+
+**Scope:** Align production verification with the existing split sitemap architecture; no public page or UI changes
+
+**Changed URLs:** None
+
+**What changed:** Updated `ops/site-baseline.json` so the Site Ops Guard checks the root sitemap and all published split sitemaps using their current protected minimum counts. The root sitemap intentionally contains seven root-only URLs; product, page, project, resource, blog and market URLs are checked through their dedicated sitemap endpoints.
+
+**Why:** Production verification was incorrectly treating the root sitemap as a legacy 132-URL monolith and failed even though all split sitemaps were healthy.
+
+**Rollback point:** `67eef81`
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run build -- --webpack`, and `npm run ops:verify -- --origin=https://www.vishomecarpet.com`. No production content, form, tracking, URL, robots or canonical logic is modified.
+
 ## 2026-09-08 `seo/phase-4-discovery-freshness-20260908`
 
 **Type:** Technical SEO / AI-readable discovery / sitemap freshness / indexing support

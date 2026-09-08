@@ -3,9 +3,14 @@
   "canonicalOrigin": "https://www.vishomecarpet.com",
   "maximumChangedFiles": 20,
   "sitemaps": [
-    { "path": "/sitemap.xml", "minimumUrlCount": 132 },
+    { "path": "/sitemap.xml", "minimumUrlCount": 7 },
     { "path": "/sitemap-ru.xml", "minimumUrlCount": 22 },
-    { "path": "/sitemap-markets.xml", "minimumUrlCount": 26 }
+    { "path": "/sitemap-markets.xml", "minimumUrlCount": 64 },
+    { "path": "/sitemaps/pages.xml", "minimumUrlCount": 33 },
+    { "path": "/sitemaps/products.xml", "minimumUrlCount": 30 },
+    { "path": "/sitemaps/projects.xml", "minimumUrlCount": 16 },
+    { "path": "/sitemaps/resources.xml", "minimumUrlCount": 17 },
+    { "path": "/sitemaps/blog.xml", "minimumUrlCount": 55 }
   ],
   "criticalPages": [
     { "path": "/", "minimumH1": 1, "maximumH1": 1 },
