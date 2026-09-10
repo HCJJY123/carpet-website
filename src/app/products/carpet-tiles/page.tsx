@@ -94,6 +94,57 @@ const productOptions = [
   }
 ];
 
+const buyerIntentPaths = [
+  {
+    title: "Office and rolling-chair areas",
+    text: "Start with nylon construction, caster movement, chair-wheel wear, maintenance and selective replacement requirements.",
+    links: [
+      { label: "Nylon office carpet tile", href: "/products/carpet-tiles/nylon-office-carpet-tile" },
+      { label: "Rolling-chair specification guide", href: "/blog/specify-commercial-carpet-tiles-chair-wheel-areas" },
+    ],
+  },
+  {
+    title: "Hotels, corridors and guestrooms",
+    text: "Compare hospitality tile options by visual continuity, traffic, pattern approval, maintenance, spare stock and project documents.",
+    links: [
+      { label: "Luxury hotel carpet tile", href: "/products/carpet-tiles/luxury-hotel-carpet-tile-50x50cm" },
+      { label: "Hotel procurement documents", href: "/blog/hotel-carpet-procurement-documents-checklist" },
+    ],
+  },
+  {
+    title: "Schools and universities",
+    text: "Separate classrooms, libraries, corridors and student areas before comparing traffic, cleaning, phased installation and spare stock.",
+    links: [
+      { label: "Education school carpet tiles", href: "/products/carpet-tiles/education-school-carpet-tiles" },
+      { label: "UK education procurement guide", href: "/blog/uk-school-university-carpet-tile-procurement-guide" },
+    ],
+  },
+  {
+    title: "Backing and sustainability review",
+    text: "Use the exact subfloor, installation, access-floor and sustainability brief to compare bitumen, PVC-free PE and other backing systems.",
+    links: [
+      { label: "EcoCore PE backing tiles", href: "/products/carpet-tiles/ecocore-pe-backing-carpet-tiles" },
+      { label: "Backing comparison guide", href: "/blog/commercial-carpet-tile-backing-comparison-guide" },
+    ],
+  },
+  {
+    title: "Healthcare and high-traffic support areas",
+    text: "Confirm traffic class, cleaning route, antistatic needs, fire documents and replacement controls for demanding commercial interiors.",
+    links: [
+      { label: "Healthcare carpet tiles", href: "/products/carpet-tiles/healthcare-hospital-carpet-tiles" },
+      { label: "Fire and VOC document guide", href: "/blog/commercial-carpet-tile-fire-rating-voc-documents-guide" },
+    ],
+  },
+  {
+    title: "Samples, quantity and RFQ planning",
+    text: "Prepare area, waste, spare stock, tile format, destination and document requirements before asking for a comparable quotation.",
+    links: [
+      { label: "RFQ quantity calculator", href: "/resources/commercial-carpet-rfq-calculator" },
+      { label: "Request project quote", href: "/contact?product=Commercial%20Carpet%20Tiles#quote-form" },
+    ],
+  },
+];
+
 const procurementDecisionPoints = [
   {
     title: "50x50 carpet tiles for phased projects",
@@ -316,6 +367,30 @@ export default function CategoryPage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="section-padding" data-funnel-section="buyer_intent_paths" aria-labelledby="buyer-intent-paths-heading">
+        <div className="container-fox">
+          <div className="max-w-4xl">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Choose by project question</p>
+            <h2 id="buyer-intent-paths-heading" className="mb-6 text-3xl font-black uppercase text-primary md:text-5xl">Start With the Carpet Tile Procurement Path That Matches Your Project</h2>
+            <p className="leading-8 text-muted">A useful comparison starts with the application and approval risk. Select the path closest to your project to review the relevant product construction, buyer guide and quotation inputs before contacting the factory.</p>
+          </div>
+          <nav className="mt-10 grid gap-px border border-border bg-border md:grid-cols-2 lg:grid-cols-3" aria-label="Commercial carpet tile procurement paths">
+            {buyerIntentPaths.map((path) => (
+              <article key={path.title} className="bg-white p-6">
+                <h3 className="text-lg font-black leading-tight text-primary">{path.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-muted">{path.text}</p>
+                <div className="mt-5 flex flex-col gap-2 border-t border-border pt-4">
+                  {path.links.map((link) => (
+                    <Link key={link.href} href={link.href} className="text-xs font-black uppercase tracking-[0.08em] text-accent underline-offset-4 hover:text-primary hover:underline">
+                      {link.label} →
+                    </Link>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </nav>
         </div>
       </section>
       <section className="section-padding" data-funnel-section="quote_requirements">
