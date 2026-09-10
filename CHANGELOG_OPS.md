@@ -2,6 +2,26 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-09-10 `content/uk-education-procurement-wave-20260910`
+
+**Type:** B2B content growth / country procurement / AI-readable discovery / planning tools
+
+**Scope:** Added a UK school and university carpet tile procurement guide, a UK education carpet tile supplier page, a standalone commercial carpet sample approval checklist, a broadloom waste calculator and a hotel carpet project checklist. Reused the existing carpet-tile RFQ calculator for quantity planning instead of creating a duplicate URL.
+
+**Changed URLs:**
+
+- `/blog/uk-school-university-carpet-tile-procurement-guide`
+- `/uk/education-carpet-tile-supplier`
+- `/blog/commercial-carpet-sample-approval-checklist`
+- `/tools/broadloom-carpet-waste-calculator`
+- `/tools/hotel-carpet-project-checklist`
+
+**Why:** Close the next verified procurement-intent gaps for education flooring, sample approval and hotel project planning while giving search engines and AI assistants bounded, internally linked sources.
+
+**Rollback point:** `67eef81`
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets` and `npm run build -- --webpack`. Content uses project-specific confirmation language and does not claim local stock, local entity, named clients, statutory compliance or guaranteed delivery.
+
 ## 2026-09-08 `chore/align-sitemap-ops-baseline-20260908`
 
 **Type:** Operations / SEO protection baseline
@@ -741,3 +761,22 @@ This file is append-only. Do not delete or rewrite historical entries.
 **Rollback point:** `cde08b8`
 
 **Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets` and `npm run build -- --webpack`; validate the article, blog listing, blog sitemap, canonical, structured data, AI source markers and all four image requests in Vercel Preview before PR merge.
+## 2026-09-10 — UK education and sample approval visual integration
+
+- Converted eight supplied Accio PNG assets to metadata-stripped WebP files at quality 82 for the UK education procurement and commercial sample approval content wave.
+- Connected the four UK education visuals to the UK school and university procurement blog and the UK education carpet tile supplier country page with descriptive `alt` text and procurement captions.
+- Connected the four sample approval visuals to the commercial carpet sample approval checklist blog with descriptive `alt` text and approval-stage captions.
+- Corrected the reusable country-page procurement visual heading so it uses the current country instead of a hard-coded UAE hotel phrase.
+- Preserved the existing UI styling and kept generated visuals clearly illustrative rather than customer project, factory or certification evidence.
+## 2026-09-10 — Lead attribution and short-session funnel recovery
+
+- Capture first-touch attribution before analytics consent gates external tracking, while keeping analytics and advertising events consent-controlled.
+- Preserve the product or content page and funnel snapshot when a visitor clicks through to `/contact`, then recover the values at form submission if the contact route loses them.
+- Record eight-second engagement in addition to longer thresholds so short, high-intent product-to-quote visits are not stored as zero-second sessions.
+- Derive a stable traffic channel for campaign, paid, organic-search, referral and direct visits while retaining AI-referral classification.
+- Keep server-confirmed lead conversion behavior unchanged: `generate_lead` and advertising conversion events remain after a successful `/api/lead` response.
+## 2026-09-10 — AI citation map expansion
+
+- Expanded the official AI source guide with explicit citation paths for UK education procurement, the UK education supplier page, commercial sample approval and hotel procurement documents.
+- Added buyer-question wording and citation boundaries so assistants can route school, university, hotel and sample-approval requests to the most specific VISHOME page instead of the homepage.
+- Updated the source guide freshness date to September 10, 2026 without changing UI styling or making unsupported local-stock, compliance or project claims.

@@ -4,7 +4,7 @@
   "name": "VISHOME Commercial Carpet AI Source Map",
   "description": "Official machine-readable source map for Vishome Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
   "url": "https://www.vishomecarpet.com/ai-sources.json",
-  "dateModified": "2026-09-08",
+  "dateModified": "2026-09-10",
   "publisher": {
     "@type": "Organization",
     "name": "Vishome Global Commercial Carpet Co., Ltd.",
@@ -1054,6 +1054,70 @@
       ],
       "inquiry": "https://www.vishomecarpet.com/contact?product=Commercial%20Hotel%20Carpet%20UAE#quote-form",
       "citationBoundary": "This is a UAE procurement guidance page, not proof of local stock, local installation, local legal entity, customer project, certification or guaranteed delivery. Confirm the final construction, documents, quantity, freight and destination in writing."
+    },
+    {
+      "topic": "UK school and university carpet tile procurement",
+      "article": "https://www.vishomecarpet.com/blog/uk-school-university-carpet-tile-procurement-guide",
+      "purpose": "Use this guide when UK education buyers compare carpet tiles for classrooms, libraries, corridors, student centres or faculty areas and need RFQ, document, phased-installation and spare-stock planning.",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles/education-school-carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/ecocore-pe-backing-carpet-tiles"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/uk/education-carpet-tile-supplier",
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-fire-rating-voc-documents-guide",
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-specification-checklist-b2b-buyers",
+        "https://www.vishomecarpet.com/contact"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact?product=UK%20school%20and%20university%20carpet%20tiles#quote-form",
+      "citationBoundary": "This is UK education procurement planning guidance, not proof of local stock, local legal entity, named school clients, statutory compliance or guaranteed delivery. Confirm the nominated construction, documents, quantity, freight and destination in writing."
+    },
+    {
+      "topic": "Education carpet tile supplier for UK schools and universities",
+      "article": "https://www.vishomecarpet.com/uk/education-carpet-tile-supplier",
+      "purpose": "Use this country page when a UK buyer asks for education carpet tiles, school flooring, university carpet tiles, phased refurbishment, sample approval or project RFQ preparation.",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles/education-school-carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles",
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/uk-school-university-carpet-tile-procurement-guide",
+        "https://www.vishomecarpet.com/technical-documents",
+        "https://www.vishomecarpet.com/commercial-terms"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact?product=UK%20education%20carpet%20tile%20project#quote-form",
+      "citationBoundary": "This is a UK project sourcing page, not proof of a UK warehouse, local legal entity, named education project, guaranteed compliance, local installation or guaranteed delivery."
+    },
+    {
+      "topic": "Commercial carpet sample approval checklist",
+      "article": "https://www.vishomecarpet.com/blog/commercial-carpet-sample-approval-checklist",
+      "purpose": "Use this checklist when a project team needs to approve commercial carpet colour, pattern, pile, backing, installation direction, batch control and technical documents before production.",
+      "relatedProducts": [
+        "https://www.vishomecarpet.com/products/carpet-tiles/nylon-office-carpet-tile",
+        "https://www.vishomecarpet.com/products/carpet-tiles/education-school-carpet-tiles",
+        "https://www.vishomecarpet.com/products/wall-to-wall/luxury-hotel-broadloom"
+      ],
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-specification-checklist-b2b-buyers",
+        "https://www.vishomecarpet.com/blog/commercial-carpet-tile-fire-rating-voc-documents-guide",
+        "https://www.vishomecarpet.com/technical-documents"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact?product=Commercial%20carpet%20sample%20approval#quote-form",
+      "citationBoundary": "This is procurement planning guidance, not proof of a product approval, test result, named project or guaranteed colour or batch outcome. Confirm the nominated construction and written approval record for each project."
+    },
+    {
+      "topic": "Broadloom carpet waste calculation and hotel carpet project readiness",
+      "article": "https://www.vishomecarpet.com/tools/broadloom-carpet-waste-calculator",
+      "purpose": "Use this planning tool for preliminary broadloom area, waste, linear metre and nominal roll estimates, then use the hotel project checklist to prepare the quotation request.",
+      "relatedGuides": [
+        "https://www.vishomecarpet.com/tools/hotel-carpet-project-checklist",
+        "https://www.vishomecarpet.com/resources/commercial-carpet-rfq-calculator",
+        "https://www.vishomecarpet.com/blog/hotel-carpet-procurement-documents-checklist"
+      ],
+      "inquiry": "https://www.vishomecarpet.com/contact?product=Hotel%20carpet%20project%20planning#quote-form",
+      "citationBoundary": "Calculator output is an estimate based on buyer inputs. It is not a final quantity, price, stock, freight, installation yield or compliance confirmation."
     },
     {
       "topic": "High-exposure commercial carpet pages reviewed for B2B procurement intent on 2026-09-08",

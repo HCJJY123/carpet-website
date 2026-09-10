@@ -10,7 +10,7 @@ export interface Attribution {
   fbclid?: string;
   landingPage?: string;
   referrer?: string;
-  trafficChannel?: "ai_referral";
+  trafficChannel?: "ai_referral" | "campaign" | "paid" | "organic_search" | "referral" | "direct";
   aiSource?: string;
   aiReferrerHost?: string;
   aiLandingPath?: string;
@@ -40,6 +40,26 @@ const AI_SOURCE_PATTERNS = [
   { source: "You.com", patterns: ["you.com"] },
 ] as const;
 
+function inferTrafficChannel(attribution: Pick<Attribution, "utmSource" | "utmMedium" | "utmCampaign" | "referrer" | "aiSource">) {
+  if (attribution.aiSource) return "ai_referral" as const;
+
+  const medium = attribution.utmMedium?.toLowerCase();
+  if (medium && /(cpc|ppc|paid|display|social_paid)/.test(medium)) return "paid" as const;
+  if (attribution.utmSource || medium || attribution.utmCampaign) return "campaign" as const;
+
+  if (attribution.referrer) {
+    try {
+      const host = new URL(attribution.referrer).hostname.toLowerCase();
+      if (/(google\.|bing\.|yahoo\.|duckduckgo\.)/.test(host)) return "organic_search" as const;
+      return "referral" as const;
+    } catch {
+      return "referral" as const;
+    }
+  }
+
+  return "direct" as const;
+}
+
 export function identifyAiSource(...values: Array<string | undefined>) {
   const haystack = values.filter(Boolean).join(" ").toLowerCase();
   if (!haystack) return undefined;
@@ -66,8 +86,8 @@ export function captureAttributionOnce() {
   attribution.landingPage = window.location.pathname;
   attribution.referrer = document.referrer || undefined;
   attribution.aiSource = identifyAiSource(attribution.utmSource, attribution.referrer);
+  attribution.trafficChannel = inferTrafficChannel(attribution);
   if (attribution.aiSource) {
-    attribution.trafficChannel = "ai_referral";
     attribution.aiLandingPath = `${window.location.pathname}${window.location.search}`;
     try {
       attribution.aiReferrerHost = attribution.referrer

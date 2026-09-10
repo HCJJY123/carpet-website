@@ -1,6 +1,6 @@
 {
-  "task": "Phase 7: post-production indexing and sitemap protection baseline alignment",
-  "approvedBy": "Site owner approval on 2026-09-08 to start Phase 7 after production deployment 67eef81",
+  "task": "Content wave: UK education carpet procurement blog and country landing page",
+  "approvedBy": "Site owner approval on 2026-09-10 to execute the next content and country-page priorities from the production baseline 67eef81",
   "approvedCategories": [
     "conversion",
     "analytics",
@@ -15,15 +15,43 @@
     "ai-search",
     "indexing",
     "performance",
-    "operations"
+    "operations",
+    "content-growth"
   ],
   "allowedPaths": [
     "CHANGELOG_OPS.md",
     "ops/change-request.json",
-    "ops/site-baseline.json"
+    "ops/site-baseline.json",
+    "keyword-map.csv",
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/uk-school-university-carpet-tile-procurement-guide.ts",
+    "src/lib/blog-posts/commercial-carpet-sample-approval-checklist.ts",
+    "src/lib/country-market-pages.ts",
+    "src/components/CountryMarketLandingPage.tsx",
+    "src/components/LeadCaptureForm.tsx",
+    "src/components/MarketingTracking.tsx",
+    "src/lib/attribution.ts",
+    "src/lib/funnel.ts",
+    "src/app/resources/ai-commercial-carpet-source-guide/page.tsx",
+    "src/app/tools/broadloom-carpet-waste-calculator/page.tsx",
+    "src/app/tools/hotel-carpet-project-checklist/page.tsx",
+    "src/components/BroadloomCarpetWasteCalculator.tsx",
+    "src/components/HotelCarpetProjectChecklist.tsx",
+    "src/app/sitemaps/pages.xml/route.ts",
+    "public/llms.txt",
+    "public/llms-full.txt",
+    "public/ai-sources.json",
+    "public/images/blog-series/uk-school-university-carpet-tile-procurement-guide/uk-school-university-carpet-tile-hero.webp",
+    "public/images/blog-series/uk-school-university-carpet-tile-procurement-guide/uk-education-carpet-tile-high-traffic-zone.webp",
+    "public/images/blog-series/uk-school-university-carpet-tile-procurement-guide/uk-school-carpet-tile-maintenance-review.webp",
+    "public/images/blog-series/uk-school-university-carpet-tile-procurement-guide/uk-education-carpet-tile-replacement-stock.webp",
+    "public/images/blog-series/commercial-carpet-sample-approval-checklist/commercial-carpet-sample-approval-checklist-hero.webp",
+    "public/images/blog-series/commercial-carpet-sample-approval-checklist/commercial-carpet-sample-color-pattern-approval.webp",
+    "public/images/blog-series/commercial-carpet-sample-approval-checklist/commercial-carpet-sample-backing-review-detail.webp",
+    "public/images/blog-series/commercial-carpet-sample-approval-checklist/commercial-carpet-sample-installation-direction-check.webp"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
   "rollbackCommit": "67eef81",
-  "notes": "Align the local Site Ops Guard with the already-deployed split sitemap architecture. Preserve all public pages, URLs, content, forms, email delivery, WhatsApp behavior, robots, canonical generation and deployment configuration. This change only updates the protected minimum URL counts so production verification checks the root sitemap and each split sitemap independently. No public route, SEO content or UI styling changes are allowed."
+  "notes": "Add the next approved content wave: UK education procurement article and country page, a standalone commercial carpet sample approval checklist, and two non-duplicative planning tools. Reuse the existing RFQ calculator for carpet tile quantity planning instead of creating a duplicate URL. Preserve all existing URLs, UI styling, forms, email delivery, WhatsApp behavior, robots, canonical generation and deployment configuration. Do not claim local stock, local entity, guaranteed compliance, named clients or generated imagery as project evidence."
 }
