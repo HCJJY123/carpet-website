@@ -33,6 +33,7 @@
     "src/lib/attribution.ts",
     "src/lib/funnel.ts",
     "src/app/resources/ai-commercial-carpet-source-guide/page.tsx",
+    "src/app/products/carpet-tiles/page.tsx",
     "src/app/tools/broadloom-carpet-waste-calculator/page.tsx",
     "src/app/tools/hotel-carpet-project-checklist/page.tsx",
     "src/components/BroadloomCarpetWasteCalculator.tsx",

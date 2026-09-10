@@ -780,3 +780,8 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Expanded the official AI source guide with explicit citation paths for UK education procurement, the UK education supplier page, commercial sample approval and hotel procurement documents.
 - Added buyer-question wording and citation boundaries so assistants can route school, university, hotel and sample-approval requests to the most specific VISHOME page instead of the homepage.
 - Updated the source guide freshness date to September 10, 2026 without changing UI styling or making unsupported local-stock, compliance or project claims.
+## 2026-09-10 — Commercial carpet tile buyer-intent routing
+
+- Added an answer-first procurement path section to `/products/carpet-tiles` for office rolling-chair areas, hotels, education, backing and sustainability, healthcare/high traffic, and RFQ planning.
+- Connected each path to the most specific product, guide, calculator or quote route so commercial search and AI referrals reach a relevant next step instead of a generic product grid.
+- Kept the existing UI system, product claims and project-specific confirmation boundaries unchanged.
