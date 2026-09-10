@@ -11,6 +11,7 @@ import {
   recordEngagedSeconds,
   recordProductView,
   recordSectionView,
+  savePendingContactFunnel,
 } from "@/lib/funnel";
 import { getVisitorIdentity } from "@/lib/visitorIdentity";
 import { useAnalyticsAllowed } from "@/lib/useAnalyticsConsent";
@@ -39,9 +40,9 @@ export default function MarketingTracking() {
   const analyticsAllowed = useAnalyticsAllowed();
 
   useEffect(() => {
-    if (!analyticsAllowed) return;
-
     captureAttributionOnce();
+
+    if (!analyticsAllowed) return;
 
     const attribution = getAttributionForEvent();
     if (
@@ -132,7 +133,7 @@ export default function MarketingTracking() {
       if (document.visibilityState !== "visible") return;
       visibleSeconds += 1;
 
-      if (visibleSeconds === 30 || visibleSeconds === 60) {
+      if (visibleSeconds === 8 || visibleSeconds === 30 || visibleSeconds === 60) {
         const signals = recordEngagedSeconds(visibleSeconds);
         const eventName = `engaged_${visibleSeconds}s`;
         if (analyticsAllowed && markFunnelEventOnce(`${eventName}:${pathname}`)) {
@@ -200,6 +201,7 @@ export default function MarketingTracking() {
         anchor.href = `${resolvedUrl.pathname}${resolvedUrl.search}${resolvedUrl.hash}`;
       }
       if (sourcePage) window.sessionStorage.setItem(pendingContactSourceKey, sourcePage);
+      savePendingContactFunnel(sourcePage);
     }
 
     document.addEventListener("click", handleContactSourceClick, true);

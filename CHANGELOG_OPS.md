@@ -768,3 +768,10 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Connected the four sample approval visuals to the commercial carpet sample approval checklist blog with descriptive `alt` text and approval-stage captions.
 - Corrected the reusable country-page procurement visual heading so it uses the current country instead of a hard-coded UAE hotel phrase.
 - Preserved the existing UI styling and kept generated visuals clearly illustrative rather than customer project, factory or certification evidence.
+## 2026-09-10 — Lead attribution and short-session funnel recovery
+
+- Capture first-touch attribution before analytics consent gates external tracking, while keeping analytics and advertising events consent-controlled.
+- Preserve the product or content page and funnel snapshot when a visitor clicks through to `/contact`, then recover the values at form submission if the contact route loses them.
+- Record eight-second engagement in addition to longer thresholds so short, high-intent product-to-quote visits are not stored as zero-second sessions.
+- Derive a stable traffic channel for campaign, paid, organic-search, referral and direct visits while retaining AI-referral classification.
+- Keep server-confirmed lead conversion behavior unchanged: `generate_lead` and advertising conversion events remain after a successful `/api/lead` response.

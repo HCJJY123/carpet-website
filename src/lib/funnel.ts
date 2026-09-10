@@ -1,4 +1,5 @@
 const FUNNEL_STORAGE_KEY = "vishome_funnel_session";
+export const PENDING_CONTACT_FUNNEL_KEY = "vishome_pending_contact_funnel";
 
 export type LeadGrade = "A" | "B" | "C";
 
@@ -6,6 +7,11 @@ export type FunnelSessionSignals = {
   productViewCount: number;
   maxEngagedSeconds: number;
   sectionViewCount: number;
+};
+
+export type PendingContactFunnel = FunnelSessionSignals & {
+  sourcePage: string;
+  capturedAt: string;
 };
 
 type FunnelSession = FunnelSessionSignals & {
@@ -87,6 +93,49 @@ export function getFunnelSessionSignals(): FunnelSessionSignals {
     maxEngagedSeconds: session.maxEngagedSeconds,
     sectionViewCount: session.viewedSections.length,
   };
+}
+
+export function savePendingContactFunnel(sourcePage: string) {
+  if (typeof window === "undefined" || !sourcePage) return;
+
+  try {
+    window.sessionStorage.setItem(
+      PENDING_CONTACT_FUNNEL_KEY,
+      JSON.stringify({ sourcePage, capturedAt: new Date().toISOString(), ...getFunnelSessionSignals() }),
+    );
+  } catch {
+    // Tracking must never block the purchase journey.
+  }
+}
+
+export function getPendingContactFunnel(): PendingContactFunnel | null {
+  if (typeof window === "undefined") return null;
+
+  try {
+    const raw = window.sessionStorage.getItem(PENDING_CONTACT_FUNNEL_KEY);
+    if (!raw) return null;
+    const pending = JSON.parse(raw) as Partial<PendingContactFunnel>;
+    if (!pending.sourcePage) return null;
+
+    return {
+      sourcePage: pending.sourcePage,
+      capturedAt: pending.capturedAt || "",
+      productViewCount: Number(pending.productViewCount) || 0,
+      maxEngagedSeconds: Number(pending.maxEngagedSeconds) || 0,
+      sectionViewCount: Number(pending.sectionViewCount) || 0,
+    };
+  } catch {
+    return null;
+  }
+}
+
+export function clearPendingContactFunnel() {
+  if (typeof window === "undefined") return;
+  try {
+    window.sessionStorage.removeItem(PENDING_CONTACT_FUNNEL_KEY);
+  } catch {
+    // Tracking must never block the purchase journey.
+  }
 }
 
 export function recordProductView(path: string) {

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { captureAttributionOnce, getAttributionForEvent } from "@/lib/attribution";
-import { getFunnelSessionSignals, scoreLead } from "@/lib/funnel";
+import { clearPendingContactFunnel, getFunnelSessionSignals, getPendingContactFunnel, scoreLead } from "@/lib/funnel";
 import { trackAnalyticsEvent, trackLeadConversion } from "@/lib/tracking";
 import { getVisitorIdentity } from "@/lib/visitorIdentity";
 
@@ -88,10 +88,12 @@ export default function LeadCaptureForm({
     formData.set("page_url", window.location.href);
     formData.set("page_path", window.location.pathname);
     const pendingSourcePage = window.sessionStorage.getItem(PENDING_CONTACT_SOURCE_KEY) || "";
-    const sourcePage = sourcePageDefault || pendingSourcePage || `${window.location.pathname}${window.location.search}`;
-    const hasInternalSource = Boolean(sourcePageDefault || pendingSourcePage);
+    const pendingFunnel = getPendingContactFunnel();
+    const sourcePage = sourcePageDefault || pendingSourcePage || pendingFunnel?.sourcePage || `${window.location.pathname}${window.location.search}`;
+    const hasInternalSource = Boolean(sourcePageDefault || pendingSourcePage || pendingFunnel?.sourcePage);
     if (sourcePage) formData.set("source_page", sourcePage);
     if (document.referrer && !formData.get("referrer")) formData.set("referrer", document.referrer);
+    if (!formData.get("referrer") && pendingFunnel?.sourcePage) formData.set("referrer", pendingFunnel.sourcePage);
     if (hasInternalSource && !formData.get("traffic_channel")) formData.set("traffic_channel", "internal_product_cta");
     formData.set("submitted_at", new Date().toISOString());
     formData.set("privacy_policy", "Acknowledged at submission");
@@ -105,7 +107,12 @@ export default function LeadCaptureForm({
       if (value) formData.set(key, value);
     });
 
-    const signals = getFunnelSessionSignals();
+    const currentSignals = getFunnelSessionSignals();
+    const signals = {
+      productViewCount: Math.max(currentSignals.productViewCount, pendingFunnel?.productViewCount || 0),
+      maxEngagedSeconds: Math.max(currentSignals.maxEngagedSeconds, pendingFunnel?.maxEngagedSeconds || 0),
+      sectionViewCount: Math.max(currentSignals.sectionViewCount, pendingFunnel?.sectionViewCount || 0),
+    };
     const qualification = scoreLead({
       company: String(formData.get("company") || ""),
       email: String(formData.get("email") || ""),
@@ -165,6 +172,7 @@ export default function LeadCaptureForm({
         })
       );
       sessionStorage.removeItem(PENDING_CONTACT_SOURCE_KEY);
+      clearPendingContactFunnel();
 
       router.push("/thank-you");
     } catch (error) {
