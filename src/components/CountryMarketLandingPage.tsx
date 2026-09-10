@@ -503,7 +503,7 @@ export default function CountryMarketLandingPage({ page }: { page: CountryMarket
         <section className="section-padding" data-funnel-section="country_market_visuals">
           <div className="container-fox">
             <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Procurement visuals</p>
-            <h2 className="mt-3 max-w-4xl text-3xl font-black leading-tight md:text-5xl">Review the project inputs before requesting a UAE hotel carpet quote</h2>
+            <h2 className="mt-3 max-w-4xl text-3xl font-black leading-tight md:text-5xl">Review the project inputs before requesting a {page.countryName} carpet quote</h2>
             <p className="mt-5 max-w-4xl leading-8 text-muted">
               These are illustrative B2B procurement scenes for explaining the review workflow. They are not customer project photographs, factory evidence or certification evidence.
             </p>

@@ -761,3 +761,10 @@ This file is append-only. Do not delete or rewrite historical entries.
 **Rollback point:** `cde08b8`
 
 **Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets` and `npm run build -- --webpack`; validate the article, blog listing, blog sitemap, canonical, structured data, AI source markers and all four image requests in Vercel Preview before PR merge.
+## 2026-09-10 — UK education and sample approval visual integration
+
+- Converted eight supplied Accio PNG assets to metadata-stripped WebP files at quality 82 for the UK education procurement and commercial sample approval content wave.
+- Connected the four UK education visuals to the UK school and university procurement blog and the UK education carpet tile supplier country page with descriptive `alt` text and procurement captions.
+- Connected the four sample approval visuals to the commercial carpet sample approval checklist blog with descriptive `alt` text and approval-stage captions.
+- Corrected the reusable country-page procurement visual heading so it uses the current country instead of a hard-coded UAE hotel phrase.
+- Preserved the existing UI styling and kept generated visuals clearly illustrative rather than customer project, factory or certification evidence.

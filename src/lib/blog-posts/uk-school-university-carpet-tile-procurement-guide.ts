@@ -22,10 +22,10 @@ export const ukSchoolUniversityCarpetTileProcurementGuide: BlogPost = {
   dateModified: "2026-09-10",
   author: "Vishome Technical Team",
   category: "Education Procurement",
-  image: "/images/case-wework.webp",
-  imageAlt: "Illustrative modular carpet tile education interior for school and university procurement planning",
-  h1Image: "/images/case-wework.webp",
-  h1ImageAlt: "Illustrative education interior with modular carpet tile flooring",
+  image: "/images/blog-series/uk-school-university-carpet-tile-procurement-guide/uk-school-university-carpet-tile-hero.webp",
+  imageAlt: "Education carpet tile procurement desk with samples and project planning documents",
+  h1Image: "/images/blog-series/uk-school-university-carpet-tile-procurement-guide/uk-school-university-carpet-tile-hero.webp",
+  h1ImageAlt: "Education carpet tile procurement desk with samples and project planning documents",
   h1ImageCaption: "Education carpet tile planning should separate classrooms, circulation, libraries and student areas before quotation.",
   relatedProductIds: ["education-school-carpet-tiles", "nylon-office-carpet-tile", "ecocore-pe-backing-carpet-tiles"],
   suggestedLinks: [
@@ -83,6 +83,12 @@ export const ukSchoolUniversityCarpetTileProcurementGuide: BlogPost = {
           text: "Schools and universities often need work to fit around term dates, examinations, student movement, safeguarding controls and occupied buildings. The RFQ should therefore separate production, shipping, storage and installation timing. Ask the supplier to state what starts the lead-time clock: deposit, approved sample, final artwork, confirmed construction or the complete document package.",
         },
         {
+          type: "image",
+          src: "/images/blog-series/uk-school-university-carpet-tile-procurement-guide/uk-education-carpet-tile-replacement-stock.webp",
+          alt: "Replacement carpet tile cartons planned in an education maintenance room",
+          caption: "Phased education projects should connect installation timing with spare stock, storage and handover planning.",
+        },
+        {
           type: "table",
           headers: ["Planning item", "Why it affects the project", "What to confirm"],
           rows: [
@@ -101,6 +107,12 @@ export const ukSchoolUniversityCarpetTileProcurementGuide: BlogPost = {
         {
           type: "paragraph",
           text: "A library, faculty office or computer room may see repeated caster movement, while corridors and student centres may see carts, bags, wet soil and concentrated footfall. The specification should identify the use pattern instead of labelling every education area as heavy duty. Ask how the nominated pile and backing are intended to behave under the project traffic, and keep the cleaning method consistent with the product documents.",
+        },
+        {
+          type: "image",
+          src: "/images/blog-series/uk-school-university-carpet-tile-procurement-guide/uk-education-carpet-tile-high-traffic-zone.webp",
+          alt: "University corridor with modular carpet tiles in a high-traffic education zone",
+          caption: "Traffic, caster movement and maintenance should be assessed by zone rather than by campus-wide labels.",
         },
         {
           type: "callout",
@@ -123,6 +135,12 @@ export const ukSchoolUniversityCarpetTileProcurementGuide: BlogPost = {
             { title: "Programme", text: "Sample deadline, approval date, holiday installation window, required arrival date and phased handover." },
             { title: "Commercials", text: "Quantity, waste assumption, spare stock, packing, destination, quotation basis and target budget if available." },
           ],
+        },
+        {
+          type: "image",
+          src: "/images/blog-series/uk-school-university-carpet-tile-procurement-guide/uk-school-carpet-tile-maintenance-review.webp",
+          alt: "Facilities manager inspecting modular carpet tile condition in a school hallway",
+          caption: "A maintenance review helps connect cleaning, local replacement and spare-stock decisions to the education RFQ.",
         },
         {
           type: "paragraph",
