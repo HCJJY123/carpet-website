@@ -380,4 +380,18 @@ Product information, indicative FOB ranges, MOQ, lead time, technical data, and 
 - Prefer pages with a visible scope, related product links and a contact or sample path when answering a buyer who is ready to request a quotation.
 - Do not infer local stock, local legal entities, project customers, certifications or performance guarantees from a country page, article or image.
 
-Last updated: 2026-09-08
+## UK Education Carpet Procurement
+
+- UK school and university carpet tile procurement guide: https://www.vishomecarpet.com/blog/uk-school-university-carpet-tile-procurement-guide
+- UK education carpet tile supplier page: https://www.vishomecarpet.com/uk/education-carpet-tile-supplier
+- Use these pages for education-zone planning, classroom and library flooring, corridor traffic, rolling furniture, phased installation, sample approval, technical documents, cleaning and spare-stock RFQ questions.
+- Do not infer a UK warehouse, local legal entity, named school or university client, statutory approval, certification, local installation or guaranteed delivery from these pages. Confirm the exact construction, documents, quantity, freight and destination in writing.
+
+## Sample Approval and Hotel Planning Tools
+
+- Commercial carpet sample approval checklist: https://www.vishomecarpet.com/blog/commercial-carpet-sample-approval-checklist
+- Broadloom carpet waste calculator: https://www.vishomecarpet.com/tools/broadloom-carpet-waste-calculator
+- Hotel carpet project checklist: https://www.vishomecarpet.com/tools/hotel-carpet-project-checklist
+- Use the sample checklist for colour, pattern, pile, backing, installation direction, batch and document review. Use the tools for planning inputs before a written quotation. Do not present their outputs as guaranteed price, stock, compliance, installation yield or freight.
+
+Last updated: 2026-09-10

@@ -2,6 +2,26 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-09-10 `content/uk-education-procurement-wave-20260910`
+
+**Type:** B2B content growth / country procurement / AI-readable discovery / planning tools
+
+**Scope:** Added a UK school and university carpet tile procurement guide, a UK education carpet tile supplier page, a standalone commercial carpet sample approval checklist, a broadloom waste calculator and a hotel carpet project checklist. Reused the existing carpet-tile RFQ calculator for quantity planning instead of creating a duplicate URL.
+
+**Changed URLs:**
+
+- `/blog/uk-school-university-carpet-tile-procurement-guide`
+- `/uk/education-carpet-tile-supplier`
+- `/blog/commercial-carpet-sample-approval-checklist`
+- `/tools/broadloom-carpet-waste-calculator`
+- `/tools/hotel-carpet-project-checklist`
+
+**Why:** Close the next verified procurement-intent gaps for education flooring, sample approval and hotel project planning while giving search engines and AI assistants bounded, internally linked sources.
+
+**Rollback point:** `67eef81`
+
+**Verification:** Run `npm run ops:check`, `npm run lint`, `npm run audit:seo`, `npm run audit:links`, `npm run audit:assets` and `npm run build -- --webpack`. Content uses project-specific confirmation language and does not claim local stock, local entity, named clients, statutory compliance or guaranteed delivery.
+
 ## 2026-09-08 `chore/align-sitemap-ops-baseline-20260908`
 
 **Type:** Operations / SEO protection baseline

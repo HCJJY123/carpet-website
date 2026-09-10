@@ -20,10 +20,14 @@ const staticPages = [
   "/contact",
   "/faq",
   "/privacy-policy",
+  "/tools/broadloom-carpet-waste-calculator",
+  "/tools/hotel-carpet-project-checklist",
 ];
 
 const staticPageModifiedDates: Record<string, string> = {
   "/commercial-carpet-manufacturer": "2026-09-08",
+  "/tools/broadloom-carpet-waste-calculator": "2026-09-10",
+  "/tools/hotel-carpet-project-checklist": "2026-09-10",
 };
 
 export function GET() {
