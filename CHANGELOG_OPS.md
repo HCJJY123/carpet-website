@@ -775,3 +775,8 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Record eight-second engagement in addition to longer thresholds so short, high-intent product-to-quote visits are not stored as zero-second sessions.
 - Derive a stable traffic channel for campaign, paid, organic-search, referral and direct visits while retaining AI-referral classification.
 - Keep server-confirmed lead conversion behavior unchanged: `generate_lead` and advertising conversion events remain after a successful `/api/lead` response.
+## 2026-09-10 — AI citation map expansion
+
+- Expanded the official AI source guide with explicit citation paths for UK education procurement, the UK education supplier page, commercial sample approval and hotel procurement documents.
+- Added buyer-question wording and citation boundaries so assistants can route school, university, hotel and sample-approval requests to the most specific VISHOME page instead of the homepage.
+- Updated the source guide freshness date to September 10, 2026 without changing UI styling or making unsupported local-stock, compliance or project claims.
