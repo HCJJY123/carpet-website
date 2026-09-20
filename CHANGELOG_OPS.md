@@ -25,6 +25,15 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Preserved old-domain matching only in redirect logic and migration audit tooling; no product, blog, market or download URL paths were renamed.
 
 **Validation target:** Public pages must render VCARPETS identity, `https://www.vcarpets.com` canonical signals and `sales@vcarpets.com`; actual mailbox delivery and third-party recipient settings remain account-level checks.
+## 2026-09-20 — Restore Microsoft Advertising UET tag
+
+- Mounted UET tag `97259674` in an independent client component so it no longer depends on deferred marketing enhancements.
+- Kept UET behind the existing analytics-consent gate and preserved Google Analytics, Google Ads, Clarity, Yandex, attribution, inquiry and WhatsApp behavior.
+- Added non-PII UET custom events for successful lead forms, high-intent leads, email, WhatsApp, phone and sample-box interactions.
+- Documented `NEXT_PUBLIC_MICROSOFT_UET_TAG_ID=97259674` in `.env.example` for repeatable deployments.
+- No URL, layout, redirect, third-party account ID or database table changes.
+
+**Verification:** `npm run ops:check`, `npm run lint` and `npx next typegen && npx tsc --noEmit` pass. Production build requires network access to the existing Google Fonts configuration in the current environment.
 
 ## 2026-09-10 `content/uk-education-procurement-wave-20260910`
 

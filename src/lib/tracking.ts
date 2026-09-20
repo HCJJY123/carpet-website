@@ -32,7 +32,13 @@ declare global {
     clarity?: (...args: unknown[]) => void;
     dataLayer?: unknown[];
     ym?: (...args: unknown[]) => void;
+    uetq?: { push?: (...args: unknown[]) => void };
   }
+}
+
+function pushUetEvent(event: string, payload: Record<string, unknown>) {
+  if (typeof window === "undefined" || typeof window.uetq?.push !== "function") return;
+  window.uetq.push("event", event, payload);
 }
 
 function normalizeEnhancedConversionEmail(value?: string) {
@@ -157,7 +163,15 @@ export function trackLeadConversion({
   }
 
   pushTrackingEvent("lead_form_submit_success", leadPayload);
+  pushUetEvent("generate_lead", {
+    form_name: formName,
+    product,
+    country,
+    source_page: sourcePage,
+    traffic_channel: trafficChannel,
+  });
   if (leadGrade === "A") pushTrackingEvent("high_intent_lead", leadPayload);
+  if (leadGrade === "A") pushUetEvent("high_intent_lead", { form_name: formName, product, country });
 }
 
 export function trackInteractionConversion(type: ClickConversionType, payload: Record<string, unknown> = {}) {
@@ -166,6 +180,7 @@ export function trackInteractionConversion(type: ClickConversionType, payload: R
   const fullPayload = { ...payload, ...getAttributionForEvent() };
 
   pushTrackingEvent(type, fullPayload);
+  pushUetEvent(type, fullPayload);
 
   if (typeof window.gtag === "function") {
     window.gtag("event", type, fullPayload);

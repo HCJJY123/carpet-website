@@ -8,6 +8,7 @@ import WhatsAppFloating from "@/components/WhatsAppFloating";
 import SendInquiryFloating from "@/components/SendInquiryFloating";
 import LocaleExperience from "@/components/LocaleExperience";
 import DeferredSiteEnhancements from "@/components/DeferredSiteEnhancements";
+import MicrosoftUet from "@/components/MicrosoftUet";
 import { brandInfo } from "@/lib/data";
 
 const geistSans = Geist({
@@ -94,6 +95,7 @@ export default function RootLayout({
         <Footer />
         <SendInquiryFloating />
         <WhatsAppFloating />
+        <MicrosoftUet />
         <DeferredSiteEnhancements />
       </body>
     </html>
