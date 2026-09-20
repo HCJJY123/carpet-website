@@ -8,7 +8,7 @@ import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 export const metadata: Metadata = {
   title: "B2B Carpet Sourcing FAQ | Project & Technical Support | VISHOME",
   description: "Practical answers on commercial carpet specifications, MOQ, samples, quotations, stock, lead times, test reports, quality control, installation, and international shipping.",
-  alternates: { canonical: "https://www.vishomecarpet.com/faq" },
+  alternates: { canonical: "https://www.vcarpets.com/faq" },
 };
 
 export default function FAQPage() {

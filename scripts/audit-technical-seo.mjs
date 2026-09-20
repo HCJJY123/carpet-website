@@ -8,7 +8,7 @@ async function request(path, redirect = "manual") {
 function normalizePath(href, sourcePath) {
   try {
     const url = new URL(href, `${baseUrl}${sourcePath}`);
-    if (url.host !== new URL(baseUrl).host && url.host !== "www.vishomecarpet.com") return null;
+    if (url.host !== new URL(baseUrl).host && url.host !== "www.vcarpets.com") return null;
     if (/\.(?:avif|css|gif|ico|jpe?g|js|pdf|png|svg|webp|woff2?)(?:$|\?)/i.test(url.pathname)) return null;
     return url.pathname.replace(/\/$/, "") || "/";
   } catch {

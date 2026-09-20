@@ -2,6 +2,20 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-09-20 `domain-migration-vcarpets-20260920`
+
+**Type:** Public domain migration / technical SEO / redirect preservation
+
+**Scope:** Move the canonical public origin from `www.vishomecarpet.com` to `www.vcarpets.com` while preserving existing paths, query parameters, page content, inquiry flows, email identity and WhatsApp behavior. Add application-level 308 redirects for both old hostnames once those domains are attached to the same Vercel project.
+
+**Changed systems:** Canonical and metadata origin, Open Graph and JSON-LD absolute URLs, hreflang/source URLs, split sitemaps, robots host and sitemap entries, `llms` files, `ai-sources.json`, product-feed generators, IndexNow host, visitor-intelligence origins and production URL references.
+
+**Preserved:** `sales@vishomecarpet.com`, all published paths, existing page content structure and legacy PDF files. Legacy PDF links remain safe because the old hostnames redirect path-for-path after DNS/Vercel configuration.
+
+**Manual release steps:** Attach `www.vcarpets.com`, `vcarpets.com`, `www.vishomecarpet.com` and `vishomecarpet.com` to the Vercel project; set the new `www` host as primary; configure DNS/HTTPS; verify old-host redirects; update Search Console and Bing properties; perform Change of Address only after redirects are live.
+
+**Rollback point:** `391e9f9`
+
 ## 2026-09-10 `content/uk-education-procurement-wave-20260910`
 
 **Type:** B2B content growth / country procurement / AI-readable discovery / planning tools
@@ -785,3 +799,15 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Added an answer-first procurement path section to `/products/carpet-tiles` for office rolling-chair areas, hotels, education, backing and sustainability, healthcare/high traffic, and RFQ planning.
 - Connected each path to the most specific product, guide, calculator or quote route so commercial search and AI referrals reach a relevant next step instead of a generic product grid.
 - Kept the existing UI system, product claims and project-specific confirmation boundaries unchanged.
+
+## 2026-09-20 — vcarpets.com domain and business email migration
+
+- Updated the public business email to `sales@vcarpets.com` across runtime contact details, header mail links, privacy policy, AI source files, outreach records and PDF generation sources.
+- Regenerated five source-managed procurement PDFs and refreshed the two legacy RFQ worksheet PDFs without changing their page paths or content structure; visible URLs and contact details now use `www.vcarpets.com` and `sales@vcarpets.com`.
+- Preserved the existing `https://www.vcarpets.com` canonical, sitemap, robots, JSON-LD, Open Graph, hreflang, feed and old-host 308 logic from the migration baseline.
+- Added the missing apex normalization so `vcarpets.com` also returns a path- and query-preserving 308 to `www.vcarpets.com`.
+- Added a migration-only PDF refresh helper and expanded the approved change scope to cover generated downloads.
+
+**External status:** New-domain DNS, Vercel domain attachment, HTTPS, mailbox authentication, form delivery credentials, third-party allowlists, Google Search Console, Bing Webmaster Tools and old-domain redirect availability require account-level verification. The old domain currently cannot be treated as publicly redirecting until DNS/HTTPS responds.
+
+**Rollback point:** `391e9f9`

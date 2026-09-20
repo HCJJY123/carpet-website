@@ -1,8 +1,8 @@
 # Hospitality Broadloom Submission Notes
 
-Target URL: https://www.vishomecarpet.com/products/hospitality-carpet
+Target URL: https://www.vcarpets.com/products/hospitality-carpet
 
-Related category URL: https://www.vishomecarpet.com/products/wall-to-wall
+Related category URL: https://www.vcarpets.com/products/wall-to-wall
 
 Priority products:
 

@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     title: "Commercial Carpet Solutions by Application | VISHOME",
     description:
       "Application-based commercial carpet solutions for B2B buyers comparing products, MOQ, samples, and technical documents.",
-    url: "https://www.vishomecarpet.com/solutions",
+    url: "https://www.vcarpets.com/solutions",
     type: "website",
     images: [
       {
-        url: "https://www.vishomecarpet.com/images/solutions/solutions-hero-a53a2e5f.webp",
+        url: "https://www.vcarpets.com/images/solutions/solutions-hero-a53a2e5f.webp",
         width: 1928,
         height: 816,
         alt: "Commercial carpet application solutions for B2B projects",

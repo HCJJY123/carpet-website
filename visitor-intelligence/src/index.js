@@ -1,6 +1,6 @@
 const DEFAULT_ALLOWED_ORIGINS = [
-  "https://www.vishomecarpet.com",
-  "https://vishomecarpet.com",
+  "https://www.vcarpets.com",
+  "https://vcarpets.com",
 ];
 
 const ISP_NETWORK = new RegExp([

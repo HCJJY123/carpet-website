@@ -8,7 +8,7 @@ export type SiteLocale = typeof defaultSiteLocale | TranslatedSiteLocale;
 export const localeCookieName = "vishome_locale";
 export const googleTranslateCookieName = "googtrans";
 export const localeCookieMaxAge = 60 * 60 * 24 * 180;
-export const sharedLocaleCookieDomain = ".vishomecarpet.com";
+export const sharedLocaleCookieDomain = ".vcarpets.com";
 
 const countryMarketContentLanguages: Record<string, string> = {
   ph: "en-PH",
@@ -40,7 +40,7 @@ const countryMarketContentLanguages: Record<string, string> = {
 
 export function usesSharedLocaleCookieDomain(hostname: string) {
   const normalizedHostname = hostname.split(":")[0].toLowerCase();
-  return normalizedHostname === "vishomecarpet.com" || normalizedHostname.endsWith(".vishomecarpet.com");
+  return normalizedHostname === "vcarpets.com" || normalizedHostname.endsWith(".vcarpets.com");
 }
 
 export const nativeLocalizedPaths = [

@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { siteUrl } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -35,15 +36,15 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: [
-      "https://www.vishomecarpet.com/sitemap.xml",
-      "https://www.vishomecarpet.com/sitemaps/pages.xml",
-      "https://www.vishomecarpet.com/sitemaps/products.xml",
-      "https://www.vishomecarpet.com/sitemaps/projects.xml",
-      "https://www.vishomecarpet.com/sitemaps/resources.xml",
-      "https://www.vishomecarpet.com/sitemaps/blog.xml",
-      "https://www.vishomecarpet.com/sitemap-ru.xml",
-      "https://www.vishomecarpet.com/sitemap-markets.xml",
+      `${siteUrl}/sitemap.xml`,
+      `${siteUrl}/sitemaps/pages.xml`,
+      `${siteUrl}/sitemaps/products.xml`,
+      `${siteUrl}/sitemaps/projects.xml`,
+      `${siteUrl}/sitemaps/resources.xml`,
+      `${siteUrl}/sitemaps/blog.xml`,
+      `${siteUrl}/sitemap-ru.xml`,
+      `${siteUrl}/sitemap-markets.xml`,
     ],
-    host: "www.vishomecarpet.com",
+    host: new URL(siteUrl).hostname,
   };
 }

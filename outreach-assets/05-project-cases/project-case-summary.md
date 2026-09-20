@@ -4,7 +4,7 @@ Use case pages as anonymous public references unless client names and project de
 
 Recommended target URL pattern:
 
-https://www.vishomecarpet.com/projects/[case-slug]
+https://www.vcarpets.com/projects/[case-slug]
 
 Suitable outreach targets:
 

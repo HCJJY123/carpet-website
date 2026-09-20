@@ -1,8 +1,9 @@
 import { caseStudies } from "@/lib/data";
 import { projectPath } from "@/lib/case-seo";
+import { siteUrl } from "@/lib/seo";
 import { sitemapResponse } from "@/lib/sitemap-xml";
 
-const BASE = "https://www.vishomecarpet.com";
+const BASE = siteUrl;
 
 export function GET() {
   return sitemapResponse(caseStudies.map((project) => ({

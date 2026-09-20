@@ -1,8 +1,8 @@
 # Office Carpet Tiles Submission Notes
 
-Target URL: https://www.vishomecarpet.com/products/office-carpet-tiles
+Target URL: https://www.vcarpets.com/products/office-carpet-tiles
 
-Related category URL: https://www.vishomecarpet.com/products/carpet-tiles
+Related category URL: https://www.vcarpets.com/products/carpet-tiles
 
 Priority products:
 

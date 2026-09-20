@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
 import { countryApplicationPages } from "@/lib/country-application-pages";
 import { countryMarketPages } from "@/lib/country-market-pages";
+import { siteUrl } from "@/lib/seo";
 
-const BASE = "https://www.vishomecarpet.com";
+const BASE = siteUrl;
 
 function escapeXml(value: string) {
   return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\"/g, "&quot;").replace(/'/g, "&apos;");

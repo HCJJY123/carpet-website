@@ -14,8 +14,8 @@ export interface CaseStudy { id: string; title: string; metadataTitle?: string; 
 export const brandInfo = {
   name: "Vishome Global Commercial Carpet Co., Ltd.",
   shortName: "VISHOME",
-  url: "https://www.vishomecarpet.com",
-  email: "sales@vishomecarpet.com",
+  url: "https://www.vcarpets.com",
+  email: "sales@vcarpets.com",
   phone: "+86 152 2288 5400",
   whatsapp: "+86 152 2288 5400",
   wechat: "8615222885400",
