@@ -93,7 +93,7 @@ def header_footer(canvas, doc):
     canvas.line(17 * mm, 13 * mm, width - 17 * mm, 13 * mm)
     canvas.setFillColor(MUTED)
     canvas.setFont("Helvetica", 6.5)
-    canvas.drawString(17 * mm, 8.5 * mm, "sales@vishomecarpet.com")
+    canvas.drawString(17 * mm, 8.5 * mm, "sales@vcarpets.com")
     canvas.drawCentredString(width / 2, 8.5 * mm, "www.vcarpets.com")
     canvas.drawRightString(width - 17 * mm, 8.5 * mm, f"Page {doc.page}")
     canvas.restoreState()
@@ -226,7 +226,7 @@ def build_guide(filename, title, subtitle, facts, comparison, sections, source_u
     story.extend([
         Spacer(1, 8),
         Paragraph(
-            'For a project-specific review, email <link href="mailto:sales@vishomecarpet.com" color="#C8752A">sales@vishomecarpet.com</link> '
+            'For a project-specific review, email <link href="mailto:sales@vcarpets.com" color="#C8752A">sales@vcarpets.com</link> '
             'or use <link href="https://www.vcarpets.com/contact" color="#C8752A">www.vcarpets.com/contact</link>.',
             styles["footer"],
         ),

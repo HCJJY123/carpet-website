@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 const companyName = "Vishome Global Commercial Carpet Co., Ltd.";
-const contactEmail = "sales@vishomecarpet.com";
+const contactEmail = "sales@vcarpets.com";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Vishome Carpet",

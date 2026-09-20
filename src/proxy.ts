@@ -90,7 +90,11 @@ export function proxy(request: NextRequest) {
   const secure = request.nextUrl.protocol === "https:";
   const hostname = (request.headers.get("host") ?? request.nextUrl.hostname).split(":")[0].toLowerCase();
 
-  if (hostname === "vishomecarpet.com" || hostname === "www.vishomecarpet.com") {
+  if (
+    hostname === "vishomecarpet.com" ||
+    hostname === "www.vishomecarpet.com" ||
+    hostname === "vcarpets.com"
+  ) {
     url.protocol = "https:";
     url.hostname = "www.vcarpets.com";
     url.port = "";

@@ -3,6 +3,7 @@
   "approvedBy": "Site owner approval on 2026-09-20 to migrate the public domain while preserving paths, email identity, inquiry flows and search signals",
   "approvedCategories": [
     "conversion",
+    "navigation",
     "analytics",
     "forms",
     "attribution",
@@ -27,6 +28,7 @@
     "ops/site-baseline.json",
     "keyword-map.csv",
     "src/lib/data.ts",
+    "src/lib/blog-data.ts",
     "src/lib/site-locales.ts",
     "src/lib/seo.ts",
     "src/app/layout.tsx",
@@ -53,6 +55,7 @@
     "docs/seo/**",
     "docs/ai-commerce/*",
     "outreach-assets/*",
+    "public/downloads/**",
     "SITE_OPS_GUIDE.md",
     "keyword-map.csv",
     "public/ai-commerce/**"
@@ -60,5 +63,5 @@
   "protectedUrlsChanged": true,
   "directMainSyncApproved": false,
   "rollbackCommit": "391e9f9",
-  "notes": "Use https://www.vcarpets.com as the canonical public origin. Preserve every existing path and query string. Redirect vishomecarpet.com and www.vishomecarpet.com to the matching path on www.vcarpets.com with server-side 308 responses. Keep sales@vishomecarpet.com and all existing inquiry, email, WhatsApp, analytics and conversion behavior unchanged. Update production URL sources, feeds, sitemaps, robots, llms and AI source maps without rewriting historical audit records or changing page content structure. DNS, Vercel domain attachment, HTTPS certificate, Search Console Change of Address, Bing migration and third-party allowlists remain manual/account-authorized steps."
+  "notes": "Use https://www.vcarpets.com as the canonical public origin. Preserve every existing path and query string. Redirect vishomecarpet.com and www.vishomecarpet.com to the matching path on www.vcarpets.com with server-side 308 responses when the old DNS and HTTPS endpoints are available; if the old domain is unavailable, report that redirect as unverified rather than claiming it is live. Replace public business contact details with sales@vcarpets.com while preserving inquiry, email, WhatsApp, analytics and conversion behavior. Update production URL sources, feeds, sitemaps, robots, llms, AI source maps, generated documents and their source scripts without rewriting historical audit records or changing page content structure. DNS, Vercel domain attachment, HTTPS certificate, mailbox authentication, Search Console Change of Address, Bing migration and third-party allowlists remain manual/account-authorized steps."
 }

@@ -479,7 +479,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Send buyer name, company, email, phone or WhatsApp, country, project type, product type, quantity, expected delivery date and message. If available, include floor plan, installation photo, target color, required documents and previous sample references.",
           "For faster handling, use a short format: product, quantity, country, application, backing preference, sample need, delivery target and special documents. This gives the sales and technical team enough context to respond with a practical quotation path.",
-          "Use the contact form or email sales@vishomecarpet.com when the RFQ includes files or multiple project zones. Use WhatsApp for quick clarification, then keep final price and technical confirmations in written quotation form."
+          "Use the contact form or email sales@vcarpets.com when the RFQ includes files or multiple project zones. Use WhatsApp for quick clarification, then keep final price and technical confirmations in written quotation form."
         ],
         image: "/images/blog-series/commercial-carpet-tile-rfq-checklist/commercial-carpet-tile-rfq-checklist-flat-lay-clean.webp",
         imageAlt: "Commercial carpet tile RFQ checklist with samples, calculator and project notes",

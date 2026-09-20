@@ -201,7 +201,7 @@ export default function Header() {
     intent: "project_support",
     pagePath: pathname,
   });
-  const salesEmail = "sales@vishomecarpet.com";
+  const salesEmail = "sales@vcarpets.com";
   const emailSubject = "VISHOME Commercial Carpet Project Inquiry";
   const emailUrl = `mailto:${salesEmail}?subject=${encodeURIComponent(emailSubject)}`;
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(salesEmail)}&su=${encodeURIComponent(emailSubject)}`;
@@ -405,8 +405,8 @@ export default function Header() {
               data-email-contact-panel
               onClick={handleEmailClick}
               className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#102A43]/20 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#102A43] transition-colors hover:border-[#258CF4]/55 hover:bg-[#258CF4]/[0.05] hover:text-[#126DE2] min-[1536px]:px-[13px] min-[1536px]:py-[9px] min-[1536px]:text-xs"
-              aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
-              title="Email sales@vishomecarpet.com"
+              aria-label="Email VISHOME sales team at sales@vcarpets.com"
+              title="Email sales@vcarpets.com"
             >
               <EmailIcon className="h-6 w-6 scale-90 transition-transform group-hover:scale-95 min-[1536px]:h-[26px] min-[1536px]:w-[26px]" />
               Email
@@ -447,8 +447,8 @@ export default function Header() {
               data-email-contact-panel
               onClick={handleEmailClick}
               className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] border border-[#258CF4]/25 bg-[#258CF4]/[0.04] shadow-[0_2px_7px_rgba(18,109,226,0.12)] transition-[border-color,background-color,transform,box-shadow] hover:scale-105 hover:border-[#258CF4]/50 hover:bg-[#258CF4]/[0.08] hover:shadow-[0_3px_9px_rgba(18,109,226,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#258CF4]/45 focus-visible:ring-offset-2 max-[359px]:h-9 max-[359px]:w-9 sm:h-11 sm:w-11"
-              aria-label="Email VISHOME sales team at sales@vishomecarpet.com"
-              title="Email sales@vishomecarpet.com"
+              aria-label="Email VISHOME sales team at sales@vcarpets.com"
+              title="Email sales@vcarpets.com"
             >
               <EmailIcon className="h-9 w-9 scale-90 max-[359px]:h-8 max-[359px]:w-8 sm:h-10 sm:w-10" />
             </a>

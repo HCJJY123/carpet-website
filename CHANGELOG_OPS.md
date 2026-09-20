@@ -799,3 +799,15 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Added an answer-first procurement path section to `/products/carpet-tiles` for office rolling-chair areas, hotels, education, backing and sustainability, healthcare/high traffic, and RFQ planning.
 - Connected each path to the most specific product, guide, calculator or quote route so commercial search and AI referrals reach a relevant next step instead of a generic product grid.
 - Kept the existing UI system, product claims and project-specific confirmation boundaries unchanged.
+
+## 2026-09-20 — vcarpets.com domain and business email migration
+
+- Updated the public business email to `sales@vcarpets.com` across runtime contact details, header mail links, privacy policy, AI source files, outreach records and PDF generation sources.
+- Regenerated five source-managed procurement PDFs and refreshed the two legacy RFQ worksheet PDFs without changing their page paths or content structure; visible URLs and contact details now use `www.vcarpets.com` and `sales@vcarpets.com`.
+- Preserved the existing `https://www.vcarpets.com` canonical, sitemap, robots, JSON-LD, Open Graph, hreflang, feed and old-host 308 logic from the migration baseline.
+- Added the missing apex normalization so `vcarpets.com` also returns a path- and query-preserving 308 to `www.vcarpets.com`.
+- Added a migration-only PDF refresh helper and expanded the approved change scope to cover generated downloads.
+
+**External status:** New-domain DNS, Vercel domain attachment, HTTPS, mailbox authentication, form delivery credentials, third-party allowlists, Google Search Console, Bing Webmaster Tools and old-domain redirect availability require account-level verification. The old domain currently cannot be treated as publicly redirecting until DNS/HTTPS responds.
+
+**Rollback point:** `391e9f9`
