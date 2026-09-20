@@ -1,4 +1,4 @@
-# Vishomecarpet Backlink Strategy
+# VCARPETS Backlink Strategy
 
 Last reviewed: 2026-08-06
 
@@ -37,7 +37,7 @@ Build linkable assets first, then request links from relevant real-world sources
 
 Use natural anchors such as:
 
-- Vishome Carpet
+- VCARPETS
 - commercial carpet manufacturer
 - office carpet tile supplier
 - hotel carpet project specification

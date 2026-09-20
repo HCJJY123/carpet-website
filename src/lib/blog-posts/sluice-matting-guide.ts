@@ -5,7 +5,7 @@ export const sluiceMattingGuide: BlogPost = {
   title: "Sluice Carpet vs Miner's Moss vs Vortex Matting: A Fine Gold Recovery Buyer's Guide",
   subtitle: "How bulk buyers can compare recovery behavior, cleanup time, durability, and supplier quality before ordering sluice matting.",
   painPoint: "The wrong sluice matting can send fine gold out of the recovery system, increase cleanout labor, and create avoidable supplier complaints.",
-  seoTitle: "Sluice Carpet vs Miner's Moss vs Vortex Matting | VISHOME",
+  seoTitle: "Sluice Carpet vs Miner's Moss vs Vortex Matting | VCARPETS",
   description: "Which sluice matting catches fine gold? Compare gold mining carpet, miner's moss, and vortex matting on recovery, cleanup, durability, and bulk-buyer quality testing.",
   keywords: [
     "gold mining carpet",
@@ -20,7 +20,7 @@ export const sluiceMattingGuide: BlogPost = {
     "vortex mat vs miners moss",
   ],
   date: "2026-07-26",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Technical Guide",
   image: "/images/blog-series/sluice-matting-gold-recovery-guide/sluice-carpet-gold-recovery-field.webp",
   h1Image: "/images/blog-series/sluice-matting-gold-recovery-guide/sluice-carpet-gold-recovery-field.webp",

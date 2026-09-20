@@ -37,7 +37,7 @@ const sections = [
   {
     heading: "A Sculpted Wool Feature Rug for Refined Public Interiors",
     body: [
-      "Vishomecarpet Custom Sculpted Wool Lobby Rug is a made-to-order decorative area rug developed for hotel lobbies, executive lounges, reception areas, private clubs, villas and premium commercial showrooms.",
+      "VCARPETS Custom Sculpted Wool Lobby Rug is a made-to-order decorative area rug developed for hotel lobbies, executive lounges, reception areas, private clubs, villas and premium commercial showrooms.",
       "The neutral sand-beige palette creates a calm foundation for stone, timber, leather and upholstered furniture. Its concentric-square design uses a dimensional sculpted surface to introduce visual depth without relying on strong colors or highly decorative motifs.",
       "Unlike wall-to-wall broadloom, this product is designed as a separate feature rug. It can be positioned beneath a lobby seating group, reception lounge, executive waiting area or display zone to define the space while leaving the surrounding architectural floor visible.",
     ],
@@ -53,7 +53,7 @@ const sections = [
   {
     heading: "Custom Sizing for Lobby and Lounge Layouts",
     body: [
-      "Buyers can provide a floor plan, furniture layout, interior rendering or target dimensions. Vishomecarpet will review the relationship between the rug size, seating group, circulation route and pattern scale before confirming the quotation.",
+      "Buyers can provide a floor plan, furniture layout, interior rendering or target dimensions. VCARPETS will review the relationship between the rug size, seating group, circulation route and pattern scale before confirming the quotation.",
       "For hotel lobbies and executive lounges, the rug should normally extend beneath the primary furniture group to create a visually connected seating zone. For reception spaces or showrooms, custom dimensions can be developed around counters, display furniture or architectural features.",
       "Final size, shape, edge finish, backing and packing method must be confirmed according to the installation environment and project requirements.",
     ],
@@ -63,7 +63,7 @@ const sections = [
     body: [
       "Wool rugs can provide a warm and premium appearance, but commercial buyers must evaluate the intended traffic level, cleaning program, entrance conditions and local fire requirements before approval.",
       "This product should not automatically be specified for wet entrances, airport corridors, continuous luggage-wheel routes or other extra-heavy traffic areas unless suitable performance testing and construction details have been confirmed.",
-      "For high-traffic wall-to-wall applications, buyers should compare this decorative area rug with Vishomecarpet's dedicated High-Traffic Public Area Corridor Carpet.",
+      "For high-traffic wall-to-wall applications, buyers should compare this decorative area rug with VCARPETS's dedicated High-Traffic Public Area Corridor Carpet.",
     ],
   },
   {
@@ -158,7 +158,7 @@ const quoteItems = [
 
 const faqs = [
   ["What is a sculpted wool lobby rug?", "A sculpted wool lobby rug is a decorative area rug with differences in surface height that create a dimensional pattern. This product uses a concentric-square design intended for hotel lobbies, lounges, reception areas and other design-focused indoor spaces."],
-  ["Is this a wall-to-wall carpet?", "No. This product is designed as a separate area rug rather than wall-to-wall broadloom. Buyers requiring continuous corridor or airport flooring should review Vishomecarpet's high-traffic public area carpet."],
+  ["Is this a wall-to-wall carpet?", "No. This product is designed as a separate area rug rather than wall-to-wall broadloom. Buyers requiring continuous corridor or airport flooring should review VCARPETS's high-traffic public area carpet."],
   ["Is the rug made from 100% wool?", "The reference product is described as using wool material. The exact fiber composition must be confirmed together with the required construction, size and project specification before ordering."],
   ["Can the rug size be customized?", "Yes. Buyers can provide finished dimensions, floor plans or furniture layouts. The rug size and pattern scale can then be reviewed for the intended lobby, lounge or reception space."],
   ["Can the sand color be changed?", "Yes. Custom color options can be reviewed using an interior rendering, material board, color reference or physical sample. Final color approval should be completed before production."],
@@ -166,7 +166,7 @@ const faqs = [
   ["What is the price of the rug?", "The reference starting price is US$500 per piece. Final pricing depends on the dimensions, material composition, pile profile, sculpting complexity, quantity, edge finishing and packing requirements."],
   ["Is this rug suitable for high-traffic public areas?", "It is intended primarily as a decorative feature rug for controlled indoor public spaces. Traffic classification, fire performance, backing and maintenance requirements must be confirmed before use in a commercial project."],
   ["Can the rug be used at a hotel entrance?", "Wet entrances and continuously trafficked entrance zones require careful specification. The buyer should confirm moisture exposure, soil control, cleaning methods, backing and slip requirements before selecting this product."],
-  ["Can Vishomecarpet produce a different geometric pattern?", "Custom pattern scale, color and design options can be reviewed according to the project. Buyers should provide artwork, interior renderings or reference images for evaluation."],
+  ["Can VCARPETS produce a different geometric pattern?", "Custom pattern scale, color and design options can be reviewed according to the project. Buyers should provide artwork, interior renderings or reference images for evaluation."],
   ["What information is needed for a quotation?", "Please provide the destination country, quantity, finished dimensions, application space, preferred colors, material requirement, target delivery date and any required testing standard."],
   ["How long does production take?", "Production time is confirmed after the size, material, construction, color, quantity and technical specification have been approved."],
 ];
@@ -176,7 +176,7 @@ const inquiryText =
 ;
 
 const mailBody = encodeURIComponent(
-  "Send the destination country, required rug quantity, target dimensions, application space, preferred color, material requirement and project delivery date. Vishomecarpet will confirm the suitable specification, sample option, packing method and final quotation."
+  "Send the destination country, required rug quantity, target dimensions, application space, preferred color, material requirement and project delivery date. VCARPETS will confirm the suitable specification, sample option, packing method and final quotation."
 );
 
 function cta(location: string) {
@@ -218,12 +218,12 @@ function cta(location: string) {
 }
 
 export const metadata: Metadata = {
-  title: "Custom Sculpted Wool Lobby Rug | Vishomecarpet",
+  title: "Custom Sculpted Wool Lobby Rug | VCARPETS",
   description: "Custom sand-beige wool lobby rug with sculpted concentric-square texture for hotels, lounges and reception areas. Custom size and color, MOQ 10 pieces.",
   robots: { index: true, follow: true },
   alternates: { canonical },
   openGraph: {
-    title: "Custom Sculpted Wool Lobby Rug | Vishomecarpet",
+    title: "Custom Sculpted Wool Lobby Rug | VCARPETS",
     description: "Made-to-order sculpted wool area rug for hotel lobbies, executive lounges, reception spaces and luxury commercial interiors.",
     url: canonical,
     type: "website",
@@ -231,7 +231,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Sculpted Wool Lobby Rug | Vishomecarpet",
+    title: "Custom Sculpted Wool Lobby Rug | VCARPETS",
     description: "Custom wool feature rug with dimensional concentric-square texture for hotel and commercial interior projects.",
     images: [absoluteUrl(images[0].src)],
   },
@@ -245,7 +245,7 @@ export default function CustomSculptedWoolLobbyRugPage() {
     "@type": "Product",
     name: "Custom Sculpted Wool Lobby Rug",
     sku,
-    brand: { "@type": "Brand", name: "Vishomecarpet" },
+    brand: { "@type": "Brand", name: "VCARPETS" },
     category: "Decorative Public Area Rug",
     description: "Made-to-order sand-beige wool area rug with a sculpted concentric-square texture for hotel lobbies, executive lounges, reception areas and luxury commercial interiors.",
     url: canonical,
@@ -269,7 +269,7 @@ export default function CustomSculptedWoolLobbyRugPage() {
       url: canonical,
       availability: "https://schema.org/PreOrder",
       itemCondition: "https://schema.org/NewCondition",
-      seller: { "@type": "Organization", name: "Vishomecarpet", url: brandInfo.url },
+      seller: { "@type": "Organization", name: "VCARPETS", url: brandInfo.url },
     },
   };
 
@@ -336,7 +336,7 @@ export default function CustomSculptedWoolLobbyRugPage() {
           </div>
 
           <div>
-            <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Vishomecarpet Custom Feature Rugs</p>
+            <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">VCARPETS Custom Feature Rugs</p>
             <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">Custom Sculpted Wool Lobby Rug</h1>
             <p className="mb-8 text-lg leading-relaxed text-muted">
               Made-to-order sand-beige wool area rug featuring a dimensional concentric-square texture for hotel lobbies, executive lounges, reception areas, luxury clubs and commercial showrooms.
@@ -504,7 +504,7 @@ export default function CustomSculptedWoolLobbyRugPage() {
         <div className="container-fox">
           <h2 className="mb-6 text-3xl font-black uppercase md:text-5xl">What to Send for an Accurate Rug Quote</h2>
           <p className="mb-8 max-w-4xl leading-relaxed text-white/74">
-            Send the destination country, required rug quantity, target dimensions, application space, preferred color, material requirement and project delivery date. Vishomecarpet will confirm the suitable specification, sample option, packing method and final quotation.
+            Send the destination country, required rug quantity, target dimensions, application space, preferred color, material requirement and project delivery date. VCARPETS will confirm the suitable specification, sample option, packing method and final quotation.
           </p>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {quoteItems.map((item) => (

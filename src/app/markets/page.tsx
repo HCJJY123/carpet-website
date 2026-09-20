@@ -6,15 +6,15 @@ import { countryMarketPages } from "@/lib/country-market-pages";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Global Commercial Carpet Market Pages | VISHOME",
-  description: "Country-specific commercial carpet procurement pages from VISHOME, including priority rollout markets, local search terminology, product specifications, MOQ, samples and project inquiry routes.",
+  title: "Global Commercial Carpet Market Pages | VCARPETS",
+  description: "Country-specific commercial carpet procurement pages from VCARPETS, including priority rollout markets, local search terminology, product specifications, MOQ, samples and project inquiry routes.",
   alternates: { canonical: absoluteUrl("/markets") },
   openGraph: {
-    title: "VISHOME Global Commercial Carpet Markets",
+    title: "VCARPETS Global Commercial Carpet Markets",
     description: "Country-specific commercial carpet and gold mining mat sourcing pages for international B2B buyers.",
     url: absoluteUrl("/markets"),
     type: "website",
-    images: [{ url: absoluteUrl("/images/hero-home.webp"), alt: "VISHOME commercial carpet project markets" }],
+    images: [{ url: absoluteUrl("/images/hero-home.webp"), alt: "VCARPETS commercial carpet project markets" }],
   },
 };
 
@@ -32,7 +32,7 @@ export default function MarketsPage() {
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "VISHOME country market procurement pages",
+    name: "VCARPETS country market procurement pages",
     numberOfItems: allMarketItems.length,
     itemListElement: allMarketItems.map((page, index) => ({
       "@type": "ListItem",
@@ -47,14 +47,14 @@ export default function MarketsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListJsonLd) }} />
       <section className="relative flex min-h-[520px] items-end overflow-hidden bg-primary text-white">
         <div className="absolute inset-0">
-          <ProductImage src="/images/hero-home.webp" alt="VISHOME global commercial carpet projects" className="h-full w-full" priority sizes="100vw" />
+          <ProductImage src="/images/hero-home.webp" alt="VCARPETS global commercial carpet projects" className="h-full w-full" priority sizes="100vw" />
         </div>
         <div className="absolute inset-0 bg-primary/70" />
         <div className="container-fox relative z-10 pb-16 pt-28 md:pb-20">
           <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Global market directory</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-black leading-tight md:text-6xl">Country-specific commercial carpet sourcing pages</h1>
           <p className="mt-6 max-w-3xl text-base font-semibold leading-8 text-white/85 md:text-lg">
-            Each page combines a local-language direct answer with verified VISHOME product records, sample and MOQ tiers,
+            Each page combines a local-language direct answer with verified VCARPETS product records, sample and MOQ tiers,
             project risks, delivery inputs and a country-specific inquiry route. These pages do not replace tender or local compliance review.
           </p>
         </div>

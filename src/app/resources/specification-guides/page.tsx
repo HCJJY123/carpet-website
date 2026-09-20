@@ -8,7 +8,7 @@ const pagePath = "/resources/specification-guides";
 const guides = technicalDocuments.filter((document) => document.documentType === "Guide");
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Specification Guides | Vishome Carpet",
+  title: "Commercial Carpet Specification Guides | VCARPETS",
   description: "Specification guides for carpet tiles, hotel broadloom and public-area carpet procurement, with related product links and document request paths.",
   alternates: { canonical: absoluteUrl(pagePath) },
 };

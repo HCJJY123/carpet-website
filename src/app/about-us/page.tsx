@@ -4,8 +4,8 @@ import ProductImage from "@/components/ProductImage";
 import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata: Metadata = {
-  title: "About Vishome Carpet Manufacturer | VISHOME",
-  description: "Vishome Global Commercial Carpet Co., Ltd. is a professional commercial carpet manufacturer with a 50,000-square-meter factory, 900+ employees, and exports to over 45 countries and regions. We supply commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event carpets, and custom carpet solutions for global B2B projects.",
+  title: "About VCARPETS Manufacturer | VCARPETS",
+  description: "Vcarpets Global Commercial Carpet Co., Ltd. is a professional commercial carpet manufacturer with a 50,000-square-meter factory, 900+ employees, and exports to over 45 countries and regions. We supply commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event carpets, and custom carpet solutions for global B2B projects.",
   alternates: { canonical: "https://www.vcarpets.com/about-us" },
 };
 
@@ -26,9 +26,9 @@ export default function AboutUsPage() {
         </div>
         <div className="container-fox relative z-10 text-white">
           <div className="max-w-[760px]">
-            <p className="text-accent font-black tracking-[0.4em] text-[10px] uppercase mb-4">About Vishome Global</p>
+            <p className="text-accent font-black tracking-[0.4em] text-[10px] uppercase mb-4">About VCARPETS Global</p>
             <h1 className="mb-6 text-4xl font-black uppercase leading-tight tracking-[0.06em] md:mb-8 md:text-6xl md:tracking-wider">
-              About Vishome Global Commercial Carpet Co., Ltd.
+              About Vcarpets Global Commercial Carpet Co., Ltd.
             </h1>
             <p className="mb-8 text-base font-medium leading-relaxed text-gray-200 md:mb-12 md:text-xl">
               A professional commercial carpet manufacturer supplying carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpets, event carpets, and custom carpet solutions for global B2B projects.
@@ -56,7 +56,7 @@ export default function AboutUsPage() {
               </h3>
               <div className="text-muted space-y-6 text-lg leading-relaxed">
                 <p>
-                  Vishome Global Commercial Carpet Co., Ltd. is a professional commercial carpet manufacturer specializing in carpet research, development, production, and international trade. We provide reliable carpet solutions for flooring distributors, contractors, hotels, offices, commercial buildings, event companies, and project-based buyers worldwide.
+                  Vcarpets Global Commercial Carpet Co., Ltd. is a professional commercial carpet manufacturer specializing in carpet research, development, production, and international trade. We provide reliable carpet solutions for flooring distributors, contractors, hotels, offices, commercial buildings, event companies, and project-based buyers worldwide.
                 </p>
                 <p>
                   Our product range includes commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event and exhibition carpets, stair runners, corridor carpets, and customized rugs. With strong production capability and project-based customization support, we help global customers complete commercial flooring projects with stable quality, flexible specifications, and professional export service.
@@ -89,7 +89,7 @@ export default function AboutUsPage() {
                     <span className="text-white text-[8px] font-black">2008</span>
                   </span>
                   <h4 className="text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-1">Foundation</h4>
-                  <p className="text-sm text-muted leading-relaxed">Vishome was established in Tianjin, China, starting with a small production workshop focused on commercial carpet manufacturing.</p>
+                  <p className="text-sm text-muted leading-relaxed">VCARPETS was established in Tianjin, China, starting with a small production workshop focused on commercial carpet manufacturing.</p>
                 </div>
                 <div className="relative pl-12 pb-8 border-l-2 border-accent/30">
                   <span className="absolute -left-3 top-0 w-6 h-6 rounded-full bg-accent flex items-center justify-center">
@@ -117,7 +117,7 @@ export default function AboutUsPage() {
             <div className="lg:w-1/2">
               <ProductImage
                 src="/images/about/our-story-export-logistics.webp"
-                alt="Export logistics loading of commercial carpets at Vishome factory"
+                alt="Export logistics loading of commercial carpets at VCARPETS factory"
                 className="rounded-[24px] shadow-xl w-full aspect-[4/3] object-cover border border-border"
               />
             </div>
@@ -207,11 +207,11 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-            {/* 7. Why Choose Vishome */}
+            {/* 7. Why Choose VCARPETS */}
       <section className="section-padding bg-[#102A43] text-white">
         <div className="container-fox">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 uppercase">Why Choose Vishome</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 uppercase">Why Choose VCARPETS</h2>
             <p className="text-gray-400 max-w-3xl mx-auto text-xs font-bold uppercase tracking-[0.3em] leading-relaxed">
               What sets us apart as a trusted commercial carpet manufacturer for global B2B partners
             </p>

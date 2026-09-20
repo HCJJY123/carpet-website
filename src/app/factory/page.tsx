@@ -3,8 +3,8 @@ import Link from "next/link";
 import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata = {
-  title: "Carpet Manufacturing Factory | Vishome Global Commercial Carpet",
-  description: "Explore the 50,000 sqm Vishome manufacturing facility. Premium production lines for commercial carpet tiles and hotel broadloom with 900+ skilled staff.",
+  title: "Carpet Manufacturing Factory | VCARPETS Global Commercial Carpet",
+  description: "Explore the 50,000 sqm VCARPETS manufacturing facility. Premium production lines for commercial carpet tiles and hotel broadloom with 900+ skilled staff.",
   alternates: { canonical: "https://www.vcarpets.com/factory" },
 };
 
@@ -26,7 +26,7 @@ export default function FactoryPage() {
         <div className="container-fox">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-square">
-              <ProductImage src="/images/factory-showroom.webp" alt="Vishome high-tech production line" className="w-full h-full object-cover rounded shadow-2xl" priority sizes="(max-width: 1024px) 100vw, 50vw" />
+              <ProductImage src="/images/factory-showroom.webp" alt="VCARPETS high-tech production line" className="w-full h-full object-cover rounded shadow-2xl" priority sizes="(max-width: 1024px) 100vw, 50vw" />
               <div className="absolute -bottom-8 -right-8 bg-primary p-10 text-white hidden md:block">
                 <p className="text-4xl font-black mb-1">900+</p>
                 <p className="text-[10px] font-bold uppercase tracking-widest">Skilled Craftsmen</p>

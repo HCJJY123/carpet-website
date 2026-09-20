@@ -287,7 +287,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
         dragging ? "cursor-grabbing" : "cursor-grab"
       }`}
       aria-roledescription="carousel"
-      aria-label="Vishome carpet product highlights"
+      aria-label="VCARPETS carpet product highlights"
       onPointerDown={beginDrag}
       onPointerMove={moveDrag}
       onPointerUp={(event) => finishDrag(event)}

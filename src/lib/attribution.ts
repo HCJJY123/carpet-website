@@ -1,4 +1,4 @@
-const STORAGE_KEY = "vishome_attribution";
+const STORAGE_KEY = "VCARPETS_attribution";
 
 export interface Attribution {
   utmSource?: string;

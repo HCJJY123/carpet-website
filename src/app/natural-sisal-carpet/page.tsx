@@ -7,12 +7,12 @@ import { absoluteUrl, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 const product = products.find((item) => item.id === "natural-sisal-carpet");
 
 export const metadata: Metadata = {
-  title: "Natural Sisal Carpet for Offices, Retail & Public Areas | VISHOME",
+  title: "Natural Sisal Carpet for Offices, Retail & Public Areas | VCARPETS",
   description:
     "Natural sisal carpet supplier for offices, retail, galleries, hospitality public areas, and sustainable commercial interiors. Linen-weave texture, 4m width, MOQ 300 SQM.",
   alternates: { canonical: "/products/public-area/natural-sisal-carpet" },
   openGraph: {
-    title: "Natural Sisal Carpet for Commercial Interiors | VISHOME",
+    title: "Natural Sisal Carpet for Commercial Interiors | VCARPETS",
     description:
       "100% natural sisal linen-weave carpet for offices, retail, galleries, hotel public areas, and biophilic commercial interiors.",
     url: absoluteUrl("/natural-sisal-carpet"),
@@ -40,8 +40,8 @@ const faqs = [
     a: "Sisal adds a warm natural texture, supports biophilic interior concepts, and provides a durable flatweave surface for commercial spaces that want a more natural alternative to synthetic carpet.",
   },
   {
-    q: "Can VISHOME supply custom sisal rugs and runners?",
-    a: "Yes. VISHOME can supply 4m broadloom rolls, custom-cut rugs, bound edges, runners, and project-specific sizes for offices, retail, hospitality, and public spaces.",
+    q: "Can VCARPETS supply custom sisal rugs and runners?",
+    a: "Yes. VCARPETS can supply 4m broadloom rolls, custom-cut rugs, bound edges, runners, and project-specific sizes for offices, retail, hospitality, and public spaces.",
   },
   {
     q: "Is sisal carpet waterproof?",
@@ -73,7 +73,7 @@ export default function NaturalSisalCarpetLandingPage() {
               Natural Sisal Carpet for Offices, Retail and Public Areas
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-white/75">
-              VISHOME supplies 100% natural sisal linen-weave carpet for commercial interiors that need a warm, sustainable, biophilic floor finish with project-based sizing and export support.
+              VCARPETS supplies 100% natural sisal linen-weave carpet for commercial interiors that need a warm, sustainable, biophilic floor finish with project-based sizing and export support.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link href={product ? productPath(product.id) : "/products/public-area"} className="btn-fox-orange">View Product Specs</Link>
@@ -106,7 +106,7 @@ export default function NaturalSisalCarpetLandingPage() {
               Natural sisal is best for dry commercial interiors where texture, sustainability, and a premium natural look matter. It is especially effective in office receptions, retail showrooms, galleries, hospitality public zones, and design-led workspace projects.
             </p>
             <p className="text-sm leading-relaxed text-muted">
-              For spaces with frequent spills or moisture, VISHOME can also discuss synthetic sisal-look alternatives that keep the woven aesthetic while improving cleanability.
+              For spaces with frequent spills or moisture, VCARPETS can also discuss synthetic sisal-look alternatives that keep the woven aesthetic while improving cleanability.
             </p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">

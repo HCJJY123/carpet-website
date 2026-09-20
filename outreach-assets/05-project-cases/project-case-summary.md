@@ -16,9 +16,9 @@ Suitable outreach targets:
 
 Suggested attribution wording:
 
-- Carpet supplied by Vishome Carpet
-- Commercial carpet manufacturing partner: Vishome Carpet
-- Custom carpet supply partner: Vishome Carpet
+- Carpet supplied by VCARPETS
+- Commercial carpet manufacturing partner: VCARPETS
+- Custom carpet supply partner: VCARPETS
 
 Manual confirmation required before using:
 

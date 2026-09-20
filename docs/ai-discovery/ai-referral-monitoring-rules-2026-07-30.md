@@ -1,4 +1,4 @@
-# Vishomecarpet AI Referral Monitoring Rules
+# VCARPETS AI Referral Monitoring Rules
 
 Date: 2026-07-30
 

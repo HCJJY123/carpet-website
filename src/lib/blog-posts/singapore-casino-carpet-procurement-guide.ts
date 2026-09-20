@@ -7,7 +7,7 @@ export const singaporeCasinoCarpetProcurementChecklist: BlogPost = {
     "A practical approval guide for operators, fit-out teams and distributors comparing pattern, backing, fire documents and delivery planning.",
   painPoint:
     "Singapore casino projects can stall when the buyer focuses on visual pattern only and leaves out traffic use, backing, sample approval, document requests and site access.",
-  seoTitle: "Casino Carpet in Singapore | Procurement Checklist | VISHOME",
+  seoTitle: "Casino Carpet in Singapore | Procurement Checklist | VCARPETS",
   description:
     "Use this Singapore casino carpet checklist to confirm pattern approval, backing, fire documents, sample timing, MOQ and freight planning before bulk order.",
   keywords: [
@@ -20,7 +20,7 @@ export const singaporeCasinoCarpetProcurementChecklist: BlogPost = {
   ],
   date: "2026-08-07",
   dateModified: "2026-08-07",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Casino Carpet",
   image: "/images/blog-series/singapore-casino-carpet-procurement-checklist/singapore-casino-carpet-procurement-checklist-1600.avif",
   h1Image: "/images/blog-series/singapore-casino-carpet-procurement-checklist/singapore-casino-carpet-procurement-checklist-1600.avif",
@@ -131,7 +131,7 @@ export const singaporeCasinoCarpetProcurementChecklist: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "If you are planning a Singapore casino carpet project, send the area, room type, pattern reference, sample request, preferred backing, target delivery date and loading restrictions. Vishomecarpet can then confirm the most suitable construction and quotation path for the gaming floor or VIP area.",
+          text: "If you are planning a Singapore casino carpet project, send the area, room type, pattern reference, sample request, preferred backing, target delivery date and loading restrictions. VCARPETS can then confirm the most suitable construction and quotation path for the gaming floor or VIP area.",
         },
       ],
     },

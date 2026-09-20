@@ -8,7 +8,7 @@ import { clearPendingContactFunnel, getFunnelSessionSignals, getPendingContactFu
 import { trackAnalyticsEvent, trackLeadConversion } from "@/lib/tracking";
 import { getVisitorIdentity } from "@/lib/visitorIdentity";
 
-const PENDING_CONTACT_SOURCE_KEY = "vishome_pending_contact_source";
+const PENDING_CONTACT_SOURCE_KEY = "VCARPETS_pending_contact_source";
 
 type LeadCaptureFormProps = {
   formName: string;
@@ -161,7 +161,7 @@ export default function LeadCaptureForm({
       });
 
       sessionStorage.setItem(
-        "vishome_form_success",
+        "VCARPETS_form_success",
         JSON.stringify({
           token: Date.now(),
           formName,

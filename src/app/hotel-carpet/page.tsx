@@ -14,8 +14,8 @@ const hotelFaqs = [
     answer: "Guestrooms often use comfort-oriented wall-to-wall carpet, while corridors need stronger appearance retention, pattern planning, and noise control. Final construction should be confirmed by traffic level, fire requirement, design intent, cleaning plan, and project budget.",
   },
   {
-    question: "Can Vishomecarpet support custom hotel carpet patterns?",
-    answer: "Yes. Vishomecarpet can discuss custom hospitality broadloom, printed designs, Axminster-style planning, color direction, strike-off samples, and project-specific roll planning. Final feasibility depends on construction, color count, pattern repeat, MOQ, and lead time.",
+    question: "Can VCARPETS support custom hotel carpet patterns?",
+    answer: "Yes. VCARPETS can discuss custom hospitality broadloom, printed designs, Axminster-style planning, color direction, strike-off samples, and project-specific roll planning. Final feasibility depends on construction, color count, pattern repeat, MOQ, and lead time.",
   },
   {
     question: "What should a hotel buyer send before asking for a quote?",
@@ -32,7 +32,7 @@ const hotelFaqs = [
 ];
 
 export const metadata = {
-  title: "Hotel Carpet Supplier | VISHOME",
+  title: "Hotel Carpet Supplier | VCARPETS",
   description: "Source custom hotel carpet for guestrooms, corridors, lobbies and banquet halls. Compare broadloom, Axminster, printed designs, samples, MOQ and project quote support.",
   alternates: { canonical: "/hotel-carpet" },
 };
@@ -72,7 +72,7 @@ export default function HotelCarpetPage() {
                 Hotel Carpet Selection by Guest Area
               </h1>
               <p className="text-xl text-gray-300 mb-12 opacity-90 leading-relaxed">
-                From luxury guest suites to high-traffic corridors and grand banquet halls. Vishomecarpet helps international hotel buyers compare construction, samples, fire documents, roll planning, and project quotations.
+                From luxury guest suites to high-traffic corridors and grand banquet halls. VCARPETS helps international hotel buyers compare construction, samples, fire documents, roll planning, and project quotations.
               </p>
               <div className="flex flex-wrap gap-6">
                 <Link
@@ -94,7 +94,7 @@ export default function HotelCarpetPage() {
       <AnswerFirst
         eyebrow="Hotel Carpet Buying Answer"
         title="Which Hotel Carpet Should a Buyer Start With?"
-        answer="Start from the guest area, not only the pattern. Guestrooms need comfort and acoustic support, corridors need durability and stain-hiding pattern planning, and lobbies or banquet areas need a stronger design and documentation review. Vishomecarpet can help compare hotel broadloom, printed carpet, wool-blend options, and project-specific constructions after the buyer confirms area, destination, traffic level, required documents, and sample stage."
+        answer="Start from the guest area, not only the pattern. Guestrooms need comfort and acoustic support, corridors need durability and stain-hiding pattern planning, and lobbies or banquet areas need a stronger design and documentation review. VCARPETS can help compare hotel broadloom, printed carpet, wool-blend options, and project-specific constructions after the buyer confirms area, destination, traffic level, required documents, and sample stage."
         facts={[
           { label: "Main Applications", value: "Guestrooms, corridors, lobbies, ballrooms and public areas" },
           { label: "Quote Inputs", value: "Area, pattern, destination, fire standard and target date" },
@@ -116,7 +116,7 @@ export default function HotelCarpetPage() {
           "Projects that require final compliance documents before construction is selected",
           "Retail one-piece orders without project quantity or specification details",
         ]}
-        evidence="This page gives procurement guidance. Final price, MOQ, lead time, test documents, backing and material must be confirmed against the exact construction quoted by Vishomecarpet."
+        evidence="This page gives procurement guidance. Final price, MOQ, lead time, test documents, backing and material must be confirmed against the exact construction quoted by VCARPETS."
         quoteHref={hotelQuoteHref}
         quoteLabel="Request Hotel Carpet Quote"
       />

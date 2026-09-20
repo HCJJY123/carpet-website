@@ -53,11 +53,11 @@ const faqJsonLd = {
 
 export const metadata: Metadata = product
   ? {
-      title: "Nylon 6.6 Heavy-Duty Commercial Carpet Tiles | VISHOME",
+      title: "Nylon 6.6 Heavy-Duty Commercial Carpet Tiles | VCARPETS",
       description: "Nylon 6.6 heavy-duty commercial carpet tiles with Class 33 performance and bitumen backing for offices, corridors, schools, airports, and contract floors.",
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "Nylon 6.6 Heavy-Duty Commercial Carpet Tiles | VISHOME",
+        title: "Nylon 6.6 Heavy-Duty Commercial Carpet Tiles | VCARPETS",
         description: "Nylon 6.6 heavy-duty commercial carpet tiles with Class 33 performance and bitumen backing for offices, corridors, schools, airports, and contract floors.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
@@ -65,12 +65,12 @@ export const metadata: Metadata = product
       },
       twitter: {
         card: "summary_large_image",
-        title: "Nylon 6.6 Heavy-Duty Commercial Carpet Tiles | VISHOME",
+        title: "Nylon 6.6 Heavy-Duty Commercial Carpet Tiles | VCARPETS",
         description: "Nylon 6.6 heavy-duty commercial carpet tiles with Class 33 performance and bitumen backing for offices, corridors, schools, airports, and contract floors.",
         images: [absoluteUrl(product.image)],
       },
     }
-  : { title: "Commercial Carpet Product | VISHOME" };
+  : { title: "Commercial Carpet Product | VCARPETS" };
 
 export default function ProductDetailPage() {
   const productId = "commercial-nylon-tiles";

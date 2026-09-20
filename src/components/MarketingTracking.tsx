@@ -23,7 +23,7 @@ const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "xgg9z07t
 const microsoftUetTagId = process.env.NEXT_PUBLIC_MICROSOFT_UET_TAG_ID || "97259674";
 const gtmContainerId = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID;
 const yandexMetricaId = process.env.NEXT_PUBLIC_YANDEX_METRICA_ID;
-const pendingContactSourceKey = "vishome_pending_contact_source";
+const pendingContactSourceKey = "VCARPETS_pending_contact_source";
 
 declare global {
   interface Window {
@@ -47,9 +47,9 @@ export default function MarketingTracking() {
     const attribution = getAttributionForEvent();
     if (
       attribution.traffic_channel === "ai_referral" &&
-      !window.sessionStorage.getItem("vishome_ai_referral_landing")
+      !window.sessionStorage.getItem("VCARPETS_ai_referral_landing")
     ) {
-      window.sessionStorage.setItem("vishome_ai_referral_landing", "1");
+      window.sessionStorage.setItem("VCARPETS_ai_referral_landing", "1");
       trackAnalyticsEvent("ai_referral_landing", {
         ai_source: attribution.ai_source,
         landing_page: attribution.landing_page,

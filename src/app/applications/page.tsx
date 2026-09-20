@@ -7,7 +7,7 @@ import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 const pagePath = "/applications";
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Applications | Vishome Carpet",
+  title: "Commercial Carpet Applications | VCARPETS",
   description: "Explore commercial carpet application pages for offices, hotel guestrooms, hotel corridors, hotel ballrooms and public spaces.",
   alternates: { canonical: absoluteUrl(pagePath) },
 };

@@ -5,7 +5,7 @@ import { getContactBridgeUrl } from "@/lib/whatsapp";
 
 export default function Footer() {
   const footerWhatsAppUrl = getContactBridgeUrl(
-    "Hello VISHOME, I would like to share my commercial carpet project details. Please help with price, MOQ, samples, lead time, and technical documents.",
+    "Hello VCARPETS, I would like to share my commercial carpet project details. Please help with price, MOQ, samples, lead time, and technical documents.",
     {
       placement: "footer_support",
       intent: "footer_project_inquiry",
@@ -22,18 +22,18 @@ export default function Footer() {
             <div className="mb-8 flex items-center gap-4">
               <Image
                 src="/logo-footer.svg"
-                alt="Vishome Logo"
+                alt="VCARPETS Logo"
                 width={64}
                 height={64}
                 className="h-16 w-auto"
               />
               <div className="flex flex-col">
-                <span className="text-2xl font-black tracking-tight leading-none text-white">VISHOME</span>
+                <span className="text-2xl font-black tracking-tight leading-none text-white">VCARPETS</span>
                 <span className="mt-1.5 text-[10px] font-bold uppercase leading-none tracking-[0.16em] text-gray-400">Global Commercial Carpet</span>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 font-medium">
-              Vishome Global Commercial Carpet Co., Ltd. is a B2B commercial carpet manufacturer supplying carpet tiles, hotel carpet, public-area carpet, samples and project quotation support since 2005.
+              Vcarpets Global Commercial Carpet Co., Ltd. is a B2B commercial carpet manufacturer supplying carpet tiles, hotel carpet, public-area carpet, samples and project quotation support since 2005.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ export default function Footer() {
                 <a
                   href={`mailto:${brandInfo.email}`}
                   className="inline-flex w-fit max-w-full items-center rounded-md border border-accent/50 bg-white/10 px-4 py-3 text-base font-black text-white shadow-md transition-all hover:-translate-y-0.5 hover:border-accent hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:text-lg"
-                  aria-label={`Email the VISHOME sales team at ${brandInfo.email}`}
+                  aria-label={`Email the VCARPETS sales team at ${brandInfo.email}`}
                 >
                   <span className="break-all">{brandInfo.email}</span>
                 </a>
@@ -94,7 +94,7 @@ export default function Footer() {
                   data-whatsapp-placement="footer_support"
                   data-whatsapp-intent="footer_project_inquiry"
                   className="inline-flex items-center justify-center rounded-sm bg-[#25D366] px-4 py-3 text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
-                  aria-label="Send VISHOME your project details on WhatsApp"
+                  aria-label="Send VCARPETS your project details on WhatsApp"
                 >
                   WhatsApp Project Support
                 </a>
@@ -113,7 +113,7 @@ export default function Footer() {
         <div className="border-t border-white/5 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-xs font-normal tracking-normal text-white/40">
-              &copy; {new Date().getFullYear()} Vishome Global Commercial Carpet Co., Ltd.
+              &copy; {new Date().getFullYear()} Vcarpets Global Commercial Carpet Co., Ltd.
             </p>
             <p className="mt-2 text-xs font-medium tracking-normal text-white/45">Established 2005</p>
           </div>

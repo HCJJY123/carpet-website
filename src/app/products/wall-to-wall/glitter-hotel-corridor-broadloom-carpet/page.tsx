@@ -13,7 +13,7 @@ const product = {
   category: "wall-to-wall" as const,
   description: "Blue and gold glitter-pattern wall-to-wall broadloom carpet for hotel corridors, lobbies, ballrooms, and luxury hospitality projects.",
   image: "/images/products/hotel-glitter-broadloom/1.webp",
-  imageAlt: "Blue and gold glitter hotel corridor broadloom carpet installed in a luxury hotel by Vishomecarpet",
+  imageAlt: "Blue and gold glitter hotel corridor broadloom carpet installed in a luxury hotel by VCARPETS",
   moq: "300 SQM",
   moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Approved Design", project: "300 SQM" },
   leadTime: "25-35 Days",
@@ -46,7 +46,7 @@ const product = {
 };
 
 const descriptionParagraphs = [
-  "Vishomecarpet's Glitter Hotel Corridor Broadloom Carpet is a patterned hotel hallway carpet for hospitality buyers who need a floor finish that guides guest movement and supports daily commercial traffic. The navy base, gold effect, and flowing directional pattern create a premium corridor experience for hotels, serviced apartments, casinos, banquet halls, and high-end public spaces.",
+  "VCARPETS's Glitter Hotel Corridor Broadloom Carpet is a patterned hotel hallway carpet for hospitality buyers who need a floor finish that guides guest movement and supports daily commercial traffic. The navy base, gold effect, and flowing directional pattern create a premium corridor experience for hotels, serviced apartments, casinos, banquet halls, and high-end public spaces.",
   "The product is supplied as wall-to-wall broadloom carpet for seamless installation in long corridors and large hospitality zones. Pattern, color direction, roll length, pile specification, backing, and edge finishing can be adjusted for project drawings, brand palettes, and procurement budgets.",
   "The commercial carpet roll is suited to hotel corridors, elevator halls, lobbies, and connected public areas. Optional stain-resistance treatment can be reviewed with the required traffic level, fire standard, antistatic performance, and cleaning plan before quotation."
 ];
@@ -57,8 +57,8 @@ const faqs = [
     a: "It is best suited for hotel corridors, elevator halls, lobbies, banquet spaces, casino walkways, serviced apartments, and other hospitality areas where a premium blue-gold carpet pattern is needed."
   },
   {
-    q: "Can Vishomecarpet customize the pattern and color?",
-    a: "Yes. Vishomecarpet can adjust the glitter effect, base color, pattern scale, direction, and repeat to match drawings, interior design boards, or brand color references."
+    q: "Can VCARPETS customize the pattern and color?",
+    a: "Yes. VCARPETS can adjust the glitter effect, base color, pattern scale, direction, and repeat to match drawings, interior design boards, or brand color references."
   },
   {
     q: "Is this a wall-to-wall broadloom carpet?",
@@ -83,7 +83,7 @@ const relatedLinks = [
   { label: "Hotel Carpet Solutions", href: "/solutions/hotel-hospitality" },
   { label: "Stain-Hiding Corridor Guide", href: "/blog/hotel-corridor-carpet-stain-hiding-procurement-guide" },
   { label: "Mexico Corridor Carpet Guide", href: "/blog/hotel-corridor-carpet-in-mexico" },
-  { label: "Contact Vishomecarpet", href: "/contact" }
+  { label: "Contact VCARPETS", href: "/contact" }
 ];
 
 const procurementGuideLinks = [
@@ -105,24 +105,24 @@ const procurementGuideLinks = [
 ];
 
 export const metadata: Metadata = {
-  title: "Hotel Corridor Carpet | Patterned Broadloom | VISHOME",
+  title: "Hotel Corridor Carpet | Patterned Broadloom | VCARPETS",
   description: "Patterned hotel corridor and hallway carpet in blue and gold. Custom 4m wall-to-wall broadloom for lobbies and high-traffic hospitality projects.",
   alternates: { canonical: canonicalPath },
   openGraph: {
-    title: "Hotel Corridor Carpet | Patterned Broadloom | VISHOME",
+    title: "Hotel Corridor Carpet | Patterned Broadloom | VCARPETS",
     description: "Patterned blue and gold hotel hallway carpet for corridors, elevator lobbies, and high-traffic hospitality projects.",
     url: `${siteUrl}${canonicalPath}`,
     images: [
       {
         url: `${siteUrl}/images/products/hotel-glitter-broadloom/1.webp`,
-        alt: "Glitter Hotel Corridor Broadloom Carpet by Vishomecarpet"
+        alt: "Glitter Hotel Corridor Broadloom Carpet by VCARPETS"
       }
     ],
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hotel Corridor Carpet | Patterned Broadloom | VISHOME",
+    title: "Hotel Corridor Carpet | Patterned Broadloom | VCARPETS",
     description: "Patterned blue and gold wall-to-wall broadloom for hotel corridors, lobbies, and hospitality projects.",
     images: [`${siteUrl}/images/products/hotel-glitter-broadloom/1.webp`]
   }
@@ -139,7 +139,7 @@ const productJsonLd = {
   "url": `${siteUrl}${canonicalPath}`,
   "mainEntityOfPage": `${siteUrl}${canonicalPath}`,
   "description": "Custom blue and gold glitter-pattern wall-to-wall broadloom carpet for hotel corridors, lobbies, ballrooms, and luxury hospitality projects.",
-  "brand": { "@type": "Brand", "name": "Vishomecarpet" },
+  "brand": { "@type": "Brand", "name": "VCARPETS" },
   "category": "Wall-to-Wall Hotel Broadloom Carpet",
   "material": "Commercial Synthetic Fiber",
   "offers": {
@@ -151,11 +151,11 @@ const productJsonLd = {
     "offerCount": 1,
     "availability": "https://schema.org/PreOrder",
     "itemCondition": "https://schema.org/NewCondition",
-    "seller": { "@type": "Organization", "name": "Vishome Global Commercial Carpet Co., Ltd.", "url": siteUrl }
+    "seller": { "@type": "Organization", "name": "Vcarpets Global Commercial Carpet Co., Ltd.", "url": siteUrl }
   },
   "manufacturer": {
     "@type": "Organization",
-    "name": "Vishome Global Commercial Carpet Co., Ltd.",
+    "name": "Vcarpets Global Commercial Carpet Co., Ltd.",
     "url": siteUrl
   },
   "additionalProperty": [
@@ -250,7 +250,7 @@ export default function ProductDetailPage() {
               </div>
             </div>
             <div className="lg:w-2/5 flex flex-col justify-center">
-              <p className="text-[11px] font-black text-accent uppercase tracking-[0.28em] mb-4">Vishomecarpet Wall-to-Wall Hotel Carpet</p>
+              <p className="text-[11px] font-black text-accent uppercase tracking-[0.28em] mb-4">VCARPETS Wall-to-Wall Hotel Carpet</p>
               <h1 className="text-3xl md:text-5xl font-black text-primary mb-6 uppercase leading-tight">{product.name}</h1>
               <p className="text-muted text-base leading-relaxed mb-8">{product.description}</p>
               <div className="bg-surface p-8 border border-border space-y-4 mb-10">

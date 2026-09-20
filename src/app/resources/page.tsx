@@ -7,11 +7,11 @@ import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 const pagePath = "/resources";
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Resources | Vishome Carpet",
-  description: "Access Vishome Carpet technical library, specification guides, installation and maintenance resources, downloads, project sheets and BIM/CAD readiness information.",
+  title: "Commercial Carpet Resources | VCARPETS",
+  description: "Access VCARPETS technical library, specification guides, installation and maintenance resources, downloads, project sheets and BIM/CAD readiness information.",
   alternates: { canonical: absoluteUrl(pagePath) },
   openGraph: {
-    title: "Commercial Carpet Resources | Vishome Carpet",
+    title: "Commercial Carpet Resources | VCARPETS",
     description: "Buyer resources for commercial carpet specification, installation, maintenance, downloads and project documentation.",
     url: absoluteUrl(pagePath),
     type: "website",

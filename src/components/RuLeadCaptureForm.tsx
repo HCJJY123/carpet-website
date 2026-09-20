@@ -100,7 +100,7 @@ export default function RuLeadCaptureForm({
       }
 
       sessionStorage.setItem(
-        "vishome_form_success",
+        "VCARPETS_form_success",
         JSON.stringify({
           token: Date.now(),
           formName,

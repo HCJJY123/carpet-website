@@ -15,8 +15,8 @@ const terms = [
 ];
 
 export const metadata: Metadata = {
-  title: "Commercial Terms | VISHOME Carpet",
-  description: "Reference pricing, sales units, availability, MOQ levels, quotation validity and return handling for VISHOME commercial carpet project inquiries.",
+  title: "Commercial Terms | VCARPETS Carpet",
+  description: "Reference pricing, sales units, availability, MOQ levels, quotation validity and return handling for VCARPETS commercial carpet project inquiries.",
   alternates: { canonical: absoluteUrl(pagePath) },
   robots: { index: true, follow: true },
 };
@@ -41,7 +41,7 @@ export default function CommercialTermsPage() {
           <p className="text-xs font-black uppercase tracking-[0.16em] text-accent">Quotation basis</p>
           <h1 className="mt-5 text-4xl font-black leading-tight md:text-6xl">Commercial Terms</h1>
           <p className="mt-6 max-w-3xl text-base font-semibold leading-8 text-white/80 md:text-lg">
-            This page explains how VISHOME handles reference prices, sales units, MOQ, availability and written quotation validity for B2B carpet projects.
+            This page explains how VCARPETS handles reference prices, sales units, MOQ, availability and written quotation validity for B2B carpet projects.
           </p>
         </div>
       </section>

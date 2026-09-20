@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/admin/"],
       },
       {
-        // Search and answer-engine crawlers that may surface Vishome content.
+        // Search and answer-engine crawlers that may surface VCARPETS content.
         userAgent: [
           "Googlebot",
           "Googlebot-Image",

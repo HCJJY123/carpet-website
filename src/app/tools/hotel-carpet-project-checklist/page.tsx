@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 
 const pagePath = "/tools/hotel-carpet-project-checklist";
-export const metadata: Metadata = { title: "Hotel Carpet Project Checklist | VISHOME", description: "Interactive hotel carpet project checklist covering zones, samples, documents, installation, packing, spare stock and RFQ preparation.", alternates: { canonical: absoluteUrl(pagePath) } };
+export const metadata: Metadata = { title: "Hotel Carpet Project Checklist | VCARPETS", description: "Interactive hotel carpet project checklist covering zones, samples, documents, installation, packing, spare stock and RFQ preparation.", alternates: { canonical: absoluteUrl(pagePath) } };
 
 export default function HotelCarpetProjectChecklistPage() {
   const jsonLd = { "@context": "https://schema.org", "@type": "WebApplication", "@id": `${absoluteUrl(pagePath)}#checklist`, name: "Hotel Carpet Project Checklist", applicationCategory: "BusinessApplication", operatingSystem: "Web browser", url: absoluteUrl(pagePath), description: metadata.description, provider: { "@id": "https://www.vcarpets.com/#organization" }, offers: { "@type": "Offer", price: "0", priceCurrency: "USD" } };

@@ -14,7 +14,7 @@ const mainImages = [
   {
     src: `${imageBase}/01-office-workspace-carpet-tiles.webp`,
     title: "Office Workspace",
-    alt: "Vishomecarpet gray line nylon carpet tiles installed in modern office carpet and hotel carpet floor project",
+    alt: "VCARPETS gray line nylon carpet tiles installed in modern office carpet and hotel carpet floor project",
   },
   {
     src: `${imageBase}/02-hotel-lounge-carpet-tiles.webp`,
@@ -50,12 +50,12 @@ const detailImages = [
 
 export const metadata: Metadata = product
   ? {
-      title: "Gray Patterned Carpet Tiles for Office & Hotel | VISHOME",
+      title: "Gray Patterned Carpet Tiles for Office & Hotel | VCARPETS",
       description:
         "Modern gray patterned nylon carpet tiles with charcoal, blue, navy, black, beige, or custom accents for office, hotel, and commercial floors.",
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "Gray Patterned Carpet Tiles for Office & Hotel | VISHOME",
+        title: "Gray Patterned Carpet Tiles for Office & Hotel | VCARPETS",
         description: "Modern gray patterned nylon carpet tiles with charcoal, blue, navy, black, beige, or custom accents for office, hotel, and commercial floors.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
@@ -63,12 +63,12 @@ export const metadata: Metadata = product
       },
       twitter: {
         card: "summary_large_image",
-        title: "Gray Patterned Carpet Tiles for Office & Hotel | VISHOME",
+        title: "Gray Patterned Carpet Tiles for Office & Hotel | VCARPETS",
         description: "Modern gray patterned nylon carpet tiles with charcoal, blue, navy, black, beige, or custom accents for office, hotel, and commercial floors.",
         images: [absoluteUrl(mainImages[0].src)],
       },
     }
-  : { title: "Gray Line Nylon Carpet Tiles | Vishomecarpet" };
+  : { title: "Gray Line Nylon Carpet Tiles | VCARPETS" };
 
 export default function GrayLineNylonCarpetTilesPage() {
   const p = products.find((prod) => prod.id === productId);
@@ -90,10 +90,10 @@ export default function GrayLineNylonCarpetTilesPage() {
       },
       {
         "@type": "Question",
-        name: "Can Vishomecarpet customize backing and project specifications?",
+        name: "Can VCARPETS customize backing and project specifications?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Vishomecarpet can support project-based material, backing, color, packaging, and sample confirmation requirements for commercial carpet tile orders.",
+          text: "Yes. VCARPETS can support project-based material, backing, color, packaging, and sample confirmation requirements for commercial carpet tile orders.",
         },
       },
       {
@@ -138,9 +138,9 @@ export default function GrayLineNylonCarpetTilesPage() {
             </div>
 
             <div className="flex flex-col justify-center">
-              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Vishomecarpet Factory Supply</p>
+              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">VCARPETS Factory Supply</p>
               <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
-                Vishomecarpet Gray Line Nylon Carpet Tiles for Office and Hotel Carpet Floors
+                VCARPETS Gray Line Nylon Carpet Tiles for Office and Hotel Carpet Floors
               </h1>
               <p className="product-summary mb-8 text-lg leading-relaxed text-muted">{p.longDescription}</p>
 

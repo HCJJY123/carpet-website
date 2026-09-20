@@ -25,44 +25,44 @@ export const metadata: Metadata = {
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "SNIrO_J6kr1i6I36kSlpbPwsNdu4NiF6jmI2IoAJWWo",
   },
-  title: "Vishome | Commercial Carpet Tiles & Hotel Broadloom Manufacturer",
+  title: "VCARPETS | Commercial Carpet Tiles & Hotel Broadloom Manufacturer",
   description:
-    "Vishome Global Commercial Carpet Co., Ltd. manufactures commercial carpet tiles, hotel broadloom carpets, and custom flooring solutions for global B2B projects.",
+    "Vcarpets Global Commercial Carpet Co., Ltd. manufactures commercial carpet tiles, hotel broadloom carpets, and custom flooring solutions for global B2B projects.",
   alternates: {
     types: {
       "text/plain": [
-        { url: "/llms.txt", title: "VISHOME AI-readable summary" },
-        { url: "/llms-full.txt", title: "VISHOME full AI source map" },
+        { url: "/llms.txt", title: "VCARPETS AI-readable summary" },
+        { url: "/llms-full.txt", title: "VCARPETS full AI source map" },
       ],
-      "application/json": [{ url: "/ai-sources.json", title: "VISHOME structured AI source map" }],
+      "application/json": [{ url: "/ai-sources.json", title: "VCARPETS structured AI source map" }],
     },
   },
   openGraph: {
-    title: "Vishome | Premium Commercial Carpet & Flooring Solutions",
-    description: "Vishome Global Commercial Carpet Co., Ltd.: a Tianjin-based manufacturer for commercial carpet tiles, hotel carpets, and custom B2B flooring projects.",
+    title: "VCARPETS | Premium Commercial Carpet & Flooring Solutions",
+    description: "Vcarpets Global Commercial Carpet Co., Ltd.: a Tianjin-based manufacturer for commercial carpet tiles, hotel carpets, and custom B2B flooring projects.",
     url: brandInfo.url,
-    siteName: "Vishome",
+    siteName: "VCARPETS",
     type: "website",
     images: [
       {
         url: `${brandInfo.url}/images/og-cover.webp`,
         width: 1200,
         height: 630,
-        alt: "Vishome Global Commercial Carpet Manufacturer",
+        alt: "VCARPETS Global Commercial Carpet Manufacturer",
       },
       {
         url: `${brandInfo.url}/images/hero-home.webp`,
         width: 1200,
         height: 630,
-        alt: "Vishome commercial carpet tiles and hotel flooring solutions",
+        alt: "VCARPETS commercial carpet tiles and hotel flooring solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@VishomeCarpet",
-    creator: "@VishomeCarpet",
-    title: "Vishome | Premium Commercial Carpet & Flooring Solutions",
+    site: "@VCARPETS",
+    creator: "@VCARPETS",
+    title: "VCARPETS | Premium Commercial Carpet & Flooring Solutions",
     description: "B2B commercial carpet manufacturer in Tianjin, China. Carpet tiles, hotel broadloom, public area flooring for global projects.",
     images: [`${brandInfo.url}/images/og-cover.webp`],
   },

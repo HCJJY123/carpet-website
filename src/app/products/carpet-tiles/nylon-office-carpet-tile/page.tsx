@@ -13,7 +13,7 @@ const product = products.find((prod) => prod.id === productId);
 const galleryImages = [
   {
     src: "/images/nylon-office-carpet-tile.webp",
-    alt: "Nylon 50x50 commercial office carpet tile by Vishomecarpet",
+    alt: "Nylon 50x50 commercial office carpet tile by VCARPETS",
   },
   {
     src: "/images/products/nylon-office-carpet-tile/02-corridor-gray-carpet-tiles.webp",
@@ -34,7 +34,7 @@ const seoDescription =
 
 export const metadata: Metadata = product
   ? {
-      title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VISHOME",
+      title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VCARPETS",
       description: seoDescription,
       alternates: {
         canonical: productPath(product.id),
@@ -45,30 +45,30 @@ export const metadata: Metadata = product
         },
       },
       openGraph: {
-        title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VISHOME",
+        title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VCARPETS",
         description: seoDescription,
         url: absoluteUrl(productPath(product.id)),
         type: "website",
         images: [
           {
             url: absoluteUrl("/images/nylon-office-carpet-tile.webp"),
-            alt: "Nylon 50x50 commercial office carpet tile by Vishomecarpet",
+            alt: "Nylon 50x50 commercial office carpet tile by VCARPETS",
           },
         ],
       },
       twitter: {
         card: "summary_large_image",
-        title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VISHOME",
+        title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VCARPETS",
         description: seoDescription,
         images: [absoluteUrl("/images/nylon-office-carpet-tile.webp")],
       },
     }
-  : { title: "Nylon 50x50 Commercial Office Carpet Tile | VISHOME" };
+  : { title: "Nylon 50x50 Commercial Office Carpet Tile | VCARPETS" };
 
 const descriptionParagraphs = [
-  "Vishomecarpet's Nylon 50x50 Commercial Office Carpet Tile is a heavy-duty modular flooring system built for demanding workplaces. Each 50 x 50 cm tile is tufted from resilient 100% nylon in a dense loop pile that resists crushing, matting, and abrasion, keeping open-plan offices, corridors, and meeting rooms looking sharp under constant foot and chair-caster traffic.",
+  "VCARPETS's Nylon 50x50 Commercial Office Carpet Tile is a heavy-duty modular flooring system built for demanding workplaces. Each 50 x 50 cm tile is tufted from resilient 100% nylon in a dense loop pile that resists crushing, matting, and abrasion, keeping open-plan offices, corridors, and meeting rooms looking sharp under constant foot and chair-caster traffic.",
   "The tiles are rated for EN 1307 Class 33 heavy commercial traffic, carry a Class I fire rating (ASTM E648), and feature permanent antistatic protection under 2.0 kV. A dimensionally stable bitumen backing lies flat without adhesive creep and allows tile-by-tile replacement; PVC and cushioned backings are available on request. Solution-dyed and piece-dyed color options resist fading and bleach cleaning.",
-  "Modular tiles cut installation waste and downtime, install in monolithic, quarter-turn, ashlar, or brick layouts, and let facility teams swap individual tiles instead of re-flooring a whole room. Supplied factory-direct from Vishomecarpet's Tianjin plant with custom colors, OEM design, export packing, and worldwide shipping. Request free samples and a project quote.",
+  "Modular tiles cut installation waste and downtime, install in monolithic, quarter-turn, ashlar, or brick layouts, and let facility teams swap individual tiles instead of re-flooring a whole room. Supplied factory-direct from VCARPETS's Tianjin plant with custom colors, OEM design, export packing, and worldwide shipping. Request free samples and a project quote.",
 ];
 
 const tds = [
@@ -108,7 +108,7 @@ const faqs = [
   },
   {
     q: "Can I get custom colors or our brand design?",
-    a: "Yes. Vishomecarpet offers custom colors and OEM designs; free samples are provided before production.",
+    a: "Yes. VCARPETS offers custom colors and OEM designs; free samples are provided before production.",
   },
   {
     q: "What are the MOQ and lead time?",
@@ -178,13 +178,13 @@ export default function NylonOfficeCarpetTilePage() {
     url: absoluteUrl(productPath(p.id)),
     mainEntityOfPage: absoluteUrl(productPath(p.id)),
     description:
-      "Heavy-duty 100% nylon commercial carpet tiles in 50x50 cm modular format for offices, corridors, and high-traffic spaces. Bitumen-backed, Class I fire-rated, custom colors, factory-direct from Vishomecarpet.",
-    brand: { "@type": "Brand", name: "Vishomecarpet" },
+      "Heavy-duty 100% nylon commercial carpet tiles in 50x50 cm modular format for offices, corridors, and high-traffic spaces. Bitumen-backed, Class I fire-rated, custom colors, factory-direct from VCARPETS.",
+    brand: { "@type": "Brand", name: "VCARPETS" },
     category: "Commercial Carpet Tiles",
     material: "100% Nylon",
     manufacturer: {
       "@type": "Organization",
-      name: "Vishome Global Commercial Carpet Co., Ltd.",
+      name: "Vcarpets Global Commercial Carpet Co., Ltd.",
       url: "https://www.vcarpets.com",
     },
     offers: {
@@ -198,7 +198,7 @@ export default function NylonOfficeCarpetTilePage() {
       offerCount: 3,
       seller: {
         "@type": "Organization",
-        name: "Vishome Global Commercial Carpet Co., Ltd.",
+        name: "Vcarpets Global Commercial Carpet Co., Ltd.",
         url: "https://www.vcarpets.com",
       },
     },
@@ -257,7 +257,7 @@ export default function NylonOfficeCarpetTilePage() {
             </div>
 
             <div className="flex flex-col justify-center">
-              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Vishomecarpet Factory Supply</p>
+              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">VCARPETS Factory Supply</p>
               <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
                 Nylon 50x50 Commercial Office Carpet Tile
               </h1>

@@ -15,7 +15,7 @@ export default function ContactPage() {
       <PageHero
         title="Request a Project Quote"
         eyebrow="Factory Direct Project Support"
-        description="Send product type, project area, destination, and business email in one form. Vishomecarpet will reply with pricing basis, MOQ, samples, lead time, and technical documents."
+        description="Send product type, project area, destination, and business email in one form. VCARPETS will reply with pricing basis, MOQ, samples, lead time, and technical documents."
         image="/images/contact-hero.webp"
         imageAlt="Commercial carpet procurement consultation background"
         objectPosition="center 42%"
@@ -33,7 +33,7 @@ export default function ContactPage() {
                 <p className="mt-2 text-sm leading-relaxed text-muted">The form keeps your product, quantity, destination, and business email together. This is the clearest path for factory pricing, MOQ, sample options, and technical documents.</p>
                 <div className="mt-5 flex flex-wrap gap-3">
                   <a
-                    href={`mailto:${brandInfo.email}?subject=${encodeURIComponent("Project quote request")}&body=${encodeURIComponent("Hello Vishome team,\n\nPlease help quote this carpet project.\n\nProduct / application:\nEstimated area:\nDestination country:\nTarget delivery date:\n\nThank you.")}`}
+                    href={`mailto:${brandInfo.email}?subject=${encodeURIComponent("Project quote request")}&body=${encodeURIComponent("Hello VCARPETS team,\n\nPlease help quote this carpet project.\n\nProduct / application:\nEstimated area:\nDestination country:\nTarget delivery date:\n\nThank you.")}`}
                     data-email-placement="contact_form_intro"
                     className="inline-flex min-h-11 items-center justify-center gap-2 rounded-sm border border-[#C8752A]/30 bg-white px-5 py-3 text-xs font-black uppercase tracking-[0.12em] text-[#C8752A] transition-colors hover:border-[#C8752A] hover:bg-[#FFF8F1]"
                   >
@@ -108,7 +108,7 @@ export default function ContactPage() {
                       <a
                         href={`mailto:${brandInfo.email}`}
                         className="inline-flex w-fit max-w-full items-center rounded-md border border-accent/30 bg-accent/10 px-4 py-3 text-base font-black text-primary shadow-sm transition-all hover:-translate-y-0.5 hover:border-accent hover:bg-accent hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent md:text-lg"
-                        aria-label={`Email the VISHOME sales team at ${brandInfo.email}`}
+                        aria-label={`Email the VCARPETS sales team at ${brandInfo.email}`}
                       >
                         <span className="break-all">{brandInfo.email}</span>
                       </a>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                     intent="contact_project_quote"
                     pagePath="/contact"
                     className="mb-6 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-sm border border-[#25D366]/45 bg-transparent px-4 py-3 text-[10px] font-black uppercase tracking-[0.1em] text-[#66E394] transition-colors hover:bg-[#25D366]/10"
-                    ariaLabel="Start WhatsApp Business chat with VISHOME"
+                    ariaLabel="Start WhatsApp Business chat with VCARPETS"
                   >
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.353-.883-.788-1.48-1.766-1.653-2.063-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.128.571-.075 1.758-.717 2.009-1.412.25-.694.25-1.288.175-1.412-.075-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-2.578l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.87 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -151,7 +151,7 @@ export default function ContactPage() {
                     <div className="flex items-center gap-4">
                       <Image
                         src="/images/contact/wechat-qr-code.webp"
-                        alt="Scan to add Vishomecarpet on WeChat"
+                        alt="Scan to add VCARPETS on WeChat"
                         width={76}
                         height={76}
                         unoptimized
@@ -190,7 +190,7 @@ export default function ContactPage() {
             allowFullScreen={true} 
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
-            title="Vishome Factory Location"
+            title="VCARPETS Factory Location"
             className="opacity-80 hover:opacity-100 transition-opacity"
           ></iframe>
           <div className="absolute top-8 left-8 bg-primary/90 text-white p-6 shadow-2xl rounded-sm border-l-4 border-accent hidden md:block pointer-events-none">

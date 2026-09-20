@@ -192,7 +192,7 @@ export default async function BlogPostPage({ params }: Props) {
     reviewedBy: {
       "@type": "Organization",
       "@id": `${brandInfo.url}/#commercial-carpet-team`,
-      name: "VISHOME Commercial Carpet Team",
+      name: "VCARPETS Commercial Carpet Team",
       parentOrganization: { "@id": `${brandInfo.url}/#organization` },
     },
     publisher: {
@@ -342,7 +342,7 @@ export default async function BlogPostPage({ params }: Props) {
         <ConversionLiftPanel
           eyebrow="Turn This Guide Into a Quote"
           title="Send Your Project Requirements After Reading This Guide"
-          body="If this topic matches your project, send the carpet application, estimated area, destination, and required date. Vishome can recommend the related product path and reply with sample, MOQ, lead time, and quotation details."
+          body="If this topic matches your project, send the carpet application, estimated area, destination, and required date. VCARPETS can recommend the related product path and reply with sample, MOQ, lead time, and quotation details."
           product={relatedProducts[0]?.name ?? post.title}
           quoteHref={`/contact?product=${encodeURIComponent(relatedProducts[0]?.name ?? post.title)}#quote-form`}
           className="mt-12 overflow-hidden rounded-xl border-y-0"

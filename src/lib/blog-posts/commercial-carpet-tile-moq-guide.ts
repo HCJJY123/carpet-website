@@ -17,7 +17,7 @@ export const commercialCarpetTileMoqGuide: BlogPost = {
     "commercial flooring project quantity",
   ],
   date: "2026-07-30",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Buying Guide",
   image:
     "/images/blog-series/commercial-carpet-tile-moq-guide/commercial-carpet-tile-moq-sample-trial-project-guide-3f6d2a1c.webp",
@@ -355,7 +355,7 @@ export const commercialCarpetTileMoqGuide: BlogPost = {
         },
         {
           type: "paragraph",
-          text: "Send Vishome your floor area, application, specification, destination, and target date to receive a sample, trial-order, and project-quantity recommendation. The project team can also help compare nylon, polypropylene, PVC, bitumen, and PVC-free PE backing options for the intended space.",
+          text: "Send VCARPETS your floor area, application, specification, destination, and target date to receive a sample, trial-order, and project-quantity recommendation. The project team can also help compare nylon, polypropylene, PVC, bitumen, and PVC-free PE backing options for the intended space.",
         },
         {
           type: "callout",

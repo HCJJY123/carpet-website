@@ -153,7 +153,7 @@ export default function CommercialCarpetRfqCalculator() {
           </Link>
         </div>
         <p className="mt-5 text-xs leading-6 text-white/55">
-          Last updated: 2026-08-21. Source: standard area calculation rules and VISHOME RFQ preparation workflow; no guaranteed local installation yield or price is implied.
+          Last updated: 2026-08-21. Source: standard area calculation rules and VCARPETS RFQ preparation workflow; no guaranteed local installation yield or price is implied.
         </p>
       </section>
     </div>

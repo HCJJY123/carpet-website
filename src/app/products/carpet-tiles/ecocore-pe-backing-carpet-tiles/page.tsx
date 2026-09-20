@@ -12,13 +12,13 @@ const product = products.find((prod) => prod.id === productId);
 const productImages = {
   hero: "/images/products/ecocore-pe-backing/01-hero-white-background.webp",
   gallery: [
-    { src: "/images/products/ecocore-pe-backing/02-perspective-hero-45-degree.webp", title: "45-Degree Product View", alt: "Vishomecarpet EcoCore PVC-free PE backing carpet tile in 45-degree product view" },
+    { src: "/images/products/ecocore-pe-backing/02-perspective-hero-45-degree.webp", title: "45-Degree Product View", alt: "VCARPETS EcoCore PVC-free PE backing carpet tile in 45-degree product view" },
     { src: "/images/products/ecocore-pe-backing/03-tile-corner-detail-pe-backing.webp", title: "Lifted Corner PE Backing Detail", alt: "Lifted corner detail of PVC-free PE backing commercial carpet tile" },
     { src: "/images/products/ecocore-pe-backing/06-tile-stack-pe-backing-layers.webp", title: "Tile Stack and Backing Layers", alt: "Stacked EcoCore PE backing modular carpet tiles showing layered construction" },
   ],
   details: [
     { src: "/images/products/ecocore-pe-backing/07-texture-close-up-solution-dyed-nylon.webp", title: "Solution-Dyed Loop Texture", alt: "Close-up of solution-dyed loop pile texture on EcoCore commercial carpet tile", text: "Dense loop pile surface supports color stability, commercial appearance retention, and daily office use." },
-    { src: "/images/products/ecocore-pe-backing/08-pe-backing-close-up.webp", title: "PVC-Free PE Backing", alt: "Close-up of PVC-free PE backing on Vishomecarpet modular carpet tile", text: "PE backing is specified for projects that require a more environmentally responsible modular carpet tile option." },
+    { src: "/images/products/ecocore-pe-backing/08-pe-backing-close-up.webp", title: "PVC-Free PE Backing", alt: "Close-up of PVC-free PE backing on VCARPETS modular carpet tile", text: "PE backing is specified for projects that require a more environmentally responsible modular carpet tile option." },
     { src: "/images/products/ecocore-pe-backing/09-cross-section-layers.webp", title: "Layered Construction", alt: "Cross-section layers of EcoCore PE backing commercial carpet tile", text: "The tile combines textile surface, primary backing, and PE backing support for stable commercial installation." },
     { src: "/images/products/ecocore-pe-backing/10-sound-absorption.webp", title: "Acoustic Comfort", alt: "EcoCore carpet tile acoustic comfort detail for office flooring projects", text: "Soft textile flooring helps reduce footfall noise and improve workplace acoustic comfort." },
     { src: "/images/products/ecocore-pe-backing/11-heavy-traffic-office.webp", title: "Heavy Commercial Use", alt: "Heavy-traffic office application for EcoCore commercial modular carpet tiles", text: "Designed for open offices, corridors, meeting rooms, and high-frequency commercial areas." },
@@ -27,7 +27,7 @@ const productImages = {
     { src: "/images/products/ecocore-pe-backing/14-rolling-chair-test.webp", title: "Office Chair Resistance", alt: "Rolling chair resistance detail for EcoCore office carpet tiles", text: "Suitable for rolling-chair zones when selected with proper traffic specification and maintenance planning." },
     { src: "/images/products/ecocore-pe-backing/15-eco-material-pvc-free-low-voc.webp", title: "Green Building Ready", alt: "PVC-free low-VOC EcoCore carpet tile material for green building projects", text: "A practical flooring option for low-VOC, PVC-free, and sustainability-oriented office projects." },
     { src: "/images/products/ecocore-pe-backing/16-installation-process.webp", title: "Modular Installation", alt: "Modular installation process for EcoCore PE backing carpet tiles", text: "Compatible with quarter-turn, ashlar, brick, and monolithic layouts for different design effects." },
-    { src: "/images/products/ecocore-pe-backing/17-warehouse-packaging-export.webp", title: "Export Packaging", alt: "Export packaging for Vishomecarpet EcoCore commercial carpet tile orders", text: "Project-based packaging and delivery support for international commercial flooring orders." },
+    { src: "/images/products/ecocore-pe-backing/17-warehouse-packaging-export.webp", title: "Export Packaging", alt: "Export packaging for VCARPETS EcoCore commercial carpet tile orders", text: "Project-based packaging and delivery support for international commercial flooring orders." },
   ],
   banner: "/images/products/ecocore-pe-backing/18-office-application-wide-banner.webp",
   office: "/images/products/ecocore-pe-backing/04-lifestyle-office.webp",
@@ -36,12 +36,12 @@ const productImages = {
 
 export const metadata: Metadata = product
   ? {
-      title: "Green Carpet Tiles | PVC-Free PE Backing 50x50 | VISHOME",
+      title: "Green Carpet Tiles | PVC-Free PE Backing 50x50 | VCARPETS",
       description:
         "PVC-free PE backing 50x50 carpet tiles for green offices, raised floors, acoustic comfort, schools, and sustainability-led commercial projects.",
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "Green Carpet Tiles | PVC-Free PE Backing 50x50 | VISHOME",
+        title: "Green Carpet Tiles | PVC-Free PE Backing 50x50 | VCARPETS",
         description: "PVC-free PE backing 50x50 carpet tiles for green offices, raised floors, acoustic comfort, schools, and sustainable commercial interiors.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
@@ -49,12 +49,12 @@ export const metadata: Metadata = product
       },
       twitter: {
         card: "summary_large_image",
-        title: "Green Carpet Tiles | PVC-Free PE Backing 50x50 | VISHOME",
+        title: "Green Carpet Tiles | PVC-Free PE Backing 50x50 | VCARPETS",
         description: "PVC-free PE backing 50x50 carpet tiles for green offices, raised floors, acoustic comfort, schools, and sustainable commercial interiors.",
         images: [absoluteUrl(productImages.hero)],
       },
     }
-  : { title: "PVC-Free PE Backing Carpet Tiles | Vishomecarpet" };
+  : { title: "PVC-Free PE Backing Carpet Tiles | VCARPETS" };
 
 export default function EcoCorePeBackingProductPage() {
   const p = products.find((prod) => prod.id === productId);
@@ -70,7 +70,7 @@ export default function EcoCorePeBackingProductPage() {
       answer: "PE backing carpet tile uses a polyethylene backing structure instead of conventional PVC backing. Buyers should request the material and emissions documents required by their project rather than assuming that one backing label satisfies every green-building standard.",
     },
     {
-      question: "Where can Vishomecarpet EcoCore PE Backing Carpet Tiles be used?",
+      question: "Where can VCARPETS EcoCore PE Backing Carpet Tiles be used?",
       answer: "They are intended for offices, coworking spaces, schools, public workspaces, corridors, raised-floor areas, and commercial interiors that benefit from modular replacement. Traffic, fire, acoustic, antistatic, and subfloor requirements must still be confirmed for the project.",
     },
     {
@@ -124,7 +124,7 @@ export default function EcoCorePeBackingProductPage() {
             </div>
 
             <div className="flex flex-col justify-center">
-              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Vishomecarpet Eco Flooring</p>
+              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">VCARPETS Eco Flooring</p>
               <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
                 PVC-Free PE Backing Carpet Tiles for Sustainable Office Projects
               </h1>

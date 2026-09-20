@@ -5,8 +5,8 @@ import type { Metadata } from "next";
 import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata: Metadata = {
-  title: "Company Profile | VISHOME Commercial Carpet Manufacturer",
-  description: "Company profile for Vishome Global Commercial Carpet Co., Ltd., a Tianjin commercial carpet manufacturer serving global B2B projects.",
+  title: "Company Profile | VCARPETS Commercial Carpet Manufacturer",
+  description: "Company profile for Vcarpets Global Commercial Carpet Co., Ltd., a Tianjin commercial carpet manufacturer serving global B2B projects.",
   alternates: { canonical: "/about-us" },
   robots: { index: false, follow: true },
 };
@@ -23,7 +23,7 @@ export default function AboutPage() {
             </h1>
             <div className="w-16 h-1 bg-accent mx-auto mb-8"></div>
             <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed opacity-90">
-              Vishome Global Commercial Carpet Co., Ltd. is a B2B commercial carpet manufacturer serving international infrastructure, hospitality, office, public-area and project flooring buyers.
+              Vcarpets Global Commercial Carpet Co., Ltd. is a B2B commercial carpet manufacturer serving international infrastructure, hospitality, office, public-area and project flooring buyers.
             </p>
           </div>
         </div>
@@ -36,11 +36,11 @@ export default function AboutPage() {
             <div>
               <span className="text-accent font-bold tracking-[0.3em] text-[10px] uppercase mb-4 block">Our Identity</span>
               <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 uppercase leading-tight">
-                Vishome Global Commercial Carpet Co., Ltd.
+                Vcarpets Global Commercial Carpet Co., Ltd.
               </h2>
               <div className="prose prose-slate max-w-none text-muted">
                 <p className="mb-6 leading-relaxed text-lg">
-                  Vishome is a professional commercial carpet manufacturer specializing in carpet research, development, production, and international trade. The company has built an experienced export team to serve global flooring distributors, contractors, hotels, offices, and commercial project clients.
+                  VCARPETS is a professional commercial carpet manufacturer specializing in carpet research, development, production, and international trade. The company has built an experienced export team to serve global flooring distributors, contractors, hotels, offices, and commercial project clients.
                 </p>
                 <p className="mb-8 leading-relaxed">
                   Our factory covers an area of 50,000 square meters and employs more than 900 skilled workers, supporting stable production capacity and reliable order fulfillment for bulk commercial carpet projects.
@@ -61,7 +61,7 @@ export default function AboutPage() {
               <div className="absolute inset-4 border-2 border-primary/10 translate-x-4 translate-y-4"></div>
               <ProductImage
                 src="/images/category-broadloom.webp"
-                alt="Vishome Headquarters and Showroom"
+                alt="VCARPETS Headquarters and Showroom"
                 className="relative z-10 shadow-2xl rounded-sm"
               />
             </div>

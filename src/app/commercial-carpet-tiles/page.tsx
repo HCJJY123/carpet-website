@@ -8,7 +8,7 @@ import { products } from "@/lib/data";
 import { productPath } from "@/lib/seo";
 
 export const metadata = {
-  title: "Office Carpet Tiles Supplier | 50x50 Commercial Tiles | Vishome",
+  title: "Office Carpet Tiles Supplier | 50x50 Commercial Tiles | VCARPETS",
   description: "Source 50x50 commercial carpet tiles for offices, hotels and retail projects. Compare backing, MOQ, samples, factory price ranges and export support from China.",
   alternates: { canonical: "/commercial-carpet-tiles" },
 };
@@ -63,7 +63,7 @@ export default function CommercialCarpetTilesPage() {
 
       <AnswerFirst
         title="Are Commercial Carpet Tiles the Right Choice for Your Project?"
-        answer="Commercial carpet tiles are a practical choice for offices, hotels, retail, schools, and phased renovations where damaged areas may need individual replacement. Vishomecarpet supplies 50x50 modular tiles in nylon or polypropylene options with project-specific backing. Compare traffic level, fire requirement, rolling-chair use, maintenance plan, sample approval, and total delivered cost before choosing a style."
+        answer="Commercial carpet tiles are a practical choice for offices, hotels, retail, schools, and phased renovations where damaged areas may need individual replacement. VCARPETS supplies 50x50 modular tiles in nylon or polypropylene options with project-specific backing. Compare traffic level, fire requirement, rolling-chair use, maintenance plan, sample approval, and total delivered cost before choosing a style."
         facts={[
           { label: "Common Format", value: "50x50 cm modular carpet tiles" },
           { label: "Fiber Options", value: "Nylon or polypropylene by product" },
@@ -200,7 +200,7 @@ export default function CommercialCarpetTilesPage() {
                   50x50 Carpet Tiles for Hotel Carpet Floor and Office Projects
                 </h2>
                 <p className="mb-6 text-sm leading-relaxed text-muted md:text-base">
-                  View Vishomecarpet 50x50 commercial carpet tiles with volume pricing, MOQ, sample support,
+                  View VCARPETS 50x50 commercial carpet tiles with volume pricing, MOQ, sample support,
                   technical data, and application images for hotel corridors, guest rooms, meeting rooms, and office carpet projects.
                 </p>
                 <div className="grid gap-3 text-[10px] font-black uppercase tracking-[0.14em] text-primary sm:grid-cols-3">

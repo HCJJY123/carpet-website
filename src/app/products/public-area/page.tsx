@@ -7,7 +7,7 @@ import AnswerFirst from "@/components/AnswerFirst";
 import { categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Public Area Carpet Supplier | VISHOME",
+  title: "Public Area Carpet Supplier | VCARPETS",
   description: "Source public area carpet for airports, exhibitions, corridors, custom wool lobby rugs, natural sisal carpets and gold mining mats with samples and project quote support.",
   alternates: { canonical: "/products/public-area" },
 };
@@ -41,7 +41,7 @@ export default function CategoryPage() {
 
       <AnswerFirst
         title="How Should Buyers Choose a Public-Area Carpet?"
-        answer="Public-area carpet is not one interchangeable product type. Vishomecarpet's range includes heavy-duty interior carpet, natural sisal, sculpted wool lobby rugs, stair runners, and gold-recovery matting. Select by actual application, traffic, cleaning method, fire requirement, dimensions, edge treatment, and replacement plan. A hotel lobby rug specification should never be reused for mining recovery or stair installation."
+        answer="Public-area carpet is not one interchangeable product type. VCARPETS's range includes heavy-duty interior carpet, natural sisal, sculpted wool lobby rugs, stair runners, and gold-recovery matting. Select by actual application, traffic, cleaning method, fire requirement, dimensions, edge treatment, and replacement plan. A hotel lobby rug specification should never be reused for mining recovery or stair installation."
         facts={[
           { label: "Applications", value: "Lobby, corridor, stair, natural-fiber and mining systems" },
           { label: "Construction", value: "Product-specific; confirm fiber, backing and edge finish" },

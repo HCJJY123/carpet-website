@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Commercial school carpet tiles for classrooms, libraries, student centers and corridors. Compare modular replacement, acoustic options, samples and MOQ.",
   alternates: { canonical: productPath(productId) },
   openGraph: {
-    title: "Education & School Carpet Tiles | VISHOME",
+    title: "Education & School Carpet Tiles | VCARPETS",
     description: product.description,
     url: absoluteUrl(productPath(productId)),
     images: [{ url: absoluteUrl(product.image), alt: product.imageAlt }],

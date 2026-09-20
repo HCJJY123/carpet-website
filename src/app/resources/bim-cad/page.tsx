@@ -19,8 +19,8 @@ const priorityProducts = ["50x50-nylon-pp-office-carpet-tiles", "luxury-hotel-br
   .filter((product): product is (typeof products)[number] => Boolean(product));
 
 export const metadata: Metadata = {
-  title: "BIM CAD Carpet Resources | Vishome Carpet",
-  description: "BIM and CAD resource readiness page for Vishome Carpet. Request verified carpet textures, pattern references and future BIM/CAD submission assets.",
+  title: "BIM CAD Carpet Resources | VCARPETS",
+  description: "BIM and CAD resource readiness page for VCARPETS. Request verified carpet textures, pattern references and future BIM/CAD submission assets.",
   alternates: { canonical: absoluteUrl(pagePath) },
 };
 
@@ -42,7 +42,7 @@ export default function BimCadPage() {
         <div className="container-fox grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <h2 className="text-3xl font-black text-primary">Verified assets first, BIM models second.</h2>
-            <p className="mt-4 text-sm leading-7 text-muted">Vishome Carpet can prepare product data and texture references for platform review. Full Revit, Archicad or IFC assets should not be published until created and verified against the exact product construction.</p>
+            <p className="mt-4 text-sm leading-7 text-muted">VCARPETS can prepare product data and texture references for platform review. Full Revit, Archicad or IFC assets should not be published until created and verified against the exact product construction.</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact?resource=bim-cad#quote-form" className="btn-fox-orange text-center">Request BIM/CAD Resources</Link>
               <Link href="/resources/technical-library" className="btn-fox-outline text-center">Technical Library</Link>

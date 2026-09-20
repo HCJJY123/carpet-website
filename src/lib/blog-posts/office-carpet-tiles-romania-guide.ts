@@ -7,7 +7,7 @@ export const officeCarpetTilesRomaniaGuide: BlogPost = {
     "A buyer guide for Romanian offices comparing modular carpet tiles, chair-wheel wear, phased installation and spare-tile planning.",
   painPoint:
     "Romanian office teams often discover floor wear only after chair wheels, coffee spills and phased renovation schedules start to collide.",
-  seoTitle: "Office Carpet Tiles in Romania | Chair Wheel Wear Guide | VISHOME",
+  seoTitle: "Office Carpet Tiles in Romania | Chair Wheel Wear Guide | VCARPETS",
   description:
     "Learn how to specify office carpet tiles in Romania for rolling chairs, modular replacement, work-zone planning, spare tiles and practical office flooring quotes.",
   keywords: [
@@ -22,7 +22,7 @@ export const officeCarpetTilesRomaniaGuide: BlogPost = {
   ],
   date: "2026-08-06",
   dateModified: "2026-08-06",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Office Flooring",
   image: "/images/blog-series/office-carpet-tiles-romania/office-carpet-tiles-romania-hero.png",
   h1Image: "/images/blog-series/office-carpet-tiles-romania/office-carpet-tiles-romania-hero.png",
@@ -164,7 +164,7 @@ export const officeCarpetTilesRomaniaGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "If you are planning office carpet tiles in Romania, send the floor plan, area by zone, chair-wheel load, target delivery date and preferred backing. Vishomecarpet can then recommend a practical modular carpet tile construction and quotation path.",
+          text: "If you are planning office carpet tiles in Romania, send the floor plan, area by zone, chair-wheel load, target delivery date and preferred backing. VCARPETS can then recommend a practical modular carpet tile construction and quotation path.",
         },
       ],
     },

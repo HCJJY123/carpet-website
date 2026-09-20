@@ -1,5 +1,5 @@
-const FUNNEL_STORAGE_KEY = "vishome_funnel_session";
-export const PENDING_CONTACT_FUNNEL_KEY = "vishome_pending_contact_funnel";
+const FUNNEL_STORAGE_KEY = "VCARPETS_funnel_session";
+export const PENDING_CONTACT_FUNNEL_KEY = "VCARPETS_pending_contact_funnel";
 
 export type LeadGrade = "A" | "B" | "C";
 

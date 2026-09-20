@@ -52,7 +52,7 @@ const worker = {
     }
 
     if (request.method === "GET") {
-      return Response.json({ ok: true, service: "vishome-visitor-intelligence" }, { headers: cors });
+      return Response.json({ ok: true, service: "VCARPETS-visitor-intelligence" }, { headers: cors });
     }
 
     if (request.method !== "POST") {

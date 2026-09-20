@@ -23,11 +23,11 @@ const workflow = [
 ];
 
 export const metadata: Metadata = {
-  title: "Carpet Specification Support | VISHOME",
+  title: "Carpet Specification Support | VCARPETS",
   description: "Specification support for architects and interior designers sourcing commercial carpet tiles, hotel broadloom, custom carpet patterns, samples and technical documents.",
   alternates: { canonical: absoluteUrl(pagePath) },
   openGraph: {
-    title: "Carpet Specification Support | VISHOME",
+    title: "Carpet Specification Support | VCARPETS",
     description: "Request carpet samples, technical documents, custom pattern support and project quotation guidance for commercial carpet specifications.",
     url: absoluteUrl(pagePath),
     type: "website",
@@ -53,7 +53,7 @@ export default function ArchitectsDesignersPage() {
       <PageHero
         eyebrow="Specification Support"
         title="Carpet Specification Support for Architects and Designers"
-        description="Use Vishome Carpet as a technical source for commercial carpet selection, custom pattern workflow, samples, project documents and quotation inputs."
+        description="Use VCARPETS as a technical source for commercial carpet selection, custom pattern workflow, samples, project documents and quotation inputs."
         image="/images/about/production-workshop.webp"
         imageAlt="Commercial carpet production workshop for architectural specification support"
       />
@@ -64,7 +64,7 @@ export default function ArchitectsDesignersPage() {
             <p className="text-xs font-black uppercase tracking-[0.22em] text-accent">Design Team Resources</p>
             <h2 className="mt-4 text-3xl font-black leading-tight text-primary md:text-5xl">Specify carpet with samples, documents and project context.</h2>
             <p className="mt-5 text-base leading-8 text-muted">
-              Vishome supports B2B project teams that need comparable carpet specifications before confirming production. Final performance, testing and price remain tied to the exact construction confirmed in the quotation.
+              VCARPETS supports B2B project teams that need comparable carpet specifications before confirming production. Final performance, testing and price remain tied to the exact construction confirmed in the quotation.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact?source=architects-designers#quote-form" className="btn-fox-orange text-center">Discuss a Project Specification</Link>

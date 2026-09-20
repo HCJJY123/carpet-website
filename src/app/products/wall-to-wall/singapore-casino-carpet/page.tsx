@@ -12,7 +12,7 @@ const images = product.gallery ?? [{ src: product.image, alt: product.imageAlt |
 const faqs = [
   {
     question: "What is the best carpet type for a casino project in Singapore?",
-    answer: "A Singapore casino carpet should be specified around continuous foot traffic, visual soil-hiding, pattern approval, backing stability, cleaning access, sample timing, and the fire or technical documents required by the project. Vishomecarpet can quote a custom oriental flower luxury casino carpet after reviewing area, pattern, backing, delivery address, and sample requirements.",
+    answer: "A Singapore casino carpet should be specified around continuous foot traffic, visual soil-hiding, pattern approval, backing stability, cleaning access, sample timing, and the fire or technical documents required by the project. VCARPETS can quote a custom oriental flower luxury casino carpet after reviewing area, pattern, backing, delivery address, and sample requirements.",
   },
   {
     question: "Can the casino carpet pattern and colors be customized?",
@@ -24,11 +24,11 @@ const faqs = [
   },
   {
     question: "What information should a Singapore buyer send for quotation?",
-    answer: "Send the Singapore project location, total square meters, application zone, pattern reference, preferred backing, sample request, delivery floor or loading limit, target schedule, and any required technical document list. This allows Vishomecarpet to quote the correct construction, sample plan, packing method and freight basis rather than a generic carpet price.",
+    answer: "Send the Singapore project location, total square meters, application zone, pattern reference, preferred backing, sample request, delivery floor or loading limit, target schedule, and any required technical document list. This allows VCARPETS to quote the correct construction, sample plan, packing method and freight basis rather than a generic carpet price.",
   },
   {
-    question: "Can Vishomecarpet ship samples or project orders to Singapore?",
-    answer: "Yes. For samples, the buyer should confirm sample size, courier address, contact phone and required arrival date. For project orders, Vishomecarpet should confirm packing dimensions, roll or pallet plan, gross weight, loading access, delivery stage and trade terms before freight is compared.",
+    question: "Can VCARPETS ship samples or project orders to Singapore?",
+    answer: "Yes. For samples, the buyer should confirm sample size, courier address, contact phone and required arrival date. For project orders, VCARPETS should confirm packing dimensions, roll or pallet plan, gross weight, loading access, delivery stage and trade terms before freight is compared.",
   },
 ];
 
@@ -61,12 +61,12 @@ const faqJsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: "Custom Oriental Flower Casino Carpet Singapore | Vishomecarpet",
+  title: "Custom Oriental Flower Casino Carpet Singapore | VCARPETS",
   description: "Custom oriental flower luxury casino carpet for Singapore gaming floors, VIP rooms, clubs and hotel entertainment zones. OEM pattern support, samples and quote.",
   alternates: { canonical: absoluteUrl(path) },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Custom Oriental Flower Casino Carpet Singapore | Vishomecarpet",
+    title: "Custom Oriental Flower Casino Carpet Singapore | VCARPETS",
     description: "Custom casino carpet for Singapore gaming floors, VIP rooms and hospitality entertainment projects.",
     url: absoluteUrl(path),
     type: "website",
@@ -121,7 +121,7 @@ export default function SingaporeCasinoCarpetPage() {
             <p className="mb-4 text-xs font-black uppercase tracking-[0.18em] text-accent">Singapore casino carpet supplier</p>
             <h1 className="text-4xl font-black uppercase leading-tight md:text-6xl">Custom Oriental Flower Casino Carpet for Singapore Gaming Floors</h1>
             <p className="mt-6 text-lg leading-8 text-muted">
-              Answer first: a casino carpet for Singapore should be selected by traffic, visual soil control, sample approval speed, backing stability, cleaning plan, delivery access and project documents, not by pattern alone. Vishomecarpet supplies custom oriental flower luxury casino carpet with OEM pattern support for gaming floors, VIP rooms, clubs and hotel entertainment spaces.
+              Answer first: a casino carpet for Singapore should be selected by traffic, visual soil control, sample approval speed, backing stability, cleaning plan, delivery access and project documents, not by pattern alone. VCARPETS supplies custom oriental flower luxury casino carpet with OEM pattern support for gaming floors, VIP rooms, clubs and hotel entertainment spaces.
             </p>
             <div className="mt-8">
               <ProductSpecCards product={product} />
@@ -142,7 +142,7 @@ export default function SingaporeCasinoCarpetPage() {
               <p>For a Singapore casino carpet project, start with the area schedule: gaming floor, slot area, VIP room, lift lobby, corridor, club, or hotel entertainment zone. Each space may need a different pattern scale, backing, seam plan, cleaning access, replacement reserve and delivery stage.</p>
               <p>High-quality B2B buyers usually ask first about price per SQM, sample lead time, shipping to Singapore, MOQ, exact quantity, backing, pattern approval, and whether the supplier can support distributors or installation teams. This page is structured around those purchasing questions.</p>
               <p>This product is positioned for buyers who want a custom casino carpet supplier rather than a stock decorative floor covering. The oriental flower, beige, grey, charcoal and gold visual direction can be adjusted for interior concepts, while the final construction is confirmed through sample approval and written quotation.</p>
-              <p>Vishomecarpet can support Singapore procurement teams with sample discussion, OEM pattern review, packing information and export supply. Final fire, antistatic, backing and installation requirements should be checked against the project specification before ordering.</p>
+              <p>VCARPETS can support Singapore procurement teams with sample discussion, OEM pattern review, packing information and export supply. Final fire, antistatic, backing and installation requirements should be checked against the project specification before ordering.</p>
             </div>
           </div>
           <div className="overflow-x-auto border border-border bg-white">
@@ -165,7 +165,7 @@ export default function SingaporeCasinoCarpetPage() {
           <div className="mb-10 max-w-4xl">
             <p className="mb-3 text-xs font-black uppercase tracking-[0.18em] text-accent">Product gallery</p>
             <h2 className="text-3xl font-black uppercase leading-tight md:text-5xl">Casino Carpet Images, Backing and OEM Details</h2>
-            <p className="mt-5 leading-8 text-muted">The gallery keeps the provided casino carpet visuals in one product record: artistic pattern options, gaming floor scenes, non-slip backing details, loop pile close-ups, OEM support and source-factory supply views. All product text is presented under the Vishomecarpet brand.</p>
+            <p className="mt-5 leading-8 text-muted">The gallery keeps the provided casino carpet visuals in one product record: artistic pattern options, gaming floor scenes, non-slip backing details, loop pile close-ups, OEM support and source-factory supply views. All product text is presented under the VCARPETS brand.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {images.slice(4).map((image) => (
@@ -212,7 +212,7 @@ export default function SingaporeCasinoCarpetPage() {
         <div className="container-fox">
           <div className="bg-primary p-8 text-white md:p-10">
             <h2 className="text-2xl font-black uppercase md:text-4xl">Request Singapore Casino Carpet Specification Support</h2>
-            <p className="mt-4 max-w-3xl leading-8 text-white/75">Send your area, oriental flower or custom pattern reference, sample request, Singapore delivery details and target delivery schedule. Vishomecarpet will confirm the suitable construction, MOQ, packing and written quotation.</p>
+            <p className="mt-4 max-w-3xl leading-8 text-white/75">Send your area, oriental flower or custom pattern reference, sample request, Singapore delivery details and target delivery schedule. VCARPETS will confirm the suitable construction, MOQ, packing and written quotation.</p>
             <div className="mt-8 flex flex-wrap gap-4">
               {relatedLinks.map((item) => (
                 <Link key={item.href} href={item.href} className="btn-fox-orange !text-xs !tracking-[0.16em]">{item.label}</Link>

@@ -161,13 +161,13 @@ const categorySummary = productCategories.map((category) => `- ${category.name}:
 const productCategoryCounts = productCategories.map((category) => `- ${category.name}: ${products.filter((product) => product.category === category.id).length} products`).join("\n");
 const lowGalleryProducts = productRows.filter((row) => Number(row.gallery_count) < 3);
 
-writeText("docs/backlink-readiness-audit.md", `# Vishomecarpet Backlink Readiness Audit
+writeText("docs/backlink-readiness-audit.md", `# VCARPETS Backlink Readiness Audit
 
 Last reviewed: ${TODAY}
 
 ## Scope
 
-This audit follows the Vishomecarpet backlink-readiness specification. The objective is to make the site easier for legitimate product platforms, architects, project partners, trade media and AI/search systems to cite. It does not recommend paid link schemes, bulk directory submissions, PBNs or unverifiable claims.
+This audit follows the VCARPETS backlink-readiness specification. The objective is to make the site easier for legitimate product platforms, architects, project partners, trade media and AI/search systems to cite. It does not recommend paid link schemes, bulk directory submissions, PBNs or unverifiable claims.
 
 ## Current Repository Snapshot
 
@@ -355,7 +355,7 @@ These actions should not be automated by Codex because they require account acce
 - Do not claim Looker Studio or GA4 dashboards are configured unless account access was used and verified.
 `);
 
-writeText("docs/backlink-strategy.md", `# Vishomecarpet Backlink Strategy
+writeText("docs/backlink-strategy.md", `# VCARPETS Backlink Strategy
 
 Last reviewed: ${TODAY}
 
@@ -394,7 +394,7 @@ Build linkable assets first, then request links from relevant real-world sources
 
 Use natural anchors such as:
 
-- Vishome Carpet
+- VCARPETS
 - commercial carpet manufacturer
 - office carpet tile supplier
 - hotel carpet project specification

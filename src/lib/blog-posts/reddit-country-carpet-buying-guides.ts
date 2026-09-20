@@ -18,7 +18,7 @@ export const canadaOfficeCarpetTilesGuide: BlogPost = {
   ],
   date: "2026-08-05",
   dateModified: "2026-08-05",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Office Flooring",
   image: "/images/blog-series/office-carpet-tiles-canada-phased-renovation-reddit-guide/office-carpet-tiles-canada-phased-installation.webp",
   h1Image: "/images/blog-series/office-carpet-tiles-canada-phased-renovation-reddit-guide/office-carpet-tiles-canada-phased-installation.webp",
@@ -130,7 +130,7 @@ export const philippinesHotelCarpetPatternGuide: BlogPost = {
   ],
   date: "2026-08-05",
   dateModified: "2026-08-05",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Hotel Carpet",
   image: "/images/blog-series/hotel-carpet-philippines-pattern-stain-maintenance-guide/hotel-carpet-philippines-corridor-pattern.webp",
   h1Image: "/images/blog-series/hotel-carpet-philippines-pattern-stain-maintenance-guide/hotel-carpet-philippines-corridor-pattern.webp",
@@ -212,7 +212,7 @@ export const philippinesHotelCarpetPatternGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "Send square meters by zone, corridor length, preferred pattern direction, destination, target delivery date and whether a custom strike-off sample is required. Vishomecarpet can then recommend a suitable hotel carpet construction and quotation path.",
+          text: "Send square meters by zone, corridor length, preferred pattern direction, destination, target delivery date and whether a custom strike-off sample is required. VCARPETS can then recommend a suitable hotel carpet construction and quotation path.",
         },
       ],
     },
@@ -237,7 +237,7 @@ export const usaCustomSculptedWoolRugGuide: BlogPost = {
   ],
   date: "2026-08-05",
   dateModified: "2026-08-05",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Custom Rugs",
   image: "/images/blog-series/custom-sculpted-wool-rugs-us-hotel-lobbies/custom-sculpted-wool-rug-us-hotel-lobby.webp",
   h1Image: "/images/blog-series/custom-sculpted-wool-rugs-us-hotel-lobbies/custom-sculpted-wool-rug-us-hotel-lobby.webp",
@@ -319,7 +319,7 @@ export const usaCustomSculptedWoolRugGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "Send lobby dimensions, furniture plan, reference image, approximate rug outline, color direction, destination and required date. Vishomecarpet can review whether a custom sculpted wool rug fits the project and provide a quotation path.",
+          text: "Send lobby dimensions, furniture plan, reference image, approximate rug outline, color direction, destination and required date. VCARPETS can review whether a custom sculpted wool rug fits the project and provide a quotation path.",
         },
       ],
     },
@@ -344,7 +344,7 @@ export const australiaGoldMiningCarpetMatGuide: BlogPost = {
   ],
   date: "2026-08-05",
   dateModified: "2026-08-05",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Gold Mining Matting",
   image: "/images/blog-series/gold-mining-carpet-mat-australia-fine-gold-recovery/gold-mining-carpet-mat-australia-sluice-field.webp",
   h1Image: "/images/blog-series/gold-mining-carpet-mat-australia-fine-gold-recovery/gold-mining-carpet-mat-australia-sluice-field.webp",
@@ -451,7 +451,7 @@ export const russiaCommercialCarpetTilesGuide: BlogPost = {
   ],
   date: "2026-08-05",
   dateModified: "2026-08-05",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Office Flooring",
   image: "/images/blog-series/commercial-carpet-tiles-russia-winter-office-flooring-guide/commercial-carpet-tiles-russia-winter-entry-office.webp",
   h1Image: "/images/blog-series/commercial-carpet-tiles-russia-winter-office-flooring-guide/commercial-carpet-tiles-russia-winter-entry-office.webp",
@@ -533,7 +533,7 @@ export const russiaCommercialCarpetTilesGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "Send office area by zone, destination city, preferred tile size, backing preference, sample requirement and target delivery date. Vishomecarpet can recommend commercial carpet tile options and quotation basis for Russian projects.",
+          text: "Send office area by zone, destination city, preferred tile size, backing preference, sample requirement and target delivery date. VCARPETS can recommend commercial carpet tile options and quotation basis for Russian projects.",
         },
       ],
     },
@@ -547,7 +547,7 @@ export const kazakhstanGoldMiningCarpetGuide: BlogPost = {
     "A practical guide for placer operators, distributors and equipment buyers comparing sluice carpet, miner's moss and sample testing.",
   painPoint:
     "A recovery mat can look right in a product photo while still missing the real test: feed material, water flow, clean-out rhythm and roll planning.",
-  seoTitle: "Gold Mining Carpet in Kazakhstan | Fine-Gold Recovery Guide | VISHOME",
+  seoTitle: "Gold Mining Carpet in Kazakhstan | Fine-Gold Recovery Guide | VCARPETS",
   description:
     "Learn how to specify gold mining carpet in Kazakhstan for fine-gold recovery, sample testing, roll size, clean-out planning and bulk quotation.",
   keywords: [
@@ -560,7 +560,7 @@ export const kazakhstanGoldMiningCarpetGuide: BlogPost = {
   ],
   date: "2026-08-07",
   dateModified: "2026-08-07",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Mining Carpet",
   image: "/images/blog-series/gold-mining-carpet-kazakhstan-fine-gold-recovery-guide/gold-mining-carpet-kazakhstan-fine-gold-recovery-1600.webp",
   h1Image: "/images/blog-series/gold-mining-carpet-kazakhstan-fine-gold-recovery-guide/gold-mining-carpet-kazakhstan-fine-gold-recovery-1600.webp",
@@ -661,7 +661,7 @@ export const kazakhstanGoldMiningCarpetGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "For a Kazakhstan gold mining carpet enquiry, send the equipment dimensions, feed material description, target roll size, sample or trial requirement, quantity, destination and delivery schedule. Vishomecarpet can then confirm the suitable quotation basis instead of sending a generic mat price.",
+          text: "For a Kazakhstan gold mining carpet enquiry, send the equipment dimensions, feed material description, target roll size, sample or trial requirement, quantity, destination and delivery schedule. VCARPETS can then confirm the suitable quotation basis instead of sending a generic mat price.",
         },
       ],
     },
@@ -675,7 +675,7 @@ export const croatiaCustomSculptedWoolRugGuide: BlogPost = {
     "A shaped-rug guide for hotels, lounges and reception spaces where the outline, carved pile and cleaning route all matter.",
   painPoint:
     "A shaped wool rug can look luxurious in a mood board and still fail if the dimensions, pile depth, edge finishing and traffic zone are not locked down before production.",
-  seoTitle: "Custom Sculpted Wool Rugs in Croatia | Hotel Lobby Guide | VISHOME",
+  seoTitle: "Custom Sculpted Wool Rugs in Croatia | Hotel Lobby Guide | VCARPETS",
   description:
     "Learn how to specify custom sculpted wool rugs in Croatia for hotel lobbies, lounges and reception areas with shape approval, pile carving, edge finishing, cleaning and quote planning.",
   keywords: [
@@ -687,7 +687,7 @@ export const croatiaCustomSculptedWoolRugGuide: BlogPost = {
   ],
   date: "2026-08-07",
   dateModified: "2026-08-07",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Hotel Lobby Rug",
   image: "/images/blog-series/custom-sculpted-wool-rugs-croatia-hotel-lobby-guide/custom-sculpted-wool-rugs-croatia-hotel-lobby-1600.webp",
   h1Image: "/images/blog-series/custom-sculpted-wool-rugs-croatia-hotel-lobby-guide/custom-sculpted-wool-rugs-croatia-hotel-lobby-1600.webp",
@@ -788,7 +788,7 @@ export const croatiaCustomSculptedWoolRugGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "For a Croatia custom sculpted wool rug enquiry, send the lobby or lounge plan, approximate outline, finished dimensions, preferred colors, project quantity, sample requirement and target delivery date. Vishomecarpet can then confirm the suitable specification and quotation path.",
+          text: "For a Croatia custom sculpted wool rug enquiry, send the lobby or lounge plan, approximate outline, finished dimensions, preferred colors, project quantity, sample requirement and target delivery date. VCARPETS can then confirm the suitable specification and quotation path.",
         },
       ],
     },
@@ -802,7 +802,7 @@ export const nepalCustomSculptedWoolRugGuide: BlogPost = {
     "A practical guide for hospitality spaces where shape approval, cleaning access and delivery planning matter as much as appearance.",
   painPoint:
     "A feature rug can be approved too early when the buyer sees only the design. Later, the team discovers that the shape is awkward, the cleaning route is unclear or the delivery plan does not fit the site.",
-  seoTitle: "Custom Sculpted Wool Rugs Nepal | Hospitality Lobby Guide | VISHOME",
+  seoTitle: "Custom Sculpted Wool Rugs Nepal | Hospitality Lobby Guide | VCARPETS",
   description:
     "Learn how to specify custom sculpted wool rugs in Nepal for hotels, resorts, lounges and reception areas with shape approval, sizing, cleaning, sample and quote planning.",
   keywords: [
@@ -814,7 +814,7 @@ export const nepalCustomSculptedWoolRugGuide: BlogPost = {
   ],
   date: "2026-08-07",
   dateModified: "2026-08-07",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Hospitality Rug",
   image: "/images/blog-series/custom-sculpted-wool-rugs-nepal-hospitality-guide/custom-sculpted-wool-rugs-nepal-hospitality-1600.avif",
   h1Image: "/images/blog-series/custom-sculpted-wool-rugs-nepal-hospitality-guide/custom-sculpted-wool-rugs-nepal-hospitality-1600.avif",
@@ -915,7 +915,7 @@ export const nepalCustomSculptedWoolRugGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "For a Nepal custom sculpted wool rug enquiry, send the hotel or resort floor plan, furniture layout, outline, finished dimensions, preferred color family, quantity, sample requirement and delivery schedule. Vishomecarpet can then confirm the specification, packing route and quotation basis.",
+          text: "For a Nepal custom sculpted wool rug enquiry, send the hotel or resort floor plan, furniture layout, outline, finished dimensions, preferred color family, quantity, sample requirement and delivery schedule. VCARPETS can then confirm the specification, packing route and quotation basis.",
         },
       ],
     },

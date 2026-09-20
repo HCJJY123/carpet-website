@@ -20,7 +20,7 @@ export const redditHotelOfficeCarpetComplaintsGuide: BlogPost = {
     "carpet tile replacement planning",
   ],
   date: "2026-08-04",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Procurement Guide",
   image: `${base}/hotel-office-carpet-reddit-main.webp`,
   h1Image: `${base}/hotel-office-carpet-reddit-main.webp`,

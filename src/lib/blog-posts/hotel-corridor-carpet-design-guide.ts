@@ -19,7 +19,7 @@ export const hotelCorridorCarpetDesignGuide: BlogPost = {
   ],
   date: "2026-07-29",
   dateModified: "2026-08-03",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Hospitality Flooring",
   image:
     "/images/blog-series/hotel-corridor-carpet-design/hotel-corridor-carpet-design-noise-stain-maintenance.webp",
@@ -256,12 +256,12 @@ export const hotelCorridorCarpetDesignGuide: BlogPost = {
         },
         {
           type: "paragraph",
-          text: "Vishome Carpet provides wall-to-wall hotel carpet and custom hospitality carpet solutions for corridors, guestrooms, and public areas. Buyers can prepare floor plans, corridor widths, target design style, traffic conditions, and delivery schedule before requesting a quotation.",
+          text: "VCARPETS provides wall-to-wall hotel carpet and custom hospitality carpet solutions for corridors, guestrooms, and public areas. Buyers can prepare floor plans, corridor widths, target design style, traffic conditions, and delivery schedule before requesting a quotation.",
         },
         {
           type: "callout",
           label: "Request a hotel carpet quote",
-          text: "Send your hotel area, corridor dimensions, design reference, material preference, fire-rating requirement, destination, and target installation date to the Vishome project team.",
+          text: "Send your hotel area, corridor dimensions, design reference, material preference, fire-rating requirement, destination, and target installation date to the VCARPETS project team.",
         },
       ],
     },

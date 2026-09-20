@@ -1,7 +1,8 @@
 {
-  "task": "Migrate the public website from vishomecarpet.com to vcarpets.com",
-  "approvedBy": "Site owner approval on 2026-09-20 to migrate the public domain while preserving paths, email identity, inquiry flows and search signals",
+  "task": "Replace the public Vishome/Vishomecarpet brand identity with Vcarpets while preserving the current vcarpets.com layout, URLs, SEO structure and inquiry flows",
+  "approvedBy": "Site owner approval on 2026-09-20 to update the public brand and business email across pages, components, configuration, data, backend templates and generated assets",
   "approvedCategories": [
+    "brand-identity",
     "conversion",
     "navigation",
     "analytics",
@@ -20,7 +21,9 @@
     "content-growth",
     "domain-migration",
     "redirects",
-    "database"
+    "database",
+    "legal",
+    "email"
   ],
   "allowedPaths": [
     "CHANGELOG_OPS.md",
@@ -28,6 +31,9 @@
     "ops/site-baseline.json",
     "keyword-map.csv",
     "src/lib/data.ts",
+    "src/lib/blog-data.ts",
+    "src/lib/country-application-pages.ts",
+    "src/lib/site-locales.ts",
     "src/lib/blog-data.ts",
     "src/lib/site-locales.ts",
     "src/lib/seo.ts",
@@ -43,6 +49,14 @@
     "src/app/sitemaps/projects.xml/route.ts",
     "src/app/sitemaps/resources.xml/route.ts",
     "src/components/Header.tsx",
+    "src/components/Footer.tsx",
+    "src/components/JsonLd.tsx",
+    "src/components/ConversionLiftPanel.tsx",
+    "src/components/CountryMarketLandingPage.tsx",
+    "src/components/LocalizedLandingPage.tsx",
+    "src/components/RuB2BLandingPage.tsx",
+    "src/components/**",
+    "src/lib/**",
     "src/app/*",
     "scripts/**",
     "visitor-intelligence/**",
@@ -53,15 +67,28 @@
     "public/ai-sources.json",
     "public/data-license.txt",
     "docs/seo/**",
+    "docs/ai-discovery/**",
+    "docs/backlink-*.md",
+    "docs/backlink-execution-2026-08-10.md",
+    "docs/backlink-readiness-audit.md",
+    "docs/backlink-strategy.md",
+    "docs/missing-assets.md",
     "docs/ai-commerce/*",
+    "drafts/**",
+    "data/**",
     "outreach-assets/*",
+    "ops/accio-image-prompts-commercial-carpet-tile-spec-checklist.md",
     "public/downloads/**",
     "SITE_OPS_GUIDE.md",
     "keyword-map.csv",
     "public/ai-commerce/**"
+    ,"public/**"
+    ,"AGENTS.md"
+    ,"visitor-intelligence/**"
   ],
+  "maximumChangedFiles": 260,
   "protectedUrlsChanged": true,
   "directMainSyncApproved": false,
   "rollbackCommit": "391e9f9",
-  "notes": "Use https://www.vcarpets.com as the canonical public origin. Preserve every existing path and query string. Redirect vishomecarpet.com and www.vishomecarpet.com to the matching path on www.vcarpets.com with server-side 308 responses when the old DNS and HTTPS endpoints are available; if the old domain is unavailable, report that redirect as unverified rather than claiming it is live. Replace public business contact details with sales@vcarpets.com while preserving inquiry, email, WhatsApp, analytics and conversion behavior. Update production URL sources, feeds, sitemaps, robots, llms, AI source maps, generated documents and their source scripts without rewriting historical audit records or changing page content structure. DNS, Vercel domain attachment, HTTPS certificate, mailbox authentication, Search Console Change of Address, Bing migration and third-party allowlists remain manual/account-authorized steps."
+  "notes": "Use https://www.vcarpets.com as the canonical public origin. Preserve every existing path, query string, layout, page structure, SEO keyword intent, URL slug and conversion path. Replace brand text according to the approved case-sensitive order: VISHOMECARPET -> VCARPETS; VishomeCarpet/Vishomecarpet -> Vcarpets; Vishome Carpet -> Vcarpets; VISHOME -> VCARPETS; Vishome/VisHome -> Vcarpets; lowercase vishome in public copy -> vcarpets. Replace the legal company name with Vcarpets Global Commercial Carpet Co., Ltd. and public business email/mailto with sales@vcarpets.com. Keep old-domain redirect matching, migration maps, historical audit records and the vishome_visitors D1 table name unchanged; list any URL slug or binary logo exception for owner review. Do not change third-party IDs, API keys or tracking IDs."
 }

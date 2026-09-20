@@ -18,10 +18,10 @@ export const productLinePages: ProductLinePage[] = [
   {
     slug: "office-carpet-tiles",
     title: "Office Carpet Tiles for Commercial Workspaces",
-    seoTitle: "Office Carpet Tiles for Commercial Projects | Vishome Carpet",
+    seoTitle: "Office Carpet Tiles for Commercial Projects | VCARPETS",
     seoDescription: "Office carpet tile options for commercial projects, including 50x50 modular tiles, nylon and PP options, backing, MOQ, samples and quotation support.",
     eyebrow: "Office Carpet Tiles",
-    summary: "Office carpet tile buyers usually need modular replacement, practical color planning, stable backing, clear MOQ tiers and predictable installation. Vishome Carpet connects office application requirements with existing commercial carpet tile products.",
+    summary: "Office carpet tile buyers usually need modular replacement, practical color planning, stable backing, clear MOQ tiers and predictable installation. VCARPETS connects office application requirements with existing commercial carpet tile products.",
     image: "/images/case-wework.webp",
     imageAlt: "Office carpet tiles installed in a commercial workspace",
     parentCategoryHref: "/products/carpet-tiles",
@@ -31,7 +31,7 @@ export const productLinePages: ProductLinePage[] = [
   {
     slug: "hospitality-carpet",
     title: "Hospitality Carpet for Hotels and Public Areas",
-    seoTitle: "Hospitality Carpet for Hotel Projects | Vishome Carpet",
+    seoTitle: "Hospitality Carpet for Hotel Projects | VCARPETS",
     seoDescription: "Hospitality carpet options for hotel guestrooms, corridors, lobbies and banquet spaces, with custom broadloom, printed carpet and project document support.",
     eyebrow: "Hospitality Carpet",
     summary: "Hospitality carpet projects need comfort, visual coordination, acoustic planning, traffic resistance and installation sequencing. Final specifications should follow sample approval and written quotation.",
@@ -44,7 +44,7 @@ export const productLinePages: ProductLinePage[] = [
   {
     slug: "custom-axminster-carpet",
     title: "Custom Axminster Carpet Planning for Hospitality Projects",
-    seoTitle: "Custom Axminster Carpet Planning | Vishome Carpet",
+    seoTitle: "Custom Axminster Carpet Planning | VCARPETS",
     seoDescription: "Custom Axminster carpet planning for hotels, corridors, lobbies and ballrooms, including pattern approval, strike-off samples and quotation inputs.",
     eyebrow: "Custom Axminster Carpet",
     summary: "Custom Axminster-style hospitality carpet planning should start with artwork, yarn/color approval, sample route, pattern repeat, roll plan and project documentation. Public project names require approval before external use.",
@@ -57,7 +57,7 @@ export const productLinePages: ProductLinePage[] = [
   {
     slug: "printed-carpet",
     title: "Printed Carpet for Hotel Guestrooms and Banquet Areas",
-    seoTitle: "Printed Carpet for Hotel Projects | Vishome Carpet",
+    seoTitle: "Printed Carpet for Hotel Projects | VCARPETS",
     seoDescription: "Printed carpet options for hotel guestrooms, corridors and banquet spaces, with custom design, sample review, MOQ and project quotation support.",
     eyebrow: "Printed Carpet",
     summary: "Printed carpet can support flexible hospitality patterns when artwork, color tolerance, material route, sample approval and installation plan are confirmed before production.",
@@ -70,7 +70,7 @@ export const productLinePages: ProductLinePage[] = [
   {
     slug: "wool-carpet",
     title: "Wool Carpet and Custom Lobby Rug Planning",
-    seoTitle: "Wool Carpet and Custom Lobby Rug Planning | Vishome Carpet",
+    seoTitle: "Wool Carpet and Custom Lobby Rug Planning | VCARPETS",
     seoDescription: "Wool carpet and custom lobby rug planning for public-area projects, including custom dimensions, sample approval, material confirmation and quotation support.",
     eyebrow: "Wool Carpet",
     summary: "Wool and wool-style public-area carpets require careful confirmation of fiber composition, size, sculpting, edge finish, sample route and maintenance expectations before quotation.",

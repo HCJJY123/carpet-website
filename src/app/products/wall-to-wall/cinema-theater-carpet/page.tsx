@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Custom cinema and theater carpet for auditoriums, aisles, lobbies and concession areas. Review patterned broadloom, acoustic options, samples and MOQ.",
   alternates: { canonical: productPath(productId) },
   openGraph: {
-    title: "Cinema & Theater Carpet | VISHOME",
+    title: "Cinema & Theater Carpet | VCARPETS",
     description: product.description,
     url: absoluteUrl(productPath(productId)),
     images: [{ url: absoluteUrl(product.image), alt: product.imageAlt }],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const faqs = [
   { q: "Can the carpet pattern be customized for a cinema brand?", a: "Yes. Printed broadloom can coordinate brand colors, auditorium themes, aisle direction, and lobby identity after artwork, scale, color, and repeat are approved." },
   { q: "Does cinema carpet improve acoustics?", a: "Carpet can reduce footfall noise and room reverberation, but acoustic performance depends on the full construction, backing, underlay, subfloor, walls, seating, and ceiling. Request data for the exact assembly being considered." },
-  { q: "Which fire documents are available?", a: "Tell Vishome which standard the venue or consultant requires. The team will confirm whether a report applies to the quoted construction or whether project-specific testing is needed." },
+  { q: "Which fire documents are available?", a: "Tell VCARPETS which standard the venue or consultant requires. The team will confirm whether a report applies to the quoted construction or whether project-specific testing is needed." },
   { q: "What are the order levels?", a: `A material swatch is available, an approved-design trial typically starts from ${product.moqTiers.trialOrder}, and the project MOQ is ${product.moqTiers.project}.` },
 ];
 

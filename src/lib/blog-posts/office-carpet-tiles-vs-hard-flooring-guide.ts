@@ -19,7 +19,7 @@ export const officeCarpetTilesVsHardFlooringGuide: BlogPost = {
   ],
   date: "2026-07-29",
   dateModified: "2026-08-03",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Office Flooring",
   image:
     "/images/blog-series/office-carpet-tiles-vs-hard-flooring/office-carpet-tiles-vs-hard-flooring-maintenance.webp",
@@ -256,12 +256,12 @@ export const officeCarpetTilesVsHardFlooringGuide: BlogPost = {
         },
         {
           type: "paragraph",
-          text: "Vishome Carpet supplies commercial carpet tile options for workspaces, corridors, meeting rooms, and business interiors. Buyers can compare nylon, PP, PVC-free PE backing, and project-specific options depending on traffic, budget, and sustainability requirements.",
+          text: "VCARPETS supplies commercial carpet tile options for workspaces, corridors, meeting rooms, and business interiors. Buyers can compare nylon, PP, PVC-free PE backing, and project-specific options depending on traffic, budget, and sustainability requirements.",
         },
         {
           type: "callout",
           label: "Request an office carpet tile quote",
-          text: "Send your office area, layout, traffic level, backing preference, destination, and required delivery date to the Vishome project team for a comparable quotation.",
+          text: "Send your office area, layout, traffic level, backing preference, destination, and required delivery date to the VCARPETS project team for a comparable quotation.",
         },
       ],
     },

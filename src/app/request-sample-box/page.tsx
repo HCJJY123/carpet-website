@@ -5,9 +5,9 @@ import QueryProductWhatsAppLink from "@/components/QueryProductWhatsAppLink";
 import { whatsappBusinessMessages } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Request Commercial Carpet Sample Box | Vishomecarpet",
+  title: "Request Commercial Carpet Sample Box | VCARPETS",
   description:
-    "Request a commercial carpet sample box from Vishomecarpet with carpet tile samples, hotel broadloom samples, custom color matching, backing options, fire-rating support, and TDS support.",
+    "Request a commercial carpet sample box from VCARPETS with carpet tile samples, hotel broadloom samples, custom color matching, backing options, fire-rating support, and TDS support.",
   alternates: { canonical: "/request-sample-box" },
 };
 

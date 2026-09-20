@@ -7,7 +7,7 @@ export const hotelCarpetProcurementDocumentsChecklist: BlogPost = {
     "A practical document checklist for hotel guestrooms, corridors, lobbies, ballrooms and meeting spaces before sample approval and project ordering.",
   painPoint:
     "A hotel carpet order can be delayed or rejected when the sample, technical data, fire and VOC evidence, installation requirements, packing plan and RFQ assumptions are reviewed separately instead of as one project record.",
-  seoTitle: "Hotel Carpet Procurement Documents Checklist | VISHOME",
+  seoTitle: "Hotel Carpet Procurement Documents Checklist | VCARPETS",
   description:
     "Use this hotel carpet procurement documents checklist to request product data, fiber and backing details, samples, fire and VOC documents, installation requirements, packing information and comparable RFQ inputs.",
   keywords: [
@@ -20,7 +20,7 @@ export const hotelCarpetProcurementDocumentsChecklist: BlogPost = {
   ],
   date: "2026-08-31",
   dateModified: "2026-08-31",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "B2B Buying Guide",
   image:
     "/images/blog-series/hotel-carpet-procurement-documents-checklist/hotel-carpet-procurement-documents-checklist-hero.webp",
@@ -254,7 +254,7 @@ export const hotelCarpetProcurementDocumentsChecklist: BlogPost = {
         {
           type: "callout",
           label: "Request a document-matched quote",
-          text: "Send the area schedule, intended hotel zones, preferred construction, delivery city and required technical documents so VISHOME can review the request against the project scope.",
+          text: "Send the area schedule, intended hotel zones, preferred construction, delivery city and required technical documents so VCARPETS can review the request against the project scope.",
         },
       ],
     },
@@ -272,7 +272,7 @@ export const hotelCarpetProcurementDocumentsChecklist: BlogPost = {
         { type: "paragraph", text: "Include installation instructions, compatible adhesive or attachment method, substrate moisture and flatness requirements, layout and seam guidance, acclimatization, protection, curing and handover conditions." },
         { type: "subheading", title: "What should a hotel carpet RFQ include?" },
         { type: "paragraph", text: "Include the destination, hotel zones, measured area by zone, broadloom or tile preference, fiber and backing requirements, sample and technical-document needs, site conditions, packing, MOQ, spare stock, delivery window and commercial terms." },
-        { type: "subheading", title: "Can VISHOME confirm a final hotel carpet price from this checklist?" },
+        { type: "subheading", title: "Can VCARPETS confirm a final hotel carpet price from this checklist?" },
         { type: "paragraph", text: "No universal price can be confirmed from a checklist alone. A current project quotation requires the construction, color, quantity, packing, destination, delivery terms and other project-specific inputs to be reviewed together." },
       ],
     },

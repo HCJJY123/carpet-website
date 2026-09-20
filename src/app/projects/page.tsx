@@ -7,7 +7,7 @@ import { getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Case Studies & Specification Guides | VISHOME",
+  title: "Commercial Carpet Case Studies & Specification Guides | VCARPETS",
   description: "Explore 16 commercial carpet application guides for hotels, offices, retail, airports, healthcare, education, exhibitions and sourcing projects.",
   alternates: { canonical: "/projects" },
 };

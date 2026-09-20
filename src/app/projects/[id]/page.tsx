@@ -104,14 +104,14 @@ export default async function ProjectDetailPage({ params }: Props) {
     author: {
       "@type": "Organization",
       "@id": `${brandInfo.url}/#technical-content-team`,
-      name: "VISHOME Technical Team",
+      name: "VCARPETS Technical Team",
       url: brandInfo.url,
       parentOrganization: { "@id": `${brandInfo.url}/#organization` },
     },
     reviewedBy: {
       "@type": "Organization",
       "@id": `${brandInfo.url}/#commercial-carpet-team`,
-      name: "VISHOME Commercial Carpet Team",
+      name: "VCARPETS Commercial Carpet Team",
       parentOrganization: { "@id": `${brandInfo.url}/#organization` },
     },
     publisher: {
@@ -358,7 +358,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           <ConversionLiftPanel
             eyebrow="Similar Project Inquiry"
             title="Send Your Floor Plan, Area and Delivery Country"
-            body="Use this case as a reference, then submit your own application area, traffic level, design direction, and required timeline. Vishome can suggest matching products and quote the project rather than only a single item."
+            body="Use this case as a reference, then submit your own application area, traffic level, design direction, and required timeline. VCARPETS can suggest matching products and quote the project rather than only a single item."
             product={profile.cardTitle}
             quoteHref={`/contact?product=${encodeURIComponent(profile.cardTitle)}#quote-form`}
             className="mb-14 overflow-hidden rounded-xl border-y-0"

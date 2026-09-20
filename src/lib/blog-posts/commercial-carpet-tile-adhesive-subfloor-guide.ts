@@ -20,7 +20,7 @@ export const commercialCarpetTileAdhesiveSubfloorGuide: BlogPost = {
   ],
   date: "2026-08-28",
   dateModified: "2026-08-28",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Installation",
   image:
     "/images/blog-series/commercial-carpet-tile-adhesive-subfloor-guide/commercial-carpet-tile-subfloor-adhesive-guide-hero.webp",

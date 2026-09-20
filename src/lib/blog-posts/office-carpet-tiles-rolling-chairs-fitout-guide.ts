@@ -7,7 +7,7 @@ export const officeCarpetTilesRollingChairsFitoutGuide: BlogPost = {
     "How procurement teams can balance chair movement, acoustic comfort, phased installation, lease make-good risk and future replacement.",
   painPoint:
     "A commercial office floor can look good at handover and still fail in the desk zone when chair wheels, compression, adhesive choice and phased fit-out planning were never specified together.",
-  seoTitle: "Office Carpet Tiles for Rolling Chairs | Fit-Out Guide | VISHOME",
+  seoTitle: "Office Carpet Tiles for Rolling Chairs | Fit-Out Guide | VCARPETS",
   description:
     "Learn how to specify office carpet tiles for rolling chairs by checking pile, backing, caster movement, adhesive, phased replacement, spare stock and RFQ details.",
   keywords: [
@@ -21,7 +21,7 @@ export const officeCarpetTilesRollingChairsFitoutGuide: BlogPost = {
   ],
   date: "2026-08-10",
   dateModified: "2026-08-10",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Office Flooring",
   image:
     "/images/blog-series/office-carpet-tiles-rolling-chairs-fitout-guide/office-carpet-tiles-rolling-chairs-fitout-guide.png",
@@ -168,7 +168,7 @@ export const officeCarpetTilesRollingChairsFitoutGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "For an office carpet tile project, send the floor area, workstation plan, chair type, substrate, installation method preference and target delivery date. Vishomecarpet can then review a practical modular flooring specification and quotation path.",
+          text: "For an office carpet tile project, send the floor area, workstation plan, chair type, substrate, installation method preference and target delivery date. VCARPETS can then review a practical modular flooring specification and quotation path.",
         },
       ],
     },

@@ -74,7 +74,7 @@ const breadcrumbJsonLd = {
 
 export const metadata: Metadata = product
   ? {
-      title: "Коммерческий ковролин в рулонах | VISHOME",
+      title: "Коммерческий ковролин в рулонах | VCARPETS",
       description:
         "Коммерческий ковролин (broadloom) в рулонах шириной 4 м для торговых центров, офисов и складов. Класс огнестойкости ASTM E648 Class I. Поставка DAP Алматы и Ташкент.",
       alternates: {
@@ -86,15 +86,15 @@ export const metadata: Metadata = product
         },
       },
       openGraph: {
-        title: "Коммерческий ковролин в рулонах | VISHOME",
+        title: "Коммерческий ковролин в рулонах | VCARPETS",
         description: "Ковролин шириной 4 м для торговых центров, офисов и складов. Поставка DAP Алматы и Ташкент.",
         url: absoluteUrl(ruPath),
         type: "website",
         locale: "ru_RU",
-        images: [{ url: absoluteUrl(product.image), alt: "Коммерческий ковролин в рулонах Vishomecarpet" }],
+        images: [{ url: absoluteUrl(product.image), alt: "Коммерческий ковролин в рулонах VCARPETS" }],
       },
     }
-  : { title: "Ковролин в рулонах | VISHOME" };
+  : { title: "Ковролин в рулонах | VCARPETS" };
 
 export default function BroadloomRuPage() {
   if (!product) return <div>Product not found</div>;

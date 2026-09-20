@@ -13,12 +13,12 @@ const categoryPath = "/products/wall-to-wall";
 
 const categoryFaqs = [
   {
-    question: "What commercial wall-to-wall carpet does Vishomecarpet supply?",
-    answer: "Vishomecarpet supplies project-based commercial broadloom carpet for hotels, corridors, guestrooms, ballrooms, banquet rooms, casinos, restaurants, conference rooms, clubs, cinemas, theatres, showrooms, offices, churches, and mosques. Construction and compliance requirements are confirmed for each contract carpet project."
+    question: "What commercial wall-to-wall carpet does VCARPETS supply?",
+    answer: "VCARPETS supplies project-based commercial broadloom carpet for hotels, corridors, guestrooms, ballrooms, banquet rooms, casinos, restaurants, conference rooms, clubs, cinemas, theatres, showrooms, offices, churches, and mosques. Construction and compliance requirements are confirmed for each contract carpet project."
   },
   {
     question: "Are you a wall-to-wall carpet manufacturer and supplier?",
-    answer: "Yes. Vishomecarpet is a commercial carpet manufacturer and export supplier supporting custom design, specification review, samples, production, export packing, and international delivery for hotel and contract flooring projects."
+    answer: "Yes. VCARPETS is a commercial carpet manufacturer and export supplier supporting custom design, specification review, samples, production, export packing, and international delivery for hotel and contract flooring projects."
   },
   {
     question: "What is the wall-to-wall carpet price?",
@@ -38,7 +38,7 @@ const categoryFaqs = [
   },
   {
     question: "Do you supply carpet for exhibitions, trade shows, or temporary events?",
-    answer: "These uses often require a different construction from permanent hotel broadloom. Share the expected service life, installation method, fire standard, and quantity so Vishomecarpet can confirm whether exhibition carpet flooring, trade show carpet, expo carpet, event carpet, or red carpet for events is suitable."
+    answer: "These uses often require a different construction from permanent hotel broadloom. Share the expected service life, installation method, fire standard, and quantity so VCARPETS can confirm whether exhibition carpet flooring, trade show carpet, expo carpet, event carpet, or red carpet for events is suitable."
   }
 ];
 
@@ -152,7 +152,7 @@ export const metadata: Metadata = {
     description: "Compare contract carpet and broadloom options by construction, factory price, MOQ, samples, and hospitality or entertainment application.",
     url: absoluteUrl(categoryPath),
     type: "website",
-    images: [{ url: absoluteUrl("/images/category-broadloom.webp"), alt: "Commercial wall-to-wall hotel broadloom carpet by Vishomecarpet" }]
+    images: [{ url: absoluteUrl("/images/category-broadloom.webp"), alt: "Commercial wall-to-wall hotel broadloom carpet by VCARPETS" }]
   }
 };
 
@@ -376,10 +376,10 @@ export default function CategoryPage() {
             <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Contract Carpet Buying Guide</p>
             <h2 className="mb-7 text-3xl font-black uppercase text-primary md:text-5xl">Commercial Wall-to-Wall Carpet Supplier for Project Buyers</h2>
             <div className="space-y-5 text-base leading-8 text-muted">
-              <p>Vishomecarpet manufactures and supplies commercial carpet rolls for hospitality and contract projects. The collection covers woven Axminster carpet, 80 wool 20 nylon carpet, custom printed carpet, patterned broadloom carpet, machine-tufted hotel room carpet, and high-traffic corridor carpet.</p>
+              <p>VCARPETS manufactures and supplies commercial carpet rolls for hospitality and contract projects. The collection covers woven Axminster carpet, 80 wool 20 nylon carpet, custom printed carpet, patterned broadloom carpet, machine-tufted hotel room carpet, and high-traffic corridor carpet.</p>
               <p>Project applications include carpet for hotel rooms, hotel hallway carpet, hotel lobby carpet, banquet room carpet, ballroom carpet, casino style carpet, restaurant carpet, conference room carpet, club carpet, cinema carpet, theatre carpet, showroom carpet, office carpet rolls, church carpet, mosque carpet, and mosque carpet rolls. Final construction, fire performance, and installation requirements must be confirmed for the intended building.</p>
               <p>For Wilton carpet, solution dyed nylon carpet, Saxony carpet rolls, machine tufted carpet, cut pile carpet rolls, polyester carpet rolls, wool carpet wholesale, exhibition carpet flooring, needle punch carpet, marine carpet rolls, casino carpet, or another construction not shown in the listed products, send the exact specification. The factory will confirm feasibility rather than substituting a different product without approval.</p>
-              <p>Vishomecarpet supports wholesale hotel carpet orders as a commercial carpet manufacturer, broadloom carpet manufacturer, hospitality carpet manufacturer, and export supplier. Buyers comparing commercial carpet suppliers or hotel carpet suppliers can review product-level prices and specifications before requesting a factory quotation.</p>
+              <p>VCARPETS supports wholesale hotel carpet orders as a commercial carpet manufacturer, broadloom carpet manufacturer, hospitality carpet manufacturer, and export supplier. Buyers comparing commercial carpet suppliers or hotel carpet suppliers can review product-level prices and specifications before requesting a factory quotation.</p>
             </div>
           </div>
           <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-2 lg:grid-cols-3">

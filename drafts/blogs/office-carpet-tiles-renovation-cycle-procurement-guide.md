@@ -1,6 +1,6 @@
 # Office Renovation Cycles: Why Carpet Tiles Still Sell When Office Real Estate Is Weak
 
-**SEO title:** Office Carpet Tiles for Renovation Cycles and Tenant Fit-Outs | Vishomecarpet
+**SEO title:** Office Carpet Tiles for Renovation Cycles and Tenant Fit-Outs | VCARPETS
 
 **Primary keyword:** office carpet tiles renovation
 
@@ -132,7 +132,7 @@ The percentage depends on project size and risk zones. Buyers should discuss att
 
 Treating carpet tile as a simple square-meter purchase. A good RFQ defines traffic, substrate, rolling chairs, installation method, spare stock and handover requirements.
 
-## Recommended Vishomecarpet Pages
+## Recommended VCARPETS Pages
 
 - Compare commercial carpet tile options: `/products/carpet-tiles`
 - Start from the office carpet tile category: `/commercial-carpet-tiles`
@@ -142,6 +142,6 @@ Treating carpet tile as a simple square-meter purchase. A good RFQ defines traff
 
 ## Request an Office Renovation Carpet Tile Quote
 
-For an office carpet tiles renovation quote, send the floor area, site status, zone map, chair type, substrate, installation schedule, destination and spare-stock requirement. Vishomecarpet can review a practical modular carpet tile specification before you compare only by square-meter price.
+For an office carpet tiles renovation quote, send the floor area, site status, zone map, chair type, substrate, installation schedule, destination and spare-stock requirement. VCARPETS can review a practical modular carpet tile specification before you compare only by square-meter price.
 
 **Inquiry link:** `/contact?product=Office%20Renovation%20Carpet%20Tiles#quote-form`

@@ -17,7 +17,7 @@ export const hotelCarpetSupplierChecklistGuide: BlogPost = {
     "hotel carpet project order",
   ],
   date: "2026-07-30",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Procurement Guide",
   image:
     "/images/blog-series/hotel-carpet-supplier-checklist/hotel-carpet-supplier-checklist-project-order-guide-d851e7f6.webp",
@@ -457,7 +457,7 @@ export const hotelCarpetSupplierChecklistGuide: BlogPost = {
         },
         {
           type: "paragraph",
-          text: "Send Vishome your hotel area schedule, design references, required standards, target date, and delivery destination. The project team can recommend suitable broadloom or modular constructions, clarify sample and MOQ stages, and prepare a quotation around the actual hotel zones.",
+          text: "Send VCARPETS your hotel area schedule, design references, required standards, target date, and delivery destination. The project team can recommend suitable broadloom or modular constructions, clarify sample and MOQ stages, and prepare a quotation around the actual hotel zones.",
         },
         {
           type: "callout",

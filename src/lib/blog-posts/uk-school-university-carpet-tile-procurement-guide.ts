@@ -7,7 +7,7 @@ export const ukSchoolUniversityCarpetTileProcurementGuide: BlogPost = {
     "A practical buyer guide for education flooring teams comparing carpet tiles for classrooms, libraries, corridors, student centres and phased refurbishment.",
   painPoint:
     "Education flooring projects must balance heavy circulation, rolling furniture, term-time access, cleaning, technical documents and selective replacement without treating every room as the same use zone.",
-  seoTitle: "UK School & University Carpet Tile Procurement Guide | VISHOME",
+  seoTitle: "UK School & University Carpet Tile Procurement Guide | VCARPETS",
   description:
     "Compare carpet tiles for UK schools and universities by zone, traffic, rolling-chair use, fire and VOC documentation, phased installation, cleaning and spare stock.",
   keywords: [
@@ -20,7 +20,7 @@ export const ukSchoolUniversityCarpetTileProcurementGuide: BlogPost = {
   ],
   date: "2026-09-10",
   dateModified: "2026-09-10",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Education Procurement",
   image: "/images/blog-series/uk-school-university-carpet-tile-procurement-guide/uk-school-university-carpet-tile-hero.webp",
   imageAlt: "Education carpet tile procurement desk with samples and project planning documents",
@@ -144,7 +144,7 @@ export const ukSchoolUniversityCarpetTileProcurementGuide: BlogPost = {
         },
         {
           type: "paragraph",
-          text: "Send these fields with the project area schedule and any existing specification. VISHOME can then compare education carpet tile options and identify which product, document and delivery assumptions still require confirmation before a quotation is treated as final.",
+          text: "Send these fields with the project area schedule and any existing specification. VCARPETS can then compare education carpet tile options and identify which product, document and delivery assumptions still require confirmation before a quotation is treated as final.",
         },
       ],
     },
