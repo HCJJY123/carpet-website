@@ -8,6 +8,7 @@ import WhatsAppFloating from "@/components/WhatsAppFloating";
 import SendInquiryFloating from "@/components/SendInquiryFloating";
 import LocaleExperience from "@/components/LocaleExperience";
 import DeferredSiteEnhancements from "@/components/DeferredSiteEnhancements";
+import MicrosoftUet from "@/components/MicrosoftUet";
 import { brandInfo } from "@/lib/data";
 
 const geistSans = Geist({
@@ -86,6 +87,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <MicrosoftUet />
+      </head>
       <body className="min-h-full flex flex-col font-sans">
         <LocaleExperience />
         <JsonLd />
