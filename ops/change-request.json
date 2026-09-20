@@ -9,9 +9,10 @@
   "allowedPaths": [
     "ops/change-request.json",
     "package.json",
+    "scripts/audit-backlink-readiness.mjs",
     "scripts/generate-sitemap-static-routes.mjs",
-    "src/app/sitemap.ts",
     "src/app/robots.ts",
+    "src/app/sitemap.ts",
     "src/lib/generated-static-sitemap-routes.ts",
     "src/lib/sitemap-data.ts"
   ],
