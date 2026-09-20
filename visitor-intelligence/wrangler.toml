@@ -12,7 +12,7 @@ binding = "CACHE"
 id = "5cb4456b929241fd9868e7f010c4cc1c"
 
 [vars]
-ALLOWED_ORIGINS = "https://www.vishomecarpet.com,https://vishomecarpet.com"
+ALLOWED_ORIGINS = "https://www.vcarpets.com,https://vcarpets.com"
 INTERNAL_COUNTRIES = "CN"
 MIN_DURATION_SECONDS = "1"
 MAX_BODY_BYTES = "4096"

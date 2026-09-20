@@ -4,7 +4,7 @@ import AnswerFirst from "@/components/AnswerFirst";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 
-const siteUrl = "https://www.vishomecarpet.com";
+const siteUrl = "https://www.vcarpets.com";
 const canonicalPath = "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet";
 
 const product = {

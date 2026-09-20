@@ -5,7 +5,7 @@
  */
 
 const KEY = process.env.INDEXNOW_KEY || "47ce845ea2794869a16a0b4abad37110";
-const HOST = "www.vishomecarpet.com";
+const HOST = "www.vcarpets.com";
 const BASE = `https://${HOST}`;
 
 async function loadSitemapUrls() {

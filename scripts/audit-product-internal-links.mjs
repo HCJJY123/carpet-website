@@ -1,5 +1,5 @@
 const baseUrl = (process.argv[2] || "http://localhost:3100").replace(/\/$/, "");
-const productionHost = "www.vishomecarpet.com";
+const productionHost = "www.vcarpets.com";
 const allowedHosts = new Set([new URL(baseUrl).host, productionHost]);
 
 function normalizePath(href, sourcePath) {

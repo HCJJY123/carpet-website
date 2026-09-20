@@ -1,8 +1,9 @@
 import { applicationPages } from "@/lib/application-data";
 import { localizedLandings } from "@/lib/localized-landings";
 import { sitemapResponse } from "@/lib/sitemap-xml";
+import { siteUrl } from "@/lib/seo";
 
-const BASE = "https://www.vishomecarpet.com";
+const BASE = siteUrl;
 
 const staticPages = [
   "/",

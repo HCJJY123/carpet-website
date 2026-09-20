@@ -1,6 +1,6 @@
 # VISHOME Site Operations Guide
 
-**Site:** https://www.vishomecarpet.com
+**Site:** https://www.vcarpets.com
 
 **Brand:** VISHOME / Vishomecarpet
 

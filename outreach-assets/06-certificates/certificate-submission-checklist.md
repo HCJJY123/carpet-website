@@ -12,6 +12,6 @@ Required manual checks:
 
 Recommended public URL until confirmed:
 
-https://www.vishomecarpet.com/certifications
+https://www.vcarpets.com/certifications
 
 Use only construction-specific and current documents for third-party platforms.

@@ -88,7 +88,14 @@ export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone();
   const pathname = url.pathname;
   const secure = request.nextUrl.protocol === "https:";
-  const hostname = request.nextUrl.hostname;
+  const hostname = (request.headers.get("host") ?? request.nextUrl.hostname).split(":")[0].toLowerCase();
+
+  if (hostname === "vishomecarpet.com" || hostname === "www.vishomecarpet.com") {
+    url.protocol = "https:";
+    url.hostname = "www.vcarpets.com";
+    url.port = "";
+    return NextResponse.redirect(url, 308);
+  }
 
   if (isLocaleRoutingExcluded(pathname)) return NextResponse.next();
 
@@ -140,5 +147,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|.*\\.[a-zA-Z0-9]+$).*)"],
+  matcher: ["/((?!api|_next/static|_next/image).*)"],
 };

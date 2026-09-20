@@ -94,7 +94,7 @@ def header_footer(canvas, doc):
     canvas.setFillColor(MUTED)
     canvas.setFont("Helvetica", 6.5)
     canvas.drawString(17 * mm, 8.5 * mm, "sales@vishomecarpet.com")
-    canvas.drawCentredString(width / 2, 8.5 * mm, "www.vishomecarpet.com")
+    canvas.drawCentredString(width / 2, 8.5 * mm, "www.vcarpets.com")
     canvas.drawRightString(width - 17 * mm, 8.5 * mm, f"Page {doc.page}")
     canvas.restoreState()
 
@@ -227,7 +227,7 @@ def build_guide(filename, title, subtitle, facts, comparison, sections, source_u
         Spacer(1, 8),
         Paragraph(
             'For a project-specific review, email <link href="mailto:sales@vishomecarpet.com" color="#C8752A">sales@vishomecarpet.com</link> '
-            'or use <link href="https://www.vishomecarpet.com/contact" color="#C8752A">www.vishomecarpet.com/contact</link>.',
+            'or use <link href="https://www.vcarpets.com/contact" color="#C8752A">www.vcarpets.com/contact</link>.',
             styles["footer"],
         ),
     ])
@@ -287,10 +287,10 @@ def main():
             ]),
         ],
         [
-            ("Commercial carpet tiles", "https://www.vishomecarpet.com/products/carpet-tiles"),
-            ("Carpet tiles over concrete guide", "https://www.vishomecarpet.com/blog/carpet-tiles-over-concrete-installation-guide"),
-            ("Manufacturer profile", "https://www.vishomecarpet.com/commercial-carpet-manufacturer"),
-            ("Factory and production", "https://www.vishomecarpet.com/factory"),
+            ("Commercial carpet tiles", "https://www.vcarpets.com/products/carpet-tiles"),
+            ("Carpet tiles over concrete guide", "https://www.vcarpets.com/blog/carpet-tiles-over-concrete-installation-guide"),
+            ("Manufacturer profile", "https://www.vcarpets.com/commercial-carpet-manufacturer"),
+            ("Factory and production", "https://www.vcarpets.com/factory"),
         ],
     )
 
@@ -344,10 +344,10 @@ def main():
             ]),
         ],
         [
-            ("Hotel broadloom products", "https://www.vishomecarpet.com/products/wall-to-wall"),
-            ("Hotel carpet pattern guide", "https://www.vishomecarpet.com/blog/why-hotel-carpet-patterns-look-busy"),
-            ("Hotel acoustic carpet guide", "https://www.vishomecarpet.com/blog/hotel-noise-acoustic-carpet-specification-guide"),
-            ("Manufacturer profile", "https://www.vishomecarpet.com/commercial-carpet-manufacturer"),
+            ("Hotel broadloom products", "https://www.vcarpets.com/products/wall-to-wall"),
+            ("Hotel carpet pattern guide", "https://www.vcarpets.com/blog/why-hotel-carpet-patterns-look-busy"),
+            ("Hotel acoustic carpet guide", "https://www.vcarpets.com/blog/hotel-noise-acoustic-carpet-specification-guide"),
+            ("Manufacturer profile", "https://www.vcarpets.com/commercial-carpet-manufacturer"),
         ],
     )
 
@@ -401,10 +401,10 @@ def main():
             ]),
         ],
         [
-            ("Public-area carpet products", "https://www.vishomecarpet.com/products/public-area"),
-            ("Application planning guides", "https://www.vishomecarpet.com/projects"),
-            ("Manufacturer profile", "https://www.vishomecarpet.com/commercial-carpet-manufacturer"),
-            ("Request a project review", "https://www.vishomecarpet.com/contact"),
+            ("Public-area carpet products", "https://www.vcarpets.com/products/public-area"),
+            ("Application planning guides", "https://www.vcarpets.com/projects"),
+            ("Manufacturer profile", "https://www.vcarpets.com/commercial-carpet-manufacturer"),
+            ("Request a project review", "https://www.vcarpets.com/contact"),
         ],
     )
 

@@ -12,9 +12,9 @@ We have prepared product category pages, technical library pages, downloadable g
 
 Could you advise on manufacturer eligibility, listing fees, required product data, BIM/CAD requirements, regional restrictions and review timeline?
 
-Website: https://www.vishomecarpet.com/
+Website: https://www.vcarpets.com/
 
-Technical library: https://www.vishomecarpet.com/resources/technical-library
+Technical library: https://www.vcarpets.com/resources/technical-library
 
 Best regards,
 CONFIRM_REAL_NAME
@@ -46,7 +46,7 @@ I would like to propose a practical article about commercial carpet specificatio
 
 The contribution can include a real workflow, original product or project images where approved, procurement checks, common specification mistakes and links to technical resources.
 
-Reference: https://www.vishomecarpet.com/resources/technical-library
+Reference: https://www.vcarpets.com/resources/technical-library
 
 Best regards,
 CONFIRM_REAL_NAME

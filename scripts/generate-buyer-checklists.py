@@ -143,7 +143,7 @@ def build_pdf(filename, title, subtitle, facts, sections):
         Spacer(1, 8),
         Paragraph(
             "Send the completed project information to sales@vishomecarpet.com or submit it at "
-            '<link href="https://www.vishomecarpet.com/contact" color="#102A43">vishomecarpet.com/contact</link>.',
+            '<link href="https://www.vcarpets.com/contact" color="#102A43">vcarpets.com/contact</link>.',
             sheet_styles["footer"],
         ),
         Spacer(1, 3),

@@ -8,6 +8,7 @@ import WhatsAppFloating from "@/components/WhatsAppFloating";
 import SendInquiryFloating from "@/components/SendInquiryFloating";
 import LocaleExperience from "@/components/LocaleExperience";
 import DeferredSiteEnhancements from "@/components/DeferredSiteEnhancements";
+import { brandInfo } from "@/lib/data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.vishomecarpet.com"),
+  metadataBase: new URL(brandInfo.url),
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "SNIrO_J6kr1i6I36kSlpbPwsNdu4NiF6jmI2IoAJWWo",
   },
@@ -39,18 +40,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vishome | Premium Commercial Carpet & Flooring Solutions",
     description: "Vishome Global Commercial Carpet Co., Ltd.: a Tianjin-based manufacturer for commercial carpet tiles, hotel carpets, and custom B2B flooring projects.",
-    url: "https://www.vishomecarpet.com",
+    url: brandInfo.url,
     siteName: "Vishome",
     type: "website",
     images: [
       {
-        url: "https://www.vishomecarpet.com/images/og-cover.webp",
+        url: `${brandInfo.url}/images/og-cover.webp`,
         width: 1200,
         height: 630,
         alt: "Vishome Global Commercial Carpet Manufacturer",
       },
       {
-        url: "https://www.vishomecarpet.com/images/hero-home.webp",
+        url: `${brandInfo.url}/images/hero-home.webp`,
         width: 1200,
         height: 630,
         alt: "Vishome commercial carpet tiles and hotel flooring solutions",
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
     creator: "@VishomeCarpet",
     title: "Vishome | Premium Commercial Carpet & Flooring Solutions",
     description: "B2B commercial carpet manufacturer in Tianjin, China. Carpet tiles, hotel broadloom, public area flooring for global projects.",
-    images: ["https://www.vishomecarpet.com/images/og-cover.webp"],
+    images: [`${brandInfo.url}/images/og-cover.webp`],
   },
   icons: {
     icon: [

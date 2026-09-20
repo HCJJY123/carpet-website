@@ -5,7 +5,7 @@ import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 export const metadata = {
   title: "Carpet Manufacturing Factory | Vishome Global Commercial Carpet",
   description: "Explore the 50,000 sqm Vishome manufacturing facility. Premium production lines for commercial carpet tiles and hotel broadloom with 900+ skilled staff.",
-  alternates: { canonical: "https://www.vishomecarpet.com/factory" },
+  alternates: { canonical: "https://www.vcarpets.com/factory" },
 };
 
 export default function FactoryPage() {

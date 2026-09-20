@@ -22,7 +22,7 @@ export default function CommercialCarpetRfqCalculatorPage() {
     operatingSystem: "Web browser",
     url: absoluteUrl(pagePath),
     description: metadata.description,
-    provider: { "@id": "https://www.vishomecarpet.com/#organization" },
+    provider: { "@id": "https://www.vcarpets.com/#organization" },
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   };
 

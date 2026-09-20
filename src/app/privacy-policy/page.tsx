@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Vishome Carpet",
   description:
     "Privacy Policy for Vishome Carpet. Learn how Vishome Global Commercial Carpet Co., Ltd. collects, uses, protects, and manages information submitted through website forms and Google Ads lead forms.",
-  alternates: { canonical: "https://www.vishomecarpet.com/privacy-policy" },
+  alternates: { canonical: "https://www.vcarpets.com/privacy-policy" },
   openGraph: {
     title: "Privacy Policy | Vishome Carpet",
     description:
       "How Vishome Global Commercial Carpet Co., Ltd. handles website and lead form information, cookies, third-party services, data security, and contact requests.",
-    url: "https://www.vishomecarpet.com/privacy-policy",
+    url: "https://www.vcarpets.com/privacy-policy",
     siteName: "Vishome Carpet",
     type: "website",
   },
@@ -121,7 +121,7 @@ export default function PrivacyPolicyPage() {
                   Effective date: July 24, 2026. This policy applies to information collected on
                   {" "}
                   <Link href="/" className="font-bold text-primary hover:text-accent">
-                    www.vishomecarpet.com
+                    www.vcarpets.com
                   </Link>
                   {" "}
                   and related Vishome Carpet lead forms used for commercial carpet inquiries.

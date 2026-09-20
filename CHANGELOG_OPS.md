@@ -2,6 +2,20 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-09-20 `domain-migration-vcarpets-20260920`
+
+**Type:** Public domain migration / technical SEO / redirect preservation
+
+**Scope:** Move the canonical public origin from `www.vishomecarpet.com` to `www.vcarpets.com` while preserving existing paths, query parameters, page content, inquiry flows, email identity and WhatsApp behavior. Add application-level 308 redirects for both old hostnames once those domains are attached to the same Vercel project.
+
+**Changed systems:** Canonical and metadata origin, Open Graph and JSON-LD absolute URLs, hreflang/source URLs, split sitemaps, robots host and sitemap entries, `llms` files, `ai-sources.json`, product-feed generators, IndexNow host, visitor-intelligence origins and production URL references.
+
+**Preserved:** `sales@vishomecarpet.com`, all published paths, existing page content structure and legacy PDF files. Legacy PDF links remain safe because the old hostnames redirect path-for-path after DNS/Vercel configuration.
+
+**Manual release steps:** Attach `www.vcarpets.com`, `vcarpets.com`, `www.vishomecarpet.com` and `vishomecarpet.com` to the Vercel project; set the new `www` host as primary; configure DNS/HTTPS; verify old-host redirects; update Search Console and Bing properties; perform Change of Address only after redirects are live.
+
+**Rollback point:** `391e9f9`
+
 ## 2026-09-10 `content/uk-education-procurement-wave-20260910`
 
 **Type:** B2B content growth / country procurement / AI-readable discovery / planning tools
