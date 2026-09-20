@@ -4,11 +4,17 @@ import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 export default function JsonLd() {
   const organizationData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "Manufacturer"],
     "@id": `${brandInfo.url}/#organization`,
     name: brandInfo.name,
-    alternateName: [brandInfo.shortName, "VCARPETS"],
+    alternateName: ["VCARPETS", "Vishome Global Commercial Carpet", "Vishomecarpet"],
     url: brandInfo.url,
+    foundingDate: "2005",
+    numberOfEmployees: 900,
+    sameAs: [
+      // Official profile URLs (LinkedIn, Alibaba International, YouTube, Facebook, etc.).
+      // Add each verified profile URL here; leave empty until verified.
+    ],
     logo: absoluteUrl("/logo.svg"),
     image: absoluteUrl("/images/og-cover.webp"),
     email: brandInfo.email,
