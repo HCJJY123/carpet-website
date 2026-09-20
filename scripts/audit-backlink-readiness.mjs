@@ -93,8 +93,11 @@ function auditLinks() {
   for (const file of requiredFiles) {
     if (!fs.existsSync(path.join(ROOT, file))) messages.push(`Missing sitemap/robots file: ${file}`);
   }
-  const sitemapText = requiredFiles
-    .filter((file) => file.includes("sitemap"))
+  const sitemapText = [
+    ...requiredFiles.filter((file) => file.includes("sitemap")),
+    "src/lib/sitemap-data.ts",
+    "src/lib/generated-static-sitemap-routes.ts",
+  ]
     .map((file) => read(path.join(ROOT, file)))
     .join("\n");
   ["/resources/technical-library", "/architects-designers", "/media/press-kit", "/applications", "/quality-control", "/certifications"].forEach((route) => {

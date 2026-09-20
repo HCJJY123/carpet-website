@@ -35,16 +35,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: [
-      `${siteUrl}/sitemap.xml`,
-      `${siteUrl}/sitemaps/pages.xml`,
-      `${siteUrl}/sitemaps/products.xml`,
-      `${siteUrl}/sitemaps/projects.xml`,
-      `${siteUrl}/sitemaps/resources.xml`,
-      `${siteUrl}/sitemaps/blog.xml`,
-      `${siteUrl}/sitemap-ru.xml`,
-      `${siteUrl}/sitemap-markets.xml`,
-    ],
+    sitemap: `${siteUrl}/sitemap.xml`,
     host: new URL(siteUrl).hostname,
   };
 }
