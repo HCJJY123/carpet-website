@@ -99,6 +99,7 @@ export default async function ProjectDetailPage({ params }: Props) {
     image: absoluteUrl(heroImage),
     inLanguage: "en",
     genre: "Commercial carpet application and procurement guide",
+    datePublished: "2026-07-30",
     dateModified: "2026-07-30",
     keywords: profile.topics,
     author: {

@@ -55,6 +55,8 @@ export function productJsonLd(product: Product) {
     category: categoryName(product.category),
     material: product.spec.material,
     size: product.spec.size,
+    ...(product.technicalSpecs.rollWidth ? { width: product.technicalSpecs.rollWidth } : {}),
+    countryOfOrigin: "CN",
     ...(product.spec.colors.length ? { color: product.spec.colors.map((color) => color.name).join(", ") } : {}),
     ...(product.fobPrice
       ? {
@@ -99,7 +101,7 @@ export function productJsonLd(product: Product) {
       ...product.spec.colors.map((color) => ({ "@type": "PropertyValue", name: "Color Option", value: color.name })),
       ...Object.entries(product.technicalSpecs)
         .filter(([, value]) => Boolean(value))
-        .map(([name, value]) => ({ "@type": "PropertyValue", name, value })),
+        .map(([name, value]) => ({ "@type": "PropertyValue", name: name.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase()), value })),
       ...product.features.map((value) => ({ "@type": "PropertyValue", name: "Feature", value })),
     ],
   };
