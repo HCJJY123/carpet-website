@@ -1,7 +1,8 @@
 import { blogPosts } from "@/lib/blog-data";
 import { sitemapResponse } from "@/lib/sitemap-xml";
+import { siteUrl } from "@/lib/seo";
 
-const BASE = "https://www.vishomecarpet.com";
+const BASE = siteUrl;
 
 export function GET() {
   return sitemapResponse(blogPosts.map((post) => ({

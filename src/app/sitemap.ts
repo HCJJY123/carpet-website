@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
+import { siteUrl } from "@/lib/seo";
 
-const BASE = "https://www.vishomecarpet.com";
+const BASE = siteUrl;
 
 type RootOnlyRoute = {
   url: string;

@@ -12,7 +12,7 @@ import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 import { getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 
 export const metadata: Metadata = {
-  alternates: { canonical: "https://www.vishomecarpet.com" },
+  alternates: { canonical: "https://www.vcarpets.com" },
 };
 
 const homeCategoryImages: Record<string, string> = {

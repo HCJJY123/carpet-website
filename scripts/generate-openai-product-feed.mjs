@@ -5,7 +5,7 @@ import ts from "typescript";
 const root = process.cwd();
 const dataFile = path.join(root, "src/lib/data.ts");
 const outputDir = path.join(root, "docs/ai-commerce");
-const siteUrl = "https://www.vishomecarpet.com";
+const siteUrl = "https://www.vcarpets.com";
 
 function loadSiteData() {
   const source = fs.readFileSync(dataFile, "utf8");

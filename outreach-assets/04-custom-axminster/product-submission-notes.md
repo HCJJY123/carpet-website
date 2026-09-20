@@ -1,12 +1,12 @@
 # Custom Axminster Submission Notes
 
-Target URL: https://www.vishomecarpet.com/products/custom-axminster-carpet
+Target URL: https://www.vcarpets.com/products/custom-axminster-carpet
 
 Related resources:
 
-- https://www.vishomecarpet.com/products/wall-to-wall/luxury-hotel-broadloom
-- https://www.vishomecarpet.com/applications/hotel-corridor
-- https://www.vishomecarpet.com/applications/hotel-ballroom
+- https://www.vcarpets.com/products/wall-to-wall/luxury-hotel-broadloom
+- https://www.vcarpets.com/applications/hotel-corridor
+- https://www.vcarpets.com/applications/hotel-ballroom
 
 Use this pack for architecture and hospitality platforms that need a custom-carpet workflow rather than a stock product listing. Emphasize artwork review, color approval, strike-off samples, roll planning and quotation confirmation.
 

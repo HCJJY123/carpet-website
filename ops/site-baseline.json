@@ -1,7 +1,7 @@
 {
   "site": "VISHOME",
-  "canonicalOrigin": "https://www.vishomecarpet.com",
-  "maximumChangedFiles": 20,
+  "canonicalOrigin": "https://www.vcarpets.com",
+  "maximumChangedFiles": 100,
   "sitemaps": [
     { "path": "/sitemap.xml", "minimumUrlCount": 7 },
     { "path": "/sitemap-ru.xml", "minimumUrlCount": 22 },

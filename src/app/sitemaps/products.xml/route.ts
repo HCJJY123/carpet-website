@@ -1,9 +1,9 @@
 import { productCategories, products } from "@/lib/data";
 import { productLinePages } from "@/lib/product-line-data";
-import { productPath } from "@/lib/seo";
+import { productPath, siteUrl } from "@/lib/seo";
 import { sitemapResponse } from "@/lib/sitemap-xml";
 
-const BASE = "https://www.vishomecarpet.com";
+const BASE = siteUrl;
 
 const productModifiedDates: Record<string, string> = {
   "/products/carpet-tiles": "2026-09-08",

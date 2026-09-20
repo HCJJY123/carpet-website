@@ -2,7 +2,7 @@
 
 Public URL:
 
-https://www.vishomecarpet.com/resources/bim-cad
+https://www.vcarpets.com/resources/bim-cad
 
 First-stage verified asset types:
 

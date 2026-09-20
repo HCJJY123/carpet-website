@@ -185,7 +185,7 @@ export default function NylonOfficeCarpetTilePage() {
     manufacturer: {
       "@type": "Organization",
       name: "Vishome Global Commercial Carpet Co., Ltd.",
-      url: "https://www.vishomecarpet.com",
+      url: "https://www.vcarpets.com",
     },
     offers: {
       "@type": "AggregateOffer",
@@ -199,7 +199,7 @@ export default function NylonOfficeCarpetTilePage() {
       seller: {
         "@type": "Organization",
         name: "Vishome Global Commercial Carpet Co., Ltd.",
-        url: "https://www.vishomecarpet.com",
+        url: "https://www.vcarpets.com",
       },
     },
     additionalProperty: [
