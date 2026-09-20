@@ -7,7 +7,7 @@ export const hotelCorridorCarpetMexicoGuide: BlogPost = {
     "A practical procurement guide for Mexican hotel corridors where guest comfort, stain control, pattern scale, and installation quality all matter.",
   painPoint:
     "Hotel corridor carpet decisions often fail when buyers compare only a render or one sample swatch. In Mexico, corridor lighting, guest traffic, cleaning routines, and project timing all affect the final result.",
-  seoTitle: "Hotel Corridor Carpet in Mexico | Procurement Guide | VISHOME",
+  seoTitle: "Hotel Corridor Carpet in Mexico | Procurement Guide | VCARPETS",
   description:
     "Learn how to specify hotel corridor carpet in Mexico for guest comfort, stain control, broadloom planning, installation quality, and maintenance-ready procurement.",
   keywords: [
@@ -20,7 +20,7 @@ export const hotelCorridorCarpetMexicoGuide: BlogPost = {
   ],
   date: "2026-08-06",
   dateModified: "2026-08-06",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Hotel Carpet",
   image: "/images/blog-series/hotel-corridor-carpet-mexico/hotel-corridor-carpet-mexico-hero.png",
   h1Image: "/images/blog-series/hotel-corridor-carpet-mexico/hotel-corridor-carpet-mexico-hero.png",
@@ -153,7 +153,7 @@ export const hotelCorridorCarpetMexicoGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "If you are planning a hotel corridor carpet project in Mexico, send the floor plan, total area, traffic level, preferred color family, and required delivery date. Vishomecarpet can then recommend the most suitable hotel carpet construction and quotation path.",
+          text: "If you are planning a hotel corridor carpet project in Mexico, send the floor plan, total area, traffic level, preferred color family, and required delivery date. VCARPETS can then recommend the most suitable hotel carpet construction and quotation path.",
         },
       ],
     },

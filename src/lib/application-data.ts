@@ -18,7 +18,7 @@ export const applicationPages: ApplicationPage[] = [
   {
     slug: "office",
     title: "Office Carpet Specification for Commercial Workspaces",
-    seoTitle: "Office Carpet Specification | Vishome Carpet",
+    seoTitle: "Office Carpet Specification | VCARPETS",
     seoDescription: "Plan office carpet tiles for commercial workspaces with checks for traffic, replacement stock, installation method, backing, samples and project quotation.",
     eyebrow: "Office Application",
     summary: "Office carpet projects usually need modular replacement, acoustic comfort, practical color planning and predictable installation. Buyers should confirm backing, tile size, traffic class, attic stock and cleaning requirements before final quotation.",
@@ -31,7 +31,7 @@ export const applicationPages: ApplicationPage[] = [
   {
     slug: "hotel-guestroom",
     title: "Hotel Guestroom Carpet Specification Support",
-    seoTitle: "Hotel Guestroom Carpet Specification | Vishome Carpet",
+    seoTitle: "Hotel Guestroom Carpet Specification | VCARPETS",
     seoDescription: "Plan hotel guestroom carpet by reviewing comfort, pattern scale, acoustic needs, broadloom roll planning, samples, maintenance and delivery timing.",
     eyebrow: "Hotel Guestroom Application",
     summary: "Hotel guestroom carpet must balance comfort, sound control, pattern coordination, maintenance and budget. Final material, backing, roll width and delivery plan should be confirmed after sample approval.",
@@ -44,7 +44,7 @@ export const applicationPages: ApplicationPage[] = [
   {
     slug: "hotel-corridor",
     title: "Hotel Corridor Carpet Specification Support",
-    seoTitle: "Hotel Corridor Carpet Specification | Vishome Carpet",
+    seoTitle: "Hotel Corridor Carpet Specification | VCARPETS",
     seoDescription: "Plan hotel corridor carpet with checks for traffic, luggage-wheel wear, pattern direction, roll planning, fire documents and replacement material.",
     eyebrow: "Hotel Corridor Application",
     summary: "Hotel corridor carpet faces luggage wheels, long visual runs, cleaning pressure and guest noise concerns. Buyers should confirm pattern direction, seam plan, fire document availability and attic stock before production.",
@@ -57,7 +57,7 @@ export const applicationPages: ApplicationPage[] = [
   {
     slug: "hotel-ballroom",
     title: "Hotel Ballroom Carpet Specification Support",
-    seoTitle: "Hotel Ballroom Carpet Specification | Vishome Carpet",
+    seoTitle: "Hotel Ballroom Carpet Specification | VCARPETS",
     seoDescription: "Plan hotel ballroom carpet for custom patterns, large-area coordination, sample approval, banquet traffic and installation sequencing.",
     eyebrow: "Hotel Ballroom Application",
     summary: "Ballroom carpet selection should consider large pattern scale, banquet traffic, event cleaning and installation sequencing. Custom designs require approved artwork, strike-off samples and coordinated roll planning.",
@@ -70,7 +70,7 @@ export const applicationPages: ApplicationPage[] = [
   {
     slug: "public-space",
     title: "Public Space Carpet Specification Support",
-    seoTitle: "Public Space Carpet Specification | Vishome Carpet",
+    seoTitle: "Public Space Carpet Specification | VCARPETS",
     seoDescription: "Plan public-space carpet for lobbies, corridors, stairs and decorative commercial areas with checks for traffic, material, samples and maintenance.",
     eyebrow: "Public Space Application",
     summary: "Public spaces need clear material selection, traffic planning, maintenance access and visual coordination. Buyers should match carpet type to lobby, corridor, stair or decorative use rather than use one specification everywhere.",

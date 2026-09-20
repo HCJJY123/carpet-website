@@ -7,7 +7,7 @@ export const uaeHotelCarpetProcurementDocumentsChecklist: BlogPost = {
     "A practical checklist for Dubai and Abu Dhabi hotel carpet submittals, sample approval, fire and VOC review, packing and project RFQs.",
   painPoint:
     "UAE hotel carpet procurement often slows down when design samples, technical documents, installation requirements and shipping assumptions are approved in separate conversations.",
-  seoTitle: "UAE Hotel Carpet Procurement Documents Checklist | VISHOME",
+  seoTitle: "UAE Hotel Carpet Procurement Documents Checklist | VCARPETS",
   description:
     "Use this UAE hotel carpet procurement documents checklist for Dubai and Abu Dhabi projects. Review samples, construction, fire and VOC documents, installation, packing and RFQ fields before ordering.",
   keywords: [
@@ -20,7 +20,7 @@ export const uaeHotelCarpetProcurementDocumentsChecklist: BlogPost = {
   ],
   date: "2026-09-08",
   dateModified: "2026-09-08",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "UAE Hotel Procurement",
   image: "/images/blog-series/uae-hotel-carpet-procurement-documents-checklist/uae-hotel-carpet-procurement-hero.webp",
   h1Image: "/images/blog-series/uae-hotel-carpet-procurement-documents-checklist/uae-hotel-carpet-procurement-hero.webp",

@@ -50,7 +50,7 @@ export function productJsonLd(product: Product) {
     url: productUrl,
     mainEntityOfPage: productUrl,
     inLanguage: "en",
-    brand: { "@type": "Brand", name: "Vishomecarpet" },
+    brand: { "@type": "Brand", name: "VCARPETS" },
     manufacturer: { "@type": "Organization", name: brandInfo.name, url: brandInfo.url },
     category: categoryName(product.category),
     material: product.spec.material,

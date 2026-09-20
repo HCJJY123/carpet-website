@@ -1,27 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const companyName = "Vishome Global Commercial Carpet Co., Ltd.";
+const companyName = "Vcarpets Global Commercial Carpet Co., Ltd.";
 const contactEmail = "sales@vcarpets.com";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Vishome Carpet",
+  title: "Privacy Policy | VCARPETS",
   description:
-    "Privacy Policy for Vishome Carpet. Learn how Vishome Global Commercial Carpet Co., Ltd. collects, uses, protects, and manages information submitted through website forms and Google Ads lead forms.",
+    "Privacy Policy for VCARPETS. Learn how Vcarpets Global Commercial Carpet Co., Ltd. collects, uses, protects, and manages information submitted through website forms and Google Ads lead forms.",
   alternates: { canonical: "https://www.vcarpets.com/privacy-policy" },
   openGraph: {
-    title: "Privacy Policy | Vishome Carpet",
+    title: "Privacy Policy | VCARPETS",
     description:
-      "How Vishome Global Commercial Carpet Co., Ltd. handles website and lead form information, cookies, third-party services, data security, and contact requests.",
+      "How Vcarpets Global Commercial Carpet Co., Ltd. handles website and lead form information, cookies, third-party services, data security, and contact requests.",
     url: "https://www.vcarpets.com/privacy-policy",
-    siteName: "Vishome Carpet",
+    siteName: "VCARPETS",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Privacy Policy | Vishome Carpet",
+    title: "Privacy Policy | VCARPETS",
     description:
-      "Privacy information for Vishome Carpet website visitors, project inquiry forms, and Google Ads lead form submissions.",
+      "Privacy information for VCARPETS website visitors, project inquiry forms, and Google Ads lead form submissions.",
   },
 };
 
@@ -29,7 +29,7 @@ const sections = [
   {
     title: "Information We Collect",
     body: [
-      "When you contact Vishome Carpet through our website, request a quotation, submit a sample request, or complete a Google Ads lead form, we may collect your name, company name, email address, phone number, country or region, project requirements, product interests, message content, and other details you choose to provide.",
+      "When you contact VCARPETS through our website, request a quotation, submit a sample request, or complete a Google Ads lead form, we may collect your name, company name, email address, phone number, country or region, project requirements, product interests, message content, and other details you choose to provide.",
       "We may also collect basic technical information such as browser type, device information, referring page, IP address, approximate location, form submission time, and website usage activity for security, analytics, and service improvement purposes.",
       "For business analytics, we may process IP-derived organization information such as ASN, organization name, country, company domain, and network classification where available. We use hashed IP values and randomly generated visitor and session identifiers for visit grouping and do not use this data to identify individual people.",
       "We may associate those pseudonymous identifiers with website pages viewed, product interests, advertising attribution, engagement duration, and Microsoft Clarity session recordings so that our team can understand business demand and distinguish likely company traffic from residential, mobile, cloud, or internal traffic.",
@@ -58,9 +58,9 @@ const sections = [
     title: "Third-party Services",
     body: [
       "With analytics consent, we may use third-party services such as Google Ads, Google Analytics, Microsoft Advertising UET, Microsoft Clarity, Yandex Metrica, website hosting providers, form processing tools, email systems, and communication platforms to operate the website, process inquiries, analyze traffic, and manage marketing campaigns.",
-      "For translated browsing outside our manually translated landing pages, we may use Google Translate. Google may receive the page text needed for translation, the selected language, and standard technical request information such as IP address, browser, and device data. Information typed into inquiry form fields is not intentionally submitted to Google Translate by Vishome.",
+      "For translated browsing outside our manually translated landing pages, we may use Google Translate. Google may receive the page text needed for translation, the selected language, and standard technical request information such as IP address, browser, and device data. Information typed into inquiry form fields is not intentionally submitted to Google Translate by VCARPETS.",
       "We may also use Microsoft Clarity, Cloudflare, and IPinfo Lite to understand website behavior, classify network traffic, estimate company-level interest where technically possible, protect the website, and improve B2B sales follow-up.",
-      "Website inquiry details are delivered through Formspree and may also be stored in Vishome's access-controlled Cloudflare D1 database so our team can manage quotations, follow-up status, lead quality, and advertising attribution in one record.",
+      "Website inquiry details are delivered through Formspree and may also be stored in VCARPETS's access-controlled Cloudflare D1 database so our team can manage quotations, follow-up status, lead quality, and advertising attribution in one record.",
       "These third-party services may process information according to their own privacy policies. We do not sell your personal information to third parties.",
     ],
   },
@@ -88,10 +88,10 @@ export default function PrivacyPolicyPage() {
             Website Privacy Notice
           </p>
           <h1 className="max-w-4xl text-4xl font-black uppercase leading-tight tracking-tight md:text-6xl">
-            Privacy Policy | Vishome Carpet
+            Privacy Policy | VCARPETS
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-8 text-white/70 md:text-lg">
-            This Privacy Policy explains how {companyName} collects, uses, and protects information submitted through Vishome Carpet website forms, project inquiries, and advertising lead forms.
+            This Privacy Policy explains how {companyName} collects, uses, and protects information submitted through VCARPETS website forms, project inquiries, and advertising lead forms.
           </p>
         </div>
       </section>
@@ -124,7 +124,7 @@ export default function PrivacyPolicyPage() {
                     www.vcarpets.com
                   </Link>
                   {" "}
-                  and related Vishome Carpet lead forms used for commercial carpet inquiries.
+                  and related VCARPETS lead forms used for commercial carpet inquiries.
                 </p>
               </div>
 

@@ -49,8 +49,8 @@ export default function Home() {
 
       <AnswerFirst
         eyebrow="Commercial Carpet Sourcing Answer"
-        title="What Can Vishomecarpet Supply for a Commercial Project?"
-        answer="Vishomecarpet supplies factory-direct commercial carpet tiles, custom hotel broadloom, and specialist public-area carpets for international B2B projects. Buyers can start with a material sample or trial quantity, then confirm construction, color, testing, packing, and delivery terms before project production. The right product depends on traffic, application, budget, destination, and required compliance."
+        title="What Can VCARPETS Supply for a Commercial Project?"
+        answer="VCARPETS supplies factory-direct commercial carpet tiles, custom hotel broadloom, and specialist public-area carpets for international B2B projects. Buyers can start with a material sample or trial quantity, then confirm construction, color, testing, packing, and delivery terms before project production. The right product depends on traffic, application, budget, destination, and required compliance."
         facts={[
           { label: "Main Product Groups", value: "Carpet tiles, hotel broadloom, public-area carpet" },
           { label: "Buyer Support", value: "Specification review, samples, custom design, export packing" },
@@ -77,7 +77,7 @@ export default function Home() {
       <ConversionLiftPanel
         eyebrow="Buyer Activity Focus"
         title="Most Visitors Compare Carpet Tiles and Hotel Broadloom Before Asking for Price"
-        body="If your project is an office, hotel, corridor, ballroom, retail, or public interior, send the area, application, destination, and deadline first. Vishome can reply with the right category path, sample suggestion, and quotation inputs."
+        body="If your project is an office, hotel, corridor, ballroom, retail, or public interior, send the area, application, destination, and deadline first. VCARPETS can reply with the right category path, sample suggestion, and quotation inputs."
         product="Commercial Carpet Project"
         quoteHref="/contact?product=Commercial%20Carpet%20Project#quote-form"
         compact
@@ -180,7 +180,7 @@ export default function Home() {
         </section>
       )}
 
-      {/* Vishome Global Strength - B2B Data Matrix */}
+      {/* VCARPETS Global Strength - B2B Data Matrix */}
       <section className="section-padding bg-white !pb-6 md:!pb-20">
         <div className="container-fox">
           <div className="grid items-center gap-10 mb-0 lg:grid-cols-2 lg:gap-20 md:mb-20">
@@ -189,11 +189,11 @@ export default function Home() {
                 Corporate Profile
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 uppercase leading-tight">
-                Tianjin-Based Vishome Global Commercial Carpet Co., Ltd.
+                Tianjin-Based Vcarpets Global Commercial Carpet Co., Ltd.
               </h2>
               <div className="prose prose-slate max-w-none">
                 <p className="text-muted text-lg leading-relaxed mb-6 font-medium">
-                  Vishome is a professional commercial carpet manufacturer integrating carpet research, development, production, and international trade. With a 50,000-square-meter factory, more than 900 skilled employees, and exports to over 45 countries and regions, we provide reliable carpet solutions for global distributors, contractors, hotels, offices, and commercial projects.
+                  VCARPETS is a professional commercial carpet manufacturer integrating carpet research, development, production, and international trade. With a 50,000-square-meter factory, more than 900 skilled employees, and exports to over 45 countries and regions, we provide reliable carpet solutions for global distributors, contractors, hotels, offices, and commercial projects.
                 </p>
                 <p className="text-muted text-base leading-relaxed mb-10">
                   Our main products include commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event carpets, stair runners, and customized rugs. Backed by a professional design and production team, we support custom sizes, colors, materials, patterns, and project-based flooring solutions for international B2B customers.

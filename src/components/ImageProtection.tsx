@@ -67,7 +67,7 @@ export default function ImageProtection() {
       event.preventDefault();
       setLightboxImage({
         src,
-        alt: img.alt || "Vishome Carpet image preview",
+        alt: img.alt || "VCARPETS image preview",
       });
     };
 

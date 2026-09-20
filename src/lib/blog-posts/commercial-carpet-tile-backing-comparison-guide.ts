@@ -7,7 +7,7 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
     "How procurement teams can compare backing by chair-wheel movement, moisture risk, installation method, comfort, replacement and project documentation.",
   painPoint:
     "Commercial carpet tile quotations often look similar from the top. The risk appears underneath when backing, substrate, adhesive, traffic and replacement planning were never compared as one specification.",
-  seoTitle: "Commercial Carpet Tile Backing Comparison | VISHOME",
+  seoTitle: "Commercial Carpet Tile Backing Comparison | VCARPETS",
   description:
     "Compare bitumen, PVC-free PE and cushion-backed commercial carpet tile systems for offices, corridors and public projects before approving a quotation.",
   keywords: [
@@ -20,7 +20,7 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
   ],
   date: "2026-08-25",
   dateModified: "2026-08-25",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Buying Guide",
   image:
     "/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-backing-comparison-hero.webp",
@@ -365,7 +365,7 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "Vishome can help compare commercial carpet tile constructions against the actual project use case. Send your zone map, area, traffic, backing preference, subfloor condition, sample requirement, destination and target date. The project team can then prepare a clearer product, documentation and quotation path instead of sending a generic tile price.",
+          text: "VCARPETS can help compare commercial carpet tile constructions against the actual project use case. Send your zone map, area, traffic, backing preference, subfloor condition, sample requirement, destination and target date. The project team can then prepare a clearer product, documentation and quotation path instead of sending a generic tile price.",
         },
       ],
     },

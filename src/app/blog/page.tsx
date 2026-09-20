@@ -9,11 +9,11 @@ const blogDescription =
   "Factory-written commercial carpet procurement guides on carpet tile price, MOQ, hotel carpet specifications, samples, shipping, installation risk, and supplier verification.";
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Procurement Intelligence | Blog | VISHOME",
+  title: "Commercial Carpet Procurement Intelligence | Blog | VCARPETS",
   description: blogDescription,
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Commercial Carpet Procurement Intelligence | VISHOME",
+    title: "Commercial Carpet Procurement Intelligence | VCARPETS",
     description:
       "B2B buying guides for commercial carpet tiles, hotel carpet, samples, MOQ, logistics, installation and sourcing decisions.",
     url: absoluteUrl("/blog"),
@@ -131,7 +131,7 @@ const blogFaqs = [
   {
     question: "Can I request carpet samples before a bulk order?",
     answer:
-      "Yes. Vishomecarpet can discuss material swatches, color review, backing samples and project-specific sample paths before bulk production. Final options depend on the selected construction and quantity.",
+      "Yes. VCARPETS can discuss material swatches, color review, backing samples and project-specific sample paths before bulk production. Final options depend on the selected construction and quantity.",
   },
   {
     question: "Which documents should be confirmed before ordering?",
@@ -139,7 +139,7 @@ const blogFaqs = [
       "Confirm the technical data sheet, construction details, backing, fire or test document requirement, packing method, commercial terms, quotation validity, and whether documents match the exact quoted product.",
   },
   {
-    question: "How do I contact Vishomecarpet for a project quotation?",
+    question: "How do I contact VCARPETS for a project quotation?",
     answer:
       "Use the project quote form with product type, estimated area, destination country and business email. The export team can then reply with MOQ, sample options, lead time and quotation basis.",
   },
@@ -318,7 +318,7 @@ export default function BlogPage() {
             <p className="text-[10px] font-black uppercase tracking-[0.2em] text-accent">Need Price, MOQ or Sample Advice?</p>
             <h2 className="mt-3 text-3xl font-black uppercase leading-tight md:text-4xl">Turn a Buying Question Into a Project Quote</h2>
             <p className="mt-4 max-w-3xl text-sm leading-7 text-white/75 md:text-base">
-              Send product type, estimated area, destination country and target date. Vishomecarpet can recommend a suitable carpet construction and reply with MOQ, sample options, lead time and quotation basis.
+              Send product type, estimated area, destination country and target date. VCARPETS can recommend a suitable carpet construction and reply with MOQ, sample options, lead time and quotation basis.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">

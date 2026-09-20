@@ -8,8 +8,8 @@ const pagePath = "/certifications";
 const documentTypes = ["Fire performance documents", "Antistatic or backing information", "Product technical data sheet", "Packing and quotation record", "Project-specific document set"];
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Certificates | VISHOME",
-  description: "Request construction-specific commercial carpet certificates, fire documents, technical data sheets and project document sets from Vishome Carpet.",
+  title: "Commercial Carpet Certificates | VCARPETS",
+  description: "Request construction-specific commercial carpet certificates, fire documents, technical data sheets and project document sets from VCARPETS.",
   alternates: { canonical: absoluteUrl(pagePath) },
 };
 

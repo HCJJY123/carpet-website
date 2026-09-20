@@ -14,7 +14,7 @@ const checks = [
 ];
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Installation Guides | Vishome Carpet",
+  title: "Commercial Carpet Installation Guides | VCARPETS",
   description: "Installation planning resources for commercial carpet tiles, hotel broadloom and public-area carpet projects. Request construction-specific installation documents.",
   alternates: { canonical: absoluteUrl(pagePath) },
 };

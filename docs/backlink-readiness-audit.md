@@ -1,10 +1,10 @@
-# Vishomecarpet Backlink Readiness Audit
+# VCARPETS Backlink Readiness Audit
 
 Last reviewed: 2026-08-06
 
 ## Scope
 
-This audit follows the Vishomecarpet backlink-readiness specification. The objective is to make the site easier for legitimate product platforms, architects, project partners, trade media and AI/search systems to cite. It does not recommend paid link schemes, bulk directory submissions, PBNs or unverifiable claims.
+This audit follows the VCARPETS backlink-readiness specification. The objective is to make the site easier for legitimate product platforms, architects, project partners, trade media and AI/search systems to cite. It does not recommend paid link schemes, bulk directory submissions, PBNs or unverifiable claims.
 
 ## Current Repository Snapshot
 

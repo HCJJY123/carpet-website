@@ -13,7 +13,7 @@ const controls = [
 ];
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Quality Control | Vishome Carpet",
+  title: "Commercial Carpet Quality Control | VCARPETS",
   description: "Quality-control workflow for commercial carpet projects: sample approval, construction confirmation, batch consistency, packing and document review.",
   alternates: { canonical: absoluteUrl(pagePath) },
 };

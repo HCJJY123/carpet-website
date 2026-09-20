@@ -61,18 +61,18 @@ const faqJsonLd = {
 
 export const metadata: Metadata = product
   ? {
-      title: "Axminster 80/20 Wool Blend Hotel Carpet | VISHOME",
+      title: "Axminster 80/20 Wool Blend Hotel Carpet | VCARPETS",
       description: "Axminster woven 80% wool 20% nylon wall-to-wall carpet for five-star hotels, corridors, ballrooms and casinos. Custom pattern, MOQ 500 SQM.",
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "Axminster 80/20 Wool Blend Hotel Carpet | VISHOME",
+        title: "Axminster 80/20 Wool Blend Hotel Carpet | VCARPETS",
         description: "Custom woven wool-blend broadloom for luxury hotel rooms, corridors, ballrooms, casinos, and contract interiors.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
         images: [{ url: absoluteUrl(product.image), alt: product.name }],
       },
     }
-  : { title: "Commercial Carpet Product | VISHOME" };
+  : { title: "Commercial Carpet Product | VCARPETS" };
 
 export default function ProductDetailPage() {
   const productId = "luxury-hotel-broadloom";

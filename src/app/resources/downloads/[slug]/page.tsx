@@ -32,11 +32,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = `/resources/downloads/${document.slug}`;
 
   return {
-    title: `${document.title} | VISHOME`,
+    title: `${document.title} | VCARPETS`,
     description: document.description,
     alternates: { canonical: absoluteUrl(canonical) },
     openGraph: {
-      title: `${document.title} | VISHOME`,
+      title: `${document.title} | VCARPETS`,
       description: document.description,
       url: absoluteUrl(canonical),
       type: "article",

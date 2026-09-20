@@ -9,7 +9,7 @@ export const hotelCorridorCarpetStainHidingProcurementGuide: BlogPost = {
     "A procurement-first guide for hotel corridor carpet buyers who need stain control, guest confidence, realistic maintenance, and a corridor that still feels premium after daily traffic.",
   painPoint:
     "Hotel carpet complaints often come from the gap between showroom approval and real corridor operation: luggage wheels, coffee drips, wet shoes, dim lighting, and cleaning schedules can make the wrong carpet look dirty even when the hotel is maintained.",
-  seoTitle: "Hotel Corridor Carpet Stain-Hiding Guide for Renovation Buyers | Vishomecarpet",
+  seoTitle: "Hotel Corridor Carpet Stain-Hiding Guide for Renovation Buyers | VCARPETS",
   description:
     "Learn how hotel corridor carpet can reduce visible stains, cleaning complaints, and renovation risk through pattern scale, color depth, fiber choice, maintenance planning, and spare-stock control.",
   keywords: [
@@ -22,7 +22,7 @@ export const hotelCorridorCarpetStainHidingProcurementGuide: BlogPost = {
   ],
   date: "2026-08-14",
   dateModified: "2026-08-14",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Hotel Carpet Procurement",
   image: `${imageBase}/Af7fd084409964a049f599a846916ac429.png`,
   imageUnoptimized: true,
@@ -209,7 +209,7 @@ export const hotelCorridorCarpetStainHidingProcurementGuide: BlogPost = {
       ],
     },
     {
-      title: "Recommended Vishomecarpet Pages",
+      title: "Recommended VCARPETS Pages",
       paragraphs: [],
       blocks: [
         {
@@ -230,7 +230,7 @@ export const hotelCorridorCarpetStainHidingProcurementGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "For a hotel corridor carpet recommendation, send corridor width, total area, lighting photos, traffic zones, cleaning method, preferred color direction, and target delivery date. Vishomecarpet can review whether a patterned broadloom carpet, corridor carpet tile, or another construction is the safer procurement route.",
+          text: "For a hotel corridor carpet recommendation, send corridor width, total area, lighting photos, traffic zones, cleaning method, preferred color direction, and target delivery date. VCARPETS can review whether a patterned broadloom carpet, corridor carpet tile, or another construction is the safer procurement route.",
         },
         {
           type: "callout",

@@ -13,12 +13,12 @@ const categoryPath = "/products/carpet-tiles";
 
 const categoryFaqs = [
   {
-    question: "What commercial carpet tiles does Vishomecarpet manufacture?",
-    answer: "Vishomecarpet manufactures 50x50 carpet tiles in nylon, Nylon 6.6, polypropylene, and project-specific fiber options. Available ranges include office carpet tiles, hotel carpet tiles, heavy-duty commercial carpet tiles, patterned modular tiles, PVC-free PE backing tiles, and bitumen-backed carpet tiles."
+    question: "What commercial carpet tiles does VCARPETS manufacture?",
+    answer: "VCARPETS manufactures 50x50 carpet tiles in nylon, Nylon 6.6, polypropylene, and project-specific fiber options. Available ranges include office carpet tiles, hotel carpet tiles, heavy-duty commercial carpet tiles, patterned modular tiles, PVC-free PE backing tiles, and bitumen-backed carpet tiles."
   },
   {
     question: "Do you supply wholesale carpet tiles to distributors and contractors?",
-    answer: "Yes. Vishomecarpet supports carpet tile distributors, commercial flooring contractors, importers, and project buyers with wholesale carpet tiles, bulk pricing, samples, OEM colors, backing selection, export packing, and international delivery."
+    answer: "Yes. VCARPETS supports carpet tile distributors, commercial flooring contractors, importers, and project buyers with wholesale carpet tiles, bulk pricing, samples, OEM colors, backing selection, export packing, and international delivery."
   },
   {
     question: "What is the wholesale price for carpet tiles?",
@@ -173,7 +173,7 @@ export const metadata: Metadata = {
     description: "Compare commercial carpet tile products by fiber, backing, factory price, MOQ, samples, and office, hotel, healthcare, or education application.",
     url: absoluteUrl(categoryPath),
     type: "website",
-    images: [{ url: absoluteUrl("/images/category-tiles.webp"), alt: "Commercial modular carpet tiles supplied by Vishomecarpet" }]
+    images: [{ url: absoluteUrl("/images/category-tiles.webp"), alt: "Commercial modular carpet tiles supplied by VCARPETS" }]
   }
 };
 export default function CategoryPage() {
@@ -353,7 +353,7 @@ export default function CategoryPage() {
             <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Commercial Modular Flooring Guide</p>
             <h2 className="mb-7 text-3xl font-black uppercase text-primary md:text-5xl">Carpet Tile Manufacturer for Office & Contract Projects</h2>
             <div className="space-y-5 text-base leading-8 text-muted">
-              <p>Vishomecarpet manufactures commercial carpet tiles for wholesale buyers, carpet tile distributors, office carpet suppliers, flooring contractors, hotels, and project procurement teams. The collection includes nylon carpet tiles, polypropylene carpet tiles, modular carpet squares, bitumen backed carpet tiles, and PVC-free PE backing options.</p>
+              <p>VCARPETS manufactures commercial carpet tiles for wholesale buyers, carpet tile distributors, office carpet suppliers, flooring contractors, hotels, and project procurement teams. The collection includes nylon carpet tiles, polypropylene carpet tiles, modular carpet squares, bitumen backed carpet tiles, and PVC-free PE backing options.</p>
               <p>Applications include office floor carpet tiles, commercial office carpet, hotel carpet tiles, raised floor carpet tiles, acoustic carpet tiles, school carpet tiles, gym carpet tiles, airport carpet tiles, exhibition carpet tiles, and heavy-duty commercial carpet tiles. The required traffic class, fire rating, antistatic performance, backing, and installation system must be confirmed for each project.</p>
               <p>Available visual directions include black carpet tiles, blue carpet tiles, navy carpet tiles, green carpet tiles, grey carpet tiles, beige carpet tiles, and patterned carpet tiles. Actual colors depend on the selected product, yarn, MOQ, sample approval, and custom production feasibility.</p>
             </div>

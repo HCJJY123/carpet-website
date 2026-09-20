@@ -17,7 +17,7 @@ export const hotelCarpetPatternsGuide: BlogPost = {
     "hospitality carpet specification",
   ],
   date: "2026-07-28",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Design & Production",
   image:
     "/images/blog-series/hotel-carpet-patterns/hotel-carpet-patterns-corridor-f823f749f6.webp",
@@ -340,7 +340,7 @@ export const hotelCarpetPatternsGuide: BlogPost = {
         {
           type: "callout",
           label: "Request a hotel carpet quote",
-          text: "Send your floor plan, project area, hotel zone, design references, preferred construction, destination, and delivery date to the Vishome project team for a pattern recommendation, strike-off plan, and quotation.",
+          text: "Send your floor plan, project area, hotel zone, design references, preferred construction, destination, and delivery date to the VCARPETS project team for a pattern recommendation, strike-off plan, and quotation.",
         },
       ],
     },

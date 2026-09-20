@@ -132,7 +132,7 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
   });
   const emailSubject = encodeURIComponent(`Project inquiry: ${product.name}`);
   const emailBody = encodeURIComponent(
-    `Hello Vishomecarpet,\n\nI am interested in ${product.name}.\n\nName:\nCountry:\nWhatsApp:\nProduct:\nQuantity:\nProject details:\n`
+    `Hello VCARPETS,\n\nI am interested in ${product.name}.\n\nName:\nCountry:\nWhatsApp:\nProduct:\nQuantity:\nProject details:\n`
   );
 
   return (
@@ -245,7 +245,7 @@ export function BuyerReasons({ product }: { product?: ConversionProduct } = {}) 
       <section className="section-padding border-y border-border bg-surface">
       <div className="container-fox">
         <div className="mb-10 max-w-3xl">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.14em] text-accent">Why buyers choose Vishomecarpet</p>
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.14em] text-accent">Why buyers choose VCARPETS</p>
           <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
             Built for Faster B2B Carpet Procurement
           </h2>

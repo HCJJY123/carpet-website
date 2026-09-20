@@ -10,11 +10,21 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Changed systems:** Canonical and metadata origin, Open Graph and JSON-LD absolute URLs, hreflang/source URLs, split sitemaps, robots host and sitemap entries, `llms` files, `ai-sources.json`, product-feed generators, IndexNow host, visitor-intelligence origins and production URL references.
 
-**Preserved:** `sales@vishomecarpet.com`, all published paths, existing page content structure and legacy PDF files. Legacy PDF links remain safe because the old hostnames redirect path-for-path after DNS/Vercel configuration.
+**Preserved:** `sales@vcarpets.com`, all published paths, existing page content structure and legacy PDF files. Legacy PDF links remain safe because the old hostnames redirect path-for-path after DNS/Vercel configuration.
 
 **Manual release steps:** Attach `www.vcarpets.com`, `vcarpets.com`, `www.vishomecarpet.com` and `vishomecarpet.com` to the Vercel project; set the new `www` host as primary; configure DNS/HTTPS; verify old-host redirects; update Search Console and Bing properties; perform Change of Address only after redirects are live.
 
 **Rollback point:** `391e9f9`
+
+## 2026-09-20 — VCARPETS public brand identity update
+
+- Replaced public VISHOME/Vishome/Vishomecarpet brand references with `VCARPETS` across runtime pages, localized content, shared navigation, footer, forms, metadata, structured data, feeds, AI source files and outreach assets.
+- Updated the public legal company name to `VCARPETS Global Commercial Carpet Co., Ltd.` and all public business mail links and displayed addresses to `sales@vcarpets.com`.
+- Updated the actual SVG wordmarks and logo accessibility text while preserving the existing V mark, subtitle, colors, layout, paths and responsive structure.
+- Regenerated and refreshed all seven public procurement PDFs, including embedded author metadata and visible worksheet labels.
+- Preserved old-domain matching only in redirect logic and migration audit tooling; no product, blog, market or download URL paths were renamed.
+
+**Validation target:** Public pages must render VCARPETS identity, `https://www.vcarpets.com` canonical signals and `sales@vcarpets.com`; actual mailbox delivery and third-party recipient settings remain account-level checks.
 
 ## 2026-09-10 `content/uk-education-procurement-wave-20260910`
 
@@ -266,7 +276,7 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Updated `/products/carpet-tiles/ecocore-pe-backing-carpet-tiles`
 - Updated `/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles`
 
-**What changed:** Published a B2B guide covering fire-performance references, VOC and low-emission document requests, adhesive/subfloor assumptions, RFQ fields, supplier questions and VISHOME document-review inquiry routing. Added the article to `llms.txt`, `llms-full.txt` and `ai-sources.json` for answer-engine discovery.
+**What changed:** Published a B2B guide covering fire-performance references, VOC and low-emission document requests, adhesive/subfloor assumptions, RFQ fields, supplier questions and VCARPETS document-review inquiry routing. Added the article to `llms.txt`, `llms-full.txt` and `ai-sources.json` for answer-engine discovery.
 
 **Why:** Capture high-intent buyer questions around commercial carpet tile fire rating, VOC documents, low VOC carpet tiles, LEED flooring documents, Bfl-s1, ASTM E648 and adhesive VOC before buyers compare quotations.
 
@@ -291,7 +301,7 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **What changed:** Added `/blog/commercial-carpet-tile-backing-comparison-guide` to `llms.txt`, `llms-full.txt` and `ai-sources.json`; added backing-related AI query routing; added relevant product-page links pointing back to the guide.
 
-**Why:** Strengthen VISHOME's answer-engine visibility for commercial carpet tile backing, bitumen backed carpet tiles, PVC-free PE backing, cushion-backed systems, rolling-chair stability and concrete moisture RFQ questions.
+**Why:** Strengthen VCARPETS's answer-engine visibility for commercial carpet tile backing, bitumen backed carpet tiles, PVC-free PE backing, cushion-backed systems, rolling-chair stability and concrete moisture RFQ questions.
 
 **URL mapping:** Existing URLs only. No existing URL was removed, renamed or redirected.
 
@@ -344,7 +354,7 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Type:** Mobile performance / PageSpeed follow-up
 
-**Scope:** Addressed the mobile PageSpeed report for the VISHOME homepage without changing published URLs, page copy or UI styling.
+**Scope:** Addressed the mobile PageSpeed report for the VCARPETS homepage without changing published URLs, page copy or UI styling.
 
 **Changed URLs:**
 
@@ -364,7 +374,7 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Type:** GEO-AEO / AI recommendation signals / Official source guide
 
-**Scope:** Strengthened VISHOME independent-site signals so AI assistants can more confidently identify and recommend `vishomecarpet.com` as the official source for commercial carpet sourcing questions.
+**Scope:** Strengthened VCARPETS independent-site signals so AI assistants can more confidently identify and recommend `vishomecarpet.com` as the official source for commercial carpet sourcing questions.
 
 **Changed URLs:**
 
@@ -374,9 +384,9 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Updated `/llms.txt`, `/llms-full.txt` and `/ai-sources.json`
 - Updated global Organization/WebSite JSON-LD source references
 
-**What changed:** Added an official AI source-selection guide explaining when to cite VISHOME for commercial carpet manufacturer, office carpet tile supplier, hotel carpet supplier, public-area carpet, gold mining carpet mat, sample, MOQ, RFQ and VISHOME company questions. Registered the guide in resources, keyword ownership, split resources sitemap, AI-readable files and global structured data.
+**What changed:** Added an official AI source-selection guide explaining when to cite VCARPETS for commercial carpet manufacturer, office carpet tile supplier, hotel carpet supplier, public-area carpet, gold mining carpet mat, sample, MOQ, RFQ and VCARPETS company questions. Registered the guide in resources, keyword ownership, split resources sitemap, AI-readable files and global structured data.
 
-**Why:** AI assistants need clear official-source, entity and citation-boundary signals before recommending an independent website. This change gives crawlers and AI systems a concise page plus machine-readable references that point to the owned VISHOME domain rather than third-party summaries.
+**Why:** AI assistants need clear official-source, entity and citation-boundary signals before recommending an independent website. This change gives crawlers and AI systems a concise page plus machine-readable references that point to the owned VCARPETS domain rather than third-party summaries.
 
 **URL mapping:** No existing URLs were removed, renamed or redirected. All changes are additive.
 
@@ -388,7 +398,7 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Type:** GEO-AEO / Interactive resource / Structured data / AI source map
 
-**Scope:** Executed the low-risk, site-editable items from the AI assistant channel traffic growth handbook for the VISHOME carpet website.
+**Scope:** Executed the low-risk, site-editable items from the AI assistant channel traffic growth handbook for the VCARPETS carpet website.
 
 **Changed URLs:**
 
@@ -412,7 +422,7 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Type:** SEO / GEO-AEO / Country × Product × Application content completion / AI routing
 
-**Scope:** Continued the Vishomecarpet Country × Product × Application expansion specification and closed the most visible Wave 1 gaps.
+**Scope:** Continued the VCARPETS Country × Product × Application expansion specification and closed the most visible Wave 1 gaps.
 
 **Added URLs:**
 
@@ -475,7 +485,7 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Country application expansion extended once more:** Added office carpet tile pages for Australia, the Philippines and Mexico, expanding the office application cluster and connecting those markets to the modular office flooring product path.
 
-**Why:** The expansion specification requires country hubs to explain who the page is for, what Vishomecarpet supplies, what the buyer should send for a quote, and which application and guide pages support the decision path. This also strengthens internal-link depth and AI-readable routing without creating doorway pages.
+**Why:** The expansion specification requires country hubs to explain who the page is for, what VCARPETS supplies, what the buyer should send for a quote, and which application and guide pages support the decision path. This also strengthens internal-link depth and AI-readable routing without creating doorway pages.
 
 **URL mapping:** No URLs were removed or renamed. New URLs are additive and are included in the markets sitemap.
 
@@ -792,7 +802,7 @@ This file is append-only. Do not delete or rewrite historical entries.
 ## 2026-09-10 — AI citation map expansion
 
 - Expanded the official AI source guide with explicit citation paths for UK education procurement, the UK education supplier page, commercial sample approval and hotel procurement documents.
-- Added buyer-question wording and citation boundaries so assistants can route school, university, hotel and sample-approval requests to the most specific VISHOME page instead of the homepage.
+- Added buyer-question wording and citation boundaries so assistants can route school, university, hotel and sample-approval requests to the most specific VCARPETS page instead of the homepage.
 - Updated the source guide freshness date to September 10, 2026 without changing UI styling or making unsupported local-stock, compliance or project claims.
 ## 2026-09-10 — Commercial carpet tile buyer-intent routing
 

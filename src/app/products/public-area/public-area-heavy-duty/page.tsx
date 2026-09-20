@@ -65,7 +65,7 @@ const faqJsonLd = {
 
 export const metadata: Metadata = product
   ? {
-      title: "Heavy-Duty Public Area Carpet | VISHOME",
+      title: "Heavy-Duty Public Area Carpet | VCARPETS",
       description: product.description,
       alternates: {
         canonical: productPath(product.id),
@@ -76,14 +76,14 @@ export const metadata: Metadata = product
         },
       },
       openGraph: {
-        title: `${product.name} | VISHOME`,
+        title: `${product.name} | VCARPETS`,
         description: product.description,
         url: absoluteUrl(productPath(product.id)),
         type: "website",
         images: [{ url: absoluteUrl(pageImages[0].src), alt: pageImages[0].alt }],
       },
     }
-  : { title: "Commercial Carpet Product | VISHOME" };
+  : { title: "Commercial Carpet Product | VCARPETS" };
 
 export default function ProductDetailPage() {
   const productId = "public-area-heavy-duty";

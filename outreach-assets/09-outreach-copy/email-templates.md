@@ -6,7 +6,7 @@ Subject: Commercial carpet manufacturer profile submission
 
 Hello,
 
-Vishome Carpet manufactures commercial carpet tiles, hospitality broadloom and custom carpet products for international B2B projects.
+VCARPETS manufactures commercial carpet tiles, hospitality broadloom and custom carpet products for international B2B projects.
 
 We have prepared product category pages, technical library pages, downloadable guides and structured product information for review.
 
@@ -29,7 +29,7 @@ We have prepared a concise carpet project reference that can support project doc
 
 Suggested wording:
 
-Carpet supplied by Vishome Carpet: CONFIRM_CASE_URL
+Carpet supplied by VCARPETS: CONFIRM_CASE_URL
 
 We will only publish your company name, project name or project photos after approval.
 

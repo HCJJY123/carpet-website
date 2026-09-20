@@ -72,7 +72,7 @@ def page_header(canvas, doc):
     canvas.rect(0, height - 12 * mm, width, 12 * mm, fill=1, stroke=0)
     canvas.setFillColor(colors.white)
     canvas.setFont("Helvetica-Bold", 9)
-    canvas.drawString(18 * mm, height - 7.5 * mm, "VISHOME GLOBAL COMMERCIAL CARPET")
+    canvas.drawString(18 * mm, height - 7.5 * mm, "VCARPETS GLOBAL COMMERCIAL CARPET")
     canvas.setFont("Helvetica", 7)
     canvas.drawRightString(width - 18 * mm, height - 7.5 * mm, "FACTORY DIRECT PROJECT SUPPORT")
     canvas.setFillColor(GOLD)
@@ -120,12 +120,12 @@ def build_pdf(filename, title, subtitle, facts, sections):
         str(output_path), pagesize=A4,
         rightMargin=18 * mm, leftMargin=18 * mm,
         topMargin=22 * mm, bottomMargin=16 * mm,
-        title=title, author="Vishome Global Commercial Carpet Co., Ltd.",
+        title=title, author="Vcarpets Global Commercial Carpet Co., Ltd.",
         subject="B2B procurement checklist",
     )
 
     story = [
-        Paragraph("VISHOME BUYER DOCUMENT", sheet_styles["eyebrow"]),
+        Paragraph("VCARPETS BUYER DOCUMENT", sheet_styles["eyebrow"]),
         Paragraph(title, sheet_styles["title"]),
         Paragraph(subtitle, sheet_styles["intro"]),
         fact_table(facts, sheet_styles),

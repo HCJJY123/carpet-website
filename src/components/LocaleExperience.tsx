@@ -33,12 +33,12 @@ declare global {
         TranslateElement?: GoogleTranslateConstructor;
       };
     };
-    __vishomeGoogleTranslateInit?: () => void;
+    __VCARPETSGoogleTranslateInit?: () => void;
   }
 }
 
-const googleScriptId = "vishome-google-translate-script";
-const googleContainerId = "vishome-google-translate";
+const googleScriptId = "VCARPETS-google-translate-script";
+const googleContainerId = "VCARPETS-google-translate";
 
 function setClientCookie(name: string, value: string, maxAge: number) {
   const secure = window.location.protocol === "https:" ? ";Secure" : "";
@@ -164,7 +164,7 @@ export default function LocaleExperience() {
     };
 
     const loadGoogleTranslate = () => {
-      window.__vishomeGoogleTranslateInit = initializeTranslate;
+      window.__VCARPETSGoogleTranslateInit = initializeTranslate;
       if (window.google?.translate?.TranslateElement) {
         initializeTranslate();
         return;
@@ -174,7 +174,7 @@ export default function LocaleExperience() {
 
       const script = document.createElement("script");
       script.id = googleScriptId;
-      script.src = "https://translate.google.com/translate_a/element.js?cb=__vishomeGoogleTranslateInit";
+      script.src = "https://translate.google.com/translate_a/element.js?cb=__VCARPETSGoogleTranslateInit";
       script.async = true;
       script.referrerPolicy = "no-referrer-when-downgrade";
       document.head.appendChild(script);

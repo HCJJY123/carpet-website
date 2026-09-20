@@ -5,7 +5,7 @@ export const translatedSiteLocales = ["fr", "es", "ar", "de", "pt", "ru", "ja", 
 export type TranslatedSiteLocale = (typeof translatedSiteLocales)[number];
 export type SiteLocale = typeof defaultSiteLocale | TranslatedSiteLocale;
 
-export const localeCookieName = "vishome_locale";
+export const localeCookieName = "VCARPETS_locale";
 export const googleTranslateCookieName = "googtrans";
 export const localeCookieMaxAge = 60 * 60 * 24 * 180;
 export const sharedLocaleCookieDomain = ".vcarpets.com";

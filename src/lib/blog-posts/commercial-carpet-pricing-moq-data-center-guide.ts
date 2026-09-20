@@ -7,7 +7,7 @@ export const commercialCarpetPricingMoqDataCenterGuide: BlogPost = {
     "A practical reference page for comparing FOB price, MOQ, lead time and project order basis across core carpet tile, broadloom and natural-fiber product lines.",
   painPoint:
     "Buyers often compare carpet prices without checking MOQ, lead time, or whether the quoted construction matches the project scope.",
-  seoTitle: "Commercial Carpet Pricing, MOQ and Lead-Time Data Center | VISHOME",
+  seoTitle: "Commercial Carpet Pricing, MOQ and Lead-Time Data Center | VCARPETS",
   description:
     "Use this data center to compare commercial carpet price ranges, MOQ tiers, and lead times before requesting samples or project quotations.",
   keywords: [
@@ -19,14 +19,14 @@ export const commercialCarpetPricingMoqDataCenterGuide: BlogPost = {
   ],
   date: "2026-08-23",
   dateModified: "2026-08-23",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Data Center",
   image: "/images/blog-series/commercial-carpet-tile-specification-checklist/commercial-carpet-tile-rfq-intake-desk.webp",
   imageAlt: "Commercial carpet pricing worksheet with product data, MOQ tiers and project planning notes",
   excerpt:
     "A data center for comparing carpet price, MOQ and lead time across commercial product lines before a buyer asks for quotation.",
   seoDescription:
-    "Compare carpet pricing, MOQ tiers and lead times across selected Vishome commercial carpet products before sending an RFQ.",
+    "Compare carpet pricing, MOQ tiers and lead times across selected VCARPETS commercial carpet products before sending an RFQ.",
   h1Image: "/images/blog-series/commercial-carpet-tile-specification-checklist/commercial-carpet-tile-rfq-intake-desk.webp",
   h1ImageAlt: "Commercial carpet pricing worksheet with product data, MOQ tiers and project planning notes",
   h1ImageCaption:

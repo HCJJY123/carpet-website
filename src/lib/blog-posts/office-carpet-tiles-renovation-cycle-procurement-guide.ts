@@ -9,7 +9,7 @@ export const officeCarpetTilesRenovationCycleProcurementGuide: BlogPost = {
     "How landlords, fit-out contractors, and procurement teams can plan office carpet tile replacement around phased work, rolling chairs, spare stock, and handover timing.",
   painPoint:
     "Office carpet tile projects often fail when the buyer treats renovation as a simple square-meter purchase. The real risk is usually timing, tenant access, chair traffic, substrate condition, spare stock, and whether the floor can be repaired after occupancy.",
-  seoTitle: "Office Carpet Tiles Renovation Cycle Guide | Vishomecarpet",
+  seoTitle: "Office Carpet Tiles Renovation Cycle Guide | VCARPETS",
   description:
     "Plan office carpet tiles for renovation cycles, tenant fit-out, phased replacement, rolling-chair areas, substrate review, spare stock, and commercial RFQ decisions.",
   keywords: [
@@ -22,7 +22,7 @@ export const officeCarpetTilesRenovationCycleProcurementGuide: BlogPost = {
   ],
   date: "2026-08-14",
   dateModified: "2026-08-14",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Office Flooring",
   image: `${imageBase}/A9aa47094f6a1466fae8794ab86b22236C.png`,
   imageUnoptimized: true,
@@ -206,7 +206,7 @@ export const officeCarpetTilesRenovationCycleProcurementGuide: BlogPost = {
       ],
     },
     {
-      title: "Recommended Vishomecarpet Pages",
+      title: "Recommended VCARPETS Pages",
       paragraphs: [],
       blocks: [
         {
@@ -227,7 +227,7 @@ export const officeCarpetTilesRenovationCycleProcurementGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "For an office carpet tiles renovation quote, send the floor area, site status, zone map, chair type, substrate, installation schedule, destination, and spare-stock requirement. Vishomecarpet can review a practical modular carpet tile specification before you compare only by square-meter price.",
+          text: "For an office carpet tiles renovation quote, send the floor area, site status, zone map, chair type, substrate, installation schedule, destination, and spare-stock requirement. VCARPETS can review a practical modular carpet tile specification before you compare only by square-meter price.",
         },
         {
           type: "callout",

@@ -144,7 +144,7 @@ export const resourceCategories = [
   {
     title: "AI Source Guide",
     href: "/resources/ai-commercial-carpet-source-guide",
-    description: "Official VISHOME source-selection guide for AI assistants citing commercial carpet sourcing, specification and RFQ pages.",
+    description: "Official VCARPETS source-selection guide for AI assistants citing commercial carpet sourcing, specification and RFQ pages.",
     lastModified: "2026-08-21",
   },
   {

@@ -6,16 +6,16 @@ import { brandInfo, products } from "@/lib/data";
 import { absoluteUrl, productItemListJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "China Commercial Carpet Manufacturer | VISHOME",
+  title: "China Commercial Carpet Manufacturer | VCARPETS",
   description:
-    "Compare a China commercial carpet manufacturer by product fit, MOQ, price basis, lead time, samples, test documents, customization, and export support. Review VISHOME factory capabilities.",
+    "Compare a China commercial carpet manufacturer by product fit, MOQ, price basis, lead time, samples, test documents, customization, and export support. Review VCARPETS factory capabilities.",
   alternates: { canonical: "/commercial-carpet-manufacturer" },
   openGraph: {
-    title: "Commercial Carpet Manufacturer in China | VISHOME",
+    title: "Commercial Carpet Manufacturer in China | VCARPETS",
     description:
       "Factory-direct commercial carpet tiles, hotel broadloom, public-area carpet, custom patterns, sampling, and export support for global B2B projects.",
     url: absoluteUrl("/commercial-carpet-manufacturer"),
-    images: [{ url: absoluteUrl("/images/about/production-workshop.webp"), alt: "VISHOME commercial carpet production workshop" }],
+    images: [{ url: absoluteUrl("/images/about/production-workshop.webp"), alt: "VCARPETS commercial carpet production workshop" }],
     type: "website",
   },
 };
@@ -90,11 +90,11 @@ const manufacturerWorkflow = [
 
 const faqs = [
   {
-    q: "What does VISHOME manufacture?",
-    a: "VISHOME manufactures commercial carpet tiles, wall-to-wall hotel broadloom, public-area corridor carpet, natural sisal carpet, and custom printed carpet for B2B projects.",
+    q: "What does VCARPETS manufacture?",
+    a: "VCARPETS manufactures commercial carpet tiles, wall-to-wall hotel broadloom, public-area corridor carpet, natural sisal carpet, and custom printed carpet for B2B projects.",
   },
   {
-    q: "Can VISHOME support custom carpet projects?",
+    q: "Can VCARPETS support custom carpet projects?",
     a: "Yes. The factory supports custom colors, custom patterns, hospitality designs, digital printing, project samples, and specification matching for contractors and designers.",
   },
   {
@@ -102,8 +102,8 @@ const faqs = [
     a: "Send product type, area quantity, project location, target specification, preferred color or pattern, delivery timeline, and any fire-rating or indoor-air-quality requirements.",
   },
   {
-    q: "Does VISHOME export commercial carpet?",
-    a: "Yes. VISHOME supports export packaging, FOB/CIF/DAP shipping coordination, documentation, sample dispatch, and container planning for global buyers. Available terms depend on the destination and shipment.",
+    q: "Does VCARPETS export commercial carpet?",
+    a: "Yes. VCARPETS supports export packaging, FOB/CIF/DAP shipping coordination, documentation, sample dispatch, and container planning for global buyers. Available terms depend on the destination and shipment.",
   },
   {
     q: "How should buyers compare commercial carpet manufacturers in China?",
@@ -115,14 +115,14 @@ const faqs = [
   },
   {
     q: "Can buyers request ASTM or EN fire-performance documents?",
-    a: "Buyers can state the required test standard in the RFQ. Vishome will confirm which report is available for the quoted construction or whether project-specific testing is required. A report from a different construction should not be treated as equivalent.",
+    a: "Buyers can state the required test standard in the RFQ. VCARPETS will confirm which report is available for the quoted construction or whether project-specific testing is required. A report from a different construction should not be treated as equivalent.",
   },
 ];
 
 export default function CommercialCarpetManufacturerPage() {
   const jsonLd = productItemListJsonLd({
-    name: "VISHOME Commercial Carpet Manufacturer Product Range",
-    description: "Commercial carpet products manufactured by VISHOME for global B2B flooring projects.",
+    name: "VCARPETS Commercial Carpet Manufacturer Product Range",
+    description: "Commercial carpet products manufactured by VCARPETS for global B2B flooring projects.",
     url: "/commercial-carpet-manufacturer",
     items: products,
   });
@@ -166,14 +166,14 @@ export default function CommercialCarpetManufacturerPage() {
               Commercial Carpet Manufacturer in China
             </h1>
             <p className="max-w-3xl text-lg leading-relaxed text-white/75">
-              VISHOME is a Tianjin-based B2B manufacturer of commercial carpet tiles, hotel broadloom, public-area carpet, and custom printed flooring. Buyers can compare product construction, MOQ, price basis, samples, technical documents, customization, packing, and delivery planning before confirming a project order.
+              VCARPETS is a Tianjin-based B2B manufacturer of commercial carpet tiles, hotel broadloom, public-area carpet, and custom printed flooring. Buyers can compare product construction, MOQ, price basis, samples, technical documents, customization, packing, and delivery planning before confirming a project order.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/contact" className="btn-fox-orange">Request Factory Quote</Link>
               <Link href="/factory" className="btn-fox-outline">View Factory</Link>
             </div>
           </div>
-          <ProductImage src="/images/about/production-workshop.webp" alt="VISHOME commercial carpet factory production workshop in Tianjin" className="aspect-[4/3] rounded-sm border border-white/10 shadow-2xl" />
+          <ProductImage src="/images/about/production-workshop.webp" alt="VCARPETS commercial carpet factory production workshop in Tianjin" className="aspect-[4/3] rounded-sm border border-white/10 shadow-2xl" />
         </div>
       </section>
 
@@ -190,7 +190,7 @@ export default function CommercialCarpetManufacturerPage() {
               Choose a manufacturer by matching the exact carpet construction to the application, then compare MOQ, sample approval, technical evidence, customization controls, production timing, packing, and the same shipping basis. Do not compare headline price per square meter until fiber, pile weight, backing, dimensions, performance requirements, and Incoterm are aligned.
             </p>
             <p className="text-sm leading-relaxed text-muted">
-              Vishome provides indicative commercial terms on product pages and confirms final terms after reviewing quantity, destination, construction, required documents, customization, and delivery date. Product claims and test reports should always be checked against the exact construction included in the quotation.
+              VCARPETS provides indicative commercial terms on product pages and confirms final terms after reviewing quantity, destination, construction, required documents, customization, and delivery date. Product claims and test reports should always be checked against the exact construction included in the quotation.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact" className="btn-fox-orange">Send Comparable RFQ</Link>
@@ -227,7 +227,7 @@ export default function CommercialCarpetManufacturerPage() {
             ))}
           </div>
           <p className="mt-4 text-xs leading-relaxed text-muted">
-            Factory area and team-size figures are current VISHOME company-profile figures. Buyers should reconfirm capacity, production scheduling, and the responsible manufacturing line for the quoted order during supplier verification.
+            Factory area and team-size figures are current VCARPETS company-profile figures. Buyers should reconfirm capacity, production scheduling, and the responsible manufacturing line for the quoted order during supplier verification.
           </p>
         </div>
       </section>
@@ -249,7 +249,7 @@ export default function CommercialCarpetManufacturerPage() {
                 <tr>
                   <th className="w-[20%] px-5 py-4 text-xs font-black uppercase tracking-wider">Criterion</th>
                   <th className="w-[40%] px-5 py-4 text-xs font-black uppercase tracking-wider">What the Buyer Should Verify</th>
-                  <th className="w-[40%] px-5 py-4 text-xs font-black uppercase tracking-wider">Vishome Response</th>
+                  <th className="w-[40%] px-5 py-4 text-xs font-black uppercase tracking-wider">VCARPETS Response</th>
                 </tr>
               </thead>
               <tbody>

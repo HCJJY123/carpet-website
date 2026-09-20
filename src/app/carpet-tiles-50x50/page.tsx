@@ -5,7 +5,7 @@ import { productPath } from "@/lib/seo";
 import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata = {
-  title: "50x50 Carpet Tiles Guide | Carton, MOQ & Installation | Vishome",
+  title: "50x50 Carpet Tiles Guide | Carton, MOQ & Installation | VCARPETS",
   description: "Plan 50x50cm carpet tiles for commercial projects: carton coverage, layout, waste, installation method, attic stock, MOQ, samples and replacement strategy.",
   alternates: { canonical: "/carpet-tiles-50x50" },
 };

@@ -7,7 +7,7 @@ export const commercialCarpetTileFireRatingVocDocumentsGuide: BlogPost = {
     "How office, hotel and public-space buyers should request fire rating, VOC, adhesive, subfloor and technical documents before approving a commercial carpet tile order.",
   painPoint:
     "Many carpet tile quotations mention fire rating or low VOC in one short line, but buyers still need to know which document is required, whether adhesive is included, and whether the specification matches the jobsite and local acceptance process.",
-  seoTitle: "Commercial Carpet Tile Fire Rating & VOC Guide | VISHOME",
+  seoTitle: "Commercial Carpet Tile Fire Rating & VOC Guide | VCARPETS",
   description:
     "B2B guide to commercial carpet tile fire rating, VOC, low-emission documents, adhesive checks, concrete subfloor risk and RFQ fields before quotation approval.",
   keywords: [
@@ -21,7 +21,7 @@ export const commercialCarpetTileFireRatingVocDocumentsGuide: BlogPost = {
   ],
   date: "2026-08-25",
   dateModified: "2026-08-25",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Specification Guide",
   image: "/images/blog-series/commercial-carpet-tile-fire-rating-voc-documents/commercial-carpet-tile-fire-voc-document-review-hero.webp",
   imageUnoptimized: true,
@@ -269,12 +269,12 @@ export const commercialCarpetTileFireRatingVocDocumentsGuide: BlogPost = {
       ],
     },
     {
-      title: "How VISHOME Helps Buyers Prepare the Submittal Conversation",
+      title: "How VCARPETS Helps Buyers Prepare the Submittal Conversation",
       paragraphs: [],
       blocks: [
         {
           type: "paragraph",
-          text: "VISHOME supports B2B carpet tile buyers with product selection, sample discussion, backing comparison, quotation preparation and document-request coordination. The practical first step is to send the project location, application area, quantity, backing preference, fire or VOC requirement and installation condition before asking for a final price.",
+          text: "VCARPETS supports B2B carpet tile buyers with product selection, sample discussion, backing comparison, quotation preparation and document-request coordination. The practical first step is to send the project location, application area, quantity, backing preference, fire or VOC requirement and installation condition before asking for a final price.",
         },
         {
           type: "paragraph",

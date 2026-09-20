@@ -143,7 +143,7 @@ export default function RuB2BLandingPage({ page }: { page: RuB2BPage }) {
             </div>
           </div>
           <div>
-            <h2 className="text-3xl font-black text-primary">Почему VISHOME</h2>
+            <h2 className="text-3xl font-black text-primary">Почему VCARPETS</h2>
             <div className="mt-7 space-y-5">
               {page.benefits.map((benefit) => (
                 <div key={benefit.title} className="border-l-2 border-accent pl-5">

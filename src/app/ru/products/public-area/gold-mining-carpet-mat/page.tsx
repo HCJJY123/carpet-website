@@ -77,8 +77,8 @@ const productJsonLd = product
       description: "ПВХ-коврик miners moss для шлюзовых лотков, промывки россыпного золота и старательских установок.",
       image: [absoluteUrl(product.image)],
       sku: product.id,
-      brand: { "@type": "Brand", name: "VISHOME" },
-      manufacturer: { "@type": "Organization", name: "VISHOME" },
+      brand: { "@type": "Brand", name: "VCARPETS" },
+      manufacturer: { "@type": "Organization", name: "VCARPETS" },
       material: "ПВХ / винил",
       size: "1 м × 15 м; толщина 10 / 15 / 20 мм",
       audience: { "@type": "BusinessAudience", audienceType: "Золотодобывающие компании, дистрибьюторы и поставщики оборудования" },
@@ -103,7 +103,7 @@ const productJsonLd = product
 
 export const metadata: Metadata = product
   ? {
-      title: "Коврик для золотодобычи miners moss | VISHOME",
+      title: "Коврик для золотодобычи miners moss | VCARPETS",
       description:
         "ПВХ-коврик miners moss для шлюзовых лотков, промывки золотоносного песка и старательской добычи. Толщина 10/15/20 мм, рулон 1×15 м. Поставка DAP Алматы, Казахстан.",
       alternates: {
@@ -115,15 +115,15 @@ export const metadata: Metadata = product
         },
       },
       openGraph: {
-        title: "Коврик для золотодобычи (miners moss) | VISHOME",
+        title: "Коврик для золотодобычи (miners moss) | VCARPETS",
         description: "ПВХ-коврик для шлюзовых лотков и промывки золотоносного песка. Поставка DAP Алматы.",
         url: absoluteUrl(ruPath),
         type: "website",
         locale: "ru_RU",
-        images: [{ url: absoluteUrl(product.image), alt: "Коврик miners moss для золотодобычи Vishomecarpet" }],
+        images: [{ url: absoluteUrl(product.image), alt: "Коврик miners moss для золотодобычи VCARPETS" }],
       },
     }
-  : { title: "Коврик для золотодобычи | VISHOME" };
+  : { title: "Коврик для золотодобычи | VCARPETS" };
 
 export default function GoldMiningRuPage() {
   if (!product) return <div>Product not found</div>;

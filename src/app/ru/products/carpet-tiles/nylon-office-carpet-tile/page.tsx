@@ -73,7 +73,7 @@ const breadcrumbJsonLd = {
 
 export const metadata: Metadata = product
   ? {
-      title: "Ковровая плитка 50×50 для офисов | VISHOME",
+      title: "Ковровая плитка 50×50 для офисов | VCARPETS",
       description:
         "Коммерческая ковровая плитка 50×50 см из 100% нейлона для офисов, коридоров и мест с высокой проходимостью. Класс огнестойкости ASTM E648 Class I. Поставка DAP Алматы и Ташкент, оплата на объект.",
       alternates: {
@@ -85,16 +85,16 @@ export const metadata: Metadata = product
         },
       },
       openGraph: {
-        title: "Ковровая плитка 50×50 см для офисов | VISHOME",
+        title: "Ковровая плитка 50×50 см для офисов | VCARPETS",
         description:
           "Коммерческая ковровая плитка из 100% нейлона, класс огнестойкости ASTM E648 Class I. Поставка DAP Алматы и Ташкент.",
         url: absoluteUrl(ruPath),
         type: "website",
         locale: "ru_RU",
-        images: [{ url: absoluteUrl(product.image), alt: "Коммерческая ковровая плитка 50х50 см Vishomecarpet" }],
+        images: [{ url: absoluteUrl(product.image), alt: "Коммерческая ковровая плитка 50х50 см VCARPETS" }],
       },
     }
-  : { title: "Ковровая плитка | VISHOME" };
+  : { title: "Ковровая плитка | VCARPETS" };
 
 export default function CarpetTilesRuPage() {
   if (!product) return <div>Product not found</div>;

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Healthcare carpet tiles for waiting rooms, consultation areas and senior-care circulation. Review low-pile construction, samples, MOQ and technical documents.",
   alternates: { canonical: productPath(productId) },
   openGraph: {
-    title: "Healthcare & Hospital Carpet Tiles | VISHOME",
+    title: "Healthcare & Hospital Carpet Tiles | VCARPETS",
     description: product.description,
     url: absoluteUrl(productPath(productId)),
     images: [{ url: absoluteUrl(product.image), alt: product.imageAlt }],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: "Where can carpet tiles be considered in healthcare facilities?", a: "They are generally considered for non-clinical areas such as waiting rooms, consultation areas, administration offices, senior-care lounges, and circulation zones. Wet rooms, treatment rooms, and spaces governed by infection-control protocols require separate flooring review." },
-  { q: "Can you provide fire and indoor-air-quality documents?", a: "State the required standard in the RFQ. Vishome will confirm which reports apply to the exact fiber and backing construction being quoted; reports from another construction should not be treated as equivalent." },
+  { q: "Can you provide fire and indoor-air-quality documents?", a: "State the required standard in the RFQ. VCARPETS will confirm which reports apply to the exact fiber and backing construction being quoted; reports from another construction should not be treated as equivalent." },
   { q: "How are damaged or stained areas replaced?", a: "The modular 50x50 cm format allows individual tiles to be lifted and replaced when the installation system and spare-stock plan support selective maintenance." },
   { q: "What are the order levels?", a: `A material swatch is available, a typical standard-color trial starts from ${product.moqTiers.trialOrder}, and the project MOQ is ${product.moqTiers.project}. Final terms depend on stock, color, backing, and documentation.` },
 ];

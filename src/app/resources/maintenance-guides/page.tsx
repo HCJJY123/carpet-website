@@ -7,7 +7,7 @@ const pagePath = "/resources/maintenance-guides";
 const topics = ["Entrance soil control", "Vacuum schedule", "Spot cleaning process", "Periodic deep cleaning", "Replacement stock planning", "Construction-specific care notes"];
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Maintenance Guides | Vishome Carpet",
+  title: "Commercial Carpet Maintenance Guides | VCARPETS",
   description: "Maintenance planning resources for commercial carpet projects, including cleaning schedules, replacement stock and construction-specific care document requests.",
   alternates: { canonical: absoluteUrl(pagePath) },
 };

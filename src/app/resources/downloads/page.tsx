@@ -7,8 +7,8 @@ import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 const pagePath = "/resources/downloads";
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Downloads | Vishome Carpet",
-  description: "Download Vishome Carpet published PDF buyer guides and checklists with related product links and technical document request options.",
+  title: "Commercial Carpet Downloads | VCARPETS",
+  description: "Download VCARPETS published PDF buyer guides and checklists with related product links and technical document request options.",
   alternates: { canonical: absoluteUrl(pagePath) },
 };
 

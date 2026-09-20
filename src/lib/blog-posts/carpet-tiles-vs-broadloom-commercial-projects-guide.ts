@@ -7,9 +7,9 @@ export const carpetTilesVsBroadloomCommercialProjectsGuide: BlogPost = {
     "A procurement guide for facility managers, contractors and hotel buyers comparing modular carpet tiles with wall-to-wall broadloom by maintenance, replacement, comfort, design and quotation risk.",
   painPoint:
     "Many commercial flooring projects compare carpet tiles and broadloom only by square metre price, then discover later that repair method, pattern continuity, installation shutdown and spare stock matter just as much.",
-  seoTitle: "Carpet Tiles vs Broadloom Carpet | Commercial Buyer Guide | VISHOME",
+  seoTitle: "Carpet Tiles vs Broadloom Carpet | Commercial Buyer Guide | VCARPETS",
   description:
-    "Compare carpet tiles vs broadloom carpet for commercial offices, hotels and corridors. Learn when each format fits, what to confirm before RFQ and which VISHOME category to review.",
+    "Compare carpet tiles vs broadloom carpet for commercial offices, hotels and corridors. Learn when each format fits, what to confirm before RFQ and which VCARPETS category to review.",
   keywords: [
     "carpet tiles vs broadloom",
     "commercial carpet tiles vs broadloom carpet",
@@ -22,7 +22,7 @@ export const carpetTilesVsBroadloomCommercialProjectsGuide: BlogPost = {
   ],
   date: "2026-08-17",
   dateModified: "2026-08-17",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Buying Guide",
   image: "/images/blog-series/reddit-hotel-office-carpet-decisions/hotel-office-carpet-comparison-summary.webp",
   h1Image: "/images/blog-series/reddit-hotel-office-carpet-decisions/hotel-office-carpet-comparison-summary.webp",
@@ -104,7 +104,7 @@ export const carpetTilesVsBroadloomCommercialProjectsGuide: BlogPost = {
         },
         {
           type: "callout",
-          label: "Related VISHOME path",
+          label: "Related VCARPETS path",
           text: "For modular commercial flooring, start with /products/carpet-tiles and compare office-focused products such as nylon office carpet tiles and PP bitumen backed office carpet tiles.",
         },
       ],
@@ -140,7 +140,7 @@ export const carpetTilesVsBroadloomCommercialProjectsGuide: BlogPost = {
         },
         {
           type: "callout",
-          label: "Related VISHOME path",
+          label: "Related VCARPETS path",
           text: "For hotel and hospitality broadloom, start with /products/wall-to-wall, /hotel-carpet and /solutions/hotel-hospitality before requesting a custom quotation.",
         },
       ],
@@ -195,7 +195,7 @@ export const carpetTilesVsBroadloomCommercialProjectsGuide: BlogPost = {
         },
         {
           type: "paragraph",
-          text: "VISHOME can help buyers compare carpet tile and broadloom options for offices, hotels, corridors and public-area projects. Send the application zone, quantity, target market, preferred design, timeline and required documents through the project quote form so the team can recommend a suitable format and quotation basis.",
+          text: "VCARPETS can help buyers compare carpet tile and broadloom options for offices, hotels, corridors and public-area projects. Send the application zone, quantity, target market, preferred design, timeline and required documents through the project quote form so the team can recommend a suitable format and quotation basis.",
         },
       ],
     },

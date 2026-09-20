@@ -10,11 +10,11 @@ const pagePath = "/resources/technical-library";
 const filters = ["Product category", "Document type", "Application", "Language", "File format"];
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Technical Library | Vishome Carpet",
-  description: "Download Vishome Carpet buyer guides and request project-specific technical data sheets, installation guides, maintenance guidance, packing data and sample documents.",
+  title: "Commercial Carpet Technical Library | VCARPETS",
+  description: "Download VCARPETS buyer guides and request project-specific technical data sheets, installation guides, maintenance guidance, packing data and sample documents.",
   alternates: { canonical: absoluteUrl(pagePath) },
   openGraph: {
-    title: "Commercial Carpet Technical Library | Vishome Carpet",
+    title: "Commercial Carpet Technical Library | VCARPETS",
     description: "Verified buyer guides and project document request paths for commercial carpet specifications.",
     url: absoluteUrl(pagePath),
     type: "website",

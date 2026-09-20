@@ -51,7 +51,7 @@ export default function CountryApplicationLandingPage({ page }: { page: CountryA
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Vishomecarpet", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 1, name: "VCARPETS", item: absoluteUrl("/") },
       { "@type": "ListItem", position: 2, name: "Markets", item: absoluteUrl("/markets") },
       { "@type": "ListItem", position: 3, name: page.countryName, item: absoluteUrl(`/markets/${page.market}`) },
       { "@type": "ListItem", position: 4, name: page.applicationName, item: absoluteUrl(page.path) },
@@ -227,7 +227,7 @@ export default function CountryApplicationLandingPage({ page }: { page: CountryA
             Send the country, application, quantity and target delivery date
           </h2>
           <p className="mx-auto mt-5 max-w-3xl leading-7 text-white/75">
-            Vishomecarpet will respond using the current product record and the application context on this page. No price, document or delivery promise is final until it appears in the written quotation.
+            VCARPETS will respond using the current product record and the application context on this page. No price, document or delivery promise is final until it appears in the written quotation.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link href={quoteHref} className="inline-flex min-h-13 items-center justify-center rounded-sm bg-[#d9480f] px-7 py-4 text-sm font-black text-white hover:bg-[#b83a08]">

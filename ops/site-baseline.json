@@ -1,7 +1,7 @@
 {
-  "site": "VISHOME",
+  "site": "VCARPETS",
   "canonicalOrigin": "https://www.vcarpets.com",
-  "maximumChangedFiles": 100,
+  "maximumChangedFiles": 260,
   "sitemaps": [
     { "path": "/sitemap.xml", "minimumUrlCount": 7 },
     { "path": "/sitemap-ru.xml", "minimumUrlCount": 22 },

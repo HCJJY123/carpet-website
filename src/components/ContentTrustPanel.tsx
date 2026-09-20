@@ -33,11 +33,11 @@ export default function ContentTrustPanel(props: ContentTrustPanelProps) {
           <dl className="mt-4 grid gap-x-8 gap-y-3 text-sm sm:grid-cols-2">
             <div>
               <dt className="font-black text-primary">{isBlog ? "Prepared by" : "Guide prepared by"}</dt>
-              <dd className="mt-1 text-muted">{isBlog ? props.author : "VISHOME Technical Team"}</dd>
+              <dd className="mt-1 text-muted">{isBlog ? props.author : "VCARPETS Technical Team"}</dd>
             </div>
             <div>
               <dt className="font-black text-primary">Content review</dt>
-              <dd className="mt-1 text-muted">VISHOME Commercial Carpet Team</dd>
+              <dd className="mt-1 text-muted">VCARPETS Commercial Carpet Team</dd>
             </div>
             {isBlog ? (
               <>

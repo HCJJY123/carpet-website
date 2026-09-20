@@ -18,7 +18,7 @@ export const commercialCarpetTileSpecificationChecklistGuide: BlogPost = {
     "B2B carpet tile procurement",
   ],
   date: "2026-08-22",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Buying Guide",
   image: "/images/blog-series/commercial-carpet-tile-specification-checklist/commercial-carpet-tile-specification-checklist-hero.webp",
   imageUnoptimized: true,

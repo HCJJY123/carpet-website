@@ -224,7 +224,7 @@ def main(input_path: str, output_dir: str = ".") -> None:
     output.mkdir(parents=True, exist_ok=True)
     frame = load_rows(input_path)
 
-    excel_path = output / "vishome_leads.xlsx"
+    excel_path = output / "VCARPETS_leads.xlsx"
     ads_path = output / "google_ads_qualified_leads.csv"
 
     if frame.empty:

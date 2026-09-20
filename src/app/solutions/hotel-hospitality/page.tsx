@@ -4,14 +4,14 @@ import ProductImage from "@/components/ProductImage";
 import { getContactBridgeUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Hotel Carpet Solutions | VISHOME",
+  title: "Hotel Carpet Solutions | VCARPETS",
   description:
     "End-to-end hotel carpet solutions for lobby, corridor, guestroom, and ballroom projects. ASTM/EN compliant broadloom and carpet tile systems with custom pattern development and global delivery support.",
   alternates: {
     canonical: "/solutions/hotel-hospitality",
   },
   openGraph: {
-    title: "Hotel & Hospitality Carpet Solutions | VISHOME",
+    title: "Hotel & Hospitality Carpet Solutions | VCARPETS",
     description:
       "Commercial hotel carpet systems for luxury hospitality projects, from design and sampling to production and delivery.",
     url: "https://www.vcarpets.com/solutions/hotel-hospitality",

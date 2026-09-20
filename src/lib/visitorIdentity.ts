@@ -1,5 +1,5 @@
-const VISITOR_STORAGE_KEY = "vishome_visitor_id";
-const SESSION_STORAGE_KEY = "vishome_session_id";
+const VISITOR_STORAGE_KEY = "VCARPETS_visitor_id";
+const SESSION_STORAGE_KEY = "VCARPETS_session_id";
 
 export type VisitorIdentity = {
   visitorId: string;
@@ -57,8 +57,8 @@ export function syncClarityIdentity(pageId: string) {
   const clarity = (window as Window & { clarity?: (...args: unknown[]) => void }).clarity;
   if (typeof clarity === "function") {
     clarity("identify", identity.visitorId, identity.sessionId, pageId, identity.visitorLabel);
-    clarity("set", "vishome_visitor_label", identity.visitorLabel);
-    clarity("set", "vishome_session_id", identity.sessionId);
+    clarity("set", "VCARPETS_visitor_label", identity.visitorLabel);
+    clarity("set", "VCARPETS_session_id", identity.sessionId);
   }
 
   return identity;

@@ -1,4 +1,4 @@
-# Vishomecarpet Backlink Execution Plan — 2026-08-10
+# VCARPETS Backlink Execution Plan — 2026-08-10
 
 ## Scope
 
@@ -76,7 +76,7 @@ Offer a practical checklist for rolling-chair zones and leased offices. The usef
 
 Use natural anchors and rotate them by context:
 
-- 35% branded: `Vishomecarpet`, `Vishome technical guide`.
+- 35% branded: `VCARPETS`, `VCARPETS technical guide`.
 - 25% naked URL or page title.
 - 25% descriptive partial match: `hotel renovation carpet checklist`, `office carpet tile fit-out guide`.
 - 15% product/category context: `wall-to-wall hotel carpet`, `commercial carpet tiles`.

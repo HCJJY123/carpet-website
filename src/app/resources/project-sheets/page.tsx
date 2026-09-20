@@ -8,7 +8,7 @@ import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 const pagePath = "/resources/project-sheets";
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Project Sheets | Vishome Carpet",
+  title: "Commercial Carpet Project Sheets | VCARPETS",
   description: "Request project sheet references for commercial carpet case studies. Public naming, project area and partner details require approval before external use.",
   alternates: { canonical: absoluteUrl(pagePath) },
 };

@@ -69,17 +69,17 @@ const documentFaqs = [
     a: "Send the relevant checklist or RFQ template together with product type, quantity, destination, required standard, target installation date and sample requirements.",
   },
   {
-    q: "Why does VISHOME separate public guides from controlled project documents?",
+    q: "Why does VCARPETS separate public guides from controlled project documents?",
     a: "Public guides help buyers prepare questions. Controlled project documents depend on the exact fiber, backing, color, quantity, destination and tender requirement, so they are confirmed after specification matching.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Technical Documents & Buyer Guides | VISHOME Carpet",
-  description: "Access VISHOME commercial carpet buyer guides and request project-controlled technical documents, product specifications, packing data and quotation records.",
+  title: "Technical Documents & Buyer Guides | VCARPETS Carpet",
+  description: "Access VCARPETS commercial carpet buyer guides and request project-controlled technical documents, product specifications, packing data and quotation records.",
   alternates: { canonical: absoluteUrl(pagePath) },
   openGraph: {
-    title: "Technical Documents & Buyer Guides | VISHOME Carpet",
+    title: "Technical Documents & Buyer Guides | VCARPETS Carpet",
     description: "Published buyer guides plus project-controlled technical documents available after product and specification matching.",
     url: absoluteUrl(pagePath),
     type: "website",
@@ -216,7 +216,7 @@ export default function TechnicalDocumentsPage() {
           <div>
             <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Controlled documents</p>
             <h2 className="mt-3 text-3xl font-black leading-tight md:text-4xl">Request documents after specification matching</h2>
-            <p className="mt-5 leading-8 text-muted">Many carpet documents depend on the exact fiber, backing, pile weight, color, quantity, destination and tender requirement. VISHOME confirms the available document set in writing for each project.</p>
+            <p className="mt-5 leading-8 text-muted">Many carpet documents depend on the exact fiber, backing, pile weight, color, quantity, destination and tender requirement. VCARPETS confirms the available document set in writing for each project.</p>
           </div>
           <ul className="grid gap-px border border-border bg-border">
             {requestDocuments.map((item) => (

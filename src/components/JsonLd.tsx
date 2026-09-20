@@ -7,7 +7,7 @@ export default function JsonLd() {
     "@type": "Organization",
     "@id": `${brandInfo.url}/#organization`,
     name: brandInfo.name,
-    alternateName: [brandInfo.shortName, "Vishomecarpet"],
+    alternateName: [brandInfo.shortName, "VCARPETS"],
     url: brandInfo.url,
     logo: absoluteUrl("/logo.svg"),
     image: absoluteUrl("/images/og-cover.webp"),
@@ -52,7 +52,7 @@ export default function JsonLd() {
         "@type": "Dataset",
         name: "Structured AI source data",
         description:
-          "Machine-readable VISHOME commercial carpet product, category, project, and technical source data for search and AI systems.",
+          "Machine-readable VCARPETS commercial carpet product, category, project, and technical source data for search and AI systems.",
         url: absoluteUrl("/ai-sources.json"),
         creator: { "@id": `${brandInfo.url}/#organization` },
         license: absoluteUrl("/data-license.txt"),
@@ -60,7 +60,7 @@ export default function JsonLd() {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "VISHOME Commercial Carpet Product Categories",
+      name: "VCARPETS Commercial Carpet Product Categories",
       itemListElement: [
         {
           "@type": "OfferCatalog",
@@ -86,9 +86,9 @@ export default function JsonLd() {
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": `${brandInfo.url}/#business`,
     name: brandInfo.name,
-    alternateName: [brandInfo.shortName, "Vishomecarpet"],
+    alternateName: [brandInfo.shortName, "VCARPETS"],
     description:
-      "Vishome Global Commercial Carpet Co., Ltd. is a Tianjin-based B2B manufacturer supplying carpet tiles, hotel broadloom, public-area carpet, and custom commercial flooring for export projects.",
+      "Vcarpets Global Commercial Carpet Co., Ltd. is a Tianjin-based B2B manufacturer supplying carpet tiles, hotel broadloom, public-area carpet, and custom commercial flooring for export projects.",
     url: brandInfo.url,
     telephone: brandInfo.phone,
     email: brandInfo.email,
@@ -137,10 +137,10 @@ export default function JsonLd() {
     "@type": "WebSite",
     "@id": `${brandInfo.url}/#website`,
     name: brandInfo.shortName,
-    alternateName: ["Vishomecarpet", brandInfo.name],
+    alternateName: ["VCARPETS", brandInfo.name],
     url: brandInfo.url,
     description:
-      "Official website of VISHOME, a commercial carpet manufacturer supplying carpet tiles, hotel broadloom, public-area carpet, and custom flooring for global B2B projects.",
+      "Official website of VCARPETS, a commercial carpet manufacturer supplying carpet tiles, hotel broadloom, public-area carpet, and custom flooring for global B2B projects.",
     publisher: {
       "@id": `${brandInfo.url}/#organization`,
     },

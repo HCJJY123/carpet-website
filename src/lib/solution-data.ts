@@ -15,7 +15,7 @@ export const solutionPages: SolutionPageData[] = [
   {
     slug: "hotel-carpet-manufacturer",
     title: "Hotel Carpet Manufacturer",
-    seoTitle: "Hotel Carpet Manufacturer | VISHOME",
+    seoTitle: "Hotel Carpet Manufacturer | VCARPETS",
     description:
       "China hotel carpet manufacturer for guestrooms, corridors, lobbies, ballrooms, banquet halls, and hospitality renovation projects.",
     image: "/images/3d-printed-hotel-carpet-corridor.webp",
@@ -37,7 +37,7 @@ export const solutionPages: SolutionPageData[] = [
       { label: "Documents", value: "TDS, fire rating reference, packing list, invoice" },
     ],
     faqs: [
-      { q: "Can you make custom hotel carpet patterns?", a: "Yes. VISHOME can develop patterns from moodboards, CAD files, brand colors, or reference samples before bulk production." },
+      { q: "Can you make custom hotel carpet patterns?", a: "Yes. VCARPETS can develop patterns from moodboards, CAD files, brand colors, or reference samples before bulk production." },
       { q: "Do you support hotel corridor and guestroom samples?", a: "Yes. Strike-off samples, color references, and construction samples can be shipped internationally." },
       { q: "What should I send for a hotel carpet quote?", a: "Send floor area, hotel zone, pattern reference, destination country, target budget, fire-rating need, and opening schedule." },
     ],
@@ -45,7 +45,7 @@ export const solutionPages: SolutionPageData[] = [
   {
     slug: "office-carpet-tiles-supplier",
     title: "Office Carpet Tiles Supplier",
-    seoTitle: "Office Carpet Tiles Supplier | VISHOME",
+    seoTitle: "Office Carpet Tiles Supplier | VCARPETS",
     description:
       "Office carpet tiles supplier for corporate offices, coworking spaces, raised floors, meeting rooms, and rolling-chair traffic areas.",
     image: "/images/solutions/office-carpet-tiles-supplier-hero-a9b57e72.webp",
@@ -68,14 +68,14 @@ export const solutionPages: SolutionPageData[] = [
     ],
     faqs: [
       { q: "Which backing is best for office carpet tiles?", a: "PVC and bitumen offer strong dimensional stability; PVC-free PE is better for projects with sustainability requirements." },
-      { q: "How many square meters are in one carton?", a: "Carton quantity depends on thickness and backing. VISHOME confirms carton packing after the exact construction is selected." },
+      { q: "How many square meters are in one carton?", a: "Carton quantity depends on thickness and backing. VCARPETS confirms carton packing after the exact construction is selected." },
       { q: "Can you ship office carpet tile samples overseas?", a: "Yes. Samples can be shipped to the USA, UK, Australia, Europe, Middle East, and Asia." },
     ],
   },
   {
     slug: "airport-carpet-flooring",
     title: "Airport Carpet Flooring",
-    seoTitle: "Airport Carpet Flooring | VISHOME",
+    seoTitle: "Airport Carpet Flooring | VCARPETS",
     description:
       "Airport carpet flooring for terminals, lounges, corridors, waiting areas, and high-footfall transport interiors.",
     image: "/images/public-area-carpets.webp",
@@ -98,14 +98,14 @@ export const solutionPages: SolutionPageData[] = [
     ],
     faqs: [
       { q: "What carpet is suitable for airport flooring?", a: "Heavy commercial nylon broadloom or modular carpet with stable backing is usually recommended for airport footfall and luggage-wheel traffic." },
-      { q: "Can you provide public-area technical documents?", a: "Yes. VISHOME can prepare technical data, packing details, and fire-rating references by selected construction." },
+      { q: "Can you provide public-area technical documents?", a: "Yes. VCARPETS can prepare technical data, packing details, and fire-rating references by selected construction." },
       { q: "Can airport carpet be delivered in phases?", a: "Yes. Production and shipment can be arranged by terminal area, floor, or renovation phase." },
     ],
   },
   {
     slug: "casino-carpet-supplier",
     title: "Casino Carpet Supplier",
-    seoTitle: "Casino Carpet Supplier | Vishomecarpet",
+    seoTitle: "Casino Carpet Supplier | VCARPETS",
     description:
       "Casino carpet supplier for gaming floors, hotel corridors, VIP rooms, restaurants, and entertainment public areas.",
     image: "/images/products/3d-printed-banquet-carpet/02-banquet-hall.webp",
@@ -135,7 +135,7 @@ export const solutionPages: SolutionPageData[] = [
   {
     slug: "retail-store-carpet-flooring",
     title: "Retail Store Carpet Flooring",
-    seoTitle: "Retail Store Carpet Flooring | VISHOME",
+    seoTitle: "Retail Store Carpet Flooring | VCARPETS",
     description:
       "Retail store carpet flooring for boutiques, showrooms, corridors, brand zones, fitting rooms, and commercial shopping interiors.",
     image: "/images/about/custom-design-support.webp",
@@ -158,7 +158,7 @@ export const solutionPages: SolutionPageData[] = [
     ],
     faqs: [
       { q: "Are carpet tiles good for retail stores?", a: "Yes. Carpet tiles are practical for stores because damaged areas can be replaced quickly and layout changes are easier." },
-      { q: "Can carpet match a retail brand color?", a: "Yes. VISHOME can support color matching and custom pattern development depending on MOQ and construction." },
+      { q: "Can carpet match a retail brand color?", a: "Yes. VCARPETS can support color matching and custom pattern development depending on MOQ and construction." },
       { q: "Can you support multiple store rollouts?", a: "Yes. Project packing and delivery can be planned by store, phase, or country." },
     ],
   },

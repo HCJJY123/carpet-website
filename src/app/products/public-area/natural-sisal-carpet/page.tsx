@@ -14,7 +14,7 @@ const productImages = {
   hero: "/images/natural-sisal-carpet-office.webp",
   gallery: [
     { src: "/images/natural-sisal-carpet-roll.webp", alt: "Natural sisal broadloom carpet roll, 4m width, with jute backing", title: "Broadloom Roll" },
-    { src: "/images/natural-sisal-carpet.webp", alt: "Natural sisal linen-weave commercial carpet swatch in warm wheat tone by Vishomecarpet", title: "Linen-Weave Swatch" },
+    { src: "/images/natural-sisal-carpet.webp", alt: "Natural sisal linen-weave commercial carpet swatch in warm wheat tone by VCARPETS", title: "Linen-Weave Swatch" },
     { src: "/images/natural-sisal-carpet-retail.webp", alt: "Sisal commercial carpet flooring in an upscale boutique retail interior", title: "Boutique Retail" },
     { src: "/images/natural-sisal-carpet-lobby.webp", alt: "Natural sisal broadloom in a hotel lobby and exhibition public area", title: "Lobby and Exhibition" },
     { src: "/images/natural-sisal-carpet-macro.webp", alt: "Macro close-up of woven natural sisal linen-weave fiber texture", title: "Linen-Weave Macro" },
@@ -24,9 +24,9 @@ const productImages = {
 };
 
 const descriptionParagraphs = [
-  "Vishomecarpet's Natural Sisal Linen-Weave Commercial Carpet is a 100% plant-fiber flooring crafted from durable agave sisalana sisal, woven into a refined linen-look flatweave. Its fine, even ribbing brings warm, biophilic character to commercial interiors while delivering the natural strength sisal is known for - an authentic, sustainable alternative to synthetic carpet.",
+  "VCARPETS's Natural Sisal Linen-Weave Commercial Carpet is a 100% plant-fiber flooring crafted from durable agave sisalana sisal, woven into a refined linen-look flatweave. Its fine, even ribbing brings warm, biophilic character to commercial interiors while delivering the natural strength sisal is known for - an authentic, sustainable alternative to synthetic carpet.",
   "Engineered for contract use, the carpet is fire-retardant treated to Class I (ASTM E648), rated for EN 1307 Class 32 medium-to-heavy commercial traffic, and finished with a non-slip natural-latex backing over a jute secondary for dimensional stability. Standard roll width is 4 m for broadloom installation, with custom widths, bound area rugs, and stair runners available. A stain-resistant synthetic sisal-look (PP) version is offered for higher-maintenance environments.",
-  "Ideal for offices, reception areas, boutique retail, galleries, exhibition halls, and hotel public spaces seeking a natural aesthetic, this sisal carpet ships factory-direct from Vishomecarpet with custom sizing, binding, export packing, and worldwide delivery. Request free samples and a project quote to match your specification.",
+  "Ideal for offices, reception areas, boutique retail, galleries, exhibition halls, and hotel public spaces seeking a natural aesthetic, this sisal carpet ships factory-direct from VCARPETS with custom sizing, binding, export packing, and worldwide delivery. Request free samples and a project quote to match your specification.",
 ];
 
 const faqs = [
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "What is the difference between natural sisal and sisal-look carpet?",
-    a: "Natural sisal is 100% plant fiber with authentic texture and tonal variation. Sisal-look carpet is woven from synthetic fiber (PP) to mimic the appearance while offering easier stain cleaning and moisture resistance. Vishomecarpet supplies both.",
+    a: "Natural sisal is 100% plant fiber with authentic texture and tonal variation. Sisal-look carpet is woven from synthetic fiber (PP) to mimic the appearance while offering easier stain cleaning and moisture resistance. VCARPETS supplies both.",
   },
   {
     q: "Is sisal carpet eco-friendly?",
@@ -68,7 +68,7 @@ export const metadata: Metadata = product
           "4m natural sisal carpet rolls for offices, retail and hotel public areas, with commercial specifications, custom widths and samples.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
-        images: [{ url: absoluteUrl(productImages.hero), alt: "Natural sisal carpet in a modern biophilic office reception by Vishomecarpet" }],
+        images: [{ url: absoluteUrl(productImages.hero), alt: "Natural sisal carpet in a modern biophilic office reception by VCARPETS" }],
       },
       twitter: {
         card: "summary_large_image",
@@ -78,7 +78,7 @@ export const metadata: Metadata = product
         images: [absoluteUrl(productImages.hero)],
       },
     }
-  : { title: "Natural Sisal Linen-Weave Commercial Carpet | VISHOME" };
+  : { title: "Natural Sisal Linen-Weave Commercial Carpet | VCARPETS" };
 
 export default function NaturalSisalCarpetPage() {
   const p = products.find((prod) => prod.id === productId);
@@ -135,7 +135,7 @@ export default function NaturalSisalCarpetPage() {
             </div>
 
             <div className="flex flex-col justify-center">
-              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Vishomecarpet Natural Fiber Flooring</p>
+              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">VCARPETS Natural Fiber Flooring</p>
               <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
                 Natural Sisal Linen-Weave Commercial Carpet
               </h1>

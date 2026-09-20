@@ -86,7 +86,7 @@ def header_footer(canvas, doc):
     canvas.rect(0, height - 12 * mm, width, 12 * mm, fill=1, stroke=0)
     canvas.setFillColor(WHITE)
     canvas.setFont("Helvetica-Bold", 8.5)
-    canvas.drawString(17 * mm, height - 7.5 * mm, "VISHOME GLOBAL COMMERCIAL CARPET")
+    canvas.drawString(17 * mm, height - 7.5 * mm, "VCARPETS GLOBAL COMMERCIAL CARPET")
     canvas.setFont("Helvetica", 6.8)
     canvas.drawRightString(width - 17 * mm, height - 7.5 * mm, "TECHNICAL PROCUREMENT REFERENCE")
     canvas.setStrokeColor(BORDER)
@@ -172,13 +172,13 @@ def build_guide(filename, title, subtitle, facts, comparison, sections, source_u
         topMargin=20 * mm,
         bottomMargin=18 * mm,
         title=title,
-        author="Vishome Global Commercial Carpet Co., Ltd.",
+        author="Vcarpets Global Commercial Carpet Co., Ltd.",
         subject="Commercial carpet technical procurement guide",
         keywords="commercial carpet, procurement, specification, RFQ",
     )
 
     story = [
-        Paragraph("VISHOME BUYER TECHNICAL GUIDE", styles["eyebrow"]),
+        Paragraph("VCARPETS BUYER TECHNICAL GUIDE", styles["eyebrow"]),
         Paragraph(title, styles["title"]),
         Paragraph(subtitle, styles["subtitle"]),
         facts_table(facts, styles),

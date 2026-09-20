@@ -119,7 +119,7 @@ const navLinks: NavItem[] = [
     href: "/about-us",
     label: "About Us",
     children: [
-      { href: "/about-us", label: "About Vishomecarpet" },
+      { href: "/about-us", label: "About VCARPETS" },
       { href: "/factory", label: "Factory Capability" },
       { href: "/commercial-carpet-manufacturer", label: "Carpet Manufacturer" },
       { href: "/request-sample-box", label: "Request Sample Box" },
@@ -202,7 +202,7 @@ export default function Header() {
     pagePath: pathname,
   });
   const salesEmail = "sales@vcarpets.com";
-  const emailSubject = "VISHOME Commercial Carpet Project Inquiry";
+  const emailSubject = "VCARPETS Commercial Carpet Project Inquiry";
   const emailUrl = `mailto:${salesEmail}?subject=${encodeURIComponent(emailSubject)}`;
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(salesEmail)}&su=${encodeURIComponent(emailSubject)}`;
   const isActivePath = (href: string) => (href === "/" ? navigationPathname === "/" : navigationPathname === href || navigationPathname.startsWith(`${href}/`));
@@ -265,7 +265,7 @@ export default function Header() {
         data-email-contact-panel
         className={`fixed right-4 top-20 z-[145] w-[min(calc(100vw-2rem),360px)] rounded-xl border border-[#258CF4]/20 bg-white p-4 text-[#102A43] shadow-[0_22px_60px_rgba(16,42,67,0.22)] transition-all duration-200 md:right-8 md:top-24 ${emailPanelOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"}`}
       >
-        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#258CF4]">Email Vishome Carpet</p>
+        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#258CF4]">Email VCARPETS</p>
         <p className="mt-2 break-all text-sm font-black">{salesEmail}</p>
         <div className="mt-4 grid gap-2 sm:grid-cols-2">
           <button
@@ -315,7 +315,7 @@ export default function Header() {
                 />
               </span>
               <div className="flex min-w-0 flex-col">
-                <span className="truncate text-base font-black leading-none tracking-tighter text-[#102A43] sm:text-lg md:text-xl">VISHOME</span>
+                <span className="truncate text-base font-black leading-none tracking-tighter text-[#102A43] sm:text-lg md:text-xl">VCARPETS</span>
                 <span className="mt-1 whitespace-nowrap text-[7px] font-bold uppercase leading-none tracking-[0.02em] text-[#627D98] max-[359px]:text-[6px] max-[359px]:tracking-normal sm:text-[9px] sm:tracking-[0.1em] md:text-[10px] md:tracking-[0.12em]">Global Commercial Carpet</span>
               </div>
             </Link>
@@ -395,7 +395,7 @@ export default function Header() {
               data-whatsapp-placement="header"
               data-whatsapp-intent="project_support"
               className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#25D366]/30 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#168a42] transition-colors hover:border-[#25D366]/55 hover:bg-[#25D366]/[0.06] min-[1536px]:px-[13px] min-[1536px]:py-[9px] min-[1536px]:text-xs"
-              aria-label="Contact VISHOME on WhatsApp Business"
+              aria-label="Contact VCARPETS on WhatsApp Business"
             >
               <WhatsAppIcon className="h-3.5 w-3.5 min-[1536px]:h-4 min-[1536px]:w-4" />
               WhatsApp
@@ -405,7 +405,7 @@ export default function Header() {
               data-email-contact-panel
               onClick={handleEmailClick}
               className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#102A43]/20 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#102A43] transition-colors hover:border-[#258CF4]/55 hover:bg-[#258CF4]/[0.05] hover:text-[#126DE2] min-[1536px]:px-[13px] min-[1536px]:py-[9px] min-[1536px]:text-xs"
-              aria-label="Email VISHOME sales team at sales@vcarpets.com"
+              aria-label="Email VCARPETS sales team at sales@vcarpets.com"
               title="Email sales@vcarpets.com"
             >
               <EmailIcon className="h-6 w-6 scale-90 transition-transform group-hover:scale-95 min-[1536px]:h-[26px] min-[1536px]:w-[26px]" />
@@ -438,7 +438,7 @@ export default function Header() {
               data-whatsapp-placement="mobile_header"
               data-whatsapp-intent="project_support"
               className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#25D366]/40 bg-white text-[#168a42] transition-[border-color,background-color,transform] hover:scale-105 hover:border-[#25D366]/65 hover:bg-[#25D366]/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/45 focus-visible:ring-offset-2 max-[359px]:h-8 max-[359px]:w-8 sm:h-10 sm:w-10"
-              aria-label="Contact VISHOME on WhatsApp Business"
+              aria-label="Contact VCARPETS on WhatsApp Business"
             >
               <WhatsAppIcon className="h-[18px] w-[18px] max-[359px]:h-4 max-[359px]:w-4 sm:h-5 sm:w-5" />
             </a>
@@ -447,7 +447,7 @@ export default function Header() {
               data-email-contact-panel
               onClick={handleEmailClick}
               className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] border border-[#258CF4]/25 bg-[#258CF4]/[0.04] shadow-[0_2px_7px_rgba(18,109,226,0.12)] transition-[border-color,background-color,transform,box-shadow] hover:scale-105 hover:border-[#258CF4]/50 hover:bg-[#258CF4]/[0.08] hover:shadow-[0_3px_9px_rgba(18,109,226,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#258CF4]/45 focus-visible:ring-offset-2 max-[359px]:h-9 max-[359px]:w-9 sm:h-11 sm:w-11"
-              aria-label="Email VISHOME sales team at sales@vcarpets.com"
+              aria-label="Email VCARPETS sales team at sales@vcarpets.com"
               title="Email sales@vcarpets.com"
             >
               <EmailIcon className="h-9 w-9 scale-90 max-[359px]:h-8 max-[359px]:w-8 sm:h-10 sm:w-10" />

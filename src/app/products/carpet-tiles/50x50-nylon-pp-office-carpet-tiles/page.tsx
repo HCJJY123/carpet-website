@@ -15,7 +15,7 @@ const mainImages = [
   {
     src: `${imageBase}/01-hero-product.webp`,
     title: "Color Stack",
-    alt: "Vishomecarpet 50x50 nylon PP office carpet tiles for commercial carpet tile floor projects",
+    alt: "VCARPETS 50x50 nylon PP office carpet tiles for commercial carpet tile floor projects",
   },
   {
     src: `${imageBase}/02-top-view.webp`,
@@ -68,19 +68,19 @@ const detailImages = [
   {
     src: `${imageBase}/10-factory-qc.webp`,
     title: "Factory QC Support",
-    alt: "Factory quality control for Vishomecarpet commercial carpet tiles and floor carpets",
+    alt: "Factory quality control for VCARPETS commercial carpet tiles and floor carpets",
     text: "Factory supply with QC inspection, sample support, and export packaging for contractors, distributors, and project buyers.",
   },
 ];
 
 export const metadata: Metadata = product
   ? {
-      title: "50x50 Nylon & Polypropylene Office Carpet Tiles | VISHOME",
+      title: "50x50 Nylon & Polypropylene Office Carpet Tiles | VCARPETS",
       description:
         "Source 50x50 nylon or polypropylene office carpet tiles for commercial floors, corridors, retail, hotels, and wholesale modular carpet projects.",
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "50x50 Nylon & Polypropylene Office Carpet Tiles | VISHOME",
+        title: "50x50 Nylon & Polypropylene Office Carpet Tiles | VCARPETS",
         description: "50x50 nylon or polypropylene office carpet tiles for commercial floors, corridors, retail, hotels, and wholesale modular carpet projects.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
@@ -88,12 +88,12 @@ export const metadata: Metadata = product
       },
       twitter: {
         card: "summary_large_image",
-        title: "50x50 Nylon & Polypropylene Office Carpet Tiles | VISHOME",
+        title: "50x50 Nylon & Polypropylene Office Carpet Tiles | VCARPETS",
         description: "50x50 nylon or polypropylene office carpet tiles for commercial floors, corridors, retail, hotels, and wholesale modular carpet projects.",
         images: [absoluteUrl(mainImages[0].src)],
       },
     }
-  : { title: "50x50 Nylon PP Office Carpet Tiles | Vishomecarpet" };
+  : { title: "50x50 Nylon PP Office Carpet Tiles | VCARPETS" };
 
 export default function OfficeCarpetTilesProductPage() {
   const p = products.find((prod) => prod.id === productId);
@@ -107,7 +107,7 @@ export default function OfficeCarpetTilesProductPage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "What size are Vishomecarpet office carpet tiles?",
+        name: "What size are VCARPETS office carpet tiles?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "The standard size is 50x50cm, suitable for modular office carpet, commercial carpet, hotel carpet floor, and tile floor carpet projects.",
@@ -118,7 +118,7 @@ export default function OfficeCarpetTilesProductPage() {
         name: "Can I order nylon carpet tiles or PP carpet tiles?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Vishomecarpet can supply nylon or PP carpet tile options with project-based backing, color, and packaging requirements.",
+          text: "Yes. VCARPETS can supply nylon or PP carpet tile options with project-based backing, color, and packaging requirements.",
         },
       },
       {
@@ -163,7 +163,7 @@ export default function OfficeCarpetTilesProductPage() {
             </div>
 
             <div className="flex flex-col justify-center">
-              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Vishomecarpet Factory Supply</p>
+              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">VCARPETS Factory Supply</p>
               <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
                 50x50 Nylon PP Office Carpet Tiles
               </h1>

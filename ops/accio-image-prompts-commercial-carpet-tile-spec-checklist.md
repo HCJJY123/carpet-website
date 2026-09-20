@@ -1,6 +1,6 @@
 # Accio Work Image Generation Brief
 
-Project: VISHOME commercial carpet tile specification checklist article
+Project: VCARPETS commercial carpet tile specification checklist article
 
 Article URL target: `/blog/commercial-carpet-tile-specification-checklist-b2b-buyers`
 
@@ -11,7 +11,7 @@ Important instruction for Accio Work: generate image assets only. Do not deploy,
 - Brand feeling: real B2B factory supplier, professional, calm, technical, export-ready.
 - Visual style: photorealistic commercial photography, natural daylight or soft studio lighting, fine material texture, precise detail, no AI-polished plastic look.
 - Avoid: fake charts with unreadable text, exaggerated luxury, showroom fantasy, generic AI office, distorted carpet edges, impossible seams, malformed hands, random logos, brand names from other companies.
-- Color palette: warm neutral grey, graphite, beige, off-white, muted blue-grey, small VISHOME-style warm orange accent if needed.
+- Color palette: warm neutral grey, graphite, beige, off-white, muted blue-grey, small VCARPETS-style warm orange accent if needed.
 - Output: 16:9 hero/detail images, high resolution, clean composition, no visible watermark, no embedded text unless explicitly requested.
 - Realism requirement: carpet tile scale must look accurate, tile edges should be straight, samples should show believable backing and pile texture, office/factory environments should look functional rather than staged.
 

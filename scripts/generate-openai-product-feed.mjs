@@ -39,7 +39,7 @@ function assetUrl(assetPath) {
 }
 
 function itemId(productId) {
-  return `VISHOME${productId.replace(/[^a-z0-9]/gi, "").toUpperCase()}`.slice(0, 100);
+  return `VCARPETS${productId.replace(/[^a-z0-9]/gi, "").toUpperCase()}`.slice(0, 100);
 }
 
 function productCategory(category) {
@@ -88,7 +88,7 @@ const feedRows = products.map((product) => ({
   title: product.name.slice(0, 150),
   description: (product.longDescription || product.description).slice(0, 5000),
   url: productUrl(product),
-  brand: "Vishomecarpet",
+  brand: "VCARPETS",
   condition: "new",
   product_category: productCategory(product.category),
   material: product.spec.material.slice(0, 100),

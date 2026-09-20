@@ -7,7 +7,7 @@ export const commercialCarpetTileCostGuide: BlogPost = {
     "A buyer-focused guide to material price, packing, freight, installation, maintenance, replacement stock and RFQ comparison.",
   painPoint:
     "The lowest square-meter price can become the most expensive project when packing, substrate preparation, installation, replacement and maintenance are excluded from the comparison.",
-  seoTitle: "Commercial Carpet Tile Cost & Total Cost Guide | VISHOME",
+  seoTitle: "Commercial Carpet Tile Cost & Total Cost Guide | VCARPETS",
   description:
     "Compare commercial carpet tile cost by material, fiber, backing, packing, freight, installation, maintenance and replacement planning without relying on incomplete unit prices.",
   keywords: [
@@ -22,7 +22,7 @@ export const commercialCarpetTileCostGuide: BlogPost = {
   ],
   date: "2026-08-29",
   dateModified: "2026-08-29",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "B2B Buying Guide",
   image: "/images/blog-series/commercial-carpet-tile-cost-guide/commercial-carpet-tile-cost-guide-hero.webp",
   h1Image: "/images/blog-series/commercial-carpet-tile-cost-guide/commercial-carpet-tile-cost-guide-hero.webp",
@@ -153,7 +153,7 @@ export const commercialCarpetTileCostGuide: BlogPost = {
       paragraphs: [],
       blocks: [
         { type: "image", src: "/images/blog-series/commercial-carpet-tile-cost-guide/commercial-carpet-tile-total-cost-rfq-checklist-flat-lay.webp", alt: "Commercial carpet tile RFQ checklist materials arranged beside carpet tile samples", caption: "A complete RFQ gives suppliers the project context needed to separate confirmed cost from assumptions." },
-        { type: "paragraph", text: "Before requesting a commercial carpet tile quote, prepare the project information that changes the comparison. The VISHOME RFQ calculator can help organize measured area, waste, spare stock and packing inputs, but it is not a final quote, freight confirmation or availability guarantee." },
+        { type: "paragraph", text: "Before requesting a commercial carpet tile quote, prepare the project information that changes the comparison. The VCARPETS RFQ calculator can help organize measured area, waste, spare stock and packing inputs, but it is not a final quote, freight confirmation or availability guarantee." },
         { type: "list", items: [
           { title: "Project", text: "Country, city, application, room or zone schedule and target installation window." },
           { title: "Product", text: "Tile size, fiber preference, backing preference, color direction, performance documents and sample requirement." },
@@ -161,7 +161,7 @@ export const commercialCarpetTileCostGuide: BlogPost = {
           { title: "Site", text: "Subfloor type, known moisture or flatness concerns, access restrictions and local installation responsibility." },
           { title: "Commercial", text: "Destination, delivery terms, packing requirements, quotation currency or unit basis and required document list." },
         ] },
-        { type: "callout", label: "Request a project quote", text: "Send the floor plan or area schedule, intended use, preferred construction and delivery city so VISHOME can review the request against the actual project scope." },
+        { type: "callout", label: "Request a project quote", text: "Send the floor plan or area schedule, intended use, preferred construction and delivery city so VCARPETS can review the request against the actual project scope." },
       ],
     },
   ],

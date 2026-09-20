@@ -14,7 +14,7 @@ type ConversionLiftPanelProps = {
 function mailtoHref(product: string) {
   const subject = encodeURIComponent(`Project quote request - ${product}`);
   const body = encodeURIComponent(
-    `Hello Vishome team,\n\nPlease help quote this carpet project.\n\nProduct / application:\nEstimated area:\nDestination country:\nTarget delivery date:\n\nThank you.`
+    `Hello VCARPETS team,\n\nPlease help quote this carpet project.\n\nProduct / application:\nEstimated area:\nDestination country:\nTarget delivery date:\n\nThank you.`
   );
 
   return `mailto:${brandInfo.email}?subject=${subject}&body=${body}`;

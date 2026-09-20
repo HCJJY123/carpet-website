@@ -10,9 +10,9 @@ const canonicalPath = "/products/wall-to-wall/3d-printed-hotel-carpet";
 const product = products.find((prod) => prod.id === productId);
 
 const descriptionParagraphs = [
-  "Vishomecarpet's 3D HD Printed Nylon Hotel Carpet is a custom printed carpet and patterned wall-to-wall broadloom solution for hospitality interiors. High-definition digital printing on a durable 100% nylon surface reproduces intricate artwork and rich color depth at a lower setup cost and faster lead time than woven Axminster or Wilton broadloom.",
+  "VCARPETS's 3D HD Printed Nylon Hotel Carpet is a custom printed carpet and patterned wall-to-wall broadloom solution for hospitality interiors. High-definition digital printing on a durable 100% nylon surface reproduces intricate artwork and rich color depth at a lower setup cost and faster lead time than woven Axminster or Wilton broadloom.",
   "Built for high-traffic commercial environments, the carpet carries a Class I fire rating (ASTM E648), an EN 1307 Class 33 heavy-traffic rating, permanent antistatic protection, and a reinforced ActionBac backing for dimensional stability. Standard production is 4 m wide for seamless guestroom and corridor installation, with customizable pile weight, thickness, pattern, and colorway to match any brand standard or interior design scheme.",
-  "Ideal for hotel guestrooms, corridors, lobbies, ballrooms, casinos, and restaurants, this printed broadloom is supplied factory-direct from Vishomecarpet's Tianjin facility with full custom-design service, export packing, and worldwide shipping. Request a free pattern proof and project quote to specify your own design."
+  "Ideal for hotel guestrooms, corridors, lobbies, ballrooms, casinos, and restaurants, this printed broadloom is supplied factory-direct from VCARPETS's Tianjin facility with full custom-design service, export packing, and worldwide shipping. Request a free pattern proof and project quote to specify your own design."
 ];
 
 const faqs = [
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Can you produce a custom pattern or our brand design?",
-    a: "Yes. Vishomecarpet provides full custom-design service - send your artwork, brand colors, or a reference image and we deliver a printed pattern proof before mass production."
+    a: "Yes. VCARPETS provides full custom-design service - send your artwork, brand colors, or a reference image and we deliver a printed pattern proof before mass production."
   },
   {
     q: "What roll width and sizes are available?",
@@ -50,24 +50,24 @@ const relatedLinks = [
 ];
 
 export const metadata: Metadata = {
-  title: "Custom Printed Nylon Hotel Carpet | Wall-to-Wall | VISHOME",
+  title: "Custom Printed Nylon Hotel Carpet | Wall-to-Wall | VCARPETS",
   description: "Custom printed nylon wall-to-wall hotel carpet for guestrooms, corridors, lobbies, casinos and restaurants. 4m broadloom, MOQ 300 SQM.",
   alternates: { canonical: canonicalPath },
   openGraph: {
-    title: "Custom Printed Nylon Hotel Carpet | VISHOME",
+    title: "Custom Printed Nylon Hotel Carpet | VCARPETS",
     description: "Patterned wall-to-wall broadloom for hotel guestrooms, corridors, lobbies, casinos, and restaurants with custom artwork.",
     url: absoluteUrl(canonicalPath),
     images: [
       {
         url: absoluteUrl("/images/3d-printed-hotel-carpet-corridor.webp"),
-        alt: "3D HD Printed Nylon Hotel Carpet by Vishomecarpet"
+        alt: "3D HD Printed Nylon Hotel Carpet by VCARPETS"
       }
     ],
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Printed Nylon Hotel Carpet | VISHOME",
+    title: "Custom Printed Nylon Hotel Carpet | VCARPETS",
     description: "Patterned wall-to-wall broadloom for hotel guestrooms, corridors, lobbies, casinos, and restaurants with custom artwork.",
     images: [absoluteUrl("/images/3d-printed-hotel-carpet-corridor.webp")]
   }

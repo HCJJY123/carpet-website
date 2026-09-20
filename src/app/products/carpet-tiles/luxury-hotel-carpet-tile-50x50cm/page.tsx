@@ -13,7 +13,7 @@ const mainImages = [
   {
     src: `${imageBase}/01-main-carpet-tile-top-view.webp`,
     title: "Top View",
-    alt: "Vishomecarpet luxury hotel carpet tile 50x50cm commercial nylon carpet tiles top view",
+    alt: "VCARPETS luxury hotel carpet tile 50x50cm commercial nylon carpet tiles top view",
     fit: "contain",
   },
   {
@@ -47,7 +47,7 @@ const detailImages = [
   {
     src: `${imageBase}/06-hotel-guest-room-application.webp`,
     title: "Hotel Guest Room Flooring",
-    alt: "Hotel guest room with Vishomecarpet 50x50cm modular carpet tiles",
+    alt: "Hotel guest room with VCARPETS 50x50cm modular carpet tiles",
     text: "A practical hotel carpet floor option for guest rooms that need comfort, easy maintenance, and repeatable supply.",
     fit: "cover",
   },
@@ -85,7 +85,7 @@ const procurementFaqs = [
   {
     question: "What are 50x50cm carpet tiles used for?",
     answer:
-      "Vishomecarpet 50x50cm carpet tiles are used for hotel carpet floors, office carpet projects, corridors, lobbies, meeting rooms, and commercial renovation programs where modular replacement and project-scale supply are important.",
+      "VCARPETS 50x50cm carpet tiles are used for hotel carpet floors, office carpet projects, corridors, lobbies, meeting rooms, and commercial renovation programs where modular replacement and project-scale supply are important.",
   },
   {
     question: "How should buyers compare carpet tile price per piece and per square meter?",
@@ -93,9 +93,9 @@ const procurementFaqs = [
       "One 50x50cm carpet tile covers 0.25 square meters, so four pieces equal one square meter. The displayed US$1.40-2.20 price is a per-piece reference; final project quotes depend on quantity, material, backing, color, packaging, and shipping terms.",
   },
   {
-    question: "Can Vishomecarpet supply nylon carpet tiles and PP carpet tiles?",
+    question: "Can VCARPETS supply nylon carpet tiles and PP carpet tiles?",
     answer:
-      "Yes. Vishomecarpet can supply nylon or PP carpet tile options with project-based color, backing, packaging, and sample support for contractors, distributors, hotels, offices, and commercial buyers.",
+      "Yes. VCARPETS can supply nylon or PP carpet tile options with project-based color, backing, packaging, and sample support for contractors, distributors, hotels, offices, and commercial buyers.",
   },
   {
     question: "Can I request samples before bulk order?",
@@ -111,12 +111,12 @@ const procurementFaqs = [
 
 export const metadata: Metadata = product
   ? {
-      title: "Luxury Hotel Carpet Tiles 50x50 | Nylon Modular | VISHOME",
+      title: "Luxury Hotel Carpet Tiles 50x50 | Nylon Modular | VCARPETS",
       description:
         "Source luxury 50x50 hotel carpet tiles in nylon or PP options for guestrooms, corridors, lobbies, meeting rooms, and wholesale modular projects.",
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "Luxury Hotel Carpet Tiles 50x50 | Nylon Modular | VISHOME",
+        title: "Luxury Hotel Carpet Tiles 50x50 | Nylon Modular | VCARPETS",
         description: "Luxury 50x50 hotel carpet tiles in nylon or PP options for guestrooms, corridors, lobbies, meeting rooms, and modular flooring projects.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
@@ -124,12 +124,12 @@ export const metadata: Metadata = product
       },
       twitter: {
         card: "summary_large_image",
-        title: "Luxury Hotel Carpet Tiles 50x50 | Nylon Modular | VISHOME",
+        title: "Luxury Hotel Carpet Tiles 50x50 | Nylon Modular | VCARPETS",
         description: "Luxury 50x50 hotel carpet tiles in nylon or PP options for guestrooms, corridors, lobbies, meeting rooms, and modular flooring projects.",
         images: [absoluteUrl(mainImages[0].src)],
       },
     }
-  : { title: "Luxury Hotel Carpet Tile 50x50cm | Vishomecarpet" };
+  : { title: "Luxury Hotel Carpet Tile 50x50cm | VCARPETS" };
 
 export default function LuxuryHotelCarpetTileProductPage() {
   const p = products.find((prod) => prod.id === productId);
@@ -178,7 +178,7 @@ export default function LuxuryHotelCarpetTileProductPage() {
             </div>
 
             <div className="flex flex-col justify-center">
-              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Vishomecarpet Factory Supply</p>
+              <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">VCARPETS Factory Supply</p>
               <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
                 Luxury Hotel Carpet Tile 50x50cm
               </h1>

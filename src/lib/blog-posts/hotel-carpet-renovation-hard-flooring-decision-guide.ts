@@ -7,7 +7,7 @@ export const hotelCarpetRenovationHardFlooringDecisionGuide: BlogPost = {
     "A procurement guide for hospitality teams in the United States, Canada and Australia comparing noise, comfort, maintenance, design and replacement risk.",
   painPoint:
     "Replacing worn hotel flooring is not only a visual decision: the wrong surface can increase corridor noise, reduce guest comfort and create avoidable maintenance or shutdown pressure.",
-  seoTitle: "Hotel Carpet Renovation Guide | Carpet vs Hard Flooring | VISHOME",
+  seoTitle: "Hotel Carpet Renovation Guide | Carpet vs Hard Flooring | VCARPETS",
   description:
     "Use this hotel carpet renovation guide to compare carpet and hard flooring by zone, guest noise, cleaning, pattern, replacement planning and quotation requirements.",
   keywords: [
@@ -21,7 +21,7 @@ export const hotelCarpetRenovationHardFlooringDecisionGuide: BlogPost = {
   ],
   date: "2026-08-10",
   dateModified: "2026-08-10",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Hotel Carpet",
   image:
     "/images/blog-series/hotel-carpet-renovation-hard-flooring-decision-guide/hotel-carpet-renovation-hard-flooring-decision-guide.png",
@@ -161,7 +161,7 @@ export const hotelCarpetRenovationHardFlooringDecisionGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "For a hotel carpet renovation project, send the floor areas by zone, design reference, sample requirement, target delivery date and any technical documents required by the project team. Vishomecarpet can then review the specification path and prepare a project quotation.",
+          text: "For a hotel carpet renovation project, send the floor areas by zone, design reference, sample requirement, target delivery date and any technical documents required by the project team. VCARPETS can then review the specification path and prepare a project quotation.",
         },
       ],
     },

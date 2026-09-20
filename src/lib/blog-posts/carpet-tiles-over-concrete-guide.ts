@@ -17,7 +17,7 @@ export const carpetTilesOverConcreteGuide: BlogPost = {
     "carpet tile adhesive",
   ],
   date: "2026-07-28",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Installation",
   image:
     "/images/blog-series/carpet-tiles-over-concrete/carpet-tiles-over-concrete-installation-dcf0a8e5fa.webp",
@@ -281,7 +281,7 @@ export const carpetTilesOverConcreteGuide: BlogPost = {
         },
         {
           type: "paragraph",
-          text: "Vishome offers 50 x 50 cm carpet tile options and project-specific commercial nylon carpet tiles. Final installation requirements must be confirmed against the selected backing, adhesive, and site conditions.",
+          text: "VCARPETS offers 50 x 50 cm carpet tile options and project-specific commercial nylon carpet tiles. Final installation requirements must be confirmed against the selected backing, adhesive, and site conditions.",
         },
       ],
     },
@@ -296,7 +296,7 @@ export const carpetTilesOverConcreteGuide: BlogPost = {
         {
           type: "callout",
           label: "Request a commercial carpet tile quote",
-          text: "Send the project area, application, slab condition, target tile specification, delivery destination, and required date to the Vishome project team for a product recommendation and comparable quotation.",
+          text: "Send the project area, application, slab condition, target tile specification, delivery destination, and required date to the VCARPETS project team for a product recommendation and comparable quotation.",
         },
       ],
     },

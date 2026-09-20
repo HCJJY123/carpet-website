@@ -10,7 +10,7 @@ const BASE = `https://${HOST}`;
 
 async function loadSitemapUrls() {
   const response = await fetch(`${BASE}/sitemap.xml`, {
-    headers: { "User-Agent": "VishomeCarpet-IndexNow/1.0" },
+    headers: { "User-Agent": "VCARPETSCarpet-IndexNow/1.0" },
   });
   if (!response.ok) {
     throw new Error(`Unable to load sitemap: HTTP ${response.status}`);
@@ -21,7 +21,7 @@ async function loadSitemapUrls() {
   const validUrls = [...new Set(urls.filter((url) => url.startsWith(`${BASE}/`)))];
 
   if (validUrls.length === 0) {
-    throw new Error("No Vishome URLs found in sitemap.xml");
+    throw new Error("No VCARPETS URLs found in sitemap.xml");
   }
 
   return validUrls;

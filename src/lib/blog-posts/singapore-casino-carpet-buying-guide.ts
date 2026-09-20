@@ -7,7 +7,7 @@ export const singaporeCasinoCarpetBuyingGuide: BlogPost = {
     "A practical purchasing guide for Singapore gaming floors, VIP rooms, clubs and hotel entertainment carpet projects.",
   painPoint:
     "Casino and entertainment flooring buyers often compare patterns first, but sample approval, backing stability, cleaning access and delivery staging decide whether the project runs smoothly.",
-  seoTitle: "Casino Carpet Singapore Buying Guide | Gaming Floor Carpet | Vishomecarpet",
+  seoTitle: "Casino Carpet Singapore Buying Guide | Gaming Floor Carpet | VCARPETS",
   description:
     "Learn how to choose casino carpet in Singapore for gaming floors, VIP rooms and hotel entertainment zones. Compare pattern, backing, samples, MOQ, cleaning and quote details.",
   keywords: [
@@ -22,7 +22,7 @@ export const singaporeCasinoCarpetBuyingGuide: BlogPost = {
   ],
   date: "2026-08-07",
   dateModified: "2026-08-07",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Hospitality Flooring",
   image: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/01-main-oriental-flower-luxury-casino-carpet.webp",
   h1Image: "/images/products/wall-to-wall/custom-polyester-loop-casino-carpet/01-main-oriental-flower-luxury-casino-carpet.webp",
@@ -164,7 +164,7 @@ export const singaporeCasinoCarpetBuyingGuide: BlogPost = {
         { type: "subheading", title: "Can the casino carpet pattern be customized?" },
         {
           type: "paragraph",
-          text: "Yes. Vishomecarpet can review oriental flower, gold accent, grey, beige, charcoal, border and OEM pattern directions. Bulk production should follow approved sample or strike-off details.",
+          text: "Yes. VCARPETS can review oriental flower, gold accent, grey, beige, charcoal, border and OEM pattern directions. Bulk production should follow approved sample or strike-off details.",
         },
         { type: "subheading", title: "Is this only for casino table areas?" },
         {
@@ -176,7 +176,7 @@ export const singaporeCasinoCarpetBuyingGuide: BlogPost = {
           type: "paragraph",
           text: "Send the Singapore site address, application zones, total SQM, pattern reference, sample deadline, backing preference, delivery floor, loading restrictions and any required document list.",
         },
-        { type: "subheading", title: "Can Vishomecarpet support samples before bulk order?" },
+        { type: "subheading", title: "Can VCARPETS support samples before bulk order?" },
         {
           type: "paragraph",
           text: "Yes. Sample size, courier address, phone number and required arrival date should be confirmed before the sample plan is quoted.",
@@ -189,7 +189,7 @@ export const singaporeCasinoCarpetBuyingGuide: BlogPost = {
       blocks: [
         {
           type: "paragraph",
-          text: "If you are comparing casino carpet in Singapore, send your floor plan, target SQM, venue zones, design reference and sample requirement. Vishomecarpet can help review the product direction and prepare a project quotation path for gaming floors, VIP rooms and hotel entertainment areas.",
+          text: "If you are comparing casino carpet in Singapore, send your floor plan, target SQM, venue zones, design reference and sample requirement. VCARPETS can help review the product direction and prepare a project quotation path for gaming floors, VIP rooms and hotel entertainment areas.",
         },
       ],
     },

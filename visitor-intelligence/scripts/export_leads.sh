@@ -3,8 +3,8 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 WORKER_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
-OUTPUT_DIR="${1:-${HOME}/Downloads/Vishome-Lead-Reports/$(date +%F)}"
-RAW_JSON="$(mktemp -t vishome-leads.XXXXXX.json)"
+OUTPUT_DIR="${1:-${HOME}/Downloads/VCARPETS-Lead-Reports/$(date +%F)}"
+RAW_JSON="$(mktemp -t vcarpets-leads.XXXXXX.json)"
 
 cleanup() {
   rm -f "${RAW_JSON}"

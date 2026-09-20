@@ -19,11 +19,11 @@ export default function ThankYouPage() {
   const router = useRouter();
   const [allowed] = useState(() => {
     if (typeof window === "undefined") return false;
-    return Boolean(sessionStorage.getItem("vishome_form_success"));
+    return Boolean(sessionStorage.getItem("VCARPETS_form_success"));
   });
   const [formSuccess] = useState<FormSuccess>(() => {
     if (typeof window === "undefined") return {};
-    const raw = sessionStorage.getItem("vishome_form_success");
+    const raw = sessionStorage.getItem("VCARPETS_form_success");
     if (!raw) return {};
     try {
       return JSON.parse(raw) as FormSuccess;
@@ -41,7 +41,7 @@ export default function ThankYouPage() {
   useEffect(() => {
     if (!allowed) return;
 
-    const successRaw = sessionStorage.getItem("vishome_form_success");
+    const successRaw = sessionStorage.getItem("VCARPETS_form_success");
     if (!successRaw) return;
 
     let success: { token?: number; formName?: string } = {};
@@ -52,7 +52,7 @@ export default function ThankYouPage() {
     }
 
     const token = String(success.token || "");
-    const trackedToken = sessionStorage.getItem("vishome_thank_you_tracked");
+    const trackedToken = sessionStorage.getItem("VCARPETS_thank_you_tracked");
     if (trackedToken && trackedToken === token) return;
 
     trackInteractionConversion("thank_you_page_view", {
@@ -61,7 +61,7 @@ export default function ThankYouPage() {
     });
 
     if (token) {
-      sessionStorage.setItem("vishome_thank_you_tracked", token);
+      sessionStorage.setItem("VCARPETS_thank_you_tracked", token);
     }
   }, [allowed]);
 

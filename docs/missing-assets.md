@@ -15,7 +15,7 @@ Last reviewed: 2026-08-06
 
 Products with fewer than 3 gallery images in the current source data:
 
-- Vishomecarpet EcoCore PVC-Free PE Backing Carpet Tiles (ecocore-pe-backing-carpet-tiles) - gallery count: 0
+- VCARPETS EcoCore PVC-Free PE Backing Carpet Tiles (ecocore-pe-backing-carpet-tiles) - gallery count: 0
 - Premium Nylon 6.6 Commercial Carpet Tiles (commercial-nylon-tiles) - gallery count: 0
 - High-Traffic Public Area Corridor Carpet (public-area-heavy-duty) - gallery count: 0
 - Natural Sisal Linen-Weave Commercial Carpet (natural-sisal-carpet) - gallery count: 0

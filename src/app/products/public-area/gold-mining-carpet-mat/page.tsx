@@ -14,7 +14,7 @@ const product = products.find((prod) => prod.id === productId);
 const mainImages = [
   {
     src: "/images/products/gold-mining-carpet-mat/01-hero-45-degree.webp",
-    alt: "Vishomecarpet gold mining carpet mat PVC miners moss for sluice box gold recovery",
+    alt: "VCARPETS gold mining carpet mat PVC miners moss for sluice box gold recovery",
   },
   {
     src: "/images/products/gold-mining-carpet-mat/02-full-texture-top-view.webp",
@@ -70,9 +70,9 @@ const detailImages = [
 ];
 
 const descriptionParagraphs = [
-  "Vishomecarpet supplies PVC miners moss sluice matting for gold sluice boxes, placer recovery, prospecting, and alluvial washing systems. The ribbed coil surface works as gold sluice matting, a gold mining sluice mat, gold prospecting mat, gold sluice carpet, gold recovery carpet, gold carpet for mining, and carpet for gold mining by helping retain fine particles while sand, mud, and water continue through the channel.",
+  "VCARPETS supplies PVC miners moss sluice matting for gold sluice boxes, placer recovery, prospecting, and alluvial washing systems. The ribbed coil surface works as gold sluice matting, a gold mining sluice mat, gold prospecting mat, gold sluice carpet, gold recovery carpet, gold carpet for mining, and carpet for gold mining by helping retain fine particles while sand, mud, and water continue through the channel.",
   "The product is supplied as a gold mining carpet roll for sluice box carpet, gold wash carpet, mining sluice carpet, mining sluice mat, recovery trays, dredges, trommels, and separator systems. Standard options include a 1m x 15m roll and 10mm, 15mm, or 20mm thickness; color, width, backing, roll length, logo, and packaging can be customized after technical confirmation.",
-  "As a China-based gold mining carpet manufacturer, gold mining mat manufacturer and supplier, and sluice mat supplier, Vishomecarpet supports equipment manufacturers, distributors, and gold mining equipment suppliers with bulk gold mining carpet, wholesale pricing, samples, and OEM packing. Send the application, size, quantity, and destination to compare gold mining carpet price per roll; per-meter supply depends on cut length and MOQ.",
+  "As a China-based gold mining carpet manufacturer, gold mining mat manufacturer and supplier, and sluice mat supplier, VCARPETS supports equipment manufacturers, distributors, and gold mining equipment suppliers with bulk gold mining carpet, wholesale pricing, samples, and OEM packing. Send the application, size, quantity, and destination to compare gold mining carpet price per roll; per-meter supply depends on cut length and MOQ.",
 ];
 
 const quoteRequirements = [
@@ -98,8 +98,8 @@ const faqs = [
     a: "Common roll size is 1m x 15m, so the standard gold mining carpet 1m width is easy to specify for many channels. Available thicknesses include 10mm, 15mm, and 20mm. A 10mm sluice mat is a standard option. Requests for 18mm gold carpet, 3D gold mining mat, custom riffle matting, width, color, or backing require separate feasibility confirmation.",
   },
   {
-    q: "Can Vishomecarpet provide OEM or ODM service?",
-    a: "Yes. Vishomecarpet supports custom color, size, thickness, logo, packaging, and bulk supply for distributors and gold mining equipment manufacturers.",
+    q: "Can VCARPETS provide OEM or ODM service?",
+    a: "Yes. VCARPETS supports custom color, size, thickness, logo, packaging, and bulk supply for distributors and gold mining equipment manufacturers.",
   },
   {
     q: "What is the MOQ and lead time?",
@@ -117,7 +117,7 @@ const faqs = [
 
 export const metadata: Metadata = product
   ? {
-      title: "Sluice Box Matting & Gold Mining Carpet | VISHOME",
+      title: "Sluice Box Matting & Gold Mining Carpet | VCARPETS",
       description:
         "PVC miners moss sluice mat and sluice box matting for gold recovery. Compare 10/15/20mm carpet rolls, wholesale price, samples and OEM supply.",
       alternates: {
@@ -129,7 +129,7 @@ export const metadata: Metadata = product
         },
       },
       openGraph: {
-        title: "Sluice Box Matting & Gold Mining Carpet | VISHOME",
+        title: "Sluice Box Matting & Gold Mining Carpet | VCARPETS",
         description: "PVC miners moss sluice mat and sluice box matting for gold recovery. Compare 10/15/20mm rolls, wholesale price, samples, and OEM supply.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
@@ -137,12 +137,12 @@ export const metadata: Metadata = product
       },
       twitter: {
         card: "summary_large_image",
-        title: "Sluice Box Matting & Gold Mining Carpet | VISHOME",
+        title: "Sluice Box Matting & Gold Mining Carpet | VCARPETS",
         description: "PVC miners moss sluice mat and sluice box matting for gold recovery. Compare 10/15/20mm rolls, wholesale price, samples, and OEM supply.",
         images: [absoluteUrl(product.image)],
       },
     }
-  : { title: "Gold Mining Carpet Mat | Vishomecarpet" };
+  : { title: "Gold Mining Carpet Mat | VCARPETS" };
 
 export default function GoldMiningCarpetMatPage() {
   const p = products.find((prod) => prod.id === productId);
@@ -255,7 +255,7 @@ export default function GoldMiningCarpetMatPage() {
           "Use as architectural flooring or as a stand-alone guarantee of recovery rate",
           "Ordering without confirming equipment width, profile, flow and clean-out procedure",
         ]}
-        evidence="Specifications and buyer guidance were reviewed on July 31, 2026. Vishomecarpet does not claim a universal recovery percentage; buyers should validate the selected profile in their own equipment and material conditions before scale-up."
+        evidence="Specifications and buyer guidance were reviewed on July 31, 2026. VCARPETS does not claim a universal recovery percentage; buyers should validate the selected profile in their own equipment and material conditions before scale-up."
         quoteHref="/contact?product=Gold%20Mining%20Carpet%20Mat#quote-form"
         quoteLabel="Request a Sluice Mat Recommendation"
       />

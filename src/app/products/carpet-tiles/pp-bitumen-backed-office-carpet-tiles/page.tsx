@@ -16,7 +16,7 @@ const galleryImages = [
   {
     src: `${imageBase}/01-hero-office-meeting-room.webp`,
     title: "Meeting Room Installation",
-    alt: "Vishomecarpet PP bitumen backed office carpet tiles 50x50cm installed in a modern meeting room",
+    alt: "VCARPETS PP bitumen backed office carpet tiles 50x50cm installed in a modern meeting room",
   },
   {
     src: `${imageBase}/02-blue-meeting-room-carpet-tiles.webp`,
@@ -49,7 +49,7 @@ const faqs = [
     answer: "This product uses bitumen backing. Bitumen backed carpet tiles are commonly selected for dimensional stability, practical commercial installation, and replacement-friendly office flooring projects.",
   },
   {
-    question: "Can Vishomecarpet support OEM colors or project packaging?",
+    question: "Can VCARPETS support OEM colors or project packaging?",
     answer: "Yes. OEM color coordination, carton marks, project packing, samples, and specification confirmation can be discussed before quotation. Buyers should provide quantity, destination, preferred color direction, and required test standards.",
   },
 ];
@@ -74,12 +74,12 @@ const procurementGuideLinks = [
 
 export const metadata: Metadata = product
   ? {
-      title: "PP Bitumen Backed Office Carpet Tiles 50x50cm | Vishomecarpet",
+      title: "PP Bitumen Backed Office Carpet Tiles 50x50cm | VCARPETS",
       description:
-        "Source 100% PP fiber bitumen backed office carpet tiles 50x50cm from Vishomecarpet for commercial offices, meeting rooms, home offices and OEM flooring projects.",
+        "Source 100% PP fiber bitumen backed office carpet tiles 50x50cm from VCARPETS for commercial offices, meeting rooms, home offices and OEM flooring projects.",
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "PP Bitumen Backed Office Carpet Tiles 50x50cm | Vishomecarpet",
+        title: "PP Bitumen Backed Office Carpet Tiles 50x50cm | VCARPETS",
         description: product.description,
         url: absoluteUrl(productPath(product.id)),
         type: "website",
@@ -87,12 +87,12 @@ export const metadata: Metadata = product
       },
       twitter: {
         card: "summary_large_image",
-        title: "PP Bitumen Backed Office Carpet Tiles 50x50cm | Vishomecarpet",
+        title: "PP Bitumen Backed Office Carpet Tiles 50x50cm | VCARPETS",
         description: product.description,
         images: [absoluteUrl(product.image)],
       },
     }
-  : { title: "PP Bitumen Backed Office Carpet Tiles | Vishomecarpet" };
+  : { title: "PP Bitumen Backed Office Carpet Tiles | VCARPETS" };
 
 export default function Page() {
   if (!product) notFound();
@@ -137,7 +137,7 @@ export default function Page() {
           </div>
 
           <div>
-            <p className="mb-4 text-xs font-black uppercase tracking-[0.22em] text-accent">Vishomecarpet OEM Factory Supply</p>
+            <p className="mb-4 text-xs font-black uppercase tracking-[0.22em] text-accent">VCARPETS OEM Factory Supply</p>
             <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">{product.name}</h1>
             <p className="product-summary mb-8 text-base leading-relaxed text-muted md:text-lg">{product.longDescription}</p>
             <div className="mb-8 grid gap-3 sm:grid-cols-2">
@@ -177,7 +177,7 @@ export default function Page() {
           "Wet areas or rooms requiring resilient clinical flooring",
           "Projects that require nylon-only Class 33 construction",
         ]}
-        evidence="Specifications, price range, MOQ, fire rating, and availability must be verified against the final construction, color, backing, and test documents quoted by Vishomecarpet."
+        evidence="Specifications, price range, MOQ, fire rating, and availability must be verified against the final construction, color, backing, and test documents quoted by VCARPETS."
         quoteHref={`/contact?product=${encodeURIComponent(product.name)}#quote-form`}
       />
 

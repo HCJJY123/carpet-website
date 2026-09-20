@@ -7,7 +7,7 @@ export const commercialCarpetSampleApprovalChecklist: BlogPost = {
     "A practical approval sequence for checking colour, pattern, pile, backing, installation direction, batch control and technical documents before a commercial carpet order.",
   painPoint:
     "A sample can look correct while the quoted construction, installation direction, batch plan or supporting documents remain unclear. That creates avoidable approval and replacement risk after production.",
-  seoTitle: "Commercial Carpet Sample Approval Checklist | VISHOME",
+  seoTitle: "Commercial Carpet Sample Approval Checklist | VCARPETS",
   description:
     "Use this commercial carpet sample approval checklist to review color, pattern, pile, backing, installation direction, batch consistency, fire and VOC documents before ordering.",
   keywords: [
@@ -20,7 +20,7 @@ export const commercialCarpetSampleApprovalChecklist: BlogPost = {
   ],
   date: "2026-09-10",
   dateModified: "2026-09-10",
-  author: "Vishome Technical Team",
+  author: "VCARPETS Technical Team",
   category: "Project Approval Guide",
   image: "/images/blog-series/commercial-carpet-sample-approval-checklist/commercial-carpet-sample-approval-checklist-hero.webp",
   imageUnoptimized: true,
@@ -142,7 +142,7 @@ export const commercialCarpetSampleApprovalChecklist: BlogPost = {
         },
         {
           type: "paragraph",
-          text: "Send the sample brief and approval deadline with the project area schedule. VISHOME can help align the physical sample discussion with product selection, documents, packing and the quotation basis; final values and acceptance remain project-specific.",
+          text: "Send the sample brief and approval deadline with the project area schedule. VCARPETS can help align the physical sample discussion with product selection, documents, packing and the quotation basis; final values and acceptance remain project-specific.",
         },
       ],
     },

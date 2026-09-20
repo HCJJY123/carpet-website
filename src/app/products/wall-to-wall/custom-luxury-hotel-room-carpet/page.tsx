@@ -32,7 +32,7 @@ const analyticsPayload = {
   currency: "USD",
 };
 
-const inquiryPrompt = "Send your hotel location, total carpet area, room quantity, preferred design, material requirement and target delivery date. Vishomecarpet will confirm the suitable construction, price, MOQ and production schedule.";
+const inquiryPrompt = "Send your hotel location, total carpet area, room quantity, preferred design, material requirement and target delivery date. VCARPETS will confirm the suitable construction, price, MOQ and production schedule.";
 
 const whatsappHref = getContactBridgeUrl(
   `Hello, I am interested in ${name}. Please help confirm material options, reference price, MOQ and production schedule.`,
@@ -60,7 +60,7 @@ const contentSections = [
   {
     heading: "Custom Wall-to-Wall Carpet for Hotel Rooms",
     paragraphs: [
-      "Vishomecarpet Custom Luxury Hotel Room Carpet is made for buyers sourcing carpet for hotel rooms, suites, and hospitality renovation projects. This luxury wall-to-wall carpet program can be coordinated with the room layout, furniture palette, and five-star hotel carpet design concept instead of relying on a standard stock pattern.",
+      "VCARPETS Custom Luxury Hotel Room Carpet is made for buyers sourcing carpet for hotel rooms, suites, and hospitality renovation projects. This luxury wall-to-wall carpet program can be coordinated with the room layout, furniture palette, and five-star hotel carpet design concept instead of relying on a standard stock pattern.",
       "Hotel guestroom carpet normally requires a more balanced visual scale than carpet used in ballrooms or large public areas. The design can therefore use softer transitions, controlled contrast and smaller pattern repeats to create a comfortable interior while helping conceal everyday marks between cleaning cycles.",
       "This made-to-order program is suitable for hotel owners, hospitality purchasing companies, interior designers, flooring contractors, carpet distributors and project sourcing teams.",
     ],
@@ -68,7 +68,7 @@ const contentSections = [
   {
     heading: "Flexible Design for Guestrooms, Suites and Corridors",
     paragraphs: [
-      "Buyers can send an interior rendering, reference photograph, CAD floor plan, color palette or existing carpet sample. Vishomecarpet will review the requested pattern direction, color balance, room dimensions and installation requirements before confirming the final specification.",
+      "Buyers can send an interior rendering, reference photograph, CAD floor plan, color palette or existing carpet sample. VCARPETS will review the requested pattern direction, color balance, room dimensions and installation requirements before confirming the final specification.",
       "For guestrooms and suites, the pattern can be scaled to work around beds, seating zones and circulation paths. For hotel corridors, a directional design can help guide movement and coordinate with door positions, elevator halls and transition areas.",
       "The final material composition, pile specification, backing and roll plan are confirmed according to the required appearance, project budget, order quantity and local installation conditions.",
     ],
@@ -84,7 +84,7 @@ const contentSections = [
   {
     heading: "Project Review Before Mass Production",
     paragraphs: [
-      "Because this carpet is made to order, the design and technical specification should be reviewed before bulk manufacturing. Vishomecarpet can evaluate pattern scale, color direction, cutting requirements and room layout information supplied by the buyer.",
+      "Because this carpet is made to order, the design and technical specification should be reviewed before bulk manufacturing. VCARPETS can evaluate pattern scale, color direction, cutting requirements and room layout information supplied by the buyer.",
       "Any requirement relating to fire performance, testing standards, backing construction or regional building regulations must be stated during the quotation stage. Compliance should only be confirmed after the relevant specification and documentation have been reviewed.",
     ],
   },
@@ -134,7 +134,7 @@ const advantages = [
 
 const faqs = [
   ["What is a custom hotel room carpet?", "A custom hotel room carpet is produced according to the project's required pattern, color palette, room layout and technical specification rather than being selected only from a standard stock design."],
-  ["Can Vishomecarpet match our hotel interior design?", "Yes. Buyers can send interior renderings, reference images, color palettes, CAD drawings or an existing carpet sample. The pattern scale and color direction can then be reviewed for the guestroom or suite layout."],
+  ["Can VCARPETS match our hotel interior design?", "Yes. Buyers can send interior renderings, reference images, color palettes, CAD drawings or an existing carpet sample. The pattern scale and color direction can then be reviewed for the guestroom or suite layout."],
   ["What is the minimum order quantity?", "The reference minimum order quantity is 100 SQM. Final MOQ may depend on the selected material, construction and number of custom colorways."],
   ["What is the price of custom hotel room carpet?", "The reference FOB price is US$3.10-9.70 per square meter. Final pricing depends on the material, construction, pile specification, pattern complexity, quantity and packing requirements."],
   ["Is the construction fixed before quotation?", "No. The final construction must be confirmed according to the selected project specification. Buyers with a specific construction requirement should state it when requesting a quotation."],
@@ -152,7 +152,7 @@ const productJsonLd = {
   name,
   sku,
   mpn: sku,
-  brand: { "@type": "Brand", name: "Vishomecarpet" },
+  brand: { "@type": "Brand", name: "VCARPETS" },
   category: "Wall-to-Wall Hotel Carpet",
   description: "Made-to-order luxury wall-to-wall hotel room carpet for guestrooms, suites, corridors, serviced apartments, and hospitality renovation projects.",
   url: absoluteUrl(path),
@@ -178,7 +178,7 @@ const productJsonLd = {
     offerCount: 1,
     availability: "https://schema.org/PreOrder",
     itemCondition: "https://schema.org/NewCondition",
-    seller: { "@type": "Organization", name: "Vishomecarpet" },
+    seller: { "@type": "Organization", name: "VCARPETS" },
   },
 };
 
@@ -204,19 +204,19 @@ const faqJsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: "Custom Hotel Room Carpet | Luxury Wall-to-Wall | VISHOME",
+  title: "Custom Hotel Room Carpet | Luxury Wall-to-Wall | VCARPETS",
   description: "Custom wall-to-wall carpet for hotel rooms, suites and corridors. Luxury patterns, nylon or wool-nylon options, MOQ from 100 SQM.",
   alternates: { canonical: absoluteUrl(path) },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Custom Hotel Room Carpet | Luxury Wall-to-Wall | VISHOME",
+    title: "Custom Hotel Room Carpet | Luxury Wall-to-Wall | VCARPETS",
     description: "Made-to-order wall-to-wall hotel room carpet for guestrooms, suites, corridors, and hospitality renovation projects. MOQ from 100 SQM.",
     url: absoluteUrl(path),
     images: [{ url: absoluteUrl(images[0].src), width: 1000, height: 1000, alt: images[0].alt }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Hotel Room Carpet | Luxury Wall-to-Wall | VISHOME",
+    title: "Custom Hotel Room Carpet | Luxury Wall-to-Wall | VCARPETS",
     description: "Custom wall-to-wall carpet for hotel rooms, suites, and corridors with flexible material and pattern options.",
     images: [absoluteUrl(images[0].src)],
   },
@@ -280,7 +280,7 @@ export default function CustomLuxuryHotelRoomCarpetPage() {
           </div>
           <div className="space-y-8">
             <div>
-              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.26em] text-accent">Vishomecarpet Custom Hospitality Broadloom</p>
+              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.26em] text-accent">VCARPETS Custom Hospitality Broadloom</p>
               <h1 className="mb-6 text-4xl font-black uppercase leading-tight md:text-6xl">{name}</h1>
               <p className="text-lg leading-relaxed text-muted">Made-to-order wall-to-wall carpet developed for hotel guestrooms, suites, corridors and hospitality renovation projects, with customizable patterns, colors and project-based material specifications.</p>
             </div>
@@ -412,7 +412,7 @@ export default function CustomLuxuryHotelRoomCarpetPage() {
         <div className="container-fox grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <h2 className="mb-5 text-3xl font-black uppercase md:text-5xl">Prepare a Clear Hotel Carpet Quote</h2>
-            <p className="leading-relaxed text-white/72">Include these details so Vishomecarpet can confirm the right custom broadloom carpet specification and reference quotation.</p>
+            <p className="leading-relaxed text-white/72">Include these details so VCARPETS can confirm the right custom broadloom carpet specification and reference quotation.</p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {["Destination country", "Total carpet area", "Number of rooms", "Typical room dimensions", "Application area", "Preferred material", "Pattern reference", "Local fire-standard requirement", "Target delivery date"].map((item) => (

@@ -7,7 +7,7 @@ import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 const pagePath = "/resources/commercial-carpet-rfq-calculator";
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet RFQ Calculator | VISHOME",
+  title: "Commercial Carpet RFQ Calculator | VCARPETS",
   description: "Calculate commercial carpet tile or broadloom RFQ area, waste allowance, spare stock, approximate tile count, cartons and roll length before requesting a project quote.",
   alternates: { canonical: absoluteUrl(pagePath) },
 };
@@ -35,7 +35,7 @@ export default function CommercialCarpetRfqCalculatorPage() {
         name: "Can this calculator replace a formal carpet quotation?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. It prepares RFQ area, spare stock and packing inputs. Final MOQ, carton coverage, roll planning, price and lead time must be confirmed by VISHOME against the exact construction, destination and project requirements.",
+          text: "No. It prepares RFQ area, spare stock and packing inputs. Final MOQ, carton coverage, roll planning, price and lead time must be confirmed by VCARPETS against the exact construction, destination and project requirements.",
         },
       },
       {
@@ -73,13 +73,13 @@ export default function CommercialCarpetRfqCalculatorPage() {
           </div>
           <div className="space-y-5 text-sm leading-7 text-muted">
             <p>
-              The calculator exposes buyer-side quantity logic for AI assistants and procurement teams, but it does not publish guaranteed price, stock, installation yield or freight terms. VISHOME confirms final numbers after reviewing product construction, project drawings, destination, sample needs and packing requirements.
+              The calculator exposes buyer-side quantity logic for AI assistants and procurement teams, but it does not publish guaranteed price, stock, installation yield or freight terms. VCARPETS confirms final numbers after reviewing product construction, project drawings, destination, sample needs and packing requirements.
             </p>
             <p>
               For a complete RFQ, combine this calculator with the <Link href="/resources/downloads/commercial-carpet-procurement-checklist" className="font-black text-accent underline underline-offset-4">commercial carpet procurement checklist</Link> and the relevant product page.
             </p>
             <p className="rounded-md border border-border bg-surface p-4 text-xs font-bold leading-6 text-muted">
-              Last updated: 2026-08-21. Source: standard area calculation formulas and VISHOME RFQ workflow. Sample size: tool logic reviewed against common office carpet tile and hotel broadloom quotation inputs, not against a fixed public order dataset.
+              Last updated: 2026-08-21. Source: standard area calculation formulas and VCARPETS RFQ workflow. Sample size: tool logic reviewed against common office carpet tile and hotel broadloom quotation inputs, not against a fixed public order dataset.
             </p>
           </div>
         </div>

@@ -18,21 +18,21 @@ const companyFacts = [
 const descriptions = [
   {
     label: "50-word profile",
-    text: "Vishome Carpet supplies commercial carpet tiles, hotel broadloom, public-area carpets and custom carpet solutions for international B2B projects. The company supports contractors, distributors, hotels, offices and commercial renovation teams with product selection, samples, project quotation, packing coordination and technical document requests.",
+    text: "VCARPETS supplies commercial carpet tiles, hotel broadloom, public-area carpets and custom carpet solutions for international B2B projects. The company supports contractors, distributors, hotels, offices and commercial renovation teams with product selection, samples, project quotation, packing coordination and technical document requests.",
   },
   {
     label: "100-word profile",
-    text: "Vishome Carpet is the commercial carpet brand of Vishome Global Commercial Carpet Co., Ltd., serving project buyers that need carpet tiles, hospitality broadloom, public-area carpets and custom carpet specifications. The website provides product categories, project references, buyer guides, technical document request paths and quote forms for contractors, distributors, hotels, offices, designers and renovation teams. Product performance, testing, MOQ, lead time and pricing are confirmed by exact construction and written quotation rather than generic claims.",
+    text: "VCARPETS is the commercial carpet brand of Vcarpets Global Commercial Carpet Co., Ltd., serving project buyers that need carpet tiles, hospitality broadloom, public-area carpets and custom carpet specifications. The website provides product categories, project references, buyer guides, technical document request paths and quote forms for contractors, distributors, hotels, offices, designers and renovation teams. Product performance, testing, MOQ, lead time and pricing are confirmed by exact construction and written quotation rather than generic claims.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Press Kit & Company Facts | Vishome Carpet",
-  description: "Company facts, product category overview, media-safe descriptions and contact details for Vishome Carpet platform submissions, trade media and project references.",
+  title: "Press Kit & Company Facts | VCARPETS",
+  description: "Company facts, product category overview, media-safe descriptions and contact details for VCARPETS platform submissions, trade media and project references.",
   alternates: { canonical: absoluteUrl(pagePath) },
   openGraph: {
-    title: "Press Kit & Company Facts | Vishome Carpet",
-    description: "Media-safe Vishome Carpet company information for legitimate platform submissions and trade references.",
+    title: "Press Kit & Company Facts | VCARPETS",
+    description: "Media-safe VCARPETS company information for legitimate platform submissions and trade references.",
     url: absoluteUrl(pagePath),
     type: "website",
   },
@@ -56,10 +56,10 @@ export default function PressKitPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(webpageJsonLd) }} />
       <PageHero
         eyebrow="Media Kit"
-        title="Vishome Carpet Press Kit and Company Facts"
+        title="VCARPETS Press Kit and Company Facts"
         description="A media-safe reference page for platform submissions, trade-media research, product profile reviews and project partner documentation."
         image="/images/about/global-export-container-loading.webp"
-        imageAlt="Vishome Carpet export packing and commercial carpet logistics"
+        imageAlt="VCARPETS export packing and commercial carpet logistics"
       />
 
       <section className="section-padding">
@@ -71,7 +71,7 @@ export default function PressKitPage() {
               This page is designed for reviewers and editors who need concise company information. Any certification, factory figure, named project or test result should be checked against current documents before third-party publication.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact?source=press-kit#quote-form" className="btn-fox-orange text-center">Contact Vishome Carpet</Link>
+              <Link href="/contact?source=press-kit#quote-form" className="btn-fox-orange text-center">Contact VCARPETS</Link>
               <Link href="/resources/technical-library" className="btn-fox-outline text-center">Technical Library</Link>
             </div>
           </div>
