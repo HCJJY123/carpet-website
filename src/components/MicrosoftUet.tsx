@@ -1,18 +1,34 @@
 "use client";
 
 import Script from "next/script";
-import { useAnalyticsAllowed } from "@/lib/useAnalyticsConsent";
+import { useEffect } from "react";
+import { useAnalyticsConsentValue } from "@/lib/useAnalyticsConsent";
 
 const microsoftUetTagId = process.env.NEXT_PUBLIC_MICROSOFT_UET_TAG_ID || "97259674";
 
-export default function MicrosoftUet() {
-  const analyticsAllowed = useAnalyticsAllowed();
+declare global {
+  interface Window {
+    uetq?: { push?: (...args: unknown[]) => void } | unknown[];
+  }
+}
 
-  if (!analyticsAllowed || !microsoftUetTagId) return null;
+export default function MicrosoftUet() {
+  const consent = useAnalyticsConsentValue();
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !consent) return;
+    const queue = window.uetq as { push?: (...args: unknown[]) => void } | undefined;
+    if (typeof queue?.push !== "function") return;
+    queue.push("consent", "update", {
+      ad_storage: consent === "accepted" ? "granted" : "denied",
+    });
+  }, [consent]);
 
   return (
     <Script id="microsoft-uet" strategy="afterInteractive">
       {`
+        window.uetq = window.uetq || [];
+        window.uetq.push("consent", "default", { ad_storage: "denied" });
         (function(w,d,t,r,u){
           var f,n,i;
           w[u]=w[u]||[];

@@ -32,13 +32,15 @@ declare global {
     clarity?: (...args: unknown[]) => void;
     dataLayer?: unknown[];
     ym?: (...args: unknown[]) => void;
-    uetq?: { push?: (...args: unknown[]) => void };
+    uetq?: { push?: (...args: unknown[]) => void } | unknown[];
   }
 }
 
 function pushUetEvent(event: string, payload: Record<string, unknown>) {
-  if (typeof window === "undefined" || typeof window.uetq?.push !== "function") return;
-  window.uetq.push("event", event, payload);
+  if (typeof window === "undefined") return;
+  const queue = window.uetq as { push?: (...args: unknown[]) => void } | undefined;
+  if (typeof queue?.push !== "function") return;
+  queue.push("event", event, payload);
 }
 
 function normalizeEnhancedConversionEmail(value?: string) {

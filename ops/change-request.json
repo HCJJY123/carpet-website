@@ -35,6 +35,7 @@
     "src/app/layout.tsx",
     "src/components/MicrosoftUet.tsx",
     "src/components/MarketingTracking.tsx",
+    "src/lib/consent.ts",
     "src/lib/tracking.ts",
     ".env.example",
     "src/proxy.ts",
@@ -68,5 +69,5 @@
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
   "rollbackCommit": "391e9f9",
-  "notes": "Use UET tag ID 97259674 from the existing vcarpets-uet account. Mount the Microsoft UET loader independently from deferred marketing enhancements, but keep it behind the existing analytics consent gate. Preserve all page layout, URL paths, inquiry forms, email, WhatsApp, GA4, Google Ads, Clarity and attribution behavior. Send non-PII UET custom events for generate_lead, high_intent_lead and existing interaction conversion types. Do not change third-party IDs other than explicitly restoring this approved UET tag, and do not modify domain redirects or URL slugs."
+  "notes": "Use UET tag ID 97259674 from the existing vcarpets-uet account. Mount the Microsoft UET loader in the root layout for every page, always load the script, push consent default ad_storage=denied on page load, and update to ad_storage=granted only after Accept Analytics. Preserve all page layout, URL paths, inquiry forms, email, WhatsApp, GA4, Google Ads, Clarity and attribution behavior. Send non-PII UET custom events for generate_lead, high_intent_lead and existing interaction conversion types. Do not change third-party IDs other than explicitly restoring this approved UET tag, and do not modify domain redirects or URL slugs."
 }

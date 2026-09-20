@@ -27,8 +27,8 @@ This file is append-only. Do not delete or rewrite historical entries.
 **Validation target:** Public pages must render VCARPETS identity, `https://www.vcarpets.com` canonical signals and `sales@vcarpets.com`; actual mailbox delivery and third-party recipient settings remain account-level checks.
 ## 2026-09-20 — Restore Microsoft Advertising UET tag
 
-- Mounted UET tag `97259674` in an independent client component so it no longer depends on deferred marketing enhancements.
-- Kept UET behind the existing analytics-consent gate and preserved Google Analytics, Google Ads, Clarity, Yandex, attribution, inquiry and WhatsApp behavior.
+- Mounted UET tag `97259674` in the root layout so the loader is present on every page and no longer depends on deferred marketing enhancements.
+- Always load the UET script with consent defaulted to `ad_storage: denied`; update it to `granted` only after Accept Analytics, while preserving Google Analytics, Google Ads, Clarity, Yandex, attribution, inquiry and WhatsApp behavior.
 - Added non-PII UET custom events for successful lead forms, high-intent leads, email, WhatsApp, phone and sample-box interactions.
 - Documented `NEXT_PUBLIC_MICROSOFT_UET_TAG_ID=97259674` in `.env.example` for repeatable deployments.
 - No URL, layout, redirect, third-party account ID or database table changes.

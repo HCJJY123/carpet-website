@@ -87,6 +87,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <MicrosoftUet />
+      </head>
       <body className="min-h-full flex flex-col font-sans">
         <LocaleExperience />
         <JsonLd />
@@ -95,7 +98,6 @@ export default function RootLayout({
         <Footer />
         <SendInquiryFloating />
         <WhatsAppFloating />
-        <MicrosoftUet />
         <DeferredSiteEnhancements />
       </body>
     </html>
