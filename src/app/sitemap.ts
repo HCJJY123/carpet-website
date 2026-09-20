@@ -1,31 +1,9 @@
 import { MetadataRoute } from "next";
-import { siteUrl } from "@/lib/seo";
-
-const BASE = siteUrl;
-
-type RootOnlyRoute = {
-  url: string;
-  modified: string;
-  priority: number;
-  changeFrequency: "monthly" | "weekly";
-};
-
-// The detailed content groups are exposed through the split sitemaps listed in
-// robots.txt. Keep this root sitemap limited to pages that have no split owner.
-const rootOnlyRoutes = [
-  { url: "/commercial-carpet-tiles", modified: "2026-08-04", priority: 0.88, changeFrequency: "monthly" as const },
-  { url: "/hotel-carpet", modified: "2026-08-04", priority: 0.8, changeFrequency: "monthly" as const },
-  { url: "/carpet-tiles-50x50", modified: "2026-08-04", priority: 0.8, changeFrequency: "monthly" as const },
-  { url: "/solutions", modified: "2026-07-27", priority: 0.75, changeFrequency: "monthly" as const },
-  { url: "/solutions/hotel-hospitality", modified: "2026-07-23", priority: 0.75, changeFrequency: "monthly" as const },
-  { url: "/resources/technical-library", modified: "2026-08-06", priority: 0.76, changeFrequency: "monthly" as const },
-  { url: "/request-sample-box", modified: "2026-07-25", priority: 0.8, changeFrequency: "monthly" as const },
-] satisfies RootOnlyRoute[];
+import { getSitemapEntries } from "@/lib/sitemap-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return rootOnlyRoutes.map((entry) => ({
+  return getSitemapEntries().map((entry) => ({
     ...entry,
-    url: `${BASE}${entry.url}`,
-    lastModified: new Date(`${entry.modified}T00:00:00.000Z`),
+    lastModified: new Date(`${entry.lastModified}T00:00:00.000Z`),
   }));
 }
