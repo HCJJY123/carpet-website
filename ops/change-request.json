@@ -1,20 +1,20 @@
 {
-  "task": "Integrate four supplied illustrative sample-approval images into the existing article and its shared thumbnails",
-  "approvedBy": "Owner request on 2026-09-21 to integrate supplied Accio assets, create an independent branch, PR and Preview; production merge requires separate owner approval",
-  "approvedCategories": ["content", "images", "performance", "operations"],
+  "task": "Improve responsive hero-image delivery for the Contact page, commercial carpet tile landing page, and second homepage carousel slide",
+  "approvedBy": "Owner request on 2026-09-21 to continue the planned VCARPETS SEO and performance optimization work; implementation remains Preview and PR only until production approval",
+  "approvedCategories": ["images", "performance", "conversion", "operations"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "scripts/generate-sample-approval-images.mjs",
-    "docs/performance/sample-approval-images-20260921.json",
+    "scripts/generate-entry-image-variants.mjs",
     "src/lib/responsive-image-manifest.ts",
-    "src/lib/blog-posts/commercial-carpet-sample-approval-checklist.ts",
-    "src/lib/blog-data.ts",
-    "src/app/blog/[slug]/page.tsx",
-    "public/images/optimized/sample-approval-20260921-*"
+    "src/components/PageHero.tsx",
+    "src/components/HomeHeroCarousel.tsx",
+    "src/app/contact/page.tsx",
+    "src/app/commercial-carpet-tiles/page.tsx",
+    "public/images/optimized/entry-speed-20260921-*"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "ce0a3df47da7d55b8210f7c61cc01841b3718dd3",
-  "notes": "Only /blog/commercial-carpet-sample-approval-checklist and thumbnails sharing its image data change visually. Source PNGs are actually 1536x1024 (3:2), not the declared 2048x1152. Preserve full composition with optional per-block contain fit, leaving all existing blocks at cover by default. Generate two responsive AVIF widths and a full-size WebP fallback per source, 12 binary assets and 8 source/record files total. Retain original publication date and existing URL, layout, content claims, source PNGs and old assets. Add explicit AI illustration captions. No homepage/Contact images, tracking, forms, DNS, global SEO or deployment configuration changes. Live HTML backed up outside the repository before editing. PR/Preview only; do not merge or deploy production."
+  "rollbackCommit": "fc1e90f7839a3651e8ff04267ed5bf6829269aa0",
+  "notes": "Preserve the existing page design, crops, copy, URLs, canonical tags, forms, tracking and CTA behavior. Generate exactly three AVIF widths plus one full-size WebP fallback for each of three existing WebP sources (12 binary files), add content-hashed manifest entries, make Contact opt in to responsive PageHero delivery, switch the commercial landing hero to the existing responsive image component, and render the next homepage slide during browser idle time at low priority before rotation. The total approved scope is exactly 20 changed files. Production HTML backups are stored outside the repository under /tmp/vcarpets-entry-image-speed-20260921/. Do not merge or deploy production without owner approval."
 }

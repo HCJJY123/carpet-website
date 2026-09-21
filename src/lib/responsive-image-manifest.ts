@@ -5180,5 +5180,95 @@ export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
       }
     ],
     "fallback": "/images/optimized/sample-approval-20260921-reference-production-retained-sample-review-11ce0a3d97-1536w.webp"
+  },
+  "/images/contact-hero.webp": {
+    "width": 1881,
+    "height": 836,
+    "originalBytes": 424406,
+    "avif": [
+      {
+        "src": "/images/optimized/entry-speed-20260921-contact-hero-225369e116-480w.avif",
+        "width": 480,
+        "bytes": 15905
+      },
+      {
+        "src": "/images/optimized/entry-speed-20260921-contact-hero-225369e116-960w.avif",
+        "width": 960,
+        "bytes": 63723
+      },
+      {
+        "src": "/images/optimized/entry-speed-20260921-contact-hero-225369e116-1600w.avif",
+        "width": 1600,
+        "bytes": 141688
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/entry-speed-20260921-contact-hero-225369e116-1600w.webp",
+        "width": 1600,
+        "bytes": 182114
+      }
+    ],
+    "fallback": "/images/optimized/entry-speed-20260921-contact-hero-225369e116-1600w.webp"
+  },
+  "/images/commercial-carpet-tiles-office-hero.webp": {
+    "width": 1586,
+    "height": 992,
+    "originalBytes": 428508,
+    "avif": [
+      {
+        "src": "/images/optimized/entry-speed-20260921-commercial-carpet-tiles-office-hero-976acb1f4d-480w.avif",
+        "width": 480,
+        "bytes": 25188
+      },
+      {
+        "src": "/images/optimized/entry-speed-20260921-commercial-carpet-tiles-office-hero-976acb1f4d-960w.avif",
+        "width": 960,
+        "bytes": 90501
+      },
+      {
+        "src": "/images/optimized/entry-speed-20260921-commercial-carpet-tiles-office-hero-976acb1f4d-1586w.avif",
+        "width": 1586,
+        "bytes": 219825
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/entry-speed-20260921-commercial-carpet-tiles-office-hero-976acb1f4d-1586w.webp",
+        "width": 1586,
+        "bytes": 271754
+      }
+    ],
+    "fallback": "/images/optimized/entry-speed-20260921-commercial-carpet-tiles-office-hero-976acb1f4d-1586w.webp"
+  },
+  "/images/home/hero-hotel-corridor-carpet.webp": {
+    "width": 1672,
+    "height": 941,
+    "originalBytes": 161914,
+    "avif": [
+      {
+        "src": "/images/optimized/entry-speed-20260921-home-hero-hotel-corridor-carpet-3ed4856d87-480w.avif",
+        "width": 480,
+        "bytes": 17779
+      },
+      {
+        "src": "/images/optimized/entry-speed-20260921-home-hero-hotel-corridor-carpet-3ed4856d87-960w.avif",
+        "width": 960,
+        "bytes": 60591
+      },
+      {
+        "src": "/images/optimized/entry-speed-20260921-home-hero-hotel-corridor-carpet-3ed4856d87-1600w.avif",
+        "width": 1600,
+        "bytes": 111769
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/entry-speed-20260921-home-hero-hotel-corridor-carpet-3ed4856d87-1600w.webp",
+        "width": 1600,
+        "bytes": 136980
+      }
+    ],
+    "fallback": "/images/optimized/entry-speed-20260921-home-hero-hotel-corridor-carpet-3ed4856d87-1600w.webp"
   }
 };

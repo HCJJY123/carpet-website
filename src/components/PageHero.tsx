@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { responsiveImageManifest } from "@/lib/responsive-image-manifest";
 
 interface PageHeroProps {
   title: string;
@@ -7,6 +8,7 @@ interface PageHeroProps {
   image: string;
   imageAlt: string;
   objectPosition?: string;
+  responsiveDelivery?: boolean;
   children?: React.ReactNode;
 }
 
@@ -17,21 +19,43 @@ export default function PageHero({
   image,
   imageAlt,
   objectPosition = "center",
+  responsiveDelivery = false,
   children,
 }: PageHeroProps) {
+  const responsive = responsiveDelivery ? responsiveImageManifest[image] : undefined;
+
   return (
     <section className="relative isolate min-h-[280px] overflow-hidden bg-[#102A43] py-16 text-center text-white sm:min-h-[320px] sm:py-20 md:min-h-[360px] md:py-24">
-      <Image
-        src={image}
-        alt={imageAlt}
-        fill
-        priority
-        loading="eager"
-        quality={82}
-        sizes="100vw"
-        className="-z-20 object-cover scale-105"
-        style={{ objectPosition }}
-      />
+      {responsive ? (
+        <picture className="absolute inset-0 -z-20 block h-full w-full scale-105">
+          <source type="image/avif" srcSet={responsive.avif.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
+          <source type="image/webp" srcSet={responsive.webp.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
+          <img
+            src={responsive.fallback}
+            alt={imageAlt}
+            width={responsive.width}
+            height={responsive.height}
+            sizes="100vw"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="h-full w-full object-cover"
+            style={{ objectPosition }}
+          />
+        </picture>
+      ) : (
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          priority
+          loading="eager"
+          quality={82}
+          sizes="100vw"
+          className="-z-20 scale-105 object-cover"
+          style={{ objectPosition }}
+        />
+      )}
       <div className="absolute inset-0 -z-10 bg-[#102A43]/78 md:bg-[#102A43]/72" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_35%,rgba(200,150,62,0.26),transparent_30%),linear-gradient(90deg,rgba(15,43,74,0.95),rgba(15,43,74,0.72)_45%,rgba(15,43,74,0.58))]" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-[#102A43]/55 to-transparent" />
