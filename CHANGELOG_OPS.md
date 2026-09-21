@@ -16,6 +16,20 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Rollback point:** `391e9f9`
 
+## 2026-09-21 — Entry-page responsive hero delivery
+
+- Added content-hashed responsive AVIF delivery for the Contact hero, commercial carpet tile landing hero and second homepage carousel slide while retaining a WebP fallback and each source file.
+- Preserved the existing layouts, crops, text, URLs, forms, tracking and CTA behavior; only image delivery and next-slide preparation change.
+- Added 480px, 960px and desktop AVIF variants. Desktop AVIF sizes are 141,688 bytes for Contact, 219,825 bytes for commercial carpet tiles and 111,769 bytes for the hotel-corridor carousel slide, representing 66.6%, 48.7% and 31.0% reductions from their source WebP files.
+- Contact opts into the responsive PageHero renderer, the commercial landing page uses the existing responsive product-image path, and the homepage prepares the next slide during browser idle time at low priority before the four-second rotation.
+- Preserved the first homepage slide as the only high-priority carousel image. Fingerprinted derivatives continue to use the existing one-year immutable cache rule.
+
+**Affected URLs:** `/`, `/contact`, `/commercial-carpet-tiles`
+
+**Rollback point:** `fc1e90f7839a3651e8ff04267ed5bf6829269aa0`
+
+**Verification:** Source-versus-optimized visual comparison passed. `npm run ops:check`, full lint, SEO/link/asset audits and `npm run build -- --webpack` passed; lint retains one pre-existing `ProductImage.tsx` `<img>` warning and no errors. `npm run ops:verify -- --origin=http://127.0.0.1:3022` passed. All three changed pages and all 12 generated assets returned local HTTP 200, the asset byte counts matched disk, and fingerprinted assets returned the one-year immutable cache header. Browser validation at 390px and 1440px confirmed responsive AVIF selection, eager/high priority for both page heroes, low-priority idle preparation of the next carousel slide, successful second-slide switching and no horizontal overflow.
+
 ## 2026-09-21 — Sample approval illustration refresh (Preview only)
 
 - Scope: `/blog/commercial-carpet-sample-approval-checklist` and its shared cover thumbnails; no new route or changed canonical, inquiry flow, tracking, homepage or Contact image.

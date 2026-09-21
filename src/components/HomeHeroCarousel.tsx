@@ -155,6 +155,26 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
   }, [activeIndex, dragging, paused, reducedMotion, settling]);
 
   useEffect(() => {
+    const nextIndex = (activeIndex + 1) % slides.length;
+    const warmNextSlide = () => {
+      setRenderedSlides((current) => {
+        if (current.has(nextIndex)) return current;
+        const updated = new Set(current);
+        updated.add(nextIndex);
+        return updated;
+      });
+    };
+
+    if ("requestIdleCallback" in window) {
+      const idleId = window.requestIdleCallback(warmNextSlide, { timeout: 1_500 });
+      return () => window.cancelIdleCallback(idleId);
+    }
+
+    const timer = setTimeout(warmNextSlide, 1_000);
+    return () => clearTimeout(timer);
+  }, [activeIndex]);
+
+  useEffect(() => {
     return () => {
       if (settleTimerRef.current !== null) window.clearTimeout(settleTimerRef.current);
     };

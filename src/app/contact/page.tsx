@@ -19,6 +19,7 @@ export default function ContactPage() {
         image="/images/contact-hero.webp"
         imageAlt="Commercial carpet procurement consultation background"
         objectPosition="center 42%"
+        responsiveDelivery
       />
 
       <section id="quote-form" data-quote-section-anchor className="section-padding scroll-mt-20 md:scroll-mt-24">
