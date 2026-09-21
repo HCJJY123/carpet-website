@@ -88,7 +88,7 @@ function RichBlogBlock({ block, index }: { block: BlogContentBlock; index: numbe
           src={block.src}
           alt={block.alt}
           className="h-full w-full"
-          fit="cover"
+          fit={block.fit ?? "cover"}
           sizes="(max-width: 1000px) 100vw, 1000px"
           unoptimized={unoptimized}
         />
