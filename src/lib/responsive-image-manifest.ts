@@ -5080,5 +5080,105 @@ export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
       }
     ],
     "fallback": "/images/optimized/markets-generated-canada-office-carpet-tiles-hero-202810eb03-1536w.webp"
+  },
+  "/images/optimized/sample-approval-20260921-sample-approval-review-desk-hero-a62bf4b2cc-1536w.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 3001275,
+    "avif": [
+      {
+        "src": "/images/optimized/sample-approval-20260921-sample-approval-review-desk-hero-a62bf4b2cc-640w.avif",
+        "width": 640,
+        "bytes": 40363
+      },
+      {
+        "src": "/images/optimized/sample-approval-20260921-sample-approval-review-desk-hero-a62bf4b2cc-1536w.avif",
+        "width": 1536,
+        "bytes": 182245
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/sample-approval-20260921-sample-approval-review-desk-hero-a62bf4b2cc-1536w.webp",
+        "width": 1536,
+        "bytes": 227352
+      }
+    ],
+    "fallback": "/images/optimized/sample-approval-20260921-sample-approval-review-desk-hero-a62bf4b2cc-1536w.webp"
+  },
+  "/images/optimized/sample-approval-20260921-sample-color-texture-direction-review-cc83b335a1-1536w.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 3846820,
+    "avif": [
+      {
+        "src": "/images/optimized/sample-approval-20260921-sample-color-texture-direction-review-cc83b335a1-640w.avif",
+        "width": 640,
+        "bytes": 62532
+      },
+      {
+        "src": "/images/optimized/sample-approval-20260921-sample-color-texture-direction-review-cc83b335a1-1536w.avif",
+        "width": 1536,
+        "bytes": 293696
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/sample-approval-20260921-sample-color-texture-direction-review-cc83b335a1-1536w.webp",
+        "width": 1536,
+        "bytes": 386976
+      }
+    ],
+    "fallback": "/images/optimized/sample-approval-20260921-sample-color-texture-direction-review-cc83b335a1-1536w.webp"
+  },
+  "/images/optimized/sample-approval-20260921-sample-backing-edge-inspection-972bd93666-1536w.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 3464149,
+    "avif": [
+      {
+        "src": "/images/optimized/sample-approval-20260921-sample-backing-edge-inspection-972bd93666-640w.avif",
+        "width": 640,
+        "bytes": 57259
+      },
+      {
+        "src": "/images/optimized/sample-approval-20260921-sample-backing-edge-inspection-972bd93666-1536w.avif",
+        "width": 1536,
+        "bytes": 249570
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/sample-approval-20260921-sample-backing-edge-inspection-972bd93666-1536w.webp",
+        "width": 1536,
+        "bytes": 313098
+      }
+    ],
+    "fallback": "/images/optimized/sample-approval-20260921-sample-backing-edge-inspection-972bd93666-1536w.webp"
+  },
+  "/images/optimized/sample-approval-20260921-reference-production-retained-sample-review-11ce0a3d97-1536w.webp": {
+    "width": 1536,
+    "height": 1024,
+    "originalBytes": 2662533,
+    "avif": [
+      {
+        "src": "/images/optimized/sample-approval-20260921-reference-production-retained-sample-review-11ce0a3d97-640w.avif",
+        "width": 640,
+        "bytes": 30460
+      },
+      {
+        "src": "/images/optimized/sample-approval-20260921-reference-production-retained-sample-review-11ce0a3d97-1536w.avif",
+        "width": 1536,
+        "bytes": 136172
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/sample-approval-20260921-reference-production-retained-sample-review-11ce0a3d97-1536w.webp",
+        "width": 1536,
+        "bytes": 168540
+      }
+    ],
+    "fallback": "/images/optimized/sample-approval-20260921-reference-production-retained-sample-review-11ce0a3d97-1536w.webp"
   }
 };

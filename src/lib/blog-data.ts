@@ -44,7 +44,7 @@ export type BlogContentBlock =
   | { type: "table"; headers: string[]; rows: string[][]; note?: string }
   | { type: "list"; ordered?: boolean; items: { title?: string; text: string }[] }
   | { type: "callout"; label?: string; text: string }
-  | { type: "image"; src: string; alt: string; caption?: string };
+  | { type: "image"; src: string; alt: string; caption?: string; fit?: "cover" | "contain" };
 
 export interface BlogPost {
   slug: string;

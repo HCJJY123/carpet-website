@@ -16,6 +16,17 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Rollback point:** `391e9f9`
 
+## 2026-09-21 — Sample approval illustration refresh (Preview only)
+
+- Scope: `/blog/commercial-carpet-sample-approval-checklist` and its shared cover thumbnails; no new route or changed canonical, inquiry flow, tracking, homepage or Contact image.
+- Replaced four existing illustration references using supplied Accio PNGs; retained source PNGs and old delivery files. Actual originals are 1536×1024 (3:2), not the supplier's declared 2048×1152. Full compositions are contained inside the existing 16:9 article containers; optional per-block fit defaults to the previous cover behavior for all other posts.
+- Added matching English alt text and explicit AI-generated illustration captions. No images are presented as actual products, factory/client evidence, measurements or certifications.
+- Generated content-versioned 640w/1536w AVIF and 1536w WebP fallback assets using a scoped, append-only manifest generator. Preserved the September 10 publication date; updated the modification date to September 21, which the existing sitemap and Article schema consume.
+- Delivery report: `docs/performance/sample-approval-images-20260921.json`. Desktop AVIF files are 136–294 KB; texture-heavy comparison/backing images exceed the nominal 180 KB budget to retain yarn detail. Mobile AVIF files are 30–63 KB. WebP fallback is a single full-width asset, not a second responsive size set.
+- Base and rollback reference: `ce0a3df47da7d55b8210f7c61cc01841b3718dd3`; live HTML snapshot retained outside the repository before editing.
+- Validation and release status will be appended after checks. Owner authorization is required before merging or publishing to production.
+- Local validation: scope guard (20 files), lint (zero errors; one pre-existing ProductImage warning), SEO/link/asset audits, diff whitespace check and production build passed. Local production HTTP checks verified all 12 new assets, expected bytes and immutable cache headers; Article publication/modification dates and canonical remain consistent. The blog index lists this guide in compact text cards, so no missing index thumbnail needs adding. At 390px and 1440px viewport settings the article has no document-level horizontal overflow; the first image is eager/high and the three body images are lazy/low with contain fit. No real inquiry was submitted, and no performance score or production release is claimed.
+
 ## 2026-09-20 — VCARPETS public brand identity update
 
 - Replaced public VISHOME/Vishome/Vishomecarpet brand references with `VCARPETS` across runtime pages, localized content, shared navigation, footer, forms, metadata, structured data, feeds, AI source files and outreach assets.
