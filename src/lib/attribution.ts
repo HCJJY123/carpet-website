@@ -30,6 +30,13 @@ const PARAM_MAP = {
 
 type AttributionParamKey = keyof typeof PARAM_MAP;
 
+function sanitizeCampaignValue(value: string | null) {
+  if (!value) return undefined;
+  const trimmed = value.trim().slice(0, 120);
+  if (!trimmed || /@|\b(?:\+?\d[\d\s().-]{7,}\d)\b/i.test(trimmed)) return undefined;
+  return trimmed.replace(/[^a-zA-Z0-9._~:/+-]/g, "_");
+}
+
 const AI_SOURCE_PATTERNS = [
   { source: "chatgpt", patterns: ["chatgpt.com", "openai.com", "utm_source=chatgpt"] },
   { source: "perplexity", patterns: ["perplexity.ai", "utm_source=perplexity"] },
@@ -48,13 +55,9 @@ function inferTrafficChannel(attribution: Pick<Attribution, "utmSource" | "utmMe
   if (attribution.utmSource || medium || attribution.utmCampaign) return "campaign" as const;
 
   if (attribution.referrer) {
-    try {
-      const host = new URL(attribution.referrer).hostname.toLowerCase();
-      if (/(google\.|bing\.|yahoo\.|duckduckgo\.)/.test(host)) return "organic_search" as const;
-      return "referral" as const;
-    } catch {
-      return "referral" as const;
-    }
+    const host = attribution.referrer.toLowerCase();
+    if (/(google\.|bing\.|yahoo\.|duckduckgo\.)/.test(host)) return "organic_search" as const;
+    return "referral" as const;
   }
 
   return "direct" as const;
@@ -79,19 +82,25 @@ export function captureAttributionOnce() {
   (Object.keys(PARAM_MAP) as AttributionParamKey[]).forEach((key) => {
     const param = PARAM_MAP[key];
     if (!param) return;
-    const value = params.get(param);
+    const value = sanitizeCampaignValue(params.get(param));
     if (value) attribution[key] = value;
   });
 
   attribution.landingPage = window.location.pathname;
-  attribution.referrer = document.referrer || undefined;
+  if (document.referrer) {
+    try {
+      attribution.referrer = new URL(document.referrer).hostname.toLowerCase();
+    } catch {
+      attribution.referrer = undefined;
+    }
+  }
   attribution.aiSource = identifyAiSource(attribution.utmSource, attribution.referrer);
   attribution.trafficChannel = inferTrafficChannel(attribution);
   if (attribution.aiSource) {
-    attribution.aiLandingPath = `${window.location.pathname}${window.location.search}`;
+    attribution.aiLandingPath = window.location.pathname;
     try {
       attribution.aiReferrerHost = attribution.referrer
-        ? new URL(attribution.referrer).hostname.toLowerCase()
+        ? attribution.referrer
         : undefined;
     } catch {
       attribution.aiReferrerHost = undefined;
@@ -123,7 +132,7 @@ export function getAttributionForEvent(): Record<string, string> {
   if (attribution.gclid) event.gclid = attribution.gclid;
   if (attribution.fbclid) event.fbclid = attribution.fbclid;
   if (attribution.landingPage) event.landing_page = attribution.landingPage;
-  if (attribution.referrer) event.referrer = attribution.referrer;
+  if (attribution.referrer) event.referrer_host = attribution.referrer;
   if (attribution.trafficChannel) event.traffic_channel = attribution.trafficChannel;
   if (attribution.aiSource) event.ai_source = attribution.aiSource;
   if (attribution.aiSource) event.ai_referred = "1";

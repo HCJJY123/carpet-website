@@ -13,6 +13,7 @@ export const generatedStaticSitemapRoutes = [
   "/commercial-carpet-tiles",
   "/commercial-terms",
   "/contact",
+  "/cookie-policy",
   "/de/gewerbliche-teppichfliesen",
   "/de/hotel-teppichboden",
   "/es/alfombra-mineria-oro",

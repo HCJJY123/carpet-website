@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 import { useEffect } from "react";
-import { useAnalyticsConsentValue } from "@/lib/useAnalyticsConsent";
+import { useAdvertisingAllowed } from "@/lib/useAnalyticsConsent";
 
 const microsoftUetTagId = process.env.NEXT_PUBLIC_MICROSOFT_UET_TAG_ID || "97259674";
 
@@ -13,22 +13,21 @@ declare global {
 }
 
 export default function MicrosoftUet() {
-  const consent = useAnalyticsConsentValue();
+  const advertisingAllowed = useAdvertisingAllowed();
 
   useEffect(() => {
-    if (typeof window === "undefined" || !consent) return;
+    if (typeof window === "undefined") return;
     const queue = window.uetq as { push?: (...args: unknown[]) => void } | undefined;
     if (typeof queue?.push !== "function") return;
-    queue.push("consent", "update", {
-      ad_storage: consent === "accepted" ? "granted" : "denied",
-    });
-  }, [consent]);
+    queue.push("consent", "update", { ad_storage: advertisingAllowed ? "granted" : "denied" });
+  }, [advertisingAllowed]);
 
-  return (
+  return advertisingAllowed ? (
     <Script id="microsoft-uet" strategy="afterInteractive">
       {`
         window.uetq = window.uetq || [];
         window.uetq.push("consent", "default", { ad_storage: "denied" });
+        window.uetq.push("consent", "update", { ad_storage: "granted" });
         (function(w,d,t,r,u){
           var f,n,i;
           w[u]=w[u]||[];
@@ -53,5 +52,5 @@ export default function MicrosoftUet() {
         })(window,document,"script","https://bat.bing.com/bat.js","uetq");
       `}
     </Script>
-  );
+  ) : null;
 }

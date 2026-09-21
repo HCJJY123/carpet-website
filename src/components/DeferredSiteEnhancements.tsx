@@ -5,7 +5,6 @@ import { lazy, Suspense, useEffect, useState } from "react";
 
 const MarketingTracking = lazy(() => import("@/components/MarketingTracking"));
 const VisitorBeacon = lazy(() => import("@/components/VisitorBeacon"));
-const CookieConsent = lazy(() => import("@/components/CookieConsent"));
 const ImageProtection = lazy(() => import("@/components/ImageProtection"));
 
 type IdleWindow = Window & {
@@ -42,7 +41,6 @@ export default function DeferredSiteEnhancements() {
     <Suspense fallback={null}>
       <MarketingTracking />
       <VisitorBeacon />
-      <CookieConsent />
       <ImageProtection />
     </Suspense>
   );

@@ -38,7 +38,7 @@ export default function RuLeadCaptureForm({
     formData.set("form_name", formName);
     formData.set("language", "ru");
     formData.set("market", market);
-    formData.set("page_url", window.location.href);
+    formData.set("page_url", `${window.location.origin}${window.location.pathname}`);
     formData.set("page_path", window.location.pathname);
     formData.set("submitted_at", new Date().toISOString());
     formData.set("privacy_policy", "Acknowledged at submission");
@@ -132,7 +132,7 @@ export default function RuLeadCaptureForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} onFocusCapture={handleFormStart} className="space-y-6 rounded-2xl border border-border bg-surface p-5 shadow-sm md:space-y-8 md:p-12">
+    <form method="post" onSubmit={handleSubmit} onFocusCapture={handleFormStart} className="space-y-6 rounded-2xl border border-border bg-surface p-5 shadow-sm md:space-y-8 md:p-12">
       <input name="_gotcha" type="text" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       {introText ? <p className="text-sm leading-relaxed text-muted">{introText}</p> : null}
       {state.error ? <p className="text-red-600 font-bold text-center text-sm" role="alert" aria-live="polite">{state.error}</p> : null}

@@ -12,7 +12,7 @@ function getLandingPage() {
   if (typeof window === "undefined") return "";
 
   const key = "vh_landing_page";
-  const current = `${window.location.pathname}${window.location.search}`;
+  const current = window.location.pathname;
 
   try {
     const existing = window.sessionStorage.getItem(key);
@@ -67,11 +67,8 @@ export default function VisitorBeacon() {
         event,
         site: window.location.hostname,
         path: pathname,
-        query: window.location.search,
-        ref: document.referrer,
         landing: getLandingPage(),
         title: document.title,
-        url: window.location.href,
         dur: duration,
         lang: navigator.language || "",
         tz: Intl.DateTimeFormat().resolvedOptions().timeZone || "",
