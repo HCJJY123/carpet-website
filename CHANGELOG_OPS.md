@@ -867,3 +867,10 @@ This file is append-only. Do not delete or rewrite historical entries.
 **External status:** New-domain DNS, Vercel domain attachment, HTTPS, mailbox authentication, form delivery credentials, third-party allowlists, Google Search Console, Bing Webmaster Tools and old-domain redirect availability require account-level verification. The old domain currently cannot be treated as publicly redirecting until DNS/HTTPS responds.
 
 **Rollback point:** `391e9f9`
+## 2026-09-22 — Microsoft Advertising final compliance gate
+
+- Added the requested explicit Microsoft Personal Data disclosure to the dedicated Microsoft Advertising/UET sections of the Privacy Policy and Cookie Policy.
+- Replaced the sample request's minimal policy reference with the complete adjacent submission disclosure while keeping Privacy Policy clickable and adding no checkbox.
+- Scoped the final gate to production consent/UET behavior, provider/network PII inspection, mobile/desktop verification and a strict PASS/FAIL/UNVERIFIED report.
+
+**Rollback point:** `d5d8bbb`

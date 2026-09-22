@@ -50,7 +50,7 @@ const technologies = [
     name: "Microsoft Advertising UET",
     category: "Advertising",
     trigger: "Advertising consent",
-    purpose: "Measures advertising performance and generic conversion events. The UET script is blocked before Advertising consent. Microsoft may request Clarity-related endpoints as part of the UET service; the account-side integration setting requires separate verification.",
+    purpose: "When Advertising consent is enabled, Microsoft may collect or receive Personal Data from users or from us through Microsoft Advertising technologies, including UET, to provide Microsoft Advertising services such as conversion measurement and advertising performance measurement. The UET script is blocked before Advertising consent. Microsoft may request Clarity-related endpoints as part of the UET service; the account-side integration setting requires separate verification.",
   },
   {
     name: "Google Ads",
