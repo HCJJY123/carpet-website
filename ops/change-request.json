@@ -1,16 +1,14 @@
 {
-  "task": "Deploy Yandex Metrica counter 111239007 globally into the <head> of every page on VCARPETS",
-  "approvedBy": "Owner request pasted on 2026-09-23 requiring the exact Yandex.Metrika block (counter 111239007) to be placed in <head> on all pages, with no parameter changes and no hardcoded domain",
-  "approvedCategories": ["seo-global", "analytics", "tracking", "operations"],
+  "task": "Add the Yandex Webmaster site-ownership verification file to the VCARPETS site root",
+  "approvedBy": "Owner provided the Yandex verification file (Verification: 83c276caf5355ffa) and requested verification/deployment on 2026-09-23",
+  "approvedCategories": ["seo-global", "operations"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/layout.tsx",
-    "src/components/YandexMetrica.tsx",
-    "src/components/MarketingTracking.tsx"
+    "public/yandex_83c276caf5355ffa.html"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "c680b9fd2b4e487be676642239a78609f4b6b7e5",
-  "notes": "Install the exact owner-supplied Yandex Metrica tag (counter 111239007) into the root layout <head> so the full block, including the noscript watch pixel, appears in the served HTML of every page. Remove the previous consent-gated duplicate Yandex loader from MarketingTracking to prevent double ym() init. Do not change any Yandex parameters, do not hardcode a domain, and leave the old vishomecarpet.com files out of scope. Use feature branch, Preview and PR; do not push directly to main or deploy production without the normal release gate."
+  "rollbackCommit": "f7d61a2af44117a599503cb9f670ad90528f74b9",
+  "notes": "Serve the exact owner-supplied Yandex Webmaster ownership file at /yandex_83c276caf5355ffa.html so the owner can complete site verification. Static file only; no tracking, SEO, consent, or product-content behavior changes."
 }
