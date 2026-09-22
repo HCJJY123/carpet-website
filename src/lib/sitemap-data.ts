@@ -37,6 +37,7 @@ const staticRouteMetadata: Record<string, Pick<SitemapEntry, "lastModified" | "c
   "/solutions/hotel-hospitality": { lastModified: "2026-07-23", changeFrequency: "monthly", priority: 0.75 },
   "/resources/technical-library": { lastModified: defaultModified, changeFrequency: "monthly", priority: 0.76 },
   "/request-sample-box": { lastModified: "2026-07-25", changeFrequency: "monthly", priority: 0.8 },
+  "/privacy-policy": { lastModified: "2026-09-22", changeFrequency: "yearly", priority: 0.3 },
   "/commercial-carpet-manufacturer": { lastModified: "2026-09-08", changeFrequency: "monthly", priority: 0.8 },
   "/tools/broadloom-carpet-waste-calculator": { lastModified: "2026-09-10", changeFrequency: "monthly", priority: 0.72 },
   "/tools/hotel-carpet-project-checklist": { lastModified: "2026-09-10", changeFrequency: "monthly", priority: 0.72 },

@@ -100,7 +100,17 @@ function auditLinks() {
   ]
     .map((file) => read(path.join(ROOT, file)))
     .join("\n");
-  ["/resources/technical-library", "/architects-designers", "/media/press-kit", "/applications", "/quality-control", "/certifications"].forEach((route) => {
+  [
+    "/resources/technical-library",
+    "/architects-designers",
+    "/media/press-kit",
+    "/applications",
+    "/quality-control",
+    "/certifications",
+    "/privacy-policy",
+    "/cookie-policy",
+    "/request-sample-box",
+  ].forEach((route) => {
     if (!sitemapText.includes(route)) messages.push(`Route missing from sitemap sources: ${route}`);
   });
   fail(messages);
