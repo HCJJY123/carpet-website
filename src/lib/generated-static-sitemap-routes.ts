@@ -29,6 +29,7 @@ export const generatedStaticSitemapRoutes = [
   "/markets",
   "/media/press-kit",
   "/natural-sisal-carpet",
+  "/privacy-policy",
   "/products",
   "/products/carpet-tiles",
   "/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles",

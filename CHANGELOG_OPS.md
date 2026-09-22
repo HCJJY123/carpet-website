@@ -897,3 +897,12 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Retained the earlier verification file for the existing property; no tracking, consent, product-content, canonical, robots or sitemap behavior changed.
 
 **Rollback point:** `01fb0663c75907ff388ee79325be48de3a7d19dd`
+
+## 2026-09-22 — Root Sitemap coverage for Yandex
+
+- Kept the existing Next.js root Sitemap endpoint at `/sitemap.xml`, which returns browser-readable XML and complete `https://www.vcarpets.com` canonical URLs.
+- Removed the incorrect `/privacy-policy` exclusion so every public indexable page is represented while utility/noindex routes such as `/thank-you` remain excluded.
+- Expanded the link audit to protect the Privacy Policy, Cookie Policy and sample-request page from future Sitemap omissions.
+- Verified the production build locally: `/sitemap.xml` returns HTTP 200 with `application/xml`, 257 unique same-origin URLs, no duplicate or foreign-origin entries, and a matching `Sitemap: https://www.vcarpets.com/sitemap.xml` line in `/robots.txt`.
+
+**Rollback point:** `9884235fed3fe029252f82e22f4478617d56e347`
