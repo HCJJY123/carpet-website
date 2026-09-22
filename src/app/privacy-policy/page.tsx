@@ -53,6 +53,7 @@ const sections = [
     title: "Microsoft Advertising and UET",
     body: [
       "Microsoft Advertising Universal Event Tracking (UET) is used only when Advertising consent is active. Before a choice, the implementation does not load the UET script and uses denied advertising storage when consent signaling is initialized.",
+      "When Advertising consent is active, Microsoft may collect or receive Personal Data from users or from us through Microsoft Advertising technologies, including Universal Event Tracking (UET), in order to provide Microsoft Advertising services, including conversion measurement and advertising performance measurement.",
       "After Advertising consent, UET may receive consent-based conversion or interaction events such as a form completion, WhatsApp click or sample-request click. These events use limited business context and do not include raw inquiry email, telephone number, name, message or company fields.",
       "Browser testing showed that Microsoft UET can also request Microsoft Clarity-related endpoints as part of the UET service when Advertising consent is active. This is distinct from the standalone VCARPETS Clarity tag, which remains assigned to Analytics consent. The Microsoft account-side UET and Clarity integration setting requires separate verification.",
       "Microsoft's privacy information is available at https://privacy.microsoft.com/en-us/privacystatement. Microsoft account configuration, regional settings and provider-side retention are not independently verified by this website implementation.",

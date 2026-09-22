@@ -1,37 +1,18 @@
 {
-  "task": "Microsoft Advertising privacy, consent and tracking compliance hardening for VCARPETS",
-  "approvedBy": "Owner request pasted on 2026-09-21 requiring a complete audit and remediation of Privacy Policy, Cookie Policy, cookie consent, Cookie Preferences, Microsoft UET, consent signaling, analytics/advertising scripts, forms, conversion events, URL and dataLayer PII leakage, footer/legal navigation, mobile/desktop privacy UX and evidence reporting; Preview and PR only until production approval",
-  "approvedCategories": ["legal", "tracking", "forms", "conversion", "seo", "seo-global", "navigation", "operations"],
+  "task": "Microsoft Advertising final production compliance gate for VCARPETS",
+  "approvedBy": "Owner request pasted on 2026-09-22 requiring exact Microsoft Personal Data disclosures, the complete sample-request privacy notice, live production consent/UET verification, a production dummy-data PII leakage test and a strict final PASS/FAIL/UNVERIFIED matrix",
+  "approvedCategories": ["legal", "tracking", "forms", "conversion", "seo", "operations"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
     "docs/compliance/MICROSOFT-PRIVACY-COMPLIANCE-QA.md",
-    "src/app/layout.tsx",
     "src/app/privacy-policy/page.tsx",
     "src/app/cookie-policy/page.tsx",
-    "src/app/api/visit/route.ts",
-    "src/app/thank-you/page.tsx",
-    "src/components/CookieConsent.tsx",
-    "src/components/CookiePreferencesLink.tsx",
-    "src/components/DeferredSiteEnhancements.tsx",
-    "src/components/Footer.tsx",
-    "src/components/MarketingTracking.tsx",
-    "src/components/MicrosoftUet.tsx",
-    "src/components/VisitorBeacon.tsx",
     "src/components/LeadCaptureForm.tsx",
-    "src/components/RuLeadCaptureForm.tsx",
-    "src/components/JsonLd.tsx",
-    "src/lib/consent.ts",
-    "src/lib/tracking.ts",
-    "src/lib/useAnalyticsConsent.ts",
-    "src/lib/attribution.ts",
-    "public/llms.txt",
-    "public/llms-full.txt",
-    "keyword-map.csv",
-    "src/lib/generated-static-sitemap-routes.ts"
+    "docs/compliance/MICROSOFT-PRIVACY-FINAL-GATE-20260922.md"
   ],
   "protectedUrlsChanged": true,
   "directMainSyncApproved": false,
-  "rollbackCommit": "0bebf0b221225a802d84c5bb7c63d5df980cc6c7",
-  "notes": "Use VCARPETS identity only. Preserve all existing business URLs, forms, lead delivery, WhatsApp/email destinations and SEO structure. The owner request explicitly requires a repository-wide legacy-brand audit and remediation, so the approved scope exceeds the normal 20-file guard only for the listed compliance, legal, structured-data, AI-source and sitemap records. Use a conservative blocking architecture: UET, Clarity, GA4, Google Ads, GTM and optional Yandex load only after their applicable consent; Microsoft UET uses ad_storage denied before choice and granted only after Advertising consent. Split Analytics and Advertising preferences, add a functional Cookie Preferences panel, prominent footer legal links, Cookie Policy, form disclosures, Microsoft Privacy Statement and an auditable compliance report. Remove raw lead PII from analytics, advertising, UET, Clarity, dataLayer and visit-beacon payloads; the verified Formspree/lead processor may receive the submitted inquiry fields. Production HTML backups are stored outside the repository under /tmp/vcarpets-microsoft-privacy-20260921/. Do not merge or deploy production automatically. Any unverified third-party account, DNS, mailbox, GSC/Bing or provider-side retention setting must remain UNVERIFIED in the report."
+  "rollbackCommit": "d5d8bbb",
+  "notes": "Use the current production privacy architecture without redesign. Add only the exact Microsoft Personal Data disclosures requested in Privacy Policy and Cookie Policy, replace the sample-request disclosure, and create the final production gate report. Production HTML backups are stored under /tmp/vcarpets-microsoft-final-gate-20260922/. Preserve all URLs, consent behavior, form delivery, WhatsApp/email destinations and SEO structure. Do not guess Microsoft account settings. Do not mark any technically unverified production test PASS. Use feature branch, Preview and PR; do not push directly to main or deploy production without the normal release gate."
 }

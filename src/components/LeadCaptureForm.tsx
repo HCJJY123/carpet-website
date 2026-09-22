@@ -339,8 +339,17 @@ export default function LeadCaptureForm({
           {state.submitting ? "SENDING..." : submitLabel}
         </button>
         <p className="text-center text-xs leading-relaxed text-muted">
-          {isSample ? "We confirm sample availability, courier cost, and preparation time before dispatch. " : "The export team replies with pricing and specification guidance. "}
-          <Link href="/privacy-policy" className="font-bold text-primary underline underline-offset-2">Privacy Policy</Link>
+          {isSample ? (
+            <>
+              By submitting this sample request, you acknowledge our{" "}
+              <Link href="/privacy-policy" className="font-bold text-primary underline underline-offset-2">Privacy Policy</Link>{" "}
+              and agree that our export team may contact you regarding your sample request.
+            </>
+          ) : (
+            <>
+              The export team replies with pricing and specification guidance. <Link href="/privacy-policy" className="font-bold text-primary underline underline-offset-2">Privacy Policy</Link>
+            </>
+          )}
         </p>
       </form>
     );
