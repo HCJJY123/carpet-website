@@ -1,18 +1,16 @@
 {
-  "task": "Microsoft Advertising final production compliance gate for VCARPETS",
-  "approvedBy": "Owner request pasted on 2026-09-22 requiring exact Microsoft Personal Data disclosures, the complete sample-request privacy notice, live production consent/UET verification, a production dummy-data PII leakage test and a strict final PASS/FAIL/UNVERIFIED matrix",
-  "approvedCategories": ["legal", "tracking", "forms", "conversion", "seo", "operations"],
+  "task": "Deploy Yandex Metrica counter 111239007 globally into the <head> of every page on VCARPETS",
+  "approvedBy": "Owner request pasted on 2026-09-23 requiring the exact Yandex.Metrika block (counter 111239007) to be placed in <head> on all pages, with no parameter changes and no hardcoded domain",
+  "approvedCategories": ["seo-global", "analytics", "tracking", "operations"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "docs/compliance/MICROSOFT-PRIVACY-COMPLIANCE-QA.md",
-    "src/app/privacy-policy/page.tsx",
-    "src/app/cookie-policy/page.tsx",
-    "src/components/LeadCaptureForm.tsx",
-    "docs/compliance/MICROSOFT-PRIVACY-FINAL-GATE-20260922.md"
+    "src/app/layout.tsx",
+    "src/components/YandexMetrica.tsx",
+    "src/components/MarketingTracking.tsx"
   ],
-  "protectedUrlsChanged": true,
+  "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "d5d8bbb",
-  "notes": "Use the current production privacy architecture without redesign. Add only the exact Microsoft Personal Data disclosures requested in Privacy Policy and Cookie Policy, replace the sample-request disclosure, and create the final production gate report. Production HTML backups are stored under /tmp/vcarpets-microsoft-final-gate-20260922/. Preserve all URLs, consent behavior, form delivery, WhatsApp/email destinations and SEO structure. Do not guess Microsoft account settings. Do not mark any technically unverified production test PASS. Use feature branch, Preview and PR; do not push directly to main or deploy production without the normal release gate."
+  "rollbackCommit": "c680b9fd2b4e487be676642239a78609f4b6b7e5",
+  "notes": "Install the exact owner-supplied Yandex Metrica tag (counter 111239007) into the root layout <head> so the full block, including the noscript watch pixel, appears in the served HTML of every page. Remove the previous consent-gated duplicate Yandex loader from MarketingTracking to prevent double ym() init. Do not change any Yandex parameters, do not hardcode a domain, and leave the old vishomecarpet.com files out of scope. Use feature branch, Preview and PR; do not push directly to main or deploy production without the normal release gate."
 }

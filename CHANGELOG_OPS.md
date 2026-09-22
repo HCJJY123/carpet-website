@@ -874,3 +874,12 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Scoped the final gate to production consent/UET behavior, provider/network PII inspection, mobile/desktop verification and a strict PASS/FAIL/UNVERIFIED report.
 
 **Rollback point:** `d5d8bbb`
+## 2026-09-23 — Yandex Metrica global tag (counter 111239007)
+
+- Installed the exact owner-supplied Yandex Metrica block into the root layout `<head>` so the full counter script and noscript watch pixel appear in the served HTML of every page.
+- Kept all Yandex parameters unchanged (`ssr`, `webvisor`, `clickmap`, `ecommerce:"dataLayer"`, `accurateTrackBounce`, `trackLinks`) and did not hardcode a domain.
+- Removed the previous consent-gated duplicate Yandex loader from MarketingTracking to prevent a second `ym(...)` initialization once the global tag is live.
+
+**Rollback point:** `c680b9fd2b4e487be676642239a78609f4b6b7e5`
+
+**Note:** The global Metrica block is rendered in page source and loads before the cookie-consent gate, which differs from the existing privacy-policy wording that described Yandex Metrica as consent-gated. Policy wording was left unchanged in this change set and should be reviewed separately.
