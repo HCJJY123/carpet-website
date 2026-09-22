@@ -9,7 +9,6 @@ import { getContactBridgeUrl } from "@/lib/whatsapp";
 interface FormSuccess {
   token?: number;
   formName?: string;
-  name?: string;
   product?: string;
   quantity?: string;
   country?: string;
@@ -69,9 +68,7 @@ export default function ThankYouPage() {
     return null;
   }
 
-  const followUpMessage = `Hello, I just submitted a project inquiry${
-    formSuccess.name ? ` (${formSuccess.name})` : ""
-  } on your website. I'd like to follow up on WhatsApp for a faster response.`;
+  const followUpMessage = "Hello, I just submitted a project inquiry on your website. I'd like to follow up on WhatsApp for a faster response.";
 
   const whatsappFollowUpUrl = getContactBridgeUrl(followUpMessage, {
     placement: "thank_you_follow_up",

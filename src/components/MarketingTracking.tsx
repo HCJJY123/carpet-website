@@ -14,7 +14,7 @@ import {
   savePendingContactFunnel,
 } from "@/lib/funnel";
 import { getVisitorIdentity } from "@/lib/visitorIdentity";
-import { useAnalyticsAllowed } from "@/lib/useAnalyticsConsent";
+import { useAdvertisingAllowed, useAnalyticsAllowed } from "@/lib/useAnalyticsConsent";
 
 const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-T2VYHXTK1F";
 const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "GT-NMDDTW67";
@@ -36,6 +36,17 @@ declare global {
 export default function MarketingTracking() {
   const pathname = usePathname();
   const analyticsAllowed = useAnalyticsAllowed();
+  const advertisingAllowed = useAdvertisingAllowed();
+
+  useEffect(() => {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("consent", "update", {
+      analytics_storage: analyticsAllowed ? "granted" : "denied",
+      ad_storage: advertisingAllowed ? "granted" : "denied",
+      ad_user_data: advertisingAllowed ? "granted" : "denied",
+      ad_personalization: advertisingAllowed ? "granted" : "denied",
+    });
+  }, [advertisingAllowed, analyticsAllowed]);
 
   useEffect(() => {
     captureAttributionOnce();
@@ -61,8 +72,8 @@ export default function MarketingTracking() {
     if (typeof window.gtag !== "function") return;
 
     const pageViewPayload = {
-      page_path: `${pathname}${window.location.search}`,
-      page_location: window.location.href,
+      page_path: pathname,
+      page_location: `${window.location.origin}${pathname}`,
       page_title: document.title,
     };
 
@@ -70,12 +81,8 @@ export default function MarketingTracking() {
       window.gtag("config", ga4MeasurementId, pageViewPayload);
     }
 
-    if (googleTagId) {
+    if (analyticsAllowed && googleTagId) {
       window.gtag("config", googleTagId, pageViewPayload);
-    }
-
-    if (googleAdsId) {
-      window.gtag("config", googleAdsId, pageViewPayload);
     }
   }, [analyticsAllowed, pathname]);
 
@@ -193,7 +200,7 @@ export default function MarketingTracking() {
       const isContactLink = isSameOrigin && resolvedUrl.pathname === "/contact";
       if (!isQuoteAnchor && !isContactLink) return;
 
-      const sourcePage = `${window.location.pathname}${window.location.search}`;
+      const sourcePage = window.location.pathname;
       if (isContactLink && sourcePage && !resolvedUrl.searchParams.get("source")) {
         resolvedUrl.searchParams.set("source", sourcePage);
         anchor.href = `${resolvedUrl.pathname}${resolvedUrl.search}${resolvedUrl.hash}`;
@@ -207,7 +214,7 @@ export default function MarketingTracking() {
   }, []);
 
   useEffect(() => {
-    if (!analyticsAllowed) return;
+    if (!analyticsAllowed && !advertisingAllowed) return;
 
     function handleClick(event: MouseEvent) {
       const target = event.target as HTMLElement | null;
@@ -217,8 +224,7 @@ export default function MarketingTracking() {
       let href = anchor.getAttribute("href") || "";
       const resolvedUrl = new URL(anchor.href, window.location.origin);
       const isSameOrigin = resolvedUrl.origin === window.location.origin;
-      const normalizedPath = `${resolvedUrl.pathname}${resolvedUrl.search}${resolvedUrl.hash}`;
-      const text = anchor.textContent?.trim() || "";
+      const normalizedPath = resolvedUrl.pathname;
       const leadData = {
         placement: anchor.dataset.whatsappPlacement,
         product: anchor.dataset.whatsappProduct,
@@ -242,8 +248,6 @@ export default function MarketingTracking() {
           cta_location: anchor.dataset.ctaLocation,
           price: anchor.dataset.price ? Number(anchor.dataset.price) : undefined,
           currency: anchor.dataset.currency,
-          href,
-          link_text: text,
           page_path: window.location.pathname,
         });
       }
@@ -251,8 +255,6 @@ export default function MarketingTracking() {
       if (href === "#quote-form" || (isSameOrigin && (resolvedUrl.pathname === "/contact" || normalizedPath.startsWith("/contact")))) {
         const signals = getFunnelSessionSignals();
         trackAnalyticsEvent("quote_form_click", {
-          href: isSameOrigin ? normalizedPath : href,
-          link_text: text,
           page_path: window.location.pathname,
           quote_product: resolvedUrl.searchParams.get("product") || anchor.dataset.itemName || "",
           quote_source: resolvedUrl.searchParams.get("source") || window.location.pathname,
@@ -279,8 +281,7 @@ export default function MarketingTracking() {
         }
 
         trackInteractionConversion("whatsapp_click", {
-          href,
-          link_text: text,
+          link_target: "whatsapp",
           page_path: window.location.pathname,
           ...leadData,
         });
@@ -289,8 +290,7 @@ export default function MarketingTracking() {
 
       if (href.startsWith("mailto:")) {
         trackInteractionConversion("email_click", {
-          href,
-          link_text: text,
+          link_target: "email",
           page_path: window.location.pathname,
         });
         return;
@@ -298,8 +298,7 @@ export default function MarketingTracking() {
 
       if (href.startsWith("tel:")) {
         trackInteractionConversion("phone_click", {
-          href,
-          link_text: text,
+          link_target: "phone",
           page_path: window.location.pathname,
         });
         return;
@@ -307,8 +306,7 @@ export default function MarketingTracking() {
 
       if (isSameOrigin && resolvedUrl.pathname === "/request-sample-box") {
         trackInteractionConversion("request_sample_box_click", {
-          href: normalizedPath,
-          link_text: text,
+          link_target: normalizedPath,
           page_path: window.location.pathname,
         });
       }
@@ -316,11 +314,11 @@ export default function MarketingTracking() {
 
     document.addEventListener("click", handleClick, true);
     return () => document.removeEventListener("click", handleClick, true);
-  }, [analyticsAllowed]);
+  }, [analyticsAllowed, advertisingAllowed]);
 
   return (
     <>
-      {analyticsAllowed && gtmContainerId ? (
+      {advertisingAllowed && gtmContainerId ? (
         <>
           <Script id="gtm-init" strategy="afterInteractive">
             {`
@@ -335,7 +333,7 @@ export default function MarketingTracking() {
         </>
       ) : null}
 
-      {analyticsAllowed && (googleTagId || ga4MeasurementId || googleAdsId) && (
+      {(analyticsAllowed || advertisingAllowed) && (googleTagId || ga4MeasurementId || googleAdsId) && (
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId || ga4MeasurementId || googleAdsId}`}
@@ -347,9 +345,11 @@ export default function MarketingTracking() {
               function gtag(){dataLayer.push(arguments);}
               window.gtag = window.gtag || gtag;
               gtag('js', new Date());
-              ${googleTagId ? `gtag('config', '${googleTagId}', { send_page_view: false });` : ""}
-              ${ga4MeasurementId ? `gtag('config', '${ga4MeasurementId}', { send_page_view: false });` : ""}
-              ${googleAdsId ? `gtag('config', '${googleAdsId}', { send_page_view: false });` : ""}
+              gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+              ${analyticsAllowed ? `gtag('config', '${googleTagId || ga4MeasurementId}', { send_page_view: false });` : ""}
+              ${analyticsAllowed && ga4MeasurementId ? `gtag('config', '${ga4MeasurementId}', { send_page_view: false });` : ""}
+              ${advertisingAllowed && googleAdsId ? `gtag('config', '${googleAdsId}', { send_page_view: false });` : ""}
+              gtag('consent', 'update', { analytics_storage: '${analyticsAllowed ? "granted" : "denied"}', ad_storage: '${advertisingAllowed ? "granted" : "denied"}', ad_user_data: '${advertisingAllowed ? "granted" : "denied"}', ad_personalization: '${advertisingAllowed ? "granted" : "denied"}' });
             `}
           </Script>
         </>

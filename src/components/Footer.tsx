@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { brandInfo } from "@/lib/data";
 import { getContactBridgeUrl } from "@/lib/whatsapp";
+import CookiePreferencesLink from "@/components/CookiePreferencesLink";
 
 export default function Footer() {
   const footerWhatsAppUrl = getContactBridgeUrl(
@@ -16,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#102A43] text-white mt-auto">
       <div className="max-w-[1200px] mx-auto px-4 py-16 lg:py-24">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-[1fr_1fr_1fr_1.3fr] xl:gap-12">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-[1fr_1fr_1fr_1fr_1.3fr] xl:gap-10">
           {/* Logo & Intro - FIXED VERSION WITH REAL LOGO */}
           <div className="col-span-1 lg:col-span-1">
             <div className="mb-8 flex items-center gap-4">
@@ -66,6 +67,17 @@ export default function Footer() {
               <li><Link href="/technical-documents" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Technical Documents</Link></li>
               <li><Link href="/commercial-terms" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Commercial Terms</Link></li>
               <li><Link href="/faq" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">FAQ</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.08em] text-[#627D98]">
+              Legal
+            </h3>
+            <ul className="space-y-4">
+              <li><Link href="/privacy-policy" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Privacy Policy</Link></li>
+              <li><Link href="/cookie-policy" className="text-[15px] font-semibold text-gray-300 transition-colors hover:text-white">Cookie Policy</Link></li>
+              <li><CookiePreferencesLink /></li>
             </ul>
           </div>
 

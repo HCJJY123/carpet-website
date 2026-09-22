@@ -85,14 +85,15 @@ export default function LeadCaptureForm({
       );
     }
     formData.set("form_name", formName);
-    formData.set("page_url", window.location.href);
+    formData.set("page_url", `${window.location.origin}${window.location.pathname}`);
     formData.set("page_path", window.location.pathname);
     const pendingSourcePage = window.sessionStorage.getItem(PENDING_CONTACT_SOURCE_KEY) || "";
     const pendingFunnel = getPendingContactFunnel();
-    const sourcePage = sourcePageDefault || pendingSourcePage || pendingFunnel?.sourcePage || `${window.location.pathname}${window.location.search}`;
+    const sourcePage = sourcePageDefault || pendingSourcePage || pendingFunnel?.sourcePage || window.location.pathname;
     const hasInternalSource = Boolean(sourcePageDefault || pendingSourcePage || pendingFunnel?.sourcePage);
     if (sourcePage) formData.set("source_page", sourcePage);
-    if (document.referrer && !formData.get("referrer")) formData.set("referrer", document.referrer);
+    const referrerHost = getAttributionForEvent().referrer_host;
+    if (referrerHost && !formData.get("referrer")) formData.set("referrer", referrerHost);
     if (!formData.get("referrer") && pendingFunnel?.sourcePage) formData.set("referrer", pendingFunnel.sourcePage);
     if (hasInternalSource && !formData.get("traffic_channel")) formData.set("traffic_channel", "internal_product_cta");
     formData.set("submitted_at", new Date().toISOString());
@@ -143,8 +144,6 @@ export default function LeadCaptureForm({
 
       trackLeadConversion({
         formName,
-        email: String(formData.get("email") || ""),
-        phone: String(formData.get("whatsapp") || ""),
         product: String(formData.get("product") || ""),
         quantity: String(formData.get("quantity") || ""),
         country: String(formData.get("country") || ""),
@@ -165,7 +164,6 @@ export default function LeadCaptureForm({
         JSON.stringify({
           token: Date.now(),
           formName,
-          name: String(formData.get("name") || ""),
           product: String(formData.get("product") || ""),
           quantity: String(formData.get("quantity") || ""),
           country: String(formData.get("country") || ""),
@@ -226,6 +224,7 @@ export default function LeadCaptureForm({
 
     return (
       <form
+        method="post"
         onSubmit={handleSubmit}
         onFocusCapture={handleFormStart}
         onInvalidCapture={handleInvalid}
@@ -349,6 +348,7 @@ export default function LeadCaptureForm({
 
   return (
     <form
+      method="post"
       ref={fullFormRef}
       onSubmit={handleSubmit}
       onFocusCapture={handleFormStart}

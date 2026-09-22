@@ -16,6 +16,18 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 **Rollback point:** `391e9f9`
 
+## 2026-09-22 — Microsoft privacy and tracking compliance hardening
+
+- Split optional consent into independently controlled Analytics and Advertising categories with Accept All, Reject Non-Essential, Cookie Preferences and footer reopening.
+- Block Microsoft UET, Google Ads, GA4, Clarity, optional GTM and optional Yandex until the applicable consent category is granted; preserve denied signaling and reload after consent withdrawal so previously loaded optional scripts stop running.
+- Remove raw inquiry PII, full URLs, query strings and contact destinations from browser analytics, advertising, UET, Clarity, dataLayer and visitor-beacon payloads while preserving server-side lead delivery.
+- Rebuild `/privacy-policy`, add `/cookie-policy`, add prominent global footer legal links and retain adjacent form privacy disclosures.
+- Add a server-side visitor-payload allowlist and document remaining provider-account, retention, mailbox and public Preview verification as UNVERIFIED until separately evidenced.
+
+**Rollback point:** `0bebf0b221225a802d84c5bb7c63d5df980cc6c7`
+
+**Release gate:** Preview and Pull Request only. Do not merge or deploy production until the compliance QA matrix has no unresolved P0 failure and the owner approves release.
+
 ## 2026-09-21 — Entry-page responsive hero delivery
 
 - Added content-hashed responsive AVIF delivery for the Contact hero, commercial carpet tile landing hero and second homepage carousel slide while retaining a WebP fallback and each source file.

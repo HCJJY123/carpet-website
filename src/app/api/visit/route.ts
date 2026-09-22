@@ -4,6 +4,52 @@ export const runtime = "nodejs";
 
 const MAX_BODY_BYTES = 8_192;
 
+const ALLOWED_KEYS = new Set([
+  "visitor_id",
+  "session_id",
+  "visitor_label",
+  "event",
+  "site",
+  "path",
+  "landing",
+  "title",
+  "dur",
+  "lang",
+  "tz",
+  "screen",
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_term",
+  "utm_content",
+  "gclid",
+  "fbclid",
+  "landing_page",
+  "referrer_host",
+  "traffic_channel",
+  "ai_source",
+  "ai_referred",
+  "ai_referrer_host",
+  "ai_landing_path",
+]);
+
+function cleanValue(value: unknown) {
+  if (typeof value === "string") return value.slice(0, 300);
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  return undefined;
+}
+
+function sanitizePayload(value: unknown) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return null;
+  const input = value as Record<string, unknown>;
+  const clean: Record<string, string | number> = {};
+  for (const key of ALLOWED_KEYS) {
+    const safe = cleanValue(input[key]);
+    if (safe !== undefined) clean[key] = safe;
+  }
+  return clean;
+}
+
 function sameOrigin(request: NextRequest) {
   const origin = request.headers.get("origin");
   if (!origin) return false;
@@ -40,10 +86,15 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: false, error: "Invalid request" }, { status: 400 });
   }
 
+  let payload: Record<string, string | number> | null;
   try {
-    JSON.parse(raw);
+    payload = sanitizePayload(JSON.parse(raw));
   } catch {
     return NextResponse.json({ ok: false, error: "Invalid JSON" }, { status: 400 });
+  }
+
+  if (!payload || !payload.path || !payload.event) {
+    return NextResponse.json({ ok: false, error: "Invalid payload" }, { status: 400 });
   }
 
   const publicWorkerUrl = process.env.NEXT_PUBLIC_VISITOR_BEACON_URL?.replace(/\/+$/, "");
@@ -67,7 +118,7 @@ export async function POST(request: NextRequest) {
         "X-Visitor-Country": request.headers.get("x-vercel-ip-country") || "",
         "X-Visitor-User-Agent": request.headers.get("user-agent") || "",
       },
-      body: raw,
+      body: JSON.stringify(payload),
       cache: "no-store",
       signal: AbortSignal.timeout(8_000),
     });

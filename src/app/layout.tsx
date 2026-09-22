@@ -8,6 +8,7 @@ import WhatsAppFloating from "@/components/WhatsAppFloating";
 import SendInquiryFloating from "@/components/SendInquiryFloating";
 import LocaleExperience from "@/components/LocaleExperience";
 import DeferredSiteEnhancements from "@/components/DeferredSiteEnhancements";
+import CookieConsent from "@/components/CookieConsent";
 import MicrosoftUet from "@/components/MicrosoftUet";
 import { brandInfo } from "@/lib/data";
 
@@ -99,6 +100,7 @@ export default function RootLayout({
         <SendInquiryFloating />
         <WhatsAppFloating />
         <DeferredSiteEnhancements />
+        <CookieConsent />
       </body>
     </html>
   );

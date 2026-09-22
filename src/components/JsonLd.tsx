@@ -7,7 +7,7 @@ export default function JsonLd() {
     "@type": ["Organization", "Manufacturer"],
     "@id": `${brandInfo.url}/#organization`,
     name: brandInfo.name,
-    alternateName: ["VCARPETS", "Vishome Global Commercial Carpet", "Vishomecarpet"],
+    alternateName: ["VCARPETS", "Vcarpets Global Commercial Carpet"],
     url: brandInfo.url,
     foundingDate: "2005",
     numberOfEmployees: 900,

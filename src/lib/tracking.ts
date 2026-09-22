@@ -1,9 +1,8 @@
 import { getAttributionForEvent } from "@/lib/attribution";
+import { hasAdvertisingConsent, hasAnalyticsConsent } from "@/lib/consent";
 
 type LeadConversionPayload = {
   formName: string;
-  email?: string;
-  phone?: string;
   product?: string;
   quantity?: string;
   country?: string;
@@ -37,31 +36,51 @@ declare global {
 }
 
 function pushUetEvent(event: string, payload: Record<string, unknown>) {
-  if (typeof window === "undefined") return;
+  if (typeof window === "undefined" || !hasAdvertisingConsent()) return;
   const queue = window.uetq as { push?: (...args: unknown[]) => void } | undefined;
   if (typeof queue?.push !== "function") return;
   queue.push("event", event, payload);
 }
 
-function normalizeEnhancedConversionEmail(value?: string) {
-  const email = value?.trim().toLowerCase();
-  return email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? email : undefined;
-}
+const PRIVATE_KEYS = new Set([
+  "email",
+  "phone",
+  "phone_number",
+  "name",
+  "company",
+  "message",
+  "address",
+  "filename",
+  "uploaded_filename",
+  "href",
+  "url",
+  "page_location",
+  "query",
+  "ref",
+]);
 
-function normalizeEnhancedConversionPhone(value?: string) {
-  const phone = value?.replace(/[\s().-]/g, "").trim();
-  return phone && /^\+?\d{8,15}$/.test(phone) ? phone : undefined;
+function sanitizePayload(payload: Record<string, unknown>) {
+  const safe: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(payload)) {
+    if (PRIVATE_KEYS.has(key) || value === undefined || value === null) continue;
+    if (typeof value === "string") {
+      safe[key] = value.slice(0, 160);
+      continue;
+    }
+    if (typeof value === "number" || typeof value === "boolean") safe[key] = value;
+  }
+  return safe;
 }
 
 export function pushTrackingEvent(event: string, payload: Record<string, unknown>) {
-  if (typeof window === "undefined") return;
+  if (typeof window === "undefined" || (!hasAnalyticsConsent() && !hasAdvertisingConsent())) return;
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ event, ...payload });
+  window.dataLayer.push({ event, ...sanitizePayload(payload) });
 }
 
 export function trackAnalyticsEvent(event: string, payload: Record<string, unknown>) {
-  if (typeof window === "undefined") return;
-  const fullPayload = { ...payload, ...getAttributionForEvent() };
+  if (typeof window === "undefined" || !hasAnalyticsConsent()) return;
+  const fullPayload = sanitizePayload({ ...payload, ...getAttributionForEvent() });
 
   pushTrackingEvent(event, fullPayload);
 
@@ -81,8 +100,6 @@ export function trackAnalyticsEvent(event: string, payload: Record<string, unkno
 
 export function trackLeadConversion({
   formName,
-  email,
-  phone,
   product,
   quantity,
   country,
@@ -97,14 +114,14 @@ export function trackLeadConversion({
   sourcePage,
   trafficChannel,
 }: LeadConversionPayload) {
-  if (typeof window === "undefined") return;
+  if (typeof window === "undefined" || (!hasAnalyticsConsent() && !hasAdvertisingConsent())) return;
 
   const conversionSendTo =
     process.env.NEXT_PUBLIC_GOOGLE_ADS_FORM_CONVERSION_SEND_TO ||
     process.env.NEXT_PUBLIC_GOOGLE_ADS_THANK_YOU_CONVERSION_SEND_TO ||
     "AW-18306142236/MKQzCMXB_swcEJyghplF";
   const attribution = getAttributionForEvent();
-  const leadPayload = {
+  const leadPayload = sanitizePayload({
     event_category: "lead",
     event_label: formName,
     form_name: formName,
@@ -122,35 +139,25 @@ export function trackLeadConversion({
     source_page: sourcePage,
     traffic_channel: trafficChannel,
     ...attribution,
-  };
+  });
 
-  if (typeof window.gtag === "function") {
+  if (hasAnalyticsConsent() && typeof window.gtag === "function") {
     window.gtag("event", "generate_lead", leadPayload);
-
-    if (conversionSendTo) {
-      const enhancedConversionEmail = normalizeEnhancedConversionEmail(email);
-      const enhancedConversionPhone = normalizeEnhancedConversionPhone(phone);
-
-      if (enhancedConversionEmail || enhancedConversionPhone) {
-        window.gtag("set", "user_data", {
-          ...(enhancedConversionEmail ? { email: enhancedConversionEmail } : {}),
-          ...(enhancedConversionPhone ? { phone_number: enhancedConversionPhone } : {}),
-        });
-      }
-
-      window.gtag("event", "conversion", {
-        send_to: conversionSendTo,
-        event_category: "lead",
-        event_label: formName,
-      });
-    }
 
     if (leadGrade === "A") {
       window.gtag("event", "high_intent_lead", leadPayload);
     }
   }
 
-  if (typeof window.clarity === "function") {
+  if (hasAdvertisingConsent() && typeof window.gtag === "function" && conversionSendTo) {
+    window.gtag("event", "conversion", {
+      send_to: conversionSendTo,
+      event_category: "lead",
+      event_label: formName,
+    });
+  }
+
+  if (hasAnalyticsConsent() && typeof window.clarity === "function") {
     window.clarity("event", "contact_form_submit");
     window.clarity("set", "lead_form", formName);
     if (product) window.clarity("set", "lead_product", product);
@@ -164,31 +171,31 @@ export function trackLeadConversion({
     if (attribution.ai_source) window.clarity("set", "lead_ai_source", attribution.ai_source);
   }
 
-  pushTrackingEvent("lead_form_submit_success", leadPayload);
-  pushUetEvent("generate_lead", {
+  if (hasAnalyticsConsent()) pushTrackingEvent("lead_form_submit_success", leadPayload);
+  if (hasAdvertisingConsent()) pushUetEvent("generate_lead", {
     form_name: formName,
     product,
     country,
     source_page: sourcePage,
     traffic_channel: trafficChannel,
   });
-  if (leadGrade === "A") pushTrackingEvent("high_intent_lead", leadPayload);
-  if (leadGrade === "A") pushUetEvent("high_intent_lead", { form_name: formName, product, country });
+  if (hasAnalyticsConsent() && leadGrade === "A") pushTrackingEvent("high_intent_lead", leadPayload);
+  if (hasAdvertisingConsent() && leadGrade === "A") pushUetEvent("high_intent_lead", { form_name: formName, product, country });
 }
 
 export function trackInteractionConversion(type: ClickConversionType, payload: Record<string, unknown> = {}) {
-  if (typeof window === "undefined") return;
+  if (typeof window === "undefined" || (!hasAnalyticsConsent() && !hasAdvertisingConsent())) return;
 
-  const fullPayload = { ...payload, ...getAttributionForEvent() };
+  const fullPayload = sanitizePayload({ ...payload, ...getAttributionForEvent() });
 
-  pushTrackingEvent(type, fullPayload);
-  pushUetEvent(type, fullPayload);
+  if (hasAnalyticsConsent()) pushTrackingEvent(type, fullPayload);
+  if (hasAdvertisingConsent()) pushUetEvent(type, fullPayload);
 
-  if (typeof window.gtag === "function") {
+  if ((hasAnalyticsConsent() || hasAdvertisingConsent()) && typeof window.gtag === "function") {
     window.gtag("event", type, fullPayload);
   }
 
-  if (typeof window.clarity === "function") {
+  if (hasAnalyticsConsent() && typeof window.clarity === "function") {
     window.clarity("event", type);
   }
 }
