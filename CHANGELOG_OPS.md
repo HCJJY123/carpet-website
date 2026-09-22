@@ -883,3 +883,10 @@ This file is append-only. Do not delete or rewrite historical entries.
 **Rollback point:** `c680b9fd2b4e487be676642239a78609f4b6b7e5`
 
 **Note:** The global Metrica block is rendered in page source and loads before the cookie-consent gate, which differs from the existing privacy-policy wording that described Yandex Metrica as consent-gated. Policy wording was left unchanged in this change set and should be reviewed separately.
+
+## 2026-09-23 — Yandex Webmaster site-ownership verification file
+
+- Added the owner-supplied verification file at `public/yandex_83c276caf5355ffa.html` so Yandex Webmaster can confirm site ownership at `https://www.vcarpets.com/yandex_83c276caf5355ffa.html`.
+- Static file only; the body content (`Verification: 83c276caf5355ffa`) is preserved byte-for-byte with no script, tracking, SEO or product-content changes.
+
+**Rollback point:** `f7d61a2af44117a599503cb9f670ad90528f74b9`
