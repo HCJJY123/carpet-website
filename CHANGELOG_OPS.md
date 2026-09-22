@@ -890,3 +890,10 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Static file only; the body content (`Verification: 83c276caf5355ffa`) is preserved byte-for-byte with no script, tracking, SEO or product-content changes.
 
 **Rollback point:** `f7d61a2af44117a599503cb9f670ad90528f74b9`
+
+## 2026-09-23 — Yandex HTTPS property ownership verification file
+
+- Added the owner-supplied verification file at `public/yandex_9ff8e71e4e1a3e31.html` for the `https://www.vcarpets.com` Webmaster property.
+- Retained the earlier verification file for the existing property; no tracking, consent, product-content, canonical, robots or sitemap behavior changed.
+
+**Rollback point:** `01fb0663c75907ff388ee79325be48de3a7d19dd`
