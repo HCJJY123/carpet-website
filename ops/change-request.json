@@ -1,14 +1,15 @@
 {
-  "task": "Add the Yandex Webmaster site-ownership verification file to the VCARPETS site root",
-  "approvedBy": "Owner provided the Yandex verification file (Verification: 83c276caf5355ffa) and requested verification/deployment on 2026-09-23",
+  "task": "Add the Yandex Webmaster site-ownership verification file for the HTTPS www.vcarpets.com property",
+  "approvedBy": "Owner provided the Yandex verification file (Verification: 9ff8e71e4e1a3e31) in the current task and requested verification/deployment",
   "approvedCategories": ["seo-global", "operations"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "public/yandex_83c276caf5355ffa.html"
+    "public/yandex_83c276caf5355ffa.html",
+    "public/yandex_9ff8e71e4e1a3e31.html"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "f7d61a2af44117a599503cb9f670ad90528f74b9",
-  "notes": "Serve the exact owner-supplied Yandex Webmaster ownership file at /yandex_83c276caf5355ffa.html so the owner can complete site verification. Static file only; no tracking, SEO, consent, or product-content behavior changes."
+  "rollbackCommit": "01fb0663c75907ff388ee79325be48de3a7d19dd",
+  "notes": "Serve the exact owner-supplied Yandex Webmaster ownership file at /yandex_9ff8e71e4e1a3e31.html for the HTTPS www.vcarpets.com property. Retain the previously deployed verification file for the earlier property. Static files only; no tracking, consent, product-content, canonical, robots or sitemap changes."
 }
