@@ -1,15 +1,17 @@
 {
-  "task": "Clarify carpet tile supply status and remove stale product count on the existing B2B category page",
-  "approvedBy": "Owner's 2026-09-28 B2B organic traffic and qualified-inquiry optimization request and subsequent explicit submission/deployment authorization",
+  "task": "Turn the existing installation-guide request page into a buyer and installer planning brief for commercial carpet projects",
+  "approvedBy": "Owner's B2B content-growth request and subsequent explicit instruction to deploy this installation-planning content cycle",
   "approvedCategories": ["content", "conversion", "operations"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    ".github/workflows/site-ops-guard.yml",
-    "src/app/products/carpet-tiles/page.tsx"
+    "keyword-map.csv",
+    "src/app/resources/installation-guides/page.tsx",
+    "src/app/products/carpet-tiles/page.tsx",
+    "src/app/products/wall-to-wall/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "9884235fed3fe029252f82e22f4478617d56e347",
-  "notes": "Affected URL: /products/carpet-tiles. Production HTML backup: /tmp/vcarpets-growth-20260928/carpet-tiles.production.html. Product records mark one tile as preorder and leave availability unspecified for the others, yet every card currently claims 'In Stock / Made to Order'. The page also states eight products while the data renders nine. Replace the blanket availability claim and remove stale counts from hero, FAQ and evidence copy. Preserve prices, MOQ, URLs, forms, tracking, imagery and unrelated work. Since this local network resets Vercel Preview connections, add a manual GitHub-hosted Preview verification path to the existing guard. Merge only after required checks and Preview verification."
+  "rollbackCommit": "77fcbb50c3c7273bffb7d79943f5bbcd35c34e0c",
+  "notes": "Affected existing URLs: /resources/installation-guides, /products/carpet-tiles, /products/wall-to-wall. Live HTML backed up in /tmp/vcarpets-installation-planning before editing. Expand the existing resource into a procurement and installer handoff brief, add two contextual product-category links and keyword ownership. Industry installation references are not VCARPETS product instructions, certification, or installer services. No new URLs, images, forms, tracking, prices or product specifications. Owner authorized release for this scope; use feature-branch PR, required checks and Vercel Preview verification before merge, then verify production."
 }

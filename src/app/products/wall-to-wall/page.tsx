@@ -284,7 +284,7 @@ export default function CategoryPage() {
               </article>
             ))}
           </div>
-          <p className="mt-6 text-sm leading-7 text-muted">For a focused construction review, compare <Link href="/products/wall-to-wall/3d-printed-hotel-carpet" className="font-bold text-accent underline">custom printed hotel carpet</Link>, read the <Link href="/blog/commercial-carpet-tile-fire-rating-voc-documents-guide" className="font-bold text-accent underline">hotel fire and VOC document guide</Link>, or send a <Link href="/contact?product=Wall-to-Wall%20Carpet#quote-form" className="font-bold text-accent underline">hotel broadloom RFQ</Link>.</p>
+          <p className="mt-6 text-sm leading-7 text-muted">For a focused construction review, compare <Link href="/products/wall-to-wall/3d-printed-hotel-carpet" className="font-bold text-accent underline">custom printed hotel carpet</Link>, prepare the floor plan and seam questions with the <Link href="/resources/installation-guides" className="font-bold text-accent underline">installation planning brief</Link>, or send a <Link href="/contact?product=Wall-to-Wall%20Carpet#quote-form" className="font-bold text-accent underline">hotel broadloom RFQ</Link>.</p>
         </div>
       </section>
       <section className="border-b border-border bg-white py-14 md:py-18" data-funnel-section="contract_carpet_selector">
