@@ -42,7 +42,7 @@ const categoryFaqs = [
   },
   {
     question: "Do you make waterproof, washable, self-adhesive, wool, or polyester carpet tiles?",
-    answer: "These terms describe different constructions that are not automatically interchangeable with the eight listed products. Send the required fiber, backing, cleaning method, installation system, and test standard for separate confirmation of waterproof carpet tiles, washable carpet tiles, self adhesive carpet tiles, wool carpet tiles, polyester carpet tiles, or cut pile carpet tiles."
+    answer: "These terms describe different constructions that are not automatically interchangeable with the listed products. Send the required fiber, backing, cleaning method, installation system, and test standard for separate confirmation of waterproof carpet tiles, washable carpet tiles, self adhesive carpet tiles, wool carpet tiles, polyester carpet tiles, or cut pile carpet tiles."
   }
 ];
 
@@ -222,7 +222,7 @@ export default function CategoryPage() {
         <div className="container-fox relative z-10">
           <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Carpet Tile Manufacturer, Supplier & Distributor Support</p>
           <h1 className="text-4xl font-black uppercase text-white md:text-6xl">Commercial Carpet Tiles & Modular Flooring</h1>
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">50x50 nylon and polypropylene carpet tiles for offices, hotels, corridors, schools, healthcare support areas, airports, and commercial projects. Compare wholesale price, backing, thickness, MOQ, and technical performance across eight products.</p>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">50x50 nylon and polypropylene carpet tiles for offices, hotels, corridors, schools, healthcare support areas, airports, and commercial projects. Compare wholesale price, backing, thickness, MOQ, and technical performance across the listed range.</p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="btn-fox-orange">Get Price & Samples in 24 Hours</Link>
             <Link href="#carpet-tile-products" className="inline-flex min-h-12 items-center justify-center border border-white/40 px-7 py-3 text-xs font-black uppercase tracking-widest text-white transition-colors hover:border-white">Compare Products</Link>
@@ -252,7 +252,7 @@ export default function CategoryPage() {
           "Wet or outdoor areas without a purpose-built flooring system",
           "Buying by appearance alone without traffic, fire and installation requirements",
         ]}
-        evidence="The comparison is based on the eight products currently listed on this category page and was reviewed on July 31, 2026. Final construction, test documents, price, availability, MOQ and lead time are confirmed against the selected product and project specification."
+        evidence="The comparison is based on the products listed on this category page. Final construction, test documents, price, availability, MOQ and lead time are confirmed against the selected product and project specification."
         quoteHref="/contact?product=Commercial%20Carpet%20Tiles#quote-form"
         quoteLabel="Request a Tile Recommendation"
       />
@@ -335,7 +335,7 @@ export default function CategoryPage() {
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Availability</span>
-                    <span className="text-right font-black text-primary">In Stock / Made to Order</span>
+                    <span className="text-right font-black text-primary">{p.availability === "preorder" ? "Pre-order; confirm lead time" : "Confirm by color & quantity"}</span>
                   </div>
                 </div>
                 <div className="mt-auto flex min-h-11 items-center justify-between rounded-sm bg-primary px-4 py-3 text-[10px] font-black uppercase tracking-[0.12em] text-white transition-colors group-hover:bg-[#C8752A]">
