@@ -307,7 +307,7 @@ export default function CategoryPage() {
               </article>
             ))}
           </div>
-          <p className="mt-6 text-sm leading-7 text-muted">For construction-specific advice, compare the <Link href="/products/carpet-tiles/nylon-office-carpet-tile" className="font-bold text-accent underline">nylon office carpet tile specification</Link>, review the <Link href="/blog/carpet-tiles-over-concrete-installation-guide" className="font-bold text-accent underline">concrete subfloor installation guide</Link>, or send the complete scope through the <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="font-bold text-accent underline">commercial carpet tile RFQ form</Link>.</p>
+          <p className="mt-6 text-sm leading-7 text-muted">Compare the <Link href="/products/carpet-tiles/nylon-office-carpet-tile" className="font-bold text-accent underline">nylon office carpet tile specification</Link> and use the <Link href="/resources/installation-guides" className="font-bold text-accent underline">installation planning brief</Link> to align the site and product details before requesting a quote. For a concrete substrate, review the <Link href="/blog/carpet-tiles-over-concrete-installation-guide" className="font-bold text-accent underline">concrete-floor guide</Link>; send the complete scope through the <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="font-bold text-accent underline">commercial carpet tile RFQ form</Link>.</p>
         </div>
       </section>
       <section id="carpet-tile-products" className="section-padding scroll-mt-24">
