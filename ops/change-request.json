@@ -5,10 +5,11 @@
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
+    ".github/workflows/site-ops-guard.yml",
     "src/app/products/carpet-tiles/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
   "rollbackCommit": "9884235fed3fe029252f82e22f4478617d56e347",
-  "notes": "Affected URL: /products/carpet-tiles. Production HTML backup: /tmp/vcarpets-growth-20260928/carpet-tiles.production.html. Product records mark one tile as preorder and leave availability unspecified for the others, yet every card currently claims 'In Stock / Made to Order'. The page also states eight products while the data renders nine. Replace the blanket availability claim and remove stale counts from hero, FAQ and evidence copy. Preserve prices, MOQ, URLs, forms, tracking, imagery and unrelated work. Validate locally, then use Preview and PR; merge only after required checks and Preview verification."
+  "notes": "Affected URL: /products/carpet-tiles. Production HTML backup: /tmp/vcarpets-growth-20260928/carpet-tiles.production.html. Product records mark one tile as preorder and leave availability unspecified for the others, yet every card currently claims 'In Stock / Made to Order'. The page also states eight products while the data renders nine. Replace the blanket availability claim and remove stale counts from hero, FAQ and evidence copy. Preserve prices, MOQ, URLs, forms, tracking, imagery and unrelated work. Since this local network resets Vercel Preview connections, add a manual GitHub-hosted Preview verification path to the existing guard. Merge only after required checks and Preview verification."
 }

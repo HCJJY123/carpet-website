@@ -903,6 +903,7 @@ This file is append-only. Do not delete or rewrite historical entries.
 - **URL:** `/products/carpet-tiles`. Production HTML backed up at `/tmp/vcarpets-growth-20260928/carpet-tiles.production.html` before editing.
 - **Evidence:** All category cards displayed `In Stock / Made to Order`, although the product data marks only one carpet tile as `preorder` and contains no confirmed live stock status for the others. Hero, FAQ and evidence copy claimed eight products, while the page renders nine.
 - **Change:** Show `Pre-order; confirm lead time` for the marked product and `Confirm by color & quantity` for the other cards; replace the stale count with evergreen language in the hero, FAQ and evidence copy. Prices, MOQ, links, SEO metadata, images and inquiry behavior remain unchanged. No new image is needed.
+- **Preview verification:** Add a manual Vercel-origin verification input to the existing GitHub Site Ops Guard because the local network resets Preview connections. The ordinary PR guard remains unchanged; no production site behavior changes from this workflow step.
 - **Status:** Code change prepared on a feature branch; production deployment and qualified-inquiry impact remain unverified.
 - **Review:** After deployment, compare the next two complete 28-day periods for category-page organic landing sessions, contact-form starts, submitted leads and sales-qualified carpet tile inquiries; do not attribute changes solely to this wording.
 
