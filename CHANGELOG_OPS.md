@@ -897,3 +897,13 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Retained the earlier verification file for the existing property; no tracking, consent, product-content, canonical, robots or sitemap behavior changed.
 
 **Rollback point:** `01fb0663c75907ff388ee79325be48de3a7d19dd`
+
+## 2026-09-28 — Carpet tile category supply-status clarity
+
+- **URL:** `/products/carpet-tiles`. Production HTML backed up at `/tmp/vcarpets-growth-20260928/carpet-tiles.production.html` before editing.
+- **Evidence:** All category cards displayed `In Stock / Made to Order`, although the product data marks only one carpet tile as `preorder` and contains no confirmed live stock status for the others. Hero, FAQ and evidence copy claimed eight products, while the page renders nine.
+- **Change:** Show `Pre-order; confirm lead time` for the marked product and `Confirm by color & quantity` for the other cards; replace the stale count with evergreen language in the hero, FAQ and evidence copy. Prices, MOQ, links, SEO metadata, images and inquiry behavior remain unchanged. No new image is needed.
+- **Status:** Code change prepared on a feature branch; production deployment and qualified-inquiry impact remain unverified.
+- **Review:** After deployment, compare the next two complete 28-day periods for category-page organic landing sessions, contact-form starts, submitted leads and sales-qualified carpet tile inquiries; do not attribute changes solely to this wording.
+
+**Rollback point:** `9884235fed3fe029252f82e22f4478617d56e347`
