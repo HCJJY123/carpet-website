@@ -1,17 +1,17 @@
 {
-  "task": "Turn the existing installation-guide request page into a buyer and installer planning brief for commercial carpet projects",
-  "approvedBy": "Owner's B2B content-growth request and subsequent explicit instruction to deploy this installation-planning content cycle",
+  "task": "Expand the existing commercial carpet maintenance resource into a buyer and facilities handoff brief",
+  "approvedBy": "Owner's B2B content-growth instruction and explicit 2026-09-29 request to publish the maintenance-planning update",
   "approvedCategories": ["content", "conversion", "operations"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
     "keyword-map.csv",
-    "src/app/resources/installation-guides/page.tsx",
+    "src/app/resources/maintenance-guides/page.tsx",
     "src/app/products/carpet-tiles/page.tsx",
     "src/app/products/wall-to-wall/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "77fcbb50c3c7273bffb7d79943f5bbcd35c34e0c",
-  "notes": "Affected existing URLs: /resources/installation-guides, /products/carpet-tiles, /products/wall-to-wall. Live HTML backed up in /tmp/vcarpets-installation-planning before editing. Expand the existing resource into a procurement and installer handoff brief, add two contextual product-category links and keyword ownership. Industry installation references are not VCARPETS product instructions, certification, or installer services. No new URLs, images, forms, tracking, prices or product specifications. Owner authorized release for this scope; use feature-branch PR, required checks and Vercel Preview verification before merge, then verify production."
+  "rollbackCommit": "a9e0d65e6b91c22110250b5cfdb060494bebde6f",
+  "notes": "Affected existing URLs: /resources/maintenance-guides, /products/carpet-tiles, /products/wall-to-wall. Live maintenance HTML backed up at /tmp/vcarpets-maintenance-before.html. Procurement and facilities handoff only, with contextual category links and keyword ownership. Industry care guidance is not a VCARPETS product-specific cleaning instruction or certification. No new URLs, images, forms, tracking, prices or product promises. Owner explicitly authorized release on 2026-09-29; use feature-branch PR, required checks and Vercel Preview verification before merge, then verify production."
 }
