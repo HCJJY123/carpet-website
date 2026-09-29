@@ -184,7 +184,7 @@ export default function NylonOfficeCarpetTilePage() {
     material: "100% Nylon",
     manufacturer: {
       "@type": "Organization",
-      name: "Vcarpets Global Commercial Carpet Co., Ltd.",
+      name: "Tianjin Vcarpets Global Commercial Carpet Co., Ltd.",
       url: "https://www.vcarpets.com",
     },
     offers: {
@@ -198,7 +198,7 @@ export default function NylonOfficeCarpetTilePage() {
       offerCount: 3,
       seller: {
         "@type": "Organization",
-        name: "Vcarpets Global Commercial Carpet Co., Ltd.",
+        name: "Tianjin Vcarpets Global Commercial Carpet Co., Ltd.",
         url: "https://www.vcarpets.com",
       },
     },

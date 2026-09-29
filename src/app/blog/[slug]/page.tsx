@@ -9,6 +9,7 @@ import ProductImage from "@/components/ProductImage";
 import RelatedCategoryLinks from "@/components/RelatedCategoryLinks";
 import ContentTrustPanel from "@/components/ContentTrustPanel";
 import ConversionLiftPanel from "@/components/ConversionLiftPanel";
+import RfqQuestionBuilder from "@/components/RfqQuestionBuilder";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -198,6 +199,7 @@ export default async function BlogPostPage({ params }: Props) {
     publisher: {
       "@type": "Organization",
       "@id": `${brandInfo.url}/#organization`,
+      name: brandInfo.name,
       logo: {
         "@type": "ImageObject",
         url: absoluteUrl("/logo.svg"),
@@ -338,6 +340,8 @@ export default async function BlogPostPage({ params }: Props) {
             </section>
           ))}
         </div>
+
+        {post.slug === "commercial-carpet-sourcing-directory" ? <RfqQuestionBuilder /> : null}
 
         <ConversionLiftPanel
           eyebrow="Turn This Guide Into a Quote"

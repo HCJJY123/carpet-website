@@ -9,6 +9,7 @@ import { trackAnalyticsEvent, trackLeadConversion } from "@/lib/tracking";
 import { getVisitorIdentity } from "@/lib/visitorIdentity";
 
 const PENDING_CONTACT_SOURCE_KEY = "VCARPETS_pending_contact_source";
+const RFQ_DRAFT_KEY = "VCARPETS_sourcing_question_draft";
 
 type LeadCaptureFormProps = {
   formName: string;
@@ -40,6 +41,20 @@ export default function LeadCaptureForm({
     submitting: false,
     error: null as string | null,
   });
+
+  useEffect(() => {
+    if (variant !== "full" || formName !== "contact_project_quote" || sourcePageDefault !== "/blog/commercial-carpet-sourcing-directory") return;
+    const textarea = fullFormRef.current?.elements.namedItem("message");
+    if (!(textarea instanceof HTMLTextAreaElement) || textarea.value) return;
+    try {
+      const draft = JSON.parse(window.sessionStorage.getItem(RFQ_DRAFT_KEY) || "null") as { source?: string; message?: string } | null;
+      if (draft?.source === sourcePageDefault && typeof draft.message === "string" && draft.message.length <= 2000) {
+        textarea.value = draft.message;
+      }
+    } catch {
+      return;
+    }
+  }, [variant, formName, sourcePageDefault]);
 
   useEffect(() => {
     if (variant !== "full") return;
@@ -170,6 +185,9 @@ export default function LeadCaptureForm({
         })
       );
       sessionStorage.removeItem(PENDING_CONTACT_SOURCE_KEY);
+      if (formName === "contact_project_quote" && sourcePage === "/blog/commercial-carpet-sourcing-directory") {
+        sessionStorage.removeItem(RFQ_DRAFT_KEY);
+      }
       clearPendingContactFunnel();
 
       router.push("/thank-you");

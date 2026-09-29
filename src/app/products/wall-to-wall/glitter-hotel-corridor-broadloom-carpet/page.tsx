@@ -151,11 +151,11 @@ const productJsonLd = {
     "offerCount": 1,
     "availability": "https://schema.org/PreOrder",
     "itemCondition": "https://schema.org/NewCondition",
-    "seller": { "@type": "Organization", "name": "Vcarpets Global Commercial Carpet Co., Ltd.", "url": siteUrl }
+    "seller": { "@type": "Organization", "name": "Tianjin Vcarpets Global Commercial Carpet Co., Ltd.", "url": siteUrl }
   },
   "manufacturer": {
     "@type": "Organization",
-    "name": "Vcarpets Global Commercial Carpet Co., Ltd.",
+    "name": "Tianjin Vcarpets Global Commercial Carpet Co., Ltd.",
     "url": siteUrl
   },
   "additionalProperty": [

@@ -948,3 +948,21 @@ This file is append-only. Do not delete or rewrite historical entries.
 - The PR retains the existing root XML endpoint, adds only the indexable privacy URL, and strengthens coverage checks for the privacy, cookie and sample-request pages. No published URL, page content, canonical, crawler permission, form or tracking change. Revalidate build, Preview and URL list before any separate production merge decision.
 
 **Rollback point:** `6c83f99f6c111caa089c5f278a7340b61f9d6bc3`
+
+## 2026-09-29 `content/faq-rfq-sourcing-directory-20260930`
+
+**Type:** B2B content expansion / RFQ preparation / entity consistency / internal linking
+
+**Scope:** Expanded `/faq` into a commercial carpet procurement and RFQ knowledge hub, added the buyer-focused `/blog/commercial-carpet-sourcing-directory`, added a homepage entry, and added a local-only RFQ question builder that stores a draft in same-origin `sessionStorage` before pre-filling the existing contact form. Corrected the owner-confirmed legal entity in website metadata, visible company references, Organization/Article publisher data and AI-readable source files. No URL removals, redirects, robots, tracking, advertising, API or real inquiry submission changes.
+
+**Content decisions:** Kept one primary FAQ URL; covered product selection, hotel procurement, samples, MOQ, pricing, logistics and documentation without inventing fixed commercial terms. Reused `/images/about/quality-control-inspection.webp` as an explicitly illustrative procurement image; no generated image or fabricated case evidence was added.
+
+**Changed URLs:** `/faq`, `/blog/commercial-carpet-sourcing-directory`, `/` and existing pages containing the owner-confirmed company identity.
+
+**Rollback point:** `964cdae4a78ee4043a202e08542a5152b1344433`
+
+**Release gate:** Run Ops guard, SEO/link audits, lint, build and Preview verification. Do not merge or deploy production until the Preview pages and the existing inquiry path are checked and the owner authorizes release.
+
+**Local verification:** Ops guard, SEO/link audits, TypeScript/webpack production build and diff check passed. ESLint returned no errors and one pre-existing `ProductImage.tsx` image warning. At 390px, `/faq` has one H1, a self-canonical URL and no document overflow; the new article has one H1, self-canonical, visible author, Article publisher with the confirmed legal name, and a scoped buyer-question builder. At 1440px, `/faq` has no document overflow. A sample RFQ draft reached the existing contact form without entering the URL; no inquiry was submitted. Local `/sitemaps/blog.xml` returned 200 and included the new article once. Production and Vercel Preview remain unverified at this stage. Legacy downloadable PDFs and historical outreach drafts still need a separate entity-name review; they are not changed in this release.
+
+**Preview verification:** PR #57 Vercel deployment passed, as did the GitHub Site Ops Guard workflow on the exact PR commit; a second `workflow_dispatch` run (36602037965) executed `npm run ops:verify` against the public Vercel Preview and passed all configured baseline routes and sitemaps. The current workstation's connection to the Preview hostname resets, so new-page Preview HTTP and interactive behavior were checked on the local production build, not independently from this workstation. No live inquiry was sent. Owner explicitly authorized deployment in the follow-up conversation.

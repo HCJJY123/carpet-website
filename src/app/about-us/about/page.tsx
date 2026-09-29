@@ -6,7 +6,7 @@ import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata: Metadata = {
   title: "Company Profile | VCARPETS Commercial Carpet Manufacturer",
-  description: "Company profile for Vcarpets Global Commercial Carpet Co., Ltd., a Tianjin commercial carpet manufacturer serving global B2B projects.",
+  description: "Company profile for Tianjin Vcarpets Global Commercial Carpet Co., Ltd., a Tianjin commercial carpet manufacturer serving global B2B projects.",
   alternates: { canonical: "/about-us" },
   robots: { index: false, follow: true },
 };
@@ -23,7 +23,7 @@ export default function AboutPage() {
             </h1>
             <div className="w-16 h-1 bg-accent mx-auto mb-8"></div>
             <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed opacity-90">
-              Vcarpets Global Commercial Carpet Co., Ltd. is a B2B commercial carpet manufacturer serving international infrastructure, hospitality, office, public-area and project flooring buyers.
+              Tianjin Vcarpets Global Commercial Carpet Co., Ltd. is a B2B commercial carpet manufacturer serving international infrastructure, hospitality, office, public-area and project flooring buyers.
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function AboutPage() {
             <div>
               <span className="text-accent font-bold tracking-[0.3em] text-[10px] uppercase mb-4 block">Our Identity</span>
               <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 uppercase leading-tight">
-                Vcarpets Global Commercial Carpet Co., Ltd.
+                Tianjin Vcarpets Global Commercial Carpet Co., Ltd.
               </h2>
               <div className="prose prose-slate max-w-none text-muted">
                 <p className="mb-6 leading-relaxed text-lg">

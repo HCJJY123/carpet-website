@@ -7,7 +7,7 @@ export default function JsonLd() {
     "@type": ["Organization", "Manufacturer"],
     "@id": `${brandInfo.url}/#organization`,
     name: brandInfo.name,
-    alternateName: ["VCARPETS", "Vcarpets Global Commercial Carpet"],
+    alternateName: "VCARPETS",
     url: brandInfo.url,
     foundingDate: "2005",
     numberOfEmployees: 900,
@@ -94,7 +94,7 @@ export default function JsonLd() {
     name: brandInfo.name,
     alternateName: [brandInfo.shortName, "VCARPETS"],
     description:
-      "Vcarpets Global Commercial Carpet Co., Ltd. is a Tianjin-based B2B manufacturer supplying carpet tiles, hotel broadloom, public-area carpet, and custom commercial flooring for export projects.",
+      "Tianjin Vcarpets Global Commercial Carpet Co., Ltd. is a Tianjin-based B2B manufacturer supplying carpet tiles, hotel broadloom, public-area carpet, and custom commercial flooring for export projects.",
     url: brandInfo.url,
     telephone: brandInfo.phone,
     email: brandInfo.email,

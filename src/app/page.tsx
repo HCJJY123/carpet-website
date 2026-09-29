@@ -189,7 +189,7 @@ export default function Home() {
                 Corporate Profile
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8 uppercase leading-tight">
-                Tianjin-Based Vcarpets Global Commercial Carpet Co., Ltd.
+                Tianjin Vcarpets Global Commercial Carpet Co., Ltd.
               </h2>
               <div className="prose prose-slate max-w-none">
                 <p className="text-muted text-lg leading-relaxed mb-6 font-medium">
@@ -282,6 +282,11 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+          <div className="mt-10 border-l-4 border-accent bg-white p-6 md:p-8">
+            <h3 className="text-xl font-black text-primary">Commercial Carpet Sourcing Directory</h3>
+            <p className="mt-2 max-w-3xl text-sm leading-7 text-muted">Compare product types, specifications, buyer questions and RFQ requirements before requesting a project quote.</p>
+            <Link href="/blog/commercial-carpet-sourcing-directory" className="mt-4 inline-flex min-h-11 items-center font-bold text-accent underline">Explore the buyer directory</Link>
           </div>
         </div>
       </section>

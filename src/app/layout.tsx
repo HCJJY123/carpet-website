@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   title: "VCARPETS | Commercial Carpet Tiles & Hotel Broadloom Manufacturer",
   description:
-    "Vcarpets Global Commercial Carpet Co., Ltd. manufactures commercial carpet tiles, hotel broadloom carpets, and custom flooring solutions for global B2B projects.",
+    "Tianjin Vcarpets Global Commercial Carpet Co., Ltd. manufactures commercial carpet tiles, hotel broadloom carpets, and custom flooring solutions for global B2B projects.",
   alternates: {
     types: {
       "text/plain": [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "VCARPETS | Premium Commercial Carpet & Flooring Solutions",
-    description: "Vcarpets Global Commercial Carpet Co., Ltd.: a Tianjin-based manufacturer for commercial carpet tiles, hotel carpets, and custom B2B flooring projects.",
+    description: "Tianjin Vcarpets Global Commercial Carpet Co., Ltd.: a Tianjin-based manufacturer for commercial carpet tiles, hotel carpets, and custom B2B flooring projects.",
     url: brandInfo.url,
     siteName: "VCARPETS",
     type: "website",
