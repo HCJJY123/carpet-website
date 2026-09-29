@@ -12,7 +12,7 @@ export interface CaseCostItem { item: string; amount: string; }
 export interface CaseStudy { id: string; title: string; metadataTitle?: string; h1?: string; tag?: string; subtitle?: string; category: "carpet-tiles" | "wall-to-wall" | "public-area"; image: string; imageAlt?: string; description: string; specificationTitle?: string; projectSpecs: CaseSpecItem[]; sections: CaseSection[]; technicalDetails: string[]; designHighlights: string[]; results: string[]; gallery?: string[]; costAnalysis?: CaseCostItem[]; faqs?: { question: string; answer: string; }[]; recommendedProductIds?: string[]; }
 
 export const brandInfo = {
-  name: "Vcarpets Global Commercial Carpet Co., Ltd.",
+  name: "Tianjin Vcarpets Global Commercial Carpet Co., Ltd.",
   shortName: "VCARPETS",
   url: "https://www.vcarpets.com",
   email: "sales@vcarpets.com",
@@ -873,6 +873,36 @@ export const faqSections = [
       { q: "What is your MOQ?", a: "MOQ depends on the product, stock availability, color, and customization. Stock items or samples may support a smaller trial quantity, while custom colors, designs, and production runs normally require a higher project-specific MOQ." },
       { q: "What warranty or after-sales support do you provide?", a: "Warranty terms depend on the approved product specification, application, installation, and maintenance conditions. We also support issue review with order records, batch information, photos or video, and inspection evidence." },
       { q: "How many square metres fit in a container?", a: "Loading quantity depends on carpet thickness, backing, roll or tile dimensions, carton size, pallet requirements, and whether products are mixed. We provide a packing and container-loading estimate after the final specification is confirmed." }
+    ]
+  },
+  {
+    title: "Product Selection & Hotel Procurement",
+    questions: [
+      { q: "What carpet tile material is commonly used for high-traffic offices?", a: "Nylon is often shortlisted for its resilience, but it is not mandatory for every office. Compare traffic, rolling-chair use, maintenance, budget, backing and the required product-specific tests before choosing a construction." },
+      { q: "What does 50x50 carpet tile mean?", a: "It is a modular tile measuring 50 by 50 centimetres. Size alone does not define performance: compare fiber, pile, weight, thickness, backing, installation system and test documentation before placing an order." },
+      { q: "What backing should I choose for commercial carpet tiles?", a: "Bitumen, PVC, PE and cushion constructions are not interchangeable. Ask for a backing compatible with the substrate, attachment method, traffic, dimensional-stability and project material requirements; verify the exact product documents." },
+      { q: "What information is needed to quote hotel carpet?", a: "Identify guest rooms, corridors, ballroom or lobby areas separately. Send quantities, floor plans if available, design and color references, construction or backing preferences, required test method, destination and target installation date. Unspecified items can be reviewed before pricing." },
+      { q: "Can hotel carpet be customized from a designer's artwork?", a: "Artwork, color references, pattern repeat, dimensions and construction can be reviewed for project feasibility. Request a physical sample or strike-off and agree the approved reference before bulk production; not every design works with every construction." },
+      { q: "How should hotel buyers approve carpet before mass production?", a: "Confirm the construction, backing, color reference, artwork, pattern repeat, dimensions and physical sample. Then record the agreed commercial and testing requirements and obtain written approval of the final specification before release." }
+    ]
+  },
+  {
+    title: "Samples, MOQ & Price Comparison",
+    questions: [
+      { q: "Can I request carpet samples before placing a bulk order?", a: "Yes. Ask whether a material swatch, available-color sample or custom strike-off is appropriate. The sample type, preparation time, cost and courier arrangement depend on the product and should be confirmed before dispatch." },
+      { q: "Is there one fixed MOQ for all commercial carpet products?", a: "No. Availability, fiber, color, backing, production method and custom design affect MOQ. A stock item or standard color may support a smaller trial, while made-to-order construction needs its own minimum quantity confirmation." },
+      { q: "Can I start with a trial order before container quantities?", a: "Potentially, for an available standard product and color. A custom construction or print may require a different minimum. Send the product and quantity for a written feasibility and price basis; do not assume a trial quantity is available for every style." },
+      { q: "Why can two carpet tiles with the same size have very different prices?", a: "The same 50 by 50 centimetre format can have different fiber and yarn quality, pile weight, construction, backing, testing, packing and order quantity. Compare a complete specification and trade term, not the tile dimensions or headline unit price alone." },
+      { q: "What affects the price of hotel carpet?", a: "Fiber, pile construction and weight, roll width, pattern repeat, custom color, order size, sample development, testing and packing all affect the quote. Ask suppliers to use the same approved specification, quantity and Incoterm." }
+    ]
+  },
+  {
+    title: "Export Packing & Documentation",
+    questions: [
+      { q: "How is commercial carpet normally packed for export?", a: "Tiles are generally carton-packed, with pallets where agreed; broadloom is rolled and protected for transport. The actual carton, roll, pallet and container plan must match the product, quantity, buyer requirements and shipping route." },
+      { q: "How do I estimate how much carpet fits in one container?", a: "There is no reliable universal square-metre figure. Tile or roll format, thickness, backing, carton size, pallet use and mixed products all change loading. Request a product-specific packing calculation with the final quantity." },
+      { q: "How should I request fire-performance documentation?", a: "Specify the destination market, applicable test method, project requirement and exact carpet construction. The team can then check whether a relevant report is available for that construction rather than treating a generic certificate as proof." },
+      { q: "Can you guarantee every carpet product meets the same fire standard?", a: "No. Fire performance and supporting reports differ by construction, backing and test method. Confirm the exact product and required standard before approving a specification or placing an order." }
     ]
   }
 ];

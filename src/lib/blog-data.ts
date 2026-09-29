@@ -27,6 +27,7 @@ import { hotelCarpetProcurementDocumentsChecklist } from "@/lib/blog-posts/hotel
 import { uaeHotelCarpetProcurementDocumentsChecklist } from "@/lib/blog-posts/uae-hotel-carpet-procurement-documents-checklist";
 import { ukSchoolUniversityCarpetTileProcurementGuide } from "@/lib/blog-posts/uk-school-university-carpet-tile-procurement-guide";
 import { commercialCarpetSampleApprovalChecklist } from "@/lib/blog-posts/commercial-carpet-sample-approval-checklist";
+import { commercialCarpetSourcingDirectory } from "@/lib/blog-posts/commercial-carpet-sourcing-directory";
 
 export interface BlogSection {
   title: string;
@@ -76,6 +77,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  commercialCarpetSourcingDirectory,
   commercialCarpetTileFireRatingVocDocumentsGuide,
   commercialCarpetTileAdhesiveSubfloorGuide,
   commercialCarpetTileCostGuide,

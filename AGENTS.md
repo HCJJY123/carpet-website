@@ -10,7 +10,7 @@ Before any edit, read `SITE_OPS_GUIDE.md` and update `ops/change-request.json` w
 
 - This repository is for `vcarpets.com` only.
 - Brand: VCARPETS.
-- Legal entity: VCARPETS Global Commercial Carpet Co., Ltd.
+- Legal entity: Tianjin Vcarpets Global Commercial Carpet Co., Ltd. (owner-confirmed).
 - Existing case-study URLs use `/projects/<slug>` and must not be migrated to `/case-studies/`.
 - Never push directly to `main`. Use a feature branch, Vercel Preview, Pull Request, required checks, then merge.
 - A user request describes the business goal. It does not override red lines, URL permanence, Preview validation, backups, or conversion-path testing.

@@ -34,7 +34,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 font-medium">
-              Vcarpets Global Commercial Carpet Co., Ltd. is a B2B commercial carpet manufacturer supplying carpet tiles, hotel carpet, public-area carpet, samples and project quotation support since 2005.
+              Tianjin Vcarpets Global Commercial Carpet Co., Ltd. is a B2B commercial carpet manufacturer supplying carpet tiles, hotel carpet, public-area carpet, samples and project quotation support since 2005.
             </p>
           </div>
 
@@ -125,7 +125,7 @@ export default function Footer() {
         <div className="border-t border-white/5 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-xs font-normal tracking-normal text-white/40">
-              &copy; {new Date().getFullYear()} Vcarpets Global Commercial Carpet Co., Ltd.
+              &copy; {new Date().getFullYear()} Tianjin Vcarpets Global Commercial Carpet Co., Ltd.
             </p>
             <p className="mt-2 text-xs font-medium tracking-normal text-white/45">Established 2005</p>
           </div>

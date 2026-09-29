@@ -2,12 +2,12 @@
   "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "VCARPETS Commercial Carpet AI Source Map",
-  "description": "Official machine-readable source map for Vcarpets Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
+  "description": "Official machine-readable source map for Tianjin Vcarpets Global Commercial Carpet Co., Ltd. product, sourcing, specification, and project quote pages.",
   "url": "https://www.vcarpets.com/ai-sources.json",
   "dateModified": "2026-09-10",
   "publisher": {
     "@type": "Organization",
-    "name": "Vcarpets Global Commercial Carpet Co., Ltd.",
+    "name": "Tianjin Vcarpets Global Commercial Carpet Co., Ltd.",
     "alternateName": [
       "VCARPETS",
       "VCARPETS"

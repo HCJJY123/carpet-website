@@ -4,7 +4,7 @@
 
 **Brand:** VCARPETS
 
-**Legal entity:** VCARPETS Global Commercial Carpet Co., Ltd.
+**Legal entity:** Tianjin Vcarpets Global Commercial Carpet Co., Ltd.
 
 **Stack:** Next.js, Vercel, Cloudflare DNS
 
@@ -20,7 +20,7 @@ This file is the repository-level execution contract. It overrides conversationa
 - Existing case and application-guide URLs remain under `/projects/<slug>`.
 - Existing article URLs remain under `/blog/<slug>`.
 - Published URLs are permanent unless an approved one-to-one redirect map exists.
-- The official company identity is VCARPETS / VCARPETS Global Commercial Carpet Co., Ltd.
+- The official company identity is VCARPETS / Tianjin Vcarpets Global Commercial Carpet Co., Ltd. (owner-confirmed 2026-09-30).
 - Product facts, MOQ, price, availability, certificates, delivery and project claims must come from verified business records.
 - AI-generated or third-party images must not be presented as product photos, factory evidence, client projects or engineering evidence.
 

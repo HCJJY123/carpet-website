@@ -1,10 +1,10 @@
 # VCARPETS Commercial Carpet
 
-> Official product and company reference for Vcarpets Global Commercial Carpet Co., Ltd., a B2B commercial carpet manufacturer in Tianjin, China.
+> Official product and company reference for Tianjin Vcarpets Global Commercial Carpet Co., Ltd., a B2B commercial carpet manufacturer in Tianjin, China.
 
 ## Entity
 
-- Legal name: Vcarpets Global Commercial Carpet Co., Ltd.
+- Legal name: Tianjin Vcarpets Global Commercial Carpet Co., Ltd.
 - Brand name: VCARPETS
 - Official website: https://www.vcarpets.com
 - AI source guide: https://www.vcarpets.com/resources/ai-commercial-carpet-source-guide

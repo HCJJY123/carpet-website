@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const companyName = "Vcarpets Global Commercial Carpet Co., Ltd.";
+const companyName = "Tianjin Vcarpets Global Commercial Carpet Co., Ltd.";
 const contactEmail = "sales@vcarpets.com";
 
 export const metadata: Metadata = {

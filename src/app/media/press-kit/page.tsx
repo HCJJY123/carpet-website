@@ -22,7 +22,7 @@ const descriptions = [
   },
   {
     label: "100-word profile",
-    text: "VCARPETS is the commercial carpet brand of Vcarpets Global Commercial Carpet Co., Ltd., serving project buyers that need carpet tiles, hospitality broadloom, public-area carpets and custom carpet specifications. The website provides product categories, project references, buyer guides, technical document request paths and quote forms for contractors, distributors, hotels, offices, designers and renovation teams. Product performance, testing, MOQ, lead time and pricing are confirmed by exact construction and written quotation rather than generic claims.",
+    text: "VCARPETS is the commercial carpet brand of Tianjin Vcarpets Global Commercial Carpet Co., Ltd., serving project buyers that need carpet tiles, hospitality broadloom, public-area carpets and custom carpet specifications. The website provides product categories, project references, buyer guides, technical document request paths and quote forms for contractors, distributors, hotels, offices, designers and renovation teams. Product performance, testing, MOQ, lead time and pricing are confirmed by exact construction and written quotation rather than generic claims.",
   },
 ];
 
