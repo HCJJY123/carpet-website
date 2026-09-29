@@ -51,8 +51,7 @@ function routeIsNoindex(pageFile) {
 }
 
 function shouldExclude(route) {
-  return route === "/privacy-policy"
-    || route === "/search"
+  return route === "/search"
     || route.startsWith("/search/")
     || route === "/thank-you"
     || route.startsWith("/thank-you/");
