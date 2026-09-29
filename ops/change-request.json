@@ -1,6 +1,6 @@
 {
   "task": "Ensure the root sitemap.xml contains every public indexable VCARPETS page as a complete https://www.vcarpets.com URL for Yandex crawling",
-  "approvedBy": "Owner request on 2026-09-22 to generate a root sitemap.xml with all page URLs and make it directly browser-accessible to Yandex",
+  "approvedBy": "Owner request on 2026-09-22 for the root sitemap, and 2026-09-29 request to address PR #53 merge conflicts",
   "approvedCategories": ["seo-global", "operations"],
   "allowedPaths": [
     "ops/change-request.json",
@@ -12,6 +12,6 @@
   ],
   "protectedUrlsChanged": true,
   "directMainSyncApproved": false,
-  "rollbackCommit": "9884235fed3fe029252f82e22f4478617d56e347",
-  "notes": "Keep the existing Next.js root metadata route at /sitemap.xml and its full https://www.vcarpets.com canonical URLs. Remove the incorrect privacy-policy exclusion, retain exclusions for noindex/utility routes such as /thank-you and /search, and strengthen the link audit so public legal and sample-request pages cannot silently disappear from Sitemap. The production sitemap.xml and robots.txt baselines are backed up under /tmp/vcarpets-root-sitemap-20260922/. Do not change canonical URLs, robots blocking, page content, forms or tracking. Use Preview and PR; do not push directly to main."
+  "rollbackCommit": "6c83f99f6c111caa089c5f278a7340b61f9d6bc3",
+  "notes": "Existing PR #53 reconciled by merging production main. Root Next.js /sitemap.xml remains browser-readable with full https://www.vcarpets.com canonical URLs. Include the currently indexable /privacy-policy page; retain noindex and utility exclusions, and audit legal and sample-request pages. Production sitemap.xml and robots.txt captured under /tmp/vcarpets-current-sitemap53.xml and /tmp/vcarpets-current-robots53.txt. Preserve the subsequently published product and resource pages. No canonical, robots, content, form or tracking change. Resolve PR conflicts and rerun checks and Preview; do not merge or deploy without separate release authorization."
 }
