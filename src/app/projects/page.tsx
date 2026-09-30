@@ -5,10 +5,11 @@ import PageHero from "@/components/PageHero";
 import { caseStudies } from "@/lib/data";
 import { getCaseSeoProfile, projectPath } from "@/lib/case-seo";
 import { absoluteUrl, safeJsonLd } from "@/lib/seo";
+import { projectPlanningReferences } from "@/lib/project-planning-references";
 
 export const metadata: Metadata = {
   title: "Commercial Carpet Case Studies & Specification Guides | VCARPETS",
-  description: "Explore 16 commercial carpet application guides for hotels, offices, retail, airports, healthcare, education, exhibitions and sourcing projects.",
+  description: "Explore commercial carpet application guides and clearly labeled planning references for hotel, office, retail and other project procurement.",
   alternates: { canonical: "/projects" },
 };
 export default function ProjectsPage() {
@@ -21,8 +22,8 @@ export default function ProjectsPage() {
     url: absoluteUrl("/projects"),
     mainEntity: {
       "@type": "ItemList",
-      numberOfItems: caseStudies.length,
-      itemListElement: caseStudies.map((project, index) => {
+      numberOfItems: caseStudies.length + projectPlanningReferences.length,
+      itemListElement: [...caseStudies.map((project, index) => {
         const profile = getCaseSeoProfile(project.id);
         return {
           "@type": "ListItem",
@@ -30,7 +31,12 @@ export default function ProjectsPage() {
           name: profile.cardTitle,
           url: absoluteUrl(projectPath(project.id)),
         };
-      }),
+      }), ...projectPlanningReferences.map((reference, index) => ({
+        "@type": "ListItem",
+        position: caseStudies.length + index + 1,
+        name: reference.title,
+        url: absoluteUrl(`/projects/${reference.slug}`),
+      }))],
     },
   };
 
@@ -40,7 +46,7 @@ export default function ProjectsPage() {
       <PageHero
         title="Commercial Carpet Case Studies & Buyer Guides"
         eyebrow="Application-Based Flooring Decisions"
-        description="Sixteen specification and procurement guides covering hospitality, office, retail, airport, healthcare, education, exhibition, residential, industrial, sourcing and gold-recovery carpet applications."
+        description="Specification and procurement guides for commercial flooring buyers, with clearly labeled planning references for hotel broadloom and phased office carpet tile renovation."
         image="/images/case-series/case-1/Case_1_Lobby_Grand_Reveal.webp"
         imageAlt="Luxury hotel lobby carpet project background"
         objectPosition="center 48%"
@@ -55,6 +61,21 @@ export default function ProjectsPage() {
           <p className="text-base leading-8 text-muted">
             Start with the guide closest to your building type, then compare application, traffic, construction, fire requirements, cleaning, installation constraints, MOQ and replacement strategy. Each page distinguishes suitable uses from limitations, links to relevant products and categories, and provides the information needed for a project-specific quotation.
           </p>
+        </div>
+      </section>
+
+      <section className="border-b border-border py-12 md:py-16">
+        <div className="container-fox">
+          <h2 className="mb-4 text-2xl font-bold text-primary md:text-3xl">Project Planning References</h2>
+          <p className="mb-8 max-w-3xl leading-7 text-muted">Hypothetical procurement scenarios, not completed client projects. AI-generated visuals illustrate application planning; they do not prove a delivered installation.</p>
+          <div className="grid gap-8 md:grid-cols-2">
+            {projectPlanningReferences.map((reference) => (
+              <Link key={reference.slug} href={`/projects/${reference.slug}`} className="block min-w-0 border border-border bg-white">
+                <div className="aspect-[1600/896] overflow-hidden"><ProductImage src={reference.image.src} alt={reference.image.alt} className="h-full w-full" fit="contain" unoptimized={false} sizes="(max-width: 768px) 100vw, 50vw" /></div>
+                <div className="p-6"><p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent">Project Planning Reference</p><h3 className="mb-4 text-xl font-bold leading-tight text-primary">{reference.title}</h3><p className="leading-7 text-muted">{reference.description}</p></div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

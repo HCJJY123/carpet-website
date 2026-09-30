@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ProjectProcurementLinks from "@/components/ProjectProcurementLinks";
+import { contentGrowthAssets, illustrationCaption } from "@/lib/content-growth-assets";
+
 import { products } from "@/lib/data";
 import { absoluteUrl, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
@@ -59,8 +62,8 @@ export const metadata: Metadata = {
     url: absoluteUrl(canonicalPath),
     images: [
       {
-        url: absoluteUrl("/images/3d-printed-hotel-carpet-corridor.webp"),
-        alt: "3D HD Printed Nylon Hotel Carpet by VCARPETS"
+        url: absoluteUrl(contentGrowthAssets.P08.src),
+        alt: contentGrowthAssets.P08.alt
       }
     ],
     type: "website"
@@ -69,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Custom Printed Nylon Hotel Carpet | VCARPETS",
     description: "Patterned wall-to-wall broadloom for hotel guestrooms, corridors, lobbies, casinos, and restaurants with custom artwork.",
-    images: [absoluteUrl("/images/3d-printed-hotel-carpet-corridor.webp")]
+    images: [absoluteUrl(contentGrowthAssets.P08.src)]
   }
 };
 
@@ -142,9 +145,10 @@ export default function ProductDetailPage() {
         <div className="container-fox">
           <div className="flex flex-col lg:flex-row gap-16 xl:gap-20">
             <div className="lg:w-3/5">
-              <div className="aspect-[3/2] rounded-sm overflow-hidden border border-border shadow-xl">
-                <ProductImage src={product.image} alt={product.imageAlt || product.name} className="w-full h-full object-cover" priority sizes="(max-width: 1024px) 100vw, 60vw" />
+              <div className="aspect-[1600/896] rounded-sm overflow-hidden border border-border shadow-xl">
+                <ProductImage src={contentGrowthAssets.P08.src} alt={contentGrowthAssets.P08.alt} className="h-full w-full" fit="contain" priority unoptimized={false} sizes="(max-width: 1024px) 100vw, 55vw" />
               </div>
+              <p className="mt-3 text-xs leading-5 text-muted">{illustrationCaption}</p>
               {heroGallery.length ? (
                 <div className="mt-5 grid grid-cols-3 gap-4">
                   {heroGallery.map((image) => (
@@ -183,6 +187,8 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
+
+      <ProjectProcurementLinks kind="printed" />
 
       <section className="section-padding bg-surface border-y border-border">
         <div className="container-fox">

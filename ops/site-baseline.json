@@ -22,6 +22,18 @@
     { "path": "/blog", "minimumH1": 1, "maximumH1": 1 },
     { "path": "/contact", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["mailto:", "<form"] },
     { "path": "/privacy-policy", "minimumH1": 1, "maximumH1": 1 },
-    { "path": "/markets", "minimumH1": 1, "maximumH1": 1 }
+    { "path": "/markets", "minimumH1": 1, "maximumH1": 1 },
+    { "path": "/hotel-carpet", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
+    { "path": "/products/carpet-tiles/nylon-office-carpet-tile", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
+    { "path": "/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
+    { "path": "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
+    { "path": "/products/wall-to-wall/3d-printed-hotel-carpet", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
+    { "path": "/projects/hotel-wall-to-wall-carpet-project-oceania", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["Project Planning Reference", "Hypothetical", "AI-generated"] },
+    { "path": "/projects/office-carpet-tile-renovation", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["Project Planning Reference", "hypothetical", "AI-generated"] },
+    { "path": "/blog/nylon-vs-polyester-vs-polypropylene-carpet-tiles", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
+    { "path": "/blog/commercial-carpet-tile-backing-comparison-guide", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
+    { "path": "/blog/commercial-carpet-tile-specification-checklist-b2b-buyers", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
+    { "path": "/blog/commercial-carpet-tile-moq-sample-trial-project-guide", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
+    { "path": "/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] }
   ]
 }

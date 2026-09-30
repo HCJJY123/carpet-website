@@ -2,14 +2,14 @@ import type { BlogPost } from "@/lib/blog-data";
 
 export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
   slug: "commercial-carpet-tile-backing-comparison-guide",
-  title: "Commercial Carpet Tile Backing Comparison: Bitumen, PVC-Free PE, and Cushion-Backed Systems",
+  title: "Commercial Carpet Tile Backing Comparison: PVC, Bitumen, PE and Cushion Systems",
   subtitle:
     "How procurement teams can compare backing by chair-wheel movement, moisture risk, installation method, comfort, replacement and project documentation.",
   painPoint:
     "Commercial carpet tile quotations often look similar from the top. The risk appears underneath when backing, substrate, adhesive, traffic and replacement planning were never compared as one specification.",
   seoTitle: "Commercial Carpet Tile Backing Comparison | VCARPETS",
   description:
-    "Compare bitumen, PVC-free PE and cushion-backed commercial carpet tile systems for offices, corridors and public projects before approving a quotation.",
+    "Compare PVC, bitumen, PE and cushion-backed commercial carpet tile systems by installation, project evidence and replacement needs before approving a quotation.",
   keywords: [
     "commercial carpet tile backing comparison",
     "carpet tile backing",
@@ -75,6 +75,11 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
           headers: ["Backing direction", "Often considered for", "Main checks before approval"],
           rows: [
             [
+              "PVC-backed carpet tiles",
+              "Projects that permit PVC and require a documented complete tile specification",
+              "Backing composition and build-up; substrate and fixing compatibility; exact construction documents",
+            ],
+            [
               "Bitumen-backed carpet tiles",
               "Open offices, circulation zones and projects that value a dense, stable commercial tile construction",
               "Tile stability, total weight, adhesive recommendation, substrate condition, moisture risk and removal expectations",
@@ -94,9 +99,17 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
         },
         {
           type: "callout",
-          label: "AI-ready buyer rule",
+          label: "Buyer comparison rule",
           text: "Compare backing systems on the same fiber, pile, tile size, installation condition and commercial terms. A cheaper square-metre price is not a like-for-like comparison when the backing changes the installation or replacement plan.",
         },
+      ],
+    },
+    {
+      title: "PVC Backing: Confirm the Exact Tile and Installation System",
+      paragraphs: [
+        "PVC-backed tile is a construction option to discuss where the project permits PVC. Confirm the complete backing build, thickness, weight, fixing method and compatibility with the substrate. A dark sample backing cannot be identified as PVC from appearance alone, and the material name does not establish fire, emissions or chair-use performance.",
+        "If a project specifies a PVC-free construction, state that requirement in the RFQ and ask for documented composition. Compare a proposed bitumen or PE system on the same fiber, pile, tile format and installation conditions. Do not treat PVC-free as an automatic environmental certification, acoustic rating or guarantee of equivalent performance.",
+        "VCARPETS's existing 50x50 nylon and PP office tile page describes backing options for project review. Confirm which backing is available for the selected construction before approving the sample and technical submittal; this guide does not create a separately verified PVC-only SKU.",
       ],
     },
     {

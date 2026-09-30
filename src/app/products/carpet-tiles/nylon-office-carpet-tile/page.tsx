@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ProjectProcurementLinks from "@/components/ProjectProcurementLinks";
+import { contentGrowthAssets, illustrationCaption } from "@/lib/content-growth-assets";
+
 import AnswerFirst from "@/components/AnswerFirst";
 import ProductImage from "@/components/ProductImage";
 import ProductTrustLinks from "@/components/ProductTrustLinks";
@@ -51,8 +54,8 @@ export const metadata: Metadata = product
         type: "website",
         images: [
           {
-            url: absoluteUrl("/images/nylon-office-carpet-tile.webp"),
-            alt: "Nylon 50x50 commercial office carpet tile by VCARPETS",
+            url: absoluteUrl(contentGrowthAssets.P01.src),
+            alt: contentGrowthAssets.P01.alt,
           },
         ],
       },
@@ -60,7 +63,7 @@ export const metadata: Metadata = product
         card: "summary_large_image",
         title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VCARPETS",
         description: seoDescription,
-        images: [absoluteUrl("/images/nylon-office-carpet-tile.webp")],
+        images: [absoluteUrl(contentGrowthAssets.P01.src)],
       },
     }
   : { title: "Nylon 50x50 Commercial Office Carpet Tile | VCARPETS" };
@@ -244,11 +247,12 @@ export default function NylonOfficeCarpetTilePage() {
         <div className="container-fox">
           <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
             <div>
-              <div className="aspect-[4/3] overflow-hidden rounded-sm border border-border bg-white shadow-xl">
-                <ProductImage src={galleryImages[0].src} alt={galleryImages[0].alt} className="h-full w-full" fit="cover" priority sizes="(max-width: 1024px) 100vw, 55vw" />
+              <div className="aspect-[1600/896] overflow-hidden rounded-sm border border-border bg-white shadow-xl">
+                <ProductImage src={contentGrowthAssets.P01.src} alt={contentGrowthAssets.P01.alt} className="h-full w-full" fit="contain" priority unoptimized={false} sizes="(max-width: 1024px) 100vw, 55vw" />
               </div>
+              <p className="mt-3 text-xs leading-5 text-muted">{illustrationCaption}</p>
               <div className="mt-5 grid grid-cols-3 gap-4">
-                {galleryImages.slice(1).map((item) => (
+                {galleryImages.map((item) => (
                   <div key={item.src} className="aspect-square overflow-hidden rounded-sm border border-border bg-white">
                     <ProductImage src={item.src} alt={item.alt} className="h-full w-full" fit="cover" />
                   </div>
@@ -307,6 +311,8 @@ export default function NylonOfficeCarpetTilePage() {
           </div>
         </div>
       </section>
+
+      <ProjectProcurementLinks kind="nylon" />
 
       <AnswerFirst
         eyebrow="Office Carpet Tile Buying Answer"

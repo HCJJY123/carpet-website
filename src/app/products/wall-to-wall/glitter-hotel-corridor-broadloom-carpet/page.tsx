@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ProjectProcurementLinks from "@/components/ProjectProcurementLinks";
+import { contentGrowthAssets, illustrationCaption } from "@/lib/content-growth-assets";
+
 import AnswerFirst from "@/components/AnswerFirst";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
@@ -114,8 +117,8 @@ export const metadata: Metadata = {
     url: `${siteUrl}${canonicalPath}`,
     images: [
       {
-        url: `${siteUrl}/images/products/hotel-glitter-broadloom/1.webp`,
-        alt: "Glitter Hotel Corridor Broadloom Carpet by VCARPETS"
+        url: `${siteUrl}${contentGrowthAssets.P06.src}`,
+        alt: contentGrowthAssets.P06.alt
       }
     ],
     type: "website"
@@ -124,7 +127,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hotel Corridor Carpet | Patterned Broadloom | VCARPETS",
     description: "Patterned blue and gold wall-to-wall broadloom for hotel corridors, lobbies, and hospitality projects.",
-    images: [`${siteUrl}/images/products/hotel-glitter-broadloom/1.webp`]
+    images: [`${siteUrl}${contentGrowthAssets.P06.src}`]
   }
 };
 
@@ -238,11 +241,12 @@ export default function ProductDetailPage() {
         <div className="container-fox">
           <div className="flex flex-col lg:flex-row gap-16 xl:gap-20">
             <div className="lg:w-3/5">
-              <div className="aspect-[3/2] rounded-sm overflow-hidden border border-border shadow-xl">
-                <ProductImage src={product.image} alt={product.imageAlt} className="w-full h-full object-cover" priority sizes="(max-width: 1024px) 100vw, 60vw" />
+              <div className="aspect-[1600/896] rounded-sm overflow-hidden border border-border shadow-xl">
+                <ProductImage src={contentGrowthAssets.P06.src} alt={contentGrowthAssets.P06.alt} className="h-full w-full" fit="contain" priority unoptimized={false} sizes="(max-width: 1024px) 100vw, 55vw" />
               </div>
+              <p className="mt-3 text-xs leading-5 text-muted">{illustrationCaption}</p>
               <div className="mt-5 grid grid-cols-3 gap-4">
-                {product.mainImages.slice(1).map((image) => (
+                {product.mainImages.map((image) => (
                   <figure key={image.src} className="aspect-[4/3] overflow-hidden border border-border bg-white">
                     <ProductImage src={image.src} alt={image.alt} className="w-full h-full" fit="contain" />
                   </figure>
@@ -280,6 +284,8 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </section>
+
+      <ProjectProcurementLinks kind="corridor" />
 
       <AnswerFirst
         eyebrow="Hotel Corridor Carpet Buying Answer"

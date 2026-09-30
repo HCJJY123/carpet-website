@@ -28,6 +28,8 @@ import { uaeHotelCarpetProcurementDocumentsChecklist } from "@/lib/blog-posts/ua
 import { ukSchoolUniversityCarpetTileProcurementGuide } from "@/lib/blog-posts/uk-school-university-carpet-tile-procurement-guide";
 import { commercialCarpetSampleApprovalChecklist } from "@/lib/blog-posts/commercial-carpet-sample-approval-checklist";
 import { commercialCarpetSourcingDirectory } from "@/lib/blog-posts/commercial-carpet-sourcing-directory";
+import { nylonPolyesterPolypropyleneComparison } from "@/lib/blog-posts/nylon-polyester-polypropylene-comparison";
+import { contentGrowthAssets, illustrationCaption } from "@/lib/content-growth-assets";
 
 export interface BlogSection {
   title: string;
@@ -71,12 +73,14 @@ export interface BlogPost {
   h1ImageCaption?: string;
   h1ImageFit?: "cover" | "contain";
   h1ImageUnoptimized?: boolean;
+  h1ImageAspectRatio?: string;
   sections?: BlogSection[];
   relatedProductIds?: string[];
   suggestedLinks?: { label: string; href: string }[];
 }
 
-export const blogPosts: BlogPost[] = [
+const baseBlogPosts: BlogPost[] = [
+  nylonPolyesterPolypropyleneComparison,
   commercialCarpetSourcingDirectory,
   commercialCarpetTileFireRatingVocDocumentsGuide,
   commercialCarpetTileAdhesiveSubfloorGuide,
@@ -1204,3 +1208,82 @@ export const blogPosts: BlogPost[] = [
     ]
   }
 ];
+
+const procurementGuideEnhancements: Record<string, { image: keyof typeof contentGrowthAssets; section: BlogSection }> = {
+  "commercial-carpet-tile-backing-comparison-guide": {
+    image: "B03",
+    section: {
+      title: "Move from Backing Comparison to an Office Specification",
+      paragraphs: ["Record the chosen fiber, backing and installation method together before requesting samples. Then use a phased office renovation plan to check receiving, batch allocation and retained spares. A backing label or sample photograph cannot establish fire, emissions or rolling-chair performance; request evidence for the exact construction being quoted."],
+    },
+  },
+  "commercial-carpet-tile-specification-checklist-b2b-buyers": {
+    image: "B04",
+    section: {
+      title: "Specifying 50x50 Office Carpet Tiles without Losing the Project Context",
+      paragraphs: [
+        "A nominal 50x50 cm module describes the tile format, not its traffic rating, fiber, backing or total thickness. Specify the module alongside the selected construction and proposed layout. Ask the installer to review transitions, access panels, floor build-up and fixing compatibility before approving an alternative backing.",
+        "Separate net installed area from ordered area. Review the floor plan and cutting layout, then agree the allowance for cuts and retained spare tiles. Identify office circulation, desk and meeting-room zones in the same RFQ so suppliers do not quote one generic construction against several different use conditions.",
+        "Approve an identified physical sample, installation direction, color reference and construction-specific documents together. Use the office renovation planning reference and material comparison below to turn the checklist into a project brief, rather than relying on a product photograph as the specification.",
+      ],
+    },
+  },
+  "commercial-carpet-tile-moq-sample-trial-project-guide": {
+    image: "B09",
+    section: {
+      title: "Allocate MOQ by Construction and Approval Stage",
+      paragraphs: [
+        "Ask whether the quoted minimum applies per order, construction, backing, color or custom design. Keep a physical sample request, a trial quantity and an approved bulk order separate. Do not assume that several colors can be combined to meet one production minimum or that a trial approval reserves material for a later phase.",
+        "For a phased office refurbishment, discuss batch allocation and retained spare material with the contractor before placing the order. Clarify whether each phase must be confirmed together, which packing quantities affect the order and how proposed receiving dates relate to production planning. Confirm all quantities and timing for the actual project rather than treating a warehouse illustration as stock evidence.",
+      ],
+    },
+  },
+  "commercial-carpet-tile-rfq-checklist-b2b-buyers": {
+    image: "B16",
+    section: {
+      title: "Use One RFQ Brief across Fiber and Backing Alternatives",
+      paragraphs: [],
+      blocks: [
+        { type: "paragraph", text: "For an office renovation, send the same project conditions with each nylon or PP request. Ask the supplier to list construction differences instead of presenting an alternative as automatically equivalent. Keep sample approval, technical review and bulk confirmation as separate decisions." },
+        { type: "table", headers: ["RFQ field", "What to provide"], rows: [
+          ["Destination and use", "Country, office zones, circulation routes and chair-use conditions"],
+          ["Quantity and format", "Area by phase, required module size and planned layout"],
+          ["Construction", "Fiber preference, allowed alternatives, backing and floor build-up"],
+          ["Appearance", "Color reference, pattern direction and sample review needs"],
+          ["Installation", "Substrate condition, fixing method and access restrictions"],
+          ["Evidence and schedule", "Required standards, requested documents and site-delivery milestone"],
+        ] },
+        { type: "paragraph", text: "Attach or describe the floor plan through the existing inquiry process where supported. Do not send private customer correspondence merely to explain the project. Use anonymized requirements and request a construction-specific quotation, sample plan and document review." },
+      ],
+    },
+  },
+};
+
+export const blogPosts: BlogPost[] = baseBlogPosts.map((post) => {
+  const enhancement = procurementGuideEnhancements[post.slug];
+  if (!enhancement) return post;
+  const image = contentGrowthAssets[enhancement.image];
+  const newLinks = [
+    { label: "Nylon, polyester and PP carpet tile comparison", href: "/blog/nylon-vs-polyester-vs-polypropylene-carpet-tiles" },
+    { label: "50x50 nylon and PP office carpet tiles", href: "/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles" },
+    { label: "Office renovation planning reference", href: "/projects/office-carpet-tile-renovation" },
+    { label: "Request Carpet Samples", href: "/request-sample-box" },
+    { label: "Send Your Project Specifications", href: "/contact?product=Commercial%20Carpet%20Tile%20Project#quote-form" },
+  ];
+  return {
+    ...post,
+    dateModified: "2026-09-30",
+    image: image.src,
+    imageAlt: image.alt,
+    imageUnoptimized: false,
+    h1Image: image.src,
+    h1ImageMobile: undefined,
+    h1ImageAlt: image.alt,
+    h1ImageCaption: illustrationCaption,
+    h1ImageAspectRatio: `${image.width} / ${image.height}`,
+    h1ImageFit: "contain",
+    h1ImageUnoptimized: false,
+    sections: [...(post.sections ?? post.content ?? []), enhancement.section],
+    suggestedLinks: [...(post.suggestedLinks ?? []), ...newLinks.filter((link) => !post.suggestedLinks?.some((existing) => existing.href === link.href))],
+  };
+});

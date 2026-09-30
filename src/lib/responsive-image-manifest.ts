@@ -11,6 +11,566 @@ export type ResponsiveImageEntry = {
 };
 
 export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
+  "/images/optimized/content-growth-20260929/commercial-nylon-carpet-tiles-office-c755c903a2.webp": {
+    "width": 1600,
+    "height": 896,
+    "originalBytes": 342806,
+    "avif": [
+    {
+      "src": "/images/optimized/content-growth-20260929/commercial-nylon-carpet-tiles-office-cca66d200e-480w.avif",
+      "width": 480,
+      "bytes": 23051
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/commercial-nylon-carpet-tiles-office-165f64d40e-768w.avif",
+      "width": 768,
+      "bytes": 62329
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/commercial-nylon-carpet-tiles-office-329ca393bd-1200w.avif",
+      "width": 1200,
+      "bytes": 148946
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/commercial-nylon-carpet-tiles-office-8f8dc9dd7b-1600w.avif",
+      "width": 1600,
+      "bytes": 292350
+    }
+  ],
+    "webp": [
+      {
+        "src": "/images/optimized/content-growth-20260929/commercial-nylon-carpet-tiles-office-c2d24c5302-480w.webp",
+        "width": 480,
+        "bytes": 23052
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/commercial-nylon-carpet-tiles-office-48d-16d0627-768w.webp",
+        "width": 768,
+        "bytes": 64250
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/commercial-nylon-carpet-tiles-office-675a53e7ee-1200w.webp",
+        "width": 1200,
+        "bytes": 156958
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/commercial-nylon-carpet-tiles-office-08867b579a-1600w.webp",
+        "width": 1600,
+        "bytes": 322880
+      }
+    ],
+    "fallback": "/images/optimized/content-growth-20260929/commercial-nylon-carpet-tiles-office-08867b579a-1600w.webp"
+  },
+  "/images/optimized/content-growth-20260929/50x50-pvc-backing-carpet-tiles-office-5e784c69bf.webp": {
+    "width": 1600,
+    "height": 896,
+    "originalBytes": 406014,
+    "avif": [
+    {
+      "src": "/images/optimized/content-growth-20260929/50x50-pvc-backing-carpet-tiles-office-9b38f11f7d-480w.avif",
+      "width": 480,
+      "bytes": 26562
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/50x50-pvc-backing-carpet-tiles-office-e848477c38-768w.avif",
+      "width": 768,
+      "bytes": 75999
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/50x50-pvc-backing-carpet-tiles-office-4bc5580897-1200w.avif",
+      "width": 1200,
+      "bytes": 173017
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/50x50-pvc-backing-carpet-tiles-office-09435e7d56-1600w.avif",
+      "width": 1600,
+      "bytes": 332007
+    }
+  ],
+    "webp": [
+      {
+        "src": "/images/optimized/content-growth-20260929/50x50-pvc-backing-carpet-tiles-office-3c546cc5c4-480w.webp",
+        "width": 480,
+        "bytes": 27306
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/50x50-pvc-backing-carpet-tiles-office-39aa50229b-768w.webp",
+        "width": 768,
+        "bytes": 81638
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/50x50-pvc-backing-carpet-tiles-office-578e965969-1200w.webp",
+        "width": 1200,
+        "bytes": 195170
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/50x50-pvc-backing-carpet-tiles-office-0cedbe7fef-1600w.webp",
+        "width": 1600,
+        "bytes": 379170
+      }
+    ],
+    "fallback": "/images/optimized/content-growth-20260929/50x50-pvc-backing-carpet-tiles-office-0cedbe7fef-1600w.webp"
+  },
+  "/images/optimized/content-growth-20260929/hotel-wall-to-wall-carpet-corridor-5e3d44afd0.webp": {
+    "width": 1600,
+    "height": 896,
+    "originalBytes": 230264,
+    "avif": [
+    {
+      "src": "/images/optimized/content-growth-20260929/hotel-wall-to-wall-carpet-corridor-53ef0827db-480w.avif",
+      "width": 480,
+      "bytes": 14465
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/hotel-wall-to-wall-carpet-corridor-794ed9e2d3-768w.avif",
+      "width": 768,
+      "bytes": 36466
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/hotel-wall-to-wall-carpet-corridor-0ddee0ae6c-1200w.avif",
+      "width": 1200,
+      "bytes": 83851
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/hotel-wall-to-wall-carpet-corridor-f0d2e24013-1600w.avif",
+      "width": 1600,
+      "bytes": 183718
+    }
+  ],
+    "webp": [
+      {
+        "src": "/images/optimized/content-growth-20260929/hotel-wall-to-wall-carpet-corridor-ef7b9a65b1-480w.webp",
+        "width": 480,
+        "bytes": 14802
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/hotel-wall-to-wall-carpet-corridor-9f3d022732-768w.webp",
+        "width": 768,
+        "bytes": 37352
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/hotel-wall-to-wall-carpet-corridor-5de65a8b57-1200w.webp",
+        "width": 1200,
+        "bytes": 90660
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/hotel-wall-to-wall-carpet-corridor-7f2da18e8f-1600w.webp",
+        "width": 1600,
+        "bytes": 203376
+      }
+    ],
+    "fallback": "/images/optimized/content-growth-20260929/hotel-wall-to-wall-carpet-corridor-7f2da18e8f-1600w.webp"
+  },
+  "/images/optimized/content-growth-20260929/hotel-corridor-carpet-blue-gray-7e21b92181.webp": {
+    "width": 1600,
+    "height": 896,
+    "originalBytes": 226958,
+    "avif": [
+    {
+      "src": "/images/optimized/content-growth-20260929/hotel-corridor-carpet-blue-gray-936f8b2519-480w.avif",
+      "width": 480,
+      "bytes": 18709
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/hotel-corridor-carpet-blue-gray-bb0b3e672f-768w.avif",
+      "width": 768,
+      "bytes": 45109
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/hotel-corridor-carpet-blue-gray-423746b5ca-1200w.avif",
+      "width": 1200,
+      "bytes": 95708
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/hotel-corridor-carpet-blue-gray-e3941e2f88-1600w.avif",
+      "width": 1600,
+      "bytes": 179672
+    }
+  ],
+    "webp": [
+      {
+        "src": "/images/optimized/content-growth-20260929/hotel-corridor-carpet-blue-gray-6479309a2b-480w.webp",
+        "width": 480,
+        "bytes": 17854
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/hotel-corridor-carpet-blue-gray-4aa74c8bcb-768w.webp",
+        "width": 768,
+        "bytes": 45356
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/hotel-corridor-carpet-blue-gray-fdc0f105f1-1200w.webp",
+        "width": 1200,
+        "bytes": 103530
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/hotel-corridor-carpet-blue-gray-5a3a7e8d65-1600w.webp",
+        "width": 1600,
+        "bytes": 204952
+      }
+    ],
+    "fallback": "/images/optimized/content-growth-20260929/hotel-corridor-carpet-blue-gray-5a3a7e8d65-1600w.webp"
+  },
+  "/images/optimized/content-growth-20260929/custom-printed-commercial-carpet-hospitality-552b7ce043.webp": {
+    "width": 1600,
+    "height": 896,
+    "originalBytes": 316528,
+    "avif": [
+    {
+      "src": "/images/optimized/content-growth-20260929/custom-printed-commercial-carpet-hospitality-8af56bccd6-480w.avif",
+      "width": 480,
+      "bytes": 28526
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/custom-printed-commercial-carpet-hospitality-f1b1bd7805-768w.avif",
+      "width": 768,
+      "bytes": 69595
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/custom-printed-commercial-carpet-hospitality-ddd02869f3-1200w.avif",
+      "width": 1200,
+      "bytes": 146830
+    },
+    {
+        "src": "/images/optimized/content-growth-20260929/custom-printed-commercial-carpet-hospitality-690d346d-18-1600w.avif",
+      "width": 1600,
+      "bytes": 272600
+    }
+  ],
+    "webp": [
+      {
+        "src": "/images/optimized/content-growth-20260929/custom-printed-commercial-carpet-hospitality-2e58ddcb86-480w.webp",
+        "width": 480,
+        "bytes": 27194
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/custom-printed-commercial-carpet-hospitality-e1187cb383-768w.webp",
+        "width": 768,
+        "bytes": 67878
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/custom-printed-commercial-carpet-hospitality-eeafd3ac02-1200w.webp",
+        "width": 1200,
+        "bytes": 151286
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/custom-printed-commercial-carpet-hospitality-90f15125c1-1600w.webp",
+        "width": 1600,
+        "bytes": 292760
+      }
+    ],
+    "fallback": "/images/optimized/content-growth-20260929/custom-printed-commercial-carpet-hospitality-90f15125c1-1600w.webp"
+  },
+  "/images/optimized/content-growth-20260929/hotel-corridor-oceania-project-reference-e4f26f0188.webp": {
+    "width": 1600,
+    "height": 896,
+    "originalBytes": 256006,
+    "avif": [
+    {
+        "src": "/images/optimized/content-growth-20260929/hotel-corridor-oceania-project-reference-0b6ed-18cc3-480w.avif",
+      "width": 480,
+      "bytes": 19889
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/hotel-corridor-oceania-project-reference-c76ddd7c07-768w.avif",
+      "width": 768,
+      "bytes": 50094
+    },
+    {
+        "src": "/images/optimized/content-growth-20260929/hotel-corridor-oceania-project-reference-7bbbd-1bc4b-1200w.avif",
+      "width": 1200,
+      "bytes": 108673
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/hotel-corridor-oceania-project-reference-6768c283b5-1600w.avif",
+      "width": 1600,
+      "bytes": 206975
+    }
+  ],
+    "webp": [
+      {
+        "src": "/images/optimized/content-growth-20260929/hotel-corridor-oceania-project-reference-d7fd09d45b-480w.webp",
+        "width": 480,
+        "bytes": 19028
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/hotel-corridor-oceania-project-reference-4c832d5a49-768w.webp",
+        "width": 768,
+        "bytes": 49154
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/hotel-corridor-oceania-project-reference-485f8d3470-1200w.webp",
+        "width": 1200,
+        "bytes": 109678
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/hotel-corridor-oceania-project-reference-139d602f0d-1600w.webp",
+        "width": 1600,
+        "bytes": 223230
+      }
+    ],
+    "fallback": "/images/optimized/content-growth-20260929/hotel-corridor-oceania-project-reference-139d602f0d-1600w.webp"
+  },
+  "/images/optimized/content-growth-20260929/office-carpet-tile-renovation-reference-6f33f3095c.webp": {
+    "width": 1600,
+    "height": 896,
+    "originalBytes": 324964,
+    "avif": [
+    {
+      "src": "/images/optimized/content-growth-20260929/office-carpet-tile-renovation-reference-7040e1f082-480w.avif",
+      "width": 480,
+      "bytes": 25870
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/office-carpet-tile-renovation-reference-4932d0ae04-768w.avif",
+      "width": 768,
+      "bytes": 64226
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/office-carpet-tile-renovation-reference-793ea9623e-1200w.avif",
+      "width": 1200,
+      "bytes": 146079
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/office-carpet-tile-renovation-reference-5e2916a274-1600w.avif",
+      "width": 1600,
+      "bytes": 279680
+    }
+  ],
+    "webp": [
+      {
+        "src": "/images/optimized/content-growth-20260929/office-carpet-tile-renovation-reference-a48060c275-480w.webp",
+        "width": 480,
+        "bytes": 25896
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/office-carpet-tile-renovation-reference-6af35998a4-768w.webp",
+        "width": 768,
+        "bytes": 65310
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/office-carpet-tile-renovation-reference-245b3f49e2-1200w.webp",
+        "width": 1200,
+        "bytes": 153088
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/office-carpet-tile-renovation-reference-d88e6c5d39-1600w.webp",
+        "width": 1600,
+        "bytes": 303256
+      }
+    ],
+    "fallback": "/images/optimized/content-growth-20260929/office-carpet-tile-renovation-reference-d88e6c5d39-1600w.webp"
+  },
+  "/images/optimized/content-growth-20260929/nylon-vs-polyester-vs-polypropylene-carpet-tiles-417c0f5f08.webp": {
+    "width": 1200,
+    "height": 896,
+    "originalBytes": 188146,
+    "avif": [
+    {
+      "src": "/images/optimized/content-growth-20260929/nylon-vs-polyester-vs-polypropylene-carpet-tiles-3bb00f895f-480w.avif",
+      "width": 480,
+      "bytes": 28170
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/nylon-vs-polyester-vs-polypropylene-carpet-tiles-be95b8aabf-768w.avif",
+      "width": 768,
+      "bytes": 64512
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/nylon-vs-polyester-vs-polypropylene-carpet-tiles-9c0f022c74-1200w.avif",
+      "width": 1200,
+      "bytes": 152080
+    }
+  ],
+    "webp": [
+      {
+        "src": "/images/optimized/content-growth-20260929/nylon-vs-polyester-vs-polypropylene-carpet-tiles-1530ca36f5-480w.webp",
+        "width": 480,
+        "bytes": 28528
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/nylon-vs-polyester-vs-polypropylene-carpet-tiles-c63a01ffef-768w.webp",
+        "width": 768,
+        "bytes": 68044
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/nylon-vs-polyester-vs-polypropylene-carpet-tiles-bb35a12a44-1200w.webp",
+        "width": 1200,
+        "bytes": 167794
+      }
+    ],
+    "fallback": "/images/optimized/content-growth-20260929/nylon-vs-polyester-vs-polypropylene-carpet-tiles-bb35a12a44-1200w.webp"
+  },
+  "/images/optimized/content-growth-20260929/pvc-vs-bitumen-vs-pe-carpet-tile-backing-2bf866336a.webp": {
+    "width": 1200,
+    "height": 896,
+    "originalBytes": 192036,
+    "avif": [
+    {
+      "src": "/images/optimized/content-growth-20260929/pvc-vs-bitumen-vs-pe-carpet-tile-backing-10ac151386-480w.avif",
+      "width": 480,
+      "bytes": 30888
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/pvc-vs-bitumen-vs-pe-carpet-tile-backing-6155d659b0-768w.avif",
+      "width": 768,
+      "bytes": 69031
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/pvc-vs-bitumen-vs-pe-carpet-tile-backing-e830d04eaa-1200w.avif",
+      "width": 1200,
+      "bytes": 156260
+    }
+  ],
+    "webp": [
+      {
+        "src": "/images/optimized/content-growth-20260929/pvc-vs-bitumen-vs-pe-carpet-tile-backing-be6bdf5e15-480w.webp",
+        "width": 480,
+        "bytes": 37290
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/pvc-vs-bitumen-vs-pe-carpet-tile-backing-ea7a251dba-768w.webp",
+        "width": 768,
+        "bytes": 80848
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/pvc-vs-bitumen-vs-pe-carpet-tile-backing-c2bd44a5ae-1200w.webp",
+        "width": 1200,
+        "bytes": 176776
+      }
+    ],
+    "fallback": "/images/optimized/content-growth-20260929/pvc-vs-bitumen-vs-pe-carpet-tile-backing-c2bd44a5ae-1200w.webp"
+  },
+  "/images/optimized/content-growth-20260929/how-to-specify-50x50-carpet-tiles-7880def19a.webp": {
+    "width": 1600,
+    "height": 896,
+    "originalBytes": 272770,
+    "avif": [
+    {
+      "src": "/images/optimized/content-growth-20260929/how-to-specify-50x50-carpet-tiles-2bbff5c887-480w.avif",
+      "width": 480,
+      "bytes": 23349
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/how-to-specify-50x50-carpet-tiles-c2061a2ef6-768w.avif",
+      "width": 768,
+      "bytes": 56966
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/how-to-specify-50x50-carpet-tiles-18db4d5d7d-1200w.avif",
+      "width": 1200,
+      "bytes": 119135
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/how-to-specify-50x50-carpet-tiles-9bc3a4da28-1600w.avif",
+      "width": 1600,
+      "bytes": 219688
+    }
+  ],
+    "webp": [
+      {
+        "src": "/images/optimized/content-growth-20260929/how-to-specify-50x50-carpet-tiles-b5cecba9ce-480w.webp",
+        "width": 480,
+        "bytes": 24108
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/how-to-specify-50x50-carpet-tiles-f5c7f3417b-768w.webp",
+        "width": 768,
+        "bytes": 61056
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/how-to-specify-50x50-carpet-tiles-bc1d2f5870-1200w.webp",
+        "width": 1200,
+        "bytes": 134712
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/how-to-specify-50x50-carpet-tiles-e165b7406c-1600w.webp",
+        "width": 1600,
+        "bytes": 256002
+      }
+    ],
+    "fallback": "/images/optimized/content-growth-20260929/how-to-specify-50x50-carpet-tiles-e165b7406c-1600w.webp"
+  },
+  "/images/optimized/content-growth-20260929/commercial-carpet-moq-explained-7fd822c304.webp": {
+    "width": 1200,
+    "height": 896,
+    "originalBytes": 126688,
+    "avif": [
+    {
+      "src": "/images/optimized/content-growth-20260929/commercial-carpet-moq-explained-5941a56dfe-480w.avif",
+      "width": 480,
+      "bytes": 22309
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/commercial-carpet-moq-explained-40361fe1b0-768w.avif",
+      "width": 768,
+      "bytes": 46125
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/commercial-carpet-moq-explained-7c0cf7402b-1200w.avif",
+      "width": 1200,
+      "bytes": 98489
+    }
+  ],
+    "webp": [
+      {
+        "src": "/images/optimized/content-growth-20260929/commercial-carpet-moq-explained-14b267e6e9-480w.webp",
+        "width": 480,
+        "bytes": 23022
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/commercial-carpet-moq-explained-bdfa65d05f-768w.webp",
+        "width": 768,
+        "bytes": 48802
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/commercial-carpet-moq-explained-4843612c86-1200w.webp",
+        "width": 1200,
+        "bytes": 112308
+      }
+    ],
+    "fallback": "/images/optimized/content-growth-20260929/commercial-carpet-moq-explained-4843612c86-1200w.webp"
+  },
+  "/images/optimized/content-growth-20260929/how-to-prepare-commercial-carpet-rfq-c8f4542cec.webp": {
+    "width": 1200,
+    "height": 896,
+    "originalBytes": 114538,
+    "avif": [
+    {
+      "src": "/images/optimized/content-growth-20260929/how-to-prepare-commercial-carpet-rfq-d83896d430-480w.avif",
+      "width": 480,
+      "bytes": 21390
+    },
+    {
+        "src": "/images/optimized/content-growth-20260929/how-to-prepare-commercial-carpet-rfq-cdcd-10dd61-768w.avif",
+      "width": 768,
+      "bytes": 42231
+    },
+    {
+      "src": "/images/optimized/content-growth-20260929/how-to-prepare-commercial-carpet-rfq-7d8e0a6ca8-1200w.avif",
+      "width": 1200,
+      "bytes": 83277
+    }
+  ],
+    "webp": [
+      {
+        "src": "/images/optimized/content-growth-20260929/how-to-prepare-commercial-carpet-rfq-93a149421d-480w.webp",
+        "width": 480,
+        "bytes": 22392
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/how-to-prepare-commercial-carpet-rfq-b31f317025-768w.webp",
+        "width": 768,
+        "bytes": 46786
+      },
+      {
+        "src": "/images/optimized/content-growth-20260929/how-to-prepare-commercial-carpet-rfq-493f665906-1200w.webp",
+        "width": 1200,
+        "bytes": 102344
+      }
+    ],
+    "fallback": "/images/optimized/content-growth-20260929/how-to-prepare-commercial-carpet-rfq-493f665906-1200w.webp"
+  },
   "/images/home/hero-home.webp": {
     "width": 1774,
     "height": 887,
