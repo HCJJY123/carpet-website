@@ -14,4 +14,3 @@ export const contentGrowthAssets = {
 } as const;
 
 export const illustrationCaption = "AI-generated application illustration; not a product photograph or evidence of a completed client project.";
-
