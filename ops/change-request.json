@@ -5,11 +5,13 @@
   "allowedPaths": [
     "ops/change-request.json",
     "ops/content-growth-20260930.md",
+    "ops/site-baseline.json",
     "public/images/optimized/content-growth-20260929/**",
     "src/lib/content-growth-assets.ts",
     "src/lib/responsive-image-manifest.ts",
     "src/lib/project-planning-references.ts",
     "src/lib/generated-static-sitemap-routes.ts",
+    "src/lib/sitemap-data.ts",
     "src/components/ProjectProcurementLinks.tsx",
     "src/components/ProjectPlanningReference.tsx",
     "src/app/projects/page.tsx",

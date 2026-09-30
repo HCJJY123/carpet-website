@@ -7,6 +7,8 @@ This file is append-only. Do not delete or rewrite historical entries.
 - Retain incumbent URLs for five priority commercial product themes; add project-selection questions, sample/quote links and 12 versioned Accio illustrations across the cluster.
 - Publish two explicitly hypothetical Project Planning References and one fiber comparison guide. Expand the existing backing, 50x50 specification, MOQ and RFQ guides instead of creating competing URLs.
 - Add bidirectional product → planning reference → guide → existing RFQ/sample paths. Add visible Projects hub entries, consistent Article/Breadcrumb data, native-ratio responsive WebP delivery and existing sitemap integration.
+- Set the new planning-reference and changed hotel/hub sitemap dates through the existing static metadata dictionary rather than inheriting the historical default date.
+- Extend the existing runtime guard to verify all affected content destinations and their visible illustration/planning labels on Preview and production.
 - Do not publish the remaining 31 delivered assets, customer data, invented projects or new performance/price/certification promises. Retain actual product/gallery images and annotate illustrative visuals.
 
 **Rollback point:** `e05f901b4e1ffa82b70d25cf1fe787ac3f99e743`

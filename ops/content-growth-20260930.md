@@ -66,6 +66,10 @@ Original delivery mapping is a proposal, not permission to create duplicate URLs
 
 New URL ownership is recorded in keyword-map.csv. Projects hub links to both references; nylon/50x50 pages and four updated guides link to the office reference and comparison. Hotel/corridor/printed pages link to the hotel reference, whose product/document/sample links close the loop. Existing blog collection and generated blog sitemap expose the comparison. Existing root sitemap scanner discovers the two static reference routes; the project sub-sitemap explicitly includes them.
 
+Use the existing static-route metadata dictionary to give the new planning references and changed hotel/projects/blog hubs the actual 2026-09-30 content-review date, rather than the legacy default 2026-08-06. No sitemap generation architecture is replaced.
+
+Extend the existing runtime guard's critical-page list to include all 12 primary content destinations and their visible illustration/planning disclosures. The unchanged Projects hub was already a critical page. This enables the existing GitHub public-Preview verification workflow to check the whole affected page cluster, without replacing CI or lowering any gate.
+
 Use /contact?product=...#quote-form and /request-sample-box. Do not add a second form, transmit personal data, or imply installed-area quantities are confirmed order quantities.
 
 ## Validation ledger
