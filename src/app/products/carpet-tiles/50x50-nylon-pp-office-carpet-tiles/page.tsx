@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ProjectProcurementLinks from "@/components/ProjectProcurementLinks";
+import { contentGrowthAssets, illustrationCaption } from "@/lib/content-growth-assets";
+
 import { products } from "@/lib/data";
 import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
@@ -84,13 +87,13 @@ export const metadata: Metadata = product
         description: "50x50 nylon or polypropylene office carpet tiles for commercial floors, corridors, retail, hotels, and wholesale modular carpet projects.",
         url: absoluteUrl(productPath(product.id)),
         type: "website",
-        images: [{ url: absoluteUrl(mainImages[0].src), alt: mainImages[0].alt }],
+        images: [{ url: absoluteUrl(contentGrowthAssets.P03.src), width: 1600, height: 896, alt: contentGrowthAssets.P03.alt }],
       },
       twitter: {
         card: "summary_large_image",
         title: "50x50 Nylon & Polypropylene Office Carpet Tiles | VCARPETS",
         description: "50x50 nylon or polypropylene office carpet tiles for commercial floors, corridors, retail, hotels, and wholesale modular carpet projects.",
-        images: [absoluteUrl(mainImages[0].src)],
+        images: [absoluteUrl(contentGrowthAssets.P03.src)],
       },
     }
   : { title: "50x50 Nylon PP Office Carpet Tiles | VCARPETS" };
@@ -150,11 +153,12 @@ export default function OfficeCarpetTilesProductPage() {
         <div className="container-fox">
           <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
             <div>
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-white shadow-xl">
-                <ProductImage src={mainImages[0].src} alt={mainImages[0].alt} className="h-full w-full" fit="contain" priority sizes="(max-width: 1024px) 100vw, 55vw" />
+              <div className="aspect-[1600/896] overflow-hidden rounded-2xl border border-border bg-white shadow-xl">
+                <ProductImage src={contentGrowthAssets.P03.src} alt={contentGrowthAssets.P03.alt} className="h-full w-full" fit="contain" priority unoptimized={false} sizes="(max-width: 1024px) 100vw, 55vw" />
               </div>
+              <p className="mt-3 text-xs leading-5 text-muted">{illustrationCaption}</p>
               <div className="mt-5 grid grid-cols-3 gap-4">
-                {mainImages.slice(1).map((item) => (
+                {mainImages.map((item) => (
                   <div key={item.src} className="aspect-square overflow-hidden rounded-xl border border-border bg-white">
                     <ProductImage src={item.src} alt={item.alt} className="h-full w-full" fit="contain" />
                   </div>
@@ -211,6 +215,8 @@ export default function OfficeCarpetTilesProductPage() {
           </div>
         </div>
       </section>
+
+      <ProjectProcurementLinks kind="modular" />
 
       <AnswerFirst
         eyebrow="Office Carpet Tile Buying Answer"

@@ -2,6 +2,17 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-09-30 — Product, application and procurement content cluster
+
+- Retain incumbent URLs for five priority commercial product themes; add project-selection questions, sample/quote links and 12 versioned Accio illustrations across the cluster.
+- Publish two explicitly hypothetical Project Planning References and one fiber comparison guide. Expand the existing backing, 50x50 specification, MOQ and RFQ guides instead of creating competing URLs.
+- Add bidirectional product → planning reference → guide → existing RFQ/sample paths. Add visible Projects hub entries, consistent Article/Breadcrumb data, native-ratio responsive WebP delivery and existing sitemap integration.
+- Do not publish the remaining 31 delivered assets, customer data, invented projects or new performance/price/certification promises. Retain actual product/gallery images and annotate illustrative visuals.
+
+**Rollback point:** `e05f901b4e1ffa82b70d25cf1fe787ac3f99e743`
+
+**Local validation:** Ops scope/runtime guards, build, TypeScript and SEO/link/asset audits passed. Lint has zero errors and one pre-existing ProductImage.tsx warning. Scoped runtime QA passed for 13 pages, 96 internal links and 100 image files; all 13 pages were checked at 390px and 1440px with no page overflow. AVIF/WebP responsive delivery uses the existing manifest, with 44 variants of each format and unchanged global optimizer configuration. Production remains gated on PR, CI and public Preview; subsequent release evidence is recorded in the PR timeline. See `ops/content-growth-20260930.md` for exact mappings and limitations.
+
 ## 2026-09-20 `domain-migration-vcarpets-20260920`
 
 **Type:** Public domain migration / technical SEO / redirect preservation

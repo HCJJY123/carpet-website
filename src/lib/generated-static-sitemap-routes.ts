@@ -58,6 +58,8 @@ export const generatedStaticSitemapRoutes = [
   "/products/wall-to-wall/singapore-casino-carpet",
   "/projects",
   "/projects/case-6",
+  "/projects/hotel-wall-to-wall-carpet-project-oceania",
+  "/projects/office-carpet-tile-renovation",
   "/pt/tapetes-personalizados-hotel",
   "/quality-control",
   "/request-sample-box",

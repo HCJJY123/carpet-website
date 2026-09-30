@@ -1,4 +1,7 @@
 import Link from "next/link";
+import ProjectProcurementLinks from "@/components/ProjectProcurementLinks";
+import { contentGrowthAssets, illustrationCaption } from "@/lib/content-growth-assets";
+
 import AnswerFirst from "@/components/AnswerFirst";
 import ConversionLiftPanel from "@/components/ConversionLiftPanel";
 import ProductImage from "@/components/ProductImage";
@@ -35,6 +38,7 @@ export const metadata = {
   title: "Hotel Carpet Supplier | VCARPETS",
   description: "Source custom hotel carpet for guestrooms, corridors, lobbies and banquet halls. Compare broadloom, Axminster, printed designs, samples, MOQ and project quote support.",
   alternates: { canonical: "/hotel-carpet" },
+  openGraph: { title: "Hotel Carpet Supplier | VCARPETS", description: "Plan wall-to-wall carpet for hotel guestrooms, corridors and public areas with samples and project-specific specification review.", url: "https://www.vcarpets.com/hotel-carpet", images: [{ url: `https://www.vcarpets.com${contentGrowthAssets.P05.src}`, width: 1600, height: 896, alt: contentGrowthAssets.P05.alt }] },
 };
 
 export default function HotelCarpetPage() {
@@ -53,11 +57,12 @@ export default function HotelCarpetPage() {
     <div className="bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
       {/* Hospitality Hero */}
-      <section className="relative overflow-hidden border-b border-white/5 bg-primary-light py-24">
+      <section className="relative overflow-hidden border-b border-white/5 bg-primary-light py-12 md:py-24">
         <div className="absolute inset-0">
           <ProductImage
-            src="/images/solutions/hotel-carpet-hero-c68765be.webp"
-            alt="Luxury hotel lobby with custom patterned broadloom carpet"
+            src={contentGrowthAssets.P05.src}
+            alt={contentGrowthAssets.P05.alt}
+            unoptimized={false}
             className="h-full w-full"
             priority
             quality={75}
@@ -90,6 +95,8 @@ export default function HotelCarpetPage() {
           </div>
         </div>
       </section>
+      <div className="container-fox py-3"><p className="text-xs leading-5 text-muted">{illustrationCaption}</p></div>
+      <ProjectProcurementLinks kind="hotel" />
 
       <AnswerFirst
         eyebrow="Hotel Carpet Buying Answer"
