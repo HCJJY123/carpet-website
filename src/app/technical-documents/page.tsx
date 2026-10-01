@@ -216,7 +216,12 @@ export default function TechnicalDocumentsPage() {
           <div>
             <p className="text-xs font-black uppercase tracking-[0.14em] text-accent">Controlled documents</p>
             <h2 className="mt-3 text-3xl font-black leading-tight md:text-4xl">Request documents after specification matching</h2>
-            <p className="mt-5 leading-8 text-muted">Many carpet documents depend on the exact fiber, backing, pile weight, color, quantity, destination and tender requirement. VCARPETS confirms the available document set in writing for each project.</p>
+            <p className="mt-5 leading-8 text-muted">Many carpet documents depend on the exact fiber, backing, pile weight, color, quantity, destination and tender requirement. Ask VCARPETS to confirm the available document set in writing for the selected construction.</p>
+            <p className="mt-4 text-sm leading-7 text-muted">For each document, match its product reference, method and result, issuer and scope to the proposed specification. If evidence is unavailable or covers a different arrangement, request clarification before technical approval rather than treating a standard name as a certificate.</p>
+            <div className="mt-5 flex flex-wrap gap-4 text-sm font-bold text-primary">
+              <Link href="/certifications" className="underline">Certificate and test-report review</Link>
+              <Link href="/blog/hotel-carpet-procurement-documents-checklist" className="underline">Hotel-zone submittal checklist</Link>
+            </div>
           </div>
           <ul className="grid gap-px border border-border bg-border">
             {requestDocuments.map((item) => (

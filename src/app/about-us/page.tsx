@@ -221,7 +221,7 @@ export default function AboutUsPage() {
               { t: "Factory Direct Pricing", d: "No middlemen. You deal directly with the manufacturer, getting competitive pricing for bulk commercial carpet orders.", i: "01" },
               { t: "Custom Project Support", d: "Custom sizes, colors, patterns, logos, materials, and backing options for hotel, office, and commercial projects.", i: "02" },
               { t: "Stable Production Capacity", d: "50,000㎡ factory with 900+ skilled workers ensures reliable production for even the largest commercial orders.", i: "03" },
-              { t: "Rigorous Quality Control", d: "Multi-stage inspection from raw material to finished product. ASTM E648, CRI Green Label, and CE certified.", i: "04" },
+              { t: "Construction-Specific Document Review", d: "Match any requested fire, emissions or conformity documents to the quoted product and project requirement. Confirm the relevant issuer, report scope and available evidence before approval.", i: "04" },
               { t: "Professional Export Service", d: "Experienced international trade team handling documentation, packaging, shipping, and customs clearance.", i: "05" },
               { t: "Long-Term Partnership", d: "We build lasting relationships with distributors and contractors through consistent quality and reliable service.", i: "06" },
             ].map((item, idx) => (

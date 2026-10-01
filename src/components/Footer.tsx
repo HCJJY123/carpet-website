@@ -129,9 +129,9 @@ export default function Footer() {
             </p>
             <p className="mt-2 text-xs font-medium tracking-normal text-white/45">Established 2005</p>
           </div>
-          <div className="flex gap-10 opacity-30">
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 opacity-30">
              <span className="text-xs font-semibold uppercase tracking-[0.04em] text-white">Tianjin Factory Direct</span>
-             <span className="text-xs font-semibold uppercase tracking-[0.04em] text-white">ASTM E648 Certified</span>
+             <span className="text-xs font-semibold uppercase tracking-[0.04em] text-white">Project Document Review</span>
           </div>
         </div>
       </div>
