@@ -26,7 +26,7 @@ const profiles = {
     answer: "Separate corridors, guestrooms and public areas before requesting a hotel carpet quote. Their traffic, cleaning access, comfort priorities and pattern layouts differ. A common design palette does not mean every area needs the same construction.",
     checks: ["Country and hotel areas being refurbished", "Floor plans, corridor widths and room quantities", "Pattern direction, roll plan and technical requirements", "Sample approval milestones and phased access"],
     links: [
-      ["Hotel carpet procurement documents", "/blog/hotel-carpet-procurement-documents-checklist"],
+      ["Hotel-zone specification and document checklist", "/blog/hotel-carpet-procurement-documents-checklist"],
       ["Hotel broadloom planning reference — Oceania", "/projects/hotel-wall-to-wall-carpet-project-oceania"],
       ["Custom printed nylon hotel carpet", "/products/wall-to-wall/3d-printed-hotel-carpet"],
     ],
@@ -37,6 +37,7 @@ const profiles = {
     checks: ["Corridor widths, turns, lift lobbies and door clearances", "Pattern scale, repeat and pile direction", "Cleaning access and wheeled service traffic", "Quoted construction documents and installation sequence"],
     links: [
       ["Hotel corridor carpet selection guide", "/blog/hotel-corridor-carpet-design-noise-stain-maintenance"],
+      ["Hotel carpet submittal evidence review", "/blog/hotel-carpet-procurement-documents-checklist"],
       ["Hotel broadloom planning reference — Oceania", "/projects/hotel-wall-to-wall-carpet-project-oceania"],
       ["Hotel carpet by guest area", "/hotel-carpet"],
     ],

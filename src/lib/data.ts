@@ -907,7 +907,7 @@ export const faqSections = [
   }
 ];
 
-export const certifications = [{ name: "ASTM E648", description: "US Fire Rating" }, { name: "CRI Green Label Plus", description: "Indoor Air Quality" }];
+export const certifications = [{ name: "Fire Document Review", description: "Match the test report to the quoted construction and project requirement" }, { name: "VOC Document Review", description: "Confirm relevant product evidence and any named program listing" }];
 
 export const caseStudies: CaseStudy[] = [
   {

@@ -5,7 +5,7 @@ Brand: VCARPETS
 Entity: Tianjin Vcarpets Global Commercial Carpet Co., Ltd.
 Branch: content/product-application-cluster-20260930
 Rollback: e05f901b4e1ffa82b70d25cf1fe787ac3f99e743
-State: Local validation passed; PR / public Preview / production gates pending. Release results are recorded in the PR timeline after each gate.
+State: Live and production-verified on 2026-10-01 (Asia/Shanghai). PR #58 merged the validated d6adbe0068d05bf56f42e06693b013054e05ccd9 head as a2d04755391fb33e8b71afe2b305ad432a9c3618. Production deployment 6772070075 succeeded. The earlier approval-service failure was resolved by a fresh approved merge; it is no longer a deployment blocker. This post-production ledger update is local documentation, not an additional deployed code change.
 
 ## Decision and evidence boundary
 
@@ -80,6 +80,28 @@ Browser checks: all 13 pages at 390px and 1440px (26 checks), no horizontal page
 
 Delivery: mobile 480px variants are about 14–37KB; responsive WebP fallback and intrinsic dimensions are present. Highest-resolution texture-rich hero variants exceed 200KB by a justified detail-preservation exception. No field LCP/CLS/INP measurement or Lighthouse score is claimed. Global optimizer settings remain unchanged. Source images contain no EXIF, XMP or IPTC metadata. Final local release-candidate QA again passed for all 13 pages / 96 destinations / 100 images. A real click on the planning-reference CTA reached the existing contact quote-form anchor; fields and mobile layout rendered, with no form submission or private customer input.
 
-Pending: public Preview verification, CI gates, production merge and live changed-page / sitemap / asset verification. Local reports: /tmp/vcarpets-cluster-local-qa.json and /tmp/vcarpets-cluster-responsive-qa.json. Preview and final production evidence will be appended to the release PR timeline; do not treat local evidence as production evidence.
+At the initial local-validation checkpoint, public Preview verification, CI gates, production merge and live verification were pending. Those gates have now completed; see the production record below. Local reports remain /tmp/vcarpets-cluster-local-qa.json and /tmp/vcarpets-cluster-responsive-qa.json and must not be substituted for production evidence.
+
+## Latest release gate result
+
+- Pull-request CI passed: https://github.com/HCJJY123/carpet-website/actions/runs/36759206347 .
+- Explicit public Preview verification passed for the same head: https://github.com/HCJJY123/carpet-website/actions/runs/36760071139 , including the Verify public Preview step and the extended affected-page guard.
+- Preview: https://carpet-website-git-content-product-ap-f008eb-mike123-s-projects.vercel.app . Vercel reports Ready for head d6adbe0068d05bf56f42e06693b013054e05ccd9.
+- PR: https://github.com/HCJJY123/carpet-website/pull/58 . Latest confirmed merge state before the attempted release was CLEAN, with successful CI and Vercel checks.
+- The combined PR-comment / merge / status command was rejected before execution because the automatic approval service could not complete its review (HTTP 403, insufficient provider credit). No PR comment or merge from that command occurred. Do not bypass approval.
+- At that checkpoint, production merge and verification were still pending. The following production record supersedes the blocker status; no indexing outcome is claimed.
+
+## 2026-10-01 production record (Asia/Shanghai)
+
+- PR #58 merged at 07:02:47 CST (2026-09-30T23:02:47Z) with a match-head guard for d6adbe0068d05bf56f42e06693b013054e05ccd9. Merge commit: a2d04755391fb33e8b71afe2b305ad432a9c3618. No direct main push or bypass of CI/Preview occurred.
+- GitHub's Vercel Production deployment 6772070075 references that exact merge SHA. Status: success, "Deployment has completed", at 07:04:10 CST. Deployment URL: https://carpet-website-f4snvj5bu-mike123-s-projects.vercel.app . Live content was separately checked at https://www.vcarpets.com . Local Vercel CLI access could not inspect the owning team; deployment evidence comes from GitHub's Vercel integration and production responses, not a successful local Vercel inspection.
+- Full delivery archive VCARPETS_CONTENT_GROWTH_IMAGES_FULL_2026-10-01.zip was checked without publishing masters or internal delivery documents. SHA-256 of every selected WebP matches the previous 12-asset selection. The complete archive does not expand this release: 12 illustrations live, 31 deferred.
+- Production scoped QA passed: 13 pages HTTP 200; 96 linked destinations checked; 100 AVIF/WebP image files returned expected content type and byte counts. Zero detected changed-page 404s, soft-404 signatures, broken image deliveries, broken internal links, duplicate titles/H1s or JSON-LD parsing/structural sanity errors. Self-canonical, descriptions, indexability, illustration labels and confirmed company identity passed. This is not a full external Schema eligibility validation or full-site factual audit.
+- Root sitemap has 261 entries. Both new planning references and the new fiber guide are included in their appropriate sub-sitemaps and the root sitemap. Robots did not block the checked cluster. Image responses use immutable one-year caching. Report: /tmp/vcarpets-cluster-production-qa-20261001.json .
+- Browser QA covered all 13 production pages at requested 390px and 1440px widths (26 checks). Actual layout widths are 382px and 1432px after scrollbar allowance. No horizontal page overflow, one H1 per page, loaded illustrative images, AVIF delivery, eager/high hero loading and lazy hub thumbnails. Guide tables scroll inside their containers on mobile. Report: /tmp/vcarpets-cluster-production-browser-qa-20261001.json .
+- A real production click on "Send Your Project Specifications" navigated to /contact?product=Office%20Carpet%20Tile%20Renovation%20Planning%20Reference#quote-form. The existing form and submit button rendered at mobile width without horizontal overflow; no personal details were entered and no inquiry was submitted. Report: /tmp/vcarpets-production-rfq-browser-qa-20261001.json . Submission delivery and lead quality were not tested.
+- Supplemental production identity checks passed for /, /about-us, /contact, /privacy-policy and /cookie-policy: all HTTP 200, confirmed legal entity present, no Guyang/Mufeng/Baizhe/Visfurn residue detected. Source scan retained legitimate old-domain redirect handling in src/proxy.ts rather than removing migration protection. Report: /tmp/vcarpets-production-identity-qa-20261001.json .
+- Automatic production IndexNow run succeeded: https://github.com/HCJJY123/carpet-website/actions/runs/36789107690 . api.indexnow.org and Bing each returned 200 OK for 260 URLs. The current submission script filters URLs starting with the origin plus slash; the bare-origin homepage is not included in that count. Submission acceptance is not evidence of indexing, ranking or AI recommendation.
+- Keep rollback e05f901b4e1ffa82b70d25cf1fe787ac3f99e743. Next work should start from production main and address a differentiated, evidenced procurement gap; do not publish the remaining images merely because the archive exists. Existing global performance/certification assertions were not verified by this scoped release and require their own source-evidence review.
 
 The live indexed originals were backed up under /tmp/vcarpets-content-growth-20261001 before content edits. Release remains feature branch → PR → successful checks + public Preview → authorized merge → production verification. Update this ledger with actual evidence, never treat local checks as production results.

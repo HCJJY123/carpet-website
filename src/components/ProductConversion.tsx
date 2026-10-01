@@ -105,7 +105,7 @@ function specCards(product: ConversionProduct) {
     { label: "Trial Order", value: tiers.trialOrder },
     { label: "Project MOQ", value: tiers.project },
     { label: "Lead Time", value: product.leadTime || "About 25 Days" },
-    { label: "Fire Rating", value: product.technicalSpecs?.fireRating || "ASTM E648 Available" },
+    { label: "Fire Rating", value: product.technicalSpecs?.fireRating || "Confirm Exact Construction" },
   ];
 }
 

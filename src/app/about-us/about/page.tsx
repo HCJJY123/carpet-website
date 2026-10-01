@@ -129,10 +129,10 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="container-fox">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 uppercase">Certifications & Compliance</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 uppercase">Construction-Specific Document Review</h2>
             <div className="w-12 h-1 bg-accent mx-auto mb-6"></div>
             <p className="text-muted max-w-2xl mx-auto text-xs font-bold uppercase tracking-[0.2em]">
-              Our products meet international quality and safety standards for commercial flooring projects worldwide
+              Review the evidence for the selected construction and destination requirement. A standard name or document request does not establish that every product is certified or approved.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

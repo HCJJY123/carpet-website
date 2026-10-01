@@ -2,6 +2,36 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-10-01 — Hotel submittal evidence review (local / Preview candidate)
+
+- Reuse /blog/hotel-carpet-procurement-documents-checklist instead of adding a competing hotel specification URL. Add a hotel-zone matrix, construction-matched report review matrix, direct answers, missing-evidence workflow and dated primary-source links.
+- Correct generic ASTM-certified footer text, shared homepage/company-profile certification badges, the About blanket certification sentence and a positive fire-rating fallback when construction information is absent. Do not alter actual product specifications, pricing, delivery promises or company identity.
+- Connect corridor product, certificate review and technical-document hub to the existing guide and existing RFQ/sample paths. Reuse existing images; no new generation or additional deferred assets released.
+- Preserve canonical, robots, sitemap and Schema generation logic; existing metadata handles content-review dates. Extend runtime verification without lowering gates. No form, contact, tracking, DNS or dependency changes.
+- Authoritative public method/program descriptions explain document review only; they do not establish certification of VCARPETS products. Individual performance reports and numerical claims remain pending source-evidence matching.
+
+**Rollback point:** `a2d04755391fb33e8b71afe2b305ad432a9c3618`
+
+**Status:** Build/TypeScript, lint (one pre-existing warning), source audits and local HTTP QA passed: 11 pages, 103 linked destinations, 78 image URLs, unchanged 261-entry root sitemap and retained About alias redirect. Browser navigation was not executed because automatic approval review failed; no bypass was attempted. Actual mobile/desktop visual and CTA-click checks, PR and public Preview gates remain pending. Not merged or deployed. Exact scope, evidence and dependencies: ops/hotel-document-evidence-20261001.md. Prior PR #58 production records are preserved below.
+
+Final-candidate follow-up: the footer-wrap rebuild passed; a fresh port-3041 server passed the same 11-page / 103-link / 78-image HTTP QA with zero failures and ops:verify. Visual and CTA-click checks remain blocked; no new production deployment is implied.
+
+Visual acceptance follow-up: browser navigation to the public Preview returned a connection reset; the same browser successfully opened the local candidate. A 390px bottom-of-page screenshot exposed overlap between the revised footer badge and the existing floating controls. Add mobile-only bottom clearance in Footer without changing control behavior or desktop spacing. Rebuild and final-candidate acceptance are required; this is not a production release.
+
+Final local acceptance: mobile footer clearance is fixed; corrected production build, source audits and local ops:verify passed. Eleven scoped pages at 390px and 1440px (22 checks) have no document-level overflow or broken images; 262 image elements loaded. Table gesture and 12 actual guide/product/document/quote/sample navigation checks passed after waiting for the existing hash-scroll to settle. Hotel product context reaches the quote form; no inquiry was submitted. Local HTTP regression passed 11 pages / 103 link targets / 78 image URLs. Public Preview browser access still resets; refresh corrected-head CI and public Preview HTTP guard, then seek owner production authorization. Local visual checks are not public Preview or production checks. Evidence: ops/hotel-document-evidence-20261001.md.
+
+## 2026-10-01 — Production verification of content cluster (PR #58)
+
+- Merged validated head d6adbe0068d05bf56f42e06693b013054e05ccd9 through PR #58 as a2d04755391fb33e8b71afe2b305ad432a9c3618; Vercel Production deployment 6772070075 completed successfully. Verified live www.vcarpets.com separately.
+- Production QA: 13 pages, 96 internal-link destinations and 100 public image files passed. Root sitemap: 261 entries. No detected changed-page 404, soft-404 signature, missing image, broken link, duplicate title/H1 or JSON-LD parsing/structural error. No accidental noindex or historical enterprise identity in the checked page set.
+- Production browser checks: 13 pages at 390px and 1440px (26 checks), no horizontal page overflow, loaded illustrative images, responsive AVIF delivery and internally scrolling mobile tables. Existing RFQ/sample entry points retained; no real inquiry submitted.
+- Actual production RFQ click reached the existing quote-form anchor with the project context populated. Supplemental homepage/About/Contact/Privacy/Cookie identity checks passed. No customer details entered or lead submitted; form delivery and lead quality remain untested.
+- Full 2026-10-01 delivery ZIP contains matching source bytes for the 12 deployed illustrations. The remaining 31 assets stay deferred; no additional page or image release is implied by receipt of the archive.
+- IndexNow production run 36789107690 succeeded; IndexNow and Bing each accepted 260 URLs with HTTP 200. Acceptance does not prove indexing, ranking or AI recommendation. Local Vercel CLI could not access the deployment's owning team; the exact production SHA is evidenced by GitHub deployment records.
+- Post-production documentation only; these ledger edits are not part of the deployed application SHA. Evidence and limitations: ops/content-growth-20260930.md and /tmp/vcarpets-cluster-production-qa-20261001.json.
+
+**Rollback point:** `e05f901b4e1ffa82b70d25cf1fe787ac3f99e743`
+
 ## 2026-09-30 — Product, application and procurement content cluster
 
 - Retain incumbent URLs for five priority commercial product themes; add project-selection questions, sample/quote links and 12 versioned Accio illustrations across the cluster.
