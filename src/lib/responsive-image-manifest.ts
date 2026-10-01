@@ -11,6 +11,56 @@ export type ResponsiveImageEntry = {
 };
 
 export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
+  "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2.webp": {
+    "width": 1672,
+    "height": 941,
+    "originalBytes": 2542447,
+    "avif": [
+      {
+        "src": "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2-10693dd407-480w.avif",
+        "width": 480,
+        "bytes": 34139
+      },
+      {
+        "src": "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2-2c43890fe1-768w.avif",
+        "width": 768,
+        "bytes": 71147
+      },
+      {
+        "src": "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2-1fc1d044d5-1200w.avif",
+        "width": 1200,
+        "bytes": 131841
+      },
+      {
+        "src": "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2-71ededa94e-1672w.avif",
+        "width": 1672,
+        "bytes": 189010
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2-9e98633a52-480w.webp",
+        "width": 480,
+        "bytes": 39986
+      },
+      {
+        "src": "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2-74ffc4e1c5-768w.webp",
+        "width": 768,
+        "bytes": 86764
+      },
+      {
+        "src": "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2-a759e64759-1200w.webp",
+        "width": 1200,
+        "bytes": 171966
+      },
+      {
+        "src": "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2-c4085fd68b-1672w.webp",
+        "width": 1672,
+        "bytes": 262922
+      }
+    ],
+    "fallback": "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2.webp"
+  },
   "/images/optimized/content-growth-20260929/commercial-nylon-carpet-tiles-office-c755c903a2.webp": {
     "width": 1600,
     "height": 896,
