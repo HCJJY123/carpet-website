@@ -16,7 +16,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#102A43] text-white mt-auto">
-      <div className="max-w-[1200px] mx-auto px-4 py-16 lg:py-24">
+      <div className="max-w-[1200px] mx-auto px-4 pt-16 pb-28 md:pb-16 lg:py-24">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-[1fr_1fr_1fr_1fr_1.3fr] xl:gap-10">
           {/* Logo & Intro - FIXED VERSION WITH REAL LOGO */}
           <div className="col-span-1 lg:col-span-1">

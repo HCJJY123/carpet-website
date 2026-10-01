@@ -16,6 +16,10 @@ This file is append-only. Do not delete or rewrite historical entries.
 
 Final-candidate follow-up: the footer-wrap rebuild passed; a fresh port-3041 server passed the same 11-page / 103-link / 78-image HTTP QA with zero failures and ops:verify. Visual and CTA-click checks remain blocked; no new production deployment is implied.
 
+Visual acceptance follow-up: browser navigation to the public Preview returned a connection reset; the same browser successfully opened the local candidate. A 390px bottom-of-page screenshot exposed overlap between the revised footer badge and the existing floating controls. Add mobile-only bottom clearance in Footer without changing control behavior or desktop spacing. Rebuild and final-candidate acceptance are required; this is not a production release.
+
+Final local acceptance: mobile footer clearance is fixed; corrected production build, source audits and local ops:verify passed. Eleven scoped pages at 390px and 1440px (22 checks) have no document-level overflow or broken images; 262 image elements loaded. Table gesture and 12 actual guide/product/document/quote/sample navigation checks passed after waiting for the existing hash-scroll to settle. Hotel product context reaches the quote form; no inquiry was submitted. Local HTTP regression passed 11 pages / 103 link targets / 78 image URLs. Public Preview browser access still resets; refresh corrected-head CI and public Preview HTTP guard, then seek owner production authorization. Local visual checks are not public Preview or production checks. Evidence: ops/hotel-document-evidence-20261001.md.
+
 ## 2026-10-01 — Production verification of content cluster (PR #58)
 
 - Merged validated head d6adbe0068d05bf56f42e06693b013054e05ccd9 through PR #58 as a2d04755391fb33e8b71afe2b305ad432a9c3618; Vercel Production deployment 6772070075 completed successfully. Verified live www.vcarpets.com separately.

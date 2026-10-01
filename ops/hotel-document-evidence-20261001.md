@@ -5,7 +5,7 @@ Brand: VCARPETS
 Entity: Tianjin Vcarpets Global Commercial Carpet Co., Ltd.
 Branch: fix/hotel-document-evidence-20261001
 Baseline / rollback: a2d04755391fb33e8b71afe2b305ad432a9c3618
-Status: Content implemented and locally verified; browser visual QA is blocked by automatic approval service failure. PR / public Preview verification pending. Not deployed to production.
+Status: Content implemented; final local visual, CTA and HTTP acceptance passed after a mobile footer-clearance correction. PR #59 exists; refresh CI / Preview for the corrected candidate before requesting separate owner production authorization. Not deployed to production.
 
 ## Scope decision and data boundary
 
@@ -79,7 +79,7 @@ Metadata: retain indexable URLs, self-canonical and existing Article/Breadcrumb 
 
 The three local PR #58 post-production documentation edits were backed up as files plus a binary diff under /tmp/vcarpets-hotel-evidence-20261001/previous-release-records/. The completed release ledger remains intact and its production verification will be included in this branch's narrowly staged documentation. Its old change-request copy is preserved in the backup; the active change request names this round only.
 
-## Verification and release status
+## Earlier verification record (before acceptance follow-up)
 
 Pre-edit backups: nine indexable public URLs returned HTTP 200 and were saved before edits. /about-us/about returned the expected 308 redirect to /about-us rather than HTTP 200, and its response headers were saved. These checks are production baselines, not validation of the new content.
 
@@ -92,3 +92,19 @@ Final candidate: the production build after the footer's wrapping adjustment pas
 Pending: PR checks and public Preview HTTP verification; browser visual/CTA checks when the approval service is available or the owner performs them. No new production deployment or new indexing result is claimed.
 
 Next dependencies: owner records for the exact construction-specific performance claims; approved access to GSC and qualified inquiry data if growth measurement is requested. Keep the remaining specialty and generated-image expansion deferred rather than publishing unsupported pages.
+
+## Final local visual and CTA acceptance — 2026-10-01
+
+The owner requested completing acceptance before seeking separate production authorization. The existing in-app browser now opened the local candidate successfully; no alternative browser, CDP or standalone browser automation was used. Browser navigation to both the recorded immutable public Preview and the PR's branch Preview returned ERR_CONNECTION_RESET. This local access limitation does not establish a production or Preview outage. GitHub's public Preview HTTP guard previously passed for 0f196a3; refresh it for the corrected head. Do not call the local visual inspection a public Preview browser check.
+
+Observed and fixed: at the bottom of the 390px page the existing floating controls overlapped the revised Project Document Review footer badge. The Footer container now reserves mobile bottom clearance (pb-28); desktop padding and all control behavior remain unchanged. The after screenshot shows the badge above the controls. No contact, form, tracking, image or URL code was modified.
+
+Final application candidate was served from a fresh local production server on port 3042 after a successful webpack build. Inspected 11 scoped pages at 390px and 1440px, 22 checks: homepage, About, certificate review, technical documents, hotel landing, hotel document guide, corridor product, printed hotel product, nylon office tile, Contact and sample request. Screenshot review and DOM measurements found no document-level horizontal overflow or broken images; all 262 image elements across these repeated viewports completed loading after progressive scrolling. Each checked page has one H1. Scope is not a full-site accessibility or performance audit.
+
+The guide's five mobile tables use internally scrolling containers; an actual horizontal gesture changed the first table's scrollLeft from 0 to 332 without widening the document. Desktop matrix, mobile table, image captions, responsive page tops and footer screenshots were inspected. Twelve actual navigation checks (six paths at each viewport) passed: guide to hotel quote, guide to samples, and certificate / technical-document / corridor-product / hotel-landing reverse links to the guide. One mobile wrapped inline link required clicking its visible text run after inspecting the screenshot: semantic automation had clicked the gap between the two runs. The link works; no workaround code was added.
+
+Quote checks waited for the existing deferred hash-scroll and smooth scrolling to settle. Mobile form top: 13px, matching the existing header-height-minus-52px behavior; all four required input boxes were visible below the header. Desktop quote section top: 81px, matching the header height. The product field retained Hotel Carpet Procurement Documents. Sample form was present. No personal data entered, no real inquiry submitted, no lead-delivery or analytics-event validation claimed.
+
+Final local HTTP regression: 11 pages, 103 linked destinations and 78 image URLs, zero failures. Root sitemap 261; blog 59; pages 35; legacy About alias remains 308. Metadata, canonical, robots meta, H1, JSON-LD parsing/structural checks and runtime scope guard passed. SEO/link/asset source audits passed; lint has zero errors and the same one pre-existing ProductImage warning. Reports: /tmp/vcarpets-hotel-evidence-20261001/visual-acceptance/acceptance-report.json and /tmp/vcarpets-hotel-evidence-20261001/acceptance-http-qa.json. Screenshots are local QA artifacts, not website assets. Build log: /tmp/vcarpets-hotel-evidence-20261001/acceptance-build.log.
+
+Pending: corrected-head GitHub checks, refreshed public Preview HTTP verification, then a specific owner authorization to merge PR #59 and publish. Public Preview browser visual access and actual inquiry delivery remain unverified; preserve those limitations in the approval request. No new production release or indexing result is claimed.
