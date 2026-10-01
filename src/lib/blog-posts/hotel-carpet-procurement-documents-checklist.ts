@@ -23,14 +23,17 @@ export const hotelCarpetProcurementDocumentsChecklist: BlogPost = {
   author: "VCARPETS Technical Team",
   category: "B2B Buying Guide",
   image:
-    "/images/blog-series/hotel-carpet-procurement-documents-checklist/hotel-carpet-procurement-documents-checklist-hero.webp",
+    "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2.webp",
+  imageAlt:
+    "Commercial carpet samples, specification documents and measuring tools for hotel carpet procurement",
   h1Image:
-    "/images/blog-series/hotel-carpet-procurement-documents-checklist/hotel-carpet-procurement-documents-checklist-hero.webp",
+    "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2.webp",
   h1ImageAlt:
-    "Hotel carpet procurement review desk with carpet samples, technical documents and measuring tools",
+    "Commercial carpet samples, specification documents and measuring tools for hotel carpet procurement",
   h1ImageCaption:
     "Illustrative procurement workflow, not a client approval record or product test report. Match physical samples and documents to the quoted construction.",
-  h1ImageFit: "cover",
+  h1ImageFit: "contain",
+  h1ImageAspectRatio: "1672 / 941",
   relatedProductIds: [
     "luxury-hotel-broadloom",
     "custom-luxury-hotel-room-carpet",

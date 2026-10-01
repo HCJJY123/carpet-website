@@ -1,28 +1,17 @@
 {
-  "task": "Review public performance-claim evidence and strengthen the existing hotel carpet procurement document guide",
-  "approvedBy": "Owner's 2026-10-01 instruction to continue the recommended certification/performance evidence review and hotel procurement content improvement",
-  "approvedCategories": ["content", "navigation", "operations"],
+  "task": "Replace only the hotel procurement documents article hero with the owner-supplied unoccupied sample-review table image",
+  "approvedBy": "Owner explicitly requested image replacement and production deployment on 2026-10-01",
+  "approvedCategories": ["content", "images", "operations"],
   "allowedPaths": [
     "ops/change-request.json",
-    "ops/content-growth-20260930.md",
-    "ops/hotel-document-evidence-20261001.md",
-    "ops/site-baseline.json",
-    "src/components/ProjectProcurementLinks.tsx",
-    "src/components/Footer.tsx",
-    "src/components/ProductConversion.tsx",
-    "src/lib/data.ts",
-    "src/lib/sitemap-data.ts",
-    "src/app/about-us/page.tsx",
-    "src/app/about-us/about/page.tsx",
-    "src/app/certifications/page.tsx",
-    "src/app/technical-documents/page.tsx",
-    "src/lib/blog-posts/hotel-carpet-procurement-documents-checklist.ts",
     "CHANGELOG_OPS.md",
-    "keyword-map.csv"
+    "src/lib/blog-posts/hotel-carpet-procurement-documents-checklist.ts",
+    "src/lib/responsive-image-manifest.ts",
+    "public/images/optimized/hotel-procurement-hero-v2/**"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "acceptanceScope": "Owner requested mobile/desktop and CTA acceptance before seeking separate production release approval. Allow the minimal Footer mobile bottom-padding correction for the observed overlap between the revised Project Document Review badge and existing floating quote controls. Preserve desktop spacing and all conversion behavior; no new component or URL. Record visual evidence and rerun final-candidate checks and Preview CI. Do not merge or deploy until separate owner approval.",
-  "rollbackCommit": "a2d04755391fb33e8b71afe2b305ad432a9c3618",
-  "notes": "Exact scope: existing /blog/hotel-carpet-procurement-documents-checklist, /certifications, /technical-documents; text-only corrections of the existing global footer ASTM E648 Certified badge, shared certification-label array (homepage and legacy /about-us/about source), /about-us blanket certification sentence, and the unsupported Fire Rating fallback in ProductConversion; no new footer entry or conversion-system change. Add hotel/corridor related-document links in the existing procurement component. Set content-review dates for the three substantively updated indexable static pages via existing sitemap metadata and extend runtime checks without reducing any gate. Preserve the existing /about-us/about 308 redirect to /about-us and legacy noindex source; do not include that alias as a new indexable page. Preserve URLs, canonical, robots, sitemap and Schema generation logic; Article modified date follows existing content data. Do not modify individual product specifications, legal/company facts, pricing/MOQ/lead-time promises, forms, API, tracking, DNS or dependencies. No new images or generated content presented as evidence. Preserve and archive the three prior local post-production documentation changes. Local checks and PR/Preview are allowed; do not assume this continuation authorizes production merge of a new release."
+  "rollbackCommit": "9c12e9902f149e83e87a785cf4fde2d4ed3149fd",
+  "affectedUrls": ["/blog/hotel-carpet-procurement-documents-checklist", "/blog"],
+  "notes": "Use /Users/haochangjian/Downloads/酒店地毯样品评审.png (1672x941) without cropping or upscaling. Only change this article's image, alt, fit and intrinsic aspect-ratio fields plus an append-only responsive manifest entry and new versioned delivery assets. Existing card, Open Graph, Twitter and Article image consumers follow the article image field. Keep the illustrative caption, title, subtitle, article body, dates, slug, canonical, navigation, forms, tracking and other articles unchanged. Do not overwrite or remove old assets. Backed up live HTML to /tmp/vcarpets-hotel-hero-v2-20261001/before.html. Previous PR59 local documentation remains untouched in its original working tree. Run Ops, lint, build, Preview and 375/390/768/1440 viewport checks before merging this explicitly authorized production release. No generated imagery or real inquiry submission."
 }
