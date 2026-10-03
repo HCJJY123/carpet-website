@@ -11,6 +11,106 @@ export type ResponsiveImageEntry = {
 };
 
 export const responsiveImageManifest: Record<string, ResponsiveImageEntry> = {
+  "/images/optimized/pp-bitumen-tiles-20261003/pp-bitumen-50x50-striped-tile-stack-df7223495d-800w.webp": {
+    "width": 800,
+    "height": 800,
+    "originalBytes": 178304,
+    "avif": [
+      {
+        "src": "/images/optimized/pp-bitumen-tiles-20261003/pp-bitumen-50x50-striped-tile-stack-a6046fd896-480w.avif",
+        "width": 480,
+        "bytes": 53239
+      },
+      {
+        "src": "/images/optimized/pp-bitumen-tiles-20261003/pp-bitumen-50x50-striped-tile-stack-30665095ff-800w.avif",
+        "width": 800,
+        "bytes": 142105
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/pp-bitumen-tiles-20261003/pp-bitumen-50x50-striped-tile-stack-df7223495d-800w.webp",
+        "width": 800,
+        "bytes": 143990
+      }
+    ],
+    "fallback": "/images/optimized/pp-bitumen-tiles-20261003/pp-bitumen-50x50-striped-tile-stack-df7223495d-800w.webp"
+  },
+  "/images/optimized/pp-bitumen-tiles-20261003/gray-striped-carpet-tiles-interior-111b57177e-1200w.webp": {
+    "width": 1200,
+    "height": 1200,
+    "originalBytes": 503034,
+    "avif": [
+      {
+        "src": "/images/optimized/pp-bitumen-tiles-20261003/gray-striped-carpet-tiles-interior-4bc25f54e1-480w.avif",
+        "width": 480,
+        "bytes": 43171
+      },
+      {
+        "src": "/images/optimized/pp-bitumen-tiles-20261003/gray-striped-carpet-tiles-interior-cab65f49b1-1200w.avif",
+        "width": 1200,
+        "bytes": 330274
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/pp-bitumen-tiles-20261003/gray-striped-carpet-tiles-interior-111b57177e-1200w.webp",
+        "width": 1200,
+        "bytes": 346950
+      }
+    ],
+    "fallback": "/images/optimized/pp-bitumen-tiles-20261003/gray-striped-carpet-tiles-interior-111b57177e-1200w.webp"
+  },
+  "/images/optimized/pp-bitumen-tiles-20261003/dark-striped-carpet-tiles-lounge-9a088e9484-1000w.webp": {
+    "width": 1000,
+    "height": 1000,
+    "originalBytes": 160670,
+    "avif": [
+      {
+        "src": "/images/optimized/pp-bitumen-tiles-20261003/dark-striped-carpet-tiles-lounge-20c80f40ee-480w.avif",
+        "width": 480,
+        "bytes": 29800
+      },
+      {
+        "src": "/images/optimized/pp-bitumen-tiles-20261003/dark-striped-carpet-tiles-lounge-3360fcc096-1000w.avif",
+        "width": 1000,
+        "bytes": 120096
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/pp-bitumen-tiles-20261003/dark-striped-carpet-tiles-lounge-9a088e9484-1000w.webp",
+        "width": 1000,
+        "bytes": 129064
+      }
+    ],
+    "fallback": "/images/optimized/pp-bitumen-tiles-20261003/dark-striped-carpet-tiles-lounge-9a088e9484-1000w.webp"
+  },
+  "/images/optimized/pp-bitumen-tiles-20261003/striped-carpet-tiles-office-layout-7487761e56-1200w.webp": {
+    "width": 1200,
+    "height": 1200,
+    "originalBytes": 620319,
+    "avif": [
+      {
+        "src": "/images/optimized/pp-bitumen-tiles-20261003/striped-carpet-tiles-office-layout-273fe1b88a-480w.avif",
+        "width": 480,
+        "bytes": 53833
+      },
+      {
+        "src": "/images/optimized/pp-bitumen-tiles-20261003/striped-carpet-tiles-office-layout-0efc06f1a7-1200w.avif",
+        "width": 1200,
+        "bytes": 322116
+      }
+    ],
+    "webp": [
+      {
+        "src": "/images/optimized/pp-bitumen-tiles-20261003/striped-carpet-tiles-office-layout-7487761e56-1200w.webp",
+        "width": 1200,
+        "bytes": 326556
+      }
+    ],
+    "fallback": "/images/optimized/pp-bitumen-tiles-20261003/striped-carpet-tiles-office-layout-7487761e56-1200w.webp"
+  },
   "/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2.webp": {
     "width": 1672,
     "height": 941,
