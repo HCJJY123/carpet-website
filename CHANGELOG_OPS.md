@@ -2,6 +2,18 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-10-03 — PP/bitumen tile product content and owner-image Preview
+
+**Authorization:** Owner explicitly requested repository implementation and PR/Preview. Do not merge or deploy production.
+
+**Scope:** Existing `/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles`, its product data record and automatic `/products/carpet-tiles` card. Use four owner-provided JPEGs, actual tile stack hero and three application views;12 hashed AVIF/WebP files with full-square composition, append-only responsive entries. No competing product URL, Blog or Qatar page.
+
+**Facts and conversion:** Brand Name and page-localProduct.brand use Vcarpets. No source brands, reviews, unverified certification/antimicrobial/washable/outdoor claims or marketplace numerical promises. Existing project quotation/MOQ/lead-time/availability values and conversion logic unchanged. Product describes layout, sample approval, packing assumptions and RFQ preparation. Gallery and share references derive from one exact product record. All old assets retained.
+
+**Rollback/evidence:** Base36a051b4460416293232e6683430b5310b87c11f; detailed record `ops/pp-bitumen-product-preview-20261003.md`; backups/tests under `/Users/haochangjian/Downloads/vcarpets-pp-bitumen-preview-evidence-20261003/`. Local and Preview acceptance pending; no production completion claim.
+
+**Local acceptance:** Ops/runtime, SEO/link audits and webpack build passed; lint zeroerrors and onepre-existing ProductImage warning. Detail/category200,12newresource hashes matched,76internal targets200;30product sitemapURLs preserved;brandVcarpets/OG/Twitter/Productimage/6visibleFAQ checks passed. Product/category eightviewport checks375/390/768/1440 and category-to-detail, quote/productprefill and sample navigation passed; no real form submission or observedconsoleerrors. Preview pending; owner has not authorized production.
+
 ## 2026-10-01 — Hotel submittal evidence review (local / Preview candidate)
 
 - Reuse /blog/hotel-carpet-procurement-documents-checklist instead of adding a competing hotel specification URL. Add a hotel-zone matrix, construction-matched report review matrix, direct answers, missing-evidence workflow and dated primary-source links.

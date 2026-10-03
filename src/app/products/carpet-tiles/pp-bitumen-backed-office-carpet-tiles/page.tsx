@@ -10,51 +10,52 @@ import { absoluteUrl, productBreadcrumbJsonLd, productJsonLd, productPath, safeJ
 
 const productId = "pp-bitumen-backed-office-carpet-tiles";
 const product = products.find((item) => item.id === productId);
-const imageBase = "/images/products/pp-bitumen-backed-office-carpet-tiles";
-
-const galleryImages = [
-  {
-    src: `${imageBase}/01-hero-office-meeting-room.webp`,
-    title: "Meeting Room Installation",
-    alt: "VCARPETS PP bitumen backed office carpet tiles 50x50cm installed in a modern meeting room",
-  },
-  {
-    src: `${imageBase}/02-blue-meeting-room-carpet-tiles.webp`,
-    title: "Blue Gray Layout",
-    alt: "Blue and gray PP office carpet tiles with bitumen backing in a meeting room",
-  },
-  {
-    src: `${imageBase}/03-executive-office-carpet-tiles.webp`,
-    title: "Executive Office Floor",
-    alt: "Gray 50x50cm polypropylene carpet tiles for executive office flooring",
-  },
-  {
-    src: `${imageBase}/04-open-office-lounge-carpet-tiles.webp`,
-    title: "Open Office Lounge",
-    alt: "Modular PP carpet tiles for open office lounge and commercial flooring projects",
-  },
-];
+const galleryTitles = ["Striped Carpet Tile Product View", "Alternating Tile Directions", "Lounge Application View", "Office Application View"];
+const galleryImages = (product?.gallery ?? []).map((image, index) => ({ ...image, title: galleryTitles[index] }));
 
 const faqs = [
   {
-    question: "Are these PP bitumen backed carpet tiles suitable for commercial offices?",
-    answer: "Yes. They are positioned for offices, meeting rooms, home offices, retail spaces, corridors, and light-to-medium commercial interiors. Final suitability should be confirmed against traffic level, chair-caster use, fire rating, backing, adhesive, and maintenance requirements.",
+    question: "Are PP, nylon and polyester blended together?",
+    answer: "Not simply because several names appear in a listing. The selected configuration must state its composition. Evaluate a nylon or polyester alternative separately rather than relabeling the PP proposal.",
   },
   {
-    question: "What size are the office carpet tiles?",
-    answer: "The standard modular size is 50x50cm. This format supports flexible installation patterns, selective tile replacement, carton-based logistics, and easier maintenance planning for B2B projects.",
+    question: "Can I select a different backing?",
+    answer: "Discuss alternatives through the 50x50 carpet tile options page linked below. A different backing is a different configuration that needs its own sample and specification review.",
   },
   {
-    question: "What is the backing construction?",
-    answer: "This product uses bitumen backing. Bitumen backed carpet tiles are commonly selected for dimensional stability, practical commercial installation, and replacement-friendly office flooring projects.",
+    question: "Does loop pile establish the manufacturing method?",
+    answer: "Loop pile describes the surface structure. It does not by itself prove a particular weaving or other manufacturing process. Request the construction record where that distinction matters.",
   },
   {
-    question: "Can VCARPETS support OEM colors or project packaging?",
-    answer: "Yes. OEM color coordination, carton marks, project packing, samples, and specification confirmation can be discussed before quotation. Buyers should provide quantity, destination, preferred color direction, and required test standards.",
+    question: "Are the tiles washable, antimicrobial or approved for outdoor use?",
+    answer: "No such blanket promise is made here. Request the maintenance instructions and evidence for any specific performance requirement before including it in the project specification.",
+  },
+  {
+    question: "How much replacement stock should be retained?",
+    answer: "Agree it with the buyer and installer based on maintenance needs, layout and the replacement strategy. Do not apply an unexplained universal percentage or count the same material as both cutting allowance and spare stock.",
+  },
+  {
+    question: "What should be included in an RFQ?",
+    answer: "Provide the country and destination, application, approximate area by zone, selected color and configuration, layout preference, sample requirements, technical-document needs and target receiving date. State whether quantities are preliminary or approved.",
   },
 ];
 
 const procurementGuideLinks = [
+  {
+    title: "Commercial carpet tile RFQ checklist",
+    href: "/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers",
+    text: "Connect area, tile direction, packing and retained replacement stock before comparing project quotations.",
+  },
+  {
+    title: "Hotel carpet procurement documents",
+    href: "/blog/hotel-carpet-procurement-documents-checklist",
+    text: "Separate sample appearance approval from construction-specific performance evidence for hotel zones.",
+  },
+  {
+    title: "50x50 carpet tile configuration options",
+    href: "/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles",
+    text: "Evaluate a different fiber or backing as a separate configuration, with its own sample and specification review.",
+  },
   {
     title: "Commercial carpet tile backing comparison",
     href: "/blog/commercial-carpet-tile-backing-comparison-guide",
@@ -74,12 +75,12 @@ const procurementGuideLinks = [
 
 export const metadata: Metadata = product
   ? {
-      title: "PP Bitumen Backed Office Carpet Tiles 50x50cm | VCARPETS",
+      title: "50x50 PP Bitumen Backed Carpet Tiles | VCARPETS",
       description:
-        "Source 100% PP fiber bitumen backed office carpet tiles 50x50cm from VCARPETS for commercial offices, meeting rooms, home offices and OEM flooring projects.",
+        "Review 50x50 PP carpet tiles with bitumen backing for commercial interiors. Confirm loop-pile construction, layout, samples and project quotation requirements.",
       alternates: { canonical: productPath(product.id) },
       openGraph: {
-        title: "PP Bitumen Backed Office Carpet Tiles 50x50cm | VCARPETS",
+        title: "50x50 PP Bitumen Backed Carpet Tiles | VCARPETS",
         description: product.description,
         url: absoluteUrl(productPath(product.id)),
         type: "website",
@@ -87,7 +88,7 @@ export const metadata: Metadata = product
       },
       twitter: {
         card: "summary_large_image",
-        title: "PP Bitumen Backed Office Carpet Tiles 50x50cm | VCARPETS",
+        title: "50x50 PP Bitumen Backed Carpet Tiles | VCARPETS",
         description: product.description,
         images: [absoluteUrl(product.image)],
       },
@@ -109,7 +110,7 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(productJsonLd(product)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd({ ...productJsonLd(product), brand: { "@type": "Brand", name: "Vcarpets" } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(productBreadcrumbJsonLd(product)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }} />
 
@@ -124,20 +125,20 @@ export default function Page() {
       <section className="py-12 md:py-20">
         <div className="container-fox grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-start lg:gap-16">
           <div>
-            <div className="aspect-[4/3] overflow-hidden border border-border bg-surface shadow-xl">
-              <ProductImage src={galleryImages[0].src} alt={galleryImages[0].alt} className="h-full w-full" priority sizes="(max-width: 1024px) 100vw, 55vw" />
+            <div className="aspect-square overflow-hidden border border-border bg-white shadow-xl">
+              <ProductImage src={product.image} alt={product.imageAlt || product.name} className="h-full w-full" fit="contain" priority sizes="(max-width: 1024px) calc(100vw - 32px), 55vw" />
             </div>
             <div className="mt-5 grid grid-cols-3 gap-3 sm:gap-4">
               {galleryImages.slice(1).map((item) => (
-                <div key={item.src} className="aspect-[4/3] overflow-hidden border border-border bg-surface">
-                  <ProductImage src={item.src} alt={item.alt} className="h-full w-full" sizes="(max-width: 768px) 33vw, 18vw" />
+                <div key={item.src} className="aspect-square overflow-hidden border border-border bg-surface">
+                  <ProductImage src={item.src} alt={item.alt} className="h-full w-full" fit="contain" sizes="(max-width: 768px) 33vw, 18vw" />
                 </div>
               ))}
             </div>
           </div>
 
           <div>
-            <p className="mb-4 text-xs font-black uppercase tracking-[0.22em] text-accent">VCARPETS OEM Factory Supply</p>
+            <p className="mb-4 text-xs font-black uppercase tracking-[0.22em] text-accent">VCARPETS Commercial Carpet Tiles</p>
             <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">{product.name}</h1>
             <p className="product-summary mb-8 text-base leading-relaxed text-muted md:text-lg">{product.longDescription}</p>
             <div className="mb-8 grid gap-3 sm:grid-cols-2">
@@ -153,9 +154,9 @@ export default function Page() {
       </section>
 
       <AnswerFirst
-        eyebrow="Office Carpet Tile Buying Answer"
-        title="When Should Buyers Choose PP Bitumen Backed Office Carpet Tiles?"
-        answer="Choose PP bitumen backed office carpet tiles when the project needs a practical 50x50cm modular floor, controlled square-meter cost, replaceable maintenance, and OEM-friendly commercial supply. Confirm the exact fiber, backing, color, traffic level, fire requirement, adhesive system, and project MOQ before comparing quotations."
+        eyebrow="Carpet Tile Buying Answer"
+        title="What Are 50x50 PP Bitumen Backed Carpet Tiles?"
+        answer="This is a square carpet tile option, not wall-to-wall roll carpet. The 50x50cm format can be evaluated for room-by-room or zone-based layouts. A striped, multi-level loop appearance should be reviewed together with tile orientation, color and the intended installation system."
         facts={[
           { label: "Fiber", value: product.spec.material },
           { label: "Tile Size", value: product.spec.size },
@@ -187,9 +188,9 @@ export default function Page() {
             <p className="mb-3 text-xs font-black uppercase tracking-[0.18em] text-accent">Technical Specification</p>
             <h2 className="mb-8 text-2xl font-black uppercase text-primary md:text-4xl">Confirm Construction Before Ordering</h2>
             <div className="grid gap-px border border-border bg-border sm:grid-cols-2">
-              {Object.entries(product.technicalSpecs).map(([key, value]) => (
+              {Object.entries({ brandName: "Vcarpets", format: "Square Carpet Tile", nominalSize: product.spec.size, ...product.technicalSpecs }).map(([key, value]) => (
                 <div key={key} className="bg-white p-5">
-                  <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.08em] text-muted">{key.replace(/([A-Z])/g, " $1")}</p>
+                  <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.08em] text-muted">{key === "brandName" ? "Brand Name" : key.replace(/([A-Z])/g, " $1")}</p>
                   <p className="text-sm font-bold leading-relaxed text-primary">{value}</p>
                 </div>
               ))}
@@ -201,10 +202,10 @@ export default function Page() {
             <h2 className="mb-8 text-2xl font-black uppercase text-primary md:text-4xl">Good Fit For These Orders</h2>
             <div className="border border-border bg-white">
               {[
-                "Office renovation projects needing modular 50x50cm carpet squares.",
+                  "Commercial interior projects evaluating modular 50x50cm carpet squares.",
                 "Buyers comparing PP carpet tiles against nylon carpet tiles by budget and traffic level.",
                 "Distributors or contractors needing samples, cartons, OEM colors, and export packing.",
-                "Meeting room, home office, retail, and corridor floors where selective replacement is useful.",
+                "Hotel meeting spaces and selected zones requiring a separate construction and installation review.",
               ].map((item, index) => (
                 <div key={item} className="flex gap-4 border-b border-border p-5 last:border-b-0">
                   <span className="font-mono text-sm font-black text-accent">{String(index + 1).padStart(2, "0")}</span>
@@ -223,16 +224,54 @@ export default function Page() {
       </section>
 
       <section className="section-padding">
+        <div className="container-fox max-w-5xl space-y-12">
+          <div className="max-w-3xl space-y-5 text-base leading-8 text-muted">
+            <h2 className="text-2xl font-black text-primary md:text-3xl">Product and Configuration Review</h2>
+            <p>A product title that lists several fibers or backings does not establish a blended construction. Use the specific proposal to identify the face fiber and backing being ordered. For this configuration, the comparison starts with PP and bitumen backing.</p>
+            <p>The nominated product sheet and quotation should identify the exact configuration. Fiber names and photographs do not establish a fire rating, slip result, antimicrobial treatment, acoustic result or outdoor suitability. Published specification ranges are configuration references, not measurements certified by these images.</p>
+          </div>
+
+          <div className="max-w-3xl space-y-5 text-base leading-8 text-muted">
+            <h2 className="text-2xl font-black text-primary md:text-3xl">Where Should a Hotel Buyer Consider Carpet Tiles?</h2>
+            <p>Consider the format where the project needs a modular layout and a defined replacement-stock plan. Hotel offices, meeting rooms and selected circulation areas can present different operating conditions; ask the designer or installer to review each zone separately.</p>
+            <p>Guestrooms, corridors and public areas should not automatically share the same specification. Identify luggage routes, wheeled equipment, entrance soil, cleaning procedures and floor interfaces in the brief. Do not infer suitability for a wet area, exterior installation or unusually demanding traffic from a generic listing.</p>
+            <p>Compare the wider <Link href="/products/carpet-tiles" className="font-bold text-accent underline">carpet tile collection</Link> and <Link href="/hotel-carpet" className="font-bold text-accent underline">hotel carpet options</Link> if the project includes different flooring formats.</p>
+          </div>
+
+          <div className="max-w-3xl space-y-5 text-base leading-8 text-muted">
+            <h2 className="text-2xl font-black text-primary md:text-3xl">Review the Loop-Pile Surface and Installation Direction</h2>
+            <p>Use several physical tiles to review the appearance of adjoining edges and directional stripes. Agree whether the proposed layout uses a single direction, alternating directions or another arrangement supported by the product instructions. A quarter-turn example in a photograph is not an installation instruction for every design.</p>
+            <p>Ask the installer to assess the substrate, adhesive or fixing system and thresholds against the nominated construction. Bitumen backing alone does not prove compatibility with any floor or installation method. This product page does not offer on-site measurement or installation.</p>
+          </div>
+
+          <div className="max-w-3xl space-y-5 text-base leading-8 text-muted">
+            <h2 className="text-2xl font-black text-primary md:text-3xl">Approve One Sample and Specification Record</h2>
+            <p>Record the carpet designation, colorway, construction and intended layout on the sample approval. Keep the appearance reference connected to the quotation so a similar photograph cannot become the standard for a different fiber or backing.</p>
+            <p>For a hotel project, separate physical appearance approval from technical-document review. Use the <Link href="/blog/hotel-carpet-procurement-documents-checklist" className="font-bold text-accent underline">hotel carpet procurement documents checklist</Link> when the consultant requires construction-specific evidence.</p>
+            <Link href="/request-sample-box" className="inline-flex min-h-12 items-center border border-primary px-6 py-3 text-sm font-bold text-primary hover:bg-surface">Request Carpet Tile Sample Options</Link>
+          </div>
+
+          <div className="max-w-3xl space-y-5 text-base leading-8 text-muted">
+            <h2 className="text-2xl font-black text-primary md:text-3xl">Quantity, Packing and Quotation Basis</h2>
+            <p>Measure net coverage by zone, then agree the installation allowance, retained replacement tiles and packing basis. Keep these lines distinct. A standard nominal 50x50cm square covers 0.25m², so four nominal tiles correspond to 1m² before layout allowances; this arithmetic is not a final ordering quantity.</p>
+            <p>Confirm pieces per carton, carton dimensions and gross weight for the actual shipment. Do not use a generic single-item packaging field to calculate a multi-piece carton or shipping total. Where different colors or phases are involved, identify their quantities separately.</p>
+            <p>Price and order conditions depend on the selected configuration, quantity, design, packing and approved commercial terms. Request a written project quotation rather than treating a marketplace price, lead time or sample offer as a Vcarpets commitment. Review the existing <Link href="/commercial-terms" className="font-bold text-accent underline">commercial terms</Link>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding">
         <div className="container-fox">
           <div className="mb-10 max-w-3xl">
             <p className="mb-3 text-xs font-black uppercase tracking-[0.18em] text-accent">Product Views</p>
-            <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-5xl">Office Carpet Tile Application Gallery</h2>
+            <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-5xl">Product and Application Views</h2>
+            <p className="mt-5 text-sm leading-7 text-muted">Product images supplied by the owner for selection reference. Application views are not documented customer installations or evidence of product performance.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             {galleryImages.map((item) => (
               <figure key={item.src} className="border border-border bg-white">
-                <div className="aspect-[4/3] overflow-hidden bg-surface">
-                  <ProductImage src={item.src} alt={item.alt} className="h-full w-full" sizes="(max-width: 768px) 100vw, 50vw" />
+                <div className="aspect-square overflow-hidden bg-white">
+                  <ProductImage src={item.src} alt={item.alt} className="h-full w-full" fit="contain" sizes="(max-width: 768px) calc(100vw - 32px), 50vw" />
                 </div>
                 <figcaption className="px-5 py-4 text-xs font-black uppercase tracking-[0.12em] text-primary">{item.title}</figcaption>
               </figure>
@@ -257,8 +296,8 @@ export default function Page() {
 
       <section className="section-padding bg-white">
         <div className="container-fox max-w-5xl">
-          <p className="mb-3 text-xs font-black uppercase tracking-[0.24em] text-accent">AI-Ready Procurement Links</p>
-          <h2 className="mb-8 text-3xl font-black uppercase text-primary md:text-4xl">Compare Backing Before Quotation</h2>
+          <p className="mb-3 text-xs font-black uppercase tracking-[0.24em] text-accent">Procurement Resources</p>
+          <h2 className="mb-8 text-3xl font-black uppercase text-primary md:text-4xl">Prepare Your Carpet Tile Project</h2>
           <div className="grid gap-4 md:grid-cols-2">
             {procurementGuideLinks.map((item) => (
               <Link key={item.href} href={item.href} className="border border-border bg-surface p-6 transition-colors hover:border-accent hover:bg-white">
