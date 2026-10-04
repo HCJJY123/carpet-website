@@ -1,5 +1,64 @@
 # Commercial product / application / procurement cluster
 
+## 2026-10-04 incremental round — tile RFQ quantity and inquiry preparation
+
+**Current status:** Source content implemented; local acceptance pending, not committed/pushed/deployed. Branch `content/tile-rfq-procurement-20261004`, production/rollback base `9b1cfdad96a280898b03de1c80e06ff7b7028583` (PR62 shared-image fix). Prior rollout entries below are historical; this round does not reverse them. Current instruction authorizes reversible implementation and local preview, not a new production release. No automation created.
+
+**Site and business:** VCARPETS, https://www.vcarpets.com, Tianjin Vcarpets Global Commercial Carpet Co., Ltd.; English B2B commercial carpet project/distributor/contractor procurement, existing `/contact#quote-form` and `/request-sample-box`. Next16.2.9, GitHubHCJJY123/carpet-website, Vercel. No other site/company content imported.
+
+### Evidence scope and priority
+
+Read current repo/history, product-image and zoom release evidence, earlier unimplemented tileRFQ supplement, actual RFQ article body/enhancement, blog renderer and current form source. Fresh production read2026-10-04 Asia/Shanghai: category, PP/bitumen product, RFQ guide, contact, sample request, root/blog sitemaps and robots (8responses); five pagesHTTP200, singleH1/self-canonical, no accidentalnoindex/X-Robots restriction. This is a targeted sample, not a full-site audit or proof of indexing. Scope snapshots: `/Users/haochangjian/Downloads/vcarpets-rfq-growth-qa-20261004/baseline.json` and `before-*.html`.
+
+Available connector resources expose no GSC/GA4/Clarity/lead dataset; none supplied, no rawlead or privateanalytics fetched. Cannot identify a measured site-wide conversion bottleneck or compute28-daychanges. Strongest actionable bottleneck in the inspected purchase path is **incomplete inquiry preparation**, supported by visible content and form capabilities, not inferred conversion numbers.
+
+| Candidate | Business relevance / impact / evidence (0–3 each) | Effort and risk | Decision |
+|---|---|---|---|
+| Clarify RFQ quantity units, packing assumptions and sample/configuration identity | 3 / 2 / 3 | Low; singleexisting guide, reversible | Implement; source screenshot had ambiguousweight/packing fields and existingguide has only generalarea/spares advice |
+| Align inquiry guidance to actual form and link returned product evaluation | 3 / 2 / 3 | Low; contentonly, backenduntouched | Implement with sameguide; phone/WhatsAppoptional, nofileupload, PPproduct→guide exists but returnproductlink missing |
+| New Qatar market or additionalhotelBlog | 2 / 1 / 1 | Medium; duplicateintent/factdependencies | Defer; no newtraffic/qualifiedlead evidence and preparedbroadloomdraft doesnotmatchtileproduct |
+| Rework existing mobileformscroll/leadtracking | 3 / 2 / 1 | Higher conversionrisk | Defer; recentliveinputs usable, no backendfailureevidence, no instrumentationexpansion |
+
+Scores rank this round only, not traffic or commercial outcomes. Existingimage click fix already deployed, do not reimplement. NewSKU or numericpackingpromise unsupported; do notcreate. No freshkeywordvolume, Googlefixedranking, heatmaps or qualityconversionrate claimed.
+
+### Baseline content map (all pages under www.vcarpets.com)
+
+| URL | Type / intent / buyer | Index baseline / links and CTA | Gap and action |
+|---|---|---|---|
+| `/products/carpet-tiles` | Category / modularproductselection / distributors and contractors | HTTP200,selfcanonical; PPproductcard and quoteentry | Noaccessfailurefound; preserve |
+| `/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles` | Product / configurationevaluation / commercialprojectbuyers | HTTP200,selfcanonical; RFQguide, sample, quote | Alreadyimproved andlive; retainfigures/images; establishguidebacklink only |
+| `/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers` | ExistingBuyingGuide / comparableRFQ / hotelofficeprojectbuyers | HTTP200,selfcanonical; categorylinks/sample/quote; priorreview2026-09-30 | Missingquantityunit/ownershiptables and actualready-to-sendbrief; filetransferguidanceambiguous; seoDescription unused byrenderer |
+| `/contact` | Existingconversion / provideprojectscope | HTTP200,selfcanonical; fourrequiredfields company,email,product,quantity; nofileinput | Guide should reflect realcapabilities; noformcodechange |
+| `/request-sample-box` | Sampleapproval / availableoptions | HTTP200,selfcanonical; currentsamplerequest | Preserve; do notpromise free/customsample dates |
+
+### Implemented tasks and evidence
+
+1. **RFQ decision content:** directanswer;netarea/allowance/spares/pieces/cartons table; drawingrevision, direction andresponsibility matrix; copyable RFQ brief; practicalbuyerquestions. Arithmetic0.25m²/tile and conditional24tiles=6m² is explicitlyillustrative, neverpackingpromise. No universalwaste or newparameter. Existinggenericadvice retained; its enhancedsection expanded ratherthannewURL.
+2. **Lower preparation ambiguity:** replace blanketpersonalcontact request with actualfourrequiredfields and optionalextras; state formhasnoupload and use existingsalesconversation/email forfiles. Product-specificCTA uses existing product query +quote-form anchor. No newfield/backend/event/data collection or real inquiry.
+3. **Complete purchase-path links and metadata:** relatedPP/bitumen,50x50option andnylonproducts; explicitPPproduct backlink;hotel document review/commercialterms; existingproduct→guide link preserved. Use actual`description` property consumedby renderer instead of relyingonignored`seoDescription`; preservetitle/H1/slug/canonical, allimages, author/publicationdate. Optional enhancementdateModified allows onlythisguide's reviewdate2026-10-04; allotherpostsretainpreviousfallback. Metadata/Article/sitemap use existingmechanisms.
+
+**Sources:** productionURLs above andcurrent repo; owner product/screenshots supplied2026-10-03 (unqualifiedweights/packaging show why unitsmatter, not proof ofpackingpromise); CRIofficial installation reference https://carpet-rug.org/resources/installation-standards/ and2019copyrightCRI104PDF https://carpet-rug.org/wp-content/uploads/2019/03/CRI-104-STANDARD-For-INSTALLATION-of-COMMERCIAL-CARPET.pdf, originallydownloaded2026-10-02, re-readplanning section5.1 locally2026-10-04. Supports trackingzone, drawingdate, construction/direction/excessmaterial; no numericstandard copied orlatestversionclaimed. Currentwebopen returnednoreadable evidence; donotpretendfreshstandardsverification. No changes tocertification/legalconclusions or crawlerpolicy require suchclaims.
+
+**Image decision:** nonewimages, noAcciotask. Existingapprovedillustrations anddisclaimers unchanged; coredecisionsusecrawlabletext/tables.
+
+### Acceptance and follow-up
+
+Need localOps/lint/build, live-equivalentmetadata/Article/sitemap invariants, allotherblogpost equality, affectedURL/internalanchors/images and actualbrowser375/390/768/1440. Checktables horizontallyscrollwithincontainer and CTAnavigationprefillsproductwithoutPII inURL. Noactualsubmission: receipt/delivery cannotbe claimed. Local previewnotproduction.
+
+Monitoring after authorizeddeployment: separate relatedorganicvisits→guide/productnavigation→existingCTAevents→actualsubmissions→sales-confirmedqualifiedinquiries. QualifiedB2B means productfit, intendeduse/projectscope, destination, reachablecontact and actionablefollow-up; not emaildomain or minimumquantityalone. Requestonlyaggregate/anonymizedanalytics whenavailable; no expandedtracking.
+
+Reviewcheckpoint2026-10-11: checkactualpublishingstate andtechnical/inquiryfeedback; ifnotdeployed, do notattributeanytrafficchange. For laterperformance review with availabledata, compare twofull28-daywindows endingatleastD+28 after deployment, allowingproviderdelay andseasonality. As of2026-10-04, nominalrecentcompletedwindows are2026-08-09–09-05 and2026-09-06–10-03, subjecttodataavailability; **no figures computed**. Do notjudgePR61/62 changes afteronly1–2days orcountIndexNowacceptanceasindexing. Trackproductmatch/missingunitrequests where sales canprovide anonymizedcounts.
+
+**Ledger increment:** 2026-10-04 | www.vcarpets.com | existingtileRFQURL | quantity/packing/formguidance andproductreturnpath | content+metadata+links | sourceimplemented, awaitinglocalacceptance/deploymentauthorization | base9b1cfda | measuresabove | review2026-10-11.
+
+**Acceptance completed 2026-10-04:** Local production build, Ops scope/runtime, SEO/link audits and diff check passed. ESLint: zero errors; only the unchanged ProductImage.tsx:43 warning. Evaluated all 59 exported article records against base9b1cfda: the other58 are deeply equal, and this guide's slug/title/H1/publicationdate/author and every image reference are preserved. Runtime verification: guide200,62internal target URLs200,25image resources200; actualdescription feeds metadata and Article, reviewdate2026-10-04 appears in Article and existing sitemap entries. Blog59 and root261 URL sets are exactly unchanged. Visibleblog entry and both product→guide/guide→product links exist. Related-product links are rendered once as cards by the existing template, not duplicated in next-step links.
+
+Browser local preview:375/390/768/1440 no horizontal document overflow; all3tables have internal overflow-x:auto and remain within the reading container. Actual390/1440 RFQ CTA navigation reaches the existing contact form with product=CommercialCarpetTileRFQ, fourrequiredfields company/email/product/quantity, nofileinput. Actual PP/bitumen card click reaches the existing product. No observed console warning/error in the navigation checks. No personal data entered or real inquiry sent; inbox/delivery and leadquality remain unverified.
+
+**Final state:** 已本地验证／待部署. No commit, push, GitHub PR, Vercel Preview or production deployment thisround. Prior authorizations covered already completed releases. Localpreview http://localhost:3046/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers . Evidence JSON:content-invariants.json/local-qa.json/responsive.json/navigation.json; screenshots local-quantity-375/390/768/1440.jpg, local-contact-390/1440.jpg and local-related-products-1440.jpg under the scoped evidencefolder. Follow-up2026-10-11 checks deployment state first; do not claim measuredgrowth from thisunpublishedcandidate.
+
+**2026-10-04 authorization update:** Owner now explicitly requested production deployment of the locally accepted candidate. Proceed through feature-branch commit, PR, required CI/public Preview and guarded merge; record exact head, merge and deployment identities with production evidence. No actual deployment success is implied by this authorization entry.
+
 Site: https://www.vcarpets.com
 Brand: VCARPETS
 Entity: Tianjin Vcarpets Global Commercial Carpet Co., Ltd.

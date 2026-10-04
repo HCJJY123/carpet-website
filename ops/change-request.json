@@ -1,15 +1,16 @@
 {
-  "task": "Close the existing shared image preview when its enlarged image is clicked again, restoring the underlying page",
-  "approvedBy": "Owner requested click-again image restoration on 2026-10-03 and explicitly authorized commit and production deployment on 2026-10-04",
-  "approvedCategories": ["content", "images", "operations"],
+  "task": "Strengthen the existing carpet tile RFQ guide with quantity-unit review, an actionable buyer brief and links back to real product configurations",
+  "approvedBy": "Owner authorized the B2B growth implementation and explicitly requested deployment of the completed RFQ guide candidate on 2026-10-04",
+  "approvedCategories": ["content", "operations"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/components/ImageProtection.tsx"
+    "src/lib/blog-data.ts",
+    "ops/content-growth-20260930.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "7c772df99a9b7966eba1d5e4b74e7975bda3564b",
-  "affectedUrls": ["Existing zoom-enabled product, project, blog and Russian product detail routes"],
-  "notes": "Shared ImageProtection only: distinguish overlay clicks from original image clicks, allow enlarged image clicks to close, preserve backdrop/X/Escape behavior and restore prior body overflow. Do not expand zoom eligibility or affect image links, thumbnails/buttons, navigation, forms, tracking, content, images, metadata or global layout. Snapshot EcoCore detail HTML and local browser/build evidence in /Users/haochangjian/Downloads/vcarpets-image-toggle-qa-20261003. Owner now authorizes commit, push, PR/Preview and production release through normal gates for this exact fix. No direct-main push or admin bypass; verify production after deployment."
+  "rollbackCommit": "9b1cfdad96a280898b03de1c80e06ff7b7028583",
+  "affectedUrls": ["/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers", "/blog", "/sitemaps/blog.xml", "/sitemap.xml"],
+  "notes": "Only the exact existing RFQ article record and its enhancement are edited: explain net area/pieces/cartons/spares, current drawing and layout assumptions; correct form-vs-email file guidance and optional contact details; add related PP/bitumen product link and explicit description metadata. Optional enhancement dateModified is supplied only for this article, retaining the prior fallback for all other posts. Keep slug/title/H1/primary intent/images/caption/author/URL/canonical; update article review date through existing mechanisms, not SEO algorithms. No new page, country, asset, form field, backend, event or tracking. Existing product-to-guide link remains; complete the return path without changing that product. Evidence in /Users/haochangjian/Downloads/vcarpets-rfq-growth-qa-20261004. Owner now authorizes commit/push, PR/Preview and normal guarded production merge after checks, followed by formal-domain verification; no direct-main push or admin bypass, no real inquiry submission."
 }
