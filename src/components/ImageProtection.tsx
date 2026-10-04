@@ -57,6 +57,7 @@ export default function ImageProtection() {
 
       const target = event.target;
       if (!(target instanceof Element)) return;
+      if (target.closest("[data-image-preview]")) return;
 
       const img = target.closest("img");
       if (!(img instanceof HTMLImageElement) || shouldIgnoreImage(img)) return;
@@ -90,11 +91,12 @@ export default function ImageProtection() {
       if (event.key === "Escape") setLightboxImage(null);
     };
 
+    const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     document.addEventListener("keydown", closeOnEscape);
 
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
       document.removeEventListener("keydown", closeOnEscape);
     };
   }, [lightboxImage]);
@@ -106,6 +108,8 @@ export default function ImageProtection() {
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/88 px-4 py-6"
       role="dialog"
       aria-modal="true"
+      aria-label="Image preview"
+      data-image-preview="true"
       onClick={() => setLightboxImage(null)}
     >
       <button
@@ -116,10 +120,7 @@ export default function ImageProtection() {
       >
         ×
       </button>
-      <div
-        className="relative h-[86vh] w-[94vw] max-w-7xl"
-        onClick={(event) => event.stopPropagation()}
-      >
+      <div className="relative h-[86vh] w-[94vw] max-w-7xl cursor-zoom-out">
         <Image
           src={lightboxImage.src}
           alt={lightboxImage.alt}
