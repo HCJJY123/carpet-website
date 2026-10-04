@@ -2,6 +2,14 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-10-03 — Shared image preview click-again close (local only)
+
+Owner requests all existing zoomable images close when the enlarged image is clicked again. Shared ImageProtection capture handler now excludes its own preview; removing the inner propagation blocker lets the enlarged image close through the existing backdrop handler. X and Escape remain, prior inline body overflow is restored on close, original page scroll remains untouched. Existing detail-route eligibility and linked/button image exclusions are unchanged. No content, assets, forms, tracking, navigation or SEO changes.
+
+Base/rollback:7c772df99a9b7966eba1d5e4b74e7975bda3564b. Branch:fix/image-preview-click-toggle-20261003. Local acceptance pending. Not committed, pushed or production deployed; prior release permission does not authorize this new deployment.
+
+**2026-10-04 release authorization:** Owner explicitly requested commit/deployment of this image-toggle fix. Local production build and Ops passed; lint has zero errors and the sole pre-existing ProductImage.tsx:43 warning. EcoCore390/1440 browser checks verify image-click/X/Escape/backdrop close and restored scroll/overflow across four open/close cycles per width. Additional scope and Preview/production acceptance will be recorded with PR release evidence; no claim of live completion before actual deployment.
+
 ## 2026-10-03 — PP/bitumen tile product content and owner-image Preview
 
 **Authorization:** Owner explicitly requested repository implementation and PR/Preview. Do not merge or deploy production.

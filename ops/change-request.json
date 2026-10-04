@@ -1,19 +1,15 @@
 {
-  "task": "Implement owner-supplied PP/bitumen carpet tile product content, four images and its existing Carpet Tiles category entry; create PR and Preview only",
-  "approvedBy": "Owner explicitly authorized repository implementation and PR/Preview on 2026-10-03 after specifying four product images, Brand Name Vcarpets and /products/carpet-tiles category",
+  "task": "Close the existing shared image preview when its enlarged image is clicked again, restoring the underlying page",
+  "approvedBy": "Owner requested click-again image restoration on 2026-10-03 and explicitly authorized commit and production deployment on 2026-10-04",
   "approvedCategories": ["content", "images", "operations"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "ops/pp-bitumen-product-preview-20261003.md",
-    "src/lib/data.ts",
-    "src/app/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles/page.tsx",
-    "src/lib/responsive-image-manifest.ts",
-    "public/images/optimized/pp-bitumen-tiles-20261003/**"
+    "src/components/ImageProtection.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "36a051b4460416293232e6683430b5310b87c11f",
-  "affectedUrls": ["/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles", "/products/carpet-tiles"],
-  "notes": "Only the existing exact product record and dedicated detail page are changed; category card consumes that record automatically. No duplicate product URL. Product Brand Name and its page-local JSON-LD brand use Vcarpets; organization identity unchanged. Use owner JPEG originals, hashed AVIF/WebP, full square composition and descriptive alt. Preserve old assets and unrelated manifest entries. Preserve existing FOB/MOQ/lead-time/availability values; do not import marketplace figures, reviews, supplier names, certificates or conflicting screenshot parameters. Correct only this product's descriptive identity and surface wording from supplied specifications, without unsupported fiber-percentage or non-slip claims. No new blog or Qatar page in this PR. No forms, tracking, navigation, dependencies or global SEO logic changes. Live HTML backups under /Users/haochangjian/Downloads/vcarpets-pp-bitumen-preview-evidence-20261003. Owner authorizes tests, commit, push and PR/Preview only; do not merge or deploy production. Keep change scope below 20 files."
+  "rollbackCommit": "7c772df99a9b7966eba1d5e4b74e7975bda3564b",
+  "affectedUrls": ["Existing zoom-enabled product, project, blog and Russian product detail routes"],
+  "notes": "Shared ImageProtection only: distinguish overlay clicks from original image clicks, allow enlarged image clicks to close, preserve backdrop/X/Escape behavior and restore prior body overflow. Do not expand zoom eligibility or affect image links, thumbnails/buttons, navigation, forms, tracking, content, images, metadata or global layout. Snapshot EcoCore detail HTML and local browser/build evidence in /Users/haochangjian/Downloads/vcarpets-image-toggle-qa-20261003. Owner now authorizes commit, push, PR/Preview and production release through normal gates for this exact fix. No direct-main push or admin bypass; verify production after deployment."
 }
