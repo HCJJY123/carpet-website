@@ -2,6 +2,16 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-10-04 — Existing tile RFQ procurement guide (local candidate)
+
+Scope: `/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers` only, with its inherited Blog list and existing sitemap metadata. Add quantity-unit/packing and ownership tables, copyablebuyerbrief, accurate form/file-transfer guidance, links back to existing PP/bitumen products and actual descriptionmetadata. No newURL/assets, no forms/tracking or globalSEOchanges. Keep published title/H1/canonical/author and currentimages; reviewdate2026-10-04 applies only to thisguide.
+
+Authorization: owner continuous-growth instruction permits evidence-based localimplementation and preview; no commit/push/productionpermission inferred from priorPR62. Base/rollback9b1cfdad96a280898b03de1c80e06ff7b7028583; branchcontent/tile-rfq-procurement-20261004. Evidence/priority/monitoring in existing `ops/content-growth-20260930.md`; freshsnapshot/evidence under `/Users/haochangjian/Downloads/vcarpets-rfq-growth-qa-20261004/`. Sourceimplemented; localacceptancepending. Notdeployed.
+
+**Local acceptance completed:** Ops scope/runtime, SEO/link audits, lint (zero errors; one unchanged ProductImage warning), production build and diff check pass.58unrelated article exports unchanged; title/H1/URL/images preserved.62internal URLs and25image resources200; Blog59/root261 URL sets retained with only scopedreviewdate updates.375/390/768/1440 table layout passes, actual390/1440 RFQ productprefill and productcard navigation pass; no real inquiry or console error. State: locally verified, awaiting deployment authorization; no commit/push/PR or production changes.
+
+**Release stage authorized 2026-10-04:** Owner explicitly requested deployment after receiving local acceptance. Authorize commit/push, PR/Preview and merge through normal required checks for this scoped candidate. Preserve the prior stage record; production success must be independently verified after ready deployment. No authorization for unrelated pages or tracking.
+
 ## 2026-10-03 — Shared image preview click-again close (local only)
 
 Owner requests all existing zoomable images close when the enlarged image is clicked again. Shared ImageProtection capture handler now excludes its own preview; removing the inner propagation blocker lets the enlarged image close through the existing backdrop handler. X and Escape remain, prior inline body overflow is restored on close, original page scroll remains untouched. Existing detail-route eligibility and linked/button image exclusions are unchanged. No content, assets, forms, tracking, navigation or SEO changes.

@@ -409,6 +409,7 @@ const baseBlogPosts: BlogPost[] = [
     title: "Commercial Carpet Tile RFQ Checklist for B2B Buyers",
     subtitle: "A practical RFQ template for buyers who want suppliers to quote the same project scope, same documents and same delivery assumptions.",
     date: "2026-08-22",
+    dateModified: "2026-10-04",
     author: "VCARPETS Technical Team",
     category: "Buying Guide",
     image: "/images/blog-series/commercial-carpet-tile-rfq-checklist/commercial-carpet-tile-rfq-intake-desk.webp",
@@ -416,11 +417,19 @@ const baseBlogPosts: BlogPost[] = [
     excerpt: "Use this commercial carpet tile RFQ checklist to define scope, construction, sample approval, subfloor condition, spare stock and commercial terms before asking suppliers for price.",
     seoTitle: "Commercial Carpet Tile RFQ Checklist | B2B Buyers | VCARPETS",
     seoDescription: "Use this RFQ checklist to define project scope, construction, sample approval, subfloor condition, spare stock and commercial terms before requesting carpet tile quotations.",
+    description: "Prepare a carpet tile RFQ with area, tile and carton quantities, backing, samples and delivery requirements. Keep cutting allowance and spare stock separate.",
+    relatedProductIds: ["pp-bitumen-backed-office-carpet-tiles", "50x50-nylon-pp-office-carpet-tiles", "nylon-office-carpet-tile"],
+    suggestedLinks: [
+      { label: "50x50 PP bitumen backed carpet tiles", href: "/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles" },
+      { label: "Hotel carpet procurement documents", href: "/blog/hotel-carpet-procurement-documents-checklist" },
+      { label: "Commercial terms and quotation basis", href: "/commercial-terms" },
+      { label: "Send Your Carpet Tile RFQ", href: "/contact?product=Commercial%20Carpet%20Tile%20RFQ#quote-form" },
+    ],
     content: [
       {
         title: "Why a Clear RFQ Matters",
         paragraphs: [
-          "Many carpet tile inquiries stay too vague: the buyer asks for price, but the factory still does not know the project zone, traffic level, backing, sample stage, adhesive condition or spare-stock plan.",
+          "A quote-ready carpet tile RFQ connects the project use and selected construction to a clear quantity basis. State whether quantities are net floor area, tile pieces or cartons; keep cutting allowance and retained replacement stock separate. Identify the drawing revision, sample reference, destination and target receiving date, and label estimates as provisional.",
           "A useful RFQ helps both sides compare the same scope. It reduces wrong quotations, repeated sample rounds, missed document requirements and last-minute delivery surprises.",
           "Before requesting a factory quote, prepare eight fields: project location, application zone, product construction, quantity, installation condition, sample requirement, document requirement and target delivery date."
         ]
@@ -483,9 +492,9 @@ const baseBlogPosts: BlogPost[] = [
       {
         title: "RFQ Fields to Send to VCARPETS",
         paragraphs: [
-          "Send buyer name, company, email, phone or WhatsApp, country, project type, product type, quantity, expected delivery date and message. If available, include floor plan, installation photo, target color, required documents and previous sample references.",
+          "The current contact form requires company, business email, product type and quantity or area. Add the destination, intended use, sample needs and target receiving date to explain the project. Name, WhatsApp and other additional details are optional; you do not need every technical answer before starting a clearly marked preliminary inquiry.",
           "For faster handling, use a short format: product, quantity, country, application, backing preference, sample need, delivery target and special documents. This gives the sales and technical team enough context to respond with a practical quotation path.",
-          "Use the contact form or email sales@vcarpets.com when the RFQ includes files or multiple project zones. Use WhatsApp for quick clarification, then keep final price and technical confirmations in written quotation form."
+          "The contact form accepts your project summary, not file uploads. Describe any available floor plan and its revision in the message, then arrange supporting-file transfer through the existing sales conversation or email sales@vcarpets.com. Do not send private customer correspondence to explain a requirement. Keep final price and technical confirmations in a written quotation."
         ],
         image: "/images/blog-series/commercial-carpet-tile-rfq-checklist/commercial-carpet-tile-rfq-checklist-flat-lay-clean.webp",
         imageAlt: "Commercial carpet tile RFQ checklist with samples, calculator and project notes",
@@ -1209,7 +1218,7 @@ const baseBlogPosts: BlogPost[] = [
   }
 ];
 
-const procurementGuideEnhancements: Record<string, { image: keyof typeof contentGrowthAssets; section: BlogSection }> = {
+const procurementGuideEnhancements: Record<string, { image: keyof typeof contentGrowthAssets; dateModified?: string; section: BlogSection }> = {
   "commercial-carpet-tile-backing-comparison-guide": {
     image: "B03",
     section: {
@@ -1240,8 +1249,9 @@ const procurementGuideEnhancements: Record<string, { image: keyof typeof content
   },
   "commercial-carpet-tile-rfq-checklist-b2b-buyers": {
     image: "B16",
+    dateModified: "2026-10-04",
     section: {
-      title: "Use One RFQ Brief across Fiber and Backing Alternatives",
+      title: "Turn the RFQ into a Comparable Quantity and Packing Brief",
       paragraphs: [],
       blocks: [
         { type: "paragraph", text: "For an office renovation, send the same project conditions with each nylon or PP request. Ask the supplier to list construction differences instead of presenting an alternative as automatically equivalent. Keep sample approval, technical review and bulk confirmation as separate decisions." },
@@ -1253,7 +1263,44 @@ const procurementGuideEnhancements: Record<string, { image: keyof typeof content
           ["Installation", "Substrate condition, fixing method and access restrictions"],
           ["Evidence and schedule", "Required standards, requested documents and site-delivery milestone"],
         ] },
-        { type: "paragraph", text: "Attach or describe the floor plan through the existing inquiry process where supported. Do not send private customer correspondence merely to explain the project. Use anonymized requirements and request a construction-specific quotation, sample plan and document review." },
+        { type: "paragraph", text: "Describe the floor plan and its revision in the contact form, then arrange supporting-file transfer through the existing sales conversation. The current form has no upload field. Use anonymized project requirements and request a construction-specific quotation, sample plan and document review." },
+        { type: "subheading", title: "Separate Net Area, Ordering Pieces and Retained Stock" },
+        { type: "paragraph", text: "A hotel or office carpet tile quotation should identify the zone, drawing revision, selected construction, colorway and intended layout. Net floor area is the starting point, not the final carton order. A striped design may change appearance when adjacent tiles change direction; confirm the permitted arrangement using the product instructions and physical sample, not a photograph alone." },
+        { type: "table", headers: ["Quantity record", "Buyer input", "Confirmation before ordering"], rows: [
+          ["Net installation area", "Measured coverage by room type or zone and drawing revision", "Which dimensions are measured and which remain provisional"],
+          ["Installation allowance", "Separate proposed allowance for the reviewed layout", "Whether cuts and boundaries are already included; avoid adding the same allowance twice"],
+          ["Retained replacement stock", "Separate requirement by color, construction and phase", "Batch identification, labeling and storage responsibilities"],
+          ["Ordering pieces", "Tile size and proposed purchase quantity", "The relationship to net area and agreed allowances"],
+          ["Carton quantity", "Requested packing or release phases", "Actual pieces per carton, packed area, carton dimensions and gross weight"],
+        ], note: "These are RFQ review fields, not a universal waste percentage or a product packing promise." },
+        { type: "paragraph", text: "For nominal 50x50cm tiles, one tile represents 0.25m² and four tiles represent 1m² before layout allowances. If a specific quotation confirms 24 pieces per carton, that carton represents 6m². The 24-piece figure is an arithmetic example, not the packing specification of every product. Confirm the actual unit before converting area to cartons or comparing freight." },
+        { type: "paragraph", text: "Ask whether a quoted weight is per tile, per square meter or per packed carton, and whether it is net or gross. Do not combine a marketplace single-item package weight with a bulk carton count. Different colors and phased releases should have separate quantities where the purchasing scope requires them." },
+        { type: "subheading", title: "Agree Who Confirms the Missing Information" },
+        { type: "table", headers: ["Decision", "Responsible input", "What the RFQ should record"], rows: [
+          ["Scope and timing", "Buyer or procurement team", "Destination, intended use, phase plan and required receiving date"],
+          ["Measurement and layout", "Project designer or local installer", "Current drawing, verified dimensions, tile direction and site interfaces"],
+          ["Product and packing", "Supplier for the nominated construction", "Fiber/backing, sample reference, actual packing unit and quotation assumptions"],
+          ["Purchase release", "The parties named in the project approval process", "Agreed quantity, sample/specification revision, terms and open conditions"],
+        ], note: "Responsibilities must be agreed for the actual project. This guide does not offer on-site measurement, installation or consultant approval." },
+        { type: "subheading", title: "A Copyable Carpet Tile RFQ Brief" },
+        { type: "paragraph", text: "Please review our carpet tile requirement and identify the assumptions in your proposal. We can provide the following information; items not yet finalized should be treated as preliminary rather than approved for purchasing." },
+        { type: "list", items: [
+          { title: "Project:", text: "Country and city, building use, hotel or office zones, and new installation or refurbishment." },
+          { title: "Quantities:", text: "Net area by zone, tile size, proposed installation allowance and separate retained replacement stock." },
+          { title: "Product:", text: "Preferred carpet tile or reference, fiber/backing choice, colorway and permitted alternatives." },
+          { title: "Layout:", text: "Drawing identifier and revision, measurement status, tile direction and any phased release requirements." },
+          { title: "Approval:", text: "Sample needs, existing sample reference and the technical documents required for the nominated construction." },
+          { title: "Packing and timing:", text: "Destination, carton-label requirements, target sample review and target receiving date." },
+          { title: "Quotation basis:", text: "Confirm pieces and area per carton, packing dimensions, gross weight and the named FOB shipment point with inclusions and exclusions." },
+        ] },
+        { type: "callout", label: "Ask for a comparable proposal", text: "Please keep product alternatives separate, distinguish net area from ordering quantity, and identify any assumptions requiring our installer’s review. Do not treat a preliminary area estimate or an unapproved sample as the final purchase basis." },
+        { type: "subheading", title: "Buyer Questions before Sending the RFQ" },
+        { type: "list", items: [
+          { title: "Can I inquire without final drawings?", text: "Yes. State the estimated area, use and destination, mark the drawing status as preliminary, and ask which information is required before a final quantity can be approved." },
+          { title: "Is spare stock the same as cutting allowance?", text: "No. Cutting allowance relates to the planned installation; retained stock supports later replacement. Record them separately and avoid double-counting." },
+          { title: "Can I upload drawings in the contact form?", text: "The current form has no upload field. Summarize the requirement there and arrange file transfer through the existing sales conversation or email." },
+          { title: "Does a PP sample approve a nylon alternative?", text: "No. Confirm the sample and documents for each nominated configuration; a similar color or pattern does not establish equivalent construction or performance." },
+        ] },
       ],
     },
   },
@@ -1272,7 +1319,7 @@ export const blogPosts: BlogPost[] = baseBlogPosts.map((post) => {
   ];
   return {
     ...post,
-    dateModified: "2026-09-30",
+    dateModified: enhancement.dateModified ?? "2026-09-30",
     image: image.src,
     imageAlt: image.alt,
     imageUnoptimized: false,
