@@ -1,16 +1,27 @@
 {
-  "task": "Strengthen the existing carpet tile RFQ guide with quantity-unit review, an actionable buyer brief and links back to real product configurations",
-  "approvedBy": "Owner authorized the B2B growth implementation and explicitly requested deployment of the completed RFQ guide candidate on 2026-10-04",
-  "approvedCategories": ["content", "operations"],
+  "task": "Publish an original Vcarpets printed broadloom pattern-repeat and seam-planning buyer guide using anonymized procurement questions, with a backlink from the existing printing guide",
+  "approvedBy": "Owner explicitly requested publication using the supplied information and brand spelling Vcarpets on 2026-10-08",
+  "approvedCategories": [
+    "content",
+    "operations"
+  ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
+    "keyword-map.csv",
+    "ops/content-growth-20260930.md",
     "src/lib/blog-data.ts",
-    "ops/content-growth-20260930.md"
+    "src/lib/blog-posts/printed-broadloom-pattern-repeat-seam-planning.ts"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "9b1cfdad96a280898b03de1c80e06ff7b7028583",
-  "affectedUrls": ["/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers", "/blog", "/sitemaps/blog.xml", "/sitemap.xml"],
-  "notes": "Only the exact existing RFQ article record and its enhancement are edited: explain net area/pieces/cartons/spares, current drawing and layout assumptions; correct form-vs-email file guidance and optional contact details; add related PP/bitumen product link and explicit description metadata. Optional enhancement dateModified is supplied only for this article, retaining the prior fallback for all other posts. Keep slug/title/H1/primary intent/images/caption/author/URL/canonical; update article review date through existing mechanisms, not SEO algorithms. No new page, country, asset, form field, backend, event or tracking. Existing product-to-guide link remains; complete the return path without changing that product. Evidence in /Users/haochangjian/Downloads/vcarpets-rfq-growth-qa-20261004. Owner now authorizes commit/push, PR/Preview and normal guarded production merge after checks, followed by formal-domain verification; no direct-main push or admin bypass, no real inquiry submission."
+  "rollbackCommit": "f23cfa3b6588ebb47209f3f647465747d4cabb48",
+  "affectedUrls": [
+    "/blog/printed-broadloom-pattern-repeat-seam-planning",
+    "/blog/carpet-printing-technology-design-to-installation-guide",
+    "/blog",
+    "/sitemaps/blog.xml",
+    "/sitemap.xml"
+  ],
+  "notes": "Feature branch, Vercel Preview, required checks and PR merge; no direct-main push. New content uses Vcarpets. No global brand/legal identity rewrite, form/backend/tracking/configuration changes or image generation. Reuse a clearly labeled existing illustration. Do not publish raw buyer data, third-party company cases, unverified cinema supply, SKU mapping or Philippine sample/logistics promises. Cinema product refresh and Philippine entertainment page remain unpublished drafts pending business evidence. Existing product/market URLs intact. Sitemap inclusion uses existing mechanisms. Verify metadata, links, image, mobile layout and existing quote navigation without a real submission."
 }
