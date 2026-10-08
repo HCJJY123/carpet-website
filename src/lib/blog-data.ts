@@ -1,3 +1,4 @@
+import { printedBroadloomPatternRepeatGuide } from "@/lib/blog-posts/printed-broadloom-pattern-repeat-seam-planning";
 import { hotelCarpetPatternsGuide } from "@/lib/blog-posts/hotel-carpet-patterns-guide";
 import { commercialCarpetTileFireRatingVocDocumentsGuide } from "@/lib/blog-posts/commercial-carpet-tile-fire-rating-voc-documents-guide";
 import { commercialCarpetTileSpecificationChecklistGuide } from "@/lib/blog-posts/commercial-carpet-tile-specification-checklist-guide";
@@ -80,6 +81,7 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  printedBroadloomPatternRepeatGuide,
   nylonPolyesterPolypropyleneComparison,
   commercialCarpetSourcingDirectory,
   commercialCarpetTileFireRatingVocDocumentsGuide,
@@ -698,6 +700,7 @@ const baseBlogPosts: BlogPost[] = [
     description: "How digital carpet printing improves flexibility, revision speed, and production control for custom projects.",
     keywords: ["carpet printing", "digital inkjet carpet", "custom pattern carpet", "color precision"],
     date: "2026-06-23",
+    dateModified: "2026-10-08",
     author: "VCARPETS Technical Team",
     category: "Design & Production",
     image: "/images/blog-series/blog-3/Blog_3_Printing_Process.webp",
@@ -742,6 +745,7 @@ const baseBlogPosts: BlogPost[] = [
       }
     ],
     suggestedLinks: [
+      { label: "Plan Pattern Repeats, Seams and Order Quantity", href: "/blog/printed-broadloom-pattern-repeat-seam-planning" },
       { label: "Custom Floral Printed Hotel Carpet", href: "/products/wall-to-wall/custom-floral-printed-hotel-carpet" },
       { label: "3D Printed Banquet Hall Carpet", href: "/products/wall-to-wall/3d-printed-banquet-hall-carpet" },
       { label: "Custom Project Inquiry", href: "/contact" },

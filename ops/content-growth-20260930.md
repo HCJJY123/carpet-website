@@ -1,5 +1,36 @@
 # Commercial product / application / procurement cluster
 
+## 2026-10-08 — Pattern-repeat planning publication round
+
+Site: www.vcarpets.com. New-content brand: **Vcarpets**, owner requested. Legal identity unchanged. Owner explicitly authorizes publishing through Preview, required checks and PR. Base/rollback `f23cfa3b6588ebb47209f3f647465747d4cabb48`.
+
+### Evidence boundary and content decision
+
+Reviewed the previously prepared three-page content package, current repository/ledger, existing printing article, sample approval guide, broadloom calculator, printed range and current quote flow. This is a targeted content review, not a complete site audit. Four private marketplace files provide demand clues, not Vcarpets supply records. The source shop belongs to another named company; do not relabel its customers or sales as Vcarpets. Visitor dates and destination fields need independent interpretation; buyer country is not necessarily shipment country. No raw files, contacts, messages or case claims enter this public repository.
+
+Demand themes include design references, material choice, MOQ, samples, timing and actual receiving destinations. No readable records confirm cinema supply, the specified marketplace SKU or Philippine sample acceptance. Keyword matches are not qualified inquiries, orders or measured search volume. No GSC/GA4 outcome data available for this round.
+
+| Candidate | Relevance / intent / evidence / gap / readiness / conversion (0–3) | Action |
+|---|---|---|
+| Printed broadloom repeat/seam/quantity buyer guide | 3 / 3 / 2 / 3 / 3 / 3 = 17 | New guide; different decision intent from existing printing process article |
+| Existing printing guide next-step link | 3 / 2 / 3 / 2 / 3 / 3 = 16 | Add backlink to completed planning guide; preserve existing title/body/images |
+| Existing cinema product refresh | 3 / 3 / 1 / 2 / 0 / 3 = 12 | Keep external content-package draft; supply and exact product records required |
+| Philippine entertainment application page | 3 / 3 / 1 / 2 / 0 / 3 = 12 | Keep external draft; destination-specific service and sample ability unconfirmed |
+
+Scores only order this round. They predict neither traffic nor rankings. No inflatable product is added to this commercial-carpet site from unrelated inbound inquiries.
+
+### Delivery and facts
+
+New URL `/blog/printed-broadloom-pattern-repeat-seam-planning`, English, commercial project buyers/designers/installers at layout and approval stage. Primary keyword `printed broadloom pattern repeat`; related seam/cutting/quantity/artwork concepts are handled on this URL. The guide supplies measurement and RFQ tables, approval record and practical FAQ. Uses Vcarpets in author/title/body; no fictitious technical credentials. Existing printing guide links back; Blog list provides additional discovery. Links return to existing printed range, calculator, sample checklist and `/contact?product=Printed%20Broadloom%20Carpet#quote-form`. No links to the unpublished Philippine draft or strengthened cinema draft.
+
+Industry sources reviewed 2026-10-08: https://carpet-rug.org/carpet-for-business/carpet-installation-information/ (accurate measurement, seam/direction drawings, CRI104 reference); https://joycarpets.com/resources/installation-and-care/ (patterned broadloom guidance and contractor recommendation); https://joycarpets.com/carpet/cinematic (separate repeat and width record). Source examples are explicitly distinguished from Vcarpets specifications. No source proves company supply, certification or market service. Article contains no generic numerical MOQ/lead-time or fire/acoustic promise. Arithmetic width example is expressly hypothetical.
+
+Images: reuse `contentGrowthAssets.P08` with its existing AI-illustration disclaimer and alt; no Accio generation, false case photo or certificate. Crawlable text handles all critical procurement decisions.
+
+Status: source implemented, local and Preview checks pending; not yet published. Required acceptance: Ops scope, SEO/link audit, lint/build, HTTP/canonical/H1/Article/sitemap, all guide targets and image, mobile layout, quote prefill/anchor without submission. Existing conversion backend/events unchanged. Production verification to follow guarded merge. No claim of indexing or AI recommendations.
+
+Next: verify publication; obtain construction/supply documents before cinema refresh; obtain Philippine inquiry/sample/shipping scope confirmation before country page. Monitor guide-to-product/quote actions and sales-confirmed product fit separately from raw form counts when aggregate data becomes available.
+
 ## 2026-10-04 incremental round — tile RFQ quantity and inquiry preparation
 
 **Current status:** Source content implemented; local acceptance pending, not committed/pushed/deployed. Branch `content/tile-rfq-procurement-20261004`, production/rollback base `9b1cfdad96a280898b03de1c80e06ff7b7028583` (PR62 shared-image fix). Prior rollout entries below are historical; this round does not reverse them. Current instruction authorizes reversible implementation and local preview, not a new production release. No automation created.
@@ -164,3 +195,5 @@ At the initial local-validation checkpoint, public Preview verification, CI gate
 - Keep rollback e05f901b4e1ffa82b70d25cf1fe787ac3f99e743. Next work should start from production main and address a differentiated, evidenced procurement gap; do not publish the remaining images merely because the archive exists. Existing global performance/certification assertions were not verified by this scoped release and require their own source-evidence review.
 
 The live indexed originals were backed up under /tmp/vcarpets-content-growth-20261001 before content edits. Release remains feature branch → PR → successful checks + public Preview → authorized merge → production verification. Update this ledger with actual evidence, never treat local checks as production results.
+
+**Local acceptance 2026-10-08:** Ops scope/runtime checks, SEO/link audits, production build and diff check pass. ESLint zero errors and no new warnings; one existing ProductImage img warning remains. New guide HTTP200, single H1, self-canonical and Article date correct, no accidental noindex; 64 internal targets and hero respond200. Blog sitemap60/root262 (each adds exactly one URL). Existing printing guide backlink and Blog listing visible. Preview/mobile acceptance and production verification pending.

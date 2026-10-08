@@ -2,6 +2,12 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-10-08 — Printed broadloom repeat and seam planning
+
+Owner explicitly authorizes publication and requests Vcarpets brand spelling for new content. Add one original buyer guide at `/blog/printed-broadloom-pattern-repeat-seam-planning` and a next-step backlink from the existing printing technology guide. Existing Blog listing and sitemap generation include the new record; no global SEO algorithms changed. Reuse the labeled P08 application illustration, no new generated assets. No product numbers, customer cases, certification or delivery promises added. Uploaded buyer data remains private; it supplies anonymized procurement questions only. Cinema product refresh and Philippine entertainment page remain unpublished pending supply/sample evidence.
+
+Branch `content/pattern-repeat-guide-20261008`; rollback `f23cfa3b6588ebb47209f3f647465747d4cabb48`. Production HTML for existing printing article, Blog index and Blog sitemap backed up before editing. Scope and keyword ownership recorded; checks and Preview acceptance pending. No conversion-system modifications or real inquiry submission.
+
 ## 2026-10-04 — Existing tile RFQ procurement guide (local candidate)
 
 Scope: `/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers` only, with its inherited Blog list and existing sitemap metadata. Add quantity-unit/packing and ownership tables, copyablebuyerbrief, accurate form/file-transfer guidance, links back to existing PP/bitumen products and actual descriptionmetadata. No newURL/assets, no forms/tracking or globalSEOchanges. Keep published title/H1/canonical/author and currentimages; reviewdate2026-10-04 applies only to thisguide.
@@ -1051,3 +1057,5 @@ Final local acceptance: mobile footer clearance is fixed; corrected production b
 **Rollback:** `9c12e9902f149e83e87a785cf4fde2d4ed3149fd`. Live HTML backup and source/asset hashes under `/tmp/vcarpets-hotel-hero-v2-20261001/`. Previous PR59 local release records remain untouched in the original worktree. Validation and release results follow in the PR evidence; this entry alone is not a claim of production completion.
 
 **Local acceptance:** Ops scope/runtime checks, SEO/link audits, diff checks and webpack production build passed. ESLint: zero errors, only the pre-existing `ProductImage.tsx:43` warning. HTTP verification: article and blog 200, 18 unique image resources 200 with exact source-byte hashes, 59 blog sitemap entries unchanged; title, description, H1, canonical, dates, article body and five body illustrations unchanged. Open Graph and Article image point to v2; Twitter retains its existing generic cover. The guide's current blog-topic cards are compact text-only, so no new thumbnail or card layout was introduced. Responsive browser checks at 375/390/768/1440 passed with loaded AVIF variants, complete composition, eager/high priority, preserved caption and no horizontal overflow or observed console warnings/errors. Screenshots under `/Users/haochangjian/Downloads/vcarpets-hotel-hero-v2-release-evidence/`. Preview/production completion must be verified separately.
+
+**Local acceptance 2026-10-08:** Ops scope/runtime checks, SEO/link audits, production build and diff check pass. ESLint zero errors and no new warnings; one existing ProductImage img warning remains. New guide HTTP200, single H1, self-canonical and Article date correct, no accidental noindex; 64 internal targets and hero respond200. Blog sitemap60/root262 (each adds exactly one URL). Existing printing guide backlink and Blog listing visible. Preview/mobile acceptance and production verification pending.
