@@ -53,7 +53,7 @@ export default function CountryApplicationLandingPage({ page }: { page: CountryA
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "VCARPETS", item: absoluteUrl("/") },
       { "@type": "ListItem", position: 2, name: "Markets", item: absoluteUrl("/markets") },
-      { "@type": "ListItem", position: 3, name: page.countryName, item: absoluteUrl(`/markets/${page.market}`) },
+      { "@type": "ListItem", position: 3, name: page.countryName, item: absoluteUrl(page.countryHubPath ?? `/markets/${page.market}`) },
       { "@type": "ListItem", position: 4, name: page.applicationName, item: absoluteUrl(page.path) },
     ],
   };
@@ -103,6 +103,7 @@ export default function CountryApplicationLandingPage({ page }: { page: CountryA
           </Link>
         </div>
       </PageHero>
+      {page.heroImageCaption ? <p className="container-fox py-3 text-xs leading-6 text-muted">{page.heroImageCaption}</p> : null}
 
       <section className="section-padding">
         <div className="container-fox grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
@@ -205,6 +206,14 @@ export default function CountryApplicationLandingPage({ page }: { page: CountryA
         </div>
       </section>
 
+      {page.procurementSections?.map((section) => (
+        <section key={section.title} className="section-padding border-t border-border">
+          <div className="container-fox max-w-5xl">
+            <h2 className="mb-6 text-3xl font-black leading-tight md:text-4xl">{section.title}</h2>
+            <div className="space-y-5">{section.paragraphs.map((paragraph) => <p key={paragraph.slice(0, 64)} className="leading-8 text-muted">{paragraph}</p>)}</div>
+          </div>
+        </section>
+      ))}
       <section className="section-padding" data-funnel-section="country_application_faq">
         <div className="container-fox max-w-5xl">
           <p className="text-center text-xs font-black uppercase tracking-[0.14em] text-accent">Answer-first buyer FAQ</p>

@@ -1,27 +1,39 @@
 {
-  "task": "Publish an original Vcarpets printed broadloom pattern-repeat and seam-planning buyer guide using anonymized procurement questions, with a backlink from the existing printing guide",
-  "approvedBy": "Owner explicitly requested publication using the supplied information and brand spelling Vcarpets on 2026-10-08",
+  "task": "Publish owner-confirmed cinema carpet refresh and Philippine entertainment market page under Vcarpets",
+  "approvedBy": "Owner authorizes remaining publication and confirms supply, linked product, custom patterns/colors, Philippine B2B inquiries and paid samples, FOB Tianjin Port on 2026-10-08",
   "approvedCategories": [
     "content",
-    "operations"
+    "operations",
+    "seo-global"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "keyword-map.csv",
     "ops/content-growth-20260930.md",
-    "src/lib/blog-data.ts",
-    "src/lib/blog-posts/printed-broadloom-pattern-repeat-seam-planning.ts"
+    "keyword-map.csv",
+    "src/lib/data.ts",
+    "src/app/products/wall-to-wall/cinema-theater-carpet/page.tsx",
+    "src/components/ApplicationProductPage.tsx",
+    "src/lib/country-application-pages.ts",
+    "src/lib/philippines-entertainment-page.ts",
+    "src/components/CountryApplicationLandingPage.tsx",
+    "src/lib/sitemap-data.ts",
+    "src/lib/blog-posts/printed-broadloom-pattern-repeat-seam-planning.ts",
+    "src/app/sitemap-markets.xml/route.ts"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "f23cfa3b6588ebb47209f3f647465747d4cabb48",
+  "rollbackCommit": "cfda7482a7ac40c42712c04ae504db7cfe873f14",
   "affectedUrls": [
+    "/products/wall-to-wall/cinema-theater-carpet",
+    "/markets/ph/entertainment-venue-carpet",
     "/blog/printed-broadloom-pattern-repeat-seam-planning",
-    "/blog/carpet-printing-technology-design-to-installation-guide",
-    "/blog",
-    "/sitemaps/blog.xml",
-    "/sitemap.xml"
+    "/markets",
+    "/products/wall-to-wall",
+    "/products/printed-carpet",
+    "/sitemap.xml",
+    "/sitemap-markets.xml",
+    "/sitemaps/products.xml"
   ],
-  "notes": "Feature branch, Vercel Preview, required checks and PR merge; no direct-main push. New content uses Vcarpets. No global brand/legal identity rewrite, form/backend/tracking/configuration changes or image generation. Reuse a clearly labeled existing illustration. Do not publish raw buyer data, third-party company cases, unverified cinema supply, SKU mapping or Philippine sample/logistics promises. Cinema product refresh and Philippine entertainment page remain unpublished drafts pending business evidence. Existing product/market URLs intact. Sitemap inclusion uses existing mechanisms. Verify metadata, links, image, mobile layout and existing quote navigation without a real submission."
+  "notes": "Feature branch/Preview/CI/PR merge. Product URL and ID preserved. Replace unverified cinema numeric/technical claims with configuration-specific confirmation; no inferred Alibaba specs. Scoped optional content/caption props preserve other template outputs. Country-specific hub breadcrumb and optional modification date through existing sitemap mechanism. New brand Vcarpets; legal Tianjin Vcarpets Global Commercial Carpet Co., Ltd. Owner clarifies RENOFLOR source-shop identity migration; historical procurement questions belong to same business but do not prove fulfillment or certificates. No forms/backend/tracking changes, no real inquiry, no new images. Reuse clearly labeled illustration; FOB Tianjin Port and paid Philippine sample requests confirmed, sample type/cost/timing confirmed per project."
 }

@@ -86,7 +86,7 @@ export function getSitemapEntries(): SitemapEntry[] {
   solutionPages.forEach((page) => add({ path: `/solutions/${page.slug}`, lastModified: defaultModified, changeFrequency: "monthly", priority: 0.78 }));
   ruB2BPages.forEach((page) => add({ path: `/ru/${page.slug}`, lastModified: "2026-08-01", changeFrequency: "monthly", priority: 0.85 }));
   countryMarketPages.forEach((page) => add({ path: page.path, lastModified: page.updatedDate ?? "2026-08-19", changeFrequency: "monthly", priority: page.kind === "gold" ? 0.86 : 0.84 }));
-  countryApplicationPages.forEach((page) => add({ path: page.path, lastModified: "2026-08-19", changeFrequency: "monthly", priority: page.market === "sg" ? 0.85 : 0.83 }));
+  countryApplicationPages.forEach((page) => add({ path: page.path, lastModified: page.updatedDate ?? "2026-08-19", changeFrequency: "monthly", priority: page.market === "sg" ? 0.85 : 0.83 }));
 
   return [...entries.values()].sort((left, right) => left.url.localeCompare(right.url));
 }

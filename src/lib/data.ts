@@ -734,38 +734,33 @@ export const products: Product[] = [
   },
   {
     id: "cinema-theater-carpet",
-    name: "Cinema and Theater Carpet",
+    name: "Custom Cinema and Theater Carpet",
     category: "wall-to-wall",
-    description: "Custom patterned commercial broadloom for cinema aisles, theater auditoriums, lobbies, concession areas, and entertainment venues.",
-    longDescription: "VCARPETS Cinema and Theater Carpet is a project-based broadloom program for auditoriums, cinema aisles, theater lobbies, concession areas, and entertainment venues. Pattern scale, aisle visibility, acoustic construction, seam planning, cleaning access, fire-performance documents, underlay, and installation details must be matched to the venue and confirmed for the exact quoted construction.",
-    image: "/images/case-series/case-3/Case_3_Casino_Hall.webp",
-    imageAlt: "Patterned commercial broadloom carpet for a cinema or theater entertainment interior",
-    moq: "300 SQM",
-    moqTiers: { sample: "Material Swatch Available", trialOrder: "100 SQM Approved Design", project: "300 SQM" },
-    leadTime: "20-30 Days After Artwork Approval",
-    fobPrice: { display: "US$4.20-9.50 / SQM", lowPrice: "4.20", highPrice: "9.50", currency: "USD", unit: "SQM" },
+    description: "Custom patterned wall-to-wall carpet for cinema and theater projects. Review venue zones, physical samples, repeat and the nominated construction before ordering.",
+    longDescription: "Vcarpets supplies custom cinema and theater carpet with pattern and colour customisation. Material, backing, pile and roll width are confirmed for the selected configuration. Paid sample requests are accepted, including for Philippine B2B buyers; sample format, cost and timing require project confirmation. Bulk quotations are FOB Tianjin Port. Local installation and venue approvals remain with the buyer and appointed project partners.",
+    image: "/images/optimized/content-growth-20260929/custom-printed-commercial-carpet-hospitality-552b7ce043.webp",
+    imageAlt: "Illustrative hospitality interior with geometric patterned broadloom carpet; not a cinema installation or product photograph",
+    moq: "Confirm Selected Design and Construction",
+    moqTiers: { sample: "Paid Sample Request; Confirm Format", trialOrder: "Confirm Design and Quantity", project: "Confirmed in Written Quotation" },
+    leadTime: "Confirm after Construction, Quantity and Approval Review",
     spec: {
-      material: "Printed Nylon / Synthetic Blend Option",
-      size: "4m Broadloom Width",
-      colors: [
-        { name: "Auditorium Navy", hex: "#1F3247" },
-        { name: "Burgundy", hex: "#713A43" },
-        { name: "Gold Accent", hex: "#B49755" }
-      ]
+      material: "Confirm Fibre and Construction in Quotation",
+      size: "Roll Width and Length Confirmed per Configuration",
+      colors: []
     },
     technicalSpecs: {
-      fireRating: "ASTM E648 Class I / EN Option; Confirm Venue Requirement",
-      trafficClass: "Heavy Commercial Entertainment Venue",
-      fiber: "Printed Nylon / Synthetic Blend Option",
-      yarnSystem: "Tufted Cut Pile / Printed Broadloom",
-      backing: "ActionBac / Project Backing Option",
-      pileWeight: "800-1200 g/sqm",
-      totalThickness: "8-11mm",
-      rollWidth: "4m",
-      soundInsulation: "Acoustic Underlay Option",
-      antistatic: "Permanent Option"
+      fireRating: "Construction-Specific Document Review; Provide Required Test Method",
+      trafficClass: "Review Venue Traffic and Maintenance Requirements",
+      fiber: "Confirm Selected Fibre in Written Quotation",
+      yarnSystem: "Confirm Production Route and Pile Construction",
+      backing: "Confirm Selected Backing and Attachment Compatibility",
+      pileWeight: "Confirm Selected Construction",
+      totalThickness: "Confirm Selected Construction",
+      rollWidth: "Confirm Available Width for Selected Configuration",
+      soundInsulation: "Request Data for the Nominated Floor Assembly",
+      antistatic: "Confirm Requirement and Supporting Product Evidence"
     },
-    features: ["Custom Auditorium Pattern", "Aisle and Lobby Zoning", "Acoustic Construction Option", "Venue Fire Document Review"]
+    features: ["Custom Patterns and Colours", "Zone and Seam Planning", "Paid Sample Requests", "FOB Tianjin Port"]
   },
   {
     id: "commercial-stair-carpet-runner",

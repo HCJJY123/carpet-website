@@ -1,3 +1,5 @@
+import { philippinesEntertainmentPage } from "@/lib/philippines-entertainment-page";
+
 export type CountryApplicationPage = {
   market: string;
   slug: string;
@@ -20,6 +22,10 @@ export type CountryApplicationPage = {
   localTerms: string[];
   heroImage?: string;
   heroImageAlt?: string;
+  heroImageCaption?: string;
+  updatedDate?: string;
+  countryHubPath?: string;
+  procurementSections?: { title: string; paragraphs: string[] }[];
   heroProductId: string;
   productIds: string[];
   guideLinks: { href: string; label: string; description: string }[];
@@ -31,6 +37,7 @@ function createPage(page: Omit<CountryApplicationPage, "path">): CountryApplicat
 }
 
 export const countryApplicationPages: CountryApplicationPage[] = [
+  philippinesEntertainmentPage,
   createPage({
     market: "ro",
     slug: "office-carpet-tiles",
