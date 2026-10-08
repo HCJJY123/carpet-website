@@ -24,6 +24,8 @@ export const printedBroadloomPatternRepeatGuide: BlogPost = {
   h1ImageAspectRatio: `${hero.width} / ${hero.height}`,
   excerpt: "A buyer's planning checklist for repeat dimensions, roll format, seam layout, sample approval and a comparable printed broadloom RFQ.",
   suggestedLinks: [
+    { label: "Custom Cinema and Theater Carpet", href: "/products/wall-to-wall/cinema-theater-carpet" },
+    { label: "Philippines Cinema and Entertainment Projects", href: "/markets/ph/entertainment-venue-carpet" },
     { label: "Review Printed Carpet Options", href: "/products/printed-carpet" },
     { label: "Broadloom Waste Calculator: Preliminary Planning", href: "/tools/broadloom-carpet-waste-calculator" },
     { label: "Commercial Carpet Sample Approval Checklist", href: "/blog/commercial-carpet-sample-approval-checklist" },

@@ -109,7 +109,7 @@ function specCards(product: ConversionProduct) {
   ];
 }
 
-export function ProductConversionPanel({ product }: { product: ConversionProduct }) {
+export function ProductConversionPanel({ product, paidSamples = false }: { product: ConversionProduct; paidSamples?: boolean }) {
   const whatsappUrl = getContactBridgeUrl(productMessage(product, "I would like to discuss a project inquiry"), {
     placement: "product_conversion_panel",
     product: product.name,
@@ -208,10 +208,10 @@ export function ProductConversionPanel({ product }: { product: ConversionProduct
       </div>
 
       <Link
-        href={`/request-sample-box?product=${encodeURIComponent(product.name)}`}
+        href={paidSamples ? `/contact?product=${encodeURIComponent(product.name)}#quote-form` : `/request-sample-box?product=${encodeURIComponent(product.name)}`}
         className="block border border-accent bg-white px-4 py-4 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-primary transition-all hover:bg-accent hover:text-white"
       >
-        Request Free Sample Box
+        {paidSamples ? "Request Paid Sample Details" : "Request Free Sample Box"}
       </Link>
     </div>
   );
@@ -230,7 +230,7 @@ export function ProductSpecCards({ product }: { product: ConversionProduct }) {
   );
 }
 
-export function BuyerReasons({ product }: { product?: ConversionProduct } = {}) {
+export function BuyerReasons({ product, paidSamples = false }: { product?: ConversionProduct; paidSamples?: boolean } = {}) {
   const reasons = [
     { title: "Factory Supply", text: "Direct commercial carpet production with export support." },
     { title: "Custom Pattern", text: "Pattern, color, backing, and size matched to project needs." },
@@ -278,10 +278,10 @@ export function BuyerReasons({ product }: { product?: ConversionProduct } = {}) 
                 Send Inquiry
               </Link>
               <Link
-                href={`/request-sample-box${product ? `?product=${encodeURIComponent(product.name)}` : ""}`}
+                href={paidSamples && product ? `/contact?product=${encodeURIComponent(product.name)}#quote-form` : `/request-sample-box${product ? `?product=${encodeURIComponent(product.name)}` : ""}`}
                 className="flex min-h-12 items-center justify-center border border-border bg-surface px-5 py-4 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-primary transition-all hover:border-primary hover:bg-white"
               >
-                Request Sample Box
+                {paidSamples ? "Request Paid Sample Details" : "Request Sample Box"}
               </Link>
             </div>
           </div>

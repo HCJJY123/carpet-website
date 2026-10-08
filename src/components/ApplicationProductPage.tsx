@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import ProductImage from "@/components/ProductImage";
 import { BuyerReasons, ProductConversionPanel } from "@/components/ProductConversion";
 import { products } from "@/lib/data";
@@ -19,6 +20,9 @@ type ApplicationProductPageProps = {
   applications: Array<{ title: string; text: string }>;
   selectionChecks: string[];
   faqs: Array<{ q: string; a: string }>;
+  imageCaption?: string;
+  paidSamples?: boolean;
+  children?: ReactNode;
 };
 
 export default function ApplicationProductPage({
@@ -28,6 +32,9 @@ export default function ApplicationProductPage({
   applications,
   selectionChecks,
   faqs,
+  imageCaption,
+  paidSamples,
+  children,
 }: ApplicationProductPageProps) {
   const product = products.find((item) => item.id === productId);
   if (!product) return <div>Product Not Found</div>;
@@ -71,6 +78,7 @@ export default function ApplicationProductPage({
 
       <section className="py-12 md:py-20">
         <div className="container-fox grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-start lg:gap-16">
+          <div>
           <div className="aspect-[4/3] overflow-hidden border border-border bg-surface shadow-xl">
             <ProductImage
               src={product.image}
@@ -79,6 +87,8 @@ export default function ApplicationProductPage({
               priority
               sizes="(max-width: 1024px) 100vw, 55vw"
             />
+            </div>
+            {imageCaption ? <p className="bg-white p-3 text-xs leading-6 text-muted">{imageCaption}</p> : null}
           </div>
           <div>
             <p className="mb-4 text-xs font-black uppercase tracking-[0.18em] text-accent">{eyebrow}</p>
@@ -93,7 +103,7 @@ export default function ApplicationProductPage({
                 </div>
               ))}
             </div>
-            <ProductConversionPanel product={product} />
+            <ProductConversionPanel product={product} paidSamples={paidSamples} />
           </div>
         </div>
       </section>
@@ -164,6 +174,7 @@ export default function ApplicationProductPage({
         </div>
       </section>
 
+      {children}
       <section className="section-padding">
         <div className="container-fox max-w-5xl">
           <h2 className="mb-10 text-center text-3xl font-black uppercase text-primary md:text-4xl">Buyer FAQ</h2>
@@ -178,7 +189,7 @@ export default function ApplicationProductPage({
         </div>
       </section>
 
-      <BuyerReasons product={product} />
+      <BuyerReasons product={product} paidSamples={paidSamples} />
     </div>
   );
 }
