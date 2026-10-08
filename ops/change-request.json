@@ -19,7 +19,8 @@
     "src/components/CountryApplicationLandingPage.tsx",
     "src/lib/sitemap-data.ts",
     "src/lib/blog-posts/printed-broadloom-pattern-repeat-seam-planning.ts",
-    "src/app/sitemap-markets.xml/route.ts"
+    "src/app/sitemap-markets.xml/route.ts",
+    "src/components/ProductConversion.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,

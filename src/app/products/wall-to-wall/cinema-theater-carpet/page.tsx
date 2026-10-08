@@ -42,7 +42,7 @@ const sections = [
   ] },
 ];
 export default function Page() {
-  return <ApplicationProductPage productId={productId} eyebrow="Entertainment Venue Broadloom" imageCaption={illustrationCaption}
+  return <ApplicationProductPage productId={productId} eyebrow="Entertainment Venue Broadloom" imageCaption={illustrationCaption} paidSamples
     overview={[
       "Vcarpets supplies custom cinema and theater carpet for commercial venue projects. Patterns and colours can be customised. Choose the nominated construction with the venue zones, maintenance routine, installer and required documents in view.",
       "Material, backing, pile and roll width are confirmed for each configuration. Separate auditorium seating, circulation, arrival, concession and step areas before comparing proposals. Bulk quotations are FOB Tianjin Port; paid sample requests and their costs and timing are confirmed per project.",

@@ -6,6 +6,8 @@ export const philippinesEntertainmentPage: CountryApplicationPage = {
   slug: "entertainment-venue-carpet",
   path: "/markets/ph/entertainment-venue-carpet",
   countryHubPath: "/ph/commercial-carpet-supplier-philippines",
+  quoteProductName: "Custom Cinema and Theater Carpet — Philippines",
+  paidSamples: true,
   updatedDate: "2026-10-08",
   language: "en",
   hreflang: "en-PH",

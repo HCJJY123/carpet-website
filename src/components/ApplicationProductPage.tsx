@@ -21,6 +21,7 @@ type ApplicationProductPageProps = {
   selectionChecks: string[];
   faqs: Array<{ q: string; a: string }>;
   imageCaption?: string;
+  paidSamples?: boolean;
   children?: ReactNode;
 };
 
@@ -32,6 +33,7 @@ export default function ApplicationProductPage({
   selectionChecks,
   faqs,
   imageCaption,
+  paidSamples,
   children,
 }: ApplicationProductPageProps) {
   const product = products.find((item) => item.id === productId);
@@ -101,7 +103,7 @@ export default function ApplicationProductPage({
                 </div>
               ))}
             </div>
-            <ProductConversionPanel product={product} />
+            <ProductConversionPanel product={product} paidSamples={paidSamples} />
           </div>
         </div>
       </section>
@@ -187,7 +189,7 @@ export default function ApplicationProductPage({
         </div>
       </section>
 
-      <BuyerReasons product={product} />
+      <BuyerReasons product={product} paidSamples={paidSamples} />
     </div>
   );
 }

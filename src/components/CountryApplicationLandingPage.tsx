@@ -45,7 +45,7 @@ export default function CountryApplicationLandingPage({ page }: { page: CountryA
   const heroProduct = products.find((product) => product.id === page.heroProductId) ?? resolvedProducts[0];
   const heroImage = page.heroImage ?? heroProduct?.image ?? "/images/hero-home.webp";
   const heroImageAlt = page.heroImageAlt ?? page.title;
-  const quoteHref = `/contact?country=${encodeURIComponent(page.countryName)}&application=${encodeURIComponent(page.applicationName)}#quote-form`;
+  const quoteHref = `/contact?country=${encodeURIComponent(page.countryName)}&application=${encodeURIComponent(page.applicationName)}${page.quoteProductName ? `&product=${encodeURIComponent(page.quoteProductName)}` : ""}#quote-form`;
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -98,8 +98,8 @@ export default function CountryApplicationLandingPage({ page }: { page: CountryA
           <Link href={quoteHref} className="btn-fox-orange min-h-13 text-center">
             Request Project Quotation
           </Link>
-          <Link href="/request-sample-box" className="btn-fox-outline border-white/45 text-center text-white hover:border-accent">
-            Request Sample
+          <Link href={page.paidSamples ? quoteHref : "/request-sample-box"} className="btn-fox-outline border-white/45 text-center text-white hover:border-accent">
+            {page.paidSamples ? "Request Paid Sample Details" : "Request Sample"}
           </Link>
         </div>
       </PageHero>

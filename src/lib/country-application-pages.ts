@@ -25,6 +25,8 @@ export type CountryApplicationPage = {
   heroImageCaption?: string;
   updatedDate?: string;
   countryHubPath?: string;
+  quoteProductName?: string;
+  paidSamples?: boolean;
   procurementSections?: { title: string; paragraphs: string[] }[];
   heroProductId: string;
   productIds: string[];
