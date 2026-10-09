@@ -1086,3 +1086,13 @@ Confirmed GSC404 `/markets/cz/office-carpet-tiles` is an internal-link mistake; 
 Public review of70 GSC discovered examples:68 direct200/self-canonical/indexable;2 expected redirects (natural-sisal-carpet and projects/case-6). Both legacy aliases erroneously remain in root sitemap via static route generator; exclude exactly these2 sources, preserve existing final destinations. Root sitemap263 becomes261 canonical URLs, no destination loss. Correct real cinema modification date2026-10-08 in root/product sitemap; corrected Czech source pages2026-10-09. No blanket date bump. Philippine new page Google individual request accepted2026-10-09; other request results recorded separately.
 
 Local acceptance: Ops scope guard, SEO94 page files, link/sitemap audit, TypeScript and production build pass. ESLint0 errors/one pre-existing ProductImage warning. Runtime baseline and scoped redirect/link/sitemap assertions pass with server and client in same execution context; initial separate-context loopback checks failed due unreachable listener and are not reported as passes. Exact308, both corrected country links, canonical destination retention, root261 URLs and cinema lastmod verified locally. Source/routing-only change; no new visual layout. Preview and production pending.
+
+
+## 2026-10-09 — Cinema matching-pattern image supplement
+
+- Owner-requested four additional images: lobby, circulation, detail and sample-review concepts. Existing hero retained. Built-in imagegen reference-guided outputs explicitly disclosed as AI illustrations, not product/project evidence.
+- Four optimized WebP assets, lazy gallery using existing ProductImage component; mobile one column, desktop two. Only actual cinema lastmod updated. No changes to forms, claims or URL.
+- Scope: isolated content/cinema-images-20261009 branch from production 52f68f3461cbe86d3c6369ada968acab75b3ff26. Rollback to that commit. Live HTML backed up before editing.
+- Publication requires local lint/build/Ops checks, Preview verification and required CI before PR merge. Final deployment evidence recorded on PR.
+
+Local acceptance: production Turbopack build/TypeScript passed after using local dependencies (initial external dependency symlink rejected by Turbopack; no source issue). Ops scope/runtime, SEO94 pages, links/sitemap and assets audits passed. ESLint zero errors, one existing ProductImage warning. Four new image URLs200, one H1, gallery/disclosure verified. Preview/browser/production pending; no real inquiry submitted.

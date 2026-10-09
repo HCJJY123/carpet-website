@@ -1,38 +1,31 @@
 {
-  "task": "Fix confirmed GSC Czech market 404 and review/submit valid canonical URLs to Google and Bing",
-  "approvedBy": "Owner explicitly requests GSC-based indexing submissions, Bing submission and optimization of indexing problems on 2026-10-09; existing publication authorization applies",
+  "task": "Add four consistent pattern illustrations to existing cinema carpet page",
+  "approvedBy": "Owner requests four additional images matching existing pattern and style; existing authorization covers guarded publication",
   "approvedCategories": [
     "content",
     "operations",
-    "build-config",
     "seo-global"
   ],
   "allowedPaths": [
     "ops/change-request.json",
+    "ops/cinema-images-20261009.md",
     "CHANGELOG_OPS.md",
-    "ops/site-baseline.json",
-    "ops/indexing-review-20261009.md",
-    "ops/indexing-review-20261009.json",
     "keyword-map.csv",
-    "next.config.ts",
-    "src/components/CountryMarketLandingPage.tsx",
-    "scripts/generate-sitemap-static-routes.mjs",
-    "src/lib/generated-static-sitemap-routes.ts",
+    "src/app/products/wall-to-wall/cinema-theater-carpet/page.tsx",
     "src/lib/sitemap-data.ts",
-    "src/app/sitemaps/products.xml/route.ts"
+    "src/app/sitemaps/products.xml/route.ts",
+    "public/images/optimized/cinema-20261009/cinema-lobby.webp",
+    "public/images/optimized/cinema-20261009/cinema-circulation.webp",
+    "public/images/optimized/cinema-20261009/pattern-detail.webp",
+    "public/images/optimized/cinema-20261009/sample-review.webp"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "08a45033af5efc7ec5c687e9d6f72c315238fb72",
+  "rollbackCommit": "52f68f3461cbe86d3c6369ada968acab75b3ff26",
   "affectedUrls": [
-    "/markets/cz/office-carpet-tiles",
-    "/markets/cz/office-carpet-tiles-czech-republic",
-    "/cz/commercial-carpet-supplier-czech-republic",
-    "/cz/dodavatel-komercnich-kobercu",
+    "/products/wall-to-wall/cinema-theater-carpet",
     "/sitemap.xml",
-    "/sitemaps/products.xml",
-    "/natural-sisal-carpet",
-    "/projects/case-6"
+    "/sitemaps/products.xml"
   ],
-  "notes": "Correct one broken country-template link and add exact permanent308 redirect to existing equivalent page. Preserve all published canonical URLs, robots, metadata, sitemaps, forms and tracking. Record actual GSC data and URL validation; resubmit qualified sitemap/indexing requests only. Guarded feature branch, Preview, CI, merge, production validation. Public validation found2 redirect aliases in generated root sitemap. Exclude only those2 from static route generator, retaining canonical targets. Correct actual cinema modification date2026-10-08 in root/product maps, and Czech referring-page modification dates2026-10-09. No fake blanket lastmod updates."
+  "notes": "Preserve existing hero, URLs, forms, product facts. Four generated illustrations explicitly disclosed. Only actual cinema lastmod updated. Feature branch, Preview, CI, PR merge and production verification."
 }
