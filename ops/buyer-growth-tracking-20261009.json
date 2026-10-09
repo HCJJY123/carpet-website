@@ -14,7 +14,7 @@
   "pages": [
     {
       "url": "https://www.vcarpets.com/resources/ai-commercial-carpet-source-guide",
-      "status": "candidate",
+      "status": "preview-verified",
       "httpBaseline": 200,
       "gscIndexStatus": "not-reinspected-this-round",
       "impressions": null,
@@ -27,7 +27,7 @@
     },
     {
       "url": "https://www.vcarpets.com/resources",
-      "status": "candidate",
+      "status": "preview-verified",
       "httpBaseline": 200,
       "gscIndexStatus": "not-reinspected-this-round",
       "impressions": null,
@@ -40,7 +40,7 @@
     },
     {
       "url": "https://www.vcarpets.com/products/printed-carpet",
-      "status": "candidate",
+      "status": "preview-verified",
       "httpBaseline": 200,
       "gscIndexStatus": "not-reinspected-this-round",
       "impressions": null,
@@ -53,7 +53,7 @@
     },
     {
       "url": "https://www.vcarpets.com/ph/commercial-carpet-supplier-philippines",
-      "status": "candidate",
+      "status": "preview-verified",
       "httpBaseline": 200,
       "gscIndexStatus": "not-reinspected-this-round",
       "impressions": null,
@@ -66,7 +66,7 @@
     },
     {
       "url": "https://www.vcarpets.com/markets/ph/entertainment-venue-carpet",
-      "status": "candidate",
+      "status": "preview-verified",
       "httpBaseline": 200,
       "gscIndexStatus": "not-reinspected-this-round",
       "impressions": null,
@@ -79,7 +79,7 @@
     },
     {
       "url": "https://www.vcarpets.com/blog/carpet-tiles-vs-broadloom-commercial-projects-guide",
-      "status": "candidate",
+      "status": "preview-verified",
       "httpBaseline": 200,
       "gscIndexStatus": "not-reinspected-this-round",
       "impressions": 71,
@@ -93,7 +93,7 @@
     },
     {
       "url": "https://www.vcarpets.com/blog/commercial-carpet-sample-approval-checklist",
-      "status": "candidate",
+      "status": "preview-verified",
       "httpBaseline": 200,
       "gscIndexStatus": "not-reinspected-this-round",
       "impressions": null,
@@ -106,7 +106,7 @@
     },
     {
       "url": "https://www.vcarpets.com/products/wall-to-wall/cinema-theater-carpet",
-      "status": "candidate",
+      "status": "preview-verified",
       "httpBaseline": 200,
       "gscIndexStatus": "not-reinspected-this-round",
       "impressions": null,
@@ -168,5 +168,17 @@
     "pageRows": 27,
     "sampleApprovalGuideImpressions": 6,
     "limitations": "Google Search report only; does not prove ChatGPT, standalone Gemini or Claude recommendations; pre-release baseline."
+  },
+  "previewAcceptance": {
+    "head": "3f82f733f558ebfcf93e1881032a8cb919e5b4a4",
+    "deployment": "dpl_GAKhKp8W2ZWM5vbHuSJsajKuZbiU",
+    "origin": "https://carpet-website-5oo10kfyn-mike123-s-projects.vercel.app",
+    "ready": true,
+    "workflowRun": 37907896820,
+    "ciConclusion": "success",
+    "httpAcceptance": "8 affected pages200, single H1, self-canonical, indexable, valid JSON-LD; internal links,2images,261root entries and affected root/child dates passed",
+    "opsVerify": "passed",
+    "browser": "Directory14cards, two guide illustrations loaded and disclosed; format-support CTA prefilled product;1355px viewport no document horizontal overflow; table wrappers overflow:auto. Responsive source inspected; separate mobile device viewport unavailable.",
+    "production": "pending final record commit CI and merge"
   }
 }
