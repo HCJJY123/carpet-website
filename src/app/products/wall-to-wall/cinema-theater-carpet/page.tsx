@@ -109,6 +109,8 @@ export default function Page() {
       { href: "/markets/ph/entertainment-venue-carpet", label: "Philippines Cinema and Entertainment Procurement" },
       { href: "/products/printed-carpet", label: "Compare Printed Carpet Options" },
       { href: "/products/carpet-tiles", label: "Compare Modular Carpet Tiles" },
+      { href: "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide", label: "Compare Formats by Cinema Zone" },
+      { href: "/blog/commercial-carpet-sample-approval-checklist", label: "Separate Material, Colour and Pattern Approval" },
     ].map(link => <Link key={link.href} href={link.href} className="border border-border bg-white p-5 font-bold text-primary hover:border-accent">{link.label}</Link>)}</div></div></section>
   </ApplicationProductPage>;
 }

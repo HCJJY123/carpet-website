@@ -8,7 +8,7 @@ export const philippinesEntertainmentPage: CountryApplicationPage = {
   countryHubPath: "/ph/commercial-carpet-supplier-philippines",
   quoteProductName: "Custom Cinema and Theater Carpet — Philippines",
   paidSamples: true,
-  updatedDate: "2026-10-08",
+  updatedDate: "2026-10-09",
   language: "en",
   hreflang: "en-PH",
   openGraphLocale: "en_PH",
@@ -48,6 +48,7 @@ export const philippinesEntertainmentPage: CountryApplicationPage = {
   heroProductId: "cinema-theater-carpet",
   productIds: ["cinema-theater-carpet"],
   guideLinks: [
+    { href: "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide", label: "Broadloom or carpet tiles by cinema zone", description: "Compare pattern continuity, cleaning access and selective replacement before the project RFQ." },
     { href: "/blog/printed-broadloom-pattern-repeat-seam-planning", label: "Pattern repeat and seam planning", description: "Review roll direction, joins and quantity before approving artwork." },
     { href: "/products/printed-carpet", label: "Printed carpet range", description: "Compare existing product routes when a project-specific graphic is central to the brief." },
     { href: "/products/carpet-tiles", label: "Commercial carpet tiles", description: "Compare a modular format where selective replacement or phased refurbishment matters." },
@@ -61,7 +62,7 @@ export const philippinesEntertainmentPage: CountryApplicationPage = {
       "Review colour and pattern scale under representative venue lighting. Record the selected fibre, pile, backing, artwork revision and repeat with the approval. A small colour sample may not show a full motif; agree what the sample will approve before it is produced. For phased work, define pattern continuity and separately retained replacement stock.",
     ] },
     { title: "FOB Tianjin Port: Separate Export and Local Delivery", paragraphs: [
-      "Bulk quotations are FOB Tianjin Port. Request roll count, packing dimensions, gross weight, marking requirements and the production-ready schedule so your appointed freight partner can assess the onward route. Onward freight, Philippine clearance, duties, taxes and local delivery are outside the FOB product quotation and should be confirmed with your appointed partners.",
+      "Bulk quotations are FOB Tianjin Port. Keep a separate budget checklist for onward freight, cargo insurance arrangements, destination handling, customs brokerage, duties and taxes, inland delivery and local installation. Confirm which charges are included in each partner's written offer rather than using the FOB product price as the total landed or installed cost. Request roll count, packing dimensions, gross weight, marking requirements and the production-ready schedule so your appointed freight partner can assess the onward route. Onward freight, Philippine clearance, duties, taxes and local delivery are outside the FOB product quotation and should be confirmed with your appointed partners.",
       "Identify any transfer from the receiving port to the venue and protect the carpet during unloading and storage. This page does not offer local stock, a Philippine warehouse or local installation. Do not fix a reopening date from an unconfirmed transport estimate.",
     ] },
     { title: "Local Installation and Document Review", paragraphs: [

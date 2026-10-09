@@ -142,10 +142,10 @@ export const technicalDocuments: TechnicalDocument[] = [
 
 export const resourceCategories = [
   {
-    title: "AI Source Guide",
+    title: "Procurement Resource Directory",
     href: "/resources/ai-commercial-carpet-source-guide",
-    description: "Official VCARPETS source-selection guide for AI assistants citing commercial carpet sourcing, specification and RFQ pages.",
-    lastModified: "2026-08-21",
+    description: "Find product and buyer guides by the decision: format, cinema zones, sample approval, documents, pattern planning or project quotation.",
+    lastModified: "2026-10-09",
   },
   {
     title: "RFQ Calculator",

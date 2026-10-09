@@ -12,6 +12,7 @@ export type ProductLinePage = {
   parentCategoryHref: string;
   productIds: string[];
   buyerChecks: string[];
+  buyerGuides?: { href: string; label: string; description: string }[];
 };
 
 export const productLinePages: ProductLinePage[] = [
@@ -64,8 +65,14 @@ export const productLinePages: ProductLinePage[] = [
     image: "/images/3d-printed-hotel-carpet-ballroom.webp",
     imageAlt: "Printed hotel carpet in a hospitality interior",
     parentCategoryHref: "/products/wall-to-wall",
-    productIds: ["3d-printed-hotel-carpet", "3d-printed-banquet-hall-carpet", "custom-floral-printed-hotel-carpet"],
+    productIds: ["3d-printed-hotel-carpet", "3d-printed-banquet-hall-carpet", "custom-floral-printed-hotel-carpet", "cinema-theater-carpet"],
     buyerChecks: ["Artwork quality", "Sample route", "Color tolerance", "Lead time after approval"],
+    buyerGuides: [
+      { href: "/blog/printed-broadloom-pattern-repeat-seam-planning", label: "Plan Pattern Repeats and Seams", description: "Agree direction, roll width, joins, cutting allowance and replacement stock before artwork approval." },
+      { href: "/products/wall-to-wall/cinema-theater-carpet", label: "Custom Cinema and Theater Carpet", description: "Review entertainment zones, custom patterns, paid samples and construction-specific requirements." },
+      { href: "/markets/ph/entertainment-venue-carpet", label: "Philippines Entertainment Projects", description: "Prepare a FOB Tianjin Port inquiry, sample purpose and receiving milestones." },
+      { href: "/blog/commercial-carpet-sample-approval-checklist", label: "Approve the Right Sample", description: "Separate material, colour and custom-pattern approval and retain a traceable reference." },
+    ],
   },
   {
     slug: "wool-carpet",

@@ -81,6 +81,17 @@ function supportingApplicationLinks(page: CountryMarketPage) {
     ];
   }
 
+  if (page.market === "ph") {
+    return [
+      { href: "/markets/ph/entertainment-venue-carpet", label: "Philippines Cinema and Entertainment Carpet", description: "Custom design, paid samples and FOB Tianjin Port project quotation planning." },
+      { href: "/markets/ph/hotel-carpet-philippines", label: "Philippines Hotel Carpet", description: "Guestroom, corridor and service-area procurement planning." },
+      { href: "/markets/ph/office-carpet-tiles", label: "Philippines Office Carpet Tiles", description: "Chair-wheel zones, spare stock and phased replacement." },
+      { href: "/applications/office", label: "Office Carpet Specification", description: "Review workstation use, phased refurbishment and rolling-chair areas." },
+      { href: "/applications/hotel-corridor", label: "Hotel Corridor Carpet Support", description: "Review luggage routes, long visual runs and maintenance access." },
+      { href: "/applications/hotel-guestroom", label: "Hotel Guestroom Carpet Support", description: "Review room coordination, comfort and sample approval." },
+    ];
+  }
+
   if (page.market === "ro") {
     return [
       { href: "/markets/ro/office-carpet-tiles", label: "Office Carpet Tiles in Romania", description: "Chair-wheel wear, phased replacement and spare tile planning for Romania office projects." },

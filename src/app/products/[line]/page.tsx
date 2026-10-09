@@ -69,6 +69,16 @@ export default async function ProductLinePage({ params }: Props) {
           </div>
         </div>
       </section>
+      {page.buyerGuides?.length ? (
+        <section className="section-padding border-t border-border bg-surface">
+          <div className="container-fox">
+            <h2 className="mb-8 text-3xl font-black text-primary">Printed Carpet Project Planning</h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              {page.buyerGuides.map((guide) => <Link key={guide.href} href={guide.href} className="min-w-0 rounded-md border border-border bg-white p-6 hover:border-accent"><h3 className="font-black text-primary">{guide.label}</h3><p className="mt-3 text-sm leading-7 text-muted">{guide.description}</p></Link>)}
+            </div>
+          </div>
+        </section>
+      ) : null}
     </main>
   );
 }

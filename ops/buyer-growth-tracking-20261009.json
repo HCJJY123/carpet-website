@@ -1,0 +1,184 @@
+{
+  "date": "2026-10-09",
+  "site": "https://www.vcarpets.com",
+  "baselineRelease": "65d0a7f7257b3247a6fe63e7993724ab692d78e9",
+  "coverageSnapshot": {
+    "date": "2026-10-03",
+    "indexed": 191,
+    "excluded": 130,
+    "discoveredNotIndexed": 70,
+    "publiclyValidated200Canonical": 68,
+    "expectedRedirectAliases": 2,
+    "source": "Authenticated GSC report inspected in this conversation; historical snapshot, not live counts"
+  },
+  "pages": [
+    {
+      "url": "https://www.vcarpets.com/resources/ai-commercial-carpet-source-guide",
+      "status": "preview-verified",
+      "httpBaseline": 200,
+      "gscIndexStatus": "not-reinspected-this-round",
+      "impressions": null,
+      "clicks": null,
+      "organicCommercialVisits": null,
+      "formSubmissions": null,
+      "qualifiedB2BInquiries": null,
+      "aiCitationObservations": [],
+      "nextReview": "2026-10-16"
+    },
+    {
+      "url": "https://www.vcarpets.com/resources",
+      "status": "preview-verified",
+      "httpBaseline": 200,
+      "gscIndexStatus": "not-reinspected-this-round",
+      "impressions": null,
+      "clicks": null,
+      "organicCommercialVisits": null,
+      "formSubmissions": null,
+      "qualifiedB2BInquiries": null,
+      "aiCitationObservations": [],
+      "nextReview": "2026-10-16"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/printed-carpet",
+      "status": "preview-verified",
+      "httpBaseline": 200,
+      "gscIndexStatus": "not-reinspected-this-round",
+      "impressions": null,
+      "clicks": null,
+      "organicCommercialVisits": null,
+      "formSubmissions": null,
+      "qualifiedB2BInquiries": null,
+      "aiCitationObservations": [],
+      "nextReview": "2026-10-16"
+    },
+    {
+      "url": "https://www.vcarpets.com/ph/commercial-carpet-supplier-philippines",
+      "status": "preview-verified",
+      "httpBaseline": 200,
+      "gscIndexStatus": "not-reinspected-this-round",
+      "impressions": null,
+      "clicks": null,
+      "organicCommercialVisits": null,
+      "formSubmissions": null,
+      "qualifiedB2BInquiries": null,
+      "aiCitationObservations": [],
+      "nextReview": "2026-10-16"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/ph/entertainment-venue-carpet",
+      "status": "preview-verified",
+      "httpBaseline": 200,
+      "gscIndexStatus": "not-reinspected-this-round",
+      "impressions": null,
+      "clicks": null,
+      "organicCommercialVisits": null,
+      "formSubmissions": null,
+      "qualifiedB2BInquiries": null,
+      "aiCitationObservations": [],
+      "nextReview": "2026-10-16"
+    },
+    {
+      "url": "https://www.vcarpets.com/blog/carpet-tiles-vs-broadloom-commercial-projects-guide",
+      "status": "preview-verified",
+      "httpBaseline": 200,
+      "gscIndexStatus": "not-reinspected-this-round",
+      "impressions": 71,
+      "clicks": 0,
+      "organicCommercialVisits": null,
+      "formSubmissions": null,
+      "qualifiedB2BInquiries": null,
+      "aiCitationObservations": [],
+      "nextReview": "2026-10-16",
+      "metricPeriod": "Web, last 3 months; chart data 2026-09-19 through 2026-10-06"
+    },
+    {
+      "url": "https://www.vcarpets.com/blog/commercial-carpet-sample-approval-checklist",
+      "status": "preview-verified",
+      "httpBaseline": 200,
+      "gscIndexStatus": "not-reinspected-this-round",
+      "impressions": null,
+      "clicks": null,
+      "organicCommercialVisits": null,
+      "formSubmissions": null,
+      "qualifiedB2BInquiries": null,
+      "aiCitationObservations": [],
+      "nextReview": "2026-10-16"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/wall-to-wall/cinema-theater-carpet",
+      "status": "preview-verified",
+      "httpBaseline": 200,
+      "gscIndexStatus": "not-reinspected-this-round",
+      "impressions": null,
+      "clicks": null,
+      "organicCommercialVisits": null,
+      "formSubmissions": null,
+      "qualifiedB2BInquiries": null,
+      "aiCitationObservations": [],
+      "nextReview": "2026-10-16"
+    }
+  ],
+  "measurementRules": [
+    "Use GSC query/page evidence to select changes; unavailable metrics remain null.",
+    "Separate form submissions from product-matched qualified B2B inquiries.",
+    "Log AI queries, model/search mode, date and citations; single tests are not ranking or traffic metrics.",
+    "Do not create or modify schedules; nextReview is a manual review target."
+  ],
+  "nextActions": [
+    "Reinspect selected page indexing and related queries after crawl opportunity.",
+    "Collect true product-specific sample photos and supplier TDS; generated images do not fill that evidence gap.",
+    "Review non-brand queries and qualified inquiry source pages; no rankings or indexing guaranteed."
+  ],
+  "gscPerformanceBaseline": {
+    "observedAt": "2026-10-09",
+    "filter": "Web, last 3 months",
+    "availableChartDates": [
+      "2026-09-19",
+      "2026-10-06"
+    ],
+    "clicks": 9,
+    "impressions": 1201,
+    "ctrPercent": 0.7,
+    "averagePosition": 36.5,
+    "queryRows": 238,
+    "pageRows": 134,
+    "source": "Authenticated Google Search Console performance UI, not estimated search volume",
+    "pageExamples": [
+      {
+        "url": "https://www.vcarpets.com/markets/au/office-carpet-tiles-australia",
+        "clicks": 0,
+        "impressions": 110
+      },
+      {
+        "url": "https://www.vcarpets.com/blog/carpet-tiles-vs-broadloom-commercial-projects-guide",
+        "clicks": 0,
+        "impressions": 71
+      }
+    ]
+  },
+  "googleAiSearchBaseline": {
+    "observedAt": "2026-10-09",
+    "source": "Authenticated GSC Google Search generative AI features Beta UI",
+    "filter": "Web, last 3 months",
+    "chartDates": [
+      "2026-09-19",
+      "2026-10-06"
+    ],
+    "impressions": 60,
+    "pageRows": 27,
+    "sampleApprovalGuideImpressions": 6,
+    "limitations": "Google Search report only; does not prove ChatGPT, standalone Gemini or Claude recommendations; pre-release baseline."
+  },
+  "previewAcceptance": {
+    "head": "3f82f733f558ebfcf93e1881032a8cb919e5b4a4",
+    "deployment": "dpl_GAKhKp8W2ZWM5vbHuSJsajKuZbiU",
+    "origin": "https://carpet-website-5oo10kfyn-mike123-s-projects.vercel.app",
+    "ready": true,
+    "workflowRun": 37907896820,
+    "ciConclusion": "success",
+    "httpAcceptance": "8 affected pages200, single H1, self-canonical, indexable, valid JSON-LD; internal links,2images,261root entries and affected root/child dates passed",
+    "opsVerify": "passed",
+    "browser": "Directory14cards, two guide illustrations loaded and disclosed; format-support CTA prefilled product;1355px viewport no document horizontal overflow; table wrappers overflow:auto. Responsive source inspected; separate mobile device viewport unavailable.",
+    "production": "pending final record commit CI and merge"
+  }
+}
