@@ -1,0 +1,1202 @@
+{
+  "observedDate": "2026-10-09",
+  "gscReportDate": "2026-10-03",
+  "coverage": {
+    "indexed": 191,
+    "notIndexed": 130,
+    "alternateCanonical": 46,
+    "redirect": 3,
+    "notFound": 1,
+    "discoveredNotIndexed": 70,
+    "crawledNotIndexed": 10
+  },
+  "publicAuditBeforeRelease": [
+    {
+      "url": "https://www.vcarpets.com/blog/casino-carpet-singapore-gaming-floor-buying-guide",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/blog/casino-carpet-singapore-gaming-floor-buying-guide",
+      "canonical": [
+        "https://www.vcarpets.com/blog/casino-carpet-singapore-gaming-floor-buying-guide"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/blog/nylon-vs-polyester-vs-polypropylene-carpet-tiles",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/blog/nylon-vs-polyester-vs-polypropylene-carpet-tiles",
+      "canonical": [
+        "https://www.vcarpets.com/blog/nylon-vs-polyester-vs-polypropylene-carpet-tiles"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/blog/office-carpet-replacement-romania-without-closing-full-floor",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/blog/office-carpet-replacement-romania-without-closing-full-floor",
+      "canonical": [
+        "https://www.vcarpets.com/blog/office-carpet-replacement-romania-without-closing-full-floor"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/by/postavshchik-kommercheskogo-kovrolina",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/by/postavshchik-kommercheskogo-kovrolina",
+      "canonical": [
+        "https://www.vcarpets.com/by/postavshchik-kommercheskogo-kovrolina"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/ca/commercial-carpet-supplier-canada",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/ca/commercial-carpet-supplier-canada",
+      "canonical": [
+        "https://www.vcarpets.com/ca/commercial-carpet-supplier-canada"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/certifications",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/certifications",
+      "canonical": [
+        "https://www.vcarpets.com/certifications"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/dk/leverandor-erhvervstaepper",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/dk/leverandor-erhvervstaepper",
+      "canonical": [
+        "https://www.vcarpets.com/dk/leverandor-erhvervstaepper"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/fi/kaupallisten-mattojen-toimittaja",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/fi/kaupallisten-mattojen-toimittaja",
+      "canonical": [
+        "https://www.vcarpets.com/fi/kaupallisten-mattojen-toimittaja"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/ge/commercial-carpet-supplier-georgia",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/ge/commercial-carpet-supplier-georgia",
+      "canonical": [
+        "https://www.vcarpets.com/ge/commercial-carpet-supplier-georgia"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/hu/commercial-carpet-supplier-hungary",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/hu/commercial-carpet-supplier-hungary",
+      "canonical": [
+        "https://www.vcarpets.com/hu/commercial-carpet-supplier-hungary"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/hu/kereskedelmi-szonyeg-beszallito",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/hu/kereskedelmi-szonyeg-beszallito",
+      "canonical": [
+        "https://www.vcarpets.com/hu/kereskedelmi-szonyeg-beszallito"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/kz/kommerciyalyk-kilem-zhetkizushi",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/kz/kommerciyalyk-kilem-zhetkizushi",
+      "canonical": [
+        "https://www.vcarpets.com/kz/kommerciyalyk-kilem-zhetkizushi"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/by/office-carpet-tiles-belarus",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/by/office-carpet-tiles-belarus",
+      "canonical": [
+        "https://www.vcarpets.com/markets/by/office-carpet-tiles-belarus"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/ca/office-carpet-tiles",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/ca/office-carpet-tiles",
+      "canonical": [
+        "https://www.vcarpets.com/markets/ca/office-carpet-tiles"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/dk/office-carpet-tiles-denmark",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/dk/office-carpet-tiles-denmark",
+      "canonical": [
+        "https://www.vcarpets.com/markets/dk/office-carpet-tiles-denmark"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/fi/hotel-carpet-finland",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/fi/hotel-carpet-finland",
+      "canonical": [
+        "https://www.vcarpets.com/markets/fi/hotel-carpet-finland"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/ge/hotel-carpet-georgia",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/ge/hotel-carpet-georgia",
+      "canonical": [
+        "https://www.vcarpets.com/markets/ge/hotel-carpet-georgia"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/hr/hotel-carpet-croatia",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/hr/hotel-carpet-croatia",
+      "canonical": [
+        "https://www.vcarpets.com/markets/hr/hotel-carpet-croatia"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/hu/office-carpet-tiles-hungary",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/hu/office-carpet-tiles-hungary",
+      "canonical": [
+        "https://www.vcarpets.com/markets/hu/office-carpet-tiles-hungary"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/kz/gold-mining-carpet-kazakhstan",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/kz/gold-mining-carpet-kazakhstan",
+      "canonical": [
+        "https://www.vcarpets.com/markets/kz/gold-mining-carpet-kazakhstan"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/no/hotel-carpet-norway",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/no/hotel-carpet-norway",
+      "canonical": [
+        "https://www.vcarpets.com/markets/no/hotel-carpet-norway"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/ph/hotel-carpet-philippines",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/ph/hotel-carpet-philippines",
+      "canonical": [
+        "https://www.vcarpets.com/markets/ph/hotel-carpet-philippines"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/ro/office-carpet-tiles",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/ro/office-carpet-tiles",
+      "canonical": [
+        "https://www.vcarpets.com/markets/ro/office-carpet-tiles"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/rs/office-carpet-tiles-serbia",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/rs/office-carpet-tiles-serbia",
+      "canonical": [
+        "https://www.vcarpets.com/markets/rs/office-carpet-tiles-serbia"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/se/office-carpet-tiles-sweden",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/se/office-carpet-tiles-sweden",
+      "canonical": [
+        "https://www.vcarpets.com/markets/se/office-carpet-tiles-sweden"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/sg/casino-carpet",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/sg/casino-carpet",
+      "canonical": [
+        "https://www.vcarpets.com/markets/sg/casino-carpet"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/si/hotel-carpet-slovenia",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/si/hotel-carpet-slovenia",
+      "canonical": [
+        "https://www.vcarpets.com/markets/si/hotel-carpet-slovenia"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/sk/office-carpet-tiles-slovakia",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/sk/office-carpet-tiles-slovakia",
+      "canonical": [
+        "https://www.vcarpets.com/markets/sk/office-carpet-tiles-slovakia"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/uz/hotel-carpet-uzbekistan",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/uz/hotel-carpet-uzbekistan",
+      "canonical": [
+        "https://www.vcarpets.com/markets/uz/hotel-carpet-uzbekistan"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/mx/proveedor-alfombras-comerciales",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/mx/proveedor-alfombras-comerciales",
+      "canonical": [
+        "https://www.vcarpets.com/mx/proveedor-alfombras-comerciales"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/natural-sisal-carpet",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/products/public-area/natural-sisal-carpet",
+      "canonical": [
+        "https://www.vcarpets.com/products/public-area/natural-sisal-carpet"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/no/leverandor-kommersielle-tepper",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/no/leverandor-kommersielle-tepper",
+      "canonical": [
+        "https://www.vcarpets.com/no/leverandor-kommersielle-tepper"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/ph/commercial-carpet-supplier-philippines",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/ph/commercial-carpet-supplier-philippines",
+      "canonical": [
+        "https://www.vcarpets.com/ph/commercial-carpet-supplier-philippines"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/pl/commercial-carpet-supplier-poland",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/pl/commercial-carpet-supplier-poland",
+      "canonical": [
+        "https://www.vcarpets.com/pl/commercial-carpet-supplier-poland"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/pl/dostawca-wykladzin-komercyjnych",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/pl/dostawca-wykladzin-komercyjnych",
+      "canonical": [
+        "https://www.vcarpets.com/pl/dostawca-wykladzin-komercyjnych"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/privacy-policy",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/privacy-policy",
+      "canonical": [
+        "https://www.vcarpets.com/privacy-policy"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles",
+      "canonical": [
+        "https://www.vcarpets.com/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles",
+      "canonical": [
+        "https://www.vcarpets.com/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/carpet-tiles/healthcare-hospital-carpet-tiles",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/products/carpet-tiles/healthcare-hospital-carpet-tiles",
+      "canonical": [
+        "https://www.vcarpets.com/products/carpet-tiles/healthcare-hospital-carpet-tiles"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles",
+      "canonical": [
+        "https://www.vcarpets.com/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/custom-axminster-carpet",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/products/custom-axminster-carpet",
+      "canonical": [
+        "https://www.vcarpets.com/products/custom-axminster-carpet"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/hospitality-carpet",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/products/hospitality-carpet",
+      "canonical": [
+        "https://www.vcarpets.com/products/hospitality-carpet"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/office-carpet-tiles",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/products/office-carpet-tiles",
+      "canonical": [
+        "https://www.vcarpets.com/products/office-carpet-tiles"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/printed-carpet",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/products/printed-carpet",
+      "canonical": [
+        "https://www.vcarpets.com/products/printed-carpet"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/public-area/commercial-stair-carpet-runner",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/products/public-area/commercial-stair-carpet-runner",
+      "canonical": [
+        "https://www.vcarpets.com/products/public-area/commercial-stair-carpet-runner"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/wall-to-wall/cinema-theater-carpet",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/products/wall-to-wall/cinema-theater-carpet",
+      "canonical": [
+        "https://www.vcarpets.com/products/wall-to-wall/cinema-theater-carpet"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/wool-carpet",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/products/wool-carpet",
+      "canonical": [
+        "https://www.vcarpets.com/products/wool-carpet"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/projects/case-6",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/projects/airport-terminal-carpet-tiles-singapore",
+      "canonical": [
+        "https://www.vcarpets.com/projects/airport-terminal-carpet-tiles-singapore"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/projects/department-store-carpet-tiles-india",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/projects/department-store-carpet-tiles-india",
+      "canonical": [
+        "https://www.vcarpets.com/projects/department-store-carpet-tiles-india"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/projects/hotel-wall-to-wall-carpet-project-oceania",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/projects/hotel-wall-to-wall-carpet-project-oceania",
+      "canonical": [
+        "https://www.vcarpets.com/projects/hotel-wall-to-wall-carpet-project-oceania"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/projects/office-carpet-tile-renovation",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/projects/office-carpet-tile-renovation",
+      "canonical": [
+        "https://www.vcarpets.com/projects/office-carpet-tile-renovation"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/quality-control",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/quality-control",
+      "canonical": [
+        "https://www.vcarpets.com/quality-control"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/resources/downloads/gold-mining-mat-rfq-checklist",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/resources/downloads/gold-mining-mat-rfq-checklist",
+      "canonical": [
+        "https://www.vcarpets.com/resources/downloads/gold-mining-mat-rfq-checklist"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/resources/downloads/hotel-corridor-carpet-stain-hiding-checklist",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/resources/downloads/hotel-corridor-carpet-stain-hiding-checklist",
+      "canonical": [
+        "https://www.vcarpets.com/resources/downloads/hotel-corridor-carpet-stain-hiding-checklist"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/resources/downloads/public-area-carpet-specification-guide",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/resources/downloads/public-area-carpet-specification-guide",
+      "canonical": [
+        "https://www.vcarpets.com/resources/downloads/public-area-carpet-specification-guide"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/resources/installation-guides",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/resources/installation-guides",
+      "canonical": [
+        "https://www.vcarpets.com/resources/installation-guides"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/ro/commercial-carpet-supplier-romania",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/ro/commercial-carpet-supplier-romania",
+      "canonical": [
+        "https://www.vcarpets.com/ro/commercial-carpet-supplier-romania"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/ro/furnizor-mocheta-comerciala",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/ro/furnizor-mocheta-comerciala",
+      "canonical": [
+        "https://www.vcarpets.com/ro/furnizor-mocheta-comerciala"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/ru",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/ru",
+      "canonical": [
+        "https://www.vcarpets.com/ru"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/ru/kommercheskiy-kovrolin",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/ru/kommercheskiy-kovrolin",
+      "canonical": [
+        "https://www.vcarpets.com/ru/kommercheskiy-kovrolin"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/ru/kovrolin-dlya-kazino",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/ru/kovrolin-dlya-kazino",
+      "canonical": [
+        "https://www.vcarpets.com/ru/kovrolin-dlya-kazino"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/ru/kovrolin-dlya-koridorov",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/ru/kovrolin-dlya-koridorov",
+      "canonical": [
+        "https://www.vcarpets.com/ru/kovrolin-dlya-koridorov"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/ru/pechatnyy-kovrolin",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/ru/pechatnyy-kovrolin",
+      "canonical": [
+        "https://www.vcarpets.com/ru/pechatnyy-kovrolin"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/ru/sherstyanoy-kovrolin",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/ru/sherstyanoy-kovrolin",
+      "canonical": [
+        "https://www.vcarpets.com/ru/sherstyanoy-kovrolin"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/se/leverantor-kommersiella-mattor",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/se/leverantor-kommersiella-mattor",
+      "canonical": [
+        "https://www.vcarpets.com/se/leverantor-kommersiella-mattor"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/sg/singapore-casino-carpet-supplier",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/sg/singapore-casino-carpet-supplier",
+      "canonical": [
+        "https://www.vcarpets.com/sg/singapore-casino-carpet-supplier"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/sk/dodavatel-komercnych-kobercov",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/sk/dodavatel-komercnych-kobercov",
+      "canonical": [
+        "https://www.vcarpets.com/sk/dodavatel-komercnych-kobercov"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/solutions/airport-carpet-flooring",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/solutions/airport-carpet-flooring",
+      "canonical": [
+        "https://www.vcarpets.com/solutions/airport-carpet-flooring"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/tools/broadloom-carpet-waste-calculator",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/tools/broadloom-carpet-waste-calculator",
+      "canonical": [
+        "https://www.vcarpets.com/tools/broadloom-carpet-waste-calculator"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/uk/education-carpet-tile-supplier",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/uk/education-carpet-tile-supplier",
+      "canonical": [
+        "https://www.vcarpets.com/uk/education-carpet-tile-supplier"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "discovered-not-indexed"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/ph/entertainment-venue-carpet",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/ph/entertainment-venue-carpet",
+      "canonical": [
+        "https://www.vcarpets.com/markets/ph/entertainment-venue-carpet"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "release-or-fix-review"
+    },
+    {
+      "url": "https://www.vcarpets.com/blog/printed-broadloom-pattern-repeat-seam-planning",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/blog/printed-broadloom-pattern-repeat-seam-planning",
+      "canonical": [
+        "https://www.vcarpets.com/blog/printed-broadloom-pattern-repeat-seam-planning"
+      ],
+      "robots": [],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "release-or-fix-review"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/cz/office-carpet-tiles-czech-republic",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/markets/cz/office-carpet-tiles-czech-republic",
+      "canonical": [
+        "https://www.vcarpets.com/markets/cz/office-carpet-tiles-czech-republic"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "release-or-fix-review"
+    },
+    {
+      "url": "https://www.vcarpets.com/cz/commercial-carpet-supplier-czech-republic",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/cz/commercial-carpet-supplier-czech-republic",
+      "canonical": [
+        "https://www.vcarpets.com/cz/commercial-carpet-supplier-czech-republic"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "release-or-fix-review"
+    },
+    {
+      "url": "https://www.vcarpets.com/cz/dodavatel-komercnich-kobercu",
+      "status": 200,
+      "finalUrl": "https://www.vcarpets.com/cz/dodavatel-komercnich-kobercu",
+      "canonical": [
+        "https://www.vcarpets.com/cz/dodavatel-komercnich-kobercu"
+      ],
+      "robots": [
+        "index, follow"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 1,
+      "inRootSitemap": true,
+      "finalInRootSitemap": true,
+      "gscGroup": "release-or-fix-review"
+    },
+    {
+      "url": "https://www.vcarpets.com/markets/cz/office-carpet-tiles",
+      "status": 404,
+      "finalUrl": "https://www.vcarpets.com/markets/cz/office-carpet-tiles",
+      "canonical": [],
+      "robots": [
+        "noindex"
+      ],
+      "xRobotsTag": null,
+      "h1Count": 0,
+      "inRootSitemap": false,
+      "finalInRootSitemap": false,
+      "gscGroup": "release-or-fix-review"
+    }
+  ],
+  "googleSitemapSubmissions": [
+    {
+      "url": "https://www.vcarpets.com/sitemap.xml",
+      "date": "2026-10-09",
+      "result": "success-dialog-confirmed"
+    },
+    {
+      "url": "https://www.vcarpets.com/sitemap-markets.xml",
+      "date": "2026-10-09",
+      "result": "success-dialog-confirmed"
+    },
+    {
+      "url": "https://www.vcarpets.com/sitemaps/products.xml",
+      "date": "2026-10-09",
+      "result": "success-dialog-confirmed"
+    },
+    {
+      "url": "https://www.vcarpets.com/sitemaps/blog.xml",
+      "date": "2026-10-09",
+      "result": "success-dialog-confirmed"
+    }
+  ],
+  "googleIndividualRequests": [
+    {
+      "url": "https://www.vcarpets.com/markets/ph/entertainment-venue-carpet",
+      "result": "indexing-request-accepted-priority-crawl-queue",
+      "date": "2026-10-09"
+    },
+    {
+      "url": "https://www.vcarpets.com/blog/printed-broadloom-pattern-repeat-seam-planning",
+      "date": "2026-10-09",
+      "result": "indexing-request-accepted-priority-crawl-queue"
+    },
+    {
+      "url": "https://www.vcarpets.com/products/wall-to-wall/cinema-theater-carpet",
+      "date": "2026-10-09",
+      "result": "indexing-request-accepted-priority-crawl-queue"
+    }
+  ]
+}

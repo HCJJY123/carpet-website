@@ -24,6 +24,11 @@ export type SitemapEntry = {
 type SitemapEntryInput = Omit<SitemapEntry, "url"> & { path: string };
 
 const defaultModified = "2026-08-06";
+const modifiedDates: Record<string, string> = {
+  "/products/wall-to-wall/cinema-theater-carpet": "2026-10-08",
+  "/cz/commercial-carpet-supplier-czech-republic": "2026-10-09",
+  "/cz/dodavatel-komercnich-kobercu": "2026-10-09",
+};
 const staticRouteMetadata: Record<string, Pick<SitemapEntry, "lastModified" | "changeFrequency" | "priority">> = {
   "/": { lastModified: defaultModified, changeFrequency: "weekly", priority: 1 },
   "/products": { lastModified: defaultModified, changeFrequency: "weekly", priority: 0.95 },
@@ -60,7 +65,7 @@ function addEntry(entries: Map<string, SitemapEntry>, entry: SitemapEntryInput) 
   const url = canonicalUrl(entry.path);
   if (!url) return;
 
-  entries.set(url, { ...entry, url });
+  entries.set(url, { ...entry, lastModified: modifiedDates[entry.path] ?? entry.lastModified, url });
 }
 
 export function getSitemapEntries(): SitemapEntry[] {
