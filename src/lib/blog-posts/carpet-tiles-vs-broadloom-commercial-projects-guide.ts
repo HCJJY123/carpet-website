@@ -21,7 +21,7 @@ export const carpetTilesVsBroadloomCommercialProjectsGuide: BlogPost = {
     "B2B carpet supplier",
   ],
   date: "2026-08-17",
-  dateModified: "2026-08-17",
+  dateModified: "2026-10-09",
   author: "VCARPETS Technical Team",
   category: "Buying Guide",
   image: "/images/blog-series/reddit-hotel-office-carpet-decisions/hotel-office-carpet-comparison-summary.webp",
@@ -36,6 +36,10 @@ export const carpetTilesVsBroadloomCommercialProjectsGuide: BlogPost = {
     "glitter-hotel-corridor-broadloom-carpet",
   ],
   suggestedLinks: [
+    {"label": "Custom Cinema and Theater Carpet", "href": "/products/wall-to-wall/cinema-theater-carpet"},
+    {"label": "Philippines Entertainment Procurement", "href": "/markets/ph/entertainment-venue-carpet"},
+    {"label": "Pattern Repeat and Seam Planning", "href": "/blog/printed-broadloom-pattern-repeat-seam-planning"},
+    {"label": "Public Tender Example: Product Data, Samples and Spare Tiles", "href": "https://oa.mo.gov/sites/default/files/bid-opportunities/R2321-01%20Final%20specs.pdf"},
     { label: "Commercial Carpet Tiles", href: "/products/carpet-tiles" },
     { label: "Wall-to-Wall Hotel Carpet", href: "/products/wall-to-wall" },
     { label: "Office Carpet Tile Solution", href: "/solutions/office-carpet-tiles-supplier" },
@@ -46,6 +50,73 @@ export const carpetTilesVsBroadloomCommercialProjectsGuide: BlogPost = {
     },
   ],
   sections: [
+{
+  "title": "Cinema Zones: Compare Broadloom and Carpet Tiles Before Ordering",
+  "paragraphs": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "A cinema does not need one carpet format throughout. Compare each zone on full-floor appearance, access for cleaning, repair strategy, installation constraints and the nominated construction. Broadloom can support a continuous graphic; carpet tiles can support selective replacement. Neither format establishes fire, acoustic or moisture performance without applicable product and assembly evidence."
+    },
+    {
+      "type": "image",
+      "src": "/images/optimized/buyer-guides-20261009/cinema-format-planning.webp",
+      "alt": "AI-generated design-planning concept comparing a charcoal modular sample with a grey taupe geometric carpet panel",
+      "caption": "AI-generated format-selection illustration; not VCARPETS product photography or a delivered cinema project. Sample dimensions, fibres and backing are not specified by this image."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Venue zone",
+        "Broadloom discussion",
+        "Carpet tile discussion",
+        "Decision to record"
+      ],
+      "rows": [
+        [
+          "Arrival and waiting areas",
+          "Review full-floor motif, sightlines and seam positions",
+          "Review module direction, joints and replacement access",
+          "Approved layout and maintenance plan"
+        ],
+        [
+          "Level circulation routes",
+          "Check turns, doorways and pattern continuity",
+          "Check cuts at thresholds and availability of matching spares",
+          "Drawing revision, direction and transition details"
+        ],
+        [
+          "Auditorium seating",
+          "Assess roll access, seating layout and future repair access",
+          "Assess access to replace modules around fixed seats",
+          "Installer-reviewed layout and nominated construction"
+        ],
+        [
+          "Concession or spill-prone zones",
+          "Assess whether carpet is appropriate for exposure and cleaning",
+          "Selective replacement does not remove the need to assess suitability",
+          "Suitable flooring and cleaning responsibilities"
+        ]
+      ]
+    },
+    {
+      "type": "subheading",
+      "title": "What should a cinema buyer send for a format recommendation?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Send measured area by zone, seating and circulation plans, artwork reference, cleaning routine, installation window, required documents and destination. Mark undecided details as preliminary. Request comparable quotations for the same scope, keeping installation allowance and retained replacement material separate. Confirm exact roll width or tile size, construction, sample approval and packing in writing."
+    },
+    {
+      "type": "subheading",
+      "title": "Should every project keep the same percentage of spare carpet?"
+    },
+    {
+      "type": "paragraph",
+      "text": "No. Set spare quantities with the owner and installer for the actual format, layout and replacement plan. One Missouri public project specification requests 5% extra tiles of each colour and pattern and one colour dye lot. That is a project example, not a universal allowance or VCARPETS promise. Keep batch labels, room records and retained stock traceable."
+    }
+  ]
+},
     {
       title: "Answer First: Choose by Replacement Risk, Not Only by Appearance",
       paragraphs: [],

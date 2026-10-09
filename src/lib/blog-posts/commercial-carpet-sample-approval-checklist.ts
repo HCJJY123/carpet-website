@@ -19,7 +19,7 @@ export const commercialCarpetSampleApprovalChecklist: BlogPost = {
     "commercial carpet project approval",
   ],
   date: "2026-09-10",
-  dateModified: "2026-09-21",
+  dateModified: "2026-10-09",
   author: "VCARPETS Technical Team",
   category: "Project Approval Guide",
   image: "/images/optimized/sample-approval-20260921-sample-approval-review-desk-hero-a62bf4b2cc-1536w.webp",
@@ -27,10 +27,14 @@ export const commercialCarpetSampleApprovalChecklist: BlogPost = {
   imageAlt: "Grey and blue-grey carpet swatches beside a metal square and sample folder",
   h1Image: "/images/optimized/sample-approval-20260921-sample-approval-review-desk-hero-a62bf4b2cc-1536w.webp",
   h1ImageAlt: "Grey and blue-grey carpet swatches beside a metal square and sample folder",
-  h1ImageCaption: "AI-generated procurement illustration. All four review images illustrate sample-approval steps; they are not photographs of VCARPETS products, factories or client projects, and are not test or certification evidence.",
+  h1ImageCaption: "AI-generated procurement illustration. The review images illustrate sample-approval steps; they are not photographs of VCARPETS products, factories or client projects, and are not test or certification evidence.",
   h1ImageUnoptimized: true,
   relatedProductIds: ["nylon-office-carpet-tile", "education-school-carpet-tiles", "luxury-hotel-broadloom"],
   suggestedLinks: [
+    {"label": "Custom Cinema and Theater Carpet", "href": "/products/wall-to-wall/cinema-theater-carpet"},
+    {"label": "Philippines Entertainment Procurement", "href": "/markets/ph/entertainment-venue-carpet"},
+    {"label": "Pattern Repeat and Seam Planning", "href": "/blog/printed-broadloom-pattern-repeat-seam-planning"},
+    {"label": "Public Tender Example: Product Data, Samples and Spare Tiles", "href": "https://oa.mo.gov/sites/default/files/bid-opportunities/R2321-01%20Final%20specs.pdf"},
     { label: "Commercial Carpet Tile Specification Checklist", href: "/blog/commercial-carpet-tile-specification-checklist-b2b-buyers" },
     { label: "Fire Rating and VOC Documents Guide", href: "/blog/commercial-carpet-tile-fire-rating-voc-documents-guide" },
     { label: "Hotel Carpet Supplier Checklist", href: "/blog/hotel-carpet-supplier-checklist-project-order-guide" },
@@ -38,6 +42,84 @@ export const commercialCarpetSampleApprovalChecklist: BlogPost = {
     { label: "Request Sample Approval Support", href: "/contact?product=Commercial%20carpet%20sample%20approval&source=%2Fblog#quote-form" },
   ],
   sections: [
+{
+  "title": "Material, Colour and Pattern Samples Approve Different Things",
+  "paragraphs": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Before paying for a sample, agree the decision it will support. A material swatch, colour reference and custom printed pattern sample may represent different approval stages. A sample request does not establish that a format is in stock or that every construction is available. VCARPETS confirms the suitable sample type, fees, courier charges and preparation time per project."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Review purpose",
+        "What to examine",
+        "What remains separate"
+      ],
+      "rows": [
+        [
+          "Material review",
+          "Quoted fibre, pile, texture and the actual nominated backing",
+          "Custom artwork, full repeat and applicable test evidence"
+        ],
+        [
+          "Colour review",
+          "Reference colour under representative venue lighting",
+          "Full-floor appearance, construction and batch acceptance"
+        ],
+        [
+          "Custom pattern review",
+          "Artwork revision, motif scale, repeat and direction",
+          "Final layout, joins, order quantity and product document acceptance"
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/optimized/buyer-guides-20261009/pattern-scale-approval.webp",
+      "alt": "AI-generated approval concept with a larger grey taupe geometric carpet panel and a smaller partial-pattern swatch",
+      "caption": "AI-generated sample-review illustration; not a photograph of an available VCARPETS sample. A small swatch and a larger pattern panel answer different design questions; actual sample format and motif scale require confirmation."
+    },
+    {
+      "type": "subheading",
+      "title": "Can a small colour sample approve a cinema floor design?"
+    },
+    {
+      "type": "paragraph",
+      "text": "It can help review colour and texture, but may show only part of a motif. Request the artwork repeat in both directions and review how the pattern reads on the venue plan. Agree whether a larger pattern sample is needed before production. Digital renderings support discussion; retain a physical reference tied to the written construction and artwork revision."
+    },
+    {
+      "type": "list",
+      "items": [
+        {
+          "title": "Identify the reference.",
+          "text": "Record sample identifier, quotation revision, fibre, backing, artwork version and the review date."
+        },
+        {
+          "title": "Separate approval decisions.",
+          "text": "State whether approval covers material, colour, pattern or all three; identify documents or details still open."
+        },
+        {
+          "title": "Control changes.",
+          "text": "Re-review a changed construction, colour or artwork rather than carrying forward an unrelated earlier approval."
+        },
+        {
+          "title": "Prepare the request.",
+          "text": "Send venue use, area, destination, design reference, approval purpose and target review date. Paid Philippine sample requests are accepted; format, fees and timing are confirmed per project."
+        }
+      ]
+    },
+    {
+      "type": "subheading",
+      "title": "Does an approved sample prove fire performance?"
+    },
+    {
+      "type": "paragraph",
+      "text": "No. Product and assembly reports must match the nominated construction and be reviewed against the project's actual requirements. A reference public tender separately asks for product data, colour/pattern samples, installation instructions and maintenance information. Keep these as distinct approval records rather than treating a decorative sample as a certificate."
+    }
+  ]
+},
     {
       title: "Answer First: Approval Must Cover More Than Colour",
       paragraphs: [],

@@ -6,6 +6,7 @@ import { sitemapResponse } from "@/lib/sitemap-xml";
 const BASE = siteUrl;
 
 const productModifiedDates: Record<string, string> = {
+  "/products/printed-carpet": "2026-10-09",
   "/products/wall-to-wall/cinema-theater-carpet": "2026-10-09",
   "/products/carpet-tiles": "2026-09-08",
   "/products/wall-to-wall": "2026-09-08",
@@ -18,7 +19,7 @@ export function GET() {
       const url = `/products/${category.slug}`;
       return { url: `${BASE}${url}`, lastModified: productModifiedDates[url] ?? "2026-08-06", changeFrequency: "monthly" as const, priority: 0.9 };
     }),
-    ...productLinePages.map((page) => ({ url: `${BASE}/products/${page.slug}`, lastModified: "2026-08-06", changeFrequency: "monthly" as const, priority: 0.84 })),
+    ...productLinePages.map((page) => ({ url: `${BASE}/products/${page.slug}`, lastModified: productModifiedDates[`/products/${page.slug}`] ?? "2026-08-06", changeFrequency: "monthly" as const, priority: 0.84 })),
     ...products.map((product) => {
       const url = productPath(product.id);
       return { url: `${BASE}${url}`, lastModified: productModifiedDates[url] ?? "2026-08-06", changeFrequency: "monthly" as const, priority: product.category === "carpet-tiles" ? 0.9 : 0.85 };

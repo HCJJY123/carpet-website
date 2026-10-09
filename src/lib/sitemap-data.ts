@@ -25,6 +25,8 @@ type SitemapEntryInput = Omit<SitemapEntry, "url"> & { path: string };
 
 const defaultModified = "2026-08-06";
 const modifiedDates: Record<string, string> = {
+  "/products/printed-carpet": "2026-10-09",
+  "/resources": "2026-10-09",
   "/products/wall-to-wall/cinema-theater-carpet": "2026-10-09",
   "/cz/commercial-carpet-supplier-czech-republic": "2026-10-09",
   "/cz/dodavatel-komercnich-kobercu": "2026-10-09",

@@ -325,7 +325,7 @@ export const countryMarketPages: CountryMarketPage[] = [
     deliveryNote: "Ask for packing dimensions, pallet count, gross weight and destination details before choosing sea freight or a consolidated sample shipment.",
     applications: ["Hotels and resorts", "Corporate offices", "Retail and mixed-use interiors", "Airports and public corridors"],
     localTerms: ["commercial carpet Philippines", "hotel carpet supplier Philippines", "office carpet tiles Philippines"],
-    updatedDate: "2026-09-08",
+    updatedDate: "2026-10-09",
     heroImage: "/images/markets/generated/philippines-hotel-carpet-hero.webp",
     heroImageAlt: "Philippines commercial carpet supplier samples for hotel and office projects",
     localIntentSections: [

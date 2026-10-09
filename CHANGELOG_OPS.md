@@ -1096,3 +1096,12 @@ Local acceptance: Ops scope guard, SEO94 page files, link/sitemap audit, TypeScr
 - Publication requires local lint/build/Ops checks, Preview verification and required CI before PR merge. Final deployment evidence recorded on PR.
 
 Local acceptance: production Turbopack build/TypeScript passed after using local dependencies (initial external dependency symlink rejected by Turbopack; no source issue). Ops scope/runtime, SEO94 pages, links/sitemap and assets audits passed. ESLint zero errors, one existing ProductImage warning. Four new image URLs200, one H1, gallery/disclosure verified. Preview/browser/production pending; no real inquiry submitted.
+
+
+## 2026-10-09 — Buyer resources and entertainment procurement optimization
+
+Owner authorizes five recommendations and generated images for item2. Expand existing format/sample guides with cinema zones and distinct approval purposes, add2 disclosed concept images, connect printed-carpet and Philippine hub to entertainment pages, and convert legacy AI-source page into responsive procurement directory without changingURL. Add manual GSC/inquiry/AI citation review baseline; no recurring task. Supply facts unchanged, no invented TDS/photos/performance. Actual modified-page lastmod only.
+
+Branch content/buyer-resources-20261009 from production65d0a7f7257b3247a6fe63e7993724ab692d78e9; rollback samecommit. Before-edit8page HTML backups retained. Prompt/provenance and facts in ops/buyer-content-growth-20261009.md. Local/Preview/production acceptance pending.
+- Local acceptance completed: production build and TypeScript passed; SEO94, link/sitemap, placeholder109 audits passed; lint zero errors with the unchanged ProductImage.tsx43 warning; diff whitespace clean. Eight affected pages returned200 with one H1/self-canonical/valid JSON-LD, links and both generated assets passed. Root sitemap remains261 entries; affected root/child lastmod verified. Local ops:verify passed. Preview/production acceptance pending PR.
+- Authenticated GSC pre-release baseline: Web three-month filter (chart2026-09-19–2026-10-06)9clicks/1201impressions/0.7%CTR/36.5avgposition; format comparison71impressions/0clicks. Google Search generative AI Beta60impressions/27page rows; sample approval6impressions. Not independent ChatGPT/Gemini/Claude evidence.
