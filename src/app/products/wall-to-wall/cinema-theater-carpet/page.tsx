@@ -1,11 +1,34 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ApplicationProductPage from "@/components/ApplicationProductPage";
+import ProductImage from "@/components/ProductImage";
 import { products } from "@/lib/data";
 import { illustrationCaption } from "@/lib/content-growth-assets";
 import { absoluteUrl, productPath } from "@/lib/seo";
 
 const productId = "cinema-theater-carpet";
+const patternIllustrations = [
+  {
+    "src": "/images/optimized/cinema-20261009/cinema-lobby.webp",
+    "title": "Lobby Pattern Concept",
+    "alt": "AI-generated cinema lobby concept with grey taupe geometric carpet and muted gold accents"
+  },
+  {
+    "src": "/images/optimized/cinema-20261009/cinema-circulation.webp",
+    "title": "Circulation Pattern Concept",
+    "alt": "AI-generated level cinema corridor concept with the matching angular grey taupe carpet pattern"
+  },
+  {
+    "src": "/images/optimized/cinema-20261009/pattern-detail.webp",
+    "title": "Pattern Detail Concept",
+    "alt": "AI-generated close view of angular ivory linework across grey taupe and muted gold carpet fields"
+  },
+  {
+    "src": "/images/optimized/cinema-20261009/sample-review.webp",
+    "title": "Sample Review Concept",
+    "alt": "AI-generated carpet swatch concept showing the matching grey taupe geometric pattern on a neutral desk"
+  }
+];
 const product = products.find((item) => item.id === productId)!;
 export const metadata: Metadata = {
   title: "Cinema & Theater Carpet | Custom Printed Broadloom | Vcarpets",
@@ -61,6 +84,25 @@ export default function Page() {
       "Provide required test methods and check documents for the nominated construction.",
       "Separate installation allowance, replacement stock and production/arrival milestones.",
     ]} faqs={faqs}>
+    <section className="section-padding border-t border-border bg-surface" aria-labelledby="pattern-illustrations-title">
+      <div className="container-fox max-w-5xl">
+        <h2 id="pattern-illustrations-title" className="mb-5 text-3xl font-black leading-tight text-primary md:text-4xl">Pattern and Application Illustrations</h2>
+        <p className="mb-8 max-w-3xl leading-8 text-muted">Explore a consistent geometric design across lobby, circulation, detail and sample-review concepts. These AI-generated illustrations support design discussion; they are not product photographs, delivered projects or specification evidence. Confirm the actual pattern, colour, scale and construction with an approved physical sample.</p>
+        <div className="grid gap-6 sm:grid-cols-2">
+          {patternIllustrations.map((item) => (
+            <figure key={item.src} className="min-w-0 overflow-hidden border border-border bg-white">
+              <div className="aspect-[3/2]">
+                <ProductImage src={item.src} alt={item.alt} className="h-full w-full" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px" loading="lazy" />
+              </div>
+              <figcaption className="p-5">
+                <h3 className="mb-2 text-base font-black text-primary">{item.title}</h3>
+                <p className="text-xs leading-6 text-muted">AI-generated illustration. Actual product and sample details require confirmation.</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
     {sections.map(section => <section key={section.title} className="section-padding border-t border-border"><div className="container-fox max-w-5xl"><h2 className="mb-6 text-3xl font-black leading-tight text-primary md:text-4xl">{section.title}</h2><div className="space-y-5">{section.paragraphs.map(text => <p key={text.slice(0,64)} className="leading-8 text-muted">{text}</p>)}</div></div></section>)}
     <section className="section-padding bg-surface"><div className="container-fox max-w-5xl"><h2 className="mb-6 text-3xl font-black text-primary">Continue Your Project Review</h2><div className="grid gap-4 sm:grid-cols-2">{[
       { href: "/blog/printed-broadloom-pattern-repeat-seam-planning", label: "Pattern Repeat and Seam Planning Guide" },
