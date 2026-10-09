@@ -51,7 +51,10 @@ function routeIsNoindex(pageFile) {
 }
 
 function shouldExclude(route) {
-  return route === "/search"
+  // These static aliases permanently redirect; their canonical destinations are added separately.
+  return route === "/natural-sisal-carpet"
+    || route === "/projects/case-6"
+    || route === "/search"
     || route.startsWith("/search/")
     || route === "/thank-you"
     || route.startsWith("/thank-you/");

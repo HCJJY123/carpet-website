@@ -27,6 +27,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: "/markets/cz/office-carpet-tiles",
+        destination: "/markets/cz/office-carpet-tiles-czech-republic",
+        permanent: true,
+      },
       ...projectRedirects.map(([source, destination]) => ({
         source: `/projects/${source}`,
         destination: `/projects/${destination}`,

@@ -1,40 +1,38 @@
 {
-  "task": "Publish owner-confirmed cinema carpet refresh and Philippine entertainment market page under Vcarpets",
-  "approvedBy": "Owner authorizes remaining publication and confirms supply, linked product, custom patterns/colors, Philippine B2B inquiries and paid samples, FOB Tianjin Port on 2026-10-08",
+  "task": "Fix confirmed GSC Czech market 404 and review/submit valid canonical URLs to Google and Bing",
+  "approvedBy": "Owner explicitly requests GSC-based indexing submissions, Bing submission and optimization of indexing problems on 2026-10-09; existing publication authorization applies",
   "approvedCategories": [
     "content",
     "operations",
+    "build-config",
     "seo-global"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "ops/content-growth-20260930.md",
+    "ops/site-baseline.json",
+    "ops/indexing-review-20261009.md",
+    "ops/indexing-review-20261009.json",
     "keyword-map.csv",
-    "src/lib/data.ts",
-    "src/app/products/wall-to-wall/cinema-theater-carpet/page.tsx",
-    "src/components/ApplicationProductPage.tsx",
-    "src/lib/country-application-pages.ts",
-    "src/lib/philippines-entertainment-page.ts",
-    "src/components/CountryApplicationLandingPage.tsx",
+    "next.config.ts",
+    "src/components/CountryMarketLandingPage.tsx",
+    "scripts/generate-sitemap-static-routes.mjs",
+    "src/lib/generated-static-sitemap-routes.ts",
     "src/lib/sitemap-data.ts",
-    "src/lib/blog-posts/printed-broadloom-pattern-repeat-seam-planning.ts",
-    "src/app/sitemap-markets.xml/route.ts",
-    "src/components/ProductConversion.tsx"
+    "src/app/sitemaps/products.xml/route.ts"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "cfda7482a7ac40c42712c04ae504db7cfe873f14",
+  "rollbackCommit": "08a45033af5efc7ec5c687e9d6f72c315238fb72",
   "affectedUrls": [
-    "/products/wall-to-wall/cinema-theater-carpet",
-    "/markets/ph/entertainment-venue-carpet",
-    "/blog/printed-broadloom-pattern-repeat-seam-planning",
-    "/markets",
-    "/products/wall-to-wall",
-    "/products/printed-carpet",
+    "/markets/cz/office-carpet-tiles",
+    "/markets/cz/office-carpet-tiles-czech-republic",
+    "/cz/commercial-carpet-supplier-czech-republic",
+    "/cz/dodavatel-komercnich-kobercu",
     "/sitemap.xml",
-    "/sitemap-markets.xml",
-    "/sitemaps/products.xml"
+    "/sitemaps/products.xml",
+    "/natural-sisal-carpet",
+    "/projects/case-6"
   ],
-  "notes": "Feature branch/Preview/CI/PR merge. Product URL and ID preserved. Replace unverified cinema numeric/technical claims with configuration-specific confirmation; no inferred Alibaba specs. Scoped optional content/caption props preserve other template outputs. Country-specific hub breadcrumb and optional modification date through existing sitemap mechanism. New brand Vcarpets; legal Tianjin Vcarpets Global Commercial Carpet Co., Ltd. Owner clarifies RENOFLOR source-shop identity migration; historical procurement questions belong to same business but do not prove fulfillment or certificates. No forms/backend/tracking changes, no real inquiry, no new images. Reuse clearly labeled illustration; FOB Tianjin Port and paid Philippine sample requests confirmed, sample type/cost/timing confirmed per project."
+  "notes": "Correct one broken country-template link and add exact permanent308 redirect to existing equivalent page. Preserve all published canonical URLs, robots, metadata, sitemaps, forms and tracking. Record actual GSC data and URL validation; resubmit qualified sitemap/indexing requests only. Guarded feature branch, Preview, CI, merge, production validation. Public validation found2 redirect aliases in generated root sitemap. Exclude only those2 from static route generator, retaining canonical targets. Correct actual cinema modification date2026-10-08 in root/product maps, and Czech referring-page modification dates2026-10-09. No fake blanket lastmod updates."
 }

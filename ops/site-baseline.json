@@ -38,6 +38,9 @@
     { "path": "/blog/commercial-carpet-tile-backing-comparison-guide", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
     { "path": "/blog/commercial-carpet-tile-specification-checklist-b2b-buyers", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
     { "path": "/blog/commercial-carpet-tile-moq-sample-trial-project-guide", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
-    { "path": "/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] }
+    { "path": "/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers", "minimumH1": 1, "maximumH1": 1, "requiredMarkers": ["AI-generated"] },
+    { "path": "/markets/cz/office-carpet-tiles-czech-republic", "minimumH1": 1, "maximumH1": 1 },
+    { "path": "/cz/commercial-carpet-supplier-czech-republic", "minimumH1": 1, "maximumH1": 1 },
+    { "path": "/cz/dodavatel-komercnich-kobercu", "minimumH1": 1, "maximumH1": 1 }
   ]
 }

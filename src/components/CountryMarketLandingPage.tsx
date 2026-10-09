@@ -107,7 +107,7 @@ function supportingApplicationLinks(page: CountryMarketPage) {
 
   if (page.market === "cz") {
     return [
-      { href: "/markets/cz/office-carpet-tiles", label: "Office Carpet Tiles in Czech Republic", description: "Phased office refurbishment, chair-wheel areas and project specification planning." },
+      { href: "/markets/cz/office-carpet-tiles-czech-republic", label: "Office Carpet Tiles in Czech Republic", description: "Phased office refurbishment, chair-wheel areas and project specification planning." },
       { href: "/applications/office", label: "Office Carpet Specification", description: "Useful for workstations, phased refurbishment and rolling-chair areas." },
       { href: "/blog/modular-carpet-prague-office-renovation-downtime-control", label: "Prague Renovation Guide", description: "Downtime control and phased renovation planning for Czech office projects." },
     ];
