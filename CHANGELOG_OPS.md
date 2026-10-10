@@ -1106,3 +1106,19 @@ Branch content/buyer-resources-20261009 from production65d0a7f7257b3247a6fe63e79
 - Local acceptance completed: production build and TypeScript passed; SEO94, link/sitemap, placeholder109 audits passed; lint zero errors with the unchanged ProductImage.tsx43 warning; diff whitespace clean. Eight affected pages returned200 with one H1/self-canonical/valid JSON-LD, links and both generated assets passed. Root sitemap remains261 entries; affected root/child lastmod verified. Local ops:verify passed. Preview/production acceptance pending PR.
 - Authenticated GSC pre-release baseline: Web three-month filter (chart2026-09-19–2026-10-06)9clicks/1201impressions/0.7%CTR/36.5avgposition; format comparison71impressions/0clicks. Google Search generative AI Beta60impressions/27page rows; sample approval6impressions. Not independent ChatGPT/Gemini/Claude evidence.
 - PR68 first Preview acceptance: head3f82f733f558ebfcf93e1881032a8cb919e5b4a4 / dpl_GAKhKp8W2ZWM5vbHuSJsajKuZbiU READY; Site Ops Guard run37907896820 success; remote ops:verify and8-page/2-image/sitemap acceptance pass. Browser directory14cards and both new images verified,1355px no document overflow; format CTA product prefill confirmed without submission. Responsive source and scrollable table wrappers checked; dedicated mobile viewport unavailable. Final record-only head must pass CI/Preview before merge.
+
+## 2026-10-10 `seo/australia-office-procurement-20261010`
+
+**Type:** Existing-page content / B2B procurement clarity
+
+**Changed URL:** `/markets/au/office-carpet-tiles-australia`
+
+**Scope:** Updated only the Australia office carpet tile record. Sharpened commercial title and description; clarified the requested FOB Tianjin Port quotation basis and separate onward transport/installation; expanded project and physical-sample inputs; linked existing sample approval and Australia sourcing pages; corrected the record's country breadcrumb target; disclosed the existing generated hero illustration. Set this record's `updatedDate` to the actual edit date. No new URL, product fact, local-stock promise, price, fixed lead time, standard, shared template, form, contact detail or global SEO logic was introduced.
+
+**Evidence:** Existing page and current product/guide records, owner-confirmed VCARPETS B2B scope, and the historical candidate recorded in `ops/buyer-growth-tracking-20261009.json`. Historical impressions are prioritisation context only, not a current measurement or improvement claim. No prepared Australia draft was found in the current checkout.
+
+**Rollback:** Production baseline commit `0c4a79b8c9937c8c05d25aac767f17cd128ab0ff`; READY deployment `dpl_CMdeWGo9iJFMCh3TABVGoibSg12v`. Live page HTML and sitemap were backed up before editing. Use Instant Rollback for an active outage, then an auditable revert of this change; never rewrite history.
+
+**Verification before Preview:** Locked dependencies installed; Node 24.19.0, Next 16.2.9 and TypeScript 5.9.3. Local operations guard, SEO audit (94 page files), link/sitemap audit, placeholder audit (109 app files), production build and local HTTP operations verification passed. Lint: zero errors and one existing `<img>` warning in unchanged `ProductImage.tsx`. Independent exact-diff review and whitespace checks passed. Headless Chromium is blocked by a container socket restriction, so desktop/mobile UI and CTA navigation remain gated on the supported cloud browser against Vercel Preview. No lead submitted. Existing unrelated PR #19 is untouched.
+
+**Rollback access limitation:** Vercel rollback-candidate listing returned HTTP 403 for `deploymentRollback`; no retry or permission bypass. The recorded production deployment is a known-good reference, not verified Instant Rollback access. Publication additionally requires a tested source-revert/rebuild path and successful Preview/required PR checks. Production and index notification are not yet performed.
