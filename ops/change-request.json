@@ -1,6 +1,6 @@
 {
-  "task": "Clarify the existing Australia office carpet tiles page for B2B procurement",
-  "approvedBy": "Owner 2026-10-10 authorizes bounded low-risk optimizations, feature branch, testing, Preview, PR merge and verified production publication for VCARPETS",
+  "task": "Clarify the existing Australia office carpet tiles page and restrict release index notifications to explicit changed URLs",
+  "approvedBy": "Owner 2026-10-10 authorizes bounded low-risk optimizations, feature branch, testing, Preview, PR merge and verified production publication for VCARPETS; bounded existing IndexNow workflow/script correction authorized to avoid unrelated bulk resubmission",
   "approvedCategories": [
     "content",
     "operations"
@@ -8,7 +8,11 @@
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/lib/country-application-pages.ts"
+    "src/lib/country-application-pages.ts",
+    ".github/workflows/indexnow.yml",
+    "ops/indexnow-urls.json",
+    "scripts/indexnow-submit.mjs",
+    "scripts/indexnow-submit.test.mjs"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
@@ -17,5 +21,5 @@
   "affectedUrls": [
     "/markets/au/office-carpet-tiles-australia"
   ],
-  "notes": "Edit only the Australia office record: commercial metadata and copy, B2B FOB Tianjin Port scope, sample and RFQ guidance, verified existing guide/country-hub references, illustration disclosure and updatedDate. Preserve URL, product records, templates, forms, contact details, schema generation, robots and sitemap logic. No prices, sample fees, delivery guarantees, local inventory or compliance claims. Back up live HTML before editing; validate local build, Preview, desktop/mobile layout, FAQ parity and existing CTA destinations without submitting a lead. Leave unrelated open PR19 untouched."
+  "notes": "Edit only the Australia office record: commercial metadata and copy, B2B FOB Tianjin Port scope, sample and RFQ guidance, verified existing guide/country-hub references, illustration disclosure and updatedDate. Preserve URL, product records, templates, forms, contact details, schema generation, robots and sitemap logic. No prices, sample fees, delivery guarantees, local inventory or compliance claims. Back up live HTML before editing; validate local build, Preview, desktop/mobile layout, FAQ parity and existing CTA destinations without submitting a lead. Leave unrelated open PR19 untouched. Index notification scope: pin existing workflow checkout to deployed SHA with parent history, use a changed explicit release manifest, validate same-origin canonical URLs against the existing live sitemap, and skip missing/empty/unchanged manifests. Preserve triggers, permissions, public key and endpoints; no credentials or persistent access changes."
 }
