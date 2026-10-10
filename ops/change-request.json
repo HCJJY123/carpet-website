@@ -1,45 +1,25 @@
 {
-  "task": "Strengthen existing buyer guides, entertainment content links and procurement resource directory",
-  "approvedBy": "Owner 2026-10-09 explicitly instructs execution of five proposed optimizations and image generation for item2; guarded publication authorized",
+  "task": "Clarify the existing Australia office carpet tiles page and restrict release index notifications to explicit changed URLs",
+  "approvedBy": "Owner 2026-10-10 authorizes bounded low-risk optimizations, feature branch, testing, Preview, PR merge and verified production publication for VCARPETS; bounded existing IndexNow workflow/script correction authorized to avoid unrelated bulk resubmission",
   "approvedCategories": [
     "content",
-    "operations",
-    "seo-global"
+    "operations"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "keyword-map.csv",
-    "ops/buyer-content-growth-20261009.md",
-    "ops/buyer-growth-tracking-20261009.json",
-    "src/app/resources/ai-commercial-carpet-source-guide/page.tsx",
-    "src/lib/resource-data.ts",
-    "src/lib/product-line-data.ts",
-    "src/app/products/[line]/page.tsx",
-    "src/components/CountryMarketLandingPage.tsx",
-    "src/lib/country-market-pages.ts",
-    "src/lib/blog-posts/carpet-tiles-vs-broadloom-commercial-projects-guide.ts",
-    "src/lib/blog-posts/commercial-carpet-sample-approval-checklist.ts",
-    "src/lib/philippines-entertainment-page.ts",
-    "src/lib/sitemap-data.ts",
-    "src/app/sitemaps/products.xml/route.ts",
-    "src/app/products/wall-to-wall/cinema-theater-carpet/page.tsx",
-    "public/images/optimized/buyer-guides-20261009/pattern-scale-approval.webp",
-    "public/images/optimized/buyer-guides-20261009/cinema-format-planning.webp",
-    "src/app/sitemaps/resources.xml/route.ts"
+    "src/lib/country-application-pages.ts",
+    ".github/workflows/indexnow.yml",
+    "ops/indexnow-urls.json",
+    "scripts/indexnow-submit.mjs",
+    "scripts/indexnow-submit.test.mjs"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "65d0a7f7257b3247a6fe63e7993724ab692d78e9",
+  "rollbackCommit": "0c4a79b8c9937c8c05d25aac767f17cd128ab0ff",
+  "rollbackDeployment": "dpl_CMdeWGo9iJFMCh3TABVGoibSg12v",
   "affectedUrls": [
-    "/resources/ai-commercial-carpet-source-guide",
-    "/resources",
-    "/products/printed-carpet",
-    "/ph/commercial-carpet-supplier-philippines",
-    "/markets/ph/entertainment-venue-carpet",
-    "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide",
-    "/blog/commercial-carpet-sample-approval-checklist",
-    "/products/wall-to-wall/cinema-theater-carpet"
+    "/markets/au/office-carpet-tiles-australia"
   ],
-  "notes": "No new URLs, no redirects/robots/forms/tracking changes. Two generated design-approval illustrations explicitly disclosed, never substitute for real product evidence/TDS. Reuse templates, scoped lastmod only. Maintain manual monitoring baseline, no scheduled automation."
+  "notes": "Edit only the Australia office record: commercial metadata and copy, B2B FOB Tianjin Port scope, sample and RFQ guidance, verified existing guide/country-hub references, illustration disclosure and updatedDate. Preserve URL, product records, templates, forms, contact details, schema generation, robots and sitemap logic. No prices, sample fees, delivery guarantees, local inventory or compliance claims. Back up live HTML before editing; validate local build, Preview, desktop/mobile layout, FAQ parity and existing CTA destinations without submitting a lead. Leave unrelated open PR19 untouched. Index notification scope: pin existing workflow checkout to deployed SHA with parent history, use a changed explicit release manifest, validate same-origin canonical URLs against the existing live sitemap, and skip missing/empty/unchanged manifests. Preserve triggers, permissions, public key and endpoints; no credentials or persistent access changes."
 }

@@ -1,4 +1,4 @@
-name: Submit production sitemap to IndexNow
+name: Submit changed production URLs to IndexNow
 
 on:
   deployment_status:
@@ -27,11 +27,19 @@ jobs:
     steps:
       - name: Check out deployed source
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha || github.sha }}
+          fetch-depth: 2
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
 
-      - name: Submit live sitemap URLs
+      - name: Verify changed-URL submission rules
+        run: node --test scripts/indexnow-submit.test.mjs
+
+      - name: Submit explicit changed URLs
+        env:
+          EXPECTED_DEPLOYMENT_SHA: ${{ github.event.deployment.sha || github.sha }}
         run: npm run indexnow
