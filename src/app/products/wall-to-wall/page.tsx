@@ -118,8 +118,8 @@ const contractCarpetSelector = [
   },
   {
     area: "Cinemas & Theaters",
-    construction: "Custom printed entertainment-venue broadloom",
-    buyingRange: "MOQ from 300 SQM · FOB from US$4.20/SQM",
+    construction: "Custom patterned broadloom; confirm the selected construction",
+    buyingRange: "MOQ and FOB Tianjin Port price confirmed in a written quotation",
     href: "/products/wall-to-wall/cinema-theater-carpet"
   }
 ];
@@ -350,7 +350,7 @@ export default function CategoryPage() {
                 <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">{["custom-luxury-hotel-room-carpet", "custom-floral-printed-hotel-carpet"].includes(p.id) ? "Reference FOB Price" : "FOB Price"}</span>
-                    <span className="text-right font-black text-primary">{p.fobPrice?.display}</span>
+                    <span className="text-right font-black text-primary">{p.id === "cinema-theater-carpet" ? "Confirmed in written quotation" : p.fobPrice?.display}</span>
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Project MOQ</span>
@@ -358,11 +358,11 @@ export default function CategoryPage() {
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Availability</span>
-                    <span className="text-right font-black text-primary">{["custom-luxury-hotel-room-carpet", "custom-floral-printed-hotel-carpet"].includes(p.id) ? "Made to Order" : "In Stock / Made to Order"}</span>
+                    <span className="text-right font-black text-primary">{p.id === "cinema-theater-carpet" ? "Confirm for selected design and quantity" : ["custom-luxury-hotel-room-carpet", "custom-floral-printed-hotel-carpet"].includes(p.id) ? "Made to Order" : "In Stock / Made to Order"}</span>
                   </div>
                 </div>
                 <div className="mt-auto flex min-h-11 items-center justify-between rounded-sm bg-primary px-4 py-3 text-[10px] font-black uppercase tracking-[0.12em] text-white transition-colors group-hover:bg-[#C8752A]">
-                  <span>View Product & Pricing</span>
+                  <span>{p.id === "cinema-theater-carpet" ? "View Product & Quote Details" : "View Product & Pricing"}</span>
                   <span>→</span>
                 </div>
               </Link>

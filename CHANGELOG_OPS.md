@@ -1138,3 +1138,16 @@ Branch content/buyer-resources-20261009 from production65d0a7f7257b3247a6fe63e79
 **Indexing tests:** Ten offline Node tests pass, covering explicit URL/dedup selection, missing/unchanged/empty manifests, malformed/unsafe/non-sitemap URLs, first-parent merge and squash-style commits, unrelated docs commits, exact deployment SHA mismatch, zero-network empty lists, sitemap/network failures, mocked 200/202 acceptance and a rejected 429 response. Test-provider responses are mocks; no real index notification has been sent before production.
 
 **Final expanded-scope validation:** Independent review approved the exact indexing correction and reran its ten tests and operations guard. Full local validation then passed again across all seven declared files: Node tests, ops:check, SEO, links/sitemap, placeholders, lint (same one pre-existing warning, no errors) and production build. The final GitHub head and Preview remain publication gates. If a page rollback is needed, preserve the new changed-URL indexing safeguards and reverse only the page-content patch through a checked PR; do not restore the old bulk-notification workflow merely to undo this copy change.
+
+
+## 2026-10-11 — Cinema category written-quotation consistency
+
+**Approved scope:** Synchronise only the cinema selector and cinema product card on `/products/wall-to-wall` with the current cinema detail/data record. Remove the stale fixed 300 SQM / US$4.20 reference, avoid implying a confirmed construction or stock status, and show written-quotation / selected-design confirmation wording. Existing cinema MOQ and all other product rows/cards remain unchanged. No new price, certification or performance claim; no URL, data, schema, form, quote destination, SEO or sitemap change.
+
+**Baseline and rollback:** Latest main `ab7e2656bc7194d330ad0c76d9064be715d482d7`; Mike's READY production deployment `dpl_4mC4EwXLwqmCYPQgSE3SUmSZDJck`. Category HTML and sitemap backed up before editing. Use an auditable narrow source revert through checks/Preview/PR if necessary; do not restore the old bulk-indexing workflow. Instant Rollback access has not been verified. Unrelated open PR #19 and existing staged work are preserved.
+
+**Publication gates:** Local operations guard, lint, build, focused cinema/non-cinema HTML comparison, Preview operations verification, responsive wrapping/table panning and existing quote navigation must pass before the authorised ordinary PR merge. No lead will be submitted. Final evidence will be recorded here and on the PR.
+
+**Index notification:** The existing release manifest is deliberately unchanged. The changed-URL workflow must skip this release without resending the prior Australia URL or 261-url sitemap. No new URL and no Bing sitemap resubmission.
+
+**Initial local acceptance:** Exact diff/whitespace, operations scope guard (three files), SEO audit (94 page files), internal-link/sitemap source audit and ten offline IndexNow tests passed. Lint passed with zero errors and the single unchanged `ProductImage.tsx` `<img>` warning. Initial default-resource lint/build processes were killed by the shared execution environment; lint passed with a bounded heap, and the production build is being rerun with two build workers and a bounded heap, without changing repository configuration. Preview and responsive gates remain pending.
