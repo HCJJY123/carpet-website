@@ -316,6 +316,25 @@ export default function CategoryPage() {
             <h2 className="mb-4 text-3xl font-black uppercase text-primary md:text-4xl">Commercial Carpet Tile Products</h2>
             <p className="leading-relaxed text-muted">Compare material, backing, traffic class, price, minimum order, and application. Each product page includes technical data, project images, and a direct inquiry form.</p>
           </div>
+          <div className="mb-12 rounded-lg border border-border bg-surface p-5 md:p-7" aria-labelledby="tile-comparison-heading">
+            <h3 id="tile-comparison-heading" className="text-2xl font-black text-primary">Compare construction and price units</h3>
+            <p className="mt-3 max-w-4xl text-sm leading-7 text-muted">The listed FOB ranges use different units: Piece means one tile; SQM means one square meter. Read the unit alongside the fiber and backing. Options in a product listing are alternatives to confirm for the selected configuration, not identical specifications across the range.</p>
+            <p className="mt-3 max-w-4xl text-sm leading-7 text-primary"><strong>Area conversion only:</strong> one 50 × 50 cm tile covers 0.25 m²; four tiles cover 1 m² before cutting waste or spare stock. This explains coverage, not a converted price or order quantity. Confirm carton quantities, waste allowance and spare tiles in the written quotation.</p>
+            <div className="mt-6 space-y-3">
+              {categoryProducts.map((p) => (
+                <article key={p.id} className="rounded border border-border bg-white p-4 md:p-5">
+                  <Link href={`/products/${categoryId}/${p.id}`} className="inline-flex min-h-11 items-center text-sm font-black leading-6 text-primary underline decoration-accent underline-offset-4 hover:text-accent">{p.name} →</Link>
+                  <dl className="mt-3 grid gap-4 text-sm sm:grid-cols-2 lg:grid-cols-[0.7fr_1.2fr_1.3fr_1fr]">
+                    <div><dt className="text-xs font-bold uppercase text-muted">Listed tile size</dt><dd className="mt-1 leading-6 text-primary">{p.spec.size || "Confirm in written quotation"}</dd></div>
+                    <div><dt className="text-xs font-bold uppercase text-muted">Listed fiber / material</dt><dd className="mt-1 leading-6 text-primary">{p.spec.material || "Confirm in written quotation"}</dd></div>
+                    <div><dt className="text-xs font-bold uppercase text-muted">Listed backing</dt><dd className="mt-1 leading-6 text-primary">{p.technicalSpecs.backing || "Confirm in written quotation"}</dd></div>
+                    <div><dt className="text-xs font-bold uppercase text-muted">Listed FOB price & unit</dt><dd className="mt-1 font-bold leading-6 text-primary">{p.fobPrice?.display ?? "Quote by project"}</dd></div>
+                  </dl>
+                </article>
+              ))}
+            </div>
+            <p className="mt-5 text-sm leading-7 text-muted">Source: each linked product’s current specification and listed FOB range. Open the product for its MOQ, availability and full buying terms. Ask for the selected fiber, backing, size and pricing unit to be confirmed together in a written quotation before comparing offers.</p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {categoryProducts.map((p) => (
               <Link key={p.id} href={`/products/${categoryId}/${p.id}`} className="group flex h-full flex-col rounded-lg border border-border bg-white p-6 transition-all duration-300 hover:border-accent hover:shadow-xl">
