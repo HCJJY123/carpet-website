@@ -1,20 +1,20 @@
 {
-  "task": "Align cinema category buying terms with the current written-quotation product detail",
-  "approvedBy": "Owner explicitly approved synchronising the two named category inconsistencies on 2026-10-11; standing approval allows verified routine low-risk PR merge and production deployment",
+  "task": "Clarify carpet tile comparison by listed construction and original price unit",
+  "approvedBy": "Owner standing five-site low-risk content and verified PR publication authority; continued 2026-10-11",
   "approvedCategories": [
     "content"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/products/wall-to-wall/page.tsx"
+    "src/app/products/carpet-tiles/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "ab7e2656bc7194d330ad0c76d9064be715d482d7",
-  "rollbackDeployment": "dpl_4mC4EwXLwqmCYPQgSE3SUmSZDJck",
+  "rollbackCommit": "fbdf2ba8f1b7688f821b70e4a94b2f04c02f4d68",
+  "rollbackDeployment": "dpl_3m5ATBay74CBa2Q2ZL1kCFmVsA6L",
   "affectedUrls": [
-    "/products/wall-to-wall"
+    "/products/carpet-tiles"
   ],
-  "notes": "Only change the cinema selector construction and buying-range copy and cinema-specific category-card FOB value, availability and detail-link label. Keep the existing cinema MOQ from data. Source is the current cinema product detail and data record: construction, MOQ, FOB Tianjin Port price and availability require written quotation / selected configuration confirmation. Preserve all other product rows/cards, URLs, product data, shared pricing, schemas, forms, contact and SEO/sitemap logic. No new prices, certifications or performance guarantees. Latest main and open PR19 reviewed; no functional overlap. Live category HTML and sitemap backed up before editing. Validate focused HTML and exact diff, ops:check, lint, build, Preview ops:verify, responsive wrapping/table panning and existing quote navigation without a submission. Leave the IndexNow manifest untouched so this release cannot replay the prior Australia URL or the complete sitemap. Do not resubmit the sitemap to Bing."
+  "notes": "Add an accessible responsive comparison using existing product size, fiber, backing and unchanged FOB display/unit. Explain only geometric coverage for verified 50x50 cm tiles; no derived monetary quote. Preserve every price, MOQ, trade term, availability, existing product link and quote context. No product records, FAQ or JSON-LD changes. The existing FAQ US$3.80 starting reference versus PP bitumen US$3.20 range is an unresolved commercial-review issue and is not corrected by this task. Existing hydrated category quote CTA works; do not change forms or conversion logic. Main and unrelated PR19 checked; live HTML and sitemap backed up. Verify exact-head checks, Preview, mobile/desktop, links, reload/back, no-submit quote context and production parity. Leave IndexNow manifest unchanged to skip notification; parent coordinates any manual indexing."
 }
