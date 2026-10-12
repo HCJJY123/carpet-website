@@ -1,20 +1,23 @@
 {
-  "task": "Align cinema category buying terms with the current written-quotation product detail",
-  "approvedBy": "Owner explicitly approved synchronising the two named category inconsistencies on 2026-10-11; standing approval allows verified routine low-risk PR merge and production deployment",
+  "task": "Deepen the existing rolling-chair office carpet procurement guide and close its Australian buyer-to-RFQ path",
+  "approvedBy": "2026-10-11 owner fusion instruction requires researched daily Blog output and direct low-risk implementation; effective standing authorisation permits verified feature branch/Preview/PR production release.",
   "approvedCategories": [
-    "content"
+    "content",
+    "operations"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/products/wall-to-wall/page.tsx"
+    "src/lib/blog-posts/office-carpet-tiles-rolling-chairs-fitout-guide.ts",
+    "keyword-map.csv",
+    "ops/indexnow-urls.json",
+    "ops/rolling-chair-procurement-20261012.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "ab7e2656bc7194d330ad0c76d9064be715d482d7",
-  "rollbackDeployment": "dpl_4mC4EwXLwqmCYPQgSE3SUmSZDJck",
+  "rollbackCommit": "fbdf2ba8f1b7688f821b70e4a94b2f04c02f4d68",
   "affectedUrls": [
-    "/products/wall-to-wall"
+    "/blog/office-carpet-tiles-rolling-chairs-fitout-guide"
   ],
-  "notes": "Only change the cinema selector construction and buying-range copy and cinema-specific category-card FOB value, availability and detail-link label. Keep the existing cinema MOQ from data. Source is the current cinema product detail and data record: construction, MOQ, FOB Tianjin Port price and availability require written quotation / selected configuration confirmation. Preserve all other product rows/cards, URLs, product data, shared pricing, schemas, forms, contact and SEO/sitemap logic. No new prices, certifications or performance guarantees. Latest main and open PR19 reviewed; no functional overlap. Live category HTML and sitemap backed up before editing. Validate focused HTML and exact diff, ops:check, lint, build, Preview ops:verify, responsive wrapping/table panning and existing quote navigation without a submission. Leave the IndexNow manifest untouched so this release cannot replay the prior Australia URL or the complete sitemap. Do not resubmit the sitemap to Bing."
+  "notes": "Existing route only. Full evidence-led Blog rewrite; same hero with illustration disclosure; add targeted existing internal links and authoritative references. Preserve all forms, analytics, product facts, other page records, shared templates, SEO generation and current indexing script/workflow. Explicit changed-URL manifest contains only this article. Live article, AU page and root sitemap saved before editing. No real inquiry, fixed price, certificate or invented castor-chair performance."
 }
