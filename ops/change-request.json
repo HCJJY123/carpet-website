@@ -1,6 +1,6 @@
 {
-  "task": "Publish the approved three VCARPETS buyer guides and six disclosed concept illustrations",
-  "approvedBy": "Owner message 2026-10-12: 上架部署吧",
+  "task": "Clarify construction-specific installation in the nylon office carpet tile FAQ and add the existing adhesive/subfloor guide link",
+  "approvedBy": "Owner instruction to implement assessment fixes and publish; standing authorization for pre-approved routine low-risk changes after tests",
   "approvedCategories": [
     "content",
     "operations"
@@ -8,28 +8,13 @@
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "keyword-map.csv",
-    "ops/indexnow-urls.json",
-    "src/lib/blog-data.ts",
-    "src/app/blog/[slug]/page.tsx",
-    "src/lib/blog-posts/office-carpet-tile-layout-approval-bulk-order.ts",
-    "src/lib/blog-posts/hotel-guestroom-carpet-room-type-order-schedule.ts",
-    "src/lib/blog-posts/custom-wool-rugs-home-decor-wholesale-prototype.ts",
-    "public/images/blog-series/buyer-guides-20261012/office-layouts-hero.webp",
-    "public/images/blog-series/buyer-guides-20261012/office-layouts-plan.webp",
-    "public/images/blog-series/buyer-guides-20261012/hotel-room-types.webp",
-    "public/images/blog-series/buyer-guides-20261012/hotel-phasing.webp",
-    "public/images/blog-series/buyer-guides-20261012/wool-rug-collection.webp",
-    "public/images/blog-series/buyer-guides-20261012/wool-prototype-review.webp"
+    "src/app/products/carpet-tiles/nylon-office-carpet-tile/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "8aa6e05464d7d6793e4a0d81ae418b6f4964c4b8",
+  "rollbackCommit": "bafcad147af97b8c54660e4d976a35505aa7f189",
   "affectedUrls": [
-    "/blog/office-carpet-tile-layout-approval-bulk-order",
-    "/blog/hotel-guestroom-carpet-room-type-order-schedule",
-    "/blog/custom-wool-rugs-home-decor-wholesale-prototype",
-    "/blog"
+    "/products/carpet-tiles/nylon-office-carpet-tile"
   ],
-  "notes": "Preserve the approved review-package wording, images and captions, tables, FAQs and B2B FOB Tianjin Port language. Minimal opt-in paragraph links and matching visible FAQ structured data for the three new posts only. Preserve existing post output, all conversion paths and existing sitemap logic. Feature branch, Preview and required checks before PR merge. CHANGELOG transmission approval is separately pending; its inclusion in allowedPaths does not authorize external transmission."
+  "notes": "Change only the installation answer in its shared FAQ source and add an adjacent link to the existing adhesive/subfloor compatibility guide. Preserve every other FAQ, product claim, price, unit, schema generator, route and conversion path. Use a feature branch, Preview, required checks and PR merge. Do not include PR #71."
 }

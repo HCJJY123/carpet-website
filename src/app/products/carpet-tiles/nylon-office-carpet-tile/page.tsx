@@ -107,7 +107,11 @@ const faqs = [
   },
   {
     q: "How are carpet tiles installed?",
-    a: "Loose-lay with releasable adhesive or tabs over a clean, level subfloor, in monolithic, quarter-turn, ashlar, or brick layouts. Individual tiles can be lifted and replaced without disturbing the floor.",
+    a: "Confirm the installation method for the quoted tile backing and site conditions before ordering. Releasable adhesive, tabs or another system should be used only when approved for that construction, subfloor and traffic conditions. Agree substrate preparation, moisture and pH checks, layout direction and replacement access with the installer and supplier. Do not assume that loose-lay installation or corner tabs are suitable for every backing.",
+    guide: {
+      href: "/blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide",
+      label: "Review adhesive and subfloor compatibility",
+    },
   },
   {
     q: "Can I get custom colors or our brand design?",
@@ -446,6 +450,11 @@ export default function NylonOfficeCarpetTilePage() {
               <article key={faq.q} className="border border-border bg-white p-6">
                 <h3 className="mb-3 text-sm font-black uppercase tracking-[0.1em] text-primary">{faq.q}</h3>
                 <p className="text-sm leading-relaxed text-muted">{faq.a}</p>
+                {faq.guide && (
+                  <Link href={faq.guide.href} className="mt-4 inline-block text-sm font-bold text-primary underline underline-offset-4 hover:text-accent">
+                    {faq.guide.label}
+                  </Link>
+                )}
               </article>
             ))}
           </div>

@@ -1206,3 +1206,11 @@ Verification on content head `a41e4fa75b2db7251c60c02ba78d209408c0661e`:
 - Production blog listing, rolling-chair article and root sitemap were backed up before integration. The explicit IndexNow manifest contains only the three new canonical URLs; the unchanged existing production workflow handles submission after deployment, avoiding manual duplicates.
 
 This append-only evidence commit must pass its own exact-SHA CI and READY Preview plus `ops:check` and `ops:verify` before normal PR merge. Production deployment SHA, www alias, live pages/images/schema/list/sitemap and automatic IndexNow acceptance remain post-merge checks; this record does not claim they have happened. Unrelated PR71 and PR19 are excluded.
+
+## 2026-10-12 — Nylon tile installation FAQ clarification
+
+- Scope: `/products/carpet-tiles/nylon-office-carpet-tile` only. Qualify installation guidance by the approved backing, subfloor and traffic conditions; add the existing adhesive/subfloor compatibility guide beside the answer.
+- The shared FAQ array supplies both visible copy and FAQPage JSON-LD. Other FAQs, product specifications, certificates, prices, units, legal entity, routes and conversion paths remain unchanged. PR #71 is excluded.
+- Evidence: CRI 104 section 10 calls for the carpet manufacturer's recommendations because carpet tile backing and adhesive requirements vary. https://carpet-rug.org/wp-content/uploads/2019/03/CRI-104-STANDARD-For-INSTALLATION-of-COMMERCIAL-CARPET.pdf
+- Rollback baseline: `bafcad147af97b8c54660e4d976a35505aa7f189`. Live product and destination-guide HTML backed up before editing; both returned HTTP 200.
+- Release gates: operations guard, SEO/link audits, lint, TypeScript, build, exact-head CI, Preview operations/FAQ schema/link/mobile QA must pass before normal PR merge. No form submission or manual indexing.
