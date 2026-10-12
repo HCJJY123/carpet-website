@@ -1,3 +1,6 @@
+import { officeCarpetTileLayoutApprovalGuide } from "@/lib/blog-posts/office-carpet-tile-layout-approval-bulk-order";
+import { hotelGuestroomCarpetRoomTypeScheduleGuide } from "@/lib/blog-posts/hotel-guestroom-carpet-room-type-order-schedule";
+import { customWoolRugsHomeDecorWholesaleGuide } from "@/lib/blog-posts/custom-wool-rugs-home-decor-wholesale-prototype";
 import { printedBroadloomPatternRepeatGuide } from "@/lib/blog-posts/printed-broadloom-pattern-repeat-seam-planning";
 import { hotelCarpetPatternsGuide } from "@/lib/blog-posts/hotel-carpet-patterns-guide";
 import { commercialCarpetTileFireRatingVocDocumentsGuide } from "@/lib/blog-posts/commercial-carpet-tile-fire-rating-voc-documents-guide";
@@ -43,7 +46,7 @@ export interface BlogSection {
 }
 
 export type BlogContentBlock =
-  | { type: "paragraph"; text: string }
+  | { type: "paragraph"; text: string; links?: { text: string; href: string }[] }
   | { type: "subheading"; title: string }
   | { type: "table"; headers: string[]; rows: string[][]; note?: string }
   | { type: "list"; ordered?: boolean; items: { title?: string; text: string }[] }
@@ -78,9 +81,13 @@ export interface BlogPost {
   sections?: BlogSection[];
   relatedProductIds?: string[];
   suggestedLinks?: { label: string; href: string }[];
+  faqs?: { question: string; answer: string }[];
 }
 
 const baseBlogPosts: BlogPost[] = [
+  officeCarpetTileLayoutApprovalGuide,
+  hotelGuestroomCarpetRoomTypeScheduleGuide,
+  customWoolRugsHomeDecorWholesaleGuide,
   printedBroadloomPatternRepeatGuide,
   nylonPolyesterPolypropyleneComparison,
   commercialCarpetSourcingDirectory,
@@ -1338,3 +1345,4 @@ export const blogPosts: BlogPost[] = baseBlogPosts.map((post) => {
     suggestedLinks: [...(post.suggestedLinks ?? []), ...newLinks.filter((link) => !post.suggestedLinks?.some((existing) => existing.href === link.href))],
   };
 });
+
