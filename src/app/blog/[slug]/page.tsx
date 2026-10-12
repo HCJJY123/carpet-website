@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { blogPosts, type BlogContentBlock } from "@/lib/blog-data";
@@ -17,7 +18,20 @@ interface Props {
 
 function RichBlogBlock({ block, index }: { block: BlogContentBlock; index: number }) {
   if (block.type === "paragraph") {
-    return <p className="text-lg leading-relaxed text-muted">{block.text}</p>;
+    if (!block.links?.length) {
+      return <p className="text-lg leading-relaxed text-muted">{block.text}</p>;
+    }
+    const content: ReactNode[] = [];
+    let cursor = 0;
+    for (const [linkIndex, link] of block.links.entries()) {
+      const start = block.text.indexOf(link.text, cursor);
+      if (start < 0 || !link.href.startsWith("/") || link.href.startsWith("//")) continue;
+      content.push(block.text.slice(cursor, start));
+      content.push(<Link key={linkIndex} href={link.href} className="font-semibold text-primary underline decoration-accent underline-offset-4 hover:text-accent">{link.text}</Link>);
+      cursor = start + link.text.length;
+    }
+    content.push(block.text.slice(cursor));
+    return <p className="text-lg leading-relaxed text-muted">{content}</p>;
   }
 
   if (block.type === "subheading") {
@@ -235,6 +249,21 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <article className="bg-white min-h-screen">
+      {post.faqs?.length ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: safeJsonLd({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": `${absoluteUrl(`/blog/${post.slug}`)}#faq`,
+            mainEntity: post.faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+          }) }}
+        />
+      ) : null}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(articleJsonLd) }}
@@ -401,3 +430,4 @@ export default async function BlogPostPage({ params }: Props) {
     </article>
   );
 }
+
