@@ -21,7 +21,7 @@ export const officeCarpetTilesRollingChairsFitoutGuide: BlogPost = {
   "image": "/images/blog-series/office-carpet-tiles-rolling-chairs-fitout-guide/office-carpet-tiles-rolling-chairs-fitout-guide.png",
   "h1Image": "/images/blog-series/office-carpet-tiles-rolling-chairs-fitout-guide/office-carpet-tiles-rolling-chairs-fitout-guide.png",
   "h1ImageAlt": "Illustration of rolling office chairs on blue-grey modular carpet tiles with retained spare tiles",
-  "h1ImageCaption": "AI-generated planning illustration; not an installed customer project, product photograph or castor-chair test result.",
+  "h1ImageCaption": "Application planning illustration; not an installed customer project, product photograph or castor-chair test result.",
   "h1ImageFit": "contain",
   "relatedProductIds": [
     "nylon-office-carpet-tile",
