@@ -1214,3 +1214,12 @@ This append-only evidence commit must pass its own exact-SHA CI and READY Previe
 - Evidence: CRI 104 section 10 calls for the carpet manufacturer's recommendations because carpet tile backing and adhesive requirements vary. https://carpet-rug.org/wp-content/uploads/2019/03/CRI-104-STANDARD-For-INSTALLATION-of-COMMERCIAL-CARPET.pdf
 - Rollback baseline: `bafcad147af97b8c54660e4d976a35505aa7f189`. Live product and destination-guide HTML backed up before editing; both returned HTTP 200.
 - Validation: default production build, operations guard, SEO/link audits, TypeScript and independent source review passed; lint has zero errors and one unchanged ProductImage warning. Head `3376d30` passed CI run `38273491215` and READY Preview `dpl_9KvQa4gFnhWWM2N9rtQg3gaFSCQm`, including ops:verify, exact FAQ/schema parity, unchanged Product data, direct-200 guide link and desktop and 400 CSS-pixel browser checks with keyboard navigation, Back and reload. No form submission or manual indexing. Final-head gates are rechecked before merge; production acceptance follows.
+
+## 2026-10-13 — FOB Tianjin Port quotation guide and contact-copy alignment
+
+- Baseline: main `f0765d7b25ec22ba8173d3051f761bb578bcdc31`, READY production deployment `dpl_2VzBLs7B3H96wvZX9hMTF37bGq6u`. PR72, PR73 and PR74 were already in production; open PR71 and PR19 are excluded.
+- Scope: correct unsupported DAP, fixed global 3–5 day sample and own-factory wording on `/contact`; add `/blog/commercial-carpet-fob-tianjin-port-buyer-checklist` with a distinct quotation-comparison intent, related products, official trade-term sources and a scoped RFQ path.
+- Business boundary: bulk quotations are FOB Tianjin Port. Product configuration, MOQ, price, packing, sample format/fee/courier/timing, production timing and exact handoff remain project-specific. The guide is not legal, customs, tax or freight advice and does not change the signed contract.
+- Evidence: live contact HTML returned HTTP 200 and was backed up before editing; the new route returned 404 before creation. ICC Incoterms materials and Trade.gov support the trade-term framework. No readable VCARPETS GSC property was available on 2026-10-13, so no new GSC figure is claimed.
+- Images: reuse two existing optimized export-planning WebP illustrations with explicit non-evidence captions; no new image generation.
+- Release record at this stage: local feature-branch candidate only. Validation, Preview, PR, production SHA, live-page verification and any IndexNow acceptance must be appended after they occur.

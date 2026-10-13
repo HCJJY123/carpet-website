@@ -1,20 +1,29 @@
 {
-  "task": "Clarify construction-specific installation in the nylon office carpet tile FAQ and add the existing adhesive/subfloor guide link",
-  "approvedBy": "Owner instruction to implement assessment fixes and publish; standing authorization for pre-approved routine low-risk changes after tests",
+  "task": "Align the contact page with the confirmed FOB Tianjin Port and project-specific sample terms, and publish a buyer guide explaining the quotation scope",
+  "approvedBy": "Owner-confirmed business facts and standing authorization for daily evidence-led content and low-risk verified publication",
   "approvedCategories": [
     "content",
+    "seo",
+    "conversion",
     "operations"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/products/carpet-tiles/nylon-office-carpet-tile/page.tsx"
+    "keyword-map.csv",
+    "ops/indexnow-urls.json",
+    "ops/fob-tianjin-buyer-guide-20261013.md",
+    "src/app/contact/page.tsx",
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/commercial-carpet-fob-tianjin-port-buyer-checklist.ts"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "bafcad147af97b8c54660e4d976a35505aa7f189",
+  "rollbackCommit": "f0765d7b25ec22ba8173d3051f761bb578bcdc31",
   "affectedUrls": [
-    "/products/carpet-tiles/nylon-office-carpet-tile"
+    "/contact",
+    "/blog/commercial-carpet-fob-tianjin-port-buyer-checklist",
+    "/blog"
   ],
-  "notes": "Change only the installation answer in its shared FAQ source and add an adjacent link to the existing adhesive/subfloor compatibility guide. Preserve every other FAQ, product claim, price, unit, schema generator, route and conversion path. Use a feature branch, Preview, required checks and PR merge. Do not include PR #71."
+  "notes": "Correct contact-page claims only: bulk commercial carpet quotations use FOB Tianjin Port; sample format, fees, courier charges and timing are confirmed per project; do not claim DAP, global 3-5 day dispatch or an unverified own-factory role. Add one English B2B buyer guide with visible procurement guidance, official Incoterms references, existing relevant images disclosed as illustrations, product links and a scoped quote URL. Preserve form, email, WhatsApp, tracking, product data, prices, MOQ and schema components. Feature branch, Preview, required checks and PR merge only. Do not include unrelated PR #71 or PR #19."
 }
