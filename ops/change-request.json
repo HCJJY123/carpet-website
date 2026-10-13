@@ -1,16 +1,21 @@
 {
-  "task": "Preserve existing application-page context in the contact quotation form",
-  "approvedBy": "Owner continuation of the reviewed five-site adjustments and standing authorization to merge and deploy verified routine low-risk changes",
-  "approvedCategories": ["conversion", "operations"],
+  "task": "Add a blank carpet tile batch, zone and spare acceptance record to the existing category page",
+  "approvedBy": "Owner continuation of reviewed five-site plan; standing authorization for tested low-risk merge and deployment",
+  "approvedCategories": [
+    "content",
+    "operations"
+  ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/components/QueryProductLeadCaptureForm.tsx",
-    "src/components/LeadCaptureForm.tsx"
+    "src/app/products/carpet-tiles/page.tsx",
+    "public/downloads/carpet-tile-batch-zone-spare-record.csv"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "30c56ea808e46e8eb8384f65336cc7dcbd5ac04e",
-  "affectedUrls": ["/contact"],
-  "notes": "Narrow front-end prefill repair only. Recognize exact existing application titles from applicationPages, carry the title and its canonical application path into the existing product and source fields, preserve explicit product/source precedence and user-edited product values during contact query navigation. Keep sample form remount behavior. No new field, storage, tracking, lead collection, API, form recipient, email delivery, WhatsApp, product facts, prices, commercial terms, entity, schema, sitemap, URL or content changes. Preserve PR75/76, exclude PR71/19. Back up live HTML; run operations, lint, build, exact-head CI, desktop and 400px Preview QA, repeated navigation, Back/Forward, reload, query safety and existing ROI quote flow. Test without real form submission or network mutations; do not claim delivery tested. Use a feature branch, Preview and normal PR merge; verify exact production commit and public behavior. Leave IndexNow manifest unchanged; no manual submission."
+  "rollbackCommit": "54dcb5b7936478375e9413e0c27cfb6e67bb8451",
+  "affectedUrls": [
+    "/products/carpet-tiles"
+  ],
+  "notes": "Add illustrative blank receiving record and CSV with SKU, color, batch, zone, cartons, spare allocation, arrival photo, checker and approval. Distinguish receiving acceptance from FOB Tianjin shipping documents. No invented specifications, tolerances, projects or same-batch guarantee. No form, tracking, schema, metadata, sitemap, commercial terms or route changes. Preserve application query behavior from PR77. Run ops/lint/build, Preview desktop/narrow and contact query navigation checks without form submission. Normal PR workflow and exact-commit production verification."
 }
