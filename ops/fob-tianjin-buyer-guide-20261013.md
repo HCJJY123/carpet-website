@@ -94,6 +94,7 @@ It contains:
 - Added a visible internal link to the new guide next to the quote CTA.
 - “Professional Sample Boxes shipped globally within 3-5 days” → project-specific sample format, fee, courier charge and preparation time.
 - Map title “VCARPETS Factory Location” → “VCARPETS Business Location.”
+- Map overlay “Manufacturing Hub” → “Business Location.”
 
 The inquiry form, email, WhatsApp, analytics, event names, form fields and submission behavior are unchanged.
 

@@ -202,7 +202,7 @@ export default function ContactPage() {
             className="opacity-80 hover:opacity-100 transition-opacity"
           ></iframe>
           <div className="absolute top-8 left-8 bg-primary/90 text-white p-6 shadow-2xl rounded-sm border-l-4 border-accent hidden md:block pointer-events-none">
-            <h4 className="text-sm font-black uppercase tracking-[0.3em] mb-2">Manufacturing Hub</h4>
+            <h4 className="text-sm font-black uppercase tracking-[0.3em] mb-2">Business Location</h4>
             <p className="text-[10px] text-gray-300 uppercase font-bold">Wuqing District, Tianjin, China</p>
           </div>
         </div>
