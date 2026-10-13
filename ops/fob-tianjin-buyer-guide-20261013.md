@@ -135,18 +135,20 @@ Both were visually reviewed. They are relevant to export planning, already optim
 
 ## 8. Validation and release status
 
-Status at record creation: code modified locally on branch `content/fob-tianjin-buyer-guide-20261013`; production remains main `f0765d7`.
+Status after Preview validation: PR #75 is open on branch `content/fob-tianjin-buyer-guide-20261013`; production remains main `f0765d7`. Content head `5938a4daac44daa1036a1860df3c044f60573c07` passed Site Ops Guard run `38331353466` and reached READY Vercel Preview `dpl_5WvpKBLGAmX7ktH89sD9hFMvvj3e` at https://carpet-website-3itricw02-mike123-s-projects.vercel.app.
 
-Required gates before merge:
+Completed gates:
 
-- operations scope and diff checks;
-- lint, TypeScript and production build;
-- SEO, internal-link, placeholder and asset audits;
-- Preview HTTP/metadata/H1/canonical/robots/sitemap checks;
-- desktop and narrow-layout visual review;
-- contact copy and new-guide link;
-- scoped RFQ product/source prefill without a real submission;
-- exact-head CI and READY Vercel Preview.
+- Operations scope, diff, lint, TypeScript and two production builds passed. Lint has zero errors and one unchanged `ProductImage.tsx:43` warning.
+- SEO, internal-link, placeholder and asset audits passed. Ten offline IndexNow tests passed with mocked endpoints; no live notification was sent.
+- Preview operations verification passed. Article, contact, blog, two sitemaps and all linked products/guides returned HTTP 200.
+- New article has the expected title, one H1, self-canonical, indexable state and appears once in the root and blog sitemaps. Preview counts are root 265 and blog 64.
+- Desktop browser review at 1363 CSS pixels found no document overflow; all three comparison tables remain in `overflow-x:auto` containers. Both 1200-pixel illustrations loaded after their modules entered view and have visible non-evidence captions.
+- Article → scoped RFQ navigation preserved the exact source path and prefilled `Commercial carpet FOB Tianjin Port quotation`. Contact copy and the map now use the corrected business terms. No field was filled and no inquiry was submitted.
+
+Remaining release gate:
+
+- A real narrow/mobile layout could not be produced by the available cloud-browser surface. Browser zoom commands did not change the 1363 CSS-pixel viewport, and the tool exposes no viewport-resize control. Responsive source review and scroll-container checks are not being misreported as mobile visual acceptance. PR #75 must remain unmerged until a supported narrow viewport verifies the article tables, contact card, quote-form anchor and floating controls.
 
 Only the genuinely new canonical article URL belongs in the scoped IndexNow manifest. A successful notification will mean accepted for processing, not indexed. The updated existing contact page is not manually resubmitted.
 
