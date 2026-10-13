@@ -417,6 +417,47 @@ export default function CategoryPage() {
           </dl>
         </div>
       </section>
+      <section id="batch-zone-spare-record" className="section-padding scroll-mt-24 border-b border-border bg-surface" aria-labelledby="batch-record-heading">
+        <div className="container-fox max-w-5xl">
+          <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Receiving &amp; Installation Handoff</p>
+          <h2 id="batch-record-heading" className="text-3xl font-black uppercase text-primary md:text-4xl">Carpet Tile Batch, Zone &amp; Spare Record</h2>
+          <p className="mt-5 leading-8 text-muted">Use one record for each SKU, color, batch and installation zone. Copy the carton labels on arrival, reconcile quantities with the order, and identify the cartons reserved for later replacement before releasing material to the installer.</p>
+          <p id="batch-record-note" className="mt-3 text-sm leading-7 text-muted">Blank planning template only, not a completed inspection or acceptance certificate. Agree the project acceptance criteria and authorized approver in advance. Confirm the selected product instructions; this record sets no installation tolerance or guarantee that future orders will use the same batch.</p>
+          <div className="mt-7 border border-border bg-white">
+            <table className="w-full table-fixed text-left text-sm" aria-describedby="batch-record-note">
+              <caption className="border-b border-border px-5 py-4 text-left font-bold text-primary">Blank receiving record: copy or download and complete for your project</caption>
+              <thead className="bg-primary text-white">
+                <tr><th scope="col" className="w-2/5 px-4 py-3">Record field</th><th scope="col" className="px-4 py-3">Entry to complete</th></tr>
+              </thead>
+              <tbody>
+                {[
+                  ["SKU / product reference", "________________"],
+                  ["Color / approved sample reference", "________________"],
+                  ["Batch / dye-lot label", "________________"],
+                  ["Installation zone / floor / room", "________________"],
+                  ["Carton quantity received", "________________"],
+                  ["Spare allocation", "Cartons or tiles: ______; storage location: ______"],
+                  ["Arrival photo reference", "Carton label and material / damage photos: ______"],
+                  ["Checker / inspection date", "________________"],
+                  ["Approval / hold decision", "Decision, approver, date and open actions: ______"],
+                ].map(([field, entry]) => (
+                  <tr key={field} className="border-t border-border">
+                    <th scope="row" className="break-words px-4 py-4 align-top font-bold text-primary">{field}</th>
+                    <td className="break-words px-4 py-4 align-top text-muted">{entry}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <a href="/downloads/carpet-tile-batch-zone-spare-record.csv" download className="btn-fox-orange">Download Blank Record (CSV)</a>
+            <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="inline-flex min-h-12 items-center px-4 py-3 text-sm font-bold text-primary underline underline-offset-4">Discuss Your Tile Order</Link>
+          </div>
+          <p className="mt-6 text-sm leading-7 text-muted">If labels, quantities or visible condition do not match the agreed order, mark the affected cartons and zone as on hold and resolve the issue with the supplier and project approver before installation. Record any agreed split between installation stock and spare stock; do not assume a fixed spare percentage.</p>
+          <p className="mt-4 text-sm leading-7 text-muted">For B2B orders from Tianjin Vcarpets Global Commercial Carpet Co., Ltd., use the <Link href="/blog/commercial-carpet-fob-tianjin-port-buyer-checklist" className="font-bold text-accent underline">FOB Tianjin Port buyer checklist</Link> for shipment and export-document coordination. Shipping paperwork and this site receiving record serve different purposes: the record connects the delivered labels, installation zones, spare allocation and project approval.</p>
+          <p className="mt-4 text-xs leading-6 text-muted">Reference for checking product, color, quantity and carton batch labels: <a href="https://www.interface.com/content/dam/interfaceinc/interface/technical/apac/apac-shared-assets/installation/CarpetTileInstallationInstructions_APAC.pdf" className="underline underline-offset-4">Interface Carpet Tile Installation Guide, page 3 (PDF)</a>. Its instructions apply to Interface products; its product-specific limits and installation systems are not VCARPETS specifications.</p>
+        </div>
+      </section>
       <section className="section-padding border-y border-border bg-surface">
         <div className="container-fox max-w-5xl">
           <h2 className="mb-10 text-3xl font-black uppercase text-primary md:text-5xl">Commercial Carpet Tiles FAQ</h2>
