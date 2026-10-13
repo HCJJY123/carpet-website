@@ -33,6 +33,7 @@ import { ukSchoolUniversityCarpetTileProcurementGuide } from "@/lib/blog-posts/u
 import { commercialCarpetSampleApprovalChecklist } from "@/lib/blog-posts/commercial-carpet-sample-approval-checklist";
 import { commercialCarpetSourcingDirectory } from "@/lib/blog-posts/commercial-carpet-sourcing-directory";
 import { nylonPolyesterPolypropyleneComparison } from "@/lib/blog-posts/nylon-polyester-polypropylene-comparison";
+import { commercialCarpetFobTianjinPortBuyerChecklist } from "@/lib/blog-posts/commercial-carpet-fob-tianjin-port-buyer-checklist";
 import { contentGrowthAssets, illustrationCaption } from "@/lib/content-growth-assets";
 
 export interface BlogSection {
@@ -85,6 +86,7 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  commercialCarpetFobTianjinPortBuyerChecklist,
   officeCarpetTileLayoutApprovalGuide,
   hotelGuestroomCarpetRoomTypeScheduleGuide,
   customWoolRugsHomeDecorWholesaleGuide,

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
 import QueryProductLeadCaptureForm from "@/components/QueryProductLeadCaptureForm";
@@ -14,7 +15,7 @@ export default function ContactPage() {
       <ContactQuoteHashScroll />
       <PageHero
         title="Request a Project Quote"
-        eyebrow="Factory Direct Project Support"
+        eyebrow="B2B Commercial Carpet Support"
         description="Send product type, project area, destination, and business email in one form. VCARPETS will reply with pricing basis, MOQ, samples, lead time, and technical documents."
         image="/images/contact-hero.webp"
         imageAlt="Commercial carpet procurement consultation background"
@@ -31,7 +32,7 @@ export default function ContactPage() {
               <div className="mb-6 border-l-4 border-[#C8752A] pl-5">
                 <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#C8752A]">Recommended Inquiry Channel</p>
                 <h2 className="mt-2 text-2xl font-black uppercase text-primary md:text-3xl">Use the Form for the Fastest Accurate Quote</h2>
-                <p className="mt-2 text-sm leading-relaxed text-muted">The form keeps your product, quantity, destination, and business email together. This is the clearest path for factory pricing, MOQ, sample options, and technical documents.</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">The form keeps your product, quantity, destination, and business email together. This is the clearest path for a written commercial quotation, MOQ, sample options, and technical documents.</p>
                 <div className="mt-5 flex flex-wrap gap-3">
                   <a
                     href={`mailto:${brandInfo.email}?subject=${encodeURIComponent("Project quote request")}&body=${encodeURIComponent("Hello VCARPETS team,\n\nPlease help quote this carpet project.\n\nProduct / application:\nEstimated area:\nDestination country:\nTarget delivery date:\n\nThank you.")}`}
@@ -125,8 +126,14 @@ export default function ContactPage() {
                   </div>
                   <h3 className="mb-4 text-xl font-black uppercase">Use the Project Quote Form</h3>
                   <p className="text-sm text-gray-300 mb-6 leading-relaxed">
-                    Structured project details produce a more accurate answer than a short chat. Receive product recommendation, FOB or DAP basis, MOQ, sample options, and production timing in one reply.
+                    Structured project details produce a more accurate answer than a short chat. Receive a product recommendation and project-specific confirmation of the FOB Tianjin Port quotation basis, MOQ, sample options, and production timing.
                   </p>
+                  <Link
+                    href="/blog/commercial-carpet-fob-tianjin-port-buyer-checklist"
+                    className="mb-6 inline-flex min-h-11 items-center text-xs font-black uppercase tracking-[0.12em] text-[#F0B36F] underline decoration-[#C8752A] underline-offset-4 hover:text-white"
+                  >
+                    Review the FOB Tianjin Port buyer checklist →
+                  </Link>
                   <a
                     href="#quote-form"
                     className="mb-4 flex min-h-12 w-full items-center justify-center rounded-sm bg-[#C8752A] px-5 py-4 text-center text-xs font-black uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#AD6424]"
@@ -172,7 +179,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <ProductImage src="/images/samples-box.webp" alt="Carpet Sample Box" className="rounded-lg shadow-md border border-border" />
                 <p className="text-xs text-muted leading-relaxed uppercase tracking-wider font-semibold italic text-center">
-                  Professional Sample Boxes shipped globally within 3-5 days.
+                  Sample format, fees, courier charges, and preparation time are confirmed for each project.
                 </p>
               </div>
             </div>
@@ -191,11 +198,11 @@ export default function ContactPage() {
             allowFullScreen={true} 
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
-            title="VCARPETS Factory Location"
+            title="VCARPETS Business Location"
             className="opacity-80 hover:opacity-100 transition-opacity"
           ></iframe>
           <div className="absolute top-8 left-8 bg-primary/90 text-white p-6 shadow-2xl rounded-sm border-l-4 border-accent hidden md:block pointer-events-none">
-            <h4 className="text-sm font-black uppercase tracking-[0.3em] mb-2">Manufacturing Hub</h4>
+            <h4 className="text-sm font-black uppercase tracking-[0.3em] mb-2">Business Location</h4>
             <p className="text-[10px] text-gray-300 uppercase font-bold">Wuqing District, Tianjin, China</p>
           </div>
         </div>
