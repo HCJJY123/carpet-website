@@ -1,29 +1,22 @@
 {
-  "task": "Align the contact page with the confirmed FOB Tianjin Port and project-specific sample terms, and publish a buyer guide explaining the quotation scope",
-  "approvedBy": "Owner-confirmed business facts and standing authorization for daily evidence-led content and low-risk verified publication",
+  "task": "Connect the existing hospitality ROI guide to zone-specific hotel application guidance and supplier quotation preparation",
+  "approvedBy": "Owner request to execute the reviewed five-site plan and standing authorization to merge and deploy verified routine low-risk changes",
   "approvedCategories": [
     "content",
     "seo",
-    "conversion",
     "operations"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "keyword-map.csv",
-    "ops/indexnow-urls.json",
-    "ops/fob-tianjin-buyer-guide-20261013.md",
-    "src/app/contact/page.tsx",
     "src/lib/blog-data.ts",
-    "src/lib/blog-posts/commercial-carpet-fob-tianjin-port-buyer-checklist.ts"
+    "ops/indexnow-urls.json"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "f0765d7b25ec22ba8173d3051f761bb578bcdc31",
+  "rollbackCommit": "f4512c6b173bb610c7d1317f0fbcc2b830cf6fcc",
   "affectedUrls": [
-    "/contact",
-    "/blog/commercial-carpet-fob-tianjin-port-buyer-checklist",
-    "/blog"
+    "/blog/hidden-cost-of-cheap-carpets-hospitality-roi-guide"
   ],
-  "notes": "Correct contact-page claims only: bulk commercial carpet quotations use FOB Tianjin Port; sample format, fees, courier charges and timing are confirmed per project; do not claim DAP, global 3-5 day dispatch or an unverified own-factory role. Add one English B2B buyer guide with visible procurement guidance, official Incoterms references, existing relevant images disclosed as illustrations, product links and a scoped quote URL. Preserve form, email, WhatsApp, tracking, product data, prices, MOQ and schema components. Feature branch, Preview, required checks and PR merge only. Do not include unrelated PR #71 or PR #19."
+  "notes": "One existing article record only. Preserve its product cards, topic and permanent URL. Add contextual links to verified existing hotel applications, supplier checklist and FOB Tianjin buyer guidance. Clarify the existing quotation-preparation step without new product or commercial claims; retain the existing Hotel Carpet inquiry prefill and add its source URL. No new page, shared template, form, email, WhatsApp, tracking, product data, pricing, MOQ, certification, delivery promise or global SEO change. Preserve PR75 contact and FOB guide. PR71 and PR19 are excluded. Use a feature branch, Preview, required checks and normal PR merge. The existing IndexNow workflow receives only this changed canonical URL; no duplicate manual submission."
 }
