@@ -829,7 +829,7 @@ const baseBlogPosts: BlogPost[] = [
     description: "Why low-cost carpet choices can damage hospitality ROI over a 10-year operating horizon.",
     keywords: ["hospitality ROI", "carpet lifecycle cost", "cheap carpet risk", "replacement strategy"],
     date: "2026-06-23",
-    dateModified: "2026-07-31",
+    dateModified: "2026-10-13",
     author: "VCARPETS Technical Team",
     category: "Cost & ROI",
     image: "/images/blog-series/blog-5/Blog_5_10Year_Cost_Comparison.webp",
@@ -891,6 +891,15 @@ const baseBlogPosts: BlogPost[] = [
             type: "paragraph",
             text: "When areas have different risks, they may need different carpet constructions even if the visual language is coordinated. A supplier should explain the proposed build for each zone rather than applying a decorative image to an unspecified base product.",
           },
+          {
+            type: "paragraph",
+            text: "Continue with the hotel guestroom, hotel corridor or hotel ballroom application guide for the area you are specifying. Each guide connects its planning checks to related carpet products; use your floor plan and zone quantities to decide which constructions need a quotation and sample review.",
+            links: [
+              { text: "hotel guestroom", href: "/applications/hotel-guestroom" },
+              { text: "hotel corridor", href: "/applications/hotel-corridor" },
+              { text: "hotel ballroom", href: "/applications/hotel-ballroom" },
+            ],
+          },
         ],
       },
       {
@@ -915,6 +924,14 @@ const baseBlogPosts: BlogPost[] = [
             label: "Quote requirement",
             text: "Send the floor plan, zone quantities, intended construction, artwork, fire-document requirement, destination, delivery date, and installation schedule. Ask every bidder to price the same scope before selecting a supplier.",
           },
+          {
+            type: "paragraph",
+            text: "Use the hotel carpet supplier checklist to prepare your specification, sample-approval questions and order quantities. For VCARPETS bulk quotations, review the FOB Tianjin Port buyer checklist alongside that brief. Sample format, fees, courier charges and preparation time are confirmed for each project; the written quotation should distinguish the carpet supply from onward freight and destination costs.",
+            links: [
+              { text: "hotel carpet supplier checklist", href: "/blog/hotel-carpet-supplier-checklist-project-order-guide" },
+              { text: "FOB Tianjin Port buyer checklist", href: "/blog/commercial-carpet-fob-tianjin-port-buyer-checklist" },
+            ],
+          },
         ],
       },
       {
@@ -938,7 +955,7 @@ const baseBlogPosts: BlogPost[] = [
       { label: "Compare Hotel Wall-to-Wall Carpet", href: "/products/wall-to-wall" },
       { label: "Custom Hotel Room Carpet", href: "/products/wall-to-wall/custom-luxury-hotel-room-carpet" },
       { label: "Heavy-Duty Public Area Carpet", href: "/products/public-area/public-area-heavy-duty" },
-      { label: "Request Hotel Carpet Costing", href: "/contact?product=Hotel%20Carpet#quote-form" }
+      { label: "Request Hotel Carpet Costing", href: "/contact?product=Hotel%20Carpet&source=%2Fblog%2Fhidden-cost-of-cheap-carpets-hospitality-roi-guide#quote-form" }
     ]
   },
   {
