@@ -35,6 +35,8 @@ export default function LeadCaptureForm({
   const lastInvalidField = useRef("");
   const fullFormRef = useRef<HTMLFormElement>(null);
   const primarySubmitRef = useRef<HTMLButtonElement>(null);
+  const [editedProduct, setEditedProduct] = useState<string | null>(null);
+  const productValue = editedProduct ?? productDefault;
   const [fullFormVisible, setFullFormVisible] = useState(false);
   const [primarySubmitVisible, setPrimarySubmitVisible] = useState(false);
   const [state, setState] = useState({
@@ -387,11 +389,11 @@ export default function LeadCaptureForm({
       {introText ? <p className="text-sm leading-relaxed text-muted">{introText}</p> : null}
       {state.error ? <p className="text-red-600 font-bold text-center text-sm" role="alert" aria-live="polite">{state.error}</p> : null}
 
-      {productDefault ? (
+      {productValue ? (
         <div className="rounded-md border border-[#C8752A]/25 bg-white px-4 py-3 shadow-sm md:px-5 md:py-4">
           <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#C8752A]">Quote Request Product</p>
           <div className="mt-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm font-black leading-snug text-primary md:text-base">{productDefault}</p>
+            <p className="text-sm font-black leading-snug text-primary md:text-base">{productValue}</p>
             <span className="inline-flex w-fit rounded-sm bg-[#FFF8F1] px-3 py-2 text-[10px] font-black uppercase tracking-[0.12em] text-[#9a5a20]">
               Form Preferred
             </span>
@@ -415,7 +417,7 @@ export default function LeadCaptureForm({
           </div>
           <div>
             <label className={labelClass}>Product Type *</label>
-            <input name="product" type="text" required defaultValue={productDefault} className={fieldClass} placeholder="Carpet tiles, hotel carpet, sisal carpet..." />
+            <input name="product" type="text" required value={productValue} onChange={(event) => setEditedProduct(event.target.value)} className={fieldClass} placeholder="Carpet tiles, hotel carpet, sisal carpet..." />
           </div>
           <div>
             <label className={labelClass}>Quantity / Area *</label>

@@ -1,22 +1,16 @@
 {
-  "task": "Connect the existing hospitality ROI guide to zone-specific hotel application guidance and supplier quotation preparation",
-  "approvedBy": "Owner request to execute the reviewed five-site plan and standing authorization to merge and deploy verified routine low-risk changes",
-  "approvedCategories": [
-    "content",
-    "seo",
-    "operations"
-  ],
+  "task": "Preserve existing application-page context in the contact quotation form",
+  "approvedBy": "Owner continuation of the reviewed five-site adjustments and standing authorization to merge and deploy verified routine low-risk changes",
+  "approvedCategories": ["conversion", "operations"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/lib/blog-data.ts",
-    "ops/indexnow-urls.json"
+    "src/components/QueryProductLeadCaptureForm.tsx",
+    "src/components/LeadCaptureForm.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "f4512c6b173bb610c7d1317f0fbcc2b830cf6fcc",
-  "affectedUrls": [
-    "/blog/hidden-cost-of-cheap-carpets-hospitality-roi-guide"
-  ],
-  "notes": "One existing article record only. Preserve its product cards, topic and permanent URL. Add contextual links to verified existing hotel applications, supplier checklist and FOB Tianjin buyer guidance. Clarify the existing quotation-preparation step without new product or commercial claims; retain the existing Hotel Carpet inquiry prefill and add its source URL. No new page, shared template, form, email, WhatsApp, tracking, product data, pricing, MOQ, certification, delivery promise or global SEO change. Preserve PR75 contact and FOB guide. PR71 and PR19 are excluded. Use a feature branch, Preview, required checks and normal PR merge. The existing IndexNow workflow receives only this changed canonical URL; no duplicate manual submission."
+  "rollbackCommit": "30c56ea808e46e8eb8384f65336cc7dcbd5ac04e",
+  "affectedUrls": ["/contact"],
+  "notes": "Narrow front-end prefill repair only. Recognize exact existing application titles from applicationPages, carry the title and its canonical application path into the existing product and source fields, preserve explicit product/source precedence and user-edited product values during contact query navigation. Keep sample form remount behavior. No new field, storage, tracking, lead collection, API, form recipient, email delivery, WhatsApp, product facts, prices, commercial terms, entity, schema, sitemap, URL or content changes. Preserve PR75/76, exclude PR71/19. Back up live HTML; run operations, lint, build, exact-head CI, desktop and 400px Preview QA, repeated navigation, Back/Forward, reload, query safety and existing ROI quote flow. Test without real form submission or network mutations; do not claim delivery tested. Use a feature branch, Preview and normal PR merge; verify exact production commit and public behavior. Leave IndexNow manifest unchanged; no manual submission."
 }
