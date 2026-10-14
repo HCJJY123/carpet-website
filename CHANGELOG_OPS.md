@@ -1263,3 +1263,13 @@ This append-only evidence commit must pass its own exact-SHA CI and READY Previe
 - No product claims, tolerances, same-batch guarantee, forms, tracking, schema, metadata, commercial terms or sitemap changes. PR77 application context retained unchanged.
 - Rollback base: `54dcb5b7936478375e9413e0c27cfb6e67bb8451`; revert the isolated release commit if needed, without rewriting history.
 - Verification: live HTML and sitemap backed up; local checks and Preview/public QA recorded with the PR before production merge. No inquiry submission.
+
+## 2026-10-14 — Hotel supplier approval gates and evidence register
+
+- Scope: deepen existing hotel supplier checklist; retain twelve questions and original July30 publication. Add project-specific approval gates, conditional release decisions, evidence-gap register, named reviewers and buyer FAQ. Replace unexplained fixed ranking weights with buyer-set preferences after mandatory requirements are resolved.
+- Sources: UFGS 09 68 00 (November2024 edition, July2026 reference alignment) distinguishes project-specific submittals; CRI104 planning connects product records with installation drawings. Source technical limits and warranty clauses are not VCARPETS commitments.
+- Baseline/rollback: main and READY production `8ba12362641ce4dee87c4537c07ee72aa91d6d71`; before-edit article HTML and sitemap backed up. Open PR71/19 excluded.
+- Existing inbound links retained; outgoing links connect repeat/seam planning, samples, room schedules, FOB guide and existing Hotel Carpet/source quotation. No shared component, form, tracking, product record, trade term or global indexing change.
+- Image: retain reviewed existing planning illustration and add explicit non-evidence caption. No new generated image.
+- Initial status: scoped local candidate; validation/Preview/mobile/production results recorded after occurrence in ops/hotel-supplier-approval-20261014.md and PR. No new GSC metrics or real inquiry submission claimed.
+- Local scope/diff/SEO/link/placeholder checks and full webpack production build/TypeScript passed; lint zero errors with the existing ProductImage warning. Ten offline IndexNow tests passed without live requests. GSC fallback is signed out. Preview and actual narrow visual acceptance remain required.
