@@ -11,6 +11,19 @@ import { absoluteUrl, categoryBreadcrumbJsonLd, productItemListJsonLd, safeJsonL
 
 const categoryPath = "/products/carpet-tiles";
 
+// Use the same product records as the cards; these are model-specific examples,
+// not a category-wide minimum or prices converted into a different quoting unit.
+const priceExampleIds = [
+  "luxury-hotel-carpet-tile-50x50cm",
+  "pp-bitumen-backed-office-carpet-tiles",
+  "50x50-nylon-pp-office-carpet-tiles",
+];
+const priceExamples = priceExampleIds.map((id) => {
+  const product = products.find((item) => item.id === id);
+  return product?.fobPrice ? `${product.name}: ${product.fobPrice.display}` : null;
+}).filter(Boolean).join("; ");
+const priceUnitDisclosure = "Piece means one tile; SQM means one square meter. One 50x50 cm tile covers 0.25 m², so four tiles cover 1 m² before cutting waste or spare stock. Compare the same model, fiber, backing, size and pricing unit; confirm these together in the written quotation.";
+
 const categoryFaqs = [
   {
     question: "What commercial carpet tiles does VCARPETS manufacture?",
@@ -22,7 +35,7 @@ const categoryFaqs = [
   },
   {
     question: "What is the wholesale price for carpet tiles?",
-    answer: "Reference pricing on this page starts at US$1.40 per 50x50cm piece or US$3.80 per square meter, depending on the product. Final carpet tiles wholesale price depends on fiber, backing, pile weight, thickness, quantity, color, packing, and destination."
+    answer: `Listed FOB reference ranges are model-specific: ${priceExamples}. These ranges cover different products and configuration options, not one universal starting price. ${priceUnitDisclosure} Final quotation depends on the selected fiber, backing, pile weight, thickness, quantity, color, packing and destination.`
   },
   {
     question: "Are 50x50cm carpet tiles the same as 24x24 carpet tiles?",
@@ -315,6 +328,7 @@ export default function CategoryPage() {
           <div className="mb-12 max-w-3xl">
             <h2 className="mb-4 text-3xl font-black uppercase text-primary md:text-4xl">Commercial Carpet Tile Products</h2>
             <p className="leading-relaxed text-muted">Compare material, backing, traffic class, price, minimum order, and application. Each product page includes technical data, project images, and a direct inquiry form.</p>
+            <p className="mt-4 text-sm leading-7 text-muted"><strong className="text-primary">Read the FOB pricing unit:</strong> {priceUnitDisclosure}</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {categoryProducts.map((p) => (

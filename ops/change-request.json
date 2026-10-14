@@ -1,24 +1,19 @@
 {
-  "task": "Strengthen the existing hotel carpet supplier checklist with evidence gates, conditional approval records and FOB quotation handoff",
-  "approvedBy": "Owner standing authorization for daily verified content changes and PR deployment",
+  "task": "Clarify model-specific carpet tile FOB price ranges and original pricing units in visible FAQ and matching FAQ schema",
+  "approvedBy": "Owner approved starting the scoped carpet tile price-unit correction; routine verified PR publication permitted by standing authorization",
   "approvedCategories": [
-    "content",
-    "seo",
-    "operations"
+    "content"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "ops/hotel-supplier-approval-20261014.md",
-    "ops/indexnow-urls.json",
-    "keyword-map.csv",
-    "src/lib/blog-posts/hotel-carpet-supplier-checklist-guide.ts"
+    "src/app/products/carpet-tiles/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "8ba12362641ce4dee87c4537c07ee72aa91d6d71",
+  "rollbackCommit": "c3c6649a085201a90652eddb834261e8622e6474",
   "affectedUrls": [
-    "/blog/hotel-carpet-supplier-checklist-project-order-guide"
+    "/products/carpet-tiles"
   ],
-  "notes": "Deep-update one existing article. Preserve original publication date, URL and twelve supplier questions; replace unexplained fixed scoring weights with buyer-set ranking after critical approval gates. Add evidence exceptions, approval responsibility, exact-construction review, contextual links and FOB Tianjin Port RFQ. Reuse existing reviewed illustration with non-evidence caption. No product facts, shared schema, forms, tracking, dependencies or global business identity changes. Feature branch/Preview/required checks/PR merge; actual narrow visual QA required."
+  "notes": "Replace the misleading universal starting-price FAQ with model-specific examples from existing product records. Explain Piece versus SQM and geometric coverage only. Preserve every product price, commercial offer, MOQ, availability, FOB terms, entity, URL, shared schema and conversion path. Visible FAQ and FAQPage derive from the same data. Preserve PR79 hotel guide and do not duplicate the construction comparison in open draft PR71. Live HTML and sitemap backed up. Run ops checks, lint, build, exact-head CI, preview responsive/schema/no-submit navigation QA and production verification. Leave IndexNow manifest unchanged so this release skips notification; no manual indexing."
 }
