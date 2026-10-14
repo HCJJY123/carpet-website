@@ -81,6 +81,11 @@ const productOptions = [
     href: "/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles"
   },
   {
+    title: "Vcarpets PP PVC-Backed Office Carpet Tiles",
+    text: "50x50cm PP loop-pile tiles with PVC backing. Review the gray striped appearance, physical sample and office project requirements.",
+    href: "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles"
+  },
+  {
     title: "100% Nylon Office Carpet Tile",
     text: "Class 33 heavy-duty commercial carpet tiles with bitumen backing and antistatic performance for demanding office traffic.",
     href: "/products/carpet-tiles/nylon-office-carpet-tile"
@@ -334,8 +339,9 @@ export default function CategoryPage() {
             {categoryProducts.map((p) => (
               <Link key={p.id} href={`/products/${categoryId}/${p.id}`} className="group flex h-full flex-col rounded-lg border border-border bg-white p-6 transition-all duration-300 hover:border-accent hover:shadow-xl">
                 <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
-                   <ProductImage src={p.image} alt={p.imageAlt || p.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
+                   <ProductImage src={p.image} alt={p.imageAlt || p.name} fit={p.id === "pp-pvc-backed-office-carpet-tiles" ? "contain" : "cover"} className="w-full h-full object-cover transition-transform group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
+                {p.id === "pp-pvc-backed-office-carpet-tiles" ? <p className="mb-4 text-xs leading-6 text-muted">AI-generated appearance illustration. Approve a physical sample.</p> : null}
                 <h3 className="mb-6 min-h-20 text-xl font-bold uppercase leading-tight text-primary transition-colors group-hover:text-accent">{p.name}</h3>
                 <p className="mb-6 min-h-20 text-sm leading-relaxed text-muted">{p.description}</p>
                 <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">

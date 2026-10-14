@@ -26,6 +26,36 @@ export const brandInfo = {
 export const products: Product[] = [
 
   {
+    id: "pp-pvc-backed-office-carpet-tiles",
+    name: "Vcarpets 50x50 PP PVC-Backed Office Carpet Tiles",
+    category: "carpet-tiles",
+    description: "50x50cm polypropylene loop-pile carpet tiles with PVC backing and a gray striped design for office project evaluation. Samples and FOB Tianjin Port quotations by project.",
+    longDescription: "Vcarpets PP PVC-backed office carpet tiles combine a polypropylene loop-pile face with PVC backing in a nominal 50x50cm square format. The gray striped appearance is intended for office, meeting-room and reception design evaluation. Approve the physical sample, layout, nominated construction and required project documents before ordering. Final color, technical specification, MOQ, packing, price and production schedule require a written project quotation.",
+    image: "/images/products/pp-pvc-office-carpet-tiles/01-quarter-turn-panel.webp",
+    imageAlt: "AI-generated appearance illustration of gray striped square carpet tiles with fine yellow accent lines",
+    gallery: [
+      { src: "/images/products/pp-pvc-office-carpet-tiles/01-quarter-turn-panel.webp", alt: "AI-generated four-tile quarter-turn appearance illustration in gray with fine yellow lines" },
+      { src: "/images/products/pp-pvc-office-carpet-tiles/02-office-layout.webp", alt: "AI-generated meeting room layout concept with gray striped modular carpet tiles" },
+      { src: "/images/products/pp-pvc-office-carpet-tiles/03-stripe-detail.webp", alt: "AI-generated close appearance illustration of adjoining gray striped tile faces" }
+    ],
+    moq: "Confirm by color and quantity",
+    moqTiers: { sample: "Format, cost and timing by project", trialOrder: "Confirm selected configuration", project: "Confirm by color and quantity" },
+    leadTime: "Confirm after specification approval",
+    spec: { material: "Polypropylene (PP) face", size: "50x50 cm nominal", colors: [] },
+    technicalSpecs: {
+      fireRating: "Request construction-specific evidence",
+      trafficClass: "Confirm for the intended office zone",
+      fiber: "Polypropylene (PP)",
+      yarnSystem: "Loop-pile surface; striped appearance",
+      backing: "PVC",
+      pileWeight: "Confirm in the nominated product sheet",
+      totalThickness: "Confirm in the nominated product sheet",
+      antistatic: "Confirm if required by the project"
+    },
+    features: ["PP Loop-Pile Face", "PVC Backing", "50x50cm Square", "Gray Striped Design"]
+  },
+
+  {
     id: "luxury-hotel-carpet-tile-50x50cm",
     name: "Luxury Hotel Carpet Tile 50x50cm | Commercial Nylon Carpet Tiles",
     category: "carpet-tiles",
