@@ -1285,3 +1285,11 @@ This append-only evidence commit must pass its own exact-SHA CI and READY Previe
 **Release gates:** Operations check, lint, full build, exact-head CI and Vercel Preview; responsive readability, FAQ/schema parity, unchanged product offers and no-submit navigation; then production SHA/content/canonical/H1/indexability and sitemap verification. IndexNow manifest unchanged: this release must skip notifications; no manual submission. Validation results are recorded in the PR before merge.
 
 **Local validation:** Operations guard, SEO audit (94 pages), link/sitemap audit, ten offline IndexNow tests and full production build passed (219 generated pages). Lint: zero errors and the unchanged pre-existing ProductImage img warning. Built HTML confirms exact visible/FAQPage parity, all three original unit/range examples, one H1 and byte-equivalent parsed ItemList/product offers against the live baseline. No product or hotel-guide source changes.
+
+## 2026-10-14 — Vcarpets PP PVC-backed office carpet tile
+
+Owner authorized a distinct product detail page, category inclusion, generated main/detail illustrations and production release. Added /products/carpet-tiles/pp-pvc-backed-office-carpet-tiles for the coherent PP face / PVC backing / nominal 50x50cm square configuration nominated in Alibaba listing 1601677208009. Existing nylon and PP bitumen products remain distinct. Supplier listing thickness/shape conflicts and unverified performance/commercial values are not transferred. New product brand is Vcarpets; legal entity remains unchanged.
+
+Added buyer sample/layout/document checks, scoped Product/Breadcrumb/FAQ schema with a comment-only optional Offer slot, existing RFQ parameters, category card and product-index link, keyword ownership and sitemap dates. Three generated reference-based appearance illustrations disclosed near hero and details; no original references copied unchanged, no generated image represented as delivery/technical evidence. Prompts, evidence, scope and QA in ops/pp-pvc-office-carpet-tiles-20261014.md.
+
+Base production and rollback: 545a4ef6e69311761d158ff77af8a2691254ca9b. Live category and sitemap backed up locally before editing. Release pending local checks, exact-head CI, Preview desktop/mobile/schema/no-submit RFQ acceptance. No production/indexing completion claim at this stage.

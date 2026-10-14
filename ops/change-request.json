@@ -1,19 +1,28 @@
 {
-  "task": "Clarify model-specific carpet tile FOB price ranges and original pricing units in visible FAQ and matching FAQ schema",
-  "approvedBy": "Owner approved starting the scoped carpet tile price-unit correction; routine verified PR publication permitted by standing authorization",
+  "task": "Publish one distinct 50x50 PP PVC-backed office carpet tile product with category discovery and generated appearance illustrations",
+  "approvedBy": "Owner explicitly requested independent product HTML/JSX master, generated main/detail images, category inclusion and production deployment in the current request",
   "approvedCategories": [
-    "content"
+    "content", "seo-global"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/products/carpet-tiles/page.tsx"
+    "src/app/products/carpet-tiles/page.tsx",
+    "src/app/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles/page.tsx",
+    "src/lib/data.ts",
+    "src/lib/sitemap-data.ts",
+    "src/lib/generated-static-sitemap-routes.ts",
+    "keyword-map.csv",
+    "ops/indexnow-urls.json",
+    "ops/pp-pvc-office-carpet-tiles-20261014.md",
+    "public/images/products/pp-pvc-office-carpet-tiles/*"
+    ,"public/qa-pp-pvc-preview.html"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "c3c6649a085201a90652eddb834261e8622e6474",
+  "rollbackCommit": "545a4ef6e69311761d158ff77af8a2691254ca9b",
   "affectedUrls": [
-    "/products/carpet-tiles"
+    "/products/carpet-tiles", "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles"
   ],
-  "notes": "Replace the misleading universal starting-price FAQ with model-specific examples from existing product records. Explain Piece versus SQM and geometric coverage only. Preserve every product price, commercial offer, MOQ, availability, FOB terms, entity, URL, shared schema and conversion path. Visible FAQ and FAQPage derive from the same data. Preserve PR79 hotel guide and do not duplicate the construction comparison in open draft PR71. Live HTML and sitemap backed up. Run ops checks, lint, build, exact-head CI, preview responsive/schema/no-submit navigation QA and production verification. Leave IndexNow manifest unchanged so this release skips notification; no manual indexing."
+  "notes": "New independent product only: owner-nominated Alibaba listing 1601677208009 and four supplied image references. Use coherent listed PP face/PVC backing/50x50cm/loop-pile facts; conflicting thickness and shape plus unverified performance, price, MOQ and time are omitted or project-confirmed. Product brand Vcarpets per current instruction; entity unchanged. Generated images visibly disclosed as illustrations. No global schema/robots/sitemap algorithm, tracking, form handler or dependency changes. Sitemap scope limited to two modified-date entries and automatic generated route inventory. Existing category cards discover new data automatically, with an additional explicit product link. Backups retained locally. Feature branch, exact-head Preview, CI, responsive and no-submit RFQ checks precede merge; then verify production and notify the new canonical URL only."
 }
