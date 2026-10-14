@@ -1,21 +1,24 @@
 {
-  "task": "Add a blank carpet tile batch, zone and spare acceptance record to the existing category page",
-  "approvedBy": "Owner continuation of reviewed five-site plan; standing authorization for tested low-risk merge and deployment",
+  "task": "Strengthen the existing hotel carpet supplier checklist with evidence gates, conditional approval records and FOB quotation handoff",
+  "approvedBy": "Owner standing authorization for daily verified content changes and PR deployment",
   "approvedCategories": [
     "content",
+    "seo",
     "operations"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/products/carpet-tiles/page.tsx",
-    "public/downloads/carpet-tile-batch-zone-spare-record.csv"
+    "ops/hotel-supplier-approval-20261014.md",
+    "ops/indexnow-urls.json",
+    "keyword-map.csv",
+    "src/lib/blog-posts/hotel-carpet-supplier-checklist-guide.ts"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "54dcb5b7936478375e9413e0c27cfb6e67bb8451",
+  "rollbackCommit": "8ba12362641ce4dee87c4537c07ee72aa91d6d71",
   "affectedUrls": [
-    "/products/carpet-tiles"
+    "/blog/hotel-carpet-supplier-checklist-project-order-guide"
   ],
-  "notes": "Add illustrative blank receiving record and CSV with SKU, color, batch, zone, cartons, spare allocation, arrival photo, checker and approval. Distinguish receiving acceptance from FOB Tianjin shipping documents. No invented specifications, tolerances, projects or same-batch guarantee. No form, tracking, schema, metadata, sitemap, commercial terms or route changes. Preserve application query behavior from PR77. Run ops/lint/build, Preview desktop/narrow and contact query navigation checks without form submission. Normal PR workflow and exact-commit production verification."
+  "notes": "Deep-update one existing article. Preserve original publication date, URL and twelve supplier questions; replace unexplained fixed scoring weights with buyer-set ranking after critical approval gates. Add evidence exceptions, approval responsibility, exact-construction review, contextual links and FOB Tianjin Port RFQ. Reuse existing reviewed illustration with non-evidence caption. No product facts, shared schema, forms, tracking, dependencies or global business identity changes. Feature branch/Preview/required checks/PR merge; actual narrow visual QA required."
 }
