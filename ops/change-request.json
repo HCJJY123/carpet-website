@@ -1,27 +1,24 @@
 {
-  "task": "Publish one distinct 50x50 PP PVC-backed office carpet tile product with category discovery and generated appearance illustrations",
-  "approvedBy": "Owner explicitly requested independent product HTML/JSX master, generated main/detail images, category inclusion and production deployment in the current request",
+  "task": "Deepen the existing carpet tile backing guide with current PP/PVC sourcing and substitution approval; connect product to guide",
+  "approvedBy": "Current daily growth request plus standing low-risk code/PR/production authorization; scope chosen from verified content gap after PR81",
   "approvedCategories": [
-    "content", "seo-global"
+    "content"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/products/carpet-tiles/page.tsx",
     "src/app/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles/page.tsx",
-    "src/lib/data.ts",
-    "src/lib/sitemap-data.ts",
-    "src/lib/generated-static-sitemap-routes.ts",
+    "src/lib/blog-posts/commercial-carpet-tile-backing-comparison-guide.ts",
+    "src/lib/blog-data.ts",
     "keyword-map.csv",
     "ops/indexnow-urls.json",
-    "ops/pp-pvc-office-carpet-tiles-20261014.md",
-    "public/images/products/pp-pvc-office-carpet-tiles/*"
+    "ops/backing-buyer-growth-20261015.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "545a4ef6e69311761d158ff77af8a2691254ca9b",
+  "rollbackCommit": "346695de51126c7d5d051f3fb70477bd86acc118",
   "affectedUrls": [
-    "/products/carpet-tiles", "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles"
+    "/blog/commercial-carpet-tile-backing-comparison-guide", "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles"
   ],
-  "notes": "New independent product only: owner-nominated Alibaba listing 1601677208009 and four supplied image references. Use coherent listed PP face/PVC backing/50x50cm/loop-pile facts; conflicting thickness and shape plus unverified performance, price, MOQ and time are omitted or project-confirmed. Product brand Vcarpets per current instruction; entity unchanged. Generated images visibly disclosed as illustrations. No global schema/robots/sitemap algorithm, tracking, form handler or dependency changes. Sitemap scope limited to two modified-date entries and automatic generated route inventory. Existing category cards discover new data automatically, with an additional explicit product link. Backups retained locally. Feature branch, exact-head Preview, CI, responsive and no-submit RFQ checks precede merge; then verify production and notify the new canonical URL only."
+  "notes": "Update one existing English Blog in depth, not create duplicate backing/substitution URL. Correct obsolete PVC availability wording; add current product comparison boundaries, six approval gates, deviation record and RFQ wording. Use CRI104 and Interface installation instructions only as explicitly limited primary references, never as VCARPETS certification/installation limits. Reuse images with clearer illustration captions. Preserve original publish date and set Oct15 review date in both source and scoped enhancement so it renders correctly. Add one reciprocal guide card to new PVC product; existing other cards/quotes/brand/schema/facts remain. No forms, tracking, dependencies, robots or global SEO/sitemap logic changes. Sitemap automatically uses article review date. Temporary 390px Preview QA fixture removed before merge. GSC unavailable in connector and browser signed out; no new metrics/indexing claims. Only materially updated Blog goes in IndexNow manifest; PR81 product submission is not repeated. Backup live HTML before editing. Feature branch, required checks and actual Preview desktop/mobile precede merge; production verification recorded in PR."
 }

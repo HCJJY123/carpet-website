@@ -23,6 +23,7 @@ const faqs = [
   { question: "What are the MOQ, sample cost and lead time?", answer: "They are confirmed for the selected color, construction and order quantity. Send the project area, sample requirements, destination and target date. The written quotation will identify the sample arrangement, MOQ, packing and production schedule." },
 ];
 const resources = [
+  { href: "/blog/commercial-carpet-tile-backing-comparison-guide", title: "Backing comparison and approval", text: "Compare PVC, bitumen and PE paths; review evidence before accepting a backing substitution." },
   { href: "/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles", title: "Compare PP bitumen-backed tiles", text: "Compare a different backing as a separate construction." },
   { href: "/products/carpet-tiles/nylon-office-carpet-tile", title: "Compare nylon office carpet tiles", text: "Review a different face fiber against your office specification." },
   { href: "/blog/office-carpet-tile-layout-approval-bulk-order", title: "Tile layout approval guide", text: "Connect sample direction and visual approval to the order." },
