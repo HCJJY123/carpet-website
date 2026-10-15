@@ -1251,6 +1251,7 @@ const baseBlogPosts: BlogPost[] = [
 const procurementGuideEnhancements: Record<string, { image: keyof typeof contentGrowthAssets; dateModified?: string; section: BlogSection }> = {
   "commercial-carpet-tile-backing-comparison-guide": {
     image: "B03",
+    dateModified: "2026-10-15",
     section: {
       title: "Move from Backing Comparison to an Office Specification",
       paragraphs: ["Record the chosen fiber, backing and installation method together before requesting samples. Then use a phased office renovation plan to check receiving, batch allocation and retained spares. A backing label or sample photograph cannot establish fire, emissions or rolling-chair performance; request evidence for the exact construction being quoted."],
