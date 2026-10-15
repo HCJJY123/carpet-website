@@ -182,7 +182,7 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
         {
           type: "image",
           src: "/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-backing-pile-cross-section-detail.webp",
-          alt: "Macro view of carpet tile pile and backing layers reviewed for a commercial specification",
+          alt: "AI-generated pile and backing-layer illustration, not a measured VCARPETS product cross-section",
           caption: "AI-generated construction illustration, not a cross-section of a nominated VCARPETS product. Use the physical sample and product sheet to identify actual layers.",
         },
       ],
@@ -224,7 +224,7 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
         {
           type: "image",
           src: "/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-rolling-chair-traffic-zone.webp",
-          alt: "Commercial carpet tiles under rolling office chair traffic in a workstation zone",
+          alt: "AI-generated office chair-use illustration, not a product performance test",
           caption: "AI-generated office-use illustration, not a chair-wheel test or documented installation. Product suitability needs construction-specific evidence.",
         },
       ],
@@ -296,7 +296,7 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
         {
           type: "image",
           src: "/images/blog-series/commercial-carpet-tile-specification-checklist/carpet-tile-concrete-subfloor-adhesive-review.webp",
-          alt: "Commercial carpet tile backing and adhesive reviewed over a concrete subfloor",
+          alt: "AI-generated carpet tile and subfloor planning illustration, not an approved installation system",
           caption: "AI-generated installation-planning illustration, not an approved fixing system. Confirm the actual substrate and product instructions.",
         },
       ],
@@ -359,7 +359,7 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
         {
           type: "image",
           src: "/images/blog-series/commercial-carpet-tile-backing-comparison/commercial-carpet-tile-sample-approval-qc.webp",
-          alt: "Commercial carpet tile samples and technical details checked during factory approval",
+          alt: "AI-generated sample-review illustration, not a factory inspection or acceptance record",
           caption: "AI-generated sample-review illustration, not a factory inspection or acceptance record. An identified physical sample and nominated documents govern the order.",
         },
       ],

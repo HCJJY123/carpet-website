@@ -12,8 +12,7 @@
     "src/lib/blog-data.ts",
     "keyword-map.csv",
     "ops/indexnow-urls.json",
-    "ops/backing-buyer-growth-20261015.md",
-    "public/qa-backing-preview.html"
+    "ops/backing-buyer-growth-20261015.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
