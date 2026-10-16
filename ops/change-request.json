@@ -1,24 +1,27 @@
 {
-  "task": "Deepen existing sample approval guide with sample origin, limited sign-off, release record and source-specific RFQ; connect current PP/PVC product",
-  "approvedBy": "2026-10-16 daily buyer-growth request and standing scoped content/PR/production authorization",
+  "task": "Add distinct heathered gray modular carpet tile product with seven illustrated views, category listing and sample-led RFQ",
+  "approvedBy": "User explicitly requested VCARPETS product publication on 2026-10-16; feature PR, Preview validation and scoped production release authorized.",
   "approvedCategories": [
     "content"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/lib/blog-posts/commercial-carpet-sample-approval-checklist.ts",
-    "src/app/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles/page.tsx",
     "keyword-map.csv",
-    "ops/indexnow-urls.json",
-    "ops/sample-approval-growth-20261016.md"
+    "src/lib/data.ts",
+    "src/lib/sitemap-data.ts",
+    "src/lib/generated-static-sitemap-routes.ts",
+    "src/app/products/carpet-tiles/page.tsx",
+    "src/app/products/carpet-tiles/heathered-gray-modular-carpet-tiles/**",
+    "public/images/products/heathered-gray-modular-carpet-tiles/**",
+    "ops/indexnow-urls.json"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "9afae120e6a2508a9754c61e50b7a97f42cdde47",
+  "rollbackCommit": "0f176bc298223cfc592994cf76ebbd239f31ff71",
   "affectedUrls": [
-    "/blog/commercial-carpet-sample-approval-checklist",
-    "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles"
+    "/products/carpet-tiles/heathered-gray-modular-carpet-tiles",
+    "/products/carpet-tiles"
   ],
-  "notes": "One existing complete English Blog update, not a duplicate approval URL. Preserve original publication date and image files. Add origin/representation and partial approval records, a clearly hypothetical buyer example, evidence boundary, copyable RFQ and matching visible FAQ/schema. Correct vague source=/blog to exact article on existing links only; no form/handler/tracking changes. Product receives one reciprocal sample guide card only: facts/brand/images/schema/quote remain unchanged. Public UFGS and Missouri tender examples are procurement references, never VCARPETS compliance or universal sample sizes/tolerances. No invented product parameters, sample fees/timing, performance or delivered cases. Existing visual illustrations retained and explicitly disclosed. Before-edit live HTML backed up outside repository. Temporary 390px same-origin Preview fixture removed after actual narrow acceptance; final exact-head CI/READY Preview/HTTP acceptance required. Only materially updated Blog enters IndexNow manifest, no repeated product submission. GSC connector lacks target property; browser signed out. No current search metrics or Google submission claimed. PR71/19 excluded."
+  "notes": "Publication workflow authorized after local preparation. Preserve PR83 sample-approval guide and all existing taupe product content. No unverified sizes, materials, ratings, price, MOQ, stock or delivery claims. All seven images labeled generated design illustrations. Existing contact query parameters only; no form, tracking, schema-global or routing logic changes. Sitemap metadata is per-URL; existing generator handles route. Category live HTML backed up outside repository. No public QA route or fixture is included. Browser QA uses supported viewport controls only. No form submission. IndexNow limited to the new product and materially updated category."
 }

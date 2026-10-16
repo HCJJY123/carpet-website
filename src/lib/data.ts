@@ -24,6 +24,72 @@ export const brandInfo = {
 };
 
 export const products: Product[] = [
+{
+  "id": "heathered-gray-modular-carpet-tiles",
+  "name": "Heathered Gray Modular Carpet Tiles",
+  "category": "carpet-tiles",
+  "description": "Heathered light, mid-gray and charcoal modular carpet design for sample-led project evaluation. Size, construction and commercial terms require written confirmation.",
+  "longDescription": "Explore heathered light, mid-gray and charcoal modular carpet tile design with VCARPETS. Request a sample review and confirmed project specifications.",
+  "image": "/images/products/heathered-gray-modular-carpet-tiles/01-studio-panel.webp",
+  "imageAlt": "Design illustration of light, mid-gray and charcoal heathered carpet tile modules",
+  "gallery": [
+    {
+      "src": "/images/products/heathered-gray-modular-carpet-tiles/01-studio-panel.webp",
+      "alt": "Design illustration of light, mid-gray and charcoal heathered carpet tile modules"
+    },
+    {
+      "src": "/images/products/heathered-gray-modular-carpet-tiles/02-angled-squares.webp",
+      "alt": "Design illustration of three gray carpet tile modules viewed at an angle"
+    },
+    {
+      "src": "/images/products/heathered-gray-modular-carpet-tiles/03-hotel-lounge.webp",
+      "alt": "Design illustration of gray modular carpet tiles in a lounge, not a completed project"
+    },
+    {
+      "src": "/images/products/heathered-gray-modular-carpet-tiles/04-sample-planning.webp",
+      "alt": "Design illustration of gray modular carpet tile sample planning"
+    },
+    {
+      "src": "/images/products/heathered-gray-modular-carpet-tiles/05-texture-detail.webp",
+      "alt": "Design illustration of a close-up heathered gray carpet texture"
+    },
+    {
+      "src": "/images/products/heathered-gray-modular-carpet-tiles/06-layout-detail.webp",
+      "alt": "Design illustration of light and dark gray modular tile arrangement"
+    },
+    {
+      "src": "/images/products/heathered-gray-modular-carpet-tiles/07-surface-detail.webp",
+      "alt": "Design illustration of contrasting heathered gray carpet surfaces"
+    }
+  ],
+  "moq": "Confirm by project",
+  "moqTiers": {
+    "sample": "Confirm format, cost and timing",
+    "trialOrder": "Confirm selected specification",
+    "project": "Confirm by specification and quantity"
+  },
+  "leadTime": "Confirm after sample and specification approval",
+  "spec": {
+    "material": "To be confirmed",
+    "size": "To be confirmed",
+    "colors": []
+  },
+  "technicalSpecs": {
+    "fireRating": "Request construction-specific evidence",
+    "trafficClass": "Confirm for intended use",
+    "fiber": "To be confirmed",
+    "yarnSystem": "Construction to be confirmed; illustrated heathered appearance",
+    "backing": "To be confirmed",
+    "pileWeight": "To be confirmed",
+    "totalThickness": "To be confirmed",
+    "antistatic": "Confirm if required by the project"
+  },
+  "features": [
+    "Heathered gray appearance",
+    "Tonal modular design",
+    "Sample-led specification"
+  ]
+},
 
   {
     id: "pp-pvc-backed-office-carpet-tiles",
