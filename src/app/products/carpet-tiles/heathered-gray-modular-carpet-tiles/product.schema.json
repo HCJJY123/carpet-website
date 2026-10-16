@@ -1,0 +1,81 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://www.vcarpets.com/products/carpet-tiles/heathered-gray-modular-carpet-tiles#product",
+      "name": "Heathered Gray Modular Carpet Tiles",
+      "url": "https://www.vcarpets.com/products/carpet-tiles/heathered-gray-modular-carpet-tiles",
+      "description": "Explore heathered light, mid-gray and charcoal modular carpet tile design with VCARPETS. Request a sample review and confirmed project specifications.",
+      "category": "Carpet Tiles",
+      "brand": {
+        "@type": "Brand",
+        "name": "VCARPETS"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Tianjin Vcarpets Global Commercial Carpet Co., Ltd."
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/heathered-gray-modular-carpet-tiles/01-studio-panel.webp",
+          "caption": "Design illustration of light, mid-gray and charcoal heathered carpet tile modules"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/heathered-gray-modular-carpet-tiles/02-angled-squares.webp",
+          "caption": "Design illustration of three gray carpet tile modules viewed at an angle"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/heathered-gray-modular-carpet-tiles/03-hotel-lounge.webp",
+          "caption": "Design illustration of gray modular carpet tiles in a lounge, not a completed project"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/heathered-gray-modular-carpet-tiles/04-sample-planning.webp",
+          "caption": "Design illustration of gray modular carpet tile sample planning"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/heathered-gray-modular-carpet-tiles/05-texture-detail.webp",
+          "caption": "Design illustration of a close-up heathered gray carpet texture"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/heathered-gray-modular-carpet-tiles/06-layout-detail.webp",
+          "caption": "Design illustration of light and dark gray modular tile arrangement"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/heathered-gray-modular-carpet-tiles/07-surface-detail.webp",
+          "caption": "Design illustration of contrasting heathered gray carpet surfaces"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.vcarpets.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Carpet Tiles",
+          "item": "https://www.vcarpets.com/products/carpet-tiles"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Heathered Gray Modular Carpet Tiles",
+          "item": "https://www.vcarpets.com/products/carpet-tiles/heathered-gray-modular-carpet-tiles"
+        }
+      ]
+    }
+  ]
+}

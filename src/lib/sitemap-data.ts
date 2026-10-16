@@ -25,7 +25,8 @@ type SitemapEntryInput = Omit<SitemapEntry, "url"> & { path: string };
 
 const defaultModified = "2026-08-06";
 const modifiedDates: Record<string, string> = {
-  "/products/carpet-tiles": "2026-10-14",
+  "/products/carpet-tiles": "2026-10-16",
+  "/products/carpet-tiles/heathered-gray-modular-carpet-tiles": "2026-10-16",
   "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles": "2026-10-14",
   "/products/printed-carpet": "2026-10-09",
   "/resources": "2026-10-09",
