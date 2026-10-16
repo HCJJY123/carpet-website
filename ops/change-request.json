@@ -11,8 +11,7 @@
     "src/app/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles/page.tsx",
     "keyword-map.csv",
     "ops/indexnow-urls.json",
-    "ops/sample-approval-growth-20261016.md",
-    "public/qa-sample-preview.html"
+    "ops/sample-approval-growth-20261016.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
@@ -21,5 +20,5 @@
     "/blog/commercial-carpet-sample-approval-checklist",
     "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles"
   ],
-  "notes": "One existing complete English Blog update, not a duplicate approval URL. Preserve original publication date and image files. Add origin/representation and partial approval records, a clearly hypothetical buyer example, evidence boundary, copyable RFQ and matching visible FAQ/schema. Correct vague source=/blog to exact article on existing links only; no form/handler/tracking changes. Product receives one reciprocal sample guide card only: facts/brand/images/schema/quote remain unchanged. Public UFGS and Missouri tender examples are procurement references, never VCARPETS compliance or universal sample sizes/tolerances. No invented product parameters, sample fees/timing, performance or delivered cases. Existing visual illustrations retained and explicitly disclosed. Before-edit live HTML backed up outside repository. Temporary 390px same-origin Preview fixture must be deleted before merge; final exact-head CI/READY Preview/HTTP acceptance required. Only materially updated Blog enters IndexNow manifest, no repeated product submission. GSC connector lacks target property; browser signed out. No current search metrics or Google submission claimed. PR71/19 excluded."
+  "notes": "One existing complete English Blog update, not a duplicate approval URL. Preserve original publication date and image files. Add origin/representation and partial approval records, a clearly hypothetical buyer example, evidence boundary, copyable RFQ and matching visible FAQ/schema. Correct vague source=/blog to exact article on existing links only; no form/handler/tracking changes. Product receives one reciprocal sample guide card only: facts/brand/images/schema/quote remain unchanged. Public UFGS and Missouri tender examples are procurement references, never VCARPETS compliance or universal sample sizes/tolerances. No invented product parameters, sample fees/timing, performance or delivered cases. Existing visual illustrations retained and explicitly disclosed. Before-edit live HTML backed up outside repository. Temporary 390px same-origin Preview fixture removed after actual narrow acceptance; final exact-head CI/READY Preview/HTTP acceptance required. Only materially updated Blog enters IndexNow manifest, no repeated product submission. GSC connector lacks target property; browser signed out. No current search metrics or Google submission claimed. PR71/19 excluded."
 }
