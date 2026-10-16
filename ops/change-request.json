@@ -1,24 +1,25 @@
 {
-  "task": "Deepen the existing carpet tile backing guide with current PP/PVC sourcing and substitution approval; connect product to guide",
-  "approvedBy": "Current daily growth request plus standing low-risk code/PR/production authorization; scope chosen from verified content gap after PR81",
+  "task": "Deepen existing sample approval guide with sample origin, limited sign-off, release record and source-specific RFQ; connect current PP/PVC product",
+  "approvedBy": "2026-10-16 daily buyer-growth request and standing scoped content/PR/production authorization",
   "approvedCategories": [
     "content"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
+    "src/lib/blog-posts/commercial-carpet-sample-approval-checklist.ts",
     "src/app/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles/page.tsx",
-    "src/lib/blog-posts/commercial-carpet-tile-backing-comparison-guide.ts",
-    "src/lib/blog-data.ts",
     "keyword-map.csv",
     "ops/indexnow-urls.json",
-    "ops/backing-buyer-growth-20261015.md"
+    "ops/sample-approval-growth-20261016.md",
+    "public/qa-sample-preview.html"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "346695de51126c7d5d051f3fb70477bd86acc118",
+  "rollbackCommit": "9afae120e6a2508a9754c61e50b7a97f42cdde47",
   "affectedUrls": [
-    "/blog/commercial-carpet-tile-backing-comparison-guide", "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles"
+    "/blog/commercial-carpet-sample-approval-checklist",
+    "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles"
   ],
-  "notes": "Update one existing English Blog in depth, not create duplicate backing/substitution URL. Correct obsolete PVC availability wording; add current product comparison boundaries, six approval gates, deviation record and RFQ wording. Use CRI104 and Interface installation instructions only as explicitly limited primary references, never as VCARPETS certification/installation limits. Reuse images with clearer illustration captions. Preserve original publish date and set Oct15 review date in both source and scoped enhancement so it renders correctly. Add one reciprocal guide card to new PVC product; existing other cards/quotes/brand/schema/facts remain. No forms, tracking, dependencies, robots or global SEO/sitemap logic changes. Sitemap automatically uses article review date. Temporary 390px Preview QA fixture removed before merge. GSC unavailable in connector and browser signed out; no new metrics/indexing claims. Only materially updated Blog goes in IndexNow manifest; PR81 product submission is not repeated. Backup live HTML before editing. Feature branch, required checks and actual Preview desktop/mobile precede merge; production verification recorded in PR."
+  "notes": "One existing complete English Blog update, not a duplicate approval URL. Preserve original publication date and image files. Add origin/representation and partial approval records, a clearly hypothetical buyer example, evidence boundary, copyable RFQ and matching visible FAQ/schema. Correct vague source=/blog to exact article on existing links only; no form/handler/tracking changes. Product receives one reciprocal sample guide card only: facts/brand/images/schema/quote remain unchanged. Public UFGS and Missouri tender examples are procurement references, never VCARPETS compliance or universal sample sizes/tolerances. No invented product parameters, sample fees/timing, performance or delivered cases. Existing visual illustrations retained and explicitly disclosed. Before-edit live HTML backed up outside repository. Temporary 390px same-origin Preview fixture must be deleted before merge; final exact-head CI/READY Preview/HTTP acceptance required. Only materially updated Blog enters IndexNow manifest, no repeated product submission. GSC connector lacks target property; browser signed out. No current search metrics or Google submission claimed. PR71/19 excluded."
 }
