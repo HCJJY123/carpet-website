@@ -1,0 +1,108 @@
+{
+  "name": "Linear Accent Commercial Carpet Tiles",
+  "description": "Explore charcoal and gray linear carpet tile design with red accents. Review seven design illustrations and request samples and confirmed project specifications.",
+  "route": "/products/carpet-tiles/linear-accent-commercial-carpet-tiles",
+  "images": [
+    {
+      "src": "01-studio-panel.webp",
+      "title": "Studio module study",
+      "alt": "AI-generated design illustration of gray carpet modules with red linear accents",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "src": "02-office-concept.webp",
+      "title": "Office design concept",
+      "alt": "AI-generated office design concept with gray and red accent carpet; not a completed project",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "src": "03-lounge-concept.webp",
+      "title": "Workplace lounge concept",
+      "alt": "AI-generated workplace lounge design with gray and red carpet; not a completed project",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "src": "04-meeting-room-concept.webp",
+      "title": "Meeting room concept",
+      "alt": "AI-generated meeting room design with gray and red carpet; not a completed project",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "src": "05-texture-detail.webp",
+      "title": "Broken-line texture",
+      "alt": "AI-generated close-up illustration of gray carpet texture with a red linear accent",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "src": "06-joint-detail.webp",
+      "title": "Module junction study",
+      "alt": "AI-generated detail illustration of adjoining gray carpet modules and red accent alignment",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "src": "07-layout-detail.webp",
+      "title": "Accent layout study",
+      "alt": "AI-generated design illustration of gray carpet modules arranged with red accents",
+      "width": 1254,
+      "height": 1254
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is this a confirmed PP carpet tile with PVC or bitumen backing?",
+      "answer": "The fiber and backing for this design have not been confirmed. Request the nominated construction and physical sample; visually similar carpet tiles may use different materials and backing systems."
+    },
+    {
+      "question": "What size and pile construction are available?",
+      "answer": "Confirm exact dimensions, pile construction, pile weight and total thickness in the written specification. The illustrations do not establish a square or plank size, a cut or loop pile, or any dimensional tolerance."
+    },
+    {
+      "question": "Are these images actual products or installed projects?",
+      "answer": "All seven images are newly generated AI design illustrations. They communicate appearance and layout only and are not product photographs, client installations or performance evidence."
+    },
+    {
+      "question": "Can I specify this design for an office or rolling-chair area?",
+      "answer": "Send the intended zones, traffic, chair use, subfloor and installation requirements for review. Suitability requires evidence for the exact proposed construction and installation system, not just an image or fiber name."
+    },
+    {
+      "question": "How do I request a sample and quotation?",
+      "answer": "Send the area, design reference, desired accent placement, destination, timing and required documents. Confirm sample format and charges, MOQ, packing, price, FOB Tianjin Port terms and production schedule in writing."
+    }
+  ],
+  "specs": [
+    [
+      "Visual direction",
+      "Heathered charcoal and mid-gray, broken linear texture and red accent modules"
+    ],
+    [
+      "Dimensions and format",
+      "To be confirmed; images do not establish tile size"
+    ],
+    [
+      "Fiber, backing and pile",
+      "To be confirmed against the nominated construction"
+    ],
+    [
+      "Thickness and pile weight",
+      "Request a construction-specific specification"
+    ],
+    [
+      "Fire, VOC and traffic evidence",
+      "Request applicable documents for the exact quoted construction"
+    ],
+    [
+      "MOQ, price and availability",
+      "Subject to written project quotation"
+    ],
+    [
+      "Samples and delivery",
+      "Confirm sample terms, packing, schedule and FOB Tianjin Port quotation"
+    ]
+  ]
+}

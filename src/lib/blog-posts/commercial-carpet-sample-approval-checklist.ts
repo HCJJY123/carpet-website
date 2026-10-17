@@ -27,7 +27,7 @@ export const commercialCarpetSampleApprovalChecklist: BlogPost = {
     "commercial carpet project approval",
   ],
   date: "2026-09-10",
-  dateModified: "2026-10-16",
+  dateModified: "2026-10-17",
   author: "VCARPETS Technical Team",
   category: "Project Approval Guide",
   image: "/images/optimized/sample-approval-20260921-sample-approval-review-desk-hero-a62bf4b2cc-1536w.webp",
@@ -39,6 +39,7 @@ export const commercialCarpetSampleApprovalChecklist: BlogPost = {
   h1ImageUnoptimized: true,
   relatedProductIds: ["nylon-office-carpet-tile", "pp-pvc-backed-office-carpet-tiles", "education-school-carpet-tiles", "luxury-hotel-broadloom"],
   suggestedLinks: [
+    { label: "Linear Accent Carpet Tiles: Design and Sample Review", href: "/products/carpet-tiles/linear-accent-commercial-carpet-tiles" },
     { label: "PP PVC-Backed Office Carpet Tiles", href: "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles" },
     { label: "Office Carpet Tile Layout Approval", href: "/blog/office-carpet-tile-layout-approval-bulk-order" },
     { label: "FOB Tianjin Port Buyer Checklist", href: "/blog/commercial-carpet-fob-tianjin-port-buyer-checklist" },

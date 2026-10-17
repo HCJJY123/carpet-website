@@ -25,6 +25,73 @@ export const brandInfo = {
 
 export const products: Product[] = [
 {
+  "id": "linear-accent-commercial-carpet-tiles",
+  "name": "Linear Accent Commercial Carpet Tiles",
+  "category": "carpet-tiles",
+  "description": "Charcoal and gray broken-line design with red accents. Sample-led review; construction, dimensions and commercial terms require confirmation.",
+  "longDescription": "Explore charcoal and gray linear carpet tile design with red accents. Review seven design illustrations and request samples and confirmed project specifications.",
+  "image": "/images/products/linear-accent-commercial-carpet-tiles/01-studio-panel.webp",
+  "imageAlt": "AI-generated design illustration of gray carpet modules with red linear accents",
+  "gallery": [
+    {
+      "src": "/images/products/linear-accent-commercial-carpet-tiles/01-studio-panel.webp",
+      "alt": "AI-generated design illustration of gray carpet modules with red linear accents"
+    },
+    {
+      "src": "/images/products/linear-accent-commercial-carpet-tiles/02-office-concept.webp",
+      "alt": "AI-generated office design concept with gray and red accent carpet; not a completed project"
+    },
+    {
+      "src": "/images/products/linear-accent-commercial-carpet-tiles/03-lounge-concept.webp",
+      "alt": "AI-generated workplace lounge design with gray and red carpet; not a completed project"
+    },
+    {
+      "src": "/images/products/linear-accent-commercial-carpet-tiles/04-meeting-room-concept.webp",
+      "alt": "AI-generated meeting room design with gray and red carpet; not a completed project"
+    },
+    {
+      "src": "/images/products/linear-accent-commercial-carpet-tiles/05-texture-detail.webp",
+      "alt": "AI-generated close-up illustration of gray carpet texture with a red linear accent"
+    },
+    {
+      "src": "/images/products/linear-accent-commercial-carpet-tiles/06-joint-detail.webp",
+      "alt": "AI-generated detail illustration of adjoining gray carpet modules and red accent alignment"
+    },
+    {
+      "src": "/images/products/linear-accent-commercial-carpet-tiles/07-layout-detail.webp",
+      "alt": "AI-generated design illustration of gray carpet modules arranged with red accents"
+    }
+  ],
+  "moq": "Confirm by project",
+  "moqTiers": {
+    "sample": "Confirm format, cost and timing",
+    "trialOrder": "Confirm selected specification",
+    "project": "Confirm by specification and quantity"
+  },
+  "leadTime": "Confirm after sample and specification approval",
+  "spec": {
+    "material": "To be confirmed",
+    "size": "To be confirmed",
+    "colors": []
+  },
+  "technicalSpecs": {
+    "fireRating": "Request construction-specific evidence",
+    "trafficClass": "Confirm for intended use",
+    "fiber": "To be confirmed",
+    "yarnSystem": "Construction to be confirmed; illustrated linear appearance",
+    "backing": "To be confirmed",
+    "pileWeight": "To be confirmed",
+    "totalThickness": "To be confirmed",
+    "antistatic": "Confirm if required"
+  },
+  "features": [
+    "Gray and red accent appearance",
+    "Broken linear texture",
+    "Sample-led specification"
+  ]
+},
+
+{
   "id": "heathered-gray-modular-carpet-tiles",
   "name": "Heathered Gray Modular Carpet Tiles",
   "category": "carpet-tiles",

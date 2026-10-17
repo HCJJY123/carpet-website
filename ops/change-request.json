@@ -1,6 +1,6 @@
 {
-  "task": "Deepen existing tile/broadloom buyer guide, connect category decision path and correct category trade/response copy",
-  "approvedBy": "Standing user authorization for daily VCARPETS content optimization, scoped feature PR, Preview and production release; 2026-10-17 run.",
+  "task": "Create Linear Accent Commercial Carpet Tiles product page, seven generated design illustrations and contextual category, sample-guide and planning-reference links",
+  "approvedBy": "User requested new standalone carpet-tile product page, HTML/JSX master, seven new generated images and publication in the existing VCARPETS website.",
   "approvedCategories": [
     "content"
   ],
@@ -8,17 +8,22 @@
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
     "keyword-map.csv",
-    "src/lib/blog-posts/carpet-tiles-vs-broadloom-commercial-projects-guide.ts",
+    "src/app/products/carpet-tiles/linear-accent-commercial-carpet-tiles/**",
+    "public/images/products/linear-accent-commercial-carpet-tiles/**",
+    "src/lib/data.ts",
     "src/app/products/carpet-tiles/page.tsx",
-    "ops/format-selection-growth-20261017.md",
-    "ops/indexnow-urls.json"
+    "src/lib/blog-posts/commercial-carpet-sample-approval-checklist.ts",
+    "src/lib/project-planning-references.ts",
+    "src/lib/generated-static-sitemap-routes.ts"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "ea1d60ddba9bfbcb097146d4cbae996e0b0ec580",
+  "rollbackCommit": "ea41126",
   "affectedUrls": [
-    "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide",
-    "/products/carpet-tiles"
+    "/products/carpet-tiles/linear-accent-commercial-carpet-tiles",
+    "/products/carpet-tiles",
+    "/blog/commercial-carpet-sample-approval-checklist",
+    "/projects/office-carpet-tile-renovation"
   ],
-  "notes": "Preserve existing URL/primary keyword/publication date, cinema coverage and all product records including PR84. Reorder answer before cinema; replace format-based performance assumptions with conditional procurement guidance; add installed-scope quantity/cost worksheet, zone decision example, matching FAQ, contextual links and exact-source existing RFQ link. Category adds one inline decision link and corrects two FOB/CIF/DAP text locations to owner-confirmed FOB Tianjin Port; remove unsupported 24-hour price/sample/response promises. Metadata, product/FAQ schema, offers and conversion handlers unchanged. Existing images reused with explicit illustration disclosures. No forms/tracking/global indexing changes or real inquiry tests. Temporary same-origin390px Preview QA frame accepted and removed in final candidate; no public QA route will ship. IndexNow only materially changed Blog; recently submitted category not repeated. Current GSC browser signed out and connector payment_required: no new metrics/manual submission claimed."
+  "notes": "New appearance-led product; unverified fiber, backing, dimensions, ratings and commercial terms remain pending. Illustrations disclosed as AI generated. Existing RFQ product/source prefill reused; no form handler, email, tracking or global sitemap logic changed. Preserve unrelated records. No real inquiry submission. Independent review and Preview checks required before merge."
 }

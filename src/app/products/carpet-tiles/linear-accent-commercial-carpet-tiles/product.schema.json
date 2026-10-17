@@ -1,0 +1,126 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://www.vcarpets.com/products/carpet-tiles/linear-accent-commercial-carpet-tiles#product",
+      "name": "Linear Accent Commercial Carpet Tiles",
+      "url": "https://www.vcarpets.com/products/carpet-tiles/linear-accent-commercial-carpet-tiles",
+      "description": "Explore charcoal and gray linear carpet tile design with red accents. Review seven design illustrations and request samples and confirmed project specifications.",
+      "category": "Carpet Tiles",
+      "brand": {
+        "@type": "Brand",
+        "name": "VCARPETS"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Tianjin Vcarpets Global Commercial Carpet Co., Ltd."
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/linear-accent-commercial-carpet-tiles/01-studio-panel.webp",
+          "caption": "AI-generated design illustration of gray carpet modules with red linear accents"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/linear-accent-commercial-carpet-tiles/02-office-concept.webp",
+          "caption": "AI-generated office design concept with gray and red accent carpet; not a completed project"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/linear-accent-commercial-carpet-tiles/03-lounge-concept.webp",
+          "caption": "AI-generated workplace lounge design with gray and red carpet; not a completed project"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/linear-accent-commercial-carpet-tiles/04-meeting-room-concept.webp",
+          "caption": "AI-generated meeting room design with gray and red carpet; not a completed project"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/linear-accent-commercial-carpet-tiles/05-texture-detail.webp",
+          "caption": "AI-generated close-up illustration of gray carpet texture with a red linear accent"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/linear-accent-commercial-carpet-tiles/06-joint-detail.webp",
+          "caption": "AI-generated detail illustration of adjoining gray carpet modules and red accent alignment"
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://www.vcarpets.com/images/products/linear-accent-commercial-carpet-tiles/07-layout-detail.webp",
+          "caption": "AI-generated design illustration of gray carpet modules arranged with red accents"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.vcarpets.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Carpet Tiles",
+          "item": "https://www.vcarpets.com/products/carpet-tiles"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Linear Accent Commercial Carpet Tiles",
+          "item": "https://www.vcarpets.com/products/carpet-tiles/linear-accent-commercial-carpet-tiles"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this a confirmed PP carpet tile with PVC or bitumen backing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The fiber and backing for this design have not been confirmed. Request the nominated construction and physical sample; visually similar carpet tiles may use different materials and backing systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What size and pile construction are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Confirm exact dimensions, pile construction, pile weight and total thickness in the written specification. The illustrations do not establish a square or plank size, a cut or loop pile, or any dimensional tolerance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are these images actual products or installed projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All seven images are newly generated AI design illustrations. They communicate appearance and layout only and are not product photographs, client installations or performance evidence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I specify this design for an office or rolling-chair area?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send the intended zones, traffic, chair use, subfloor and installation requirements for review. Suitability requires evidence for the exact proposed construction and installation system, not just an image or fiber name."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I request a sample and quotation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send the area, design reference, desired accent placement, destination, timing and required documents. Confirm sample format and charges, MOQ, packing, price, FOB Tianjin Port terms and production schedule in writing."
+          }
+        }
+      ]
+    }
+  ]
+}
