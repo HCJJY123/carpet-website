@@ -38,6 +38,7 @@ export const generatedStaticSitemapRoutes = [
   "/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles",
   "/products/carpet-tiles/healthcare-hospital-carpet-tiles",
   "/products/carpet-tiles/heathered-gray-modular-carpet-tiles",
+  "/products/carpet-tiles/linear-accent-commercial-carpet-tiles",
   "/products/carpet-tiles/luxury-hotel-carpet-tile-50x50cm",
   "/products/carpet-tiles/nylon-office-carpet-tile",
   "/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles",

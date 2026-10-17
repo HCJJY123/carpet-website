@@ -60,6 +60,7 @@ const categoryFaqs = [
 ];
 
 const productOptions = [
+  { title: "Linear Accent Commercial Carpet Tiles", text: "Charcoal and gray linear texture with red accents; sample-led design review and specification confirmation.", href: "/products/carpet-tiles/linear-accent-commercial-carpet-tiles" },
   { title: "Heathered Gray Modular Carpet Tiles", text: "Heathered light, mid-gray and charcoal modular design with sample-led specification review.", href: "/products/carpet-tiles/heathered-gray-modular-carpet-tiles" },
   {
     title: "Luxury Hotel Carpet Tile 50x50cm",
@@ -344,7 +345,7 @@ export default function CategoryPage() {
                    <ProductImage src={p.image} alt={p.imageAlt || p.name} fit={p.id === "pp-pvc-backed-office-carpet-tiles" ? "contain" : "cover"} className="w-full h-full object-cover transition-transform group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 {p.id === "pp-pvc-backed-office-carpet-tiles" ? <p className="mb-4 text-xs leading-6 text-muted">AI-generated appearance illustration. Approve a physical sample.</p> : null}
-                {p.id === "heathered-gray-modular-carpet-tiles" && <p className="mb-2 text-xs text-muted">AI-generated design illustration · Specification pending</p>}
+                {["heathered-gray-modular-carpet-tiles", "linear-accent-commercial-carpet-tiles"].includes(p.id) && <p className="mb-2 text-xs text-muted">AI-generated design illustration · Specification pending</p>}
                 <h3 className="mb-6 min-h-20 text-xl font-bold uppercase leading-tight text-primary transition-colors group-hover:text-accent">{p.name}</h3>
                 <p className="mb-6 min-h-20 text-sm leading-relaxed text-muted">{p.description}</p>
                 <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">
@@ -362,7 +363,7 @@ export default function CategoryPage() {
                   </div>
                 </div>
                 <div className="mt-auto flex min-h-11 items-center justify-between rounded-sm bg-primary px-4 py-3 text-[10px] font-black uppercase tracking-[0.12em] text-white transition-colors group-hover:bg-[#C8752A]">
-                   <span>{p.id === "heathered-gray-modular-carpet-tiles" ? "View Design & Specification" : "View Product & Pricing"}</span>
+                   <span>{["heathered-gray-modular-carpet-tiles", "linear-accent-commercial-carpet-tiles"].includes(p.id) ? "View Design & Specification" : "View Product & Pricing"}</span>
                    <span>→</span>
                 </div>
               </Link>
