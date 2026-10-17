@@ -243,10 +243,10 @@ export default function CategoryPage() {
           <h1 className="text-4xl font-black uppercase text-white md:text-6xl">Commercial Carpet Tiles & Modular Flooring</h1>
           <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">50x50 nylon and polypropylene carpet tiles for offices, hotels, corridors, schools, healthcare support areas, airports, and commercial projects. Compare wholesale price, backing, thickness, MOQ, and technical performance across the listed range.</p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="btn-fox-orange">Get Price & Samples in 24 Hours</Link>
+            <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="btn-fox-orange">Request Price & Samples</Link>
             <Link href="#carpet-tile-products" className="inline-flex min-h-12 items-center justify-center border border-white/40 px-7 py-3 text-xs font-black uppercase tracking-widest text-white transition-colors hover:border-white">Compare Products</Link>
           </div>
-          <p className="mt-5 text-xs font-bold uppercase tracking-[0.12em] text-white/65">Export sales response within 24 hours · FOB / CIF / DAP support</p>
+          <p className="mt-5 text-xs font-bold uppercase tracking-[0.12em] text-white/65">B2B supply · FOB Tianjin Port · Sample costs and timing confirmed by project</p>
         </div>
       </section>
       <AnswerFirst
@@ -291,7 +291,7 @@ export default function CategoryPage() {
           { label: "Project MOQ", value: "200-500 SQM", detail: "Samples and trial orders are confirmed separately." },
           { label: "Production", value: "7-25 Days", detail: "Timing depends on fiber, backing, color, and quantity." },
           { label: "Samples", value: "Available", detail: "Confirm surface, backing, color, and specification before bulk order." },
-          { label: "Trade Terms", value: "FOB / CIF / DAP", detail: "Freight is calculated from destination and order volume." },
+          { label: "Trade Terms", value: "FOB Tianjin Port", detail: "Confirm the nominated product, quantity and supply scope in the written quotation." },
         ]}
         quoteHref="/contact?product=Commercial%20Carpet%20Tiles#quote-form"
         downloadHref="/downloads/commercial-carpet-tile-buying-specification-guide.pdf"
@@ -327,6 +327,7 @@ export default function CategoryPage() {
             ))}
           </div>
           <p className="mt-6 text-sm leading-7 text-muted">Compare the <Link href="/products/carpet-tiles/nylon-office-carpet-tile" className="font-bold text-accent underline">nylon office carpet tile specification</Link> and use the <Link href="/resources/installation-guides" className="font-bold text-accent underline">installation planning brief</Link> to align the site and product details before requesting a quote. Plan spare tiles and cleaning responsibilities with the <Link href="/resources/maintenance-guides" className="font-bold text-accent underline">maintenance handoff brief</Link>. For a concrete substrate, review the <Link href="/blog/carpet-tiles-over-concrete-installation-guide" className="font-bold text-accent underline">concrete-floor guide</Link>; send the complete scope through the <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="font-bold text-accent underline">commercial carpet tile RFQ form</Link>.</p>
+          <p className="mt-5 text-sm leading-7 text-muted">Still deciding between modules and roll carpet? Use the <Link href="/blog/carpet-tiles-vs-broadloom-commercial-projects-guide" className="font-bold text-accent underline">carpet tiles vs broadloom buyer comparison</Link> to review repair access, zone layout and the same installed scope before comparing quotations.</p>
         </div>
       </section>
       <section id="carpet-tile-products" className="section-padding scroll-mt-24">

@@ -1,6 +1,6 @@
 {
-  "task": "Add distinct heathered gray modular carpet tile product with seven illustrated views, category listing and sample-led RFQ",
-  "approvedBy": "User explicitly requested VCARPETS product publication on 2026-10-16; feature PR, Preview validation and scoped production release authorized.",
+  "task": "Deepen existing tile/broadloom buyer guide, connect category decision path and correct category trade/response copy",
+  "approvedBy": "Standing user authorization for daily VCARPETS content optimization, scoped feature PR, Preview and production release; 2026-10-17 run.",
   "approvedCategories": [
     "content"
   ],
@@ -8,20 +8,17 @@
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
     "keyword-map.csv",
-    "src/lib/data.ts",
-    "src/lib/sitemap-data.ts",
-    "src/lib/generated-static-sitemap-routes.ts",
+    "src/lib/blog-posts/carpet-tiles-vs-broadloom-commercial-projects-guide.ts",
     "src/app/products/carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/heathered-gray-modular-carpet-tiles/**",
-    "public/images/products/heathered-gray-modular-carpet-tiles/**",
+    "ops/format-selection-growth-20261017.md",
     "ops/indexnow-urls.json"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "0f176bc298223cfc592994cf76ebbd239f31ff71",
+  "rollbackCommit": "ea1d60ddba9bfbcb097146d4cbae996e0b0ec580",
   "affectedUrls": [
-    "/products/carpet-tiles/heathered-gray-modular-carpet-tiles",
+    "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide",
     "/products/carpet-tiles"
   ],
-  "notes": "Publication workflow authorized after local preparation. Preserve PR83 sample-approval guide and all existing taupe product content. No unverified sizes, materials, ratings, price, MOQ, stock or delivery claims. All seven images labeled generated design illustrations. Existing contact query parameters only; no form, tracking, schema-global or routing logic changes. Sitemap metadata is per-URL; existing generator handles route. Category live HTML backed up outside repository. No public QA route or fixture is included. Browser QA uses supported viewport controls only. No form submission. IndexNow limited to the new product and materially updated category."
+  "notes": "Preserve existing URL/primary keyword/publication date, cinema coverage and all product records including PR84. Reorder answer before cinema; replace format-based performance assumptions with conditional procurement guidance; add installed-scope quantity/cost worksheet, zone decision example, matching FAQ, contextual links and exact-source existing RFQ link. Category adds one inline decision link and corrects two FOB/CIF/DAP text locations to owner-confirmed FOB Tianjin Port; remove unsupported 24-hour price/sample/response promises. Metadata, product/FAQ schema, offers and conversion handlers unchanged. Existing images reused with explicit illustration disclosures. No forms/tracking/global indexing changes or real inquiry tests. Temporary same-origin390px Preview QA frame accepted and removed in final candidate; no public QA route will ship. IndexNow only materially changed Blog; recently submitted category not repeated. Current GSC browser signed out and connector payment_required: no new metrics/manual submission claimed."
 }
