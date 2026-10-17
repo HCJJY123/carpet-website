@@ -11,8 +11,7 @@
     "src/lib/blog-posts/carpet-tiles-vs-broadloom-commercial-projects-guide.ts",
     "src/app/products/carpet-tiles/page.tsx",
     "ops/format-selection-growth-20261017.md",
-    "ops/indexnow-urls.json",
-    "public/qa-format-selection-20261017.html"
+    "ops/indexnow-urls.json"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
@@ -21,5 +20,5 @@
     "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide",
     "/products/carpet-tiles"
   ],
-  "notes": "Preserve existing URL/primary keyword/publication date, cinema coverage and all product records including PR84. Reorder answer before cinema; replace format-based performance assumptions with conditional procurement guidance; add installed-scope quantity/cost worksheet, zone decision example, matching FAQ, contextual links and exact-source existing RFQ link. Category adds one inline decision link and corrects two FOB/CIF/DAP text locations to owner-confirmed FOB Tianjin Port; remove unsupported 24-hour price/sample/response promises. Metadata, product/FAQ schema, offers and conversion handlers unchanged. Existing images reused with explicit illustration disclosures. No forms/tracking/global indexing changes or real inquiry tests. Temporary same-origin 390px Preview QA frame removed before final exact-head checks and merge. IndexNow only materially changed Blog; recently submitted category not repeated. Current GSC browser signed out and connector payment_required: no new metrics/manual submission claimed."
+  "notes": "Preserve existing URL/primary keyword/publication date, cinema coverage and all product records including PR84. Reorder answer before cinema; replace format-based performance assumptions with conditional procurement guidance; add installed-scope quantity/cost worksheet, zone decision example, matching FAQ, contextual links and exact-source existing RFQ link. Category adds one inline decision link and corrects two FOB/CIF/DAP text locations to owner-confirmed FOB Tianjin Port; remove unsupported 24-hour price/sample/response promises. Metadata, product/FAQ schema, offers and conversion handlers unchanged. Existing images reused with explicit illustration disclosures. No forms/tracking/global indexing changes or real inquiry tests. Temporary same-origin390px Preview QA frame accepted and removed in final candidate; no public QA route will ship. IndexNow only materially changed Blog; recently submitted category not repeated. Current GSC browser signed out and connector payment_required: no new metrics/manual submission claimed."
 }
