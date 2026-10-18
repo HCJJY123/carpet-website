@@ -288,7 +288,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <div className="max-w-[1000px] mx-auto px-4 -mt-16 pb-24">
         {post.h1Image ? (
-          <figure className="mb-8">
+          <figure data-no-image-zoom="true" className="mb-8">
             <div className="rounded-xl overflow-hidden bg-white shadow-2xl border-8 border-white" style={{ aspectRatio: post.h1ImageAspectRatio ?? "16 / 9" }}>
               {post.h1ImageMobile ? (
                 <ResponsiveBlogImage

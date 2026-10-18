@@ -209,7 +209,7 @@ export default function EcoCorePeBackingProductPage() {
               EcoCore is positioned for buyers searching for eco friendly carpet tiles, PVC free carpet tiles, PE backing carpet tiles, low VOC office flooring, and modular carpet tiles for green building projects.
             </p>
           </div>
-          <div className="aspect-[16/9] overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+          <div data-no-image-zoom="true" className="aspect-[16/9] overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
             <ProductImage src={productImages.banner} alt="EcoCore carpet tiles in open office application" className="h-full w-full" />
           </div>
         </div>

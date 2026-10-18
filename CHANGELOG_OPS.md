@@ -1358,3 +1358,11 @@ Validation: Ops guard, SEO/link/placeholder audits, lint and final webpack build
 
 - Preview acceptance: be2be3f1b60b3dd412c21d17f3d44b9ba4ce5853 / dpl_G7y1ewBoJyFfFT1jp8NzrKiwSyxs READY, CI39085256004 success, public Preview ops:verify and29 links/assets passed. Desktop and actual390px CSS-frame reading/RFQ prefill verified; product link navigated desktop/keyboard, narrow tables scroll inside container, no page horizontal overflow. No real lead or personal data submitted.
 - Temporary QA HTML removed before final tree. Remaining final changes are records/removal only; final CI/Preview and production/notification closeout still required. PR87 is authoritative for subsequent stage and exact release receipt.
+
+
+## 2026-10-18 — Banner-only image enlargement exclusion
+
+- Scope: shared page/home/CTA banners, project hero, article lead artwork and EcoCore application banner now use the existing no-zoom marker; cursor feedback matches.
+- Product main photos, details, thumbnails, galleries, navigation and banner CTA handlers unchanged. Other listing/landing banners are already excluded by existing detail-path gating.
+- Based on PR87 production edb68877b8b626fcdfce7e240ce010598666138d; revert this isolated change for rollback.
+- Validation: scope guard, lint, build and Preview interaction checks required before merge.

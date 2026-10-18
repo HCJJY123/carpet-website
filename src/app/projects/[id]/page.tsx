@@ -194,7 +194,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             <ContentTrustPanel type="case" />
           </div>
 
-          <div className="aspect-[21/9] rounded-xl overflow-hidden shadow-2xl border border-border mb-10">
+          <div data-no-image-zoom="true" className="aspect-[21/9] rounded-xl overflow-hidden shadow-2xl border border-border mb-10">
             <ProductImage src={heroImage} alt={heroImageAlt} className="w-full h-full object-cover" priority sizes="100vw" />
           </div>
 

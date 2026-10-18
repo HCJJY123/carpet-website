@@ -303,6 +303,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
 
   return (
     <section
+      data-no-image-zoom="true"
       className={`relative flex min-h-[calc(100svh-5rem)] touch-pan-y select-none items-center overflow-hidden bg-primary md:min-h-[650px] ${
         dragging ? "cursor-grabbing" : "cursor-grab"
       }`}
