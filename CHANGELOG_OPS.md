@@ -1355,3 +1355,6 @@ Validation: Ops guard, SEO/link/placeholder audits, lint and final webpack build
 - Full copy, evidence, priorities, dependencies and next review dates: ops/concrete-readiness-growth-20261018.md. At this checkpoint: candidate, not production. Preview/CI/production closeout to be recorded with exact SHA/time in PR. Temporary390px QA frame removed before final release.
 
 - Local acceptance: webpack build, lint0 errors/one pre-existing raw-img warning, ops guard, SEO/link/placeholder audits and10 IndexNow mock tests passed. Local production HTTP:29 linked URLs/assets200, root268/blog64/products33 sets unchanged, sevenFAQ parity and product schema preservation checked. Awaiting actual Preview/browser/CI.
+
+- Preview acceptance: be2be3f1b60b3dd412c21d17f3d44b9ba4ce5853 / dpl_G7y1ewBoJyFfFT1jp8NzrKiwSyxs READY, CI39085256004 success, public Preview ops:verify and29 links/assets passed. Desktop and actual390px CSS-frame reading/RFQ prefill verified; product link navigated desktop/keyboard, narrow tables scroll inside container, no page horizontal overflow. No real lead or personal data submitted.
+- Temporary QA HTML removed before final tree. Remaining final changes are records/removal only; final CI/Preview and production/notification closeout still required. PR87 is authoritative for subsequent stage and exact release receipt.
