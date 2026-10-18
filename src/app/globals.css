@@ -195,7 +195,9 @@ body[data-image-zoom-enabled="true"] header img,
 body[data-image-zoom-enabled="true"] footer img,
 body[data-image-zoom-enabled="true"] nav img,
 body[data-image-zoom-enabled="true"] a img,
-body[data-image-zoom-enabled="true"] button img {
+body[data-image-zoom-enabled="true"] button img,
+body[data-image-zoom-enabled="true"] [data-no-image-zoom="true"] img,
+body[data-image-zoom-enabled="true"] img[data-no-image-zoom="true"] {
   cursor: inherit;
 }
 

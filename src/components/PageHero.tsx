@@ -25,7 +25,7 @@ export default function PageHero({
   const responsive = responsiveDelivery ? responsiveImageManifest[image] : undefined;
 
   return (
-    <section className="relative isolate min-h-[280px] overflow-hidden bg-[#102A43] py-16 text-center text-white sm:min-h-[320px] sm:py-20 md:min-h-[360px] md:py-24">
+    <section data-no-image-zoom="true" className="relative isolate min-h-[280px] overflow-hidden bg-[#102A43] py-16 text-center text-white sm:min-h-[320px] sm:py-20 md:min-h-[360px] md:py-24">
       {responsive ? (
         <picture className="absolute inset-0 -z-20 block h-full w-full scale-105">
           <source type="image/avif" srcSet={responsive.avif.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />

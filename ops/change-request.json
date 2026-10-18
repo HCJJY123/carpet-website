@@ -1,24 +1,28 @@
 {
-  "task": "Deepen existing concrete carpet-tile guide with underlay distinctions and a buyer site-readiness brief; add contextual PVC product path",
-  "approvedBy": "Standing user authorization for evidence-led daily VCARPETS content implementation, feature PR, Preview and production release, reaffirmed in 2026-10-18 request.",
+  "task": "Disable click-to-enlarge only on banners and hero artwork; preserve product/detail galleries and navigation",
+  "approvedBy": "User request: 所有网站banner图不要支持点击放大（注意只有banner图这样设置）",
   "approvedCategories": [
     "content"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "keyword-map.csv",
-    "src/lib/blog-posts/carpet-tiles-over-concrete-guide.ts",
-    "src/app/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles/page.tsx",
-    "ops/concrete-readiness-growth-20261018.md",
-    "ops/indexnow-urls.json"
+    "src/components/PageHero.tsx",
+    "src/components/HomeHeroCarousel.tsx",
+    "src/components/FactoryCtaBackground.tsx",
+    "src/app/projects/[id]/page.tsx",
+    "src/app/blog/[slug]/page.tsx",
+    "src/app/products/carpet-tiles/ecocore-pe-backing-carpet-tiles/page.tsx",
+    "src/app/globals.css"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "ad5ff73b752b325b924c92293fb62f71d59d76fb",
+  "rollbackCommit": "edb68877b8b626fcdfce7e240ce010598666138d",
   "affectedUrls": [
-    "/blog/carpet-tiles-over-concrete-installation-guide",
-    "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles"
+    "/",
+    "/projects/*",
+    "/blog/*",
+    "/products/carpet-tiles/ecocore-pe-backing-carpet-tiles"
   ],
-  "notes": "Preserve existing concrete URL/July28 publication and separate adhesive compatibility guide. Clarify soft cushion versus smoothing layer, mitigation and integral backing; no universal test threshold, underlay/adhesive prescription, installation service or product-performance promise. Add buyer review record, conditional site-release example and FAQ visible/schema parity. One new contextual product-page paragraph only; product facts, offers/schema, images and RFQ handlers unchanged. Reuse reviewed hero as editorial illustration with explicit non-evidence caption. Preserve PR85 and PR86 product. GSC Oct18 session signed out/payment_required; Oct17 observed 7 impressions/position5.6 is a small historical query signal, not proof of this landing page. GA4 connected property returned only old domain over expanded period; no current-host traffic/conversion conclusion. Temporary390px Preview frame verified then removed before final CI/Preview/merge. IndexNow only material Blog plus any genuinely new URL with confirmed missing prior automatic notification; no manual duplicate or real inquiry test."
+  "notes": "Use existing data-no-image-zoom exclusion, limited to explicit hero/banner wrappers. Non-detail routes already disallow global zoom. Do not use broad hero class selectors because new product main galleries use hero classes. Preserve PR87 concrete guide, gallery main/detail images, thumbnail controls, CTAs, carousel and links. No content, SEO, forms, analytics, dependencies or assets changed."
 }
