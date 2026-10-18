@@ -1344,3 +1344,17 @@ Validation: Ops guard, SEO/link/placeholder audits, lint and final webpack build
 - Preserved all existing URLs and records. Rollback base: `ea41126`. Validation and Preview review pending; no production release claimed.
 
 - Acceptance: local production/TypeScript build and Ops guard passed; lint has zero errors and one unchanged ProductImage warning. Preview HTTP checks passed for one H1, canonical, five matching FAQ entries and seven image assets. Independent source/assets review passed. Actual 390×844 CSS-pixel iframe review passed: no horizontal overflow, gallery swaps, details, FAQ and product/source-prefilled RFQ with required fields visible; no inquiry submitted. Temporary QA frame removed from final candidate. Final exact-head CI/Preview and production verification remain release gates.
+
+
+## 2026-10-18 — Concrete underlay/site-readiness content candidate
+
+- Base/rollback ad5ff73b752b325b924c92293fb62f71d59d76fb (PR86); new Linear Accent product retained. Targeted deep update of existing concrete guide; no duplicate URL. July28 publication retained, Oct18 substantive modification. Add underlay/preparation distinctions, procurement brief, separate product/site approvals and seven parity FAQs; source references scoped to their own systems.
+- One contextual PP/PVC product paragraph; no product facts, schema, gallery, forms, tracking, global index logic or deployment configuration changes. Existing hero reused with explicit editorial/non-evidence disclosure.
+- GSC Oct18 signed out / connector payment_required. Historical Oct17 seven-impression query is a lead, not page attribution, current volume or a trend. Connected GA4 returned only an old-domain row, not VCARPETS conversion evidence.
+- IndexNow manifest limited to material concrete update and newly published Linear Accent URL: PR86 actual notification step explicitly skipped unchanged manifest; no duplicate format-guide notice. Submission acceptance remains to be verified after production.
+- Full copy, evidence, priorities, dependencies and next review dates: ops/concrete-readiness-growth-20261018.md. At this checkpoint: candidate, not production. Preview/CI/production closeout to be recorded with exact SHA/time in PR. Temporary390px QA frame removed before final release.
+
+- Local acceptance: webpack build, lint0 errors/one pre-existing raw-img warning, ops guard, SEO/link/placeholder audits and10 IndexNow mock tests passed. Local production HTTP:29 linked URLs/assets200, root268/blog64/products33 sets unchanged, sevenFAQ parity and product schema preservation checked. Awaiting actual Preview/browser/CI.
+
+- Preview acceptance: be2be3f1b60b3dd412c21d17f3d44b9ba4ce5853 / dpl_G7y1ewBoJyFfFT1jp8NzrKiwSyxs READY, CI39085256004 success, public Preview ops:verify and29 links/assets passed. Desktop and actual390px CSS-frame reading/RFQ prefill verified; product link navigated desktop/keyboard, narrow tables scroll inside container, no page horizontal overflow. No real lead or personal data submitted.
+- Temporary QA HTML removed before final tree. Remaining final changes are records/removal only; final CI/Preview and production/notification closeout still required. PR87 is authoritative for subsequent stage and exact release receipt.
