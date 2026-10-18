@@ -1,6 +1,6 @@
 {
-  "task": "Create Linear Accent Commercial Carpet Tiles product page, seven generated design illustrations and contextual category, sample-guide and planning-reference links",
-  "approvedBy": "User requested new standalone carpet-tile product page, HTML/JSX master, seven new generated images and publication in the existing VCARPETS website.",
+  "task": "Deepen existing concrete carpet-tile guide with underlay distinctions and a buyer site-readiness brief; add contextual PVC product path",
+  "approvedBy": "Standing user authorization for evidence-led daily VCARPETS content implementation, feature PR, Preview and production release, reaffirmed in 2026-10-18 request.",
   "approvedCategories": [
     "content"
   ],
@@ -8,22 +8,18 @@
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
     "keyword-map.csv",
-    "src/app/products/carpet-tiles/linear-accent-commercial-carpet-tiles/**",
-    "public/images/products/linear-accent-commercial-carpet-tiles/**",
-    "src/lib/data.ts",
-    "src/app/products/carpet-tiles/page.tsx",
-    "src/lib/blog-posts/commercial-carpet-sample-approval-checklist.ts",
-    "src/lib/project-planning-references.ts",
-    "src/lib/generated-static-sitemap-routes.ts"
+    "src/lib/blog-posts/carpet-tiles-over-concrete-guide.ts",
+    "src/app/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles/page.tsx",
+    "ops/concrete-readiness-growth-20261018.md",
+    "ops/indexnow-urls.json",
+    "public/qa-concrete-readiness-20261018.html"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "ea41126",
+  "rollbackCommit": "ad5ff73b752b325b924c92293fb62f71d59d76fb",
   "affectedUrls": [
-    "/products/carpet-tiles/linear-accent-commercial-carpet-tiles",
-    "/products/carpet-tiles",
-    "/blog/commercial-carpet-sample-approval-checklist",
-    "/projects/office-carpet-tile-renovation"
+    "/blog/carpet-tiles-over-concrete-installation-guide",
+    "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles"
   ],
-  "notes": "New appearance-led product; unverified fiber, backing, dimensions, ratings and commercial terms remain pending. Illustrations disclosed as AI generated. Existing RFQ product/source prefill reused; no form handler, email, tracking or global sitemap logic changed. Preserve unrelated records. No real inquiry submission. Independent review and Preview checks required before merge."
+  "notes": "Preserve existing concrete URL/July28 publication and separate adhesive compatibility guide. Clarify soft cushion versus smoothing layer, mitigation and integral backing; no universal test threshold, underlay/adhesive prescription, installation service or product-performance promise. Add buyer review record, conditional site-release example and FAQ visible/schema parity. One new contextual product-page paragraph only; product facts, offers/schema, images and RFQ handlers unchanged. Reuse reviewed hero as editorial illustration with explicit non-evidence caption. Preserve PR85 and PR86 product. GSC Oct18 session signed out/payment_required; Oct17 observed 7 impressions/position5.6 is a small historical query signal, not proof of this landing page. GA4 connected property returned only old domain over expanded period; no current-host traffic/conversion conclusion. Temporary390px Preview frame removed before final CI/Preview/merge. IndexNow only material Blog plus any genuinely new URL with confirmed missing prior automatic notification; no manual duplicate or real inquiry test."
 }
