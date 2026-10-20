@@ -1,27 +1,23 @@
 {
-  "task": "Remove WhatsApp contact-page loops and shorten quotation/email/chat paths after a 30-day Clarity review",
-  "approvedBy": "Owner explicitly requested Clarity review and targeted quotation, email and WhatsApp conversion improvements on 2026-10-20. Existing authorization permits tested feature PR, Preview, merge and production verification.",
-  "approvedCategories": [
-    "conversion"
-  ],
+  "task": "Deepen the existing office carpet tile layout Blog with pattern distinctions, original diagrams and a procurement brief, plus one contextual Gray Line product entry",
+  "approvedBy": "Owner daily B2B growth/content instruction and explicit standing authorization for scoped tested PR/Preview/merge/production release. Current run follows completed Clarity conversion release PR91.",
+  "approvedCategories": [],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "ops/clarity-contact-paths-20261020.md",
-    "src/lib/whatsapp.ts",
-    "src/components/WhatsAppBridgePrompt.tsx",
-    "src/components/ConversionLiftPanel.tsx",
-    "src/app/contact/page.tsx",
-    "scripts/whatsapp-contact-paths.test.mjs"
+    "ops/layout-pattern-growth-20261020.md",
+    "ops/indexnow-urls.json",
+    "src/lib/blog-posts/office-carpet-tile-layout-approval-bulk-order.ts",
+    "src/app/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles/page.tsx",
+    "public/images/blog-series/buyer-guides-20261020/layout-monolithic-quarter-turn.svg",
+    "public/images/blog-series/buyer-guides-20261020/layout-brick-ashlar.svg"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "9fb9c4f4d57e929814a40358ac747b886b65c289",
+  "rollbackCommit": "bccd7d007199a2c2f6c57acbac88f5b9968e6a07",
   "affectedUrls": [
-    "/contact",
-    "/",
-    "/products/carpet-tiles",
-    "Existing product/solution/localized pages using shared WhatsApp URL helper"
+    "/blog/office-carpet-tile-layout-approval-bulk-order",
+    "/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles"
   ],
-  "notes": "Conversion paths only. Direct WhatsApp to existing business number with product/source context; retain legacy bridge as an anchor. Compact contact header/intro, visible email and chat alternatives, WhatsApp in existing conversion panel and linked displayed email. Form fields/API/delivery/success state, consent, GA4/Ads/Clarity configuration and event payload logic unchanged. No real sales inquiry or message, no tracking expansion. Browser desktop/390px and no-submit RFQ validation plus helper regression tests before production. Daily Blog runs separately after this release. Preserve PR90; exclude draft PR88. Temporary Preview-only QA HTML removed from final release. Existing page index settings unchanged."
+  "notes": "Existing URL/keyword owner and October12 original publication preserved. New comparison/approval/quote decision information supported by official product-scoped installation references; no general installation permission, performance, price, sample-format or delivery promise. Two original geometry-only SVGs, existing illustrative photos retained. Add one contextual product paragraph/link. Existing Blog mechanism handles dateModified and sitemap; no global SEO generator change. Temporary Preview QA file removed from final tree. IndexNow manifest only materially updated article. No forms/API/WhatsApp/tracking/consent changes; preserve PR90/91; draftPR88 excluded."
 }

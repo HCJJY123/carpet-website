@@ -195,7 +195,7 @@ export default function GrayLineNylonCarpetTilesPage() {
               Gray & Patterned Carpet Tiles for Office and Hotel Floors
             </h2>
             <p className="leading-relaxed text-white/70">
-              Built for buyers comparing nylon carpet tiles, tile nylon carpet, tile office carpet, tile floor carpet, tile carpet floor, commercial carpet, floor carpets, and interlocking carpet tiles for modern B2B interiors.
+              Compare a multi-tile arrangement for the selected product before approving a bulk order. Use the <Link href="/blog/office-carpet-tile-layout-approval-bulk-order" className="font-semibold text-white underline decoration-accent underline-offset-4">office carpet tile layout guide</Link> to record direction, boundaries and the drawing revision. Confirm the permitted method for the quoted construction; a design image alone does not approve installation.
             </p>
           </div>
           <div className="aspect-[4/3] overflow-hidden border border-white/10 bg-white shadow-2xl">
