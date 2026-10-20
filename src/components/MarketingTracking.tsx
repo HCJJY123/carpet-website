@@ -16,8 +16,8 @@ import {
 import { getVisitorIdentity } from "@/lib/visitorIdentity";
 import { useAdvertisingAllowed, useAnalyticsAllowed } from "@/lib/useAnalyticsConsent";
 
-const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-T2VYHXTK1F";
-const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "GT-NMDDTW67";
+const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || "G-WBRQWMXJ7R";
+const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID || "";
 const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18306142236";
 const clarityProjectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || "xgg9z07tsm";
 const gtmContainerId = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID;
@@ -36,6 +36,7 @@ export default function MarketingTracking() {
   const pathname = usePathname();
   const analyticsAllowed = useAnalyticsAllowed();
   const advertisingAllowed = useAdvertisingAllowed();
+  const googleScriptId = analyticsAllowed ? ga4MeasurementId || googleTagId : googleAdsId;
 
   useEffect(() => {
     if (typeof window.gtag !== "function") return;
@@ -80,7 +81,7 @@ export default function MarketingTracking() {
       window.gtag("config", ga4MeasurementId, pageViewPayload);
     }
 
-    if (analyticsAllowed && googleTagId) {
+    if (googleTagId && googleTagId !== ga4MeasurementId) {
       window.gtag("config", googleTagId, pageViewPayload);
     }
   }, [analyticsAllowed, pathname]);
@@ -332,10 +333,10 @@ export default function MarketingTracking() {
         </>
       ) : null}
 
-      {(analyticsAllowed || advertisingAllowed) && (googleTagId || ga4MeasurementId || googleAdsId) && (
+      {(analyticsAllowed || advertisingAllowed) && googleScriptId && (
         <>
           <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId || ga4MeasurementId || googleAdsId}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=${googleScriptId}`}
             strategy="afterInteractive"
           />
           <Script id="ga4-init" strategy="afterInteractive">
@@ -345,7 +346,7 @@ export default function MarketingTracking() {
               window.gtag = window.gtag || gtag;
               gtag('js', new Date());
               gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
-              ${analyticsAllowed ? `gtag('config', '${googleTagId || ga4MeasurementId}', { send_page_view: false });` : ""}
+              ${analyticsAllowed && googleTagId && googleTagId !== ga4MeasurementId ? `gtag('config', '${googleTagId}', { send_page_view: false });` : ""}
               ${analyticsAllowed && ga4MeasurementId ? `gtag('config', '${ga4MeasurementId}', { send_page_view: false });` : ""}
               ${advertisingAllowed && googleAdsId ? `gtag('config', '${googleAdsId}', { send_page_view: false });` : ""}
               gtag('consent', 'update', { analytics_storage: '${analyticsAllowed ? "granted" : "denied"}', ad_storage: '${advertisingAllowed ? "granted" : "denied"}', ad_user_data: '${advertisingAllowed ? "granted" : "denied"}', ad_personalization: '${advertisingAllowed ? "granted" : "denied"}' });
