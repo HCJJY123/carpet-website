@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
-import PageHero from "@/components/PageHero";
 import QueryProductLeadCaptureForm from "@/components/QueryProductLeadCaptureForm";
 import QueryProductWhatsAppLink from "@/components/QueryProductWhatsAppLink";
 import WhatsAppBridgePrompt from "@/components/WhatsAppBridgePrompt";
@@ -13,26 +12,26 @@ export default function ContactPage() {
   return (
     <div className="bg-white">
       <ContactQuoteHashScroll />
-      <PageHero
-        title="Request a Project Quote"
-        eyebrow="B2B Commercial Carpet Support"
-        description="Send product type, project area, destination, and business email in one form. VCARPETS will reply with pricing basis, MOQ, samples, lead time, and technical documents."
-        image="/images/contact-hero.webp"
-        imageAlt="Commercial carpet procurement consultation background"
-        objectPosition="center 42%"
-        responsiveDelivery
-      />
+      <section className="bg-primary py-7 text-white md:py-10">
+        <div className="container-fox">
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-accent">B2B Commercial Carpet Support</p>
+          <h1 className="mt-3 text-3xl font-extrabold leading-tight md:text-4xl">Request a Project Quote</h1>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/80 md:text-base">
+            Share the carpet type, area and destination. Request a written quotation, email your brief, or ask a question on WhatsApp.
+          </p>
+        </div>
+      </section>
 
-      <section id="quote-form" data-quote-section-anchor className="section-padding scroll-mt-20 md:scroll-mt-24">
+      <section id="quote-form" data-quote-section-anchor className="scroll-mt-20 py-7 md:scroll-mt-24 md:py-10">
         <div className="container-fox">
           <div className="grid gap-10 lg:grid-cols-3 lg:gap-16">
             {/* Form Column */}
             <div className="lg:col-span-2">
               <WhatsAppBridgePrompt />
               <div className="mb-6 border-l-4 border-[#C8752A] pl-5">
-                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#C8752A]">Recommended Inquiry Channel</p>
-                <h2 className="mt-2 text-2xl font-black uppercase text-primary md:text-3xl">Use the Form for the Fastest Accurate Quote</h2>
-                <p className="mt-2 text-sm leading-relaxed text-muted">The form keeps your product, quantity, destination, and business email together. This is the clearest path for a written commercial quotation, MOQ, sample options, and technical documents.</p>
+                <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#C8752A]">Choose How to Contact Us</p>
+                <h2 className="mt-2 text-2xl font-black uppercase text-primary md:text-3xl">Send a Project Brief</h2>
+                <p className="mt-2 text-sm leading-relaxed text-muted">Use the form below for a written quotation. You can also email drawings or continue directly on WhatsApp; sample options and order terms are confirmed for your project.</p>
                 <div className="mt-5 flex flex-wrap gap-3">
                   <a
                     href={`mailto:${brandInfo.email}?subject=${encodeURIComponent("Project quote request")}&body=${encodeURIComponent("Hello VCARPETS team,\n\nPlease help quote this carpet project.\n\nProduct / application:\nEstimated area:\nDestination country:\nTarget delivery date:\n\nThank you.")}`}
@@ -45,18 +44,21 @@ export default function ContactPage() {
                     </svg>
                     Email Sales Directly
                   </a>
-                  <span className="inline-flex min-h-11 items-center rounded-sm bg-surface px-4 py-3 text-xs font-bold text-primary">
-                    {brandInfo.email}
-                  </span>
+                  <QueryProductWhatsAppLink
+                    message={whatsappBusinessMessages.contact}
+                    placement="contact_form_intro"
+                    fallbackProduct="Commercial carpet project"
+                    intent="contact_project_quote"
+                    pagePath="/contact"
+                    className="inline-flex min-h-11 items-center justify-center rounded-sm border border-[#128C4A]/40 bg-[#F3FFF7] px-5 py-3 text-xs font-black uppercase tracking-[0.1em] text-[#128C4A] hover:bg-[#E4F8EB]"
+                    ariaLabel="Open WhatsApp chat with VCARPETS"
+                  >
+                    Chat on WhatsApp
+                  </QueryProductWhatsAppLink>
                 </div>
-                <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-bold text-primary">
-                  <span className="relative flex h-3 w-3 shrink-0" aria-hidden="true">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#25D366] opacity-40" />
-                    <span className="relative inline-flex h-3 w-3 rounded-full bg-[#25D366]" />
-                  </span>
-                  <span className="font-black uppercase tracking-[0.12em]">24/7 Project Inquiry Desk</span>
-                  <span className="text-muted">Submit at any time for a prompt professional response.</span>
-                </div>
+                <a href={`mailto:${brandInfo.email}`} data-email-placement="contact_intro_address" className="mt-1 inline-flex min-h-11 max-w-full items-center break-all text-sm font-bold text-primary underline underline-offset-4">
+                  {brandInfo.email}
+                </a>
               </div>
               <div data-quote-form-anchor>
                 <QueryProductLeadCaptureForm
