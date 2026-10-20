@@ -8,9 +8,9 @@ const BASE = siteUrl;
 const productModifiedDates: Record<string, string> = {
   "/products/printed-carpet": "2026-10-09",
   "/products/wall-to-wall/cinema-theater-carpet": "2026-10-09",
-  "/products/carpet-tiles": "2026-09-08",
+  "/products/carpet-tiles": "2026-10-20",
   "/products/wall-to-wall": "2026-09-08",
-  "/products/carpet-tiles/nylon-office-carpet-tile": "2026-09-08",
+  "/products/carpet-tiles/nylon-office-carpet-tile": "2026-10-20",
 };
 
 export function GET() {
