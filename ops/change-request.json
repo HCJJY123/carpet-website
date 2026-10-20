@@ -1,26 +1,29 @@
 {
-  "task": "Improve the existing nylon commercial carpet tile buying page and two contextual inbound links using Semrush search-intent evidence",
-  "approvedBy": "Owner request to plan and implement today\u2019s website optimization using Semrush data; parent task authorizes scoped PR, Preview, tests and correct production release.",
+  "task": "Remove WhatsApp contact-page loops and shorten quotation/email/chat paths after a 30-day Clarity review",
+  "approvedBy": "Owner explicitly requested Clarity review and targeted quotation, email and WhatsApp conversion improvements on 2026-10-20. Existing authorization permits tested feature PR, Preview, merge and production verification.",
   "approvedCategories": [
+    "conversion",
     "seo-global"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "ops/nylon-commercial-procurement-20261020.md",
-    "src/app/products/carpet-tiles/nylon-office-carpet-tile/page.tsx",
-    "src/app/products/carpet-tiles/page.tsx",
-    "src/lib/blog-posts/commercial-carpet-tile-backing-comparison-guide.ts",
-    "src/lib/sitemap-data.ts",
-    "src/app/sitemaps/products.xml/route.ts"
+    "ops/clarity-contact-paths-20261020.md",
+    "src/lib/whatsapp.ts",
+    "src/components/WhatsAppBridgePrompt.tsx",
+    "src/components/ConversionLiftPanel.tsx",
+    "src/app/contact/page.tsx",
+    "scripts/whatsapp-contact-paths.test.mjs",
+    "public/qa-contact-20261020.html"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "d8dcfccac3e08e6b1dbd3a8a1a797f3132f32d2a",
+  "rollbackCommit": "9fb9c4f4d57e929814a40358ac747b886b65c289",
   "affectedUrls": [
-    "/products/carpet-tiles/nylon-office-carpet-tile",
+    "/contact",
+    "/",
     "/products/carpet-tiles",
-    "/blog/commercial-carpet-tile-backing-comparison-guide"
+    "Existing product/solution/localized pages using shared WhatsApp URL helper"
   ],
-  "notes": "Existing URLs only. Clarify listed nylon 50x50 construction, layout/backing/sample approval and B2B FOB Tianjin RFQ; update matching visible FAQ and page metadata. Add two contextual inbound anchor paths. SEO-global category permits only truthful last-modified date data for the two changed product/category URLs in both existing sitemap maps; no generator, canonical, robots, routing or indexability logic change. Preserve GA4 G-WBRQWMXJ7R and consent flow byte-for-byte. No new specifications, test/certification claims, price promises, generated assets, real inquiries, forms/tracking/account/DNS/project changes, paid services or new article."
+  "notes": "Conversion paths only. Direct WhatsApp to existing business number with product/source context; retain legacy bridge as an anchor. Compact contact header/intro, visible email and chat alternatives, WhatsApp in existing conversion panel and linked displayed email. Form fields/API/delivery/success state, consent, GA4/Ads/Clarity configuration and event payload logic unchanged. No real sales inquiry or message, no tracking expansion. Browser desktop/390px and no-submit RFQ validation plus helper regression tests before production. Daily Blog runs separately after this release. Preserve PR90; exclude draft PR88. Temporary noindex same-origin 390px QA frame is removed before the final release tree. SEO-global exception only for noindex on the temporary Preview QA HTML; no existing page/indexing logic is changed."
 }

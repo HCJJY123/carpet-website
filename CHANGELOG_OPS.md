@@ -1380,3 +1380,9 @@ Validation: Ops guard, SEO/link/placeholder audits, lint and final webpack build
 - Dates: only changed category/product lastmod values in the existing sitemap maps; backing-guide dateModified updated. No generation or indexing logic change.
 - Validation: local ops guard, lint/build, Preview layout/SEO/link/FAQ checks and production SHA verification are recorded in ops/nylon-commercial-procurement-20261020.md.
 - Rollback: d8dcfccac3e08e6b1dbd3a8a1a797f3132f32d2a. Revert the scoped PR if needed; no history rewrite.
+
+## 2026-10-20 — Clarity contact-path conversion candidate
+
+- Reviewed authenticated Last30days Clarity dashboard and home/contact/category heatmaps. Production-visited cohort93 sessions/32 users, quote clicks10/email4/WhatsApp2 sessions; these overlap and include possible staff/QA, not qualified leads. Mobile home28 pageviews:10% depth11; contact mobile5 pageviews. Full evidence/limitations/priorities in ops/clarity-contact-paths-20261020.md.
+- Fix conclusive WhatsApp detour: shared existing caller helper now opens configured wa.me destination directly with context; saved legacy contact bridge remains functional as an anchor. Compact contact hero/intro and expose email/chat before form. Add direct WhatsApp and linked email address to existing conversion panel.
+- Preserve PR90/main9fb9c4f4, all form fields/submission/delivery/success logic, GA4/Ads/Clarity consent and tracking; no real sales inquiry/message. No new images, routes or index-policy changes. Rollback baseline9fb9c4f4d57e929814a40358ac747b886b65c289. Feature PR/required checks/Preview/production gates remain required; this entry does not claim release.

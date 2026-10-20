@@ -45,16 +45,17 @@ function WhatsAppBridgePromptContent() {
             {product ? `${product} is prefilled for this inquiry. ` : ""}For the most accurate quote, submit the form below with quantity, destination, and email.
           </p>
         </div>
-        <button
-          type="button"
-          onClick={() => window.open(whatsapp!, "_blank", "noopener,noreferrer")}
+        <a
+          href={whatsapp!}
+          target="_blank"
+          rel="noopener noreferrer"
           data-whatsapp-placement="contact_bridge"
           data-whatsapp-product={product || undefined}
           data-whatsapp-intent={searchParams.get("intent") || "project_quote"}
           className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-sm bg-[#25D366] px-5 py-3 text-xs font-black uppercase tracking-[0.12em] text-white transition-all hover:-translate-y-0.5 hover:bg-[#168A42]"
         >
           Open WhatsApp
-        </button>
+        </a>
       </div>
     </div>
   );

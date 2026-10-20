@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { brandInfo } from "@/lib/data";
+import { getWhatsAppBusinessUrl } from "@/lib/whatsapp";
 
 type ConversionLiftPanelProps = {
   eyebrow?: string;
@@ -51,7 +52,7 @@ export default function ConversionLiftPanel({
                 </div>
               ))}
             </div>
-            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            <div className="mt-4 grid gap-3 sm:grid-cols-3">
               <Link href={quoteHref} className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[#C8752A] px-5 py-3 text-center text-xs font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-[#AD6424]">
                 Request Quote
               </Link>
@@ -66,9 +67,24 @@ export default function ConversionLiftPanel({
                 </svg>
                 Email Sales
               </a>
+              <a
+                href={getWhatsAppBusinessUrl("Hello VCARPETS, please help me review this carpet project.", {
+                  product,
+                  placement: "conversion_lift_panel",
+                  intent: "project_quote",
+                })}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-whatsapp-placement="conversion_lift_panel"
+                data-whatsapp-product={product}
+                data-whatsapp-intent="project_quote"
+                className="inline-flex min-h-12 items-center justify-center rounded-sm border border-[#128C4A]/40 bg-white px-4 py-3 text-center text-xs font-black uppercase tracking-[0.08em] text-[#128C4A] transition-colors hover:bg-[#F3FFF7]"
+              >
+                WhatsApp
+              </a>
             </div>
             <p className="mt-3 text-[11px] font-semibold leading-relaxed text-muted">
-              Email: <span className="font-black text-primary">{brandInfo.email}</span>
+              Email: <a href={mailtoHref(product)} data-email-placement="conversion_lift_panel_address" className="inline-flex min-h-11 items-center break-all font-black text-primary underline underline-offset-4">{brandInfo.email}</a>
             </p>
           </div>
         </div>

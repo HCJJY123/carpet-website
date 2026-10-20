@@ -27,15 +27,10 @@ export function getWhatsAppBusinessUrl(message: string, context: WhatsAppContext
 }
 
 export function getContactBridgeUrl(message: string, context: WhatsAppContext = {}) {
-  const url = new URL("/contact", brandInfo.url);
-  url.searchParams.set("wa_message", message);
-  if (context.placement) url.searchParams.set("placement", context.placement);
-  if (context.product) url.searchParams.set("product", context.product);
-  if (context.intent) url.searchParams.set("intent", context.intent);
-  if (context.pagePath) url.searchParams.set("source", context.pagePath);
-  if (context.country) url.searchParams.set("country", context.country);
-  if (context.quantity) url.searchParams.set("quantity", context.quantity);
-  return `${url.pathname}${url.search}`;
+  // Keep the existing caller API, but honor the WhatsApp label directly.
+  // Previously even the contact page's chat links opened another contact page.
+  // Old /contact?wa_message= links still work through WhatsAppBridgePrompt.
+  return getWhatsAppBusinessUrl(message, context);
 }
 
 export const whatsappBusinessMessages = {
