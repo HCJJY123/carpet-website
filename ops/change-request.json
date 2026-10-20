@@ -2,8 +2,7 @@
   "task": "Remove WhatsApp contact-page loops and shorten quotation/email/chat paths after a 30-day Clarity review",
   "approvedBy": "Owner explicitly requested Clarity review and targeted quotation, email and WhatsApp conversion improvements on 2026-10-20. Existing authorization permits tested feature PR, Preview, merge and production verification.",
   "approvedCategories": [
-    "conversion",
-    "seo-global"
+    "conversion"
   ],
   "allowedPaths": [
     "ops/change-request.json",
@@ -13,8 +12,7 @@
     "src/components/WhatsAppBridgePrompt.tsx",
     "src/components/ConversionLiftPanel.tsx",
     "src/app/contact/page.tsx",
-    "scripts/whatsapp-contact-paths.test.mjs",
-    "public/qa-contact-20261020.html"
+    "scripts/whatsapp-contact-paths.test.mjs"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
@@ -25,5 +23,5 @@
     "/products/carpet-tiles",
     "Existing product/solution/localized pages using shared WhatsApp URL helper"
   ],
-  "notes": "Conversion paths only. Direct WhatsApp to existing business number with product/source context; retain legacy bridge as an anchor. Compact contact header/intro, visible email and chat alternatives, WhatsApp in existing conversion panel and linked displayed email. Form fields/API/delivery/success state, consent, GA4/Ads/Clarity configuration and event payload logic unchanged. No real sales inquiry or message, no tracking expansion. Browser desktop/390px and no-submit RFQ validation plus helper regression tests before production. Daily Blog runs separately after this release. Preserve PR90; exclude draft PR88. Temporary noindex same-origin 390px QA frame is removed before the final release tree. SEO-global exception only for noindex on the temporary Preview QA HTML; no existing page/indexing logic is changed."
+  "notes": "Conversion paths only. Direct WhatsApp to existing business number with product/source context; retain legacy bridge as an anchor. Compact contact header/intro, visible email and chat alternatives, WhatsApp in existing conversion panel and linked displayed email. Form fields/API/delivery/success state, consent, GA4/Ads/Clarity configuration and event payload logic unchanged. No real sales inquiry or message, no tracking expansion. Browser desktop/390px and no-submit RFQ validation plus helper regression tests before production. Daily Blog runs separately after this release. Preserve PR90; exclude draft PR88. Temporary Preview-only QA HTML removed from final release. Existing page index settings unchanged."
 }
