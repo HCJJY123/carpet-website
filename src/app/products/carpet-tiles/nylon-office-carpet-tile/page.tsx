@@ -33,11 +33,11 @@ const galleryImages = [
 ];
 
 const seoDescription =
-  "Heavy-duty 100% nylon office carpet tiles in 50x50 format with Class 33 traffic rating, bitumen backing, antistatic protection, and custom colors.";
+  "Compare 50x50 cm nylon commercial carpet tiles for offices: backing, layout, sample approval and project RFQ requirements. B2B supply on FOB Tianjin terms.";
 
 export const metadata: Metadata = product
   ? {
-      title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VCARPETS",
+      title: "Nylon Commercial Carpet Tiles 50x50 cm | VCARPETS",
       description: seoDescription,
       alternates: {
         canonical: productPath(product.id),
@@ -48,7 +48,7 @@ export const metadata: Metadata = product
         },
       },
       openGraph: {
-        title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VCARPETS",
+        title: "Nylon Commercial Carpet Tiles 50x50 cm | VCARPETS",
         description: seoDescription,
         url: absoluteUrl(productPath(product.id)),
         type: "website",
@@ -61,7 +61,7 @@ export const metadata: Metadata = product
       },
       twitter: {
         card: "summary_large_image",
-        title: "Heavy-Duty Nylon Office Carpet Tiles 50x50 | VCARPETS",
+        title: "Nylon Commercial Carpet Tiles 50x50 cm | VCARPETS",
         description: seoDescription,
         images: [absoluteUrl(contentGrowthAssets.P01.src)],
       },
@@ -69,9 +69,9 @@ export const metadata: Metadata = product
   : { title: "Nylon 50x50 Commercial Office Carpet Tile | VCARPETS" };
 
 const descriptionParagraphs = [
-  "VCARPETS's Nylon 50x50 Commercial Office Carpet Tile is a heavy-duty modular flooring system built for demanding workplaces. Each 50 x 50 cm tile is tufted from resilient 100% nylon in a dense loop pile that resists crushing, matting, and abrasion, keeping open-plan offices, corridors, and meeting rooms looking sharp under constant foot and chair-caster traffic.",
-  "The tiles are rated for EN 1307 Class 33 heavy commercial traffic, carry a Class I fire rating (ASTM E648), and feature permanent antistatic protection under 2.0 kV. A dimensionally stable bitumen backing lies flat without adhesive creep and allows tile-by-tile replacement; PVC and cushioned backings are available on request. Solution-dyed and piece-dyed color options resist fading and bleach cleaning.",
-  "Modular tiles cut installation waste and downtime, install in monolithic, quarter-turn, ashlar, or brick layouts, and let facility teams swap individual tiles instead of re-flooring a whole room. Supplied factory-direct from VCARPETS's Tianjin plant with custom colors, OEM design, export packing, and worldwide shipping. Request free samples and a project quote.",
+  "This VCARPETS nylon commercial carpet tile listing identifies a 100% nylon tufted loop-pile face, a nominal 50 x 50 cm square format and bitumen backing. It is a sourcing starting point for office floors, corridors and meeting rooms, not approval for every commercial use zone.",
+  "Review the complete quoted construction before specifying it. The reference data below lists traffic, fire and antistatic values, but the buyer should request the applicable product sheet and available reports for the exact fiber, backing and installation system. Do not transfer a result from a different backing or assume that a sample proves a test rating.",
+  "Agree the tile layout, pile direction, fixing method and replacement-stock plan with the installer. PVC or cushion backing is a separate configuration to confirm in writing, not an automatic substitution for the bitumen-backed listing. B2B export quotations are prepared on FOB Tianjin Port terms; confirm product, quantity, packing and production timing in the written offer.",
 ];
 
 const tds = [
@@ -94,16 +94,24 @@ const priceTiers = [
 
 const faqs = [
   {
-    q: "What size are the carpet tiles?",
-    a: "Standard size is 50 x 50 cm; 25 x 100 cm plank format is available on request for directional and brick-lay designs.",
+    q: "What are the dimensions of this nylon commercial carpet tile?",
+    a: "The listed square format is 50 x 50 cm, or 500 x 500 mm. One nominal tile covers 0.25 square metre, so four tiles cover one square metre before cuts or spare stock. Confirm actual dimensions and carton coverage on the quoted product sheet. Do not assume a plank format is included in this listing.",
   },
   {
-    q: "What fiber and backing are used?",
-    a: "A 100% nylon loop pile on a dimensionally stable bitumen backing. PVC and cushioned comfort backings are available for acoustic or anti-fatigue requirements.",
+    q: "Which backing is listed, and can it be changed?",
+    a: "The listed construction is 100% nylon loop pile with bitumen backing. PVC and cushion configurations can be discussed, but availability, thickness, fixing method and supporting documents must be confirmed for the selected version. A similar-looking face does not make different backings interchangeable.",
+    guide: {
+      href: "/blog/commercial-carpet-tile-backing-comparison-guide",
+      label: "Compare backing approval checks",
+    },
   },
   {
-    q: "Are they suitable for heavy office traffic?",
-    a: "Yes. They are rated for EN 1307 Class 33 heavy commercial traffic, are permanently antistatic under 2.0 kV, and are engineered to resist chair-caster wear and matting.",
+    q: "How do I check suitability for rolling chairs and heavy office traffic?",
+    a: "Identify workstation, corridor and meeting-room zones in the brief. Request the technical data and available evidence for the quoted construction, including any required traffic, chair-use, fire or antistatic criteria. Nylon fiber alone, a color sample or a reference value on a listing does not establish project compliance.",
+  },
+  {
+    q: "Can I choose a monolithic or quarter-turn layout?",
+    a: "Use those as layout proposals for the sample review, not as guaranteed installation options. Ask for the permitted layout directions for the selected pattern and backing. Place adjacent full tiles in the proposed orientation and approve the visible seams and pile direction before ordering. Confirm any offset or plank layout separately.",
   },
   {
     q: "How are carpet tiles installed?",
@@ -114,12 +122,31 @@ const faqs = [
     },
   },
   {
-    q: "Can I get custom colors or our brand design?",
-    a: "Yes. VCARPETS offers custom colors and OEM designs; free samples are provided before production.",
+    q: "What should I request with a nylon carpet tile sample?",
+    a: "Request the product and color reference, face fiber, backing identification, nominal size, thickness, pile direction, installation guidance and available technical documents. A swatch helps with color and texture; ask whether full tiles can be supplied for the layout review. Confirm custom-color feasibility, sample charges and dispatch terms before proceeding.",
   },
   {
-    q: "What are the MOQ and lead time?",
-    a: "MOQ is 300 SQM with typical production lead time of about 25 days. Samples are available on request.",
+    q: "What are the MOQ and production lead time?",
+    a: "The listing shows a 300 SQM project MOQ, a 100 SQM standard-color trial tier and a 25-day production reference. These are not a confirmed stock or delivery commitment. Reconfirm the selected color, backing, quantity, sample approval and production schedule in the written quotation.",
+  },
+  {
+    q: "What information is needed for a B2B FOB Tianjin quotation?",
+    a: "Send area by zone, tile format, color reference, backing requirement, proposed layout, substrate condition, required performance documents, spare-stock needs and target installation date. Include destination country and port and your forwarder’s shipping plan. Request price per SQM, carton coverage, packing, sample terms, production timing and quotation validity on FOB Tianjin Port terms; ocean freight, import clearance and destination delivery need separate planning.",
+  },
+];
+
+const sizeLayoutBackingChecks = [
+  {
+    title: "50 x 50 cm square format",
+    detail: "The listed 500 x 500 mm tile has a nominal area of 0.25 m². Four tiles equal 1 m² before cutting or spare allocation. Ask for tiles per carton and net carton coverage; the floor area alone is not the order quantity.",
+  },
+  {
+    title: "Approve the layout with full tiles",
+    detail: "Review adjacent tiles in the intended pile direction. Ask whether monolithic, quarter-turn or an offset layout is permitted for the selected pattern. Confirm edge appearance, transitions and room-by-room direction with the installer instead of relying on a room illustration.",
+  },
+  {
+    title: "Treat each backing as a separate option",
+    detail: "Bitumen is the listed backing. If requesting PVC or cushion, obtain a separate construction reference, physical sample and installation guidance. Confirm availability and project evidence before substituting; a backing name alone is not a traffic or acoustic rating.",
   },
 ];
 
@@ -185,7 +212,7 @@ export default function NylonOfficeCarpetTilePage() {
     url: absoluteUrl(productPath(p.id)),
     mainEntityOfPage: absoluteUrl(productPath(p.id)),
     description:
-      "Heavy-duty 100% nylon commercial carpet tiles in 50x50 cm modular format for offices, corridors, and high-traffic spaces. Bitumen-backed, Class I fire-rated, custom colors, factory-direct from VCARPETS.",
+      seoDescription,
     brand: { "@type": "Brand", name: "VCARPETS" },
     category: "Commercial Carpet Tiles",
     material: "100% Nylon",
@@ -269,10 +296,10 @@ export default function NylonOfficeCarpetTilePage() {
               <h1 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
                 Nylon 50x50 Commercial Office Carpet Tile
               </h1>
-              <p className="product-summary mb-8 text-lg leading-relaxed text-muted">{p.description}</p>
+              <p className="product-summary mb-8 text-lg leading-relaxed text-muted">Nylon commercial carpet tiles in a nominal 50 x 50 cm square format for office project sourcing. Review the listed bitumen-backed construction, sample layout and project documents before approving a B2B order.</p>
 
               <div className="mb-8 grid gap-3 sm:grid-cols-2">
-                {p.features.map((feature) => (
+                {["100% Nylon Face", "50 x 50 cm Format", "Listed Bitumen Backing", "Project Sample Review"].map((feature) => (
                   <div key={feature} className="border border-border bg-surface px-4 py-3 text-xs font-black uppercase tracking-[0.12em] text-primary">
                     {feature}
                   </div>
@@ -320,13 +347,13 @@ export default function NylonOfficeCarpetTilePage() {
 
       <AnswerFirst
         eyebrow="Office Carpet Tile Buying Answer"
-        title="Choose nylon carpet tiles when replacement speed and heavy office traffic matter"
-        answer="For offices, corridors and meeting areas, 50x50 nylon carpet tiles are usually the safer project choice when buyers need modular replacement, chair-caster resistance, antistatic performance and controlled installation downtime. Confirm backing, traffic rating, quantity, color approval and written quotation terms before comparing price by square metre."
+        title="Specify nylon commercial carpet tiles by construction, layout and project evidence"
+        answer="For an office project, start with the listed 50x50 cm nylon loop-pile tile and identify the exact backing, sample reference and permitted layout. Match the technical documents and installation system to the use zones before approval. Compare quotations on the same SQM, carton coverage, spare-stock and FOB Tianjin basis, not on fiber name or unit price alone."
         facts={[
           { label: "Best Use", value: "Office floors, corridors, meeting rooms and commercial fit-out projects" },
           { label: "Key Risk", value: "Comparing tile prices without matching backing, pile weight and installation method" },
           { label: "Document Check", value: "Request TDS, packing data, quotation unit and available project documents" },
-          { label: "Quote Basis", value: "Reference FOB range only; final validity requires written quotation" },
+          { label: "Quote Basis", value: "B2B FOB Tianjin Port; final validity requires written quotation" },
         ]}
         moq={[
           { label: "Sample", value: p.moqTiers.sample },
@@ -341,6 +368,25 @@ export default function NylonOfficeCarpetTilePage() {
       />
 
       <ProductTrustLinks productName="nylon office carpet tiles" quoteHref={`/contact?product=${encodeURIComponent(p.name)}#quote-form`} />
+
+      <section id="size-layout-backing" className="section-padding scroll-mt-24 border-y border-border bg-surface" aria-labelledby="size-layout-backing-heading">
+        <div className="container-fox">
+          <div className="mb-8 max-w-3xl">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Format &amp; Configuration</p>
+            <h2 id="size-layout-backing-heading" className="text-3xl font-black uppercase leading-tight text-primary md:text-5xl">Nylon Carpet Tile Size, Layout &amp; Backing</h2>
+            <p className="mt-5 leading-8 text-muted">Keep these three decisions separate in the RFQ. The listed size identifies the module; it does not confirm every layout, backing alternative or installation system.</p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {sizeLayoutBackingChecks.map((item) => (
+              <article key={item.title} className="border border-border bg-white p-6">
+                <h3 className="text-lg font-black leading-tight text-primary">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-muted">{item.detail}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 text-sm leading-7 text-muted">Record the approved sample, color, batch and spare allocation in the <Link href="/products/carpet-tiles#batch-zone-spare-record" className="font-bold text-accent underline">carpet tile receiving and spare-stock record</Link>. For a backing alternative, use the <Link href="/blog/commercial-carpet-tile-backing-comparison-guide" className="font-bold text-accent underline">backing comparison and approval guide</Link>.</p>
+        </div>
+      </section>
 
       <section className="section-padding border-y border-border bg-white" data-funnel-section="nylon_buyer_decisions">
         <div className="container-fox">
@@ -364,12 +410,12 @@ export default function NylonOfficeCarpetTilePage() {
       <section className="section-padding border-y border-border bg-white">
         <div className="container-fox">
           <div className="mb-10 max-w-3xl">
-            <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-accent">AI-Ready Procurement Links</p>
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-accent">Project Procurement Guides</p>
             <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
               Related Office Carpet Tile Buying Guides
             </h2>
             <p className="mt-4 text-sm leading-7 text-muted md:text-base">
-              These guides answer the follow-up questions buyers and AI search tools usually ask after finding this product: renovation timing, rolling-chair suitability, MOQ, samples, and project quotation scope.
+              Use these guides to prepare the next decisions in your procurement review: renovation timing, rolling-chair suitability, MOQ, samples, and project quotation scope.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
@@ -400,7 +446,7 @@ export default function NylonOfficeCarpetTilePage() {
             ))}
           </div>
           <p className="mt-5 text-sm leading-relaxed text-muted">
-            Reference pricing is provided for comparable 50x50 cm nylon commercial carpet tile specifications. Final factory quotation depends on color, backing, quantity, packing, and delivery terms.
+            Reference pricing is provided for comparable 50x50 cm nylon commercial carpet tile specifications. Prices are per SQM on a reference FOB Tianjin Port basis. Final factory quotation depends on color, backing, quantity, packing and written validity; confirm trial-order and project MOQ separately.
           </p>
         </div>
       </section>
@@ -410,7 +456,7 @@ export default function NylonOfficeCarpetTilePage() {
           <div>
             <p className="mb-4 text-xs font-black uppercase tracking-[0.28em] text-accent">Commercial Modular Carpet</p>
             <h2 className="mb-6 text-3xl font-black uppercase leading-tight text-primary md:text-5xl">
-              Heavy-Duty Anti-Static Nylon Office Carpet Tiles
+              Review the Complete Nylon Office Tile Construction
             </h2>
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted">
@@ -424,8 +470,9 @@ export default function NylonOfficeCarpetTilePage() {
       <section className="section-padding">
         <div className="container-fox">
           <h2 className="mb-8 text-center text-2xl font-bold uppercase tracking-[0.08em] text-primary md:mb-12 md:text-3xl md:tracking-widest">
-            Technical Data Sheet (TDS)
+            Listed Technical References
           </h2>
+          <p className="mx-auto mb-8 max-w-3xl text-center text-sm leading-7 text-muted">These values reproduce the existing product listing, not a downloadable test report or project approval. Request the current TDS and available supporting documents for the exact quoted construction, especially when the backing changes.</p>
           <div className="grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
             {tds.map((item) => (
               <div key={item.label} className="group bg-white p-5 transition-all hover:bg-primary md:p-8">
@@ -468,7 +515,7 @@ export default function NylonOfficeCarpetTilePage() {
               <p className="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-accent">Category</p>
               <h3 className="text-lg font-black uppercase text-primary">Commercial Carpet Tiles</h3>
             </Link>
-            <Link href="/blog/carpet-tile-specifications-high-traffic-durability-guide" className="border border-border bg-white p-6 transition-all hover:border-primary hover:bg-surface">
+            <Link href="/blog/carpet-tiles-vs-broadloom-commercial-projects-guide" className="border border-border bg-white p-6 transition-all hover:border-primary hover:bg-surface">
               <p className="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-accent">Buying Guide</p>
               <h3 className="text-lg font-black uppercase text-primary">Carpet Tiles vs Broadloom</h3>
             </Link>

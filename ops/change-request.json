@@ -1,21 +1,26 @@
 {
-  "task": "Connect owner-provided VCARPETS GA4 web stream G-WBRQWMXJ7R through existing consent-aware tracker",
-  "approvedBy": "User explicitly requested installing the GA4 code shown in their 2026-10-18 screenshot on www.vcarpets.com; standing feature PR/Preview/production authorization applies. Implemented after interrupted browser connection, 2026-10-20.",
+  "task": "Improve the existing nylon commercial carpet tile buying page and two contextual inbound links using Semrush search-intent evidence",
+  "approvedBy": "Owner request to plan and implement today\u2019s website optimization using Semrush data; parent task authorizes scoped PR, Preview, tests and correct production release.",
   "approvedCategories": [
-    "analytics"
+    "seo-global"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    ".env.example",
-    "src/components/MarketingTracking.tsx",
-    "ops/ga4-stream-20261020.md"
+    "ops/nylon-commercial-procurement-20261020.md",
+    "src/app/products/carpet-tiles/nylon-office-carpet-tile/page.tsx",
+    "src/app/products/carpet-tiles/page.tsx",
+    "src/lib/blog-posts/commercial-carpet-tile-backing-comparison-guide.ts",
+    "src/lib/sitemap-data.ts",
+    "src/app/sitemaps/products.xml/route.ts"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "edb68877b8b626fcdfce7e240ce010598666138d",
+  "rollbackCommit": "d8dcfccac3e08e6b1dbd3a8a1a797f3132f32d2a",
   "affectedUrls": [
-    "/*"
+    "/products/carpet-tiles/nylon-office-carpet-tile",
+    "/products/carpet-tiles",
+    "/blog/commercial-carpet-tile-backing-comparison-guide"
   ],
-  "notes": "Replace legacy GA4 fallback G-T2VYHXTK1F with screenshot G-WBRQWMXJ7R; remove unverified legacy GT-NMDDTW67 fallback to avoid continuing old analytics destination. Retain optional explicit GOOGLE_TAG environment override but deduplicate same-ID initialization and page config. Choose GA4 loader only with analytics consent, AW loader for advertising-only consent. Keep existing Google Ads AW ID, consent categories/UI, tracking event names/payload sanitation, forms, destinations, content, SEO and analytics permissions unchanged. No added audience, Ads/GTM administration, real inquiry or conversion test. No Vercel env override found; no env mutation needed. Verify loader/config DOM for consent cases; do not claim GA4 report receipt without property access."
+  "notes": "Existing URLs only. Clarify listed nylon 50x50 construction, layout/backing/sample approval and B2B FOB Tianjin RFQ; update matching visible FAQ and page metadata. Add two contextual inbound anchor paths. SEO-global category permits only truthful last-modified date data for the two changed product/category URLs in both existing sitemap maps; no generator, canonical, robots, routing or indexability logic change. Preserve GA4 G-WBRQWMXJ7R and consent flow byte-for-byte. No new specifications, test/certification claims, price promises, generated assets, real inquiries, forms/tracking/account/DNS/project changes, paid services or new article."
 }

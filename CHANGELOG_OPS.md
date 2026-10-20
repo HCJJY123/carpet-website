@@ -1371,3 +1371,12 @@ Validation: Ops guard, SEO/link/placeholder audits, lint and final webpack build
 
 - Preview acceptance:6fc3e439 /dpl_FzTCBW5caHoDs8R9Qy5HMVa68Utp READY; CI39355914667 success; Preview ops/HTTP checks passed with268/64/33 unchanged sitemap sets. Browser necessary-only0 Google tags; analytics-only1 new GA4 loader/init, route transition retained1; consent withdrawal reload removed Google tags; advertising-only1 existing AW loader/config and analytics denied. No personal data or sales enquiry submitted.
 - Final change after this acceptance is records only. Exact final CI/Preview and production target-ID/consent checks remain required. PR89 closeout is authoritative for final deployment SHA/time and validation boundary. GA4 backend Realtime/DebugView receipt not yet verified.
+
+## 2026-10-20 — Nylon commercial carpet tile procurement clarity
+
+- Scope: existing nylon-office tile page plus category/backing-guide contextual links. No new URL, asset, performance claim, analytics or conversion-system change.
+- Evidence: Semrush US desktop snapshot 2026-10-19 lists “nylon commercial carpet” position 52 (volume 90, KD 3; dated 2026-10-15), an estimated search opportunity rather than actual visits.
+- Update: search-intent metadata, 50x50 cm module math, qualified layout/backing review, sample and B2B FOB Tianjin brief, visible/schema-matched FAQ, precise inbound anchors. Existing listed TDS/prices are labeled sourcing references rather than new promises. Removed unverified plank/free-sample/cleaning promises from page prose; left shared catalog and analytics untouched.
+- Dates: only changed category/product lastmod values in the existing sitemap maps; backing-guide dateModified updated. No generation or indexing logic change.
+- Validation: local ops guard, lint/build, Preview layout/SEO/link/FAQ checks and production SHA verification are recorded in ops/nylon-commercial-procurement-20261020.md.
+- Rollback: d8dcfccac3e08e6b1dbd3a8a1a797f3132f32d2a. Revert the scoped PR if needed; no history rewrite.

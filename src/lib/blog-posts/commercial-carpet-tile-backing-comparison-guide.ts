@@ -21,7 +21,7 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
     "office carpet tile backing",
   ],
   date: "2026-08-25",
-  dateModified: "2026-10-15",
+  dateModified: "2026-10-20",
   author: "VCARPETS Technical Team",
   category: "Buying Guide",
   image:
@@ -132,6 +132,9 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
           ["PVC-free PE", "The EcoCore PE-backed product path", "Confirm the selected face fiber, composition and requested environmental documents"],
           ["Cushion configuration", "A project requirement to discuss; not one universal backing recipe", "Identify the complete system and nominated product before assuming availability or performance"],
         ], note: "This table identifies sourcing and review paths. It supplies no comparative performance ranking, price conversion or certification." },
+        { type: "paragraph", text: "For a nylon face rather than PP, review the 50x50 cm nylon commercial carpet tile configuration. Its listed bitumen construction is the starting point; a PVC or cushion request needs its own sample, product reference and documents. Use the page’s size and layout checks to keep module dimensions separate from backing approval.", links: [
+          { text: "50x50 cm nylon commercial carpet tile configuration", href: "/products/carpet-tiles/nylon-office-carpet-tile#size-layout-backing" },
+        ] },
         { type: "paragraph", text: "Write the face fiber and backing in different RFQ fields. PVC backing does not make the textile surface solid vinyl flooring; a PP sample does not approve a nylon alternative. If a supplier changes fiber and backing together, compare both changes rather than attributing every difference to the backing alone." },
       ],
     },
