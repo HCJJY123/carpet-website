@@ -1,24 +1,21 @@
 {
-  "task": "Deepen existing concrete carpet-tile guide with underlay distinctions and a buyer site-readiness brief; add contextual PVC product path",
-  "approvedBy": "Standing user authorization for evidence-led daily VCARPETS content implementation, feature PR, Preview and production release, reaffirmed in 2026-10-18 request.",
+  "task": "Connect owner-provided VCARPETS GA4 web stream G-WBRQWMXJ7R through existing consent-aware tracker",
+  "approvedBy": "User explicitly requested installing the GA4 code shown in their 2026-10-18 screenshot on www.vcarpets.com; standing feature PR/Preview/production authorization applies. Implemented after interrupted browser connection, 2026-10-20.",
   "approvedCategories": [
-    "content"
+    "analytics"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "keyword-map.csv",
-    "src/lib/blog-posts/carpet-tiles-over-concrete-guide.ts",
-    "src/app/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles/page.tsx",
-    "ops/concrete-readiness-growth-20261018.md",
-    "ops/indexnow-urls.json"
+    ".env.example",
+    "src/components/MarketingTracking.tsx",
+    "ops/ga4-stream-20261020.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "ad5ff73b752b325b924c92293fb62f71d59d76fb",
+  "rollbackCommit": "edb68877b8b626fcdfce7e240ce010598666138d",
   "affectedUrls": [
-    "/blog/carpet-tiles-over-concrete-installation-guide",
-    "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles"
+    "/*"
   ],
-  "notes": "Preserve existing concrete URL/July28 publication and separate adhesive compatibility guide. Clarify soft cushion versus smoothing layer, mitigation and integral backing; no universal test threshold, underlay/adhesive prescription, installation service or product-performance promise. Add buyer review record, conditional site-release example and FAQ visible/schema parity. One new contextual product-page paragraph only; product facts, offers/schema, images and RFQ handlers unchanged. Reuse reviewed hero as editorial illustration with explicit non-evidence caption. Preserve PR85 and PR86 product. GSC Oct18 session signed out/payment_required; Oct17 observed 7 impressions/position5.6 is a small historical query signal, not proof of this landing page. GA4 connected property returned only old domain over expanded period; no current-host traffic/conversion conclusion. Temporary390px Preview frame verified then removed before final CI/Preview/merge. IndexNow only material Blog plus any genuinely new URL with confirmed missing prior automatic notification; no manual duplicate or real inquiry test."
+  "notes": "Replace legacy GA4 fallback G-T2VYHXTK1F with screenshot G-WBRQWMXJ7R; remove unverified legacy GT-NMDDTW67 fallback to avoid continuing old analytics destination. Retain optional explicit GOOGLE_TAG environment override but deduplicate same-ID initialization and page config. Choose GA4 loader only with analytics consent, AW loader for advertising-only consent. Keep existing Google Ads AW ID, consent categories/UI, tracking event names/payload sanitation, forms, destinations, content, SEO and analytics permissions unchanged. No added audience, Ads/GTM administration, real inquiry or conversion test. No Vercel env override found; no env mutation needed. Verify loader/config DOM for consent cases; do not claim GA4 report receipt without property access."
 }

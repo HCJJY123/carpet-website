@@ -1358,3 +1358,13 @@ Validation: Ops guard, SEO/link/placeholder audits, lint and final webpack build
 
 - Preview acceptance: be2be3f1b60b3dd412c21d17f3d44b9ba4ce5853 / dpl_G7y1ewBoJyFfFT1jp8NzrKiwSyxs READY, CI39085256004 success, public Preview ops:verify and29 links/assets passed. Desktop and actual390px CSS-frame reading/RFQ prefill verified; product link navigated desktop/keyboard, narrow tables scroll inside container, no page horizontal overflow. No real lead or personal data submitted.
 - Temporary QA HTML removed before final tree. Remaining final changes are records/removal only; final CI/Preview and production/notification closeout still required. PR87 is authoritative for subsequent stage and exact release receipt.
+
+
+## 2026-10-20 — Owner-provided VCARPETS GA4 stream candidate
+
+- Owner screenshot explicitly shows web stream for https://www.vcarpets.com, property544103330, stream15191882499 and measurement G-WBRQWMXJ7R; install request names misspelled vcarepts, resolved to established vcarpets.com project. Base/rollback edb68877b8b626fcdfce7e240ce010598666138d (PR87).
+- Replace old GA4 G-T2VYHXTK1F and remove automatic legacy Google tag GT-NMDDTW67 fallback; explicit optional environment override retained. One existing consent-aware tracker, no raw second snippet in layout. Deduplicate optional same-ID config; analytics-only loads G-WBRQWMXJ7R and advertising-only uses existing AW loader.
+- Existing consent UI/categories, event names/sanitization, Google Ads ID, Clarity/UET/Yandex, forms and SEO/content remain outside mutation scope. No GA4/Ads account links, key-event settings, budgets, audience or data-collection extensions. Vercel environment metadata has no GA4/Google-tag/GTM override; no environment variables changed.
+- Interrupted browser connection on Oct18 made no source changes; fresh clone recovered remote main Oct20. Live home/category/contact HTML backed up before edits. Candidate only at this checkpoint; required checks/Preview/browser/production evidence to follow in PR closeout.
+
+- Local acceptance: webpack production build, lint0 errors/one pre-existing raw-img warning, ops guard, SEO/link/placeholder audits passed. Five isolated consent/target initialization scenarios passed without live measurement requests; no additional tracker configured before consent and no same-ID duplicate config. Local production HTTP ops passed; URL inventory baseline268/64/33 retained for comparison. Preview/browser/production remain pending at this checkpoint.
