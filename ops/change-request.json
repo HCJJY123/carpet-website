@@ -1,9 +1,7 @@
 {
   "task": "Deepen the existing office carpet tile layout Blog with pattern distinctions, original diagrams and a procurement brief, plus one contextual Gray Line product entry",
   "approvedBy": "Owner daily B2B growth/content instruction and explicit standing authorization for scoped tested PR/Preview/merge/production release. Current run follows completed Clarity conversion release PR91.",
-  "approvedCategories": [
-    "seo-global"
-  ],
+  "approvedCategories": [],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
@@ -12,8 +10,7 @@
     "src/lib/blog-posts/office-carpet-tile-layout-approval-bulk-order.ts",
     "src/app/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles/page.tsx",
     "public/images/blog-series/buyer-guides-20261020/layout-monolithic-quarter-turn.svg",
-    "public/images/blog-series/buyer-guides-20261020/layout-brick-ashlar.svg",
-    "public/qa-layout-20261020.html"
+    "public/images/blog-series/buyer-guides-20261020/layout-brick-ashlar.svg"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
@@ -22,5 +19,5 @@
     "/blog/office-carpet-tile-layout-approval-bulk-order",
     "/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles"
   ],
-  "notes": "Existing URL/keyword owner and October12 original publication preserved. New comparison/approval/quote decision information supported by official product-scoped installation references; no general installation permission, performance, price, sample-format or delivery promise. Two original geometry-only SVGs, existing illustrative photos retained. Add one contextual product paragraph/link. Existing Blog mechanism handles dateModified and sitemap; no global SEO generator change. SEO-global only for temporary Preview QA noindex, removed before final release. IndexNow manifest only materially updated article. No forms/API/WhatsApp/tracking/consent changes; preserve PR90/91; draftPR88 excluded."
+  "notes": "Existing URL/keyword owner and October12 original publication preserved. New comparison/approval/quote decision information supported by official product-scoped installation references; no general installation permission, performance, price, sample-format or delivery promise. Two original geometry-only SVGs, existing illustrative photos retained. Add one contextual product paragraph/link. Existing Blog mechanism handles dateModified and sitemap; no global SEO generator change. Temporary Preview QA file removed from final tree. IndexNow manifest only materially updated article. No forms/API/WhatsApp/tracking/consent changes; preserve PR90/91; draftPR88 excluded."
 }
