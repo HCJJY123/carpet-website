@@ -1,24 +1,30 @@
 {
-  "task": "Add an evidence-scoped raised-access-floor carpet tile procurement guide and one category entry, with original coordination illustration",
-  "approvedBy": "Owner daily B2B growth task and standing scoped reversible PR/Preview/tested production release authorization",
+  "task": "Publish the two owner-selected English blogs on open-plan office carpet tile acoustics and natural sisal commercial interiors; three original high-resolution images per article",
+  "approvedBy": "Owner request to publish two blogs and selection of topics 2 + 4 on 2026-10-21; standing authorization for scoped reversible PR, Preview and verified production release",
   "approvedCategories": [],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "ops/raised-floor-growth-20261021.md",
+    "ops/blog-open-plan-sisal-20261021.md",
     "ops/indexnow-urls.json",
     "keyword-map.csv",
     "src/lib/blog-data.ts",
-    "src/lib/blog-posts/carpet-tiles-raised-access-floor-procurement-guide.ts",
+    "src/lib/blog-posts/carpet-tiles-open-plan-office-acoustics-guide.ts",
+    "src/lib/blog-posts/natural-sisal-carpet-commercial-interiors-guide.ts",
     "src/app/products/carpet-tiles/page.tsx",
-    "public/images/blog-series/buyer-guides-20261021/raised-floor-approval-records.svg"
+    "src/app/products/public-area/page.tsx",
+    "public/images/blog-series/open-plan-office-20261021/*",
+    "public/images/blog-series/natural-sisal-20261021/*"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "4ac5341bbc888feb78a1f5699315495c5efa1bf5",
+  "rollbackCommit": "ae856495984cbb62b5b662ebff1a3f28001a692e",
   "affectedUrls": [
-    "/blog/carpet-tiles-raised-access-floor-procurement-guide",
-    "/products/carpet-tiles"
+    "/blog/carpet-tiles-open-plan-office-acoustics-guide",
+    "/blog/natural-sisal-carpet-commercial-interiors-guide",
+    "/blog",
+    "/products/carpet-tiles",
+    "/products/public-area"
   ],
-  "notes": "New distinct procurement topic, existing general concrete/adhesive/layout guides preserved. Product suitability remains project-confirmed; no manufacturer limits or certification transferred. No forms/WhatsApp/tracking/global SEO generator changes. Existing Blog route and sitemap mechanism; new keyword ownership. Temporary noindex QA fixture removed from final tree. Single new canonical IndexNow URL after verified production. Preserve PR90/91/92, exclude open draft PR88."
+  "notes": "New distinct blog intents using the existing route and sitemap mechanism; six original imagegen concept illustrations; exact IndexNow manifest and unique keyword ownership. Preserve existing URLs, product facts, navigation, forms, tracking and hosting. No invented acoustic results, sisal certifications, prices, project claims or shipping promises. Preserve unrelated untracked clone temporary image file outside this change set."
 }

@@ -332,6 +332,12 @@ export default function CategoryPage() {
           <p className="mt-4 text-sm leading-7 text-muted">Specifying a removable panel floor? Use the <Link href="/blog/carpet-tiles-raised-access-floor-procurement-guide" className="font-bold text-accent underline">raised-access-floor carpet tile procurement checklist</Link> to record panel information, fixing review and future service access before releasing the finish order. Suitability must be confirmed for the exact product and floor system.</p>
         </div>
       </section>
+      <section className="border-y border-border bg-surface py-8">
+        <div className="container-fox max-w-4xl">
+          <h2 className="text-xl font-black text-primary">Choosing Carpet Tiles for an Open-Plan Office?</h2>
+          <p className="mt-3 text-sm leading-7 text-muted">Review absorption, impact-transmission evidence, chair use and the proposed floor assembly in the <Link href="/blog/carpet-tiles-open-plan-office-acoustics-guide" className="font-bold text-accent underline">open-plan office carpet tile acoustic selection guide</Link>. Turn the noise concern and product shortlist into a clear sample and quotation brief.</p>
+        </div>
+      </section>
       <section id="carpet-tile-products" className="section-padding scroll-mt-24">
         <div className="container-fox">
           <div className="mb-12 max-w-3xl">

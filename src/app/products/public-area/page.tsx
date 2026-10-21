@@ -82,6 +82,10 @@ export default function CategoryPage() {
 
       <section className="section-padding">
         <div className="container-fox">
+          <div className="mb-10 max-w-3xl rounded-lg border border-border bg-surface p-6">
+            <h2 className="text-xl font-black text-primary">Considering Natural Sisal for a Commercial Interior?</h2>
+            <p className="mt-3 text-sm leading-7 text-muted">Use the <Link href="/blog/natural-sisal-carpet-commercial-interiors-guide" className="font-bold text-accent underline">natural sisal commercial interior selection guide</Link> to review dry-zone use, cleaning, weave and binding samples before requesting a project quotation.</p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {categoryProducts.map((p) => {
               const isCustomRug = p.id === customRugId;
