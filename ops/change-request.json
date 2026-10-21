@@ -1,5 +1,5 @@
 {
-  "task": "Publish the two owner-selected English blogs on open-plan office carpet tile acoustics and natural sisal commercial interiors; three original high-resolution images per article",
+  "task": "Temporary Preview-only 390px browser QA for owner-selected office and sisal blogs; final publication remains PR94",
   "approvedBy": "Owner request to publish two blogs and selection of topics 2 + 4 on 2026-10-21; standing authorization for scoped reversible PR, Preview and verified production release",
   "approvedCategories": [],
   "allowedPaths": [
@@ -14,7 +14,8 @@
     "src/app/products/carpet-tiles/page.tsx",
     "src/app/products/public-area/page.tsx",
     "public/images/blog-series/open-plan-office-20261021/*",
-    "public/images/blog-series/natural-sisal-20261021/*"
+    "public/images/blog-series/natural-sisal-20261021/*",
+    "public/__qa-office-sisal-mobile.html"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
@@ -26,5 +27,5 @@
     "/products/carpet-tiles",
     "/products/public-area"
   ],
-  "notes": "New distinct blog intents using the existing route and sitemap mechanism; six original imagegen concept illustrations; exact IndexNow manifest and unique keyword ownership. Preserve existing URLs, product facts, navigation, forms, tracking and hosting. No invented acoustic results, sisal certifications, prices, project claims or shipping promises. Preserve unrelated untracked clone temporary image file outside this change set."
+  "notes": "New distinct blog intents using the existing route and sitemap mechanism; six original imagegen concept illustrations; exact IndexNow manifest and unique keyword ownership. Preserve existing URLs, product facts, navigation, forms, tracking and hosting. No invented acoustic results, sisal certifications, prices, project claims or shipping promises. Preserve unrelated untracked clone temporary image file outside this change set. Temporary QA fixture is only on a separate QA branch and is excluded from the production PR."
 }
