@@ -21,3 +21,10 @@ Approved scope: owner requested an independent VCARPETS product page, four modif
 
 ## Release checks
 Baseline build passes; baseline lint has one existing ProductImage.tsx no-img-element warning. Final ops:check/build pass and lint has no new warnings or errors; 38 local semantic, asset HTTP, internal-link, category and sitemap assertions pass. Preview and independent visual QA pending. Rollback commit e286217cda6d639386779ed691e942ab35b63718. Seven final visuals and validation records will be included in the clean downloadable master package.
+
+## Preview acceptance
+
+Pre-production verification passed for PR95 application commit9647ba576c07f27da4b1a0fc3883f8278d8ca480: Preview READY; required CI success; full Preview ops:verify and38 semantic/asset/link/category/sitemap assertions passed. Independent desktop1180px and supported narrow-window approximately500px content review passed product layout, four-image switching, full color board, FAQ, quote-prefill and category-card navigation. This is narrow desktop responsive QA, not390px emulation or mobile-UA testing. No browser policy bypass. Production verification and webmaster submissions follow merge.
+
+Preview: https://carpet-website-l381yr2se-mike123-s-projects.vercel.app
+Required Site Ops Guard run39584647823: success. Application tree77f06bba85c3fe826581310acb3660e25adceb84 matches tested local source. This evidence-only update changes no application code or assets.
