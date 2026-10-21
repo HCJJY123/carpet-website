@@ -1410,3 +1410,10 @@ Validation: Ops guard, SEO/link/placeholder audits, lint and final webpack build
 Full production webpack/TypeScript build passed. Lint0 errors/one unchanged ProductImage.tsx43 raw-img warning. Scope guard10 files, SEO/link/sitemap/placeholder/diff checks and10 offline IndexNow tests passed; no live notification sent by tests. Original SVG1200×675 Sharp rendering visually inspected; existing pictures untouched. Live baseline backups successful. Candidate still requires exact-head CI/READY Preview, actual desktop/390px UI, quote prefill, final fixture removal and production checks.
 
 - Initial8af4196/CI39525042662 success; READY Preview dpl_AAP81MCwkM8ovmQyoY74jCWmEFB9. Ops and scoped HTTP/FAQ/category-schema/canonical/links/image/sitemap checks passed, expected Preview noindex header retained. Actual1355px desktop and390px iframe tested; no outer overflow, independent table scroll, originalSVG loaded. Category→guide→product-aware RFQ verified via pointer/keyboard without real submission. Temporary QA removed; application/asset blobs unchanged. Final exact-head and production/IndexNow closeout to be recorded in PR93, not implied by this checkpoint.
+
+
+## 2026-10-21 — Owner-selected office acoustics and natural sisal blogs
+
+Owner selected topics 2 + 4. Added two distinct English B2B guides with three original high-resolution concept images each, category entry links, visible FAQs, topic-prefilled inquiry links and exact IndexNow URL manifest. Rollback baseline: ae856495984cbb62b5b662ebff1a3f28001a692e. No global SEO, product facts, form, tracking, dependency or domain changes. Validation and release evidence: ops/blog-open-plan-sisal-20261021.md (pending at implementation).
+
+Pre-production verification passed for PR94: release Preview direct-200 pages; 3 original images and 6 matching FAQs each; 20 internal targets; six image-byte hashes; Blog/category links; main sitemap 271 URLs; desktop and 390px browser review; both quote topics prefilled. Required PR checks passed at application commit 1526ef0. Evidence-only follow-up leaves application source/assets unchanged. Production and IndexNow remain to be verified after merge.

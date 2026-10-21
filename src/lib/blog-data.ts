@@ -1,3 +1,5 @@
+import { openPlanOfficeAcousticsGuide } from "@/lib/blog-posts/carpet-tiles-open-plan-office-acoustics-guide";
+import { naturalSisalCommercialInteriorsGuide } from "@/lib/blog-posts/natural-sisal-carpet-commercial-interiors-guide";
 import { raisedAccessFloorProcurementGuide } from "@/lib/blog-posts/carpet-tiles-raised-access-floor-procurement-guide";
 import { officeCarpetTileLayoutApprovalGuide } from "@/lib/blog-posts/office-carpet-tile-layout-approval-bulk-order";
 import { hotelGuestroomCarpetRoomTypeScheduleGuide } from "@/lib/blog-posts/hotel-guestroom-carpet-room-type-order-schedule";
@@ -87,6 +89,8 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  openPlanOfficeAcousticsGuide,
+  naturalSisalCommercialInteriorsGuide,
   raisedAccessFloorProcurementGuide,
   commercialCarpetFobTianjinPortBuyerChecklist,
   officeCarpetTileLayoutApprovalGuide,
