@@ -1,9 +1,7 @@
 {
   "task": "Add an evidence-scoped raised-access-floor carpet tile procurement guide and one category entry, with original coordination illustration",
   "approvedBy": "Owner daily B2B growth task and standing scoped reversible PR/Preview/tested production release authorization",
-  "approvedCategories": [
-    "seo-global"
-  ],
+  "approvedCategories": [],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
@@ -13,8 +11,7 @@
     "src/lib/blog-data.ts",
     "src/lib/blog-posts/carpet-tiles-raised-access-floor-procurement-guide.ts",
     "src/app/products/carpet-tiles/page.tsx",
-    "public/images/blog-series/buyer-guides-20261021/raised-floor-approval-records.svg",
-    "public/qa-raised-floor-20261021.html"
+    "public/images/blog-series/buyer-guides-20261021/raised-floor-approval-records.svg"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
@@ -23,5 +20,5 @@
     "/blog/carpet-tiles-raised-access-floor-procurement-guide",
     "/products/carpet-tiles"
   ],
-  "notes": "New distinct procurement topic, existing general concrete/adhesive/layout guides preserved. Product suitability remains project-confirmed; no manufacturer limits or certification transferred. No forms/WhatsApp/tracking/global SEO generator changes. Existing Blog route and sitemap mechanism; new keyword ownership. SEO-global only temporary noindex QA fixture; remove before final tree. Single new canonical IndexNow URL after verified production. Preserve PR90/91/92, exclude open draft PR88."
+  "notes": "New distinct procurement topic, existing general concrete/adhesive/layout guides preserved. Product suitability remains project-confirmed; no manufacturer limits or certification transferred. No forms/WhatsApp/tracking/global SEO generator changes. Existing Blog route and sitemap mechanism; new keyword ownership. Temporary noindex QA fixture removed from final tree. Single new canonical IndexNow URL after verified production. Preserve PR90/91/92, exclude open draft PR88."
 }
