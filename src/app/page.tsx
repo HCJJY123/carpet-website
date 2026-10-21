@@ -117,7 +117,7 @@ export default function Home() {
             <p className="text-xs font-bold text-primary uppercase tracking-[0.2em]">
               Primary Markets: the Philippines / Malaysia / Bulgaria / Australia / New Zealand / South Africa / UAE
             </p>
-            <div className="flex flex-wrap items-center gap-4 opacity-60 md:gap-8">
+            <div className="flex flex-wrap items-center gap-4 opacity-80 md:gap-8">
               {certifications.map((cert) => (
                 <span key={cert.name} className="text-[10px] font-black text-primary uppercase tracking-widest">{cert.name}</span>
               ))}
@@ -312,7 +312,7 @@ export default function Home() {
             Start with the RFQ checklist if you want a quotation that matches the real project scope, documents, sample approval and spare-stock plan.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers" className="inline-block rounded-sm bg-accent px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-2xl transition-all hover:bg-accent/90 md:px-12 md:py-6 md:tracking-[0.22em]">
+            <Link href="/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers" className="inline-block rounded-sm bg-[#825b23] px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-2xl transition-all hover:bg-[#6b491a] md:px-12 md:py-6 md:tracking-[0.22em]">
               Open RFQ Checklist
             </Link>
             <Link href="/contact?product=Commercial%20Carpet%20Tiles&source=%2Fblog%2Fcommercial-carpet-tile-rfq-checklist-b2b-buyers#quote-form" className="inline-block rounded-sm bg-white px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-primary shadow-2xl transition-all hover:bg-gray-100 md:px-12 md:py-6 md:tracking-[0.22em]">

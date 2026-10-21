@@ -265,7 +265,7 @@ export default function Header() {
         data-email-contact-panel
         className={`fixed right-4 top-20 z-[145] w-[min(calc(100vw-2rem),360px)] rounded-xl border border-[#258CF4]/20 bg-white p-4 text-[#102A43] shadow-[0_22px_60px_rgba(16,42,67,0.22)] transition-all duration-200 md:right-8 md:top-24 ${emailPanelOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"}`}
       >
-        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#258CF4]">Email VCARPETS</p>
+        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#1666b7]">Email VCARPETS</p>
         <p className="mt-2 break-all text-sm font-black">{salesEmail}</p>
         <div className="mt-4 grid gap-2 sm:grid-cols-2">
           <button
@@ -316,7 +316,7 @@ export default function Header() {
               </span>
               <div className="flex min-w-0 flex-col">
                 <span className="truncate text-base font-black leading-none tracking-tighter text-[#102A43] sm:text-lg md:text-xl">VCARPETS</span>
-                <span className="mt-1 whitespace-nowrap text-[7px] font-bold uppercase leading-none tracking-[0.02em] text-[#627D98] max-[359px]:text-[6px] max-[359px]:tracking-normal sm:text-[9px] sm:tracking-[0.1em] md:text-[10px] md:tracking-[0.12em]">Global Commercial Carpet</span>
+                <span className="mt-1 whitespace-nowrap text-[7px] font-bold uppercase leading-none tracking-[0.02em] text-[#50657b] max-[359px]:text-[6px] max-[359px]:tracking-normal sm:text-[9px] sm:tracking-[0.1em] md:text-[10px] md:tracking-[0.12em]">Global Commercial Carpet</span>
               </div>
             </Link>
 
@@ -663,7 +663,7 @@ function LanguageButton({
         </>
       ) : (
         <span className="flex h-8 w-9 flex-col items-center justify-center rounded-sm border border-[#102A43]/15 bg-[#F7F9FA] transition-colors group-hover:border-[#102A43]/25 group-hover:bg-white max-[359px]:h-7 max-[359px]:w-8">
-          <span className="text-[7px] font-black leading-none text-[#7B8794]">A/文</span>
+          <span className="text-[7px] font-black leading-none text-[#576574]">A/文</span>
           <span className="mt-1 flex items-center gap-1 text-[10px] font-black leading-none">
             {code}
             <span className="scale-75">{chevron}</span>
@@ -724,7 +724,7 @@ function LanguageMenuPanel({
                       data-site-locale={group.code.toLowerCase()}
                       onClick={onNavigate}
                       className={`rounded-sm px-2 py-2 text-xs font-semibold leading-5 transition-colors ${
-                        active ? "bg-[#102A43] text-white" : "text-[#627D98] hover:bg-surface hover:text-[#102A43]"
+                        active ? "bg-[#102A43] text-white" : "text-[#50657b] hover:bg-surface hover:text-[#102A43]"
                       }`}
                       dir="auto"
                       role="menuitem"

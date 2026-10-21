@@ -78,7 +78,7 @@ export default function ConversionLiftPanel({
                 data-whatsapp-placement="conversion_lift_panel"
                 data-whatsapp-product={product}
                 data-whatsapp-intent="project_quote"
-                className="inline-flex min-h-12 items-center justify-center rounded-sm border border-[#128C4A]/40 bg-white px-4 py-3 text-center text-xs font-black uppercase tracking-[0.08em] text-[#128C4A] transition-colors hover:bg-[#F3FFF7]"
+                className="inline-flex min-h-12 items-center justify-center rounded-sm border border-[#128C4A]/40 bg-white px-4 py-3 text-center text-xs font-black uppercase tracking-[0.08em] text-[#10773e] transition-colors hover:bg-[#F3FFF7]"
               >
                 WhatsApp
               </a>

@@ -3,7 +3,8 @@
   "approvedBy": "Owner Sentinel_2502fb3185f8819197c2d24e53852de2 requests all five websites optimized on PageSpeed; owner approved submissions, records and deployment after testing",
   "approvedCategories": [
     "navigation",
-    "conversion"
+    "conversion",
+    "seo-global"
   ],
   "allowedPaths": [
     "ops/change-request.json",
@@ -19,7 +20,9 @@
     "src/components/ConversionLiftPanel.tsx",
     "src/components/WhatsAppFloating.tsx",
     "src/components/Header.tsx",
-    "src/components/CookieConsent.tsx"
+    "src/components/CookieConsent.tsx",
+    "src/app/layout.tsx",
+    "src/components/SendInquiryFloating.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
@@ -27,5 +30,5 @@
   "affectedUrls": [
     "/"
   ],
-  "notes": "Move homepage image manifest resolution to the server, preserve all image fallback and carousel interactions; improve contrast and target sizes. No analytics, consent, form submission, URL/indexing, price/MOQ or other content changes. Footer and WhatsApp changes are color-only. Preview, checks and mobile/desktop QA required before PR merge. Header and cookie notice changes are color-only; consent and menu behavior remain unchanged."
+  "notes": "Move homepage image manifest resolution to the server, preserve all image fallback and carousel interactions; improve contrast and target sizes. No analytics, consent, form submission, URL/indexing, price/MOQ or other content changes. Footer and WhatsApp changes are color-only. Preview, checks and mobile/desktop QA required before PR merge. Header and cookie notice changes are color-only; consent and menu behavior remain unchanged. Layout changes only pass small product/category identity summaries to the existing floating inquiry control and stop preloading an unused-on-homepage monospace font; metadata, schema and tracking remain unchanged. Preserve all exact product names, IDs, categories, links and event attributes."
 }

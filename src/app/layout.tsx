@@ -11,7 +11,7 @@ import DeferredSiteEnhancements from "@/components/DeferredSiteEnhancements";
 import CookieConsent from "@/components/CookieConsent";
 import MicrosoftUet from "@/components/MicrosoftUet";
 import YandexMetrica from "@/components/YandexMetrica";
-import { brandInfo } from "@/lib/data";
+import { brandInfo, products, productCategories } from "@/lib/data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +20,8 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  // Keep the font available without competing with the homepage hero download.
+  preload: false,
   subsets: ["latin"],
 });
 
@@ -99,7 +101,10 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <SendInquiryFloating />
+        <SendInquiryFloating
+          products={products.map(({ id, name, category }) => ({ id, name, category }))}
+          productCategories={productCategories.map(({ id, name }) => ({ id, name }))}
+        />
         <WhatsAppFloating />
         <DeferredSiteEnhancements />
         <CookieConsent />
