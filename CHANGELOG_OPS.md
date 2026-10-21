@@ -1415,3 +1415,5 @@ Full production webpack/TypeScript build passed. Lint0 errors/one unchanged Prod
 ## 2026-10-21 — Owner-selected office acoustics and natural sisal blogs
 
 Owner selected topics 2 + 4. Added two distinct English B2B guides with three original high-resolution concept images each, category entry links, visible FAQs, topic-prefilled inquiry links and exact IndexNow URL manifest. Rollback baseline: ae856495984cbb62b5b662ebff1a3f28001a692e. No global SEO, product facts, form, tracking, dependency or domain changes. Validation and release evidence: ops/blog-open-plan-sisal-20261021.md (pending at implementation).
+
+Pre-production verification passed for PR94: release Preview direct-200 pages; 3 original images and 6 matching FAQs each; 20 internal targets; six image-byte hashes; Blog/category links; main sitemap 271 URLs; desktop and 390px browser review; both quote topics prefilled. Required PR checks passed at application commit 1526ef0. Evidence-only follow-up leaves application source/assets unchanged. Production and IndexNow remain to be verified after merge.
