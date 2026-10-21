@@ -26,7 +26,7 @@ export const brandInfo = {
 export const products: Product[] = [
 {
   "id": "gradient-accent-office-carpet-tiles",
-  "name": "50×50 Gradient Accent Office Carpet Tiles",
+  "name": "50×50 cm Commercial PP Loop Pile Carpet Tiles with Bitumen Backing for Offices",
   "category": "carpet-tiles",
   "description": "Gray modular carpet tiles with colored gradient accents in a 50×50 cm format. Compare samples and request a project quotation, FOB Tianjin Port.",
   "longDescription": "A gray textured carpet tile design with colored gradient accents for office floor planning. The 50×50 cm square format is offered for this design; review the polypropylene loop-pile face, bitumen backing, color and project requirements against a physical sample and written specification.",

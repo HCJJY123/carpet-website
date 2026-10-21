@@ -60,7 +60,7 @@ const categoryFaqs = [
 ];
 
 const productOptions = [
-  { title: "50×50 Gradient Accent Office Carpet Tiles", text: "Gray with colored gradient accents, PP loop pile and bitumen backing. Review samples and request a FOB Tianjin Port project quotation.", href: "/products/carpet-tiles/gradient-accent-office-carpet-tiles" },
+  { title: "50×50 cm Commercial PP Loop Pile Carpet Tiles with Bitumen Backing for Offices", text: "Gray with colored gradient accents, PP loop pile and bitumen backing. Review samples and request a FOB Tianjin Port project quotation.", href: "/products/carpet-tiles/gradient-accent-office-carpet-tiles" },
   { title: "Linear Accent Commercial Carpet Tiles", text: "Charcoal and gray linear texture with red accents; sample-led design review and specification confirmation.", href: "/products/carpet-tiles/linear-accent-commercial-carpet-tiles" },
   { title: "Heathered Gray Modular Carpet Tiles", text: "Heathered light, mid-gray and charcoal modular design with sample-led specification review.", href: "/products/carpet-tiles/heathered-gray-modular-carpet-tiles" },
   {

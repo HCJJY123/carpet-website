@@ -1,26 +1,23 @@
 {
-  "task": "Publish the owner-confirmed 50x50 gradient accent office carpet tile product with four edited main images and three detail images, visible category listing and relevant buyer resources",
-  "approvedBy": "Owner product publication request Sentinel_aade0a9ae9008191b9449291b2e0827b; owner confirmed supplied gradient pattern is offered as 50x50 square tiles in Sentinel_f2eb3ae108388191b66b833146b58642 on 2026-10-21",
+  "task": "Refine only the newly published gradient accent product title using verified PP loop pile, square format, bitumen backing and office application",
+  "approvedBy": "Owner title improvement request Sentinel_47ee816f61d081919c2caeacd1450b53 and original test-then-publish request Sentinel_aade0a9ae9008191b9449291b2e0827b",
   "approvedCategories": [],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "ops/gradient-accent-product-20261021.md",
+    "ops/gradient-title-20261021.md",
     "ops/indexnow-urls.json",
-    "keyword-map.csv",
     "src/lib/data.ts",
-    "src/lib/generated-static-sitemap-routes.ts",
     "src/app/products/carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/gradient-accent-office-carpet-tiles/*",
-    "public/images/products/gradient-accent-office-carpet-tiles/*"
+    "src/app/products/carpet-tiles/gradient-accent-office-carpet-tiles/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "e286217cda6d639386779ed691e942ab35b63718",
+  "rollbackCommit": "45f0c118a246db65805462511e7b128066b3523f",
   "affectedUrls": [
     "/products/carpet-tiles/gradient-accent-office-carpet-tiles",
     "/products/carpet-tiles",
     "/products"
   ],
-  "notes": "Distinct gradient accent visual selection, preserving all existing product URLs and unrelated changes. Existing template, contact links and automatic sitemap mechanism only. No global schema or sitemap logic changes, no forms, tracking, dependencies, credentials, customer data or hosting changes. Exact requested FOB price text, no invented numerical price or Offer. Images are edited visual illustrations, not technical or delivered-client evidence. Test, Preview, independent QA and PR merge required before production."
+  "notes": "Title-only refinement. Preserve slug, canonical, verified specifications, all seven images, links and global metadata behavior. No new product or unsupported claims. Preview and independent desktop/narrow QA before merge."
 }

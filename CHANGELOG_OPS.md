@@ -1427,3 +1427,11 @@ Pre-production verification passed for PR94: release Preview direct-200 pages; 3
 - Validation: baseline build passed; one pre-existing lint warning in ProductImage.tsx. Final ops:check and build pass; lint has no new warnings or errors. All 38 local semantic, asset HTTP, internal-link, category and sitemap assertions pass. Preview, independent visual QA and production verification pending; evidence will be updated before merge.
 
 Pre-production verification passed for PR95 application commit9647ba576c07f27da4b1a0fc3883f8278d8ca480: Preview READY; required CI success; full Preview ops:verify and38 semantic/asset/link/category/sitemap assertions passed. Independent desktop1180px and supported narrow-window approximately500px content review passed product layout, four-image switching, full color board, FAQ, quote-prefill and category-card navigation. This is narrow desktop responsive QA, not390px emulation or mobile-UA testing. No browser policy bypass. Production verification and webmaster submissions follow merge.
+
+## 2026-10-21 — Enrich gradient office carpet tile product title
+
+- Owner requested a fuller search-friendly title for the just-published product.
+- Name now states 50×50 cm, commercial PP loop pile, bitumen backing and office application; gradient distinction remains visible in supporting copy.
+- Permanent URL, seven images, verified specifications and quotation-only FOB terms preserved; no nylon/bestseller claims.
+- Category name, product options, Product schema source and RFQ prefill aligned. Preview review required before merge.
+- Local validation: ops:check, lint, build, 39 HTTP/semantic checks and ops:verify passed; no new lint warnings.
