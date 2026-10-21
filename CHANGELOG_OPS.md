@@ -1417,3 +1417,11 @@ Full production webpack/TypeScript build passed. Lint0 errors/one unchanged Prod
 Owner selected topics 2 + 4. Added two distinct English B2B guides with three original high-resolution concept images each, category entry links, visible FAQs, topic-prefilled inquiry links and exact IndexNow URL manifest. Rollback baseline: ae856495984cbb62b5b662ebff1a3f28001a692e. No global SEO, product facts, form, tracking, dependency or domain changes. Validation and release evidence: ops/blog-open-plan-sisal-20261021.md (pending at implementation).
 
 Pre-production verification passed for PR94: release Preview direct-200 pages; 3 original images and 6 matching FAQs each; 20 internal targets; six image-byte hashes; Blog/category links; main sitemap 271 URLs; desktop and 390px browser review; both quote topics prefilled. Required PR checks passed at application commit 1526ef0. Evidence-only follow-up leaves application source/assets unchanged. Production and IndexNow remain to be verified after merge.
+
+## 2026-10-21 — Gradient accent office carpet tile product
+
+- Scope: new `/products/carpet-tiles/gradient-accent-office-carpet-tiles`, product catalog/category listing, seven edited visuals, buyer guides and an explicitly labeled planning reference. Preserve all existing product URLs.
+- Source: exact Alibaba listing 1600066903386 inspected on 2026-10-21; PP loop pile, bitumen, 500×500 mm, pile weight 420 g/m². Owner separately confirmed the supplied gradient design is available as 50×50 cm squares. No inferred nylon blend, numeric thickness, certification, numeric price or delivered-project claim.
+- FOB price: Request a project quotation. Port: Tianjin Port, China. No Offer/AggregateOffer structured data for this quotation-only product.
+- Base/rollback: `e286217cda6d639386779ed691e942ab35b63718`. Production category HTML backed up before edits.
+- Validation: baseline build passed; one pre-existing lint warning in ProductImage.tsx. Final ops:check and build pass; lint has no new warnings or errors. All 38 local semantic, asset HTTP, internal-link, category and sitemap assertions pass. Preview, independent visual QA and production verification pending; evidence will be updated before merge.

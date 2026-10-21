@@ -1,30 +1,26 @@
 {
-  "task": "Publish the two owner-selected English blogs on open-plan office carpet tile acoustics and natural sisal commercial interiors; three original high-resolution images per article",
-  "approvedBy": "Owner request to publish two blogs and selection of topics 2 + 4 on 2026-10-21; standing authorization for scoped reversible PR, Preview and verified production release",
+  "task": "Publish the owner-confirmed 50x50 gradient accent office carpet tile product with four edited main images and three detail images, visible category listing and relevant buyer resources",
+  "approvedBy": "Owner product publication request Sentinel_aade0a9ae9008191b9449291b2e0827b; owner confirmed supplied gradient pattern is offered as 50x50 square tiles in Sentinel_f2eb3ae108388191b66b833146b58642 on 2026-10-21",
   "approvedCategories": [],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "ops/blog-open-plan-sisal-20261021.md",
+    "ops/gradient-accent-product-20261021.md",
     "ops/indexnow-urls.json",
     "keyword-map.csv",
-    "src/lib/blog-data.ts",
-    "src/lib/blog-posts/carpet-tiles-open-plan-office-acoustics-guide.ts",
-    "src/lib/blog-posts/natural-sisal-carpet-commercial-interiors-guide.ts",
+    "src/lib/data.ts",
+    "src/lib/generated-static-sitemap-routes.ts",
     "src/app/products/carpet-tiles/page.tsx",
-    "src/app/products/public-area/page.tsx",
-    "public/images/blog-series/open-plan-office-20261021/*",
-    "public/images/blog-series/natural-sisal-20261021/*"
+    "src/app/products/carpet-tiles/gradient-accent-office-carpet-tiles/*",
+    "public/images/products/gradient-accent-office-carpet-tiles/*"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "ae856495984cbb62b5b662ebff1a3f28001a692e",
+  "rollbackCommit": "e286217cda6d639386779ed691e942ab35b63718",
   "affectedUrls": [
-    "/blog/carpet-tiles-open-plan-office-acoustics-guide",
-    "/blog/natural-sisal-carpet-commercial-interiors-guide",
-    "/blog",
+    "/products/carpet-tiles/gradient-accent-office-carpet-tiles",
     "/products/carpet-tiles",
-    "/products/public-area"
+    "/products"
   ],
-  "notes": "New distinct blog intents using the existing route and sitemap mechanism; six original imagegen concept illustrations; exact IndexNow manifest and unique keyword ownership. Preserve existing URLs, product facts, navigation, forms, tracking and hosting. No invented acoustic results, sisal certifications, prices, project claims or shipping promises. Preserve unrelated untracked clone temporary image file outside this change set."
+  "notes": "Distinct gradient accent visual selection, preserving all existing product URLs and unrelated changes. Existing template, contact links and automatic sitemap mechanism only. No global schema or sitemap logic changes, no forms, tracking, dependencies, credentials, customer data or hosting changes. Exact requested FOB price text, no invented numerical price or Offer. Images are edited visual illustrations, not technical or delivered-client evidence. Test, Preview, independent QA and PR merge required before production."
 }
