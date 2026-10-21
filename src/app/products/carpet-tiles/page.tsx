@@ -60,6 +60,7 @@ const categoryFaqs = [
 ];
 
 const productOptions = [
+  { title: "50×50 Gradient Accent Office Carpet Tiles", text: "Gray with colored gradient accents, PP loop pile and bitumen backing. Review samples and request a FOB Tianjin Port project quotation.", href: "/products/carpet-tiles/gradient-accent-office-carpet-tiles" },
   { title: "Linear Accent Commercial Carpet Tiles", text: "Charcoal and gray linear texture with red accents; sample-led design review and specification confirmation.", href: "/products/carpet-tiles/linear-accent-commercial-carpet-tiles" },
   { title: "Heathered Gray Modular Carpet Tiles", text: "Heathered light, mid-gray and charcoal modular design with sample-led specification review.", href: "/products/carpet-tiles/heathered-gray-modular-carpet-tiles" },
   {
@@ -351,6 +352,7 @@ export default function CategoryPage() {
                 <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
                    <ProductImage src={p.image} alt={p.imageAlt || p.name} fit={p.id === "pp-pvc-backed-office-carpet-tiles" ? "contain" : "cover"} className="w-full h-full object-cover transition-transform group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
+                {p.id === "gradient-accent-office-carpet-tiles" && <p className="mb-4 text-xs leading-6 text-muted">AI-edited planning visualization. Confirm the physical sample.</p>}
                 {p.id === "pp-pvc-backed-office-carpet-tiles" ? <p className="mb-4 text-xs leading-6 text-muted">AI-generated appearance illustration. Approve a physical sample.</p> : null}
                 {["heathered-gray-modular-carpet-tiles", "linear-accent-commercial-carpet-tiles"].includes(p.id) && <p className="mb-2 text-xs text-muted">AI-generated design illustration · Specification pending</p>}
                 <h3 className="mb-6 min-h-20 text-xl font-bold uppercase leading-tight text-primary transition-colors group-hover:text-accent">{p.name}</h3>
@@ -358,7 +360,7 @@ export default function CategoryPage() {
                 <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">FOB Price</span>
-                    <span className="text-right font-black text-primary">{p.fobPrice?.display ?? "Quote by project"}</span>
+                    <span className="text-right font-black text-primary">{p.fobPrice?.display ?? (p.id === "gradient-accent-office-carpet-tiles" ? "Request a project quotation" : "Quote by project")}</span>
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Project MOQ</span>

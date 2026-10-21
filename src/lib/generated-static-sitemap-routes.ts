@@ -35,6 +35,7 @@ export const generatedStaticSitemapRoutes = [
   "/products/carpet-tiles/commercial-nylon-tiles",
   "/products/carpet-tiles/ecocore-pe-backing-carpet-tiles",
   "/products/carpet-tiles/education-school-carpet-tiles",
+  "/products/carpet-tiles/gradient-accent-office-carpet-tiles",
   "/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles",
   "/products/carpet-tiles/healthcare-hospital-carpet-tiles",
   "/products/carpet-tiles/heathered-gray-modular-carpet-tiles",

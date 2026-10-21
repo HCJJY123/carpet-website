@@ -25,6 +25,73 @@ export const brandInfo = {
 
 export const products: Product[] = [
 {
+  "id": "gradient-accent-office-carpet-tiles",
+  "name": "50×50 Gradient Accent Office Carpet Tiles",
+  "category": "carpet-tiles",
+  "description": "Gray modular carpet tiles with colored gradient accents in a 50×50 cm format. Compare samples and request a project quotation, FOB Tianjin Port.",
+  "longDescription": "A gray textured carpet tile design with colored gradient accents for office floor planning. The 50×50 cm square format is offered for this design; review the polypropylene loop-pile face, bitumen backing, color and project requirements against a physical sample and written specification.",
+  "image": "/images/products/gradient-accent-office-carpet-tiles/01-main-design.webp",
+  "imageAlt": "Edited planning visualization of a gray carpet floor with a green gradient accent in an office breakout area.",
+  "gallery": [
+    {
+      "src": "/images/products/gradient-accent-office-carpet-tiles/01-main-design.webp",
+      "alt": "Edited planning visualization of a gray carpet floor with a green gradient accent in an office breakout area."
+    },
+    {
+      "src": "/images/products/gradient-accent-office-carpet-tiles/02-main-office.webp",
+      "alt": "Edited planning visualization of neutral gray textured carpet in a daylight office."
+    },
+    {
+      "src": "/images/products/gradient-accent-office-carpet-tiles/03-main-colorways.webp",
+      "alt": "Edited surface reference board showing gray, red, blue, yellow and green gradient carpet patterns."
+    },
+    {
+      "src": "/images/products/gradient-accent-office-carpet-tiles/04-main-layout.webp",
+      "alt": "Edited planning visualization of gray carpet with blue and yellow gradient accents around office workstations."
+    },
+    {
+      "src": "/images/products/gradient-accent-office-carpet-tiles/05-detail-texture.webp",
+      "alt": "Edited close view of the gray mottled carpet surface in an office setting."
+    },
+    {
+      "src": "/images/products/gradient-accent-office-carpet-tiles/06-detail-transition.webp",
+      "alt": "Edited surface reference showing green linear transition and denser green-on-gray carpet patterns."
+    },
+    {
+      "src": "/images/products/gradient-accent-office-carpet-tiles/07-detail-accents.webp",
+      "alt": "Edited surface reference showing red, blue and yellow linear gradient carpet patterns."
+    }
+  ],
+  "moq": "100 m²; confirm selected color and order",
+  "moqTiers": {
+    "sample": "Confirm format, cost and timing",
+    "trialOrder": "Confirm color and quantity",
+    "project": "100 m² reference; confirm selected color and order"
+  },
+  "leadTime": "7–15 days reference; confirm the written schedule",
+  "spec": {
+    "material": "Polypropylene (PP)",
+    "size": "50 × 50 cm",
+    "colors": []
+  },
+  "technicalSpecs": {
+    "fireRating": "Request construction-specific documents",
+    "trafficClass": "Confirm against the intended office use",
+    "fiber": "Polypropylene (PP)",
+    "yarnSystem": "Loop pile",
+    "backing": "Bitumen",
+    "pileWeight": "420 g/m²",
+    "totalThickness": "Confirm in the nominated product sheet",
+    "antistatic": "Request evidence if required"
+  },
+  "features": [
+    "50×50 cm square format",
+    "Gray with gradient accents",
+    "Physical sample approval",
+    "FOB Tianjin Port"
+  ]
+},
+{
   "id": "linear-accent-commercial-carpet-tiles",
   "name": "Linear Accent Commercial Carpet Tiles",
   "category": "carpet-tiles",
