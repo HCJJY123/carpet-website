@@ -1,24 +1,26 @@
 {
-  "task": "Refine only the newly published gradient accent product title using verified PP loop pile, square format, bitumen backing and office application; revise only the first main-image background and scene while preserving the carpet texture, pattern and colors",
-  "approvedBy": "Owner title improvement request Sentinel_47ee816f61d081919c2caeacd1450b53 and original test-then-publish request Sentinel_aade0a9ae9008191b9449291b2e0827b; owner first-image scene revision Sentinel_5ad57922ab4c8191bc700065519e4290",
+  "task": "Publish an independent Balance polypropylene carpet tile product page with four edited main images and three edited detail images, visible category card, buyer guides, labelled planning reference and FOB Tianjin Port quotation information",
+  "approvedBy": "Owner request Sentinel_1792f1b6f3608191ae6045be60062026: test then publish and deliver product master package",
   "approvedCategories": [],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "ops/gradient-title-20261021.md",
+    "ops/balance-product-20261021.md",
     "ops/indexnow-urls.json",
     "src/lib/data.ts",
+    "src/lib/generated-static-sitemap-routes.ts",
     "src/app/products/carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/gradient-accent-office-carpet-tiles/page.tsx",
-    "public/images/products/gradient-accent-office-carpet-tiles/01-main-design-v2.webp"
+    "src/app/products/carpet-tiles/balance-polypropylene-carpet-tiles/**",
+    "public/images/products/balance-polypropylene-carpet-tiles/**",
+    "keyword-map.csv"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "45f0c118a246db65805462511e7b128066b3523f",
+  "rollbackCommit": "bf8b5de7bd6154e4e99aee54cbcf2301d255d641",
   "affectedUrls": [
-    "/products/carpet-tiles/gradient-accent-office-carpet-tiles",
+    "/products/carpet-tiles/balance-polypropylene-carpet-tiles",
     "/products/carpet-tiles",
     "/products"
   ],
-  "notes": "Title and first-image scene refinement only. Preserve slug, canonical, verified specifications, the other six images; first main image gets a versioned replacement without deleting its old asset, links and global metadata behavior. No new product or unsupported claims. Preview and independent desktop/narrow QA before merge."
+  "notes": "Preserve existing product URLs and content. No invented technical parameters or project claims. Use existing conversion and sitemap behavior. Preview and independent desktop/mobile checks before merge."
 }
