@@ -26,16 +26,16 @@ export const brandInfo = {
 export const products: Product[] = [
 {
   "id": "gradient-accent-office-carpet-tiles",
-  "name": "50×50 Gradient Accent Office Carpet Tiles",
+  "name": "50×50 cm Commercial PP Loop Pile Carpet Tiles with Bitumen Backing for Offices",
   "category": "carpet-tiles",
   "description": "Gray modular carpet tiles with colored gradient accents in a 50×50 cm format. Compare samples and request a project quotation, FOB Tianjin Port.",
   "longDescription": "A gray textured carpet tile design with colored gradient accents for office floor planning. The 50×50 cm square format is offered for this design; review the polypropylene loop-pile face, bitumen backing, color and project requirements against a physical sample and written specification.",
-  "image": "/images/products/gradient-accent-office-carpet-tiles/01-main-design.webp",
-  "imageAlt": "Edited planning visualization of a gray carpet floor with a green gradient accent in an office breakout area.",
+  "image": "/images/products/gradient-accent-office-carpet-tiles/01-main-design-v2.webp",
+  "imageAlt": "AI-edited reception planning visualization with a gray textured carpet floor and a green gradient accent, floor-to-ceiling glazing and neutral lounge furniture.",
   "gallery": [
     {
-      "src": "/images/products/gradient-accent-office-carpet-tiles/01-main-design.webp",
-      "alt": "Edited planning visualization of a gray carpet floor with a green gradient accent in an office breakout area."
+      "src": "/images/products/gradient-accent-office-carpet-tiles/01-main-design-v2.webp",
+      "alt": "AI-edited reception planning visualization with a gray textured carpet floor and a green gradient accent, floor-to-ceiling glazing and neutral lounge furniture."
     },
     {
       "src": "/images/products/gradient-accent-office-carpet-tiles/02-main-office.webp",

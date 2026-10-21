@@ -8,9 +8,9 @@ import { absoluteUrl, productBreadcrumbJsonLd, safeJsonLd } from "@/lib/seo";
 
 const path = "/products/carpet-tiles/gradient-accent-office-carpet-tiles";
 const product = products.find((item) => item.id === "gradient-accent-office-carpet-tiles");
-const title = "50×50 Gradient Accent Office Carpet Tiles | VCARPETS";
+const title = "50×50 Commercial PP Carpet Tiles | Bitumen Backing";
 const description = "Gray office carpet tiles with colored gradient accents, a PP loop-pile face and bitumen backing. 50×50 cm format. Request a FOB Tianjin Port project quotation.";
-const quoteHref = `/contact?product=${encodeURIComponent("50×50 Gradient Accent Office Carpet Tiles")}&source=product_gradient_accent_office_carpet_tiles#quote-form`;
+const quoteHref = `/contact?product=${encodeURIComponent("50×50 cm Commercial PP Loop Pile Carpet Tiles with Bitumen Backing for Offices")}&source=product_gradient_accent_office_carpet_tiles#quote-form`;
 const imageNote = "AI-edited imagery based on supplied references, not technical evidence. Approve color, texture and the 50×50 cm square format using physical samples. Interior views are planning references, not verified completed client projects.";
 const specifications = [
   ["Nominal tile size", "50 × 50 cm / 500 × 500 mm"],
@@ -40,8 +40,8 @@ const resources = [
 ];
 export const metadata: Metadata = {
   title: { absolute: title }, description, alternates: { canonical: path },
-  openGraph: { title, description, url: absoluteUrl(path), type: "website", images: [{ url: absoluteUrl("/images/products/gradient-accent-office-carpet-tiles/01-main-design.webp"), alt: "Gray carpet design with colored gradient accents; edited illustration" }] },
-  twitter: { card: "summary_large_image", title, description, images: [absoluteUrl("/images/products/gradient-accent-office-carpet-tiles/01-main-design.webp")] },
+  openGraph: { title, description, url: absoluteUrl(path), type: "website", images: [{ url: absoluteUrl("/images/products/gradient-accent-office-carpet-tiles/01-main-design-v2.webp"), alt: "AI-edited reception planning visualization with a gray textured carpet floor and a green gradient accent, floor-to-ceiling glazing and neutral lounge furniture." }] },
+  twitter: { card: "summary_large_image", title, description, images: [absoluteUrl("/images/products/gradient-accent-office-carpet-tiles/01-main-design-v2.webp")] },
 };
 export default function Page() {
   if (!product) notFound();
@@ -65,7 +65,7 @@ export default function Page() {
     <nav aria-label="Product breadcrumb" className="border-b border-border bg-surface py-4"><div className="container-fox text-sm text-muted"><Link className="underline" href="/products/carpet-tiles">Carpet Tiles</Link><span aria-hidden="true"> / </span><span>Gradient Accent Office Tiles</span></div></nav>
     <section className="py-10 md:py-16"><div className="container-fox grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
       <div className="min-w-0"><ProductGallery mainImage={product.image} gallery={product.gallery?.slice(0, 4)} productName={product.name} /><p className="mt-4 text-xs leading-6 text-muted">{imageNote}</p></div>
-      <div className="min-w-0"><p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent">VCARPETS · Office flooring selection</p><h1 className="text-3xl font-black leading-tight text-primary md:text-4xl">50×50 Gradient Accent Office Carpet Tiles</h1><p className="mt-5 leading-8 text-muted">A gray textured ground with colored gradient accents creates a distinctive direction for office floors. This square carpet tile combines a polypropylene loop-pile face with bitumen backing. Review the color transition, adjoining edges and intended use before approving a physical sample.</p>
+      <div className="min-w-0"><p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent">VCARPETS · Gradient accent office tiles</p><h1 className="text-3xl font-black leading-tight text-primary md:text-4xl">50×50 cm Commercial PP Loop Pile Carpet Tiles with Bitumen Backing for Offices</h1><p className="mt-5 leading-8 text-muted">A gray textured ground with colored gradient accents creates a distinctive direction for office floors. This square carpet tile combines a polypropylene loop-pile face with bitumen backing. Review the color transition, adjoining edges and intended use before approving a physical sample.</p>
         <div className="mt-6 grid grid-cols-2 gap-3">{[["Format", "50×50 cm squares"], ["Face / backing", "PP / bitumen"], ["FOB price", "Request a project quotation"], ["FOB port", "Tianjin Port, China"]].map(([label, value]) => <div key={label} className="border border-border bg-surface p-4"><p className="text-xs text-muted">{label}</p><p className="mt-1 font-bold text-primary">{value}</p></div>)}</div>
         <Link href={quoteHref} className="mt-6 flex min-h-12 items-center justify-center rounded-sm bg-[#d9480f] px-6 py-4 text-center font-bold text-white hover:bg-[#b83a08]">Request a Project Quotation</Link><p className="mt-3 text-sm leading-6 text-muted">Send your area, preferred accent color, destination and target receiving date. MOQ, sample arrangements and lead time are confirmed by project.</p><a href={`mailto:${brandInfo.email}?subject=${encodeURIComponent("Gradient accent office carpet tile inquiry")}`} className="mt-4 inline-flex min-h-11 items-center font-semibold text-accent underline">Email {brandInfo.email}</a>
       </div>
