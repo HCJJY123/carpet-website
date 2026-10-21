@@ -1,23 +1,27 @@
 {
-  "task": "Deepen the existing office carpet tile layout Blog with pattern distinctions, original diagrams and a procurement brief, plus one contextual Gray Line product entry",
-  "approvedBy": "Owner daily B2B growth/content instruction and explicit standing authorization for scoped tested PR/Preview/merge/production release. Current run follows completed Clarity conversion release PR91.",
-  "approvedCategories": [],
+  "task": "Add an evidence-scoped raised-access-floor carpet tile procurement guide and one category entry, with original coordination illustration",
+  "approvedBy": "Owner daily B2B growth task and standing scoped reversible PR/Preview/tested production release authorization",
+  "approvedCategories": [
+    "seo-global"
+  ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "ops/layout-pattern-growth-20261020.md",
+    "ops/raised-floor-growth-20261021.md",
     "ops/indexnow-urls.json",
-    "src/lib/blog-posts/office-carpet-tile-layout-approval-bulk-order.ts",
-    "src/app/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles/page.tsx",
-    "public/images/blog-series/buyer-guides-20261020/layout-monolithic-quarter-turn.svg",
-    "public/images/blog-series/buyer-guides-20261020/layout-brick-ashlar.svg"
+    "keyword-map.csv",
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/carpet-tiles-raised-access-floor-procurement-guide.ts",
+    "src/app/products/carpet-tiles/page.tsx",
+    "public/images/blog-series/buyer-guides-20261021/raised-floor-approval-records.svg",
+    "public/qa-raised-floor-20261021.html"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "bccd7d007199a2c2f6c57acbac88f5b9968e6a07",
+  "rollbackCommit": "4ac5341bbc888feb78a1f5699315495c5efa1bf5",
   "affectedUrls": [
-    "/blog/office-carpet-tile-layout-approval-bulk-order",
-    "/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles"
+    "/blog/carpet-tiles-raised-access-floor-procurement-guide",
+    "/products/carpet-tiles"
   ],
-  "notes": "Existing URL/keyword owner and October12 original publication preserved. New comparison/approval/quote decision information supported by official product-scoped installation references; no general installation permission, performance, price, sample-format or delivery promise. Two original geometry-only SVGs, existing illustrative photos retained. Add one contextual product paragraph/link. Existing Blog mechanism handles dateModified and sitemap; no global SEO generator change. Temporary Preview QA file removed from final tree. IndexNow manifest only materially updated article. No forms/API/WhatsApp/tracking/consent changes; preserve PR90/91; draftPR88 excluded."
+  "notes": "New distinct procurement topic, existing general concrete/adhesive/layout guides preserved. Product suitability remains project-confirmed; no manufacturer limits or certification transferred. No forms/WhatsApp/tracking/global SEO generator changes. Existing Blog route and sitemap mechanism; new keyword ownership. SEO-global only temporary noindex QA fixture; remove before final tree. Single new canonical IndexNow URL after verified production. Preserve PR90/91/92, exclude open draft PR88."
 }
