@@ -25,6 +25,74 @@ export const brandInfo = {
 
 export const products: Product[] = [
 {
+  "id": "balance-polypropylene-carpet-tiles",
+  "name": "Balance 50×50 cm Polypropylene Loop Pile Carpet Tiles with PVC Backing for Home & Office",
+  "category": "carpet-tiles",
+  "description": "Balance machine-made polypropylene carpet tiles for home and office floor planning. Review samples and request a project quotation, FOB Tianjin Port.",
+  "longDescription": "Explore the Balance polypropylene carpet tile collection for coordinated home and office interiors. Explore edited design references and confirm the 50×50 cm format, PVC backing, installation method and performance requirements with a physical sample and written specification.",
+  "image": "/images/products/balance-polypropylene-carpet-tiles/01-main-design.webp",
+  "imageAlt": "Charcoal, gray and lime-accent Balance carpet in a redesigned office reception planning visualization.",
+  "gallery": [
+  {
+    "src": "/images/products/balance-polypropylene-carpet-tiles/01-main-design.webp",
+    "alt": "Charcoal, gray and lime-accent Balance carpet in a redesigned office reception planning visualization."
+  },
+  {
+    "src": "/images/products/balance-polypropylene-carpet-tiles/02-main-interior.webp",
+    "alt": "Charcoal, gray and lime-accent Balance carpet in an arched reading lounge planning visualization."
+  },
+  {
+    "src": "/images/products/balance-polypropylene-carpet-tiles/03-main-layout.webp",
+    "alt": "Balance charcoal and lime-accent carpet in a bright collaborative office planning visualization."
+  },
+  {
+    "src": "/images/products/balance-polypropylene-carpet-tiles/04-main-space.webp",
+    "alt": "Balance charcoal, gray and lime carpet in a home study planning visualization."
+  },
+  {
+    "src": "/images/products/balance-polypropylene-carpet-tiles/05-detail-neutral-samples.webp",
+    "alt": "Six overlapping neutral and blue striped Balance carpet samples on an edited material studio background."
+  },
+  {
+    "src": "/images/products/balance-polypropylene-carpet-tiles/06-detail-color-samples.webp",
+    "alt": "Overlapping multicolor striped Balance carpet samples on an edited design workbench."
+  },
+  {
+    "src": "/images/products/balance-polypropylene-carpet-tiles/07-detail-texture.webp",
+    "alt": "Close planning visualization of charcoal, gray and lime-accent carpet surface texture."
+  }
+],
+  "moq": "Confirm selected design and quantity",
+  "moqTiers": {
+    "sample": "Confirm format, cost and timing",
+    "trialOrder": "Confirm selected design and quantity",
+    "project": "Confirm selected design and quantity"
+  },
+  "leadTime": "Approximately 25 days reference; confirm quantity and season",
+  "spec": {
+    "material": "Polypropylene (PP)",
+    "size": "50 × 50 cm",
+    "colors": []
+  },
+  "technicalSpecs": {
+    "fireRating": "Request construction-specific documents",
+    "trafficClass": "Confirm against the intended application",
+    "fiber": "Polypropylene (PP)",
+    "yarnSystem": "Machine-made loop pile",
+    "backing": "PVC",
+    "pileWeight": "Request nominated product sheet",
+    "totalThickness": "Request nominated product sheet",
+    "antistatic": "Request evidence if required"
+  },
+  "features": [
+    "Balance collection",
+    "50×50 cm PP loop pile",
+    "PVC backing",
+    "Sample-led specification",
+    "FOB Tianjin Port"
+  ]
+},
+{
   "id": "gradient-accent-office-carpet-tiles",
   "name": "50×50 cm Commercial PP Loop Pile Carpet Tiles with Bitumen Backing for Offices",
   "category": "carpet-tiles",

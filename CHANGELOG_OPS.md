@@ -1436,3 +1436,14 @@ Pre-production verification passed for PR95 application commit9647ba576c07f27da4
 - Category name, product options, Product schema source and RFQ prefill aligned. Preview review required before merge.
 - Local validation: ops:check, lint, build, 39 HTTP/semantic checks and ops:verify passed; no new lint warnings.
 - Owner requested first main-image scene revision: updated to a clearly different reception visualization, preserving gray/green carpet style. Versioned asset avoids stale cache; other six images unchanged. Final-head Preview QA required.
+
+
+## 2026-10-21 — Balance polypropylene carpet tile product
+
+- Added an independent Balance collection product page and visible image/title category card.
+- Preserved existing products and URLs; reused the established quotation route.
+- Added edited-image disclosure, buyer guides, labelled planning reference, FOB quotation wording and Tianjin Port.
+- Verification and release details: `ops/balance-product-20261021.md`.
+- Rollback baseline: `bf8b5de7bd6154e4e99aee54cbcf2301d255d641`.
+
+Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7b24ea51d4`: Vercel Preview READY, required CI success, public Preview ops:verify and 21 HTTP/asset/link/sitemap checks passed. Independent browser checks passed four-image switching, seven image loads, FAQ expand/collapse, full product quotation prefill without submission, back navigation and category-card return. Desktop 1180 CSS px and ordinary narrow window approximately 502 CSS px had no horizontal overflow; this is narrow desktop-browser QA, not mobile-UA emulation.

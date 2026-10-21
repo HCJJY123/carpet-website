@@ -32,6 +32,7 @@ export const generatedStaticSitemapRoutes = [
   "/products",
   "/products/carpet-tiles",
   "/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles",
+  "/products/carpet-tiles/balance-polypropylene-carpet-tiles",
   "/products/carpet-tiles/commercial-nylon-tiles",
   "/products/carpet-tiles/ecocore-pe-backing-carpet-tiles",
   "/products/carpet-tiles/education-school-carpet-tiles",
