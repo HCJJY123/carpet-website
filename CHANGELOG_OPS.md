@@ -1435,3 +1435,4 @@ Pre-production verification passed for PR95 application commit9647ba576c07f27da4
 - Permanent URL, seven images, verified specifications and quotation-only FOB terms preserved; no nylon/bestseller claims.
 - Category name, product options, Product schema source and RFQ prefill aligned. Preview review required before merge.
 - Local validation: ops:check, lint, build, 39 HTTP/semantic checks and ops:verify passed; no new lint warnings.
+- Owner requested first main-image scene revision: updated to a clearly different reception visualization, preserving gray/green carpet style. Versioned asset avoids stale cache; other six images unchanged. Final-head Preview QA required.

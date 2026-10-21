@@ -1,6 +1,6 @@
 {
-  "task": "Refine only the newly published gradient accent product title using verified PP loop pile, square format, bitumen backing and office application",
-  "approvedBy": "Owner title improvement request Sentinel_47ee816f61d081919c2caeacd1450b53 and original test-then-publish request Sentinel_aade0a9ae9008191b9449291b2e0827b",
+  "task": "Refine only the newly published gradient accent product title using verified PP loop pile, square format, bitumen backing and office application; revise only the first main-image background and scene while preserving the carpet texture, pattern and colors",
+  "approvedBy": "Owner title improvement request Sentinel_47ee816f61d081919c2caeacd1450b53 and original test-then-publish request Sentinel_aade0a9ae9008191b9449291b2e0827b; owner first-image scene revision Sentinel_5ad57922ab4c8191bc700065519e4290",
   "approvedCategories": [],
   "allowedPaths": [
     "ops/change-request.json",
@@ -9,7 +9,8 @@
     "ops/indexnow-urls.json",
     "src/lib/data.ts",
     "src/app/products/carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/gradient-accent-office-carpet-tiles/page.tsx"
+    "src/app/products/carpet-tiles/gradient-accent-office-carpet-tiles/page.tsx",
+    "public/images/products/gradient-accent-office-carpet-tiles/01-main-design-v2.webp"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
@@ -19,5 +20,5 @@
     "/products/carpet-tiles",
     "/products"
   ],
-  "notes": "Title-only refinement. Preserve slug, canonical, verified specifications, all seven images, links and global metadata behavior. No new product or unsupported claims. Preview and independent desktop/narrow QA before merge."
+  "notes": "Title and first-image scene refinement only. Preserve slug, canonical, verified specifications, the other six images; first main image gets a versioned replacement without deleting its old asset, links and global metadata behavior. No new product or unsupported claims. Preview and independent desktop/narrow QA before merge."
 }

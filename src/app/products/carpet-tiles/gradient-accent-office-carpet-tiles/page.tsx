@@ -40,8 +40,8 @@ const resources = [
 ];
 export const metadata: Metadata = {
   title: { absolute: title }, description, alternates: { canonical: path },
-  openGraph: { title, description, url: absoluteUrl(path), type: "website", images: [{ url: absoluteUrl("/images/products/gradient-accent-office-carpet-tiles/01-main-design.webp"), alt: "Gray carpet design with colored gradient accents; edited illustration" }] },
-  twitter: { card: "summary_large_image", title, description, images: [absoluteUrl("/images/products/gradient-accent-office-carpet-tiles/01-main-design.webp")] },
+  openGraph: { title, description, url: absoluteUrl(path), type: "website", images: [{ url: absoluteUrl("/images/products/gradient-accent-office-carpet-tiles/01-main-design-v2.webp"), alt: "AI-edited reception planning visualization with a gray textured carpet floor and a green gradient accent, floor-to-ceiling glazing and neutral lounge furniture." }] },
+  twitter: { card: "summary_large_image", title, description, images: [absoluteUrl("/images/products/gradient-accent-office-carpet-tiles/01-main-design-v2.webp")] },
 };
 export default function Page() {
   if (!product) notFound();
