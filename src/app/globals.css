@@ -34,7 +34,7 @@
 
 @utility btn-fox-orange {
   display: inline-block;
-  background-color: var(--color-accent);
+  background-color: #825b23;
   color: white;
   font-weight: 700;
   padding: 0.75rem 1.5rem;
@@ -46,7 +46,7 @@
   cursor: pointer;
   text-decoration: none;
   &:hover {
-    background-color: var(--color-accent-light);
+    background-color: #6b491a;
   }
 }
 

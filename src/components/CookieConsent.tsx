@@ -46,7 +46,7 @@ export default function CookieConsent() {
     >
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-[10px] font-black uppercase tracking-[0.18em] text-accent">VCARPETS privacy choices</p>
+          <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#825b23]">VCARPETS privacy choices</p>
           <h2 className="mt-1 text-sm font-black uppercase tracking-[0.08em] text-primary">
             {isPreferencesOpen ? "Cookie Preferences" : "Cookies and tracking"}
           </h2>
@@ -103,7 +103,7 @@ export default function CookieConsent() {
       )}
 
       <p className="mt-3 text-[11px] font-medium leading-5 text-muted">
-        You can change your choice at any time. Read our <Link href="/privacy-policy" className="font-bold text-accent hover:text-primary">Privacy Policy</Link> and <Link href="/cookie-policy" className="font-bold text-accent hover:text-primary">Cookie Policy</Link>.
+        You can change your choice at any time. Read our <Link href="/privacy-policy" className="font-bold text-[#825b23] hover:text-primary">Privacy Policy</Link> and <Link href="/cookie-policy" className="font-bold text-[#825b23] hover:text-primary">Cookie Policy</Link>.
       </p>
     </section>
   );

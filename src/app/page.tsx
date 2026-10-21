@@ -2,9 +2,10 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { productCategories as categories, caseStudies, certifications, products } from "@/lib/data";
 import { blogPosts } from "@/lib/blog-data";
-import ProductImage from "@/components/ProductImage";
+import ProductImage from "@/components/ServerProductImage";
 import { getContactBridgeUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 import { productPath } from "@/lib/seo";
+import { responsiveImageManifest } from "@/lib/responsive-image-manifest";
 import HomeHeroCarousel from "@/components/HomeHeroCarousel";
 import AnswerFirst from "@/components/AnswerFirst";
 import ConversionLiftPanel from "@/components/ConversionLiftPanel";
@@ -45,7 +46,16 @@ export default function Home() {
         fetchPriority="high"
         type="image/avif"
       />
-      <HomeHeroCarousel whatsappUrl={whatsappUrl} />
+      <HomeHeroCarousel
+        whatsappUrl={whatsappUrl}
+        responsiveImages={Object.fromEntries(
+          [
+            "/images/home/hero-home.webp",
+            "/images/home/hero-hotel-corridor-carpet.webp",
+            "/images/home/hero-custom-wool-rug.webp",
+          ].map((src) => [src, responsiveImageManifest[src]])
+        )}
+      />
 
       <AnswerFirst
         eyebrow="Commercial Carpet Sourcing Answer"
@@ -107,7 +117,7 @@ export default function Home() {
             <p className="text-xs font-bold text-primary uppercase tracking-[0.2em]">
               Primary Markets: the Philippines / Malaysia / Bulgaria / Australia / New Zealand / South Africa / UAE
             </p>
-            <div className="flex flex-wrap items-center gap-4 opacity-60 md:gap-8">
+            <div className="flex flex-wrap items-center gap-4 opacity-80 md:gap-8">
               {certifications.map((cert) => (
                 <span key={cert.name} className="text-[10px] font-black text-primary uppercase tracking-widest">{cert.name}</span>
               ))}
@@ -161,7 +171,7 @@ export default function Home() {
           <div className="container-fox py-10">
             <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
-                <p className="mb-2 text-[10px] font-black uppercase tracking-[0.24em] text-accent">High-Intent Hospitality Product</p>
+                <p className="mb-2 text-[10px] font-black uppercase tracking-[0.24em] text-[#825b23]">High-Intent Hospitality Product</p>
                 <h2 className="mb-3 text-2xl font-black uppercase leading-tight text-primary md:text-3xl">
                   3D Printed Nylon Carpet for Hotel Projects
                 </h2>
@@ -212,7 +222,7 @@ export default function Home() {
               ].map((stat) => (
                 <div key={stat.label} className="bg-surface p-8 border border-border hover:border-primary transition-all group">
                   <p className="text-xs font-bold text-muted uppercase tracking-widest mb-2">{stat.label}</p>
-                  <p className="text-3xl font-black text-primary mb-1 group-hover:text-accent transition-colors">{stat.value}</p>
+                  <p className="text-3xl font-black text-primary mb-1 group-hover:text-[#825b23] transition-colors">{stat.value}</p>
                   <p className="text-[10px] font-bold text-muted uppercase tracking-[0.2em]">{stat.desc}</p>
                 </div>
               ))}
@@ -249,7 +259,7 @@ export default function Home() {
                   {getCaseSeoProfile(cs.id).cardTitle}
                 </h3>
                 <div className="mt-auto">
-                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary/50 group-hover:text-primary transition-colors">
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary/75 group-hover:text-primary transition-colors">
                     Technical Overview →
                   </span>
                 </div>
@@ -286,7 +296,7 @@ export default function Home() {
           <div className="mt-10 border-l-4 border-accent bg-white p-6 md:p-8">
             <h3 className="text-xl font-black text-primary">Commercial Carpet Sourcing Directory</h3>
             <p className="mt-2 max-w-3xl text-sm leading-7 text-muted">Compare product types, specifications, buyer questions and RFQ requirements before requesting a project quote.</p>
-            <Link href="/blog/commercial-carpet-sourcing-directory" className="mt-4 inline-flex min-h-11 items-center font-bold text-accent underline">Explore the buyer directory</Link>
+            <Link href="/blog/commercial-carpet-sourcing-directory" className="mt-4 inline-flex min-h-11 items-center font-bold text-[#825b23] underline">Explore the buyer directory</Link>
           </div>
         </div>
       </section>
@@ -302,7 +312,7 @@ export default function Home() {
             Start with the RFQ checklist if you want a quotation that matches the real project scope, documents, sample approval and spare-stock plan.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers" className="inline-block rounded-sm bg-accent px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-2xl transition-all hover:bg-accent/90 md:px-12 md:py-6 md:tracking-[0.22em]">
+            <Link href="/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers" className="inline-block rounded-sm bg-[#825b23] px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-2xl transition-all hover:bg-[#6b491a] md:px-12 md:py-6 md:tracking-[0.22em]">
               Open RFQ Checklist
             </Link>
             <Link href="/contact?product=Commercial%20Carpet%20Tiles&source=%2Fblog%2Fcommercial-carpet-tile-rfq-checklist-b2b-buyers#quote-form" className="inline-block rounded-sm bg-white px-8 py-5 text-sm font-bold uppercase tracking-[0.16em] text-primary shadow-2xl transition-all hover:bg-gray-100 md:px-12 md:py-6 md:tracking-[0.22em]">

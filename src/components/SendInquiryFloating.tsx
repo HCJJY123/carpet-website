@@ -3,9 +3,13 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { products, productCategories } from "@/lib/data";
 import { isLocalizedCampaignPath } from "@/lib/localized-paths";
 import { getPathLocale, type SiteLocale } from "@/lib/site-locales";
+
+type InquiryDirectory = {
+  products: { id: string; name: string; category: string }[];
+  productCategories: { id: string; name: string }[];
+};
 
 const quoteLabels: Record<SiteLocale, string> = {
   en: "Request Quote",
@@ -19,16 +23,16 @@ const quoteLabels: Record<SiteLocale, string> = {
   ko: "견적 요청",
 };
 
-export default function SendInquiryFloating() {
+export default function SendInquiryFloating(directory: InquiryDirectory) {
   const pathname = usePathname();
 
   if (pathname === "/contact" || pathname.startsWith("/contact/")) return null;
   if (isLocalizedCampaignPath(pathname)) return null;
 
-  return <InquiryFloatingLink showOnMobile />;
+  return <InquiryFloatingLink showOnMobile {...directory} />;
 }
 
-function InquiryFloatingLink({ showOnMobile }: { showOnMobile: boolean }) {
+function InquiryFloatingLink({ showOnMobile, products, productCategories }: InquiryDirectory & { showOnMobile: boolean }) {
   const pathname = usePathname();
   const [showMobileCta, setShowMobileCta] = useState(false);
   const locale = getPathLocale(pathname) ?? "en";
