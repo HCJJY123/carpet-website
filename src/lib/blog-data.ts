@@ -1,3 +1,4 @@
+import { raisedAccessFloorProcurementGuide } from "@/lib/blog-posts/carpet-tiles-raised-access-floor-procurement-guide";
 import { officeCarpetTileLayoutApprovalGuide } from "@/lib/blog-posts/office-carpet-tile-layout-approval-bulk-order";
 import { hotelGuestroomCarpetRoomTypeScheduleGuide } from "@/lib/blog-posts/hotel-guestroom-carpet-room-type-order-schedule";
 import { customWoolRugsHomeDecorWholesaleGuide } from "@/lib/blog-posts/custom-wool-rugs-home-decor-wholesale-prototype";
@@ -86,6 +87,7 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  raisedAccessFloorProcurementGuide,
   commercialCarpetFobTianjinPortBuyerChecklist,
   officeCarpetTileLayoutApprovalGuide,
   hotelGuestroomCarpetRoomTypeScheduleGuide,
