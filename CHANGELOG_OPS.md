@@ -1447,3 +1447,9 @@ Pre-production verification passed for PR95 application commit9647ba576c07f27da4
 - Rollback baseline: `bf8b5de7bd6154e4e99aee54cbcf2301d255d641`.
 
 Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7b24ea51d4`: Vercel Preview READY, required CI success, public Preview ops:verify and 21 HTTP/asset/link/sitemap checks passed. Independent browser checks passed four-image switching, seven image loads, FAQ expand/collapse, full product quotation prefill without submission, back navigation and category-card return. Desktop 1180 CSS px and ordinary narrow window approximately 502 CSS px had no horizontal overflow; this is narrow desktop-browser QA, not mobile-UA emulation.
+
+## 2026-10-21: Homepage PageSpeed and accessibility
+
+- Scope: homepage image-manifest payload, color contrast and carousel touch target sizing. No content, lead flow, consent, analytics or indexing changes.
+- Baseline official PSI: mobile 83/93/100/100; desktop 99/93/100/100 (performance/accessibility/best-practices/SEO).
+- Rollback: 8b4c1b7f189dfa89560304148cef89b9686ca5b0. Validation and Preview are pending; production has not been changed by this branch.

@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Product Links */}
           <div>
-            <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.08em] text-[#627D98]">
+            <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.08em] text-[#a9bacb]">
               Collections
             </h3>
             <ul className="space-y-4">
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.08em] text-[#627D98]">
+            <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.08em] text-[#a9bacb]">
               Company
             </h3>
             <ul className="space-y-4">
@@ -71,7 +71,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.08em] text-[#627D98]">
+            <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.08em] text-[#a9bacb]">
               Legal
             </h3>
             <ul className="space-y-4">
@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div>
-            <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.08em] text-[#627D98]">
+            <h3 className="mb-8 text-sm font-bold uppercase tracking-[0.08em] text-[#a9bacb]">
               Technical Support
             </h3>
             <ul className="space-y-6">
@@ -105,7 +105,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   data-whatsapp-placement="footer_support"
                   data-whatsapp-intent="footer_project_inquiry"
-                  className="inline-flex items-center justify-center rounded-sm bg-[#25D366] px-4 py-3 text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#1ebe5d]"
+                  className="inline-flex items-center justify-center rounded-sm bg-[#117d3b] px-4 py-3 text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[#0e6630]"
                   aria-label="Send VCARPETS your project details on WhatsApp"
                 >
                   WhatsApp Project Support
@@ -113,7 +113,7 @@ export default function Footer() {
                 <Link href="/contact" className="text-[13px] font-semibold tracking-[0.04em] text-gray-300 transition-colors hover:text-white">
                   Leave project details →
                 </Link>
-                <p className="text-xs leading-relaxed text-gray-500">
+                <p className="text-xs leading-relaxed text-gray-300">
                   Send country, area, product type, and target delivery date for a faster quotation.
                 </p>
               </li>
@@ -124,12 +124,12 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/5 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
-            <p className="text-xs font-normal tracking-normal text-white/40">
+            <p className="text-xs font-normal tracking-normal text-white/70">
               &copy; {new Date().getFullYear()} Tianjin Vcarpets Global Commercial Carpet Co., Ltd.
             </p>
-            <p className="mt-2 text-xs font-medium tracking-normal text-white/45">Established 2005</p>
+            <p className="mt-2 text-xs font-medium tracking-normal text-white/70">Established 2005</p>
           </div>
-          <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 opacity-30">
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 opacity-75">
              <span className="text-xs font-semibold uppercase tracking-[0.04em] text-white">Tianjin Factory Direct</span>
              <span className="text-xs font-semibold uppercase tracking-[0.04em] text-white">Project Document Review</span>
           </div>

@@ -1,26 +1,31 @@
 {
-  "task": "Publish an independent Balance polypropylene carpet tile product page with four edited main images and three edited detail images, visible category card, buyer guides, labelled planning reference and FOB Tianjin Port quotation information",
-  "approvedBy": "Owner request Sentinel_1792f1b6f3608191ae6045be60062026: test then publish and deliver product master package",
-  "approvedCategories": [],
+  "task": "Improve official homepage PageSpeed mobile and desktop performance and accessibility without changing business content or conversion behavior",
+  "approvedBy": "Owner Sentinel_2502fb3185f8819197c2d24e53852de2 requests all five websites optimized on PageSpeed; owner approved submissions, records and deployment after testing",
+  "approvedCategories": [
+    "navigation",
+    "conversion"
+  ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "ops/balance-product-20261021.md",
-    "ops/indexnow-urls.json",
-    "src/lib/data.ts",
-    "src/lib/generated-static-sitemap-routes.ts",
-    "src/app/products/carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/balance-polypropylene-carpet-tiles/**",
-    "public/images/products/balance-polypropylene-carpet-tiles/**",
-    "keyword-map.csv"
+    "src/app/page.tsx",
+    "src/app/globals.css",
+    "src/components/ServerProductImage.tsx",
+    "src/components/ProductImage.tsx",
+    "src/components/ImageRenderer.tsx",
+    "src/components/HomeHeroCarousel.tsx",
+    "src/components/Footer.tsx",
+    "src/components/AnswerFirst.tsx",
+    "src/components/ConversionLiftPanel.tsx",
+    "src/components/WhatsAppFloating.tsx",
+    "src/components/Header.tsx",
+    "src/components/CookieConsent.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "bf8b5de7bd6154e4e99aee54cbcf2301d255d641",
+  "rollbackCommit": "8b4c1b7f189dfa89560304148cef89b9686ca5b0",
   "affectedUrls": [
-    "/products/carpet-tiles/balance-polypropylene-carpet-tiles",
-    "/products/carpet-tiles",
-    "/products"
+    "/"
   ],
-  "notes": "Preserve existing product URLs and content. No invented technical parameters or project claims. Use existing conversion and sitemap behavior. Preview and independent desktop/mobile checks before merge."
+  "notes": "Move homepage image manifest resolution to the server, preserve all image fallback and carousel interactions; improve contrast and target sizes. No analytics, consent, form submission, URL/indexing, price/MOQ or other content changes. Footer and WhatsApp changes are color-only. Preview, checks and mobile/desktop QA required before PR merge. Header and cookie notice changes are color-only; consent and menu behavior remain unchanged."
 }

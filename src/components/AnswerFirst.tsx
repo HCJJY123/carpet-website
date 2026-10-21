@@ -44,7 +44,7 @@ export default function AnswerFirst({
       <div className="container-fox py-12 md:py-16 lg:pr-36">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
-            <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-accent">{eyebrow}</p>
+            <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#825b23]">{eyebrow}</p>
             <h2 id="answer-first-title" className="text-2xl font-black uppercase leading-tight text-primary md:text-4xl">
               {title}
             </h2>
@@ -72,7 +72,7 @@ export default function AnswerFirst({
               <dl className="mt-3 grid gap-px border border-border bg-border sm:grid-cols-3">
                 {moq.map((tier) => (
                   <div key={tier.label} className="bg-white px-4 py-4">
-                    <dt className="text-[9px] font-black uppercase tracking-[0.14em] text-accent">{tier.label}</dt>
+                    <dt className="text-[9px] font-black uppercase tracking-[0.14em] text-[#825b23]">{tier.label}</dt>
                     <dd className="mt-2 text-xs font-bold leading-relaxed text-primary">{tier.value}</dd>
                   </div>
                 ))}

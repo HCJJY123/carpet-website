@@ -37,7 +37,7 @@ export default function ConversionLiftPanel({
       <div className={`container-fox ${compact ? "py-7" : "py-10 md:py-12"}`}>
         <div className="grid gap-7 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#C8752A]">{eyebrow}</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#96501b]">{eyebrow}</p>
             <h2 className={`mt-3 font-black uppercase leading-tight text-primary ${compact ? "text-2xl md:text-3xl" : "text-3xl md:text-4xl"}`}>
               {title}
             </h2>
@@ -53,13 +53,13 @@ export default function ConversionLiftPanel({
               ))}
             </div>
             <div className="mt-4 grid gap-3 sm:grid-cols-3">
-              <Link href={quoteHref} className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[#C8752A] px-5 py-3 text-center text-xs font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-[#AD6424]">
+              <Link href={quoteHref} className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[#a65317] px-5 py-3 text-center text-xs font-black uppercase tracking-[0.12em] text-white transition-colors hover:bg-[#AD6424]">
                 Request Quote
               </Link>
               <a
                 href={mailtoHref(product)}
                 data-email-placement="conversion_lift_panel"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-sm border border-primary/20 bg-white px-5 py-3 text-center text-xs font-black uppercase tracking-[0.12em] text-primary transition-colors hover:border-[#C8752A] hover:text-[#C8752A]"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-sm border border-primary/20 bg-white px-5 py-3 text-center text-xs font-black uppercase tracking-[0.12em] text-primary transition-colors hover:border-[#C8752A] hover:text-[#96501b]"
               >
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="3" y="5" width="18" height="14" rx="2" />

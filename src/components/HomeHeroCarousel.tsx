@@ -3,10 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
-import { responsiveImageManifest } from "@/lib/responsive-image-manifest";
+import type { ResponsiveImageEntry } from "@/lib/responsive-image-manifest";
 
 type HomeHeroCarouselProps = {
   whatsappUrl: string;
+  responsiveImages: Record<string, ResponsiveImageEntry>;
 };
 
 const slides = [
@@ -73,13 +74,14 @@ function HeroBackgroundImage({
   alt,
   priority,
   objectPosition,
+  responsive,
 }: {
+  responsive?: ResponsiveImageEntry;
   src: string;
   alt: string;
   priority: boolean;
   objectPosition: string;
 }) {
-  const responsive = responsiveImageManifest[src];
 
   if (!responsive) {
     return (
@@ -118,7 +120,7 @@ function HeroBackgroundImage({
   );
 }
 
-export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps) {
+export default function HomeHeroCarousel({ whatsappUrl, responsiveImages }: HomeHeroCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [renderedSlides, setRenderedSlides] = useState(() => new Set([0]));
   const [paused, setPaused] = useState(false);
@@ -344,6 +346,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
             aria-hidden={index !== activeIndex}
           >
             <HeroBackgroundImage
+              responsive={responsiveImages[slide.image]}
               src={slide.image}
               alt={index === activeIndex ? slide.alt : ""}
               priority={index === 0}
@@ -381,7 +384,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
               href="/contact#quote-form"
               data-home-primary-inquiry
               data-carousel-control
-              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm bg-[#C8752A] px-6 py-3.5 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-lg transition-colors hover:bg-[#AD6424] md:min-h-14 md:px-8 md:py-4 md:text-sm"
+              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm bg-[#a65317] px-6 py-3.5 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-lg transition-colors hover:bg-[#AD6424] md:min-h-14 md:px-8 md:py-4 md:text-sm"
             >
               Send Project Inquiry
             </Link>
@@ -397,7 +400,7 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
               target="_blank"
               rel="noopener noreferrer"
               data-carousel-control
-              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm bg-[#25D366] px-6 py-3.5 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-lg transition-colors hover:bg-[#1ebe5d] md:min-h-14 md:px-8 md:py-4 md:text-sm"
+              className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-sm bg-[#117d3b] px-6 py-3.5 text-center text-[13px] font-bold uppercase tracking-[0.06em] text-white shadow-lg transition-colors hover:bg-[#0e6630] md:min-h-14 md:px-8 md:py-4 md:text-sm"
             >
               WhatsApp Project Support
             </a>
@@ -409,14 +412,14 @@ export default function HomeHeroCarousel({ whatsappUrl }: HomeHeroCarouselProps)
               </div>
             ))}
           </div>
-          <div className="pointer-events-auto mt-5 flex h-5 items-center justify-center gap-1 sm:justify-start" role="group" aria-label="Choose banner">
+          <div className="pointer-events-auto mt-5 flex min-h-11 items-center justify-center gap-1 sm:justify-start" role="group" aria-label="Choose banner">
             {slides.map((slide, index) => (
               <button
                 key={slide.image}
                 type="button"
                 onClick={() => showSlide(index)}
                 data-carousel-control
-                className="group flex h-5 w-8 items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/80"
+                className="group flex h-11 w-11 items-center justify-center focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/80"
                 aria-label={`Show banner ${index + 1}`}
                 aria-current={index === activeIndex ? "true" : undefined}
               >

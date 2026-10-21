@@ -294,7 +294,7 @@ export default function Header() {
           <Link
             href="/contact#quote-form"
             onClick={() => setEmailPanelOpen(false)}
-            className="rounded-lg bg-[#C8752A] px-4 py-3 text-center text-xs font-black uppercase tracking-[0.08em] text-white"
+            className="rounded-lg bg-[#a65317] px-4 py-3 text-center text-xs font-black uppercase tracking-[0.08em] text-white"
           >
             Contact Form
           </Link>
@@ -387,14 +387,14 @@ export default function Header() {
           </nav>
 
           <div className="hidden items-center justify-end gap-3 min-[1420px]:flex min-[1536px]:translate-x-4 min-[1536px]:gap-5 min-[1900px]:translate-x-6 min-[1900px]:gap-6">
-            <Link href="/contact#quote-form" onClick={(event) => handleQuoteFormNavigation(event, "/contact#quote-form")} className="whitespace-nowrap rounded-lg bg-[#C8752A] px-6 py-3 text-[13px] font-bold uppercase tracking-[0.08em] text-white shadow-[0_3px_10px_rgba(72,43,18,0.16)] transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_5px_14px_rgba(72,43,18,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2">Send Inquiry</Link>
+            <Link href="/contact#quote-form" onClick={(event) => handleQuoteFormNavigation(event, "/contact#quote-form")} className="whitespace-nowrap rounded-lg bg-[#a65317] px-6 py-3 text-[13px] font-bold uppercase tracking-[0.08em] text-white shadow-[0_3px_10px_rgba(72,43,18,0.16)] transition-[transform,background-color,box-shadow] hover:-translate-y-0.5 hover:bg-[#AD6424] hover:shadow-[0_5px_14px_rgba(72,43,18,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8752A] focus-visible:ring-offset-2">Send Inquiry</Link>
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               data-whatsapp-placement="header"
               data-whatsapp-intent="project_support"
-              className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#25D366]/30 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#168a42] transition-colors hover:border-[#25D366]/55 hover:bg-[#25D366]/[0.06] min-[1536px]:px-[13px] min-[1536px]:py-[9px] min-[1536px]:text-xs"
+              className="group inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#25D366]/30 bg-white px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-[#10773e] transition-colors hover:border-[#25D366]/55 hover:bg-[#25D366]/[0.06] min-[1536px]:px-[13px] min-[1536px]:py-[9px] min-[1536px]:text-xs"
               aria-label="Contact VCARPETS on WhatsApp Business"
             >
               <WhatsAppIcon className="h-3.5 w-3.5 min-[1536px]:h-4 min-[1536px]:w-4" />
@@ -437,7 +437,7 @@ export default function Header() {
               rel="noopener noreferrer"
               data-whatsapp-placement="mobile_header"
               data-whatsapp-intent="project_support"
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#25D366]/40 bg-white text-[#168a42] transition-[border-color,background-color,transform] hover:scale-105 hover:border-[#25D366]/65 hover:bg-[#25D366]/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/45 focus-visible:ring-offset-2 max-[359px]:h-8 max-[359px]:w-8 sm:h-10 sm:w-10"
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#25D366]/40 bg-white text-[#10773e] transition-[border-color,background-color,transform] hover:scale-105 hover:border-[#25D366]/65 hover:bg-[#25D366]/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/45 focus-visible:ring-offset-2 max-[359px]:h-8 max-[359px]:w-8 sm:h-10 sm:w-10"
               aria-label="Contact VCARPETS on WhatsApp Business"
             >
               <WhatsAppIcon className="h-[18px] w-[18px] max-[359px]:h-4 max-[359px]:w-4 sm:h-5 sm:w-5" />
@@ -591,7 +591,7 @@ export default function Header() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#25D366]/35 bg-white px-5 py-3 text-[13px] font-semibold uppercase tracking-[0.06em] text-[#168a42]"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#25D366]/35 bg-white px-5 py-3 text-[13px] font-semibold uppercase tracking-[0.06em] text-[#10773e]"
             >
               <WhatsAppIcon className="h-4 w-4" />
               Ask on WhatsApp
