@@ -1,3 +1,4 @@
+import { carpetTileDeliveryInspectionChecklist } from "@/lib/blog-posts/carpet-tile-delivery-inspection-site-storage-checklist";
 import { openPlanOfficeAcousticsGuide } from "@/lib/blog-posts/carpet-tiles-open-plan-office-acoustics-guide";
 import { naturalSisalCommercialInteriorsGuide } from "@/lib/blog-posts/natural-sisal-carpet-commercial-interiors-guide";
 import { raisedAccessFloorProcurementGuide } from "@/lib/blog-posts/carpet-tiles-raised-access-floor-procurement-guide";
@@ -89,6 +90,7 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  carpetTileDeliveryInspectionChecklist,
   openPlanOfficeAcousticsGuide,
   naturalSisalCommercialInteriorsGuide,
   raisedAccessFloorProcurementGuide,

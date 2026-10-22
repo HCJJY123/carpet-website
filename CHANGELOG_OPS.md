@@ -1462,3 +1462,12 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 - Official second Preview PSI: mobile 88/100/100/100 (LCP 3.8s, TBT 40ms, CLS 0.017); desktop 100/100/100/100 (LCP 0.8s, TBT 0, CLS 0.026). Report https://pagespeed.web.dev/analysis/https-carpet-website-4qls927ca-mike123-s-projects-vercel-app/jifgq254bo. Mobile performance is still below 100; no all-device 100 or production score claim. No CrUX field data available. This evidence-only checkpoint changes no application code/assets; final exact-head checks and production verification follow.
 
 - Release checkpoint: the owner explicitly confirmed moving this optimization PR to review and merging after successful tests on 2026-10-21. No further image-quality experiments or application changes are included in this release. Revalidate the exact final head and Preview before merging; retain the original rollback commit above.
+
+## 2026-10-22 — Carpet tile delivery inspection and site-storage guide
+
+- Added a distinct B2B guide at `/blog/carpet-tile-delivery-inspection-site-storage-checklist` covering controlled order records, carton labels, quantity, visible condition, hold/release authority, site storage and installer handoff.
+- Added one contextual reverse link from `/products/carpet-tiles#batch-zone-spare-record`; preserved all existing product and Blog URLs.
+- Added one original 1200×675 procurement-process SVG, explicitly labelled as a planning diagram rather than product, factory, delivery, certificate or client-project evidence.
+- Primary sources inform the procurement controls but their numeric conditions and proprietary systems are not stated as VCARPETS specifications. No price, MOQ, lead time, certification, factory, product-performance or universal acclimation claim was added.
+- GSC connection did not expose the VCARPETS property, and no Semrush report, fresh Clarity sample or qualified-lead dataset was available. No current rank, volume, index count, traffic or conversion claim is made.
+- Index notification manifest contains only the new canonical guide; no prior URL is repeated. Verification and release evidence is recorded in `ops/carpet-tile-receiving-growth-20261022.md`.
