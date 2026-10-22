@@ -1,28 +1,51 @@
 {
-  "task": "Restore accidentally truncated historical operations log without changing the PR99 guide, category, assets or application",
-  "approvedBy": "Owner-authorized website maintenance: preserve operational history, submit updates and deploy after required checks; this task repairs accidental record loss",
+  "task": "Rewrite existing product detail copy for answer-first, sourced comparison and long-tail FAQ; batch 1 of 2",
+  "approvedBy": "User instruction 2026-10-22: rewrite VCARPETS product pages with a <=50-word opening, H2 evidence points, third-block competitor comparison, final FAQ answers <=80 words, and no subjective adjectives. Existing owner authorization permits reversible implementation, PR merge and deployment after checks.",
   "approvedCategories": [
+    "content",
+    "product-page",
     "documentation"
   ],
   "allowedPaths": [
-    "CHANGELOG_OPS.md",
-    "ops/change-request.json"
+    "src/app/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles/page.tsx",
+    "src/app/products/carpet-tiles/nylon-office-carpet-tile/page.tsx",
+    "src/app/products/wall-to-wall/luxury-hotel-broadloom/page.tsx",
+    "src/app/products/wall-to-wall/3d-printed-hotel-carpet/page.tsx",
+    "src/app/products/wall-to-wall/custom-luxury-hotel-room-carpet/page.tsx",
+    "src/app/products/wall-to-wall/3d-printed-banquet-hall-carpet/page.tsx",
+    "src/app/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet/page.tsx",
+    "src/app/products/wall-to-wall/singapore-casino-carpet/page.tsx",
+    "src/app/products/wall-to-wall/custom-floral-printed-hotel-carpet/page.tsx",
+    "src/app/products/public-area/gold-mining-carpet-mat/page.tsx",
+    "src/app/products/public-area/public-area-heavy-duty/page.tsx",
+    "src/app/products/public-area/natural-sisal-carpet/page.tsx",
+    "src/app/products/public-area/custom-sculpted-wool-lobby-rug/page.tsx",
+    "src/app/products/wall-to-wall/cinema-theater-carpet/page.tsx",
+    "src/app/products/public-area/commercial-stair-carpet-runner/page.tsx",
+    "src/lib/product-evidence-copy.ts",
+    "src/components/EvidenceProductPage.tsx",
+    "ops/change-request.json",
+    "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "e2dcd2c74b2444f0ab956501144042aa4474511e",
-  "affectedUrls": [],
-  "notes": "Documentation-only repair. Restore the complete CHANGELOG_OPS.md prefix from cdef2f6b741a19c3d90bf73b3cfdd80a972f3d45, retaining the exact current 2026-10-22 guide entry from e2dcd2c74b2444f0ab956501144042aa4474511e. Remove only the accidental tool-output wrapper and truncated splice. Restore 18 historical headings. No guide/category/content, dates, assets, analytics, inquiries, commercial facts, routing, indexing configuration, permissions, checks or deployment configuration changes. Previous PR99 scope remains in Git history at rollbackCommit. Use a normal PR with exact-head required checks; do not manually promote or replace the production alias for this documentation repair.",
-  "verification": {
-    "historySourceBlob": "74d4c99e9ce00a9ab333e1caea0b868a35447ded",
-    "damagedCurrentBlob": "fb9158ac59bf55b8167206a945f9ab1721ca7051",
-    "restoredLogBlob": "2a11568dfebd61bd565135051e808c51310a2f99",
-    "restoredLogSha256": "b0f16627efb0dc93dfed9bc4a63c47c5b1bd3112816da1055dd3a7b8664ac008",
-    "restoredLogBytes": 193122,
-    "restoredLogLines": 1475,
-    "restoredLogHeadings": 98,
-    "preservedNewEntryBytes": 1940,
-    "preservedNewEntrySha256": "20e8dea89dfeb5634edb018a1f1d99bf9d50f0fe72a3920394cc0c3e92506319",
-    "checks": "Complete source and new-entry bytes verified against Git objects; no truncation markers; forward/reverse patch checks; final exact-head CI and Preview remain required before merge."
-  }
+  "rollbackCommit": "bdab527",
+  "affectedUrls": [
+    "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles",
+    "/products/carpet-tiles/nylon-office-carpet-tile",
+    "/products/wall-to-wall/luxury-hotel-broadloom",
+    "/products/wall-to-wall/3d-printed-hotel-carpet",
+    "/products/wall-to-wall/custom-luxury-hotel-room-carpet",
+    "/products/wall-to-wall/3d-printed-banquet-hall-carpet",
+    "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet",
+    "/products/wall-to-wall/singapore-casino-carpet",
+    "/products/wall-to-wall/custom-floral-printed-hotel-carpet",
+    "/products/public-area/gold-mining-carpet-mat",
+    "/products/public-area/public-area-heavy-duty",
+    "/products/public-area/natural-sisal-carpet",
+    "/products/public-area/custom-sculpted-wool-lobby-rug",
+    "/products/wall-to-wall/cinema-theater-carpet",
+    "/products/public-area/commercial-stair-carpet-runner"
+  ],
+  "notes": "Batch 1 changes 15 existing detail routes and 4 supporting/operations files (19 files). Batch 2 will update the remaining 12 existing routes in a separate PR. No new URLs, index directives, global SEO generators, forms, tracking, dependencies, prices, MOQ records, lead-time records or deployment settings. Reuse current inquiry components with their existing destinations and tracking. Display source-backed construction data as reference catalog specifications, and require matching reports before performance claims. Retain image files and distinguish illustrations. Back up live HTML. Verify exact-head Preview, lint, build, ops guard, and all affected HTML before merging."
 }
