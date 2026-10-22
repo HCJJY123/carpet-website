@@ -1,34 +1,27 @@
 {
-  "task": "Improve official homepage PageSpeed mobile and desktop performance and accessibility without changing business content or conversion behavior",
-  "approvedBy": "Owner Sentinel_2502fb3185f8819197c2d24e53852de2 requests all five websites optimized on PageSpeed; owner approved submissions, records and deployment after testing",
+  "task": "Publish a distinct B2B carpet tile delivery inspection and site-storage checklist, connect it to the carpet tile category, and notify indexing services only for the new canonical URL after production verification",
+  "approvedBy": "Owner-authorized daily VCARPETS growth task with standing implementation and production deployment authorization after required preview and PR checks",
   "approvedCategories": [
-    "navigation",
-    "conversion",
-    "seo-global"
+    "content",
+    "seo-content"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/page.tsx",
-    "src/app/globals.css",
-    "src/components/ServerProductImage.tsx",
-    "src/components/ProductImage.tsx",
-    "src/components/ImageRenderer.tsx",
-    "src/components/HomeHeroCarousel.tsx",
-    "src/components/Footer.tsx",
-    "src/components/AnswerFirst.tsx",
-    "src/components/ConversionLiftPanel.tsx",
-    "src/components/WhatsAppFloating.tsx",
-    "src/components/Header.tsx",
-    "src/components/CookieConsent.tsx",
-    "src/app/layout.tsx",
-    "src/components/SendInquiryFloating.tsx"
+    "ops/carpet-tile-receiving-growth-20261022.md",
+    "ops/indexnow-urls.json",
+    "keyword-map.csv",
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/carpet-tile-delivery-inspection-site-storage-checklist.ts",
+    "src/app/products/carpet-tiles/page.tsx",
+    "public/images/blog-series/buyer-guides-20261022/carpet-tile-receiving-hold-points.svg"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "8b4c1b7f189dfa89560304148cef89b9686ca5b0",
+  "rollbackCommit": "cdef2f6b741a19c3d90bf73b3cfdd80a972f3d45",
   "affectedUrls": [
-    "/"
+    "/blog/carpet-tile-delivery-inspection-site-storage-checklist",
+    "/products/carpet-tiles"
   ],
-  "notes": "Move homepage image manifest resolution to the server, preserve all image fallback and carousel interactions; improve contrast and target sizes. No analytics, consent, form submission, URL/indexing, price/MOQ or other content changes. Footer and WhatsApp changes are color-only. Preview, checks and mobile/desktop QA required before PR merge. Header and cookie notice changes are color-only; consent and menu behavior remain unchanged. Layout changes only pass small product/category identity summaries to the existing floating inquiry control and stop preloading an unused-on-homepage monospace font; metadata, schema and tracking remain unchanged. Preserve all exact product names, IDs, categories, links and event attributes."
+  "notes": "The new guide covers post-delivery and pre-installation B2B receiving controls, not product performance certification or a client case study. It must not create universal acclimation, storage, batch-mixing, installation or acceptance rules; buyers are directed to the confirmed product instructions and project documents. Use one original procurement-process SVG, clearly disclosed as a planning diagram. Keep the existing category URL and add one contextual reverse link. IndexNow/Bing manifest includes only the new canonical blog URL and must not repeat Oct 20 notifications. No changes to forms, analytics, company identity, prices, MOQ, lead time, certifications or production claims. Preview, required checks, PR merge and production verification are mandatory."
 }

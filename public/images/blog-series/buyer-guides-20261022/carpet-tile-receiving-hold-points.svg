@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Carpet tile receiving hold-point workflow</title>
+  <desc id="desc">Four-stage commercial procurement diagram from order record to delivery check, hold or release, and site handoff.</desc>
+  <rect width="1200" height="675" fill="#f4f0e8"/>
+  <rect x="48" y="46" width="1104" height="583" rx="30" fill="#fff" stroke="#172d34" stroke-width="3"/>
+  <text x="88" y="112" fill="#172d34" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="700">CARPET TILE RECEIVING HOLD POINTS</text>
+  <text x="88" y="150" fill="#53666c" font-family="Arial, Helvetica, sans-serif" font-size="18">Keep identity, evidence and authority connected before material enters an installation zone.</text>
+  <line x1="175" y1="276" x2="1025" y2="276" stroke="#d9aa52" stroke-width="8" stroke-linecap="round"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g transform="translate(88 202)">
+      <rect width="238" height="302" rx="20" fill="#eef2ef" stroke="#172d34" stroke-width="2"/>
+      <circle cx="52" cy="74" r="31" fill="#172d34"/>
+      <text x="52" y="84" fill="#fff" font-size="26" font-weight="700" text-anchor="middle">1</text>
+      <text x="28" y="136" fill="#172d34" font-size="20" font-weight="700">ORDER RECORD</text>
+      <text x="28" y="177" fill="#53666c" font-size="16">PO / quotation</text>
+      <text x="28" y="207" fill="#53666c" font-size="16">Product and colour</text>
+      <text x="28" y="237" fill="#53666c" font-size="16">Quantity and zone</text>
+      <text x="28" y="267" fill="#53666c" font-size="16">Approved reference</text>
+    </g>
+    <g transform="translate(350 202)">
+      <rect width="238" height="302" rx="20" fill="#eef2ef" stroke="#172d34" stroke-width="2"/>
+      <circle cx="52" cy="74" r="31" fill="#d9aa52"/>
+      <text x="52" y="84" fill="#172d34" font-size="26" font-weight="700" text-anchor="middle">2</text>
+      <text x="28" y="136" fill="#172d34" font-size="20" font-weight="700">DELIVERY CHECK</text>
+      <text x="28" y="177" fill="#53666c" font-size="16">Package and carton count</text>
+      <text x="28" y="207" fill="#53666c" font-size="16">Labels and identity</text>
+      <text x="28" y="237" fill="#53666c" font-size="16">Visible condition</text>
+      <text x="28" y="267" fill="#53666c" font-size="16">Photo record</text>
+    </g>
+    <g transform="translate(612 202)">
+      <rect width="238" height="302" rx="20" fill="#fff8e8" stroke="#172d34" stroke-width="2"/>
+      <circle cx="52" cy="74" r="31" fill="#172d34"/>
+      <text x="52" y="84" fill="#fff" font-size="26" font-weight="700" text-anchor="middle">3</text>
+      <text x="28" y="136" fill="#172d34" font-size="20" font-weight="700">HOLD OR RELEASE</text>
+      <text x="28" y="177" fill="#53666c" font-size="16">Segregate exceptions</text>
+      <text x="28" y="207" fill="#53666c" font-size="16">Name the approver</text>
+      <text x="28" y="237" fill="#53666c" font-size="16">Record the decision</text>
+      <text x="28" y="267" fill="#53666c" font-size="16">Protect spare stock</text>
+    </g>
+    <g transform="translate(874 202)">
+      <rect width="238" height="302" rx="20" fill="#eef2ef" stroke="#172d34" stroke-width="2"/>
+      <circle cx="52" cy="74" r="31" fill="#d9aa52"/>
+      <text x="52" y="84" fill="#172d34" font-size="26" font-weight="700" text-anchor="middle">4</text>
+      <text x="28" y="136" fill="#172d34" font-size="20" font-weight="700">SITE HANDOFF</text>
+      <text x="28" y="177" fill="#53666c" font-size="16">Storage owner</text>
+      <text x="28" y="207" fill="#53666c" font-size="16">Product instructions</text>
+      <text x="28" y="237" fill="#53666c" font-size="16">Released carton list</text>
+      <text x="28" y="267" fill="#53666c" font-size="16">Zone and layout plan</text>
+    </g>
+  </g>
+  <rect x="88" y="542" width="1024" height="48" rx="12" fill="#172d34"/>
+  <text x="600" y="573" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle">UNRESOLVED IDENTITY OR CONDITION = KEEP ON HOLD UNTIL AN AUTHORIZED DECISION IS RECORDED</text>
+</svg>
