@@ -1,27 +1,28 @@
 {
-  "task": "Publish a distinct B2B carpet tile delivery inspection and site-storage checklist, connect it to the carpet tile category, and notify indexing services only for the new canonical URL after production verification",
-  "approvedBy": "Owner-authorized daily VCARPETS growth task with standing implementation and production deployment authorization after required preview and PR checks",
+  "task": "Restore accidentally truncated historical operations log without changing the PR99 guide, category, assets or application",
+  "approvedBy": "Owner-authorized website maintenance: preserve operational history, submit updates and deploy after required checks; this task repairs accidental record loss",
   "approvedCategories": [
-    "content",
-    "seo-content"
+    "documentation"
   ],
   "allowedPaths": [
-    "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "ops/carpet-tile-receiving-growth-20261022.md",
-    "ops/indexnow-urls.json",
-    "keyword-map.csv",
-    "src/lib/blog-data.ts",
-    "src/lib/blog-posts/carpet-tile-delivery-inspection-site-storage-checklist.ts",
-    "src/app/products/carpet-tiles/page.tsx",
-    "public/images/blog-series/buyer-guides-20261022/carpet-tile-receiving-hold-points.svg"
+    "ops/change-request.json"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "cdef2f6b741a19c3d90bf73b3cfdd80a972f3d45",
-  "affectedUrls": [
-    "/blog/carpet-tile-delivery-inspection-site-storage-checklist",
-    "/products/carpet-tiles"
-  ],
-  "notes": "The new guide covers post-delivery and pre-installation B2B receiving controls, not product performance certification or a client case study. It must not create universal acclimation, storage, batch-mixing, installation or acceptance rules; buyers are directed to the confirmed product instructions and project documents. Use one original procurement-process SVG, clearly disclosed as a planning diagram. Keep the existing category URL and add one contextual reverse link. IndexNow/Bing manifest includes only the new canonical blog URL and must not repeat Oct 20 notifications. No changes to forms, analytics, company identity, prices, MOQ, lead time, certifications or production claims. Preview, required checks, PR merge and production verification are mandatory."
+  "rollbackCommit": "e2dcd2c74b2444f0ab956501144042aa4474511e",
+  "affectedUrls": [],
+  "notes": "Documentation-only repair. Restore the complete CHANGELOG_OPS.md prefix from cdef2f6b741a19c3d90bf73b3cfdd80a972f3d45, retaining the exact current 2026-10-22 guide entry from e2dcd2c74b2444f0ab956501144042aa4474511e. Remove only the accidental tool-output wrapper and truncated splice. Restore 18 historical headings. No guide/category/content, dates, assets, analytics, inquiries, commercial facts, routing, indexing configuration, permissions, checks or deployment configuration changes. Previous PR99 scope remains in Git history at rollbackCommit. Use a normal PR with exact-head required checks; do not manually promote or replace the production alias for this documentation repair.",
+  "verification": {
+    "historySourceBlob": "74d4c99e9ce00a9ab333e1caea0b868a35447ded",
+    "damagedCurrentBlob": "fb9158ac59bf55b8167206a945f9ab1721ca7051",
+    "restoredLogBlob": "2a11568dfebd61bd565135051e808c51310a2f99",
+    "restoredLogSha256": "b0f16627efb0dc93dfed9bc4a63c47c5b1bd3112816da1055dd3a7b8664ac008",
+    "restoredLogBytes": 193122,
+    "restoredLogLines": 1475,
+    "restoredLogHeadings": 98,
+    "preservedNewEntryBytes": 1940,
+    "preservedNewEntrySha256": "20e8dea89dfeb5634edb018a1f1d99bf9d50f0fe72a3920394cc0c3e92506319",
+    "checks": "Complete source and new-entry bytes verified against Git objects; no truncation markers; forward/reverse patch checks; final exact-head CI and Preview remain required before merge."
+  }
 }
