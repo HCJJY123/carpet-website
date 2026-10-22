@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 48281)
-Total output lines: 1475
-
 # Site Operations Changelog
 
 This file is append-only. Do not delete or rewrite historical entries.
@@ -919,7 +916,191 @@ Final local acceptance: mobile footer clearance is fixed; corrected production b
 - Connected the four UK education visuals to the UK school and university procurement blog and the UK education carpet tile supplier country page with descriptive `alt` text and procurement captions.
 - Connected the four sample approval visuals to the commercial carpet sample approval checklist blog with descriptive `alt` text and approval-stage captions.
 - Corrected the reusable country-page procurement visual heading so it uses the current country instead of a hard-coded UAE hotel phrase.
-- Preserved the existing UI styling and kept generated visuals clearly i…8281 tokens truncated…-page lastmod only.
+- Preserved the existing UI styling and kept generated visuals clearly illustrative rather than customer project, factory or certification evidence.
+## 2026-09-10 — Lead attribution and short-session funnel recovery
+
+- Capture first-touch attribution before analytics consent gates external tracking, while keeping analytics and advertising events consent-controlled.
+- Preserve the product or content page and funnel snapshot when a visitor clicks through to `/contact`, then recover the values at form submission if the contact route loses them.
+- Record eight-second engagement in addition to longer thresholds so short, high-intent product-to-quote visits are not stored as zero-second sessions.
+- Derive a stable traffic channel for campaign, paid, organic-search, referral and direct visits while retaining AI-referral classification.
+- Keep server-confirmed lead conversion behavior unchanged: `generate_lead` and advertising conversion events remain after a successful `/api/lead` response.
+## 2026-09-10 — AI citation map expansion
+
+- Expanded the official AI source guide with explicit citation paths for UK education procurement, the UK education supplier page, commercial sample approval and hotel procurement documents.
+- Added buyer-question wording and citation boundaries so assistants can route school, university, hotel and sample-approval requests to the most specific VCARPETS page instead of the homepage.
+- Updated the source guide freshness date to September 10, 2026 without changing UI styling or making unsupported local-stock, compliance or project claims.
+## 2026-09-10 — Commercial carpet tile buyer-intent routing
+
+- Added an answer-first procurement path section to `/products/carpet-tiles` for office rolling-chair areas, hotels, education, backing and sustainability, healthcare/high traffic, and RFQ planning.
+- Connected each path to the most specific product, guide, calculator or quote route so commercial search and AI referrals reach a relevant next step instead of a generic product grid.
+- Kept the existing UI system, product claims and project-specific confirmation boundaries unchanged.
+
+## 2026-09-20 — vcarpets.com domain and business email migration
+
+- Updated the public business email to `sales@vcarpets.com` across runtime contact details, header mail links, privacy policy, AI source files, outreach records and PDF generation sources.
+- Regenerated five source-managed procurement PDFs and refreshed the two legacy RFQ worksheet PDFs without changing their page paths or content structure; visible URLs and contact details now use `www.vcarpets.com` and `sales@vcarpets.com`.
+- Preserved the existing `https://www.vcarpets.com` canonical, sitemap, robots, JSON-LD, Open Graph, hreflang, feed and old-host 308 logic from the migration baseline.
+- Added the missing apex normalization so `vcarpets.com` also returns a path- and query-preserving 308 to `www.vcarpets.com`.
+- Added a migration-only PDF refresh helper and expanded the approved change scope to cover generated downloads.
+
+**External status:** New-domain DNS, Vercel domain attachment, HTTPS, mailbox authentication, form delivery credentials, third-party allowlists, Google Search Console, Bing Webmaster Tools and old-domain redirect availability require account-level verification. The old domain currently cannot be treated as publicly redirecting until DNS/HTTPS responds.
+
+**Rollback point:** `391e9f9`
+## 2026-09-22 — Microsoft Advertising final compliance gate
+
+- Added the requested explicit Microsoft Personal Data disclosure to the dedicated Microsoft Advertising/UET sections of the Privacy Policy and Cookie Policy.
+- Replaced the sample request's minimal policy reference with the complete adjacent submission disclosure while keeping Privacy Policy clickable and adding no checkbox.
+- Scoped the final gate to production consent/UET behavior, provider/network PII inspection, mobile/desktop verification and a strict PASS/FAIL/UNVERIFIED report.
+
+**Rollback point:** `d5d8bbb`
+## 2026-09-23 — Yandex Metrica global tag (counter 111239007)
+
+- Installed the exact owner-supplied Yandex Metrica block into the root layout `<head>` so the full counter script and noscript watch pixel appear in the served HTML of every page.
+- Kept all Yandex parameters unchanged (`ssr`, `webvisor`, `clickmap`, `ecommerce:"dataLayer"`, `accurateTrackBounce`, `trackLinks`) and did not hardcode a domain.
+- Removed the previous consent-gated duplicate Yandex loader from MarketingTracking to prevent a second `ym(...)` initialization once the global tag is live.
+
+**Rollback point:** `c680b9fd2b4e487be676642239a78609f4b6b7e5`
+
+**Note:** The global Metrica block is rendered in page source and loads before the cookie-consent gate, which differs from the existing privacy-policy wording that described Yandex Metrica as consent-gated. Policy wording was left unchanged in this change set and should be reviewed separately.
+
+## 2026-09-23 — Yandex Webmaster site-ownership verification file
+
+- Added the owner-supplied verification file at `public/yandex_83c276caf5355ffa.html` so Yandex Webmaster can confirm site ownership at `https://www.vcarpets.com/yandex_83c276caf5355ffa.html`.
+- Static file only; the body content (`Verification: 83c276caf5355ffa`) is preserved byte-for-byte with no script, tracking, SEO or product-content changes.
+
+**Rollback point:** `f7d61a2af44117a599503cb9f670ad90528f74b9`
+
+## 2026-09-23 — Yandex HTTPS property ownership verification file
+
+- Added the owner-supplied verification file at `public/yandex_9ff8e71e4e1a3e31.html` for the `https://www.vcarpets.com` Webmaster property.
+- Retained the earlier verification file for the existing property; no tracking, consent, product-content, canonical, robots or sitemap behavior changed.
+
+**Rollback point:** `01fb0663c75907ff388ee79325be48de3a7d19dd`
+
+## 2026-09-28 — Carpet tile category supply-status clarity
+
+- **URL:** `/products/carpet-tiles`. Production HTML backed up at `/tmp/vcarpets-growth-20260928/carpet-tiles.production.html` before editing.
+- **Evidence:** All category cards displayed `In Stock / Made to Order`, although the product data marks only one carpet tile as `preorder` and contains no confirmed live stock status for the others. Hero, FAQ and evidence copy claimed eight products, while the page renders nine.
+- **Change:** Show `Pre-order; confirm lead time` for the marked product and `Confirm by color & quantity` for the other cards; replace the stale count with evergreen language in the hero, FAQ and evidence copy. Prices, MOQ, links, SEO metadata, images and inquiry behavior remain unchanged. No new image is needed.
+- **Preview verification:** Add a manual Vercel-origin verification input to the existing GitHub Site Ops Guard because the local network resets Preview connections. The ordinary PR guard remains unchanged; no production site behavior changes from this workflow step.
+- **Status:** Code change prepared on a feature branch; production deployment and qualified-inquiry impact remain unverified.
+- **Review:** After deployment, compare the next two complete 28-day periods for category-page organic landing sessions, contact-form starts, submitted leads and sales-qualified carpet tile inquiries; do not attribute changes solely to this wording.
+
+**Rollback point:** `9884235fed3fe029252f82e22f4478617d56e347`
+
+## 2026-09-28 — Installation planning buyer brief (local content cycle)
+
+- **Site and scope:** VCARPETS, English B2B commercial carpet procurement. Existing `/resources/installation-guides` expanded; contextual links added on `/products/carpet-tiles` and `/products/wall-to-wall`. The unchanged inquiry destination is `/contact?resource=installation-guide#quote-form`. No new URL, product claim, installer service, image, form or tracking change. Production HTML for the three affected pages is backed up under `/tmp/vcarpets-installation-planning/`.
+- **Observed gap:** The resource page previously offered four generic reminders and a document-request CTA, but no buyer/installer handoff brief. The tile concrete and site-climate articles answer narrower installation questions; the resource hub and technical library already link to documents. Strengthening the existing page avoids another overlapping Blog URL.
+- **Content map (sample, not a full-site audit):**
+
+| URL | Type / product | Buyer and intent | Status and downstream | Main gap / disposition |
+| --- | --- | --- | --- | --- |
+| `/products/carpet-tiles` | Category / modular tile | Fit-out buyer, product comparison | Active → product detail / contact | Add installation brief context |
+| `/products/wall-to-wall` | Category / hotel broadloom | Hotel buyer, product comparison | Active → product detail / contact | Add roll-plan handoff context |
+| `/resources/installation-guides` | Resource / tile and broadloom | Specifier or project manager, pre-order planning | Thin → contact | Expand existing URL, not new Blog |
+| `/blog/carpet-tiles-over-concrete-installation-guide` | Guide / tile | Installer, concrete substrate questions | Active → tile products | Keep separate single-substrate detail |
+| `/blog/climate-control-carpet-installation-stability-guide` | Guide / multiple | Site team, climate conditions | Active → product pages | Keep separate climate detail |
+| `/resources/technical-library` | Documents / multiple | Buyer, document availability | Active → contact | Match request to construction |
+| `/contact` | RFQ / multiple | Buyer, inquiry | Active; `#quote-form` exists | No form change or real test submission |
+
+- **Priority (0–3 each; product relevance / B2B intent / demand evidence / site gap / fact readiness / inquiry value; ordering aid, not a traffic forecast):** Existing installation brief B = `3/3/2/3/2/3` (16), selected; existing maintenance resource B = `3/2/2/3/2/2` (14), later; technical-library document matching C = `3/3/1/1/2/3` (13), observe; new local-market installation page E = `2/2/0/1/1/1` (7), defer without local demand and service evidence.
+- **Evidence and boundaries:** The [CRI commercial installation standards page](https://carpet-rug.org/resources/installation-standards/) and its [CRI 104 commercial PDF](https://carpet-rug.org/wp-content/uploads/2019/03/CRI-104-STANDARD-For-INSTALLATION-of-COMMERCIAL-CARPET.pdf) were accessed on 2026-09-28 UTC. CRI 104 covers product/area identification, shop drawings, substrate testing and manufacturer-specific limits; it is an industry planning reference, not evidence of VCARPETS certification or a universally applicable local requirement. Repository and live-page checks establish page structure and CTA, not search demand volume. GSC, GA4, qualified lead records and reliable Google SERP access were not available for this cycle; no ranking or conversion inference is made.
+- **Content handoff:** Primary keyword `commercial carpet installation planning guide`; English informational-to-commercial intent for global project buyers. SEO title, description and visible H1 updated on the existing canonical route. Tile/broadloom decision paths, a four-role handoff checklist, buyer FAQs and scoped industry reference now lead to the existing RFQ and technical library. The form has no file upload, so the page asks buyers to describe the layout and arrange drawing exchange after a reply. Two category pages provide reverse links; the resource page links back to categories and the existing concrete/climate guides. Reuse the existing illustrative hero; no new image or Accio task is needed.
+- **Validation and release gate:** `npm run ops:check`, SEO/link audits, `npm run build -- --webpack`, `git diff --check` and localhost `ops:verify` passed. Lint had only the pre-existing `ProductImage.tsx` `<img>` warning. The resource and both category pages returned direct local HTTP 200; the resource rendered one H1, self-canonical, no `noindex` and its existing Sitemap entry. Browser checks at 390px and 1440px showed no horizontal overflow; the CTA navigated to the existing `/contact?resource=installation-guide#quote-form` with a form present, without submitting an inquiry. Owner subsequently authorized release for this scope; PR checks, Vercel Preview and production verification remain required. Next review requires product-specific installation documents and, when available, actual landing-page and qualified-inquiry data before further expansion.
+
+**Rollback point:** `77fcbb50c3c7273bffb7d79943f5bbcd35c34e0c`
+
+## 2026-09-29 — Commercial carpet maintenance planning brief (local content cycle)
+
+- **Site / audience / status:** VCARPETS, English for global B2B facilities and project buyers. Existing `/resources/maintenance-guides` expanded locally; two category pages provide reverse links. Status `已本地验证`, release authorized by owner on 2026-09-29; PR/Preview and production checks remain release gates. Existing production page HTML backed up at `/tmp/vcarpets-maintenance-before.html` before editing. Rollback base: `a9e0d65e6b91c22110250b5cfdb060494bebde6f`. The preceding installation brief PR #55 reached Vercel production success on 2026-09-29 CST; the guide, category pages and sitemap returned 200 and the production Site Ops Guard passed (verification recorded on PR #55).
+- **Content map (sample, not a full-site audit):** `/resources/maintenance-guides` was a six-topic list and generic request CTA, now the main planning/handoff page → existing `/contact?resource=maintenance-guide#quote-form`; `/products/carpet-tiles` and `/products/wall-to-wall` are commercial category entries → maintenance planning and product pages; `/blog/commercial-space-carpet-tiles-maintenance-cost-guide` covers localized replacement economics, not the multi-format care handoff; `/resources/technical-library` is the document-request path, not a downloadable product-specific care file. Published PDFs in `public/downloads` are procurement guides and RFQ checklists, not construction-matched care instructions.
+- **Priority (product relevance / B2B intent / demand evidence / site gap / fact readiness / inquiry value, each 0–3; not a traffic estimate):** B, expand existing maintenance resource `3/3/2/3/2/3` = 16, selected; C, improve technical-library document matching `3/3/1/1/2/3` = 13, observe; E, product-specific care instruction `3/3/1/3/0/3` = 13, defer pending approved documents; F, generic new cleaning Blog `2/1/1/0/2/1` = 7, duplicates existing intent. Installation planning is already addressed on the existing resource URL.
+- **Evidence and bounds:** Live maintenance, category and contact pages were checked on 2026-09-29; the old maintenance page returned 200 but did not explain product/zone/method approval or spare-stock handoff. The [CRI business cleaning and maintenance resource](https://carpet-rug.org/carpet-for-business/cleaning-and-maintenance/) returned 200 on 2026-09-29 and discusses soil control, vacuuming and spot response as industry reference, not VCARPETS product requirements. The site has an existing carpet-tile lifecycle article and the published PDF inventory was reviewed. GSC, GA4, qualified lead records and reliable Google SERP access were unavailable; no demand volume, ranking or lead-quality claim is made.
+- **Content handoff:** Primary keyword `commercial carpet maintenance planning guide`, informational-to-commercial intent. Existing canonical route has updated English title, description and H1, direct answer, tile/broadloom decisions, four-role handoff, buyer FAQ and the unchanged RFQ destination. It links to both categories, an existing tile replacement article, corridor guide and technical library; both categories link back. The form has no file upload, so it asks buyers to describe available documents for later exchange. Existing illustrative hero reused; no new image or Accio task required. No product-specific cleaning interval, chemical, test result, certification, warranty or service promise is published.
+- **Validation and dependency:** `npm run ops:check`, `audit:seo`, `audit:links`, `npm run lint`, `npm run build -- --webpack`, `git diff --check` and local `ops:verify` passed. Lint retained only the pre-existing `ProductImage.tsx:43` image warning. The changed routes and existing contact form returned local HTTP 200; the maintenance page rendered one H1, self-canonical and no `noindex`, with the two category reverse links present. At 390px and 1440px, browser screenshots showed no horizontal overflow; mobile CTA points to the existing form. No real inquiry was submitted. Request controlled care files with version, applicable SKU/fiber/backing, equipment and chemistry limits, moisture/extraction limits, spot-response and replacement guidance, destination requirements and permission for public use. Without these, product-specific instructions remain `待资料`; this page is a planning brief only. Owner now authorized release; PR checks, Vercel Preview verification and production validation are still required.
+
+## 2026-09-29 — Reconcile root Sitemap PR #53 with current main
+
+- Merged latest main into the existing sitemap PR branch and retained subsequent carpet-tile, installation-planning and maintenance-planning changes in the append-only changelog. The change request remains scoped to the originally approved Sitemap fix, rather than the previous content release.
+- Current production `/sitemap.xml` returned 200 with 256 entries on 2026-09-29; `/privacy-policy` returned 200, is self-canonical and not `noindex`, but is absent from that Sitemap. Production sitemap and robots responses were saved under `/tmp/vcarpets-current-sitemap53.xml` and `/tmp/vcarpets-current-robots53.txt` before reconciliation.
+- The PR retains the existing root XML endpoint, adds only the indexable privacy URL, and strengthens coverage checks for the privacy, cookie and sample-request pages. No published URL, page content, canonical, crawler permission, form or tracking change. Revalidate build, Preview and URL list before any separate production merge decision.
+
+**Rollback point:** `6c83f99f6c111caa089c5f278a7340b61f9d6bc3`
+
+## 2026-09-29 `content/faq-rfq-sourcing-directory-20260930`
+
+**Type:** B2B content expansion / RFQ preparation / entity consistency / internal linking
+
+**Scope:** Expanded `/faq` into a commercial carpet procurement and RFQ knowledge hub, added the buyer-focused `/blog/commercial-carpet-sourcing-directory`, added a homepage entry, and added a local-only RFQ question builder that stores a draft in same-origin `sessionStorage` before pre-filling the existing contact form. Corrected the owner-confirmed legal entity in website metadata, visible company references, Organization/Article publisher data and AI-readable source files. No URL removals, redirects, robots, tracking, advertising, API or real inquiry submission changes.
+
+**Content decisions:** Kept one primary FAQ URL; covered product selection, hotel procurement, samples, MOQ, pricing, logistics and documentation without inventing fixed commercial terms. Reused `/images/about/quality-control-inspection.webp` as an explicitly illustrative procurement image; no generated image or fabricated case evidence was added.
+
+**Changed URLs:** `/faq`, `/blog/commercial-carpet-sourcing-directory`, `/` and existing pages containing the owner-confirmed company identity.
+
+**Rollback point:** `964cdae4a78ee4043a202e08542a5152b1344433`
+
+**Release gate:** Run Ops guard, SEO/link audits, lint, build and Preview verification. Do not merge or deploy production until the Preview pages and the existing inquiry path are checked and the owner authorizes release.
+
+**Local verification:** Ops guard, SEO/link audits, TypeScript/webpack production build and diff check passed. ESLint returned no errors and one pre-existing `ProductImage.tsx` image warning. At 390px, `/faq` has one H1, a self-canonical URL and no document overflow; the new article has one H1, self-canonical, visible author, Article publisher with the confirmed legal name, and a scoped buyer-question builder. At 1440px, `/faq` has no document overflow. A sample RFQ draft reached the existing contact form without entering the URL; no inquiry was submitted. Local `/sitemaps/blog.xml` returned 200 and included the new article once. Production and Vercel Preview remain unverified at this stage. Legacy downloadable PDFs and historical outreach drafts still need a separate entity-name review; they are not changed in this release.
+
+**Preview verification:** PR #57 Vercel deployment passed, as did the GitHub Site Ops Guard workflow on the exact PR commit; a second `workflow_dispatch` run (36602037965) executed `npm run ops:verify` against the public Vercel Preview and passed all configured baseline routes and sitemaps. The current workstation's connection to the Preview hostname resets, so new-page Preview HTTP and interactive behavior were checked on the local production build, not independently from this workstation. No live inquiry was sent. Owner explicitly authorized deployment in the follow-up conversation.
+
+## 2026-10-01 — Hotel procurement document guide hero replacement
+
+**Scope and authorization:** Owner explicitly requested replacing the single guide's blurred-person hero with the supplied unoccupied conference-table image, including production deployment through the existing PR/Preview gates. URL: `/blog/hotel-carpet-procurement-documents-checklist`. No body, title, date, route, canonical, navigation, form, tracking, legal or unrelated article changes.
+
+**Image:** Original `酒店地毯样品评审.png`, 1672x941, 2,542,447 bytes, retained unchanged outside the public directory. New versioned `/images/optimized/hotel-procurement-hero-v2/hotel-carpet-procurement-documents-checklist-v2.webp`, 262,922 bytes (89.66% smaller). AVIF/WebP width variants: 480/768/1200/1672, never upscaled or cropped; full-width AVIF 189,010 bytes. Append-only manifest entry; all prior resources remain intact. Full composition via existing per-article `contain` and intrinsic aspect ratio; existing eager/high-priority hero handling and illustrative caption preserved.
+
+**References:** Article hero, list/related-card image consumers, Open Graph and Article JSON-LD use the new article image field. Existing Twitter image is the global `/images/og-cover.webp`, not the old hero, so remains unchanged. Prior hero references were confined to this article's two image fields.
+
+**Rollback:** `9c12e9902f149e83e87a785cf4fde2d4ed3149fd`. Live HTML backup and source/asset hashes under `/tmp/vcarpets-hotel-hero-v2-20261001/`. Previous PR59 local release records remain untouched in the original worktree. Validation and release results follow in the PR evidence; this entry alone is not a claim of production completion.
+
+**Local acceptance:** Ops scope/runtime checks, SEO/link audits, diff checks and webpack production build passed. ESLint: zero errors, only the pre-existing `ProductImage.tsx:43` warning. HTTP verification: article and blog 200, 18 unique image resources 200 with exact source-byte hashes, 59 blog sitemap entries unchanged; title, description, H1, canonical, dates, article body and five body illustrations unchanged. Open Graph and Article image point to v2; Twitter retains its existing generic cover. The guide's current blog-topic cards are compact text-only, so no new thumbnail or card layout was introduced. Responsive browser checks at 375/390/768/1440 passed with loaded AVIF variants, complete composition, eager/high priority, preserved caption and no horizontal overflow or observed console warnings/errors. Screenshots under `/Users/haochangjian/Downloads/vcarpets-hotel-hero-v2-release-evidence/`. Preview/production completion must be verified separately.
+
+**Local acceptance 2026-10-08:** Ops scope/runtime checks, SEO/link audits, production build and diff check pass. ESLint zero errors and no new warnings; one existing ProductImage img warning remains. New guide HTTP200, single H1, self-canonical and Article date correct, no accidental noindex; 64 internal targets and hero respond200. Blog sitemap60/root262 (each adds exactly one URL). Existing printing guide backlink and Blog listing visible. Preview/mobile acceptance and production verification pending.
+
+**Preview acceptance 2026-10-08:** PR64 head9165feb735f1e3707ce31bb123b9c931da9918dd; Vercel Preview dpl_96vsY8TxQodLWnZUqfuEja9MA2Sv READY and GitHub run37750088477 guard successful. Public Preview Ops runtime passes. Desktop browser1363px has no horizontal document overflow; two tables retain overflow-x:auto. Actual quote-link click reaches quote-form with product Printed Broadloom Carpet and required company/email/product/quantity; no submission or PII entered. Mobile viewport switching unavailable in the provided browser: reviewed unchanged responsive template and contained table rules, but no mobile device/viewport screenshot test claimed. No shared layout change in this round. Production merge/verification pending.
+
+## 2026-10-08 — Owner-confirmed cinema supply and Philippine sample service
+
+Owner confirms cinema carpet supply, marketplace product1601154205430 within supply scope, custom patterns/colours, Philippine B2B inquiry acceptance and paid sample requests. Sample type/cost/timing remain project-specific. Bulk term **FOB Tianjin Port**. New public brand Vcarpets, legal Tianjin Vcarpets Global Commercial Carpet Co., Ltd. Owner also clarifies the source-shop identity changed from Beijing RENOFLOR New Material Technology Co., Ltd.; earlier unrelated-third-party interpretation is superseded. Historical procurement questions can inform content, but inquiries do not establish completed cases, orders, performance or certification. No private data published.
+
+Refresh existing `/products/wall-to-wall/cinema-theater-carpet`, add `/markets/ph/entertainment-venue-carpet`; connect to already published repeat/seam guide and existing product/market directory. Distinct intent: product configuration review versus Philippine venue/import/sample procurement; existing hotel and generic PH pages retained and linked. Original English text, no cross-site copying. Marketplace page returned no readable specs and both search engines returned no SKU records2026-10-08. Therefore no material/backing/width values inferred; remove prior unverified cinema price/MOQ/lead-time, fire/antistatic/weight/thickness/width claims from record and generated Product data. Do not replace with invented values. Nominated configuration and documents confirmed in quotation.
+
+Reuse P08 labeled AI application illustration, not actual cinema project photo. Optional template caption/content/hub/date fields preserve other data; no forms/events/backend/config changes. New country schemaFAQ matches visible text. Scoped sitemap optional date supplies2026-10-08 for new page only; prior fallback unchanged. Quote/sample navigation uses existing systems, no real inquiry. Existing indexed HTML backed up before edits. Rollback cfda7482a7ac40c42712c04ae504db7cfe873f14; branch content/cinema-ph-confirmed-20261008. Source complete, validation and guarded release pending.
+
+Evidence: owner confirmation in conversation2026-10-08; Alibaba https://www.alibaba.com/product-detail/Eco-friendly-Soft-Wall-to-Wall_1601154205430.html unreadable (not parameter evidence); earlier public CRI/Joy planning references remain confined to procurement guide. No search volumes/GSC/GA4 or quality-lead outcomes claimed. Candidate priorities and facts in prior round remain, with cinema and PH supply readiness now confirmed; technical numeric data still absent.
+
+**Local acceptance:** Ops scope/runtime, SEO/link audit, TypeScript/build and diff checks pass. ESLint zero errors and no new warnings (one pre-existing ProductImage warning). Both pagesHTTP200, oneH1, self-canonical/indexability, visible FAQ/FAQ JSON-LD matching, FOB term and illustration caption verified. Cinema Product JSON-LD has no unverified Offer. All unrelated product records and brandInfo deeply unchanged. Root/market sitemaps include only one newURL with scoped2026-10-08 date. Market directory and guide discoverability pass. Preview/browser and production verification pending.
+
+Preview acceptance (2026-10-08): deployment dpl_qorpvffPmtmhE4oqByxGHK9eAqCY READY; Site Ops Guard run 37769613042 passed; runtime baseline passed; both page desktop layouts checked. Found generic free sample CTA conflict and corrected only opted-in cinema/Philippine page to paid sample inquiry. Philippine CTA now carries supported product query; form country/application auto-fill is not implemented. No form submission. Mobile viewport screenshot unavailable in browser API; responsive source reviewed, not asserted as device verification.
+
+
+## 2026-10-09 — GSC indexing review and Czech office page alias repair
+
+Owner authorizes Google Search Console submission; Bing/IndexNow notification and optimization of indexing issues. GSC domain property vcarpets.com inspected; latest coverage report 2026-10-03:191 indexed/130 excluded (46 alternate canonical;3 redirects;1 not found;70 discovered not indexed;10 crawled not indexed). This is a dated report; not a current live crawl count. The10 crawled examples are sitemap XML and parameterized contact URLs; do not force index these as independent content. Existing8 sitemap submissions report success; re-submit4 affected root/market/product/blog sitemaps after Oct8 content release. Submission does not guarantee indexing.
+
+Confirmed GSC404 `/markets/cz/office-carpet-tiles` is an internal-link mistake; existing equivalent canonical page `/markets/cz/office-carpet-tiles-czech-republic` retained. Correct link in CountryMarketLandingPage and add exact permanent308 alias redirect in Next configuration. No canonical URL removal/rename; no robots/forms/tracking change. Backups of affected live HTML stored before release. Add correct target and both referring Czech pages to runtime baseline. Rollback08a45033af5efc7ec5c687e9d6f72c315238fb72. Feature branch seo/gsc-indexing-fix-20261009; local/Preview/CI/prod acceptance pending. Full URL review and submission record: ops/indexing-review-20261009.md/json. No GSC account details or inquiry data committed.
+
+Public review of70 GSC discovered examples:68 direct200/self-canonical/indexable;2 expected redirects (natural-sisal-carpet and projects/case-6). Both legacy aliases erroneously remain in root sitemap via static route generator; exclude exactly these2 sources, preserve existing final destinations. Root sitemap263 becomes261 canonical URLs, no destination loss. Correct real cinema modification date2026-10-08 in root/product sitemap; corrected Czech source pages2026-10-09. No blanket date bump. Philippine new page Google individual request accepted2026-10-09; other request results recorded separately.
+
+Local acceptance: Ops scope guard, SEO94 page files, link/sitemap audit, TypeScript and production build pass. ESLint0 errors/one pre-existing ProductImage warning. Runtime baseline and scoped redirect/link/sitemap assertions pass with server and client in same execution context; initial separate-context loopback checks failed due unreachable listener and are not reported as passes. Exact308, both corrected country links, canonical destination retention, root261 URLs and cinema lastmod verified locally. Source/routing-only change; no new visual layout. Preview and production pending.
+
+
+## 2026-10-09 — Cinema matching-pattern image supplement
+
+- Owner-requested four additional images: lobby, circulation, detail and sample-review concepts. Existing hero retained. Built-in imagegen reference-guided outputs explicitly disclosed as AI illustrations, not product/project evidence.
+- Four optimized WebP assets, lazy gallery using existing ProductImage component; mobile one column, desktop two. Only actual cinema lastmod updated. No changes to forms, claims or URL.
+- Scope: isolated content/cinema-images-20261009 branch from production 52f68f3461cbe86d3c6369ada968acab75b3ff26. Rollback to that commit. Live HTML backed up before editing.
+- Publication requires local lint/build/Ops checks, Preview verification and required CI before PR merge. Final deployment evidence recorded on PR.
+
+Local acceptance: production Turbopack build/TypeScript passed after using local dependencies (initial external dependency symlink rejected by Turbopack; no source issue). Ops scope/runtime, SEO94 pages, links/sitemap and assets audits passed. ESLint zero errors, one existing ProductImage warning. Four new image URLs200, one H1, gallery/disclosure verified. Preview/browser/production pending; no real inquiry submitted.
+
+
+## 2026-10-09 — Buyer resources and entertainment procurement optimization
+
+Owner authorizes five recommendations and generated images for item2. Expand existing format/sample guides with cinema zones and distinct approval purposes, add2 disclosed concept images, connect printed-carpet and Philippine hub to entertainment pages, and convert legacy AI-source page into responsive procurement directory without changingURL. Add manual GSC/inquiry/AI citation review baseline; no recurring task. Supply facts unchanged, no invented TDS/photos/performance. Actual modified-page lastmod only.
 
 Branch content/buyer-resources-20261009 from production65d0a7f7257b3247a6fe63e7993724ab692d78e9; rollback samecommit. Before-edit8page HTML backups retained. Prompt/provenance and facts in ops/buyer-content-growth-20261009.md. Local/Preview/production acceptance pending.
 - Local acceptance completed: production build and TypeScript passed; SEO94, link/sitemap, placeholder109 audits passed; lint zero errors with the unchanged ProductImage.tsx43 warning; diff whitespace clean. Eight affected pages returned200 with one H1/self-canonical/valid JSON-LD, links and both generated assets passed. Root sitemap remains261 entries; affected root/child lastmod verified. Local ops:verify passed. Preview/production acceptance pending PR.
