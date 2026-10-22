@@ -85,6 +85,10 @@ Scores are 0–3 for product relevance, B2B intent, evidence, site gap, factual 
 - The Oct 20 layout guide and Oct 21 product URLs are not repeated.
 - Notification may be sent only after the exact production URL is live and verified. An accepted notification is not an indexing claim.
 
+## Preview finding and correction
+
+The first READY Preview confirmed the page, image, canonical, Article/FAQ JSON-LD, category link, sitemap membership and project-specific contact URL. Browser inspection then found that the shared Blog route emits FAQ schema but does not automatically render `post.faqs` as visible body content. The six FAQ questions and answers were therefore added to this article's visible sections, matching the structured data word-for-word. The shared Blog template was deliberately not changed in this scoped release. A new exact-head Preview and checks are required after this correction.
+
 ## Verification and release status
 
 Local acceptance passed: Site Ops guard (9 scoped files), lint (zero errors/warnings), Next.js 16 webpack production build (224 generated pages), SEO/link/asset/placeholder audits, `git diff --check`, and production-server HTTP/semantic checks for seven affected resources. The new URL returns 200 locally with one H1, self-canonical, indexable metadata, Article/FAQ structured data, six matching FAQs, working category reverse link, query/source-specific contact CTA, original SVG and sitemap membership. The IndexNow manifest contains exactly one new canonical URL. The SVG was rendered through Sharp at 1200×675 and visually inspected; text, hierarchy and disclosure are legible.

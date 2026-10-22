@@ -244,6 +244,24 @@ export const carpetTileDeliveryInspectionChecklist: BlogPost = {
           text: "This page supports procurement planning. It does not replace the selected product’s technical data, installation instructions, contract, transport claim process, local requirements or professional project advice."
         }
       ]
+    },
+    {
+      title: "Carpet Tile Delivery Inspection FAQ",
+      paragraphs: [],
+      blocks: [
+        { type: "subheading", title: "What should a commercial carpet tile buyer check first at delivery?" },
+        { type: "paragraph", text: "First connect the shipment to the controlled purchase record: delivery reference, package and carton counts, exact carton labels, product and colour identity, visible external condition and intended project zone. Isolate anything that cannot be reconciled before installation." },
+        { type: "subheading", title: "Does signing a delivery receipt mean the carpet tiles are fully accepted?" },
+        { type: "paragraph", text: "Not automatically. The contract and agreed project procedure should define what the signature means. A transport receipt may record package delivery while appearance, document, sample, damage or installation-release checks remain separate." },
+        { type: "subheading", title: "Can cartons with different batch or production labels be mixed?" },
+        { type: "paragraph", text: "Do not assume that they can. Record each label identity and ask the supplier and project approver how the exact product should be allocated. Product-specific instructions and the approved zone plan should control the decision." },
+        { type: "subheading", title: "How long should carpet tiles acclimate on site?" },
+        { type: "paragraph", text: "There is no universal time or climate condition that this guide can assign to every product. Obtain and follow the instructions for the exact selected carpet tile, together with the project’s site-condition requirements." },
+        { type: "subheading", title: "What should the team do with visibly damaged cartons?" },
+        { type: "paragraph", text: "Identify and segregate the affected cartons, photograph the carton label and condition, record the quantity and notify the responsible commercial and project parties. Do not install the material until the authorized decision and any required further inspection are recorded." },
+        { type: "subheading", title: "What information does VCARPETS need for a carpet tile quotation?" },
+        { type: "paragraph", text: "Send the application, estimated area, product or construction preference, colour or sample reference, destination, target programme, zone or packing needs and required documents. Product specifications, samples, costs and timing are confirmed for the individual B2B project." }
+      ]
     }
   ],
   suggestedLinks: [
