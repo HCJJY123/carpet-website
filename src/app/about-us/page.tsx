@@ -5,7 +5,7 @@ import FactoryCtaBackground from "@/components/FactoryCtaBackground";
 
 export const metadata: Metadata = {
   title: "About VCARPETS Manufacturer | VCARPETS",
-  description: "Tianjin Vcarpets Global Commercial Carpet Co., Ltd. is a professional commercial carpet manufacturer with a 50,000-square-meter factory, 900+ employees, and exports to over 45 countries and regions. We supply commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event carpets, and custom carpet solutions for global B2B projects.",
+  description: "VCARPETS manufactures commercial carpet tiles and hotel carpet for B2B projects. Review factory information, product lines and project inquiry paths.",
   alternates: { canonical: "https://www.vcarpets.com/about-us" },
 };
 
@@ -61,6 +61,7 @@ export default function AboutUsPage() {
                 <p>
                   Our product range includes commercial carpet tiles, hotel carpets, wall-to-wall carpet rolls, office carpet tiles, event and exhibition carpets, stair runners, corridor carpets, and customized rugs. With strong production capability and project-based customization support, we help global customers complete commercial flooring projects with stable quality, flexible specifications, and professional export service.
                 </p>
+                <p className="text-sm">Project teams can review the <Link href="/architects-designers" className="font-bold text-accent underline">architect and designer resources</Link>. Journalists can access the <Link href="/media/press-kit" className="font-bold text-accent underline">VCARPETS press kit</Link>.</p>
               </div>
             </div>
             <div className="lg:w-1/2">

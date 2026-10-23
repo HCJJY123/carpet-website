@@ -110,6 +110,11 @@ const topicClusters = [
     intent: "Sluice carpet and fine gold recovery mat sourcing",
     match: ["sluice", "gold", "miners", "vortex"],
   },
+  {
+    title: "Trade Sample Development",
+    intent: "Wholesale design approval and prototype planning",
+    match: ["custom-wool-rugs-home-decor-wholesale-prototype"],
+  },
 ];
 
 const blogFaqs = [

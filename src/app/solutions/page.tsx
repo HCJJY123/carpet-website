@@ -54,10 +54,20 @@ export default function SolutionsPage() {
       ],
     },
   };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Solutions", item: absoluteUrl("/solutions") },
+    ],
+  };
 
   return (
     <div className="bg-white min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(collectionJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }} />
+      <nav aria-label="Breadcrumb" className="container-fox py-3 text-sm text-muted"><Link href="/" className="underline">Home</Link> / Solutions</nav>
 
       <section className="relative overflow-hidden bg-primary text-white">
         <div className="absolute inset-0">
@@ -95,6 +105,7 @@ export default function SolutionsPage() {
 
       <section className="section-padding">
         <div className="container-fox">
+          <p className="mb-8 text-sm leading-7 text-muted">For more project types, browse the <Link href="/applications" className="font-bold text-accent underline">commercial carpet applications directory</Link>.</p>
           <div className="mb-12 max-w-4xl">
             <p className="mb-3 text-xs font-black uppercase tracking-[0.28em] text-accent">Linked Solution Pages</p>
             <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-5xl">

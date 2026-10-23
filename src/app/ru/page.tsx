@@ -122,6 +122,17 @@ export default function RuHubPage() {
         </div>
       </section>
 
+      <section className="section-padding border-t border-border" aria-labelledby="ru-product-types-heading">
+        <div className="container-fox">
+          <h2 id="ru-product-types-heading" className="mb-7 text-3xl font-black text-primary">Виды ковролина для коммерческих объектов</h2>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {ruB2BPages.filter((page) => ["aksmisterskiy-kovrolin", "kovrolin-dlya-banketnykh-zalov", "kovrolin-dlya-kazino", "kovrolin-dlya-konferents-zalov", "kovrolin-dlya-koridorov", "kovrolin-dlya-restoranov", "pechatnyy-kovrolin", "sherstyanoy-kovrolin"].includes(page.slug)).map((page) => (
+              <Link key={page.slug} href={`/ru/${page.slug}`} className="border border-border bg-white p-5 text-sm font-bold text-primary transition hover:border-accent hover:text-accent">{page.title} →</Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="ru-quote-form" className="section-padding" data-funnel-section="ru_home_quote">
         <div className="container-fox max-w-5xl">
           <div className="mb-9 text-center">

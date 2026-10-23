@@ -171,6 +171,11 @@ export default function LocalizedLandingPage({ page }: { page: LocalizedLanding 
             <p className="mb-3 text-xs font-black text-accent">{labels.productsEyebrow}</p>
             <h2 id="localized-products-heading" className="text-3xl font-black leading-tight md:text-5xl">{labels.productsHeading}</h2>
             <p className="mt-5 leading-7 text-muted">{page.productsIntro}</p>
+            {page.path === "/de/hotel-teppichboden" ? (
+              <p className="mt-4 text-sm leading-6 text-muted">
+                Für Büroprojekte: <Link href="/de/gewerbliche-teppichfliesen" className="font-bold text-accent underline">gewerbliche Teppichfliesen vergleichen</Link>.
+              </p>
+            ) : null}
           </div>
           <div className={`grid gap-6 ${productGridClass}`}>
             {resolvedProducts.map(({ product, name, description }) => (

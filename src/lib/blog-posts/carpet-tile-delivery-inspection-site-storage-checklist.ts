@@ -162,7 +162,7 @@ export const carpetTileDeliveryInspectionChecklist: BlogPost = {
           type: "paragraph",
           text: "Before installation, connect the storage and release record to the substrate, adhesive and fixing review. The commercial carpet tile adhesive and subfloor guide explains what information buyers should coordinate without treating a general guide as product-specific approval.",
           links: [
-            { "text": "commercial carpet tile adhesive and subfloor guide", "href": "/blog/commercial-carpet-tile-adhesive-subfloor-guide" }
+            { "text": "commercial carpet tile adhesive and subfloor guide", "href": "/blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide" }
           ]
         }
       ]
