@@ -5,7 +5,8 @@ import ProductGallery from "@/components/ProductGallery";
 import ProductImage from "@/components/ProductImage";
 import { ProductTrackedLink, ProductViewEvent } from "@/components/ProductAnalytics";
 import { brandInfo, products, type Product } from "@/lib/data";
-import { evidenceCopy, referenceSpecs, reviewedOn } from "@/lib/product-evidence-copy";
+import { evidenceCopy, referenceSpecs } from "@/lib/product-evidence-copy";
+import { tileDocumentChecks } from "@/lib/carpet-tile-evidence";
 import { absoluteUrl, categoryName, categoryPath, productBreadcrumbJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import { getContactBridgeUrl } from "@/lib/whatsapp";
 
@@ -54,6 +55,7 @@ export default function EvidenceProductPage({ productId }: { productId: string }
   const product = findProduct(productId);
   const copy = evidenceCopy(product);
   const url = absoluteUrl(productPath(product.id));
+  const reviewedOn = copy.reviewedOn;
   const catalogSpecs = referenceSpecs(product);
   const imageInputs = [{ src: product.image, alt: `${copy.name} product or design reference` }, ...(product.gallery || [])];
   const images = imageInputs.filter((image, index) => imageInputs.findIndex((other) => other.src === image.src) === index)
@@ -71,7 +73,7 @@ export default function EvidenceProductPage({ productId }: { productId: string }
     "@context": "https://schema.org", "@type": "FAQPage",
     mainEntity: copy.faqs.map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
   };
-  const related = products.filter((item) => item.category === product.category && item.id !== product.id).slice(0, 3);
+  const related = copy.relatedIds ? copy.relatedIds.map(findProduct) : products.filter((item) => item.category === product.category && item.id !== product.id).slice(0, 3);
   const guide = product.id === "gold-mining-carpet-mat" ? "/products/public-area/gold-mining-carpet-mat#application-checks"
     : product.category === "carpet-tiles" ? "/blog/commercial-carpet-tile-backing-comparison-guide"
     : "/blog/axminster-vs-wilton-vs-tufted-hospitality-guide";
@@ -139,6 +141,17 @@ export default function EvidenceProductPage({ productId }: { productId: string }
         <dl className="grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {catalogSpecs.map(([label, value]) => <div key={label} className="bg-white p-5"><dt className="mb-2 text-xs font-bold uppercase tracking-wide text-muted">{label}</dt><dd className="text-sm font-bold leading-7 text-primary">{value}</dd></div>)}
         </dl>
+        {product.category === "carpet-tiles" ? <div className="mt-8" data-tile-document-checks>
+          <h3 className="mb-4 text-xl font-bold text-primary">Five Documents to Check Before Specification Approval</h3>
+          <p className="mb-5 leading-8 text-muted">Use these 5 checks to distinguish catalog data from product-matched test evidence. Confirm the selected face, backing and floor assembly before accepting any performance claim.</p>
+          <div className="overflow-x-auto border border-border" role="region" aria-label="Carpet tile document checks" tabIndex={0}>
+            <table className="w-full min-w-[680px] border-collapse text-left text-sm leading-7">
+              <caption className="sr-only">Five document checks for the nominated carpet tile construction</caption>
+              <thead className="bg-primary text-white"><tr>{["Procurement question", "Document to request", "Evidence status"].map((label) => <th scope="col" key={label} className="px-5 py-4 align-top">{label}</th>)}</tr></thead>
+              <tbody>{tileDocumentChecks.map((check) => <tr key={check.topic} className="border-t border-border bg-white"><th scope="row" className="px-5 py-4 align-top">{check.topic}</th><td className="px-5 py-4 align-top">{check.record}</td><td className="px-5 py-4 align-top">{check.status}</td></tr>)}</tbody>
+            </table>
+          </div>
+        </div> : null}
         <Link href="/technical-documents" className="mt-5 inline-block text-sm font-bold text-primary underline">Request construction-specific documents</Link>
       </div>
     </section>
@@ -174,6 +187,7 @@ export default function EvidenceProductPage({ productId }: { productId: string }
         <p className="mb-6 leading-8 text-muted">Review {related.length} related products in this category and confirm each construction separately. A shared application or similar design does not establish matching test results.</p>
         <div className="grid gap-4 md:grid-cols-3">{related.map((item) => <Link href={productPath(item.id)} key={item.id} className="border border-border bg-white p-5 font-bold leading-7 text-primary underline">{evidenceCopy(item).name}</Link>)}</div>
         <div className="mt-6 flex flex-wrap gap-5 text-sm font-bold text-primary"><Link href={guide} className="underline">Construction and selection guide</Link><Link href="/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers" className="underline">Project RFQ checklist</Link><Link href="/commercial-terms" className="underline">Commercial terms</Link></div>
+        {product.category === "carpet-tiles" ? <div className="mt-6 flex flex-wrap gap-5 text-sm font-bold text-primary" data-tile-procurement-links><Link href="/commercial-carpet-tiles" className="underline">Commercial carpet tile selection</Link><Link href="/solutions/office-carpet-tiles-supplier" className="underline">Office carpet tile project requirements</Link><Link href="/blog/nylon-vs-polyester-vs-polypropylene-carpet-tiles" className="underline">Compare nylon and polypropylene fibers</Link><Link href="/technical-documents" className="underline">Technical documents and buyer guides</Link></div> : null}
       </div>
     </section>
 
