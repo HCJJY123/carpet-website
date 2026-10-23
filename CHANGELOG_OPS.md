@@ -2,6 +2,17 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-10-23 — Sitewide SEO basics repair (release candidate)
+
+Owner requested execution and production release of the reviewed SEO fixes. Branch `seo/site-basics-20261024`, rollback commit `534dcd9bfc611a95e7acdd3cb950dbd5861fb568`; exact scope is in `ops/change-request.json`. Production responses for 42 affected pages and two sitemap endpoints were captured before editing in the backup manifest. One previously linked target returned 404, as expected.
+
+- Replace four confirmed 404 links with existing, HTTP 200 destinations. Link the 19 previously zero-inbound sitemap pages through product-line cards, Russian and German contextual pages, a wholesale trade guide cluster, Resources and About; add one Resources footer entry and a Solutions-to-Applications link.
+- Add visible paths and matching BreadcrumbList markup to Products, its five product lines, Resources and Solutions. Keep Organization/Product/FAQ templates and every indexed URL and canonical intact.
+- Record the substantive 14 carpet-tile detail rewrites from the prior release as 2026-10-23 in both root and product sitemaps; refresh dates for changed hubs and broken-link sources in their relevant sitemap endpoints. Correct EcoCore keyword ownership from an unverified PVC-free claim to a PE-backing description. Shorten the About meta description.
+- Preserve the current client-side language correction on localized routes; no root SSR layout refactor. Product rich-result Offer/review eligibility is not claimed because verified offer or review data is absent. GSC submission remains unverified because the currently connected GSC property list does not include vcarpets.com.
+
+Local acceptance: `ops:check`, lint, production build, source SEO/link/asset audits and local `ops:verify` pass. Re-crawl: 274/274 sitemap pages HTTP 200, zero orphan pages (was 19), 282/282 distinct internal link targets HTTP 200, no metadata/H1/canonical or JSON-LD parsing gaps, 14/14 revised tile dates match between root and product sitemaps. Forms, tracking, robots, canonical generation, DNS and dependency versions were not changed. Vercel Preview, Pull Request checks, merge and production verification pending.
+
 ## 2026-10-08 — Printed broadloom repeat and seam planning
 
 Owner explicitly authorizes publication and requests Vcarpets brand spelling for new content. Add one original buyer guide at `/blog/printed-broadloom-pattern-repeat-seam-planning` and a next-step backlink from the existing printing technology guide. Existing Blog listing and sitemap generation include the new record; no global SEO algorithms changed. Reuse the labeled P08 application illustration, no new generated assets. No product numbers, customer cases, certification or delivery promises added. Uploaded buyer data remains private; it supplies anonymized procurement questions only. Cinema product refresh and Philippine entertainment page remain unpublished pending supply/sample evidence.

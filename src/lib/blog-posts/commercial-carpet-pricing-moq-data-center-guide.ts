@@ -122,7 +122,7 @@ export const commercialCarpetPricingMoqDataCenterGuide: BlogPost = {
   ],
   suggestedLinks: [
     { label: "Commercial Carpet Tile RFQ Checklist", href: "/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers" },
-    { label: "Commercial Carpet Tile MOQ Guide", href: "/blog/commercial-carpet-tile-moq-guide" },
+    { label: "Commercial Carpet Tile MOQ Guide", href: "/blog/commercial-carpet-tile-moq-sample-trial-project-guide" },
     { label: "Commercial Carpet Tile Specification Checklist", href: "/blog/commercial-carpet-tile-specification-checklist-b2b-buyers" },
     { label: "Request a Project Quote", href: "/contact?product=Commercial%20Carpet%20Pricing%20Data%20Center#quote-form" },
   ],

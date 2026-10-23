@@ -41,10 +41,21 @@ export default async function ProductLinePage({ params }: Props) {
       itemListElement: relatedProducts.map((product, index) => ({ "@type": "ListItem", position: index + 1, name: product.name, url: absoluteUrl(productPath(product.id)) })),
     },
   };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Products", item: absoluteUrl("/products") },
+      { "@type": "ListItem", position: 3, name: page.title, item: absoluteUrl(pagePath) },
+    ],
+  };
 
   return (
     <main className="bg-background">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }} />
+      <nav aria-label="Breadcrumb" className="container-fox py-3 text-sm text-muted"><Link href="/" className="underline">Home</Link> / <Link href="/products" className="underline">Products</Link> / {page.title}</nav>
       <PageHero eyebrow={page.eyebrow} title={page.title} description={page.summary} image={page.image} imageAlt={page.imageAlt} />
       <section className="section-padding">
         <div className="container-fox grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">

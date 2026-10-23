@@ -36,10 +36,20 @@ export default function ResourcesPage() {
       })),
     },
   };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Resources", item: absoluteUrl(pagePath) },
+    ],
+  };
 
   return (
     <main className="bg-background">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(collectionJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }} />
+      <nav aria-label="Breadcrumb" className="container-fox py-3 text-sm text-muted"><Link href="/" className="underline">Home</Link> / Resources</nav>
       <PageHero
         eyebrow="Resource Center"
         title="Commercial Carpet Resources for Project Buyers"
@@ -55,6 +65,12 @@ export default function ResourcesPage() {
               <p className="mt-4 text-sm leading-7 text-muted">{category.description}</p>
             </Link>
           ))}
+        </div>
+      </section>
+      <section className="section-padding border-t border-border bg-surface">
+        <div className="container-fox">
+          <h2 className="mb-4 text-2xl font-black text-primary">Hotel project planning</h2>
+          <Link href="/tools/hotel-carpet-project-checklist" className="inline-block border border-border bg-white p-6 text-sm font-bold text-primary transition hover:border-accent">Open the hotel carpet project checklist →</Link>
         </div>
       </section>
       <section className="section-padding border-t border-border bg-surface">

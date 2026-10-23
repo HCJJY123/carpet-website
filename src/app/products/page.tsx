@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { productCategories as categories, products } from "@/lib/data";
-import { collectionItemListJsonLd, productPath, safeJsonLd } from "@/lib/seo";
+import { productLinePages } from "@/lib/product-line-data";
+import { absoluteUrl, collectionItemListJsonLd, productPath, safeJsonLd } from "@/lib/seo";
 import ProductImage from "@/components/ProductImage";
 import PageHero from "@/components/PageHero";
 
@@ -21,10 +22,20 @@ export default function ProductsPage() {
       url: `/products/${category.id}`,
     })),
   });
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Products", item: absoluteUrl("/products") },
+    ],
+  };
 
   return (
     <div className="bg-white min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }} />
+      <nav aria-label="Breadcrumb" className="container-fox py-3 text-sm text-muted"><Link href="/" className="underline">Home</Link> / Products</nav>
       <PageHero
         title="Our Products"
         eyebrow="Commercial Carpet Systems"
@@ -40,6 +51,19 @@ export default function ProductsPage() {
               <Link key={cat.id} href={`/products/${cat.id}`} className="group relative block bg-surface rounded-xl overflow-hidden border border-border hover:shadow-2xl transition-all duration-500">
                 <div className="aspect-[4/5] overflow-hidden"><ProductImage src={cat.image} alt={cat.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw" /></div>
                 <div className="p-8"><h2 className="text-2xl font-bold uppercase">{cat.name}</h2></div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section-padding border-t border-border bg-surface">
+        <div className="container-fox">
+          <h2 className="mb-6 text-3xl font-black text-primary">Plan by Product Line</h2>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {productLinePages.map((line) => (
+              <Link key={line.slug} href={`/products/${line.slug}`} className="border border-border bg-white p-6 transition hover:border-accent">
+                <h3 className="text-lg font-black text-primary">{line.eyebrow}</h3>
+                <p className="mt-3 text-sm leading-6 text-muted">{line.seoDescription}</p>
               </Link>
             ))}
           </div>

@@ -26,6 +26,9 @@ const staticPages = [
 ];
 
 const staticPageModifiedDates: Record<string, string> = {
+  "/products": "2026-10-23",
+  "/blog": "2026-10-23",
+  "/about-us": "2026-10-23",
   "/commercial-carpet-manufacturer": "2026-09-08",
   "/tools/broadloom-carpet-waste-calculator": "2026-09-10",
   "/tools/hotel-carpet-project-checklist": "2026-09-10",
@@ -35,7 +38,7 @@ export function GET() {
   const entries = [
     ...staticPages.map((path) => ({ url: `${BASE}${path}`, lastModified: staticPageModifiedDates[path] ?? "2026-08-06", changeFrequency: path === "/" ? "weekly" as const : "monthly" as const, priority: path === "/" ? 1 : 0.7 })),
     ...applicationPages.map((page) => ({ url: `${BASE}/applications/${page.slug}`, lastModified: "2026-08-06", changeFrequency: "monthly" as const, priority: 0.76 })),
-    ...localizedLandings.map((page) => ({ url: `${BASE}${page.path}`, lastModified: "2026-08-26", changeFrequency: "monthly" as const, priority: 0.72 })),
+    ...localizedLandings.map((page) => ({ url: `${BASE}${page.path}`, lastModified: page.path === "/de/hotel-teppichboden" ? "2026-10-23" : "2026-08-26", changeFrequency: "monthly" as const, priority: 0.72 })),
   ];
 
   return sitemapResponse(entries);
