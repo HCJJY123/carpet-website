@@ -56,6 +56,7 @@ export default function EvidenceProductPage({ productId }: { productId: string }
   const copy = evidenceCopy(product);
   const url = absoluteUrl(productPath(product.id));
   const reviewedOn = copy.reviewedOn;
+  const tileAnchorOffset = product.category === "carpet-tiles" ? " scroll-mt-24" : "";
   const catalogSpecs = referenceSpecs(product);
   const imageInputs = [{ src: product.image, alt: `${copy.name} product or design reference` }, ...(product.gallery || [])];
   const images = imageInputs.filter((image, index) => imageInputs.findIndex((other) => other.src === image.src) === index)
@@ -117,7 +118,7 @@ export default function EvidenceProductPage({ productId }: { productId: string }
       </div>
     </section>
 
-    <section className="py-10 md:py-14" id="supplier-comparison" data-copy-block="comparison">
+    <section className={"py-10 md:py-14" + tileAnchorOffset} id="supplier-comparison" data-copy-block="comparison">
       <div className="container-fox">
         <h2 className={headingClass}>Supplier and Construction Comparison</h2>
         <p className="mb-6 max-w-4xl leading-8 text-muted">Compare these {copy.competitors.length + 1} supplier options using the cited product or service pages. Different constructions are not equivalent products. No price advantage, performance ranking or interchangeability is implied. Sources reviewed {reviewedOn}.</p>
@@ -134,7 +135,7 @@ export default function EvidenceProductPage({ productId }: { productId: string }
       </div>
     </section>
 
-    <section className="border-y border-border bg-surface py-10 md:py-14" id="reference-data">
+    <section className={"border-y border-border bg-surface py-10 md:py-14" + tileAnchorOffset} id="reference-data">
       <div className="container-fox max-w-5xl">
         <h2 className={headingClass}>Reference Specification and Evidence</h2>
         <p className="mb-6 leading-8 text-muted">Review these {catalogSpecs.length} catalog fields as one selected construction. Options are not interchangeable test results. Fire, acoustic, traffic, static and slip performance require documents identifying the tested product and relevant floor assembly.</p>
@@ -164,7 +165,7 @@ export default function EvidenceProductPage({ productId }: { productId: string }
       </div>
     </section>
 
-    <section className="border-y border-border bg-surface py-10 md:py-14" id="order-details">
+    <section className={"border-y border-border bg-surface py-10 md:py-14" + tileAnchorOffset} id="order-details">
       <div className="container-fox max-w-5xl">
         <h2 className={headingClass}>Samples and Five Quotation Inputs</h2>
         <p className="mb-6 leading-8 text-muted">Send 5 inputs: intended application, dimensions or area, quantity, destination and required date. Samples are paid; the agreed sample charge can be credited against a subsequent order. Confirm sample availability, courier charges, MOQ, FOB Tianjin price and production schedule in writing. Shipping transit is separate from production time.</p>
@@ -194,7 +195,7 @@ export default function EvidenceProductPage({ productId }: { productId: string }
     <section className="py-10 md:py-16" id="product-faq" data-copy-block="faq">
       <div className="container-fox max-w-5xl">
         <h2 className={headingClass}>Buyer FAQ</h2>
-        <p className="mb-6 leading-8 text-muted">These {copy.faqs.length} questions cover specification, application, supplier comparison, evidence, quotation and image limitations.</p>
+        <p className="mb-6 leading-8 text-muted">These {copy.faqs.length} questions cover {product.category === "carpet-tiles" ? "materials, coverage, project use, documents, supplier comparison and paid samples." : "specification, application, supplier comparison, evidence, quotation and image limitations."}</p>
         <div className="space-y-4">{copy.faqs.map(({ q, a }) => <details key={q} className="border border-border bg-white p-5 md:p-6"><summary className="cursor-pointer font-bold leading-7 text-primary">{q}</summary><p className="mt-4 leading-8 text-muted">{a}</p></details>)}</div>
       </div>
     </section>
