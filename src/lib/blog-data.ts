@@ -1,3 +1,4 @@
+import { hospitalityConstructionGuide } from "@/lib/blog-posts/axminster-wilton-tufted-hospitality-guide";
 import { carpetTileDeliveryInspectionChecklist } from "@/lib/blog-posts/carpet-tile-delivery-inspection-site-storage-checklist";
 import { openPlanOfficeAcousticsGuide } from "@/lib/blog-posts/carpet-tiles-open-plan-office-acoustics-guide";
 import { naturalSisalCommercialInteriorsGuide } from "@/lib/blog-posts/natural-sisal-carpet-commercial-interiors-guide";
@@ -649,65 +650,7 @@ const baseBlogPosts: BlogPost[] = [
       { label: "Request Carpet Tile Quote", href: "/contact?product=Commercial%20Carpet%20Tiles#quote-form" }
     ]
   },
-  {
-    slug: "axminster-vs-wilton-vs-tufted-hospitality-guide",
-    title: "Axminster vs Wilton vs Tufted Carpets: What Indian Hospitality Groups Must Know",
-    subtitle: "Technical specifications that determine durability, appearance, and customer satisfaction.",
-    painPoint: "Specification confusion, quality compromise, and warranty disputes.",
-    seoTitle: "Axminster vs Wilton vs Tufted Hospitality Guide | VCARPETS",
-    description: "A technical comparison of three major carpet constructions for hospitality procurement decisions.",
-    keywords: ["axminster", "wilton", "tufted", "hospitality carpet", "technical comparison"],
-    date: "2026-06-23",
-    author: "VCARPETS Technical Team",
-    category: "Technical Guide",
-    image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.webp",
-    relatedProductIds: [
-      "luxury-hotel-broadloom",
-      "3d-printed-hotel-carpet",
-      "custom-luxury-hotel-room-carpet",
-    ],
-    sections: [
-      {
-        title: "Technical Specifications",
-        paragraphs: [
-          "Hospitality operators managing multi-property portfolios need clear construction logic to avoid costly specification mistakes.",
-          "Axminster supports rich multi-color design and high pattern fidelity, making it strong for premium guest-facing zones.",
-          "Wilton offers dense woven performance and consistent heritage aesthetics in executive corridors and formal spaces.",
-          "Tufted systems deliver faster output and flexible cost control for large-volume rooms and general commercial areas."
-        ],
-        image: "/images/blog-series/blog-2/Blog_2_Manufacturing_Comparison.webp",
-        imageAlt: "Blog 2 manufacturing process comparison",
-      },
-      {
-        title: "Comparison Table",
-        paragraphs: [
-          "Comparison should go beyond marketing claims and include tuft density, pattern precision, lead time, seam behavior, and maintenance profile.",
-          "A durable system with poor seam quality can still fail visual expectations in premium hospitality environments.",
-          "Likewise, premium pattern capability without lifecycle planning can create budget pressure in high-volume projects.",
-          "A structured comparison framework helps procurement teams justify decisions to operations, design, and finance stakeholders."
-        ],
-        image: "/images/blog-series/blog-2/Blog_2_Durability_Chart.webp",
-        imageAlt: "Blog 2 durability comparison chart",
-      },
-      {
-        title: "Seam Quality",
-        paragraphs: [
-          "Seaming is often the hidden cost driver and visual risk point in hospitality carpet delivery.",
-          "Luxury environments demand minimal seam visibility and strict color continuity at junction lines.",
-          "Installation QA should include seam direction planning, pattern registration checks, and post-install visual audits.",
-          "Where seaming discipline is weak, guest-facing perception declines even if material specification appears strong on paper."
-        ],
-        image: "/images/blog-series/blog-2/Blog_2_Seam_Quality_Macro.webp",
-        imageAlt: "Blog 2 seam quality macro comparison",
-      }
-    ],
-    suggestedLinks: [
-      { label: "Wall-to-Wall Carpet", href: "/products/wall-to-wall" },
-      { label: "Wool-Blend Hotel Broadloom", href: "/products/wall-to-wall/luxury-hotel-broadloom" },
-      { label: "3D Printed Hotel Carpet", href: "/products/wall-to-wall/3d-printed-hotel-carpet" },
-      { label: "Hospitality Solutions", href: "/projects" }
-    ]
-  },
+  hospitalityConstructionGuide,
   {
     slug: "carpet-printing-technology-design-to-installation-guide",
     title: "Carpet Printing Technology: From Digital Design to On-Floor Installation",
