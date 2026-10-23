@@ -75,6 +75,16 @@ Local acceptance passed: scope guard (9 files), lint (zero errors/warnings), web
 
 The first build caught a fixed-label component type mismatch (Project Quantity versus Project MOQ); corrected the caller without modifying the shared component. A separate local-server session was unreachable from a later command; running server and HTTP verification in one process completed successfully, including `ops:verify`. Preview and browser review, required PR checks, merge, production verification and two-URL notification remain pending. Production remains at the baseline until the release receipt is recorded.
 
+### Preview acceptance
+
+- PR103 application commit `88088e44d41f8d5f175c9eb0d51a511a95e5a57b` passed Site Ops Guard run `39883175444` (165). Preview `dpl_6BUXtuKNhB6Dxo3zVxBj5tkgtLUk` is READY: `https://carpet-website-7m26io7jp-mike123-s-projects.vercel.app`.
+- Local and GitHub application Git trees exactly match `3135fc668d938fd3007d48d51119b49b609c0200`; the entire append-only historical log was transferred without output truncation.
+- Preview HTTP verification passed all seven resources and 57 internal targets, six FAQ pairs, date preservation, canonical/H1, category promise removal, event identity, diagram and 274-URL sitemap; Preview `ops:verify` passed.
+- Browser at 1363 CSS px: guide and category have no document horizontal overflow; all three guide tables fit the content container. Original SVG loads at 1200×675. Category shows eight reviewed product titles, correct quotation wording, valid product navigation/back navigation and the corrected FAQ opens. Guestroom event remains `select_item` / `VHC-WTW-HRC-001` / original product event name.
+- The construction-review CTA navigates to contact, retains topic/source parameters, displays the exact product topic and finds the quote-form anchor. No form, email or WhatsApp message was sent.
+- Browser viewport resizing/mobile emulation was unavailable. A single official mobile PSI request returned HTTP429, so no mobile lab score or mobile screenshot is claimed. The established responsive templates remain unchanged; tables keep their horizontal-scroll containers. This is a remaining device-validation limitation, not an assertion of mobile acceptance.
+- This follow-up changes only operations evidence. The final branch head must pass required checks before merge. Production and indexing receipt will be preserved in the PR closeout after release.
+
 ## Follow-up
 
 7 days after release: check access/canonical/robots/sitemap and crawl/index status when a verified GSC connection is available; review category-to-guide and guide-to-contact activity using existing events only. Approximately 28 days with adequate sample: relevant construction queries, commercial landing visits, inquiry product match, project scope, destination and downstream quotation progress. CTA clicks, accepted indexing notices and form submissions remain separate from qualified B2B opportunities.
