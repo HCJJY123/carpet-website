@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { products } from "@/lib/data";
+import { evidenceCopy } from "@/lib/product-evidence-copy";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import ProcurementSnapshot from "@/components/ProcurementSnapshot";
@@ -22,7 +23,7 @@ const categoryFaqs = [
   },
   {
     question: "What is the wall-to-wall carpet price?",
-    answer: "The products on this page currently show reference FOB prices from US$3.10 to US$38.00 per square meter. Final commercial carpet price depends on yarn, construction, pile weight, pattern, quantity, backing, testing, and delivery requirements."
+    answer: "Request a written FOB Tianjin Port quotation for the selected construction, design and quantity. Price depends on the specified product, sample development, required documents, pattern and roll plan, packing and order scope. The category does not provide one current price for every broadloom option."
   },
   {
     question: "Which carpet is suitable for hotel rooms and corridors?",
@@ -30,7 +31,7 @@ const categoryFaqs = [
   },
   {
     question: "What is the difference between Axminster, Wilton, and printed broadloom carpet?",
-    answer: "Axminster carpet is a woven construction commonly specified as an 80% wool and 20% nylon blend for premium hospitality projects. Wilton carpet is also woven but uses a different yarn and pattern structure. Printed broadloom applies custom artwork to a tufted surface and is often selected for lower setup cost, detailed patterns, and faster production."
+    answer: "Axminster and Wilton are different woven constructions. Printing describes a colouring method and can be applied to a tufted base. Compare the actual fibre, backing, pattern, sample, project documents and installation scope. The listed VCARPETS Axminster option has an 80/20 wool-nylon catalog reference; this is not a definition of every woven carpet."
   },
   {
     question: "Can I order custom hotel carpet or patterned wall-to-wall carpet?",
@@ -45,12 +46,12 @@ const categoryFaqs = [
 const constructionOptions = [
   {
     title: "Axminster Wool-Blend Carpet",
-    text: "Woven 80% wool and 20% nylon broadloom for five-star hotels, luxury corridors, casino areas, and premium hospitality interiors.",
+    text: "Listed woven Axminster option with an 80% wool and 20% nylon catalog reference. Confirm the sample, pattern, roll plan and hotel-zone requirements.",
     href: "/products/wall-to-wall/luxury-hotel-broadloom"
   },
   {
     title: "Custom Printed Nylon Carpet",
-    text: "High-definition patterned wall-to-wall carpet for hotel lobbies, guestrooms, restaurants, corridors, and branded commercial interiors.",
+    text: "Printed nylon broadloom with a project-selected pattern. Review the physical sample, artwork revision, repeat and installation requirements.",
     href: "/products/wall-to-wall/3d-printed-hotel-carpet"
   },
   {
@@ -60,12 +61,12 @@ const constructionOptions = [
   },
   {
     title: "Banquet and Ballroom Carpet",
-    text: "Heavy-commercial printed broadloom for banquet halls, ballrooms, conference rooms, event venues, and hospitality public areas.",
+    text: "Printed broadloom for banquet and meeting-space review. Confirm partition lines, artwork scale, construction and applicable documents.",
     href: "/products/wall-to-wall/3d-printed-banquet-hall-carpet"
   },
   {
     title: "Oriental Flower Casino Carpet",
-    text: "Custom luxury casino carpet for Singapore gaming floors, VIP rooms, clubs, lift lobbies, and hotel entertainment zones.",
+    text: "Floral-pattern broadloom for casino and entertainment-space review. Confirm the selected construction, use requirements and physical sample.",
     href: "/products/wall-to-wall/singapore-casino-carpet"
   },
   {
@@ -75,7 +76,7 @@ const constructionOptions = [
   },
   {
     title: "Custom Floral Printed Carpet",
-    text: "Low-MOQ custom printed carpet for corridors, guestrooms, banquet halls, hotel lobbies, offices, and reception spaces.",
+    text: "Floral printed broadloom for hospitality design development. Order quantity, sample scope and timing are confirmed for the selected proposal.",
     href: "/products/wall-to-wall/custom-floral-printed-hotel-carpet"
   },
   {
@@ -89,31 +90,31 @@ const contractCarpetSelector = [
   {
     area: "Hotel Guestrooms & Suites",
     construction: "Custom cut-pile or printed broadloom",
-    buyingRange: "MOQ from 100 SQM · FOB from US$3.10/SQM",
+    buyingRange: "Confirm room types, area, sample and construction",
     href: "/products/wall-to-wall/custom-luxury-hotel-room-carpet"
   },
   {
     area: "Hotel Corridors & Lift Lobbies",
     construction: "Patterned high-traffic corridor broadloom",
-    buyingRange: "MOQ from 300 SQM · FOB from US$4.20/SQM",
+    buyingRange: "Confirm repeat, direction, seams and measured layout",
     href: "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet"
   },
   {
     area: "Ballrooms & Banquet Halls",
     construction: "Dense custom printed contract carpet",
-    buyingRange: "MOQ from 200 SQM · FOB from US$3.80/SQM",
+    buyingRange: "Confirm artwork scale, partitions and use requirements",
     href: "/products/wall-to-wall/3d-printed-banquet-hall-carpet"
   },
   {
     area: "Singapore Casinos & VIP Rooms",
     construction: "Custom oriental flower luxury casino carpet",
-    buyingRange: "MOQ from 300 SQM · FOB from US$4.60/SQM",
+    buyingRange: "Confirm construction, pattern and applicable evidence",
     href: "/products/wall-to-wall/singapore-casino-carpet"
   },
   {
     area: "Luxury Hotels & Casinos",
     construction: "Woven 80% wool / 20% nylon Axminster",
-    buyingRange: "MOQ from 500 SQM · FOB from US$18.00/SQM",
+    buyingRange: "Confirm selected 80/20 option and project quotation",
     href: "/products/wall-to-wall/luxury-hotel-broadloom"
   },
   {
@@ -145,11 +146,11 @@ const hospitalityProcurementChecks = [
 
 export const metadata: Metadata = {
   title: "Contract Carpet Supplier | Hotel Wall-to-Wall Broadloom",
-  description: "Compare contract carpet for hotel rooms, corridors, ballrooms and casinos. Review Axminster, printed broadloom, MOQ, samples, lead time and factory FOB pricing.",
+  description: "Compare Axminster and printed hotel broadloom by construction, zone, sample and roll plan. Request a project quotation for B2B supply FOB Tianjin Port.",
   alternates: { canonical: categoryPath },
   openGraph: {
     title: "Contract Carpet Supplier | Hotel Wall-to-Wall Broadloom",
-    description: "Compare contract carpet and broadloom options by construction, factory price, MOQ, samples, and hospitality or entertainment application.",
+    description: "Compare contract broadloom by construction, hotel zone, physical sample and installation plan. Request a written FOB Tianjin Port quotation.",
     url: absoluteUrl(categoryPath),
     type: "website",
     images: [{ url: absoluteUrl("/images/category-broadloom.webp"), alt: "Commercial wall-to-wall hotel broadloom carpet by VCARPETS" }]
@@ -158,7 +159,10 @@ export const metadata: Metadata = {
 
 export default function CategoryPage() {
   const categoryId = "wall-to-wall";
-  const categoryProducts = products.filter((p) => p.category === categoryId);
+  const categoryProducts = products.filter((p) => p.category === categoryId).map((product) => {
+    const copy = evidenceCopy(product);
+    return { ...product, trackingName: product.name, name: copy.name, description: copy.summary };
+  });
   const jsonLd = productItemListJsonLd({
     name: "Commercial Wall-to-Wall Carpet and Hotel Broadloom",
     description: "Custom commercial broadloom carpet for hotel guestrooms, corridors, lobbies, ballrooms, banquet halls, and contract flooring projects.",
@@ -197,28 +201,28 @@ export default function CategoryPage() {
           <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Commercial Carpet Manufacturer & Export Supplier</p>
           <h1 className="text-4xl font-black uppercase text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.72)] md:text-6xl">Contract Carpet & Hotel Broadloom</h1>
           <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/82 drop-shadow-[0_1px_5px_rgba(0,0,0,0.72)]">
-            Custom commercial wall-to-wall carpet for hotel rooms, corridors, lobbies, ballrooms, casinos, cinemas, theaters, restaurants, and contract interiors. Compare construction, FOB price, MOQ, and lead time across project-ready broadloom and casino carpet options.
+            Compare commercial broadloom for hotel rooms, corridors, ballrooms and entertainment venues by construction, physical sample, pattern and roll plan. Send the project area, drawings, destination and required date for a written FOB Tianjin Port quotation.
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <Link href="/contact?product=Wall-to-Wall%20Carpet#quote-form" className="btn-fox-orange">Get Project Quote in 24 Hours</Link>
+            <Link href="/contact?product=Wall-to-Wall%20Carpet#quote-form" className="btn-fox-orange">Request Project Quote</Link>
             <Link href="#wall-to-wall-products" className="inline-flex min-h-12 items-center justify-center border border-white/40 px-7 py-3 text-xs font-black uppercase tracking-widest text-white transition-colors hover:border-white">Compare Products</Link>
           </div>
-          <p className="mt-5 text-xs font-bold uppercase tracking-[0.12em] text-white/65">Specification review · Samples / strike-offs · FOB / CIF / DAP</p>
+          <p className="mt-5 text-xs font-bold uppercase tracking-[0.12em] text-white/65">Specification review · Paid samples by project · FOB Tianjin Port</p>
         </div>
       </section>
       <AnswerFirst
         title="Which Wall-to-Wall Carpet Should a Hotel Buyer Specify?"
-        answer="Choose hotel wall-to-wall carpet by area and construction, not pattern alone. Guestrooms usually prioritize comfort and design flexibility; corridors need appearance retention and a coordinated roll plan; ballrooms need dense project-grade broadloom; premium hotels and casinos may specify woven wool-nylon Axminster. Confirm traffic, fire standard, acoustics, cleaning method, pattern repeat, waste allowance, and installation schedule before ordering."
+        answer="Specify hotel broadloom by use zone, construction and project requirements. Identify the proposed Axminster, printed or tufted product, then review its physical sample, pattern repeat, backing, installation instructions and applicable documents. Confirm quantity and commercial terms in the written project quotation."
         facts={[
           { label: "Construction Options", value: "Printed, cut-pile, Axminster and project broadloom" },
-          { label: "Published FOB Range", value: "US$3.10-38.00 / SQM across current products" },
-          { label: "Typical Production", value: "15-35 days after approvals" },
+          { label: "Quotation Basis", value: "B2B supply · FOB Tianjin Port" },
+          { label: "Production", value: "Confirmed for selected quantity and approvals" },
           { label: "Buyer Checks", value: "Floor plan, fire requirement, roll plan, repeat and waste allowance" },
         ]}
         moq={[
-          { label: "Sample", value: "Material swatch or printed strike-off by construction" },
-          { label: "Trial Order", value: "Generally 50-100 SQM after design or construction approval" },
-          { label: "Project MOQ", value: "Generally 100-500 SQM depending on construction" },
+          { label: "Sample", value: "Paid; confirm format, fees and timing" },
+          { label: "Trial Order", value: "Confirm selected design and quantity" },
+          { label: "Project MOQ", value: "Confirm by construction, colour and layout" },
         ]}
         suitableFor={[
           "Hotel rooms, corridors, lobbies, ballrooms, casinos and cinemas",
@@ -228,7 +232,7 @@ export default function CategoryPage() {
           "Wet or outdoor areas without a purpose-built flooring system",
           "Ordering from artwork alone without site measurements and fire requirements",
         ]}
-        evidence="The ranges are derived from the products currently listed on this category page and were reviewed on July 31, 2026. Final price, availability, fire documentation, pattern feasibility, roll planning, and lead time are confirmed only after specification and sample review."
+        evidence="Product summaries use the reviewed catalog profiles from 22 October 2026. Catalog values do not establish test results or current stock. Final construction, required documents, sample charges, quantity, price and production schedule are confirmed for the selected project."
         quoteHref="/contact?product=Wall-to-Wall%20Carpet#quote-form"
         quoteLabel="Request Broadloom Recommendation"
       />
@@ -245,10 +249,10 @@ export default function CategoryPage() {
       <ProcurementSnapshot
         title="Hotel Broadloom Buying Facts"
         facts={[
-          { label: "Project MOQ", value: "100-500 SQM", detail: "Samples and trial orders vary by construction." },
-          { label: "Production", value: "15-35 Days", detail: "Custom artwork and specification approval affect timing." },
-          { label: "Samples", value: "Sample / Strike-Off", detail: "Color, pattern scale, pile, and backing are confirmed by project." },
-          { label: "Trade Terms", value: "FOB / CIF / DAP", detail: "Roll plan, packing, and freight depend on destination." },
+          { label: "Project Quantity", value: "Written Confirmation", detail: "Separate quantities by construction, design and colour." },
+          { label: "Production", value: "Project-Specific", detail: "Confirm timing after the required design and specification approvals." },
+          { label: "Samples", value: "Paid / By Project", detail: "Confirm format, fees, courier charges and preparation time." },
+          { label: "Trade Terms", value: "FOB Tianjin Port", detail: "Confirm the roll plan, packing and buyer’s logistics requirements." },
         ]}
         quoteHref="/contact?product=Wall-to-Wall%20Carpet#quote-form"
         downloadHref="/downloads/hotel-broadloom-procurement-guide.pdf"
@@ -265,6 +269,7 @@ export default function CategoryPage() {
           { label: "Factory & Production", href: "/factory" },
           { label: "Hotel Acoustic Guide", href: "/blog/hotel-noise-acoustic-carpet-specification-guide" },
           { label: "Hotel Pattern Guide", href: "/blog/why-hotel-carpet-patterns-look-busy" },
+          { label: "Axminster vs Wilton vs Tufted: Construction Review", href: "/blog/axminster-vs-wilton-vs-tufted-hospitality-guide" },
           { label: "Renovation Decision Guide", href: "/blog/hotel-carpet-renovation-hard-flooring-decision-guide" },
           { label: "Request a Quote", href: "/contact?product=Wall-to-Wall%20Carpet#quote-form" },
         ]}
@@ -294,8 +299,9 @@ export default function CategoryPage() {
               <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Direct Contract Carpet Answer</p>
               <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-4xl">Choose by Area, Traffic and Construction</h2>
               <p className="mt-5 leading-8 text-muted">
-                For hotel contract carpet, choose the construction by application before comparing price. Guestrooms prioritize comfort and design flexibility; corridors need appearance retention; ballrooms need dense project-grade broadloom; premium hotels and casinos commonly specify woven wool-nylon Axminster.
+                Map the hotel zones before comparing options. Record traffic, cleaning, pattern, fixing and required documents for each area. The construction comparison guide explains how Axminster, Wilton and tufting differ, and why a printed pattern alone does not identify the carpet structure.
               </p>
+              <Link href="/blog/axminster-vs-wilton-vs-tufted-hospitality-guide" className="mt-5 inline-block font-bold text-accent underline">Compare Axminster, Wilton and Tufted Carpet</Link>
               <Link href="/contact?product=Contract%20Carpet#quote-form" className="btn-fox-orange mt-7">Request Contract Carpet Quote</Link>
             </div>
             <div className="overflow-x-auto border border-border">
@@ -304,7 +310,7 @@ export default function CategoryPage() {
                   <tr>
                     <th className="px-5 py-4 text-xs font-black uppercase">Project Area</th>
                     <th className="px-5 py-4 text-xs font-black uppercase">Recommended Construction</th>
-                    <th className="px-5 py-4 text-xs font-black uppercase">Reference Buying Range</th>
+                    <th className="px-5 py-4 text-xs font-black uppercase">Required Project Review</th>
                     <th className="px-5 py-4 text-xs font-black uppercase">Product</th>
                   </tr>
                 </thead>
@@ -329,7 +335,7 @@ export default function CategoryPage() {
         <div className="container-fox">
           <div className="mb-12 max-w-3xl">
             <h2 className="mb-4 text-3xl font-black uppercase text-primary md:text-4xl">Commercial Broadloom and Casino Carpet Options</h2>
-            <p className="leading-relaxed text-muted">Select a product by construction and application. Each page includes reference pricing, minimum order quantity, technical data, project images, and a direct inquiry form.</p>
+            <p className="leading-relaxed text-muted">Select a product by construction and application. Product pages connect catalog references, sample review, required documents and a quotation request. Design illustrations do not prove a delivered project or product performance.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {categoryProducts.map((p) => (
@@ -339,7 +345,7 @@ export default function CategoryPage() {
                 className="group flex h-full flex-col rounded-lg border border-border bg-white p-6 transition-all duration-300 hover:border-accent hover:shadow-xl"
                 data-track-event={p.id === "custom-luxury-hotel-room-carpet" ? "select_item" : undefined}
                 data-item-id={p.id === "custom-luxury-hotel-room-carpet" ? "VHC-WTW-HRC-001" : undefined}
-                data-item-name={p.id === "custom-luxury-hotel-room-carpet" ? p.name : undefined}
+                data-item-name={p.id === "custom-luxury-hotel-room-carpet" ? p.trackingName : undefined}
                 data-item-category={p.id === "custom-luxury-hotel-room-carpet" ? "Wall-to-Wall Carpets" : undefined}
               >
                 <div className="aspect-square overflow-hidden mb-8 shadow-md border border-border">
@@ -349,20 +355,20 @@ export default function CategoryPage() {
                 <p className="mb-6 min-h-20 text-sm leading-relaxed text-muted">{p.description}</p>
                 <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">
                   <div className="flex justify-between gap-4">
-                    <span className="text-muted">{["custom-luxury-hotel-room-carpet", "custom-floral-printed-hotel-carpet"].includes(p.id) ? "Reference FOB Price" : "FOB Price"}</span>
-                    <span className="text-right font-black text-primary">{p.id === "cinema-theater-carpet" ? "Confirmed in written quotation" : p.fobPrice?.display}</span>
+                    <span className="text-muted">FOB Tianjin Port</span>
+                    <span className="text-right font-black text-primary">Request written quotation</span>
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Project MOQ</span>
-                    <span className="text-right font-black text-primary">{p.moqTiers.project}</span>
+                    <span className="text-right font-black text-primary">Confirm selected design and quantity</span>
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Availability</span>
-                    <span className="text-right font-black text-primary">{p.id === "cinema-theater-carpet" ? "Confirm for selected design and quantity" : ["custom-luxury-hotel-room-carpet", "custom-floral-printed-hotel-carpet"].includes(p.id) ? "Made to Order" : "In Stock / Made to Order"}</span>
+                    <span className="text-right font-black text-primary">Confirm for selected configuration</span>
                   </div>
                 </div>
                 <div className="mt-auto flex min-h-11 items-center justify-between rounded-sm bg-primary px-4 py-3 text-[10px] font-black uppercase tracking-[0.12em] text-white transition-colors group-hover:bg-[#C8752A]">
-                  <span>{p.id === "cinema-theater-carpet" ? "View Product & Quote Details" : "View Product & Pricing"}</span>
+                  <span>View Product & Quote Details</span>
                   <span>→</span>
                 </div>
               </Link>
@@ -379,7 +385,7 @@ export default function CategoryPage() {
               <p>VCARPETS manufactures and supplies commercial carpet rolls for hospitality and contract projects. The collection covers woven Axminster carpet, 80 wool 20 nylon carpet, custom printed carpet, patterned broadloom carpet, machine-tufted hotel room carpet, and high-traffic corridor carpet.</p>
               <p>Project applications include carpet for hotel rooms, hotel hallway carpet, hotel lobby carpet, banquet room carpet, ballroom carpet, casino style carpet, restaurant carpet, conference room carpet, club carpet, cinema carpet, theatre carpet, showroom carpet, office carpet rolls, church carpet, mosque carpet, and mosque carpet rolls. Final construction, fire performance, and installation requirements must be confirmed for the intended building.</p>
               <p>For Wilton carpet, solution dyed nylon carpet, Saxony carpet rolls, machine tufted carpet, cut pile carpet rolls, polyester carpet rolls, wool carpet wholesale, exhibition carpet flooring, needle punch carpet, marine carpet rolls, casino carpet, or another construction not shown in the listed products, send the exact specification. The factory will confirm feasibility rather than substituting a different product without approval.</p>
-              <p>VCARPETS supports wholesale hotel carpet orders as a commercial carpet manufacturer, broadloom carpet manufacturer, hospitality carpet manufacturer, and export supplier. Buyers comparing commercial carpet suppliers or hotel carpet suppliers can review product-level prices and specifications before requesting a factory quotation.</p>
+              <p>Importers, hospitality contractors and project buyers can compare the listed construction references before requesting a written quotation. Send mandatory requirements separately from preferences, and state whether alternative constructions may be proposed.</p>
             </div>
           </div>
           <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
@@ -398,7 +404,7 @@ export default function CategoryPage() {
           <div>
             <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Transparent Buying Information</p>
             <h2 className="mb-6 text-3xl font-black uppercase text-primary md:text-5xl">Wall-to-Wall Carpet Price & Quote Requirements</h2>
-            <p className="leading-8 text-muted">Reference FOB prices across the listed products range from US$3.10 to US$38.00 per square meter. Send the information below for an accurate commercial carpet quotation and cutting plan.</p>
+            <p className="leading-8 text-muted">Request a written FOB Tianjin Port quotation for the selected construction, design and quantity. Include sample development, required documents, roll-planning assumptions and packing requirements so proposals can be compared on the same scope.</p>
           </div>
           <dl className="grid gap-px border border-border bg-border sm:grid-cols-2">
             {[

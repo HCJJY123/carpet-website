@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Hotel carpet: separate construction, design and evidence</title>
+  <desc id="desc">Three procurement questions: identify the woven or tufted structure, confirm the colouring and pattern method, then match product evidence and approve the order.</desc>
+  <rect width="1200" height="675" fill="#f3f5f5"/>
+  <path d="M0 0H1200V15H0Z" fill="#a65317"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="60" y="76" fill="#526779" font-size="18" letter-spacing="3">VCARPETS / HOSPITALITY PROCUREMENT</text>
+    <text x="60" y="130" fill="#102a43" font-size="37" font-weight="700">One pattern can hide a different construction.</text>
+    <text x="60" y="169" fill="#526779" font-size="21">Compare three separate questions before releasing a hotel carpet order.</text>
+    <g fill="#fff" stroke="#c9d2da">
+      <rect x="60" y="215" width="340" height="300" rx="12"/>
+      <rect x="430" y="215" width="340" height="300" rx="12"/>
+      <rect x="800" y="215" width="340" height="300" rx="12"/>
+    </g>
+    <g fill="#a65317" font-size="17" font-weight="700" letter-spacing="2">
+      <text x="86" y="257">01 / CONSTRUCTION</text>
+      <text x="456" y="257">02 / DESIGN METHOD</text>
+      <text x="826" y="257">03 / EVIDENCE</text>
+    </g>
+    <g fill="#102a43" font-size="28" font-weight="700">
+      <text x="86" y="306">How is it made?</text>
+      <text x="456" y="306">How is it coloured?</text>
+      <text x="826" y="306">What is approved?</text>
+    </g>
+    <g fill="#40586b" font-size="21">
+      <text x="86" y="359">Woven Axminster</text><text x="86" y="396">Woven Wilton</text><text x="86" y="433">Identified tufted base</text>
+      <text x="456" y="359">Yarn-colour method</text><text x="456" y="396">Print / dye method</text><text x="456" y="433">Repeat and direction</text>
+      <text x="826" y="359">Exact product record</text><text x="826" y="396">Sample and documents</text><text x="826" y="433">Layout and quotation</text>
+    </g>
+    <g fill="#526779" font-size="16">
+      <text x="86" y="481">A weave name is not a rating.</text><text x="456" y="481">Printing is not a weave type.</text><text x="826" y="481">Record the approving party.</text>
+    </g>
+    <rect x="60" y="546" width="1080" height="59" rx="8" fill="#102a43"/>
+    <text x="600" y="583" fill="#fff" font-size="22" text-anchor="middle">ZONE BRIEF → IDENTIFIED OPTION → REVIEWED EVIDENCE → WRITTEN RELEASE</text>
+    <text x="60" y="645" fill="#526779" font-size="15">Original procurement diagram. Not a product cross-section, test result or completed project.</text>
+  </g>
+</svg>

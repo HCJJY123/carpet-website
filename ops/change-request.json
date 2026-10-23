@@ -1,43 +1,29 @@
 {
-  "task": "Rewrite remaining twelve carpet-tile product detail pages with evidence-based buying copy; batch 2 of 2",
-  "approvedBy": "User instruction 2026-10-22: rewrite VCARPETS product pages with a <=50-word conclusion, H2 data points, third-block competitor comparison, final FAQ answers <=80 words and no subjective adjectives; existing authorization permits reversible implementation, PR merge and deployment after checks.",
+  "task": "Deeply update the existing Axminster/Wilton/tufted hospitality comparison and align the broadloom category with project-specific quotation evidence",
+  "approvedBy": "Owner-authorized daily VCARPETS content and inquiry-growth work, continuing the 2026-10-22 evidence-based product rewrite; standing authorization includes tested PR merge and production deployment.",
   "approvedCategories": [
     "content",
-    "product-page",
+    "seo-content",
     "documentation"
   ],
   "allowedPaths": [
-    "src/app/products/carpet-tiles/balance-polypropylene-carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/gradient-accent-office-carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/linear-accent-commercial-carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/heathered-gray-modular-carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/luxury-hotel-carpet-tile-50x50cm/page.tsx",
-    "src/app/products/carpet-tiles/ecocore-pe-backing-carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/commercial-nylon-tiles/page.tsx",
-    "src/app/products/carpet-tiles/healthcare-hospital-carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/education-school-carpet-tiles/page.tsx",
     "ops/change-request.json",
-    "CHANGELOG_OPS.md"
+    "ops/hospitality-construction-growth-20261023.md",
+    "ops/indexnow-urls.json",
+    "CHANGELOG_OPS.md",
+    "keyword-map.csv",
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/axminster-wilton-tufted-hospitality-guide.ts",
+    "src/app/products/wall-to-wall/page.tsx",
+    "public/images/blog-series/buyer-guides-20261023/hospitality-carpet-construction-review.svg"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "c75db9504b3bdddcf131bd784d4ce2533d93afcc",
+  "rollbackCommit": "c0da0a585954cce480170007f48aa5451d75e190",
   "affectedUrls": [
-    "/products/carpet-tiles/balance-polypropylene-carpet-tiles",
-    "/products/carpet-tiles/gradient-accent-office-carpet-tiles",
-    "/products/carpet-tiles/linear-accent-commercial-carpet-tiles",
-    "/products/carpet-tiles/heathered-gray-modular-carpet-tiles",
-    "/products/carpet-tiles/luxury-hotel-carpet-tile-50x50cm",
-    "/products/carpet-tiles/ecocore-pe-backing-carpet-tiles",
-    "/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles",
-    "/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles",
-    "/products/carpet-tiles/gray-line-nylon-office-hotel-carpet-tiles",
-    "/products/carpet-tiles/commercial-nylon-tiles",
-    "/products/carpet-tiles/healthcare-hospital-carpet-tiles",
-    "/products/carpet-tiles/education-school-carpet-tiles"
+    "/blog/axminster-vs-wilton-vs-tufted-hospitality-guide",
+    "/products/wall-to-wall"
   ],
-  "notes": "Batch 2 changes 12 existing tile detail routes and two operations records (14 files). Uses the dedicated template/profile modules verified in batch 1. Dimensions, fiber, backing and weight remain catalog references; unconfirmed design-only products do not gain invented specifications. No new URLs, source commercial-record edits, assets, forms, global SEO logic, tracking, dependencies or deployment configuration changes. Original production HTML is backed up. Merge after batch 1 with exact-head CI, Vercel Preview and rendered checks."
+  "notes": "Preserve the guide URL and original publication date. Replace unsupported durability/cost/speed hierarchy and generated performance-chart evidence with sourced definitions, procurement comparison and an original labelled decision SVG. Keep Axminster, Wilton, tufting and printing distinct; do not promise Wilton supply or borrow competitor numeric specifications. Remove stale category-wide price/MOQ/lead-time/stock/CIF/DAP claims and use FOB Tianjin Port with written project confirmation. No global SEO logic, shared conversion behavior, product source records, dependencies or tracking changes. Live HTML backed up before edits. Only these two materially updated canonical URLs enter the submission manifest after production verification.",
+  "backupLocation": "/workspace/scratch/29fa4f5d9a82/vcarpets-20261023-backups"
 }
