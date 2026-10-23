@@ -1,17 +1,23 @@
 {
-  "task": "Record production verification of the merged SEO repair without changing site code",
-  "approvedBy": "Owner request on 2026-10-23 to deploy the SEO fixes; repository operations guide requires a post-production changelog result.",
+  "task": "Correct confirmed crawler-rule inheritance and Organization schema issues for VCARPETS AI discoverability",
+  "approvedBy": "Owner requested systematic AI recommendation optimization across the six sites and direct execution and launch of the optimization plan; this bounded patch addresses two confirmed VCARPETS crawl/schema defects.",
   "approvedCategories": [
+    "seo-global",
     "documentation"
   ],
   "allowedPaths": [
+    "src/app/robots.ts",
+    "src/components/JsonLd.tsx",
     "ops/change-request.json",
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "5397a04c00c42d07f6c99ba777af41dc8a625259",
-  "affectedUrls": [],
-  "notes": "Documentation-only follow-up to PR #105. Record the production deployment ID, main commit, 42 checked pages, sitemap counts, GSC access limitation and mobile visual-check limitation. No published page or runtime behavior changes.",
-  "backupLocation": "/workspace/scratch/29fa4f5d9a82/seo-basics-backup-20261023"
+  "rollbackCommit": "31ed9798340fae5e9c5611d26a72a2d2a089fb5d",
+  "affectedUrls": [
+    "https://www.vcarpets.com/robots.txt",
+    "https://www.vcarpets.com/"
+  ],
+  "notes": "Add the existing /api/ and /admin/ exclusions to the named crawler group without changing its user-agent list or public-content Allow rule. Replace the unsupported Manufacturer Organization @type with Organization only. Shared organization schema changes across existing HTML pages; no visible content, URLs, product facts, training-crawler choices, consent, API, forms, tracking, security, billing, dependency, or sitemap behavior changes. Use a feature branch, one Vercel Preview, independent review, and normal PR merge only after required checks pass. Parent workflow handles GSC and Bing submission after production verification.",
+  "backupLocation": "Local production HTML and robots snapshot retained for 2026-10-23 GEO validation."
 }
