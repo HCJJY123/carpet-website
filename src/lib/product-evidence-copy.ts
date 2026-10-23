@@ -1,4 +1,5 @@
 import type { Product } from "./data";
+import { carpetTileEvidence } from "./carpet-tile-evidence";
 
 type Profile = {
   name: string;
@@ -214,8 +215,6 @@ const profiles: Record<string, Profile> = {
 };
 
 const options = {
-  victoria: { supplier: "Victoria Carpets", product: "Linen", construction: "Solution-dyed nylon; textured loop; Tuntex Duraback", format: "500 × 500 mm", nextStep: "Specification PDF and sample request on the cited page", source: "https://victoriacarpets.com.au/product/linen/" },
-  ridge: { supplier: "Curran", product: "Ridge Tile", construction: "Tufted regenerated PA6 nylon; PES backing with self-stick adhesive", format: "19.7 × 19.7 in; 20 tiles per box", nextStep: "Sample and technical-specification links on the cited page", source: "https://www.curranfloor.com/rugs/ridge-tile" },
   bloomsburg: { supplier: "Bloomsburg", product: "Hospitality Axminster", construction: "Woven Axminster; custom design service", format: "Project-specific; cited custom program lists a 15-color maximum", nextStep: "Contact the supplier for the nominated construction and quotation", source: "https://bloomsburgcarpet.com/products-list/brand/hospitality-carpet/" },
   tsar: { supplier: "TSAR", product: "SUMMIT", construction: "Hand-tufted NZ wool; cited sample lists 80 oz pile weight", format: "Custom size; cited sample lists 8 mm pile height", nextStep: "Confirm construction if adapting the design to another production route", source: "https://tsarcarpets.com/design/summit/" },
   moooi: { supplier: "Moooi Carpets", product: "Your Own Design service", construction: "Custom artwork service; select the material and production specification separately", format: "Project dimensions; no single roll width stated on the cited service page", nextStep: "Artwork requirements and contact links on the cited page", source: "https://www.moooicarpets.com/order-your-own-design/" },
@@ -227,14 +226,14 @@ const options = {
 export function evidenceCopy(product: Product) {
   const profile = profiles[product.id];
   if (!profile) throw new Error(`Missing product copy: ${product.id}`);
+  const knownDimension = /\d/.test(product.spec.size) ? product.spec.size : "Dimensions confirmed in the written specification";
+  if (product.category === "carpet-tiles") return { ...profile, ...carpetTileEvidence(product, profile), knownDimension };
   const competitors = product.id === "gold-mining-carpet-mat" ? [options.goldhog]
     : product.id === "natural-sisal-carpet" ? [options.vm]
     : product.id === "commercial-stair-carpet-runner" ? [options.curranStairs]
-    : product.category === "carpet-tiles" ? [options.victoria, options.ridge]
     : product.id === "luxury-hotel-broadloom" ? [options.bloomsburg, options.tsar]
     : product.id === "custom-sculpted-wool-lobby-rug" ? [options.tsar]
     : [options.moooi, options.bloomsburg];
-  const knownDimension = /\d/.test(product.spec.size) ? product.spec.size : "Dimensions confirmed in the written specification";
   const faqs = [
     { q: `What construction should I specify when ordering ${profile.name.toLowerCase()}?`, a: profile.construction },
     { q: `What should I check before using ${profile.name.toLowerCase()} in my project?`, a: `${profile.application} Review all 4 approval checks on this page with the installer and supplier.` },
@@ -243,7 +242,7 @@ export function evidenceCopy(product: Product) {
     { q: `How can I request a paid sample and FOB Tianjin quotation for ${profile.name.toLowerCase()}?`, a: "Send 5 inputs: intended application, dimensions or area, quantity, destination and required date. Samples are paid; the agreed sample charge can be credited against a subsequent order. Confirm sample availability, courier cost, production schedule, price and order quantity in the written quotation. Production time and shipping transit are separate." },
     { q: `Do the images of ${profile.name.toLowerCase()} prove a completed installation or product test?`, a: "No. AI-generated or edited scenes and design illustrations communicate appearance and layout. They are not evidence of a delivered client project, measured performance or exact production color. Approve a physical sample and the nominated product specification before ordering." },
   ];
-  return { ...profile, competitors, faqs, knownDimension };
+  return { ...profile, competitors, faqs, knownDimension, reviewedOn, relatedIds: undefined };
 }
 
 export function referenceSpecs(product: Product): Array<[string, string]> {
