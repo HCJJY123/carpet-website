@@ -4,7 +4,7 @@ import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 export default function JsonLd() {
   const organizationData = {
     "@context": "https://schema.org",
-    "@type": ["Organization", "Manufacturer"],
+    "@type": "Organization",
     "@id": `${brandInfo.url}/#organization`,
     name: brandInfo.name,
     alternateName: "VCARPETS",
