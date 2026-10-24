@@ -15,7 +15,10 @@
     "ops/indexnow-urls.json",
     "ops/commercial-quote-comparison-growth-20261024.md",
     "ops/change-request.json",
-    "CHANGELOG_OPS.md"
+    "CHANGELOG_OPS.md",
+    "src/app/sitemaps/blog.xml/route.ts",
+    "src/lib/blog-data.ts",
+    "src/app/blog/[slug]/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
@@ -24,6 +27,6 @@
     "https://www.vcarpets.com/blog/commercial-carpet-pricing-moq-data-center-guide",
     "https://www.vcarpets.com/commercial-terms"
   ],
-  "notes": "Keep both existing URLs and the original article publication date. Remove unverified numeric price, MOQ and lead-time tables; replace them with a complete B2B quotation-normalization guide, six visible/schema-matched FAQs and a project-prefilled contact path. Add one contextual reverse link from Commercial Terms. Reuse existing procurement-planning imagery. No product data, forms, tracking, robots, canonical logic, dependencies or customer outreach.",
+  "notes": "Keep both existing URLs and the original article publication date. Remove unverified numeric price, MOQ and lead-time tables; replace them with a complete B2B quotation-normalization guide, six visible/schema-matched FAQs and an article-specific project-prefilled contact path. Add one contextual reverse link from Commercial Terms and let the Blog sitemap use the article review date. Reuse existing procurement-planning imagery. The shared Blog template now renders existing FAQ data visibly and supports optional article-specific quote context; no product data, forms, tracking, robots, canonical logic, dependencies or customer outreach.",
   "backupLocation": "Pre-change production HTML fetched from READY deployment dpl_3xJR5ASQErT7mSNDuXuhMdwNAA9N; source rollback is commit 151632fdb2ef2e74d1f858807d0a1d398b996e79."
 }
