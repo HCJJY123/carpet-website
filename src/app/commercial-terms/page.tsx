@@ -61,8 +61,9 @@ export default function CommercialTermsPage() {
         <div className="container-fox rounded-md border border-border bg-white p-8 md:p-10">
           <h2 className="text-3xl font-black">Before placing an order</h2>
           <p className="mt-5 max-w-4xl leading-8 text-muted">Confirm product construction, color, quantity, sales unit, payment schedule, production lead time, packing, delivery term, destination, document requirements and quotation validity with {brandInfo.name}. For questions, contact <a className="font-black text-accent" href={`mailto:${brandInfo.email}`}>{brandInfo.email}</a>.</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link href="/contact#quote-form" className="btn-fox-orange text-center">Request written quotation</Link>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Link href="/contact?product=Commercial%20carpet%20project%20quotation&source=%2Fcommercial-terms#quote-form" className="btn-fox-orange text-center">Request written quotation</Link>
+            <Link href="/blog/commercial-carpet-pricing-moq-data-center-guide" className="btn-fox-outline text-center">Compare price, MOQ and lead time</Link>
             <Link href="/technical-documents" className="btn-fox-outline text-center">Technical documents</Link>
           </div>
         </div>

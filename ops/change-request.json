@@ -1,23 +1,29 @@
 {
-  "task": "Correct confirmed crawler-rule inheritance and Organization schema issues for VCARPETS AI discoverability",
-  "approvedBy": "Owner requested systematic AI recommendation optimization across the six sites and direct execution and launch of the optimization plan; this bounded patch addresses two confirmed VCARPETS crawl/schema defects.",
+  "task": "Rewrite the existing commercial carpet price, MOQ and lead-time guide as an evidence-bounded quotation comparison resource and add a commercial-terms entry point",
+  "approvedBy": "Standing owner authorization for daily VCARPETS B2B growth work, repository changes and deployment through the required Preview and PR workflow.",
   "approvedCategories": [
-    "seo-global",
+    "content-update",
+    "seo-onpage",
+    "internal-links",
     "documentation"
   ],
   "allowedPaths": [
-    "src/app/robots.ts",
-    "src/components/JsonLd.tsx",
+    "src/lib/blog-posts/commercial-carpet-pricing-moq-data-center-guide.ts",
+    "src/app/commercial-terms/page.tsx",
+    "src/lib/sitemap-data.ts",
+    "keyword-map.csv",
+    "ops/indexnow-urls.json",
+    "ops/commercial-quote-comparison-growth-20261024.md",
     "ops/change-request.json",
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "31ed9798340fae5e9c5611d26a72a2d2a089fb5d",
+  "rollbackCommit": "151632fdb2ef2e74d1f858807d0a1d398b996e79",
   "affectedUrls": [
-    "https://www.vcarpets.com/robots.txt",
-    "https://www.vcarpets.com/"
+    "https://www.vcarpets.com/blog/commercial-carpet-pricing-moq-data-center-guide",
+    "https://www.vcarpets.com/commercial-terms"
   ],
-  "notes": "Add the existing /api/ and /admin/ exclusions to the named crawler group without changing its user-agent list or public-content Allow rule. Replace the unsupported Manufacturer Organization @type with Organization only. Shared organization schema changes across existing HTML pages; no visible content, URLs, product facts, training-crawler choices, consent, API, forms, tracking, security, billing, dependency, or sitemap behavior changes. Use a feature branch, one Vercel Preview, independent review, and normal PR merge only after required checks pass. Parent workflow handles GSC and Bing submission after production verification.",
-  "backupLocation": "Local production HTML and robots snapshot retained for 2026-10-23 GEO validation."
+  "notes": "Keep both existing URLs and the original article publication date. Remove unverified numeric price, MOQ and lead-time tables; replace them with a complete B2B quotation-normalization guide, six visible/schema-matched FAQs and a project-prefilled contact path. Add one contextual reverse link from Commercial Terms. Reuse existing procurement-planning imagery. No product data, forms, tracking, robots, canonical logic, dependencies or customer outreach.",
+  "backupLocation": "Pre-change production HTML fetched from READY deployment dpl_3xJR5ASQErT7mSNDuXuhMdwNAA9N; source rollback is commit 151632fdb2ef2e74d1f858807d0a1d398b996e79."
 }
