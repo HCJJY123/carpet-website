@@ -1556,3 +1556,14 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 - Set project and country image notices to readable 12px regular text, 1.4 line height and 4px top spacing. No new labels on genuine photography.
 - Preserve image assets, ratios, commercial terms, technical content, SEO/schema, forms and consent. Base and rollback: `611756a9f9aaff395e4b636fb42902214e67765a`.
 - Validation: local Ops Guard, ESLint, production build (224 static pages) and diff whitespace checks passed. Normal Vercel Preview review is required before merge. Representative pre-change production HTML retained locally. No production merge in this change record.
+
+
+## 2026-10-24 — E3 carpet tile replenishment guide
+
+- Owner selected E3: dye-lot records, reserve stock and later replacement. Added one English answer-first guide with four distinct AI-generated planning images and compact provenance captions.
+- Added existing category, delivery guide, sample guide and clearly labelled office planning-reference links; no invented product specifications, prices, universal reserve percentage or matching guarantee.
+- Blog index, keyword ownership and existing sitemap data updated; global generation logic, robots, forms, tracking and production settings unchanged.
+- Rollback source: e84181af3663b00542daf78cfd6a379c307951aa.
+- Added an opt-in compact caption flag on this article only (12px, normal weight/case, 4px spacing); existing articles retain their rendering.
+- Local validation: Site Ops Guard passed (11 scoped files), ESLint passed, Next.js 16.2.9 production build passed (224 static pages). Generated assets are distinct by file and pixel hash. Batch/zone/spare anchor exists in the category source.
+- Preview and independent desktop/mobile validation are pending; do not merge before acceptance.

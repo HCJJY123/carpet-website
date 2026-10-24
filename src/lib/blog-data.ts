@@ -1,3 +1,4 @@
+import { commercialCarpetTileReplenishmentGuide } from "@/lib/blog-posts/commercial-carpet-tile-replenishment-dye-lots-spare-stock";
 import { hospitalityConstructionGuide } from "@/lib/blog-posts/axminster-wilton-tufted-hospitality-guide";
 import { carpetTileDeliveryInspectionChecklist } from "@/lib/blog-posts/carpet-tile-delivery-inspection-site-storage-checklist";
 import { openPlanOfficeAcousticsGuide } from "@/lib/blog-posts/carpet-tiles-open-plan-office-acoustics-guide";
@@ -81,6 +82,7 @@ export interface BlogPost {
   h1ImageMobile?: string;
   h1ImageAlt?: string;
   h1ImageCaption?: string;
+  compactImageCaptions?: boolean;
   h1ImageFit?: "cover" | "contain";
   h1ImageUnoptimized?: boolean;
   h1ImageAspectRatio?: string;
@@ -93,6 +95,7 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  commercialCarpetTileReplenishmentGuide,
   carpetTileDeliveryInspectionChecklist,
   openPlanOfficeAcousticsGuide,
   naturalSisalCommercialInteriorsGuide,
