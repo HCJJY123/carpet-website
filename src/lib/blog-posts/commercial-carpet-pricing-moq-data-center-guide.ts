@@ -22,16 +22,16 @@ export const commercialCarpetPricingMoqDataCenterGuide: BlogPost = {
   dateModified: "2026-10-24",
   author: "VCARPETS Technical Team",
   category: "B2B Quotation Guide",
-  image: "/images/blog-series/commercial-carpet-tile-specification-checklist/commercial-carpet-tile-rfq-intake-desk.webp",
-  imageAlt: "Commercial carpet quotation desk with samples, project schedule and comparison worksheet",
+  image: "/images/optimized/nylon-office-carpet-tile-0c4db43589-1254w.webp",
+  imageAlt: "Nylon commercial carpet tile product image used as an example for quotation comparison",
   excerpt:
     "Compare commercial carpet quotations by construction, quantity, sales unit, approval status, packing, lead-time events and FOB scope before choosing a supplier.",
   seoDescription:
     "Compare commercial carpet price, MOQ and lead time on one quotation basis. Use the tables and RFQ checklist to request a project-specific FOB offer.",
-  h1Image: "/images/blog-series/commercial-carpet-tile-specification-checklist/commercial-carpet-tile-rfq-intake-desk.webp",
-  h1ImageAlt: "Commercial carpet quotation desk with samples, project schedule and comparison worksheet",
+  h1Image: "/images/optimized/nylon-office-carpet-tile-0c4db43589-1254w.webp",
+  h1ImageAlt: "Nylon commercial carpet tile product image used as an example for quotation comparison",
   h1ImageCaption:
-    "A useful comparison starts with the same construction, quantity, approval stage, packing and delivery basis. Image used as a procurement-planning illustration.",
+    "Example VCARPETS carpet tile image. It does not represent every construction covered by this guide; compare quotations against the exact selected product and approved reference.",
   h1ImageFit: "cover",
   relatedProductIds: [
     "nylon-office-carpet-tile",
