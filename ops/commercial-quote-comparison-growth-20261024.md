@@ -47,7 +47,7 @@ Scores are 0–3 for product relevance, B2B intent, evidence, site gap, factual 
 
 ## Image decision
 
-Reuse the existing procurement-planning desk and measurement-review images. They fit the new decision task and do not need to prove a product, factory, customer project or certification. No generated image is needed; no existing asset is deleted.
+The prior article image path returned HTTP 404 in Preview. Replace it with the existing verified VCARPETS nylon carpet-tile product asset and label it as an example rather than evidence for every construction in the guide. No generated image is needed; no asset is deleted.
 
 ## Validation and release gates
 
