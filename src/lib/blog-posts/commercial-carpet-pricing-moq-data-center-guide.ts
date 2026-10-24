@@ -38,6 +38,8 @@ export const commercialCarpetPricingMoqDataCenterGuide: BlogPost = {
     "luxury-hotel-broadloom",
     "public-area-heavy-duty",
   ],
+  quoteProduct: "Commercial carpet quote comparison",
+  quoteHref: "/contact?product=Commercial%20carpet%20quote%20comparison&source=%2Fblog%2Fcommercial-carpet-pricing-moq-data-center-guide#quote-form",
   sections: [
     {
       title: "Answer First: How Should a Buyer Compare Commercial Carpet Quotes?",
