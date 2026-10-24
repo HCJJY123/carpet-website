@@ -1539,3 +1539,11 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 - Evidence: live home HTML and robots backed up before editing. Official references: https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec and https://schema.org/manufacturer .
 - Rollback baseline: `31ed9798340fae5e9c5611d26a72a2d2a089fb5d`. Local checks, one exact-head Preview, independent review and required CI are the release gates; production verification and GSC/Bing submission follow normal merge. No ranking or AI-citation gain is claimed.
 - Local acceptance: four-file Site Ops Guard, SEO audit for 99 page files, link/sitemap audit, zero-error/warning lint, 13 existing offline tests and the 224-page production/TypeScript build passed. Focused source/rendering assertions verify all 20 user-agent entries, unchanged public access/host/sitemap, and the three global JSON-LD objects with only the intended Organization type difference. Exact-head Preview, independent review, CI and production checks remain pending.
+
+## 2026-10-24 — Commercial carpet quote comparison guide (release candidate)
+
+- Preserve the existing pricing/MOQ/lead-time article URL and original publication date. Remove five numeric price, MOQ and fixed lead-time rows that lack current product-matched quotation evidence; replace them with a complete comparison framework for product scope, quantity, sales unit, approval, packing, schedule milestones and FOB Tianjin Port handoff.
+- Add six concise buyer FAQs, product and procurement links, and a project-prefilled contact path. Add one reverse link from Commercial Terms and record both keyword owners and 2026-10-24 sitemap dates.
+- Reuse existing procurement-planning images; no generated asset or product/factory/case evidence added. No product records, forms, tracking, global schema, robots, canonical logic, dependencies, URL or customer contact changed.
+- Evidence and priority: `ops/commercial-quote-comparison-growth-20261024.md`. Rollback baseline: `151632fdb2ef2e74d1f858807d0a1d398b996e79`. Local full-repository build is unavailable because the public Git source cannot be cloned in this runtime; required CI, Vercel Preview and production checks remain release gates. No ranking, index or inquiry gain is claimed.
+

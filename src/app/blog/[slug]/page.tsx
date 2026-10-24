@@ -372,12 +372,31 @@ export default async function BlogPostPage({ params }: Props) {
 
         {post.slug === "commercial-carpet-sourcing-directory" ? <RfqQuestionBuilder /> : null}
 
+        {post.faqs?.length ? (
+          <section className="mt-12 rounded-xl border border-border bg-surface p-6 md:p-8" aria-labelledby="article-faq-heading">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-accent">Buyer Questions</p>
+            <h2 id="article-faq-heading" className="text-2xl font-black uppercase tracking-tight text-primary md:text-3xl">
+              Frequently Asked Questions
+            </h2>
+            <div className="mt-6 divide-y divide-border">
+              {post.faqs.map((faq) => (
+                <details key={faq.question} className="group py-5 first:pt-0 last:pb-0">
+                  <summary className="cursor-pointer list-none pr-8 text-base font-black text-primary marker:hidden md:text-lg">
+                    {faq.question}
+                  </summary>
+                  <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted">{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         <ConversionLiftPanel
           eyebrow="Turn This Guide Into a Quote"
           title="Send Your Project Requirements After Reading This Guide"
           body="If this topic matches your project, send the carpet application, estimated area, destination, and required date. VCARPETS can recommend the related product path and reply with sample, MOQ, lead time, and quotation details."
-          product={relatedProducts[0]?.name ?? post.title}
-          quoteHref={`/contact?product=${encodeURIComponent(relatedProducts[0]?.name ?? post.title)}#quote-form`}
+          product={post.quoteProduct ?? relatedProducts[0]?.name ?? post.title}
+          quoteHref={post.quoteHref ?? `/contact?product=${encodeURIComponent(post.quoteProduct ?? relatedProducts[0]?.name ?? post.title)}#quote-form`}
           className="mt-12 overflow-hidden rounded-xl border-y-0"
           compact
         />

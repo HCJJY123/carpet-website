@@ -88,6 +88,8 @@ export interface BlogPost {
   relatedProductIds?: string[];
   suggestedLinks?: { label: string; href: string }[];
   faqs?: { question: string; answer: string }[];
+  quoteProduct?: string;
+  quoteHref?: string;
 }
 
 const baseBlogPosts: BlogPost[] = [
