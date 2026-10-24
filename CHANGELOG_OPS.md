@@ -1547,3 +1547,12 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 - Reuse existing procurement-planning images; no generated asset or product/factory/case evidence added. No product records, forms, tracking, global schema, robots, canonical logic, dependencies, URL or customer contact changed.
 - Evidence and priority: `ops/commercial-quote-comparison-growth-20261024.md`. Rollback baseline: `151632fdb2ef2e74d1f858807d0a1d398b996e79`. Local full-repository build is unavailable because the public Git source cannot be cloned in this runtime; required CI, Vercel Preview and production checks remain release gates. No ranking, index or inquiry gain is claimed.
 
+
+
+## 2026-10-24 — Concise concept-image notices (Preview review)
+
+- Shorten existing shared and Australia concept captions to “AI-generated concept · Not a product or project photo.”
+- Keep the planning reference's hypothetical status in a short plain sentence; remove its alert-like border and duplicate AI explanation.
+- Set project and country image notices to readable 12px regular text, 1.4 line height and 4px top spacing. No new labels on genuine photography.
+- Preserve image assets, ratios, commercial terms, technical content, SEO/schema, forms and consent. Base and rollback: `611756a9f9aaff395e4b636fb42902214e67765a`.
+- Validation: local Ops Guard, ESLint, production build (224 static pages) and diff whitespace checks passed. Normal Vercel Preview review is required before merge. Representative pre-change production HTML retained locally. No production merge in this change record.

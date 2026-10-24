@@ -103,7 +103,7 @@ export default function CountryApplicationLandingPage({ page }: { page: CountryA
           </Link>
         </div>
       </PageHero>
-      {page.heroImageCaption ? <p className="container-fox py-3 text-xs leading-6 text-muted">{page.heroImageCaption}</p> : null}
+      {page.heroImageCaption ? <p className="container-fox mt-1 text-xs font-normal leading-[1.4] text-muted">{page.heroImageCaption}</p> : null}
 
       <section className="section-padding">
         <div className="container-fox grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
