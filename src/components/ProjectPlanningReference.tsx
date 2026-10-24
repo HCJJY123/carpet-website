@@ -38,12 +38,12 @@ export default function ProjectPlanningReference({ reference }: { reference: Pro
         <p className="mb-4 text-xs font-bold uppercase tracking-widest text-primary">Project Planning Reference</p>
         <h1 className="mb-6 max-w-4xl text-3xl font-bold leading-tight text-primary md:text-5xl">{reference.title}</h1>
         <p className="mb-4 max-w-3xl text-lg leading-8 text-muted">{reference.description}</p>
-        <p className="mb-8 max-w-3xl border-l border-accent pl-4 text-sm leading-6 text-muted">Hypothetical procurement guidance, not a supplied client project. No verified completed-project evidence is presented. Visuals are AI-generated application illustrations.</p>
+        <p className="mb-8 max-w-3xl text-xs font-normal leading-[1.4] text-muted">Hypothetical project reference, not a completed client project.</p>
         <figure>
           <div className="overflow-hidden rounded-sm" style={{ aspectRatio: `${reference.image.width} / ${reference.image.height}` }}>
             <ProductImage src={reference.image.src} alt={reference.image.alt} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" priority className="h-full w-full" fit="contain" />
           </div>
-          <figcaption className="mt-3 text-xs leading-5 text-muted">{illustrationCaption}</figcaption>
+          <figcaption className="mt-1 text-xs font-normal leading-[1.4] text-muted">{illustrationCaption}</figcaption>
         </figure>
       </header>
       <article className="container-fox grid gap-10 pb-16 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">

@@ -1,32 +1,27 @@
 {
-  "task": "Rewrite the existing commercial carpet price, MOQ and lead-time guide as an evidence-bounded quotation comparison resource and add a commercial-terms entry point",
-  "approvedBy": "Standing owner authorization for daily VCARPETS B2B growth work, repository changes and deployment through the required Preview and PR workflow.",
+  "task": "Make existing AI concept notices concise and visually quiet without obscuring image or fictional-project status",
+  "approvedBy": "Owner request: 所有几个网站涉及到的ai生成提醒词能小就小 能简略就简略 不要显眼",
   "approvedCategories": [
     "content-update",
-    "seo-onpage",
-    "internal-links",
     "documentation"
   ],
   "allowedPaths": [
-    "src/lib/blog-posts/commercial-carpet-pricing-moq-data-center-guide.ts",
-    "src/app/commercial-terms/page.tsx",
-    "src/lib/sitemap-data.ts",
-    "keyword-map.csv",
-    "ops/indexnow-urls.json",
-    "ops/commercial-quote-comparison-growth-20261024.md",
+    "src/lib/content-growth-assets.ts",
+    "src/components/ProjectPlanningReference.tsx",
+    "src/components/CountryApplicationLandingPage.tsx",
+    "src/lib/country-application-pages.ts",
     "ops/change-request.json",
-    "CHANGELOG_OPS.md",
-    "src/app/sitemaps/blog.xml/route.ts",
-    "src/lib/blog-data.ts",
-    "src/app/blog/[slug]/page.tsx"
+    "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "151632fdb2ef2e74d1f858807d0a1d398b996e79",
+  "rollbackCommit": "611756a9f9aaff395e4b636fb42902214e67765a",
   "affectedUrls": [
-    "https://www.vcarpets.com/blog/commercial-carpet-pricing-moq-data-center-guide",
-    "https://www.vcarpets.com/commercial-terms"
+    "https://www.vcarpets.com/projects/hotel-wall-to-wall-carpet-project-oceania",
+    "https://www.vcarpets.com/projects/office-carpet-tile-renovation",
+    "https://www.vcarpets.com/markets/ph/entertainment-venue-carpet",
+    "https://www.vcarpets.com/markets/au/office-carpet-tiles-australia"
   ],
-  "notes": "Keep both existing URLs and the original article publication date. Remove unverified numeric price, MOQ and lead-time tables; replace them with a complete B2B quotation-normalization guide, six visible/schema-matched FAQs and an article-specific project-prefilled contact path. Add one contextual reverse link from Commercial Terms and let the Blog sitemap use the article review date. Replace the missing prior hero asset with a verified existing VCARPETS carpet-tile image and label it as an example. The shared Blog template now renders existing FAQ data visibly and supports optional article-specific quote context; no product data, forms, tracking, robots, canonical logic, dependencies or customer outreach.",
-  "backupLocation": "Pre-change production HTML fetched from READY deployment dpl_3xJR5ASQErT7mSNDuXuhMdwNAA9N; source rollback is commit 151632fdb2ef2e74d1f858807d0a1d398b996e79."
+  "notes": "Shorten only existing concept-image notices and the fictional-project notice. Use plain readable 12px regular text at 1.4 line height and 4px caption spacing. Keep all image assets, ratios, product specifications, commercial terms, claims, schema, SEO, forms and consent unchanged. Do not add labels to genuine photographs. Normal feature branch and Preview checks before any merge.",
+  "backupLocation": "Local pre-change production HTML snapshots for representative project and country pages; source rollback commit recorded above."
 }

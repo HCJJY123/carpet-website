@@ -1018,7 +1018,7 @@ export const countryApplicationPages: CountryApplicationPage[] = [
     localTerms: ["office carpet tiles Australia", "commercial carpet Australia", "Australia office flooring supplier"],
     heroImage: "/images/markets/generated/australia-office-carpet-tiles-hero.webp",
     heroImageAlt: "Illustration of office carpet tiles in an Australian commercial fit-out planning context",
-    heroImageCaption: "AI-generated application illustration for planning; not a completed customer project or proof of product performance.",
+    heroImageCaption: "AI concept · Not a product or project photo.",
     heroProductId: "50x50-nylon-pp-office-carpet-tiles",
     productIds: ["50x50-nylon-pp-office-carpet-tiles", "nylon-office-carpet-tile", "commercial-nylon-tiles"],
     guideLinks: [

@@ -13,4 +13,4 @@ export const contentGrowthAssets = {
   B16: {"src":"/images/optimized/content-growth-20260929/how-to-prepare-commercial-carpet-rfq-c8f4542cec.webp","width":1200,"height":896,"alt":"Illustrative carpet sample review beside a project floor plan"},
 } as const;
 
-export const illustrationCaption = "AI-generated application illustration; not a product photograph or evidence of a completed client project.";
+export const illustrationCaption = "AI concept · Not a product or project photo.";
