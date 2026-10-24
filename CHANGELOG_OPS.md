@@ -1551,7 +1551,7 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 
 ## 2026-10-24 — Concise concept-image notices (Preview review)
 
-- Shorten existing shared and Australia concept captions to “AI concept · Not a product or project photo.”
+- Shorten existing shared and Australia concept captions to “AI-generated concept · Not a product or project photo.”
 - Keep the planning reference's hypothetical status in a short plain sentence; remove its alert-like border and duplicate AI explanation.
 - Set project and country image notices to readable 12px regular text, 1.4 line height and 4px top spacing. No new labels on genuine photography.
 - Preserve image assets, ratios, commercial terms, technical content, SEO/schema, forms and consent. Base and rollback: `611756a9f9aaff395e4b636fb42902214e67765a`.
