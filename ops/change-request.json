@@ -1,27 +1,27 @@
 {
-  "task": "Make existing AI concept notices concise and visually quiet without obscuring image or fictional-project status",
-  "approvedBy": "Owner request: 所有几个网站涉及到的ai生成提醒词能小就小 能简略就简略 不要显眼",
+  "task": "Publish owner-selected E3 commercial carpet tile replenishment buyer guide with four original concept images",
+  "approvedBy": "User Sentinel_1fd4f21df91081919e3c9839a308a9dd selected E3; Sentinel_016083e624e8819185a656c6d0d6adc4 requests ChatGPT and Claude readability. Prior direct publish after tests authorization.",
   "approvedCategories": [
     "content-update",
     "documentation"
   ],
   "allowedPaths": [
-    "src/lib/content-growth-assets.ts",
-    "src/components/ProjectPlanningReference.tsx",
-    "src/components/CountryApplicationLandingPage.tsx",
-    "src/lib/country-application-pages.ts",
+    "src/lib/blog-posts/commercial-carpet-tile-replenishment-dye-lots-spare-stock.ts",
+    "src/lib/blog-data.ts",
+    "keyword-map.csv",
+    "public/images/blog-series/replenishment-20261024/*",
     "ops/change-request.json",
-    "CHANGELOG_OPS.md"
+    "CHANGELOG_OPS.md",
+    "src/lib/sitemap-data.ts",
+    "src/app/blog/[slug]/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "611756a9f9aaff395e4b636fb42902214e67765a",
+  "rollbackCommit": "e84181af3663b00542daf78cfd6a379c307951aa",
   "affectedUrls": [
-    "https://www.vcarpets.com/projects/hotel-wall-to-wall-carpet-project-oceania",
-    "https://www.vcarpets.com/projects/office-carpet-tile-renovation",
-    "https://www.vcarpets.com/markets/ph/entertainment-venue-carpet",
-    "https://www.vcarpets.com/markets/au/office-carpet-tiles-australia"
+    "https://www.vcarpets.com/blog/commercial-carpet-tile-replenishment-dye-lots-spare-stock",
+    "https://www.vcarpets.com/blog"
   ],
-  "notes": "Shorten only existing concept-image notices and the fictional-project notice. Use plain readable 12px regular text at 1.4 line height and 4px caption spacing. Keep all image assets, ratios, product specifications, commercial terms, claims, schema, SEO, forms and consent unchanged. Do not add labels to genuine photographs. Normal feature branch and Preview checks before any merge.",
-  "backupLocation": "Local pre-change production HTML snapshots for representative project and country pages; source rollback commit recorded above."
+  "notes": "One original article, four original clearly disclosed concept images, keyword ownership and append-only operation record. Existing blog aggregation supplies index links, metadata and sitemap. No global robots, schema, forms, prices, permissions or deployment configuration changes. Opt-in compact image captions on this new article only; other article rendering unchanged.",
+  "backupLocation": "Prior source and article index at rollback commit; new article has no prior production HTML."
 }

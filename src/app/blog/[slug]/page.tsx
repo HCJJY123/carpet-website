@@ -16,7 +16,7 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-function RichBlogBlock({ block, index }: { block: BlogContentBlock; index: number }) {
+function RichBlogBlock({ block, index, compactCaptions = false }: { block: BlogContentBlock; index: number; compactCaptions?: boolean }) {
   if (block.type === "paragraph") {
     if (!block.links?.length) {
       return <p className="text-lg leading-relaxed text-muted">{block.text}</p>;
@@ -109,7 +109,7 @@ function RichBlogBlock({ block, index }: { block: BlogContentBlock; index: numbe
         />
       </div>
       {block.caption ? (
-        <figcaption className="mt-3 text-xs font-semibold uppercase tracking-wider text-muted">{block.caption}</figcaption>
+        <figcaption className={compactCaptions ? "mt-1 text-xs font-normal normal-case leading-relaxed tracking-normal text-muted" : "mt-3 text-xs font-semibold uppercase tracking-wider text-muted"}>{block.caption}</figcaption>
       ) : null}
     </figure>
   );
@@ -303,7 +303,7 @@ export default async function BlogPostPage({ params }: Props) {
               )}
             </div>
             {post.h1ImageCaption ? (
-              <figcaption className="text-xs text-muted mt-3 uppercase tracking-wider font-semibold">
+              <figcaption className={post.compactImageCaptions ? "mt-1 text-xs font-normal normal-case leading-relaxed tracking-normal text-muted" : "text-xs text-muted mt-3 uppercase tracking-wider font-semibold"}>
                 {post.h1ImageCaption}
               </figcaption>
             ) : null}
@@ -329,7 +329,7 @@ export default async function BlogPostPage({ params }: Props) {
               {section.blocks ? (
                 <div className="space-y-5">
                   {section.blocks.map((block, index) => (
-                    <RichBlogBlock key={`${section.title}-${block.type}-${index}`} block={block} index={index} />
+                    <RichBlogBlock key={`${section.title}-${block.type}-${index}`} block={block} index={index} compactCaptions={post.compactImageCaptions} />
                   ))}
                 </div>
               ) : (

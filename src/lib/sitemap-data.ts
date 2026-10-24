@@ -33,7 +33,7 @@ const modifiedDates: Record<string, string> = {
   "/products/wool-carpet": "2026-10-23",
   "/ru": "2026-10-23",
   "/de/hotel-teppichboden": "2026-10-23",
-  "/blog": "2026-10-23",
+  "/blog": "2026-10-24",
   "/blog/carpet-tile-delivery-inspection-site-storage-checklist": "2026-10-23",
   "/blog/commercial-carpet-pricing-moq-data-center-guide": "2026-10-24",
   "/commercial-terms": "2026-10-24",
