@@ -1,27 +1,29 @@
 {
-  "task": "Publish owner-selected E3 commercial carpet tile replenishment buyer guide with four original concept images",
-  "approvedBy": "User Sentinel_1fd4f21df91081919e3c9839a308a9dd selected E3; Sentinel_016083e624e8819185a656c6d0d6adc4 requests ChatGPT and Claude readability. Prior direct publish after tests authorization.",
+  "task": "Publish B2B commercial carpet supplier verification guide and clarify carpet-tile category supplier wording",
+  "approvedBy": "Standing user authorization for evidence-backed daily content, reversible site optimization, feature branch, required checks, merge and production deployment.",
   "approvedCategories": [
     "content-update",
-    "documentation"
+    "seo-metadata",
+    "internal-link"
   ],
   "allowedPaths": [
-    "src/lib/blog-posts/commercial-carpet-tile-replenishment-dye-lots-spare-stock.ts",
+    "src/lib/blog-posts/commercial-carpet-supplier-verification-checklist-b2b-buyers.ts",
     "src/lib/blog-data.ts",
+    "src/app/products/carpet-tiles/page.tsx",
     "keyword-map.csv",
-    "public/images/blog-series/replenishment-20261024/*",
+    "ops/supplier-verification-growth-20261025.md",
     "ops/change-request.json",
-    "CHANGELOG_OPS.md",
-    "src/lib/sitemap-data.ts",
-    "src/app/blog/[slug]/page.tsx"
+    "ops/indexnow-urls.json",
+    "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "e84181af3663b00542daf78cfd6a379c307951aa",
+  "rollbackCommit": "0ad7f69c97c93e0e57dec265f4d36cbd0cd7ede1",
   "affectedUrls": [
-    "https://www.vcarpets.com/blog/commercial-carpet-tile-replenishment-dye-lots-spare-stock",
+    "https://www.vcarpets.com/blog/commercial-carpet-supplier-verification-checklist-b2b-buyers",
+    "https://www.vcarpets.com/products/carpet-tiles",
     "https://www.vcarpets.com/blog"
   ],
-  "notes": "One original article, four original clearly disclosed concept images, keyword ownership and append-only operation record. Existing blog aggregation supplies index links, metadata and sitemap. No global robots, schema, forms, prices, permissions or deployment configuration changes. Opt-in compact image captions on this new article only; other article rendering unchanged.",
-  "backupLocation": "Prior source and article index at rollback commit; new article has no prior production HTML."
+  "notes": "One original cross-product supplier verification article; category wording limited to verified supplier role and one reverse link. Reuses existing disclosed planning images. No product specification, price, MOQ, lead time, offer, rating, form, tracking, robots, dependency, global schema or production configuration change.",
+  "backupLocation": "Prior source at rollback commit; new article has no prior production HTML."
 }
