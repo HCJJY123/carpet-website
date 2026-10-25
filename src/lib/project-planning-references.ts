@@ -39,6 +39,7 @@ export const projectPlanningReferences = [
     shipping: "Request carton quantities, labeling, proposed pallet dimensions and gross weights for the receiving plan. Allocate material by phase without mixing approved color references or unidentified batches. Confirm storage and handling instructions for the selected construction, and coordinate site access with the contractor rather than promising installation services.",
     lessons: ["A phased renovation plan should identify the material and batch for each zone.", "The lowest tile price may omit substrate preparation, furniture handling or spare stock.", "Approve the installation direction as well as the individual tile sample.", "Confirm replacement access and retained spares before the initial purchase."],
     links: [
+      { label: "Linear-block PP carpet tile appearance for sample review (not a supplied-project record)", href: "/products/carpet-tiles/staggered-block-pp-office-carpet-tiles" },
       { label: "Linear accent carpet tile design for sample review (not a supplied-project record)", href: "/products/carpet-tiles/linear-accent-commercial-carpet-tiles" },
       { label: "Commercial nylon office carpet tiles", href: "/products/carpet-tiles/nylon-office-carpet-tile" },
       { label: "50x50 nylon and PP office carpet tiles", href: "/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles" },

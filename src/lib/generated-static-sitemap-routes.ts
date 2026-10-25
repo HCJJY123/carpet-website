@@ -45,6 +45,7 @@ export const generatedStaticSitemapRoutes = [
   "/products/carpet-tiles/nylon-office-carpet-tile",
   "/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles",
   "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles",
+  "/products/carpet-tiles/staggered-block-pp-office-carpet-tiles",
   "/products/public-area",
   "/products/public-area/commercial-stair-carpet-runner",
   "/products/public-area/custom-sculpted-wool-lobby-rug",

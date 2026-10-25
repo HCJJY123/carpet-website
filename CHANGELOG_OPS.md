@@ -1585,3 +1585,11 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 - Hypothetical 500 m²/50 cm calculation separates net tiles, assumed waste/spares and carton rounding. No actual client case or unsupported certification claim.
 - Rollback baseline: `d1f58d623f9084df739f15d6e030f40d519e94cb`.
 - Validation: scope guard, lint, build and preview checks recorded in release evidence before merge.
+
+## 2026-10-25 — Linear-block PP office carpet tile product
+
+- Added one owner-requested standalone product, visible category entry and office-planning reference link. Existing product records and URLs are preserved.
+- Reuses EvidenceProductPage with optional source note and resource supplement; existing invocations are unchanged. Four main plus three detail images are edited appearance concepts, not customer or performance evidence.
+- Supplier-reference PP, PVC backing, 50×50 cm format, 520 g/m² pile weight, 4.0±0.5 mm pile height, approximately 6.0 mm thickness and 20 tiles / 5 m² packing are qualified pending quoted-SKU/sample approval. No washable, certification, numeric price or stock claim. FOB price is Request a project quotation; port is tianjingang.
+- Exact Alibaba listing and technical table were read after owner-authorized CAPTCHA interaction. Conflicting pile-construction labels are disclosed; no third-party certificate reuse.
+- Rollback baseline: `db1081824822fed22128811868b2e4ce05b38734`. Scope, lint, build, preview and production validation are recorded before final delivery.

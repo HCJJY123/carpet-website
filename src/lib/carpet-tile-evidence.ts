@@ -6,6 +6,7 @@ type TileProfile = { name: string; construction: string; application: string };
 // Own specifications remain catalog references. Competitor data belong only to
 // the named product and are not evidence for VCARPETS performance or supply.
 const summaries: Record<string, string> = {
+  "staggered-block-pp-office-carpet-tiles": "Review this gray linear-block carpet tile design for office layouts. The supplier reference specifies PP, PVC backing and a nominal 50×50 cm format; confirm the offered construction and sample before ordering. FOB price: Request a project quotation. Port: tianjingang.",
   "balance-polypropylene-carpet-tiles": "Balance is a 50×50 cm polypropylene loop-pile carpet tile with PVC backing for office layout planning. The catalog lists 20 tiles per carton, equivalent to 5 m² before cutting. Approve the sample, fixing method and project documents before ordering FOB Tianjin Port.",
   "gradient-accent-office-carpet-tiles": "This 50×50 cm office carpet tile has polypropylene loop pile, bitumen backing and a catalog pile weight of 420 g/m². Confirm the gray and accent-color sample, installation method and required project reports before ordering FOB Tianjin Port.",
   "linear-accent-commercial-carpet-tiles": "Linear Accent is an office carpet-tile design reference shown in 7 illustrations. Dimensions, fiber, backing and performance remain unconfirmed. Request a product sheet and physical sample before specifying coverage, installation or an order quantity.",
@@ -45,6 +46,19 @@ export const tileDocumentChecks = [
 ];
 
 export function carpetTileEvidence(product: Product, profile: TileProfile) {
+  if (product.id === "staggered-block-pp-office-carpet-tiles") return {
+    summary: summaries[product.id], competitors: [] as ComparisonOption[],
+    relatedIds: ["pp-pvc-backed-office-carpet-tiles", "pp-bitumen-backed-office-carpet-tiles", "heathered-gray-modular-carpet-tiles"],
+    reviewedOn: "25 October 2026",
+    faqs: [
+      { q: "Which specifications are confirmed for these linear-block office carpet tiles?", a: "The supplier technical table lists a 100% PP face, PVC backing, nominal 50×50 cm format, 520 g/m² pile weight, 4.0±0.5 mm pile height and approximately 6.0 mm total thickness. Packing is 20 tiles / 5 m² per carton. These are supplier-reference specifications, not independent measurements. Approve the quoted SKU and physical sample; pile-construction labels on the source page conflict." },
+      { q: "Can these PP office carpet tiles be washed or used as waterproof flooring?", a: "No washable or waterproof performance is established here. Ask for the approved cleaning method for the exact face, backing, adhesive and subfloor. Do not assume that machine washing, immersion or frequent wet cleaning is suitable from a supplier title or an illustration." },
+      { q: "How many nominal 50×50 cm carpet tiles cover one square metre?", a: "At the supplier-listed nominal 50×50 cm format, one uncut tile covers 0.25 m² and four cover 1 m². The listed carton holds 20 tiles / 5 m². Add cutting allowance, retained spares and carton rounding separately after the installer approves the layout and dimensions." },
+      { q: "Can the linear-block pattern be installed in a quarter-turn layout?", a: "The supplier table lists monolithic or quarter-turn installation. The illustrations show a planning composition, not an approved installation. Review a physical mock-up, pile direction, adjacent colour variation, edge alignment and the selected fixing system before agreeing the laying plan." },
+      { q: "What is the FOB price and export port for this carpet tile project?", a: "FOB price: Request a project quotation. Port: tianjingang. Send the selected colour, net area, quantity, destination and required date. Confirm the exact construction, packing, sample charges, MOQ and schedule in the written quotation." },
+      { q: "Do these images show a completed office installation or certified product?", a: "No. The four main images and three detail images are AI-edited design references based on the supplied appearance. They do not identify a delivered client project, exact production colour or tested performance. Approve a physical sample and product-matched documents." },
+    ],
+  };
   const summary = summaries[product.id];
   if (!summary) throw new Error(`Missing carpet tile evidence: ${product.id}`);
   const hasConfirmedFormat = !["linear-accent-commercial-carpet-tiles", "heathered-gray-modular-carpet-tiles"].includes(product.id);

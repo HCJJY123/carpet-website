@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -51,7 +52,7 @@ function InquiryActions({ product, label }: { product: Product; label: string })
 
 const headingClass = "mb-5 text-2xl font-black leading-tight text-primary md:text-3xl";
 
-export default function EvidenceProductPage({ productId }: { productId: string }) {
+export default function EvidenceProductPage({ productId, sourceNote, supplement, includeManufacturer = true }: { productId: string; sourceNote?: string; supplement?: ReactNode; includeManufacturer?: boolean }) {
   const product = findProduct(productId);
   const copy = evidenceCopy(product);
   const url = absoluteUrl(productPath(product.id));
@@ -65,7 +66,7 @@ export default function EvidenceProductPage({ productId }: { productId: string }
     "@context": "https://schema.org", "@type": "Product", "@id": `${url}#product`,
     name: copy.name, description: copy.summary, url, mainEntityOfPage: url,
     sku: product.id, brand: { "@type": "Brand", name: "VCARPETS" },
-    manufacturer: { "@id": `${brandInfo.url}/#organization` },
+    ...(includeManufacturer ? { manufacturer: { "@id": `${brandInfo.url}/#organization` } } : {}),
     category: categoryName(product.category), material: product.spec.material, size: product.spec.size,
     image: images.map((image) => absoluteUrl(image.src)),
     additionalProperty: catalogSpecs.map(([name, value]) => ({ "@type": "PropertyValue", name: `Catalog reference: ${name}`, value })),
@@ -99,7 +100,7 @@ export default function EvidenceProductPage({ productId }: { productId: string }
           <p className="product-summary text-base leading-8 text-muted md:text-lg" data-product-answer>{copy.summary}</p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a href="#reference-data" className="border border-border px-4 py-3 text-sm font-bold text-primary">Review Specifications</a>
-            <a href="#supplier-comparison" className="border border-border px-4 py-3 text-sm font-bold text-primary">Compare Suppliers</a>
+            {copy.competitors.length > 0 ? <a href="#supplier-comparison" className="border border-border px-4 py-3 text-sm font-bold text-primary">Compare Suppliers</a> : null}
             <a href="#order-details" className="btn-fox-orange !px-4 !py-3 !text-xs">Request Quote and Samples</a>
           </div>
         </div>
@@ -114,11 +115,11 @@ export default function EvidenceProductPage({ productId }: { productId: string }
       <div className="container-fox max-w-5xl">
         <h2 className={headingClass}>Construction and Planning Data</h2>
         <p className="leading-8 text-muted">{copy.construction}</p>
-        <p className="mt-4 text-sm leading-7 text-muted">Source: the VCARPETS catalog construction record for this product, reviewed {reviewedOn}. Listed dimensions and options are reference data; confirm them against the nominated product sheet and approved sample.</p>
+        <p className="mt-4 text-sm leading-7 text-muted">{sourceNote ?? `Source: the VCARPETS catalog construction record for this product, reviewed ${reviewedOn}. Listed dimensions and options are reference data; confirm them against the nominated product sheet and approved sample.`}</p>
       </div>
     </section>
 
-    <section className={"py-10 md:py-14" + tileAnchorOffset} id="supplier-comparison" data-copy-block="comparison">
+    {copy.competitors.length > 0 ? <section className={"py-10 md:py-14" + tileAnchorOffset} id="supplier-comparison" data-copy-block="comparison">
       <div className="container-fox">
         <h2 className={headingClass}>Supplier and Construction Comparison</h2>
         <p className="mb-6 max-w-4xl leading-8 text-muted">Compare these {copy.competitors.length + 1} supplier options using the cited product or service pages. Different constructions are not equivalent products. No price advantage, performance ranking or interchangeability is implied. Sources reviewed {reviewedOn}.</p>
@@ -133,7 +134,7 @@ export default function EvidenceProductPage({ productId }: { productId: string }
           </table>
         </div>
       </div>
-    </section>
+    </section> : null}
 
     <section className={"border-y border-border bg-surface py-10 md:py-14" + tileAnchorOffset} id="reference-data">
       <div className="container-fox max-w-5xl">
@@ -191,6 +192,8 @@ export default function EvidenceProductPage({ productId }: { productId: string }
         {product.category === "carpet-tiles" ? <div className="mt-6 flex flex-wrap gap-5 text-sm font-bold text-primary" data-tile-procurement-links><Link href="/commercial-carpet-tiles" className="underline">Commercial carpet tile selection</Link><Link href="/solutions/office-carpet-tiles-supplier" className="underline">Office carpet tile project requirements</Link><Link href="/blog/nylon-vs-polyester-vs-polypropylene-carpet-tiles" className="underline">Compare nylon and polypropylene fibers</Link><Link href="/technical-documents" className="underline">Technical documents and buyer guides</Link></div> : null}
       </div>
     </section>
+
+    {supplement}
 
     <section className="py-10 md:py-16" id="product-faq" data-copy-block="faq">
       <div className="container-fox max-w-5xl">

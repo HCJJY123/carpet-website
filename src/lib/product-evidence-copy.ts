@@ -23,6 +23,18 @@ export const reviewedOn = "22 October 2026";
 // Construction and dimension references come from the existing product catalog.
 // They are not independent laboratory verification or certificates.
 const profiles: Record<string, Profile> = {
+  "staggered-block-pp-office-carpet-tiles": {
+  "name": "Linear Block PP Carpet Tiles 50×50 cm for Offices",
+  "summary": "Review this gray linear-block carpet tile design for office layouts. The supplier reference specifies a PP face, PVC backing and nominal 50×50 cm format; approve the offered construction and sample before ordering. FOB price: Request a project quotation. Port: tianjingang.",
+  "construction": "The supplier technical table lists a 100% polypropylene face, PVC backing, 520 g/m² pile weight, 4.0±0.5 mm pile height and approximately 6.0 mm total thickness. The nominal 50×50 cm format covers 0.25 m² per tile; the listed packing is 20 pieces / 5 m² per carton. These are supplier-reference values, not independent test results. Confirm the order-specific sheet and sample; the supplier page contains conflicting pile-construction labels.",
+  "application": "Use the edited gray, blue and charcoal references to compare office work zones and meeting-room layouts. Approve a physical mock-up of monolithic or quarter-turn placement and confirm the fixing system, subfloor and maintenance method. No washable, waterproof, fire-class, acoustic or rolling-chair rating is claimed.",
+  "checks": [
+    "Confirm supplier-reference PP, PVC and 50×50 cm specification for the quoted SKU",
+    "Approve colour, linear-block direction and adjoining tile layout",
+    "Confirm backing, fixing, cleaning and intended-use evidence",
+    "Agree quantity, packing, quotation and production schedule"
+  ]
+},
   "balance-polypropylene-carpet-tiles": {
     name: "Balance 50×50 cm PP Carpet Tiles with PVC Backing",
     summary: "Balance carpet tiles use a polypropylene loop-pile face and PVC backing in a nominal 50×50 cm format for office floor planning. Confirm the physical sample, installation method and project requirements before ordering. Supply terms are FOB Tianjin Port.",
