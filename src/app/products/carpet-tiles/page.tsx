@@ -318,7 +318,7 @@ export default function CategoryPage() {
           <div className="mb-8 max-w-4xl">
             <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Product Evidence, Not Category-Wide Promises</p>
             <h2 id="product-evidence-heading" className="text-3xl font-black text-primary md:text-4xl">What is documented for the carpet tile you are comparing?</h2>
-            <p className="mt-5 leading-8 text-muted">VCARPETS is the trading brand of {brandInfo.name}. These three examples have different evidence levels. Each specification belongs only to the named model; it is not a shared specification for this collection.</p>
+            <p className="mt-5 leading-8 text-muted">VCARPETS is the brand of {brandInfo.name} These three examples have different evidence levels. Each specification belongs only to the named model; it is not a shared specification for this collection.</p>
           </div>
           <div className="grid gap-5 lg:grid-cols-3">
             {evidenceExamples.map((example) => {

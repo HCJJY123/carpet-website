@@ -57,6 +57,7 @@ check('Blanket category MOQ and production windows are removed', () => {
 check('Evidence answer separates supplier, catalog and design-only models', () => {
   for (const phrase of ['id="product-evidence"', 'Supplier-reference construction', 'Catalog-reference construction', 'Appearance-led design reference', 'Each specification belongs only to the named model']) assert.ok(categoryHtml.includes(phrase), phrase);
   assert.ok(categoryHtml.includes('2,000 net tiles'));
+  assert.ok(!categoryHtml.includes('Co., Ltd..'), 'Legal entity should have one terminal period');
   assert.ok(categoryHtml.includes(`href="${guide}"`));
 });
 check('Existing installation, maintenance and comparison resource paths are retained', () => {
