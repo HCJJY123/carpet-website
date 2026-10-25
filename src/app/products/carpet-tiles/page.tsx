@@ -26,12 +26,12 @@ const priceUnitDisclosure = "Piece means one tile; SQM means one square meter. O
 
 const categoryFaqs = [
   {
-    question: "What commercial carpet tiles does VCARPETS manufacture?",
-    answer: "VCARPETS manufactures 50x50 carpet tiles in nylon, Nylon 6.6, polypropylene, and project-specific fiber options. Available ranges include office carpet tiles, hotel carpet tiles, heavy-duty commercial carpet tiles, patterned modular tiles, PVC-free PE backing tiles, and bitumen-backed carpet tiles."
+    question: "What commercial carpet tiles does VCARPETS supply?",
+    answer: "VCARPETS supplies 50x50 carpet tiles in nylon, Nylon 6.6, polypropylene, and project-specific fiber options. Available ranges include office carpet tiles, hotel carpet tiles, heavy-duty commercial carpet tiles, patterned modular tiles, PVC-free PE backing tiles, and bitumen-backed carpet tiles."
   },
   {
     question: "Do you supply wholesale carpet tiles to distributors and contractors?",
-    answer: "Yes. VCARPETS supports carpet tile distributors, commercial flooring contractors, importers, and project buyers with wholesale carpet tiles, bulk pricing, samples, OEM colors, backing selection, export packing, and international delivery."
+    answer: "Yes. VCARPETS supports carpet tile distributors, commercial flooring contractors, importers, and project buyers with wholesale carpet tiles, bulk quotations, samples, project color review, backing selection, export packing, and international delivery planning."
   },
   {
     question: "What is the wholesale price for carpet tiles?",
@@ -162,6 +162,7 @@ const buyerIntentPaths = [
     text: "Prepare area, waste, spare stock, tile format, destination and document requirements before asking for a comparable quotation.",
     links: [
       { label: "RFQ quantity calculator", href: "/resources/commercial-carpet-rfq-calculator" },
+      { label: "Supplier verification checklist", href: "/blog/commercial-carpet-supplier-verification-checklist-b2b-buyers" },
       { label: "Request project quote", href: "/contact?product=Commercial%20Carpet%20Tiles#quote-form" },
     ],
   },
@@ -182,16 +183,16 @@ const procurementDecisionPoints = [
   },
   {
     title: "The fastest way to get a comparable quote",
-    detail: "Send total square meters, floor plan or zone split, application, preferred fiber and backing, installation method, destination city, target date and required documents. The factory can then return a product recommendation, sample path, packing basis and project quotation together.",
+    detail: "Send total square meters, floor plan or zone split, application, preferred fiber and backing, installation method, destination city, target date and required documents. The supplier can then return a product recommendation, sample path, packing basis and project quotation together.",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Tiles 50x50 | Factory Price & Samples",
-  description: "Compare 50x50 nylon and polypropylene commercial carpet tiles for offices and hotels. See factory price ranges, MOQ, backing, samples and export terms.",
+  title: "Commercial Carpet Tiles 50x50 | Wholesale & Samples",
+  description: "Compare 50x50 nylon and polypropylene commercial carpet tiles for offices and hotels. Review wholesale quotation factors, backing, samples and export terms.",
   alternates: { canonical: categoryPath },
   openGraph: {
-    title: "Commercial Carpet Tiles 50x50 | Factory Price & Samples",
+    title: "Commercial Carpet Tiles 50x50 | Wholesale & Samples",
     description: "Compare commercial carpet tile products by fiber, backing, factory price, MOQ, samples, and office, hotel, healthcare, or education application.",
     url: absoluteUrl(categoryPath),
     type: "website",
@@ -242,7 +243,7 @@ export default function CategoryPage() {
         <div className="absolute inset-0 -z-10 bg-[#102A43]/72" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-28 bg-gradient-to-t from-[#102A43] to-transparent" />
         <div className="container-fox relative z-10">
-          <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Carpet Tile Manufacturer, Supplier & Distributor Support</p>
+          <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Commercial Carpet Tile Supplier & Distributor Support</p>
           <h1 className="text-4xl font-black uppercase text-white md:text-6xl">Commercial Carpet Tiles & Modular Flooring</h1>
           <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">50x50 nylon and polypropylene carpet tiles for offices, hotels, corridors, schools, healthcare support areas, airports, and commercial projects. Compare wholesale price, backing, thickness, MOQ, and technical performance across the listed range.</p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
