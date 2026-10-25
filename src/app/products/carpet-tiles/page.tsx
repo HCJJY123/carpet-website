@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { products } from "@/lib/data";
+import { brandInfo, products } from "@/lib/data";
+import { evidenceCopy } from "@/lib/product-evidence-copy";
 import Link from "next/link";
 import ProductImage from "@/components/ProductImage";
 import AnswerFirst from "@/components/AnswerFirst";
@@ -92,7 +93,7 @@ const productOptions = [
   },
   {
     title: "100% Nylon Office Carpet Tile",
-    text: "Class 33 heavy-duty commercial carpet tiles with bitumen backing and antistatic performance for demanding office traffic.",
+    text: "Nylon loop-pile face with listed bitumen backing. Confirm the selected construction and product-matched traffic, fire and antistatic evidence before approval.",
     href: "/products/carpet-tiles/nylon-office-carpet-tile"
   },
   {
@@ -120,10 +121,11 @@ const productOptions = [
 const buyerIntentPaths = [
   {
     title: "Office and rolling-chair areas",
-    text: "Start with nylon construction, caster movement, chair-wheel wear, maintenance and selective replacement requirements.",
+    text: "Start with the measured office area, traffic zones, caster movement, maintenance and selected construction. Fibre alone does not establish a traffic class.",
     links: [
       { label: "Nylon office carpet tile", href: "/products/carpet-tiles/nylon-office-carpet-tile" },
       { label: "Rolling-chair specification guide", href: "/blog/specify-commercial-carpet-tiles-chair-wheel-areas" },
+      { label: "500 m² office quantity and specification guide", href: "/blog/500-sqm-office-carpet-tiles-specification-guide" },
     ],
   },
   {
@@ -169,23 +171,10 @@ const buyerIntentPaths = [
   },
 ];
 
-const procurementDecisionPoints = [
-  {
-    title: "50x50 carpet tiles for phased projects",
-    detail: "Use 50x50 cm modular tiles when office, education, hotel or public-area work needs phased installation, access to raised floors or tile-by-tile replacement. Confirm the tile size in millimeters when a tender says 24x24 carpet tiles, because those formats are not automatically interchangeable.",
-  },
-  {
-    title: "Fiber and backing before color",
-    detail: "Compare nylon, Nylon 6.6 and polypropylene against traffic, caster-chair use, cleaning, antistatic needs and the subfloor. Then compare bitumen, PVC, cushion or PVC-free PE backing for dimensional stability, acoustic targets and maintenance access.",
-  },
-  {
-    title: "Replacement stock and carton planning",
-    detail: "For multi-floor offices, hotels and schools, ask for the recommended spare-tile percentage, dye-lot control, carton quantity, gross weight and storage conditions. These details make future localized replacement more predictable than choosing a color sample alone.",
-  },
-  {
-    title: "The fastest way to get a comparable quote",
-    detail: "Send total square meters, floor plan or zone split, application, preferred fiber and backing, installation method, destination city, target date and required documents. The supplier can then return a product recommendation, sample path, packing basis and project quotation together.",
-  },
+const evidenceExamples = [
+  { id: "staggered-block-pp-office-carpet-tiles", status: "Supplier-reference construction", check: "Match the quoted SKU to the supplier table and physical sample. The source has conflicting pile-construction labels; no product-matched performance report is established." },
+  { id: "nylon-office-carpet-tile", status: "Catalog-reference construction", check: "Ask for the exact tile, backing, substrate and fixing method covered by each required report. Catalog dimensions do not establish Class 33, fire, acoustic or antistatic performance." },
+  { id: "linear-accent-commercial-carpet-tiles", status: "Appearance-led design reference", check: "Confirm dimensions, fibre and backing before calculating coverage or comparing price. AI illustrations are not a supplied installation or product test." },
 ];
 
 export const metadata: Metadata = {
@@ -202,13 +191,21 @@ export const metadata: Metadata = {
 };
 export default function CategoryPage() {
   const categoryId = "carpet-tiles";
-  const categoryProducts = products.filter((p) => p.category === categoryId);
-  const jsonLd = productItemListJsonLd({
-    name: "Commercial Carpet Tiles and Modular Office Carpet Flooring",
-    description: "Commercial carpet tile products for offices, hotels, schools, healthcare support areas, corridors, airports, and contract flooring projects.",
-    url: categoryPath,
-    items: categoryProducts,
-  });
+  // One evidence summary feeds both visible cards and their structured list.
+  // Keep the original records untouched; catalog claims on other pages are not broadened here.
+  const categoryProducts = products.filter((p) => p.category === categoryId)
+    .map((product) => ({ ...product, description: evidenceCopy(product).summary }));
+  const jsonLd = {
+    ...productItemListJsonLd({
+      name: "Commercial Carpet Tiles and Modular Office Carpet Flooring",
+      description: "Commercial carpet tile products for offices, hotels, schools, healthcare support areas, corridors, airports, and contract flooring projects.",
+      url: categoryPath,
+      items: categoryProducts,
+    }),
+    "@id": `${absoluteUrl(categoryPath)}#webpage`,
+    isPartOf: { "@id": `${brandInfo.url}/#website` },
+    publisher: { "@id": `${brandInfo.url}/#organization` },
+  };
   const breadcrumbJsonLd = categoryBreadcrumbJsonLd(categoryId);
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -256,9 +253,9 @@ export default function CategoryPage() {
       </section>
       <AnswerFirst
         title="Which Commercial Carpet Tile Should a Project Buyer Choose?"
-        answer="Choose commercial carpet tiles by traffic level, fiber, backing, subfloor, maintenance plan, and replacement strategy rather than color alone. Nylon is generally the stronger starting point for demanding traffic; polypropylene can suit value-led areas; PVC-free PE backing is relevant when the project specifically requires that construction. Confirm the exact fire, antistatic, acoustic, and dimensional-stability documents required for the destination market before approving an order."
+        answer="Shortlist carpet tiles by the intended room, traffic, chair use, subfloor and maintenance plan; then compare one specified fibre and backing combination at a time. A nylon, polypropylene or PE-backing label alone does not establish traffic class, fire, acoustic or antistatic performance. Match the quotation, physical sample and required reports to the same product code and construction before approval."
         facts={[
-          { label: "Standard Listed Size", value: "50 x 50 cm modular tiles" },
+          { label: "Listed Formats", value: "50 x 50 cm on specified models; design-only formats need confirmation" },
           { label: "Fiber Options", value: "Nylon, Nylon 6.6 and polypropylene" },
           { label: "Backing Options", value: "Bitumen, PVC, cushion and PVC-free PE" },
           { label: "Buyer Checks", value: "Traffic, fire, subfloor, adhesive and spare-tile plan" },
@@ -266,7 +263,7 @@ export default function CategoryPage() {
         moq={[
           { label: "Sample", value: "Confirm color, texture, fiber and backing" },
           { label: "Trial Order", value: "Confirmed by product, color and production feasibility" },
-          { label: "Project MOQ", value: "Generally 200-500 SQM across the listed range" },
+          { label: "Project MOQ", value: "Confirm the selected model, colour and quantity in writing" },
         ]}
         suitableFor={[
           "Offices, hotels, education, healthcare support areas and phased renovation",
@@ -293,8 +290,8 @@ export default function CategoryPage() {
       <ProcurementSnapshot
         title="Commercial Carpet Tile Buying Facts"
         facts={[
-          { label: "Project MOQ", value: "200-500 SQM", detail: "Samples and trial orders are confirmed separately." },
-          { label: "Production", value: "7-25 Days", detail: "Timing depends on fiber, backing, color, and quantity." },
+          { label: "Project MOQ", value: "Model-specific", detail: "Confirm the chosen construction, colour and order quantity; samples and trial orders are separate." },
+          { label: "Production", value: "Confirm in quotation", detail: "Agree the production start conditions and schedule. Shipping transit is separate." },
           { label: "Samples", value: "Available", detail: "Confirm surface, backing, color, and specification before bulk order." },
           { label: "Trade Terms", value: "FOB Tianjin Port", detail: "Confirm the nominated product, quantity and supply scope in the written quotation." },
         ]}
@@ -316,21 +313,26 @@ export default function CategoryPage() {
           { label: "Request a Quote", href: "/contact?product=Commercial%20Carpet%20Tiles#quote-form" },
         ]}
       />
-      <section className="section-padding border-b border-border bg-white" data-funnel-section="carpet_tile_procurement_decisions">
+      <section className="section-padding scroll-mt-24 border-b border-border bg-white" data-funnel-section="carpet_tile_procurement_decisions" id="product-evidence" aria-labelledby="product-evidence-heading">
         <div className="container-fox">
-          <div className="mb-10 max-w-3xl">
-            <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Buyer Decision Guide</p>
-            <h2 className="text-3xl font-black uppercase text-primary md:text-5xl">How Project Buyers Compare 50x50 Carpet Tiles</h2>
-            <p className="mt-5 leading-8 text-muted">Commercial buyers usually shortlist modular carpet by project risk, not by appearance alone. Use these checks before requesting samples or comparing a factory quotation.</p>
+          <div className="mb-8 max-w-4xl">
+            <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-accent">Product Evidence, Not Category-Wide Promises</p>
+            <h2 id="product-evidence-heading" className="text-3xl font-black text-primary md:text-4xl">What is documented for the carpet tile you are comparing?</h2>
+            <p className="mt-5 leading-8 text-muted">VCARPETS is the brand of {brandInfo.name} These three examples have different evidence levels. Each specification belongs only to the named model; it is not a shared specification for this collection.</p>
           </div>
-          <div className="grid gap-px border border-border bg-border md:grid-cols-2">
-            {procurementDecisionPoints.map((item) => (
-              <article key={item.title} className="bg-white p-7">
-                <h3 className="mb-3 text-lg font-black uppercase leading-tight text-primary">{item.title}</h3>
-                <p className="text-sm leading-7 text-muted">{item.detail}</p>
-              </article>
-            ))}
+          <div className="grid gap-5 lg:grid-cols-3">
+            {evidenceExamples.map((example) => {
+              const product = categoryProducts.find((item) => item.id === example.id)!;
+              return <article key={example.id} className="min-w-0 rounded-lg border border-border bg-surface p-6">
+                <p className="text-xs font-black uppercase tracking-wider text-accent">{example.status}</p>
+                <h3 className="mt-3 text-xl font-black leading-7 text-primary"><Link href={`/products/${categoryId}/${product.id}`} className="underline underline-offset-4">{product.name}</Link></h3>
+                <p className="mt-4 text-sm leading-7 text-muted">{product.description}</p>
+                <p className="mt-4 border-t border-border pt-4 text-sm leading-7 text-muted"><strong className="text-primary">Before approval:</strong> {example.check}</p>
+              </article>;
+            })}
           </div>
+          <p className="mt-6 max-w-4xl text-sm leading-7 text-muted">For a hypothetical 500 m² carpeted office, nominal 50×50 cm tiles give 2,000 net tiles before cutting allowance, retained spares and carton rounding. This is geometry, not a product recommendation or completed project. Use the <Link href="/blog/500-sqm-office-carpet-tiles-specification-guide" className="font-bold text-accent underline">500 m² office specification and quantity guide</Link> to separate the calculation from construction and document approval.</p>
+          <p className="mt-4 text-sm leading-7 text-muted">Evidence review: 25 October 2026. Product pages identify catalog or supplier references and document gaps; the <Link href="/resources/ai-commercial-carpet-source-guide" className="font-bold text-accent underline">procurement resource directory</Link> connects the supporting decision guides.</p>
           <p className="mt-6 text-sm leading-7 text-muted">Compare the <Link href="/products/carpet-tiles/nylon-office-carpet-tile#size-layout-backing" className="font-bold text-accent underline">50x50 cm nylon commercial carpet tile size, layout and backing checks</Link> and use the <Link href="/resources/installation-guides" className="font-bold text-accent underline">installation planning brief</Link> to align the site and product details before requesting a quote. Plan spare tiles and cleaning responsibilities with the <Link href="/resources/maintenance-guides" className="font-bold text-accent underline">maintenance handoff brief</Link>. For a concrete substrate, review the <Link href="/blog/carpet-tiles-over-concrete-installation-guide" className="font-bold text-accent underline">concrete-floor guide</Link>; send the complete scope through the <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="font-bold text-accent underline">commercial carpet tile RFQ form</Link>.</p>
           <p className="mt-5 text-sm leading-7 text-muted">Still deciding between modules and roll carpet? Use the <Link href="/blog/carpet-tiles-vs-broadloom-commercial-projects-guide" className="font-bold text-accent underline">carpet tiles vs broadloom buyer comparison</Link> to review repair access, zone layout and the same installed scope before comparing quotations.</p>
           <p className="mt-4 text-sm leading-7 text-muted">Specifying a removable panel floor? Use the <Link href="/blog/carpet-tiles-raised-access-floor-procurement-guide" className="font-bold text-accent underline">raised-access-floor carpet tile procurement checklist</Link> to record panel information, fixing review and future service access before releasing the finish order. Suitability must be confirmed for the exact product and floor system.</p>
@@ -357,7 +359,8 @@ export default function CategoryPage() {
                 </div>
                 {["gradient-accent-office-carpet-tiles", "balance-polypropylene-carpet-tiles"].includes(p.id) && <p className="mb-4 text-xs leading-6 text-muted">AI-edited planning visualization. Confirm the physical sample.</p>}
                 {p.id === "pp-pvc-backed-office-carpet-tiles" ? <p className="mb-4 text-xs leading-6 text-muted">AI-generated appearance illustration. Approve a physical sample.</p> : null}
-                {["heathered-gray-modular-carpet-tiles", "linear-accent-commercial-carpet-tiles", "staggered-block-pp-office-carpet-tiles"].includes(p.id) && <p className="mb-2 text-xs text-muted">AI-generated design illustration · Specification pending</p>}
+                {["heathered-gray-modular-carpet-tiles", "linear-accent-commercial-carpet-tiles"].includes(p.id) && <p className="mb-2 text-xs text-muted">AI-generated design illustration · Specification pending</p>}
+                {p.id === "staggered-block-pp-office-carpet-tiles" && <p className="mb-2 text-xs text-muted">AI-edited design reference · Supplier-reference construction; approve the sample</p>}
                 <h3 className="mb-6 min-h-20 text-xl font-bold uppercase leading-tight text-primary transition-colors group-hover:text-accent">{p.name}</h3>
                 <p className="mb-6 min-h-20 text-sm leading-relaxed text-muted">{p.description}</p>
                 <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">
@@ -398,7 +401,7 @@ export default function CategoryPage() {
             {productOptions.map((option) => (
               <Link key={option.href} href={option.href} className="group bg-white p-7 transition-colors hover:bg-primary">
                 <h3 className="mb-3 text-base font-black uppercase text-primary group-hover:text-white">{option.title}</h3>
-                <p className="text-sm leading-relaxed text-muted group-hover:text-white/75">{option.text}</p>
+                <p className="text-sm leading-relaxed text-muted group-hover:text-white/75">{categoryProducts.find((product) => option.href.endsWith(`/${product.id}`))?.description ?? option.text}</p>
                 <span className="mt-5 inline-block text-[10px] font-black uppercase tracking-widest text-accent">View Product →</span>
               </Link>
             ))}

@@ -1,34 +1,25 @@
 {
-  "task": "Publish a standalone linear-block PP office carpet tile design with four main and three detail images",
-  "approvedBy": "User request Sentinel_23b55c2e58b481918cc6c1b63dc8d8d6 on 25 October 2026 explicitly authorizes product creation, category visibility, seven edited images, testing and publication.",
+  "task": "Align the existing carpet-tile category and procurement resource directory with product-specific evidence and discoverable office buyer answers",
+  "approvedBy": "User explicitly requested research and direct publication of the two highest-priority GEO actions across five authorized sites on 25 October 2026. Selected scope: evidence consistency and existing buyer-page discoverability for VCARPETS.",
   "approvedCategories": [
     "content-update",
     "seo-metadata",
     "internal-link"
   ],
   "allowedPaths": [
-    "src/lib/data.ts",
-    "src/lib/product-evidence-copy.ts",
-    "src/lib/carpet-tile-evidence.ts",
-    "src/components/EvidenceProductPage.tsx",
     "src/app/products/carpet-tiles/page.tsx",
-    "src/app/products/carpet-tiles/staggered-block-pp-office-carpet-tiles/page.tsx",
-    "src/lib/project-planning-references.ts",
-    "src/lib/generated-static-sitemap-routes.ts",
-    "keyword-map.csv",
+    "src/app/resources/ai-commercial-carpet-source-guide/page.tsx",
+    "scripts/carpet-category-evidence.test.mjs",
     "ops/change-request.json",
-    "ops/indexnow-urls.json",
-    "CHANGELOG_OPS.md",
-    "public/images/products/staggered-block-pp-office-carpet-tiles/**",
-    "scripts/staggered-block-pp-product.test.mjs"
+    "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "db1081824822fed22128811868b2e4ce05b38734",
+  "rollbackCommit": "681119361976105b229eb5d8ec8f266aca501d1e",
   "affectedUrls": [
-    "https://www.vcarpets.com/products/carpet-tiles/staggered-block-pp-office-carpet-tiles",
-    "https://www.vcarpets.com/products/carpet-tiles"
+    "https://www.vcarpets.com/products/carpet-tiles",
+    "https://www.vcarpets.com/resources/ai-commercial-carpet-source-guide"
   ],
-  "notes": "New design-specific product from owner-supplied brief and visual references, not a supplier certificate or measured technical specification. The exact supplier technical table was verified after owner-authorized CAPTCHA interaction; PP, PVC, dimensions, pile weight/height, approximate thickness and packing remain supplier references pending quoted-SKU/sample approval. No washable, test class or numeric price claim. Reuse existing template with optional product-only source and resource supplement. No global SEO logic, forms, tracking, dependencies or deployment settings changed.",
-  "backupLocation": "Sibling pp-carpet-product-evidence-20261025 contains production category and planning-reference HTML backups."
+  "notes": "Page-local content, CollectionPage description/entity links and internal links only. Reuse product-page evidence summaries without altering product facts. Remove category-wide MOQ/lead-time implications, distinguish supplier references from unconfirmed designs and test evidence, retain all product URLs and existing inquiry handlers. Preserve the new linear-block PP product and 500 m\u00b2 guide. No robots, global schema/sitemap/canonical logic, forms, analytics, dependency or deployment-setting changes. Draft PR, Preview verification and required checks precede authorized merge.",
+  "backupLocation": "Sibling vcarpets-geo-evidence-20261025 includes live HTML, HTTP headers and baseline checks."
 }

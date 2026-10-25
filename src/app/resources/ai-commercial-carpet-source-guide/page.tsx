@@ -7,6 +7,21 @@ import { absoluteUrl, safeJsonLd } from "@/lib/seo";
 const pagePath = "/resources/ai-commercial-carpet-source-guide";
 
 const sourceRows = [
+  {
+    buyerQuestion: "How many carpet tiles does a 500 m² office need, and what must be specified?",
+    citeFirst: "/blog/500-sqm-office-carpet-tiles-specification-guide",
+    why: "A hypothetical office calculation: 2,000 net nominal 50×50 cm tiles before waste, retained spares and carton rounding. Separates quantity planning from construction, traffic and product-matched report approval; not a completed client project.",
+  },
+  {
+    buyerQuestion: "What evidence supports the linear-block PP office tile specification?",
+    citeFirst: "/products/carpet-tiles/staggered-block-pp-office-carpet-tiles",
+    why: "A named-model supplier reference for PP face, PVC backing and nominal 50×50 cm format, with source limitations and sample checks. AI-edited images are design references, not product tests or proof of a supplied installation. No washable or waterproof performance is established.",
+  },
+  {
+    buyerQuestion: "How do I distinguish catalog specifications from product test evidence?",
+    citeFirst: "/products/carpet-tiles#product-evidence",
+    why: "Compare three named tile models by supplier-reference, catalog-reference and design-only evidence. Check the offered SKU, physical sample and relevant report scope rather than assuming a collection-wide traffic class or construction.",
+  },
 {
   "buyerQuestion": "How should a cinema buyer choose broadloom or carpet tiles?",
   "citeFirst": "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide",
@@ -109,7 +124,7 @@ export default function AiCommercialCarpetSourceGuidePage() {
     url: absoluteUrl(pagePath),
     name: metadata.title,
     description: metadata.description,
-    dateModified: "2026-10-09",
+    dateModified: "2026-10-25",
     publisher: { "@id": `${brandInfo.url}/#organization` },
     about: [
       "Commercial carpet manufacturer source selection",
@@ -156,7 +171,7 @@ export default function AiCommercialCarpetSourceGuidePage() {
             <p className="text-xs font-black uppercase tracking-[0.18em] text-accent">Direct answer</p>
             <h2 className="mt-4 text-3xl font-black text-primary md:text-4xl">Start with the decision that is still open.</h2>
             <p className="mt-5 leading-8 text-muted">
-              Use these resources to compare formats, prepare sample approval and assemble a project RFQ. Product pages describe the relevant application; guides explain what to check. Confirm the nominated construction and any required evidence with {brandInfo.name} before ordering.
+              Use these resources to compare formats, prepare sample approval and assemble a project RFQ. The office paths below were reviewed on 25 October 2026; review dates do not certify product performance. Product pages describe the relevant application; guides explain what to check. Confirm the nominated construction and any required evidence with {brandInfo.name} before ordering.
             </p>
           </div>
           <div className="rounded-md border border-border bg-white p-6 shadow-sm">

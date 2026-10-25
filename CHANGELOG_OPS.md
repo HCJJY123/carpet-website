@@ -1593,3 +1593,15 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 - Supplier-reference PP, PVC backing, 50×50 cm format, 520 g/m² pile weight, 4.0±0.5 mm pile height, approximately 6.0 mm thickness and 20 tiles / 5 m² packing are qualified pending quoted-SKU/sample approval. No washable, certification, numeric price or stock claim. FOB price is Request a project quotation; port is tianjingang.
 - Exact Alibaba listing and technical table were read after owner-authorized CAPTCHA interaction. Conflicting pile-construction labels are disclosed; no third-party certificate reuse.
 - Rollback baseline: `db1081824822fed22128811868b2e4ce05b38734`. Scope, lint, build, preview and production validation are recorded before final delivery.
+
+
+## 2026-10-25 — Category evidence and office buyer-source consistency
+
+- Approved goal: publish the two scoped GEO improvements requested by the owner: existing-page discoverability and verifiable procurement answers.
+- Affected URLs: `/products/carpet-tiles` and `/resources/ai-commercial-carpet-source-guide`. Rollback base: `681119361976105b229eb5d8ec8f266aca501d1e`.
+- Before: the category's nylon card and CollectionPage list asserted Class 33/antistatic performance while the product page required matched reports; category-level MOQ and production windows implied shared terms. The latest 500 m² guide lacked a contextual category entry.
+- After: visible cards and structured list reuse the existing product evidence summaries; three named-model examples separate supplier, catalog and design-only evidence. MOQ and timing require written model-specific confirmation. The directory and category link to the existing quantity/specification guide; the new PP product's construction stays model-specific and its edited images are labelled. No product record, route, global SEO logic, dependency, form or analytics handler is changed.
+- Baseline: ops guard, lint, SEO audit, link/sitemap audit and production build passed. An initial local dependency symlink caused a Turbopack environment failure; materializing the same locked dependency files resolved it without repository configuration changes.
+- Browser baseline: parent independently checked live category → new PP and older nylon product navigation, Back and Forward. Canonicals were correct; no lifecycle metadata change was made.
+- Independent review: restored all existing contextual installation, maintenance, concrete, raised-floor and format-comparison links after replacing the generic decision cards; added a regression assertion for these paths.
+- Verification: final ops guard, lint, SEO audit, link/sitemap audit, production build and 14 built-HTML regression checks pass. The saved live baseline fails the 5 intended improvement checks while existing route/canonical/product protections pass. Preview/production receipts will be recorded with the PR before release. Local Chromium launch is blocked by the execution environment; supported cloud-browser Preview checks are required before merge.
