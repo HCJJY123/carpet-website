@@ -1,27 +1,34 @@
 {
-  "task": "Publish selected 500 square metre office carpet tile specification article with four original disclosed concept images",
-  "approvedBy": "User selected section five option one on 2026-10-25 after requesting six website blogs with four images each and publication after selection.",
+  "task": "Publish a standalone linear-block PP office carpet tile design with four main and three detail images",
+  "approvedBy": "User request Sentinel_23b55c2e58b481918cc6c1b63dc8d8d6 on 25 October 2026 explicitly authorizes product creation, category visibility, seven edited images, testing and publication.",
   "approvedCategories": [
     "content-update",
     "seo-metadata",
     "internal-link"
   ],
   "allowedPaths": [
-    "src/lib/blog-posts/500-sqm-office-carpet-tiles-specification-guide.ts",
-    "src/lib/blog-data.ts",
+    "src/lib/data.ts",
+    "src/lib/product-evidence-copy.ts",
+    "src/lib/carpet-tile-evidence.ts",
+    "src/components/EvidenceProductPage.tsx",
+    "src/app/products/carpet-tiles/page.tsx",
+    "src/app/products/carpet-tiles/staggered-block-pp-office-carpet-tiles/page.tsx",
+    "src/lib/project-planning-references.ts",
+    "src/lib/generated-static-sitemap-routes.ts",
     "keyword-map.csv",
     "ops/change-request.json",
     "ops/indexnow-urls.json",
     "CHANGELOG_OPS.md",
-    "public/images/blog-series/500-sqm-office-carpet-tiles-specification-guide/**"
+    "public/images/products/staggered-block-pp-office-carpet-tiles/**",
+    "scripts/staggered-block-pp-product.test.mjs"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "d1f58d623f9084df739f15d6e030f40d519e94cb",
+  "rollbackCommit": "db1081824822fed22128811868b2e4ce05b38734",
   "affectedUrls": [
-    "https://www.vcarpets.com/blog/500-sqm-office-carpet-tiles-specification-guide",
-    "https://www.vcarpets.com/blog"
+    "https://www.vcarpets.com/products/carpet-tiles/staggered-block-pp-office-carpet-tiles",
+    "https://www.vcarpets.com/products/carpet-tiles"
   ],
-  "notes": "One article only; hypothetical 500 sqm planning example, not a customer case. Four generated concept images, no SKU certification claims, no global SEO logic, forms, tracking, configuration or dependency changes.",
-  "backupLocation": "Existing blog HTML saved in sibling evidence folder; new article has no previous production HTML."
+  "notes": "New design-specific product from owner-supplied brief and visual references, not a supplier certificate or measured technical specification. The exact supplier technical table was verified after owner-authorized CAPTCHA interaction; PP, PVC, dimensions, pile weight/height, approximate thickness and packing remain supplier references pending quoted-SKU/sample approval. No washable, test class or numeric price claim. Reuse existing template with optional product-only source and resource supplement. No global SEO logic, forms, tracking, dependencies or deployment settings changed.",
+  "backupLocation": "Sibling pp-carpet-product-evidence-20261025 contains production category and planning-reference HTML backups."
 }

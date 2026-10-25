@@ -60,6 +60,7 @@ const categoryFaqs = [
 ];
 
 const productOptions = [
+  { title: "Linear Block PP Carpet Tiles 50×50 cm for Offices", text: "Gray fine-line and staggered-block appearance. Confirm the requested format, physical sample and project quotation.", href: "/products/carpet-tiles/staggered-block-pp-office-carpet-tiles" },
   { title: "Balance 50×50 cm Polypropylene Loop Pile Carpet Tiles with PVC Backing for Home & Office", text: "Machine-made polypropylene for home and office floor planning. Review samples and request a FOB Tianjin Port project quotation.", href: "/products/carpet-tiles/balance-polypropylene-carpet-tiles" },
   { title: "50×50 cm Commercial PP Loop Pile Carpet Tiles with Bitumen Backing for Offices", text: "Gray with colored gradient accents, PP loop pile and bitumen backing. Review samples and request a FOB Tianjin Port project quotation.", href: "/products/carpet-tiles/gradient-accent-office-carpet-tiles" },
   { title: "Linear Accent Commercial Carpet Tiles", text: "Charcoal and gray linear texture with red accents; sample-led design review and specification confirmation.", href: "/products/carpet-tiles/linear-accent-commercial-carpet-tiles" },
@@ -356,13 +357,13 @@ export default function CategoryPage() {
                 </div>
                 {["gradient-accent-office-carpet-tiles", "balance-polypropylene-carpet-tiles"].includes(p.id) && <p className="mb-4 text-xs leading-6 text-muted">AI-edited planning visualization. Confirm the physical sample.</p>}
                 {p.id === "pp-pvc-backed-office-carpet-tiles" ? <p className="mb-4 text-xs leading-6 text-muted">AI-generated appearance illustration. Approve a physical sample.</p> : null}
-                {["heathered-gray-modular-carpet-tiles", "linear-accent-commercial-carpet-tiles"].includes(p.id) && <p className="mb-2 text-xs text-muted">AI-generated design illustration · Specification pending</p>}
+                {["heathered-gray-modular-carpet-tiles", "linear-accent-commercial-carpet-tiles", "staggered-block-pp-office-carpet-tiles"].includes(p.id) && <p className="mb-2 text-xs text-muted">AI-generated design illustration · Specification pending</p>}
                 <h3 className="mb-6 min-h-20 text-xl font-bold uppercase leading-tight text-primary transition-colors group-hover:text-accent">{p.name}</h3>
                 <p className="mb-6 min-h-20 text-sm leading-relaxed text-muted">{p.description}</p>
                 <div className="mb-6 space-y-2 border-t border-border pt-5 text-[11px] uppercase">
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">FOB Price</span>
-                    <span className="text-right font-black text-primary">{p.fobPrice?.display ?? (["gradient-accent-office-carpet-tiles", "balance-polypropylene-carpet-tiles"].includes(p.id) ? "Request a project quotation" : "Quote by project")}</span>
+                    <span className="text-right font-black text-primary">{p.fobPrice?.display ?? (["gradient-accent-office-carpet-tiles", "balance-polypropylene-carpet-tiles", "staggered-block-pp-office-carpet-tiles"].includes(p.id) ? "Request a project quotation" : "Quote by project")}</span>
                   </div>
                   <div className="flex justify-between gap-4">
                     <span className="text-muted">Project MOQ</span>
@@ -374,7 +375,7 @@ export default function CategoryPage() {
                   </div>
                 </div>
                 <div className="mt-auto flex min-h-11 items-center justify-between rounded-sm bg-primary px-4 py-3 text-[10px] font-black uppercase tracking-[0.12em] text-white transition-colors group-hover:bg-[#C8752A]">
-                   <span>{["heathered-gray-modular-carpet-tiles", "linear-accent-commercial-carpet-tiles"].includes(p.id) ? "View Design & Specification" : "View Product & Pricing"}</span>
+                   <span>{["heathered-gray-modular-carpet-tiles", "linear-accent-commercial-carpet-tiles", "staggered-block-pp-office-carpet-tiles"].includes(p.id) ? "View Design & Specification" : "View Product & Pricing"}</span>
                    <span>→</span>
                 </div>
               </Link>

@@ -25,6 +25,74 @@ export const brandInfo = {
 
 export const products: Product[] = [
 {
+  "id": "staggered-block-pp-office-carpet-tiles",
+  "name": "Linear Block PP Carpet Tiles 50×50 cm for Offices",
+  "category": "carpet-tiles",
+  "description": "50×50 cm PP carpet tiles with PVC backing and a linear-block design for office planning. Review supplier-reference specifications and request a project quotation.",
+  "longDescription": "Fine linear surface texture and staggered rectangular tonal blocks create a modular design for work areas, meeting rooms and phased office refurbishment. The supplier technical table lists a 100% polypropylene face, PVC backing and nominal 50×50 cm format. Confirm the offered construction, physical sample and approved care method before ordering.",
+  "image": "/images/products/staggered-block-pp-office-carpet-tiles/main-01-studio.webp",
+  "imageAlt": "Edited design reference of gray linear-block carpet tile squares in a material studio",
+  "gallery": [
+    {
+      "src": "/images/products/staggered-block-pp-office-carpet-tiles/main-01-studio.webp",
+      "alt": "Edited design reference of gray linear-block carpet tile squares in a material studio"
+    },
+    {
+      "src": "/images/products/staggered-block-pp-office-carpet-tiles/main-02-office.webp",
+      "alt": "Edited office planning concept with gray staggered-block carpet tiles, not a completed project"
+    },
+    {
+      "src": "/images/products/staggered-block-pp-office-carpet-tiles/main-03-layout.webp",
+      "alt": "Edited six-tile layout reference showing gray linear-block modular carpet"
+    },
+    {
+      "src": "/images/products/staggered-block-pp-office-carpet-tiles/main-04-colors.webp",
+      "alt": "Edited gray, blue and charcoal carpet colour references; approve physical samples"
+    },
+    {
+      "src": "/images/products/staggered-block-pp-office-carpet-tiles/detail-01-loop-texture.webp",
+      "alt": "Edited macro appearance reference of fine linear carpet texture and offset rectangular blocks"
+    },
+    {
+      "src": "/images/products/staggered-block-pp-office-carpet-tiles/detail-02-edge.webp",
+      "alt": "Edited carpet tile edge reference; actual backing and thickness require sample confirmation"
+    },
+    {
+      "src": "/images/products/staggered-block-pp-office-carpet-tiles/detail-03-quarter-turn.webp",
+      "alt": "Edited four-tile quarter-turn seam reference of gray linear-block carpet; confirm physical mock-up"
+    }
+  ],
+  "moq": "Confirm selected colour and quantity",
+  "moqTiers": {
+    "sample": "Confirm format, cost and availability",
+    "trialOrder": "Confirm selected colour and quantity",
+    "project": "Confirm the written project quotation"
+  },
+  "leadTime": "Confirm after sample and specification approval",
+  "spec": {
+    "material": "100% polypropylene (PP) face — supplier reference; confirm offered construction",
+    "size": "50 × 50 cm — nominal supplier reference; confirm sample",
+    "colors": []
+  },
+  "technicalSpecs": {
+    "fireRating": "Request product-matched documents if required",
+    "trafficClass": "Confirm against the office use brief",
+    "fiber": "100% polypropylene (PP) face — supplier reference",
+    "yarnSystem": "Textured linear-block surface; approve pile construction on sample",
+    "backing": "PVC — supplier reference; confirm quoted construction",
+    "pileWeight": "520 g/m² — supplier reference",
+    "totalThickness": "Approximately 6.0 mm — supplier reference",
+    "antistatic": "Request evidence if required"
+  },
+  "features": [
+    "Fine linear and staggered-block appearance",
+    "Nominal 50×50 cm format; 20 tiles / 5 m² per carton",
+    "Sample-led colour and layout approval",
+    "FOB price: Request a project quotation",
+    "Port: tianjingang"
+  ]
+},
+{
   "id": "balance-polypropylene-carpet-tiles",
   "name": "Balance 50×50 cm Polypropylene Loop Pile Carpet Tiles with PVC Backing for Home & Office",
   "category": "carpet-tiles",
