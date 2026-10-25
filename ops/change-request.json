@@ -1,29 +1,27 @@
 {
-  "task": "Publish B2B commercial carpet supplier verification guide and clarify carpet-tile category supplier wording",
-  "approvedBy": "Standing user authorization for evidence-backed daily content, reversible site optimization, feature branch, required checks, merge and production deployment.",
+  "task": "Publish selected 500 square metre office carpet tile specification article with four original disclosed concept images",
+  "approvedBy": "User selected section five option one on 2026-10-25 after requesting six website blogs with four images each and publication after selection.",
   "approvedCategories": [
     "content-update",
     "seo-metadata",
     "internal-link"
   ],
   "allowedPaths": [
-    "src/lib/blog-posts/commercial-carpet-supplier-verification-checklist-b2b-buyers.ts",
+    "src/lib/blog-posts/500-sqm-office-carpet-tiles-specification-guide.ts",
     "src/lib/blog-data.ts",
-    "src/app/products/carpet-tiles/page.tsx",
     "keyword-map.csv",
-    "ops/supplier-verification-growth-20261025.md",
     "ops/change-request.json",
     "ops/indexnow-urls.json",
-    "CHANGELOG_OPS.md"
+    "CHANGELOG_OPS.md",
+    "public/images/blog-series/500-sqm-office-carpet-tiles-specification-guide/**"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "0ad7f69c97c93e0e57dec265f4d36cbd0cd7ede1",
+  "rollbackCommit": "d1f58d623f9084df739f15d6e030f40d519e94cb",
   "affectedUrls": [
-    "https://www.vcarpets.com/blog/commercial-carpet-supplier-verification-checklist-b2b-buyers",
-    "https://www.vcarpets.com/products/carpet-tiles",
+    "https://www.vcarpets.com/blog/500-sqm-office-carpet-tiles-specification-guide",
     "https://www.vcarpets.com/blog"
   ],
-  "notes": "One original cross-product supplier verification article; category wording limited to verified supplier role and one reverse link. Reuses existing disclosed planning images. No product specification, price, MOQ, lead time, offer, rating, form, tracking, robots, dependency, global schema or production configuration change.",
-  "backupLocation": "Prior source at rollback commit; new article has no prior production HTML."
+  "notes": "One article only; hypothetical 500 sqm planning example, not a customer case. Four generated concept images, no SKU certification claims, no global SEO logic, forms, tracking, configuration or dependency changes.",
+  "backupLocation": "Existing blog HTML saved in sibling evidence folder; new article has no previous production HTML."
 }
