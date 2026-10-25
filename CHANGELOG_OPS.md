@@ -1567,3 +1567,13 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 - Added an opt-in compact caption flag on this article only (12px, normal weight/case, 4px spacing); existing articles retain their rendering.
 - Local validation: Site Ops Guard passed (11 scoped files), ESLint passed, Next.js 16.2.9 production build passed (224 static pages). Generated assets are distinct by file and pixel hash. Batch/zone/spare anchor exists in the category source.
 - Preview and independent desktop/mobile validation are pending; do not merge before acceptance.
+
+
+## 2026-10-25 — Commercial carpet supplier verification guide
+
+- Add one answer-first English guide for importers, distributors, contractors and project buyers verifying a commercial carpet supplier before a bulk order.
+- Separate legal counterparty, supplier role, nominated product, technical evidence, sample control, quotation scope, payment controls and inspection planning; no supplier audit, compliance guarantee or universal price/MOQ/lead-time claim.
+- On the carpet-tile category, replace category-level manufacturer/factory-price wording with the verified B2B supplier/wholesale role and add one reverse link from the existing RFQ-planning path.
+- Reuse existing sample-approval planning illustrations with explicit non-evidence captions; no new generated image or product/factory/case claim.
+- Evidence and priority record: `ops/supplier-verification-growth-20261025.md`. Rollback baseline: `0ad7f69c97c93e0e57dec265f4d36cbd0cd7ede1`.
+- No product specification, offer, rating, form, tracking, robots, global schema, dependency, URL or deployment configuration change. Required CI, Vercel Preview, visual review and production verification remain release gates.

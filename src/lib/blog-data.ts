@@ -1,3 +1,4 @@
+import { commercialCarpetSupplierVerificationChecklist } from "@/lib/blog-posts/commercial-carpet-supplier-verification-checklist-b2b-buyers";
 import { commercialCarpetTileReplenishmentGuide } from "@/lib/blog-posts/commercial-carpet-tile-replenishment-dye-lots-spare-stock";
 import { hospitalityConstructionGuide } from "@/lib/blog-posts/axminster-wilton-tufted-hospitality-guide";
 import { carpetTileDeliveryInspectionChecklist } from "@/lib/blog-posts/carpet-tile-delivery-inspection-site-storage-checklist";
@@ -95,6 +96,7 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  commercialCarpetSupplierVerificationChecklist,
   commercialCarpetTileReplenishmentGuide,
   carpetTileDeliveryInspectionChecklist,
   openPlanOfficeAcousticsGuide,
