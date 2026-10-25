@@ -1577,3 +1577,11 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 - Reuse existing sample-approval planning illustrations with explicit non-evidence captions; no new generated image or product/factory/case claim.
 - Evidence and priority record: `ops/supplier-verification-growth-20261025.md`. Rollback baseline: `0ad7f69c97c93e0e57dec265f4d36cbd0cd7ede1`.
 - No product specification, offer, rating, form, tracking, robots, global schema, dependency, URL or deployment configuration change. Required CI, Vercel Preview, visual review and production verification remain release gates.
+
+## 2026-10-25 — 500 m² office carpet tile specification guide
+
+- Added one user-selected English article with four original AI-generated concept images and explicit illustration captions.
+- Added existing-template listing, related product links, unique keyword ownership and pending IndexNow URLs; existing sitemap derives the new article from blog data without logic changes.
+- Hypothetical 500 m²/50 cm calculation separates net tiles, assumed waste/spares and carton rounding. No actual client case or unsupported certification claim.
+- Rollback baseline: `d1f58d623f9084df739f15d6e030f40d519e94cb`.
+- Validation: scope guard, lint, build and preview checks recorded in release evidence before merge.
