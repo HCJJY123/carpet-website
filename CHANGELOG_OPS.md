@@ -1605,3 +1605,15 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 - Browser baseline: parent independently checked live category → new PP and older nylon product navigation, Back and Forward. Canonicals were correct; no lifecycle metadata change was made.
 - Independent review: restored all existing contextual installation, maintenance, concrete, raised-floor and format-comparison links after replacing the generic decision cards; added a regression assertion for these paths.
 - Verification: final ops guard, lint, SEO audit, link/sitemap audit, production build and 14 built-HTML regression checks pass. The saved live baseline fails the 5 intended improvement checks while existing route/canonical/product protections pass. Preview/production receipts will be recorded with the PR before release. Local Chromium launch is blocked by the execution environment; supported cloud-browser Preview checks are required before merge.
+
+## 2026-10-26 — Commercial carpet packing-list and carton-label guide
+
+- Added one answer-first B2B guide that reconciles the purchase order, carton or roll label, export packing list and shipment-release record before dispatch.
+- Added contextual reverse links from the existing FOB Tianjin Port and delivery-inspection guides, forming a pre-shipment-to-arrival procurement path.
+- Added one original 1200×675 procurement SVG; it is labelled as a planning diagram, not product, factory, shipment, document or client evidence.
+- Trade.gov, IMO CTU and Mohawk public guidance inform the workflow. Third-party numeric limits, packing methods and product claims are not transferred to VCARPETS.
+- No price, MOQ, lead time, certification, factory, product performance, form, tracking, robots, global schema, dependency, canonical or URL change.
+- GSC access did not expose the VCARPETS property, and no current Semrush, Clarity or qualified-lead dataset was available; no rank, traffic, index-count or conversion claim is made.
+- Rollback baseline: `d59cc6e3145ab5cd3f896052f0106b738775e824`. Research, scores, image decision, links and release plan: `ops/carpet-packing-docs-growth-20261026.md`.
+- Local, Preview, CI and production validation are pending at this implementation checkpoint.
+- Local Site Ops Guard, zero-warning lint, SEO/link/asset/placeholder audits, 225-page production build and focused rendered checks passed. Preview, client-side prefill, CI and production remain pending.
