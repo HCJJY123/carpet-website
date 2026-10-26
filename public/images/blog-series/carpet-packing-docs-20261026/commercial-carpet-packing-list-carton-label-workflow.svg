@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Commercial carpet packing list and carton label approval workflow</title>
+  <desc id="desc">A buyer planning diagram that connects purchase order, carton labels, packing list, and shipment release records.</desc>
+  <rect width="1200" height="675" fill="#f4f1ea"/>
+  <rect x="62" y="58" width="1076" height="559" rx="30" fill="#ffffff" stroke="#d7d0c3" stroke-width="2"/>
+  <text x="100" y="118" fill="#17251f" font-family="Arial, sans-serif" font-size="34" font-weight="700">One shipment, four records that must agree</text>
+  <text x="100" y="154" fill="#526159" font-family="Arial, sans-serif" font-size="18">Buyer approval workflow for commercial carpet orders</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="100" y="205" width="210" height="222" rx="18" fill="#eef4ef" stroke="#9bb1a2" stroke-width="2"/>
+    <circle cx="140" cy="246" r="20" fill="#1d6648"/>
+    <text x="140" y="253" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">1</text>
+    <text x="174" y="253" fill="#17251f" font-size="20" font-weight="700">Purchase order</text>
+    <text x="126" y="301" fill="#3d4a43" font-size="15">• Product / design reference</text>
+    <text x="126" y="334" fill="#3d4a43" font-size="15">• Quantity and sales unit</text>
+    <text x="126" y="367" fill="#3d4a43" font-size="15">• Colour / sample revision</text>
+    <text x="126" y="400" fill="#3d4a43" font-size="15">• Project phase or zone</text>
+
+    <path d="M319 316h32" stroke="#788b80" stroke-width="4" stroke-linecap="round"/>
+    <path d="m343 306 14 10-14 10" fill="none" stroke="#788b80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="365" y="205" width="210" height="222" rx="18" fill="#f7f0df" stroke="#c6aa65" stroke-width="2"/>
+    <circle cx="405" cy="246" r="20" fill="#a96d13"/>
+    <text x="405" y="253" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">2</text>
+    <text x="439" y="253" fill="#17251f" font-size="20" font-weight="700">Carton label</text>
+    <text x="391" y="301" fill="#3d4a43" font-size="15">• SKU, colour and format</text>
+    <text x="391" y="334" fill="#3d4a43" font-size="15">• Pack quantity / area</text>
+    <text x="391" y="367" fill="#3d4a43" font-size="15">• Batch or lot reference</text>
+    <text x="391" y="400" fill="#3d4a43" font-size="15">• Carton sequence</text>
+
+    <path d="M584 316h32" stroke="#788b80" stroke-width="4" stroke-linecap="round"/>
+    <path d="m608 306 14 10-14 10" fill="none" stroke="#788b80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="630" y="205" width="210" height="222" rx="18" fill="#eef2f7" stroke="#8ea4bf" stroke-width="2"/>
+    <circle cx="670" cy="246" r="20" fill="#315f91"/>
+    <text x="670" y="253" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">3</text>
+    <text x="704" y="253" fill="#17251f" font-size="20" font-weight="700">Packing list</text>
+    <text x="656" y="301" fill="#3d4a43" font-size="15">• Cartons, rolls or pallets</text>
+    <text x="656" y="334" fill="#3d4a43" font-size="15">• Net / gross weight</text>
+    <text x="656" y="367" fill="#3d4a43" font-size="15">• Dimensions and marks</text>
+    <text x="656" y="400" fill="#3d4a43" font-size="15">• Shipment totals</text>
+
+    <path d="M849 316h32" stroke="#788b80" stroke-width="4" stroke-linecap="round"/>
+    <path d="m873 306 14 10-14 10" fill="none" stroke="#788b80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="895" y="205" width="205" height="222" rx="18" fill="#f5eded" stroke="#b89090" stroke-width="2"/>
+    <circle cx="935" cy="246" r="20" fill="#8e4343"/>
+    <text x="935" y="253" text-anchor="middle" fill="#fff" font-size="19" font-weight="700">4</text>
+    <text x="969" y="253" fill="#17251f" font-size="20" font-weight="700">Release</text>
+    <text x="921" y="301" fill="#3d4a43" font-size="15">• Variance log</text>
+    <text x="921" y="334" fill="#3d4a43" font-size="15">• Photo references</text>
+    <text x="921" y="367" fill="#3d4a43" font-size="15">• Approver and date</text>
+    <text x="921" y="400" fill="#3d4a43" font-size="15">• Final status</text>
+
+    <rect x="100" y="475" width="1000" height="92" rx="16" fill="#17251f"/>
+    <text x="130" y="514" fill="#ffffff" font-size="20" font-weight="700">Release rule</text>
+    <text x="130" y="546" fill="#dce8e1" font-size="18">If quantity, identity, batch, weight or marks do not reconcile, record the variance before shipment release.</text>
+  </g>
+</svg>

@@ -71,6 +71,13 @@ export const carpetTileDeliveryInspectionChecklist: BlogPost = {
           links: [
             { "text": "commercial carpet sample approval checklist", "href": "/blog/commercial-carpet-sample-approval-checklist" }
           ]
+        },
+        {
+          type: "paragraph",
+          text: "Before dispatch, reconcile the purchase order, carton or roll labels and export packing list. The commercial carpet packing-list guide provides the pre-shipment control that should feed this arrival pack.",
+          links: [
+            { "text": "commercial carpet packing-list guide", "href": "/blog/commercial-carpet-packing-list-carton-label-checklist" }
+          ]
         }
       ]
     },
@@ -265,6 +272,7 @@ export const carpetTileDeliveryInspectionChecklist: BlogPost = {
     }
   ],
   suggestedLinks: [
+    { label: "Approve Packing Lists and Carton Labels", href: "/blog/commercial-carpet-packing-list-carton-label-checklist" },
     { label: "Browse Commercial Carpet Tiles", href: "/products/carpet-tiles" },
     { label: "Download the Blank Receiving Record", href: "/products/carpet-tiles#batch-zone-spare-record" },
     { label: "Review Sample Approval", href: "/blog/commercial-carpet-sample-approval-checklist" },

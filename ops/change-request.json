@@ -1,25 +1,33 @@
 {
-  "task": "Align the existing carpet-tile category and procurement resource directory with product-specific evidence and discoverable office buyer answers",
-  "approvedBy": "User explicitly requested research and direct publication of the two highest-priority GEO actions across five authorized sites on 25 October 2026. Selected scope: evidence consistency and existing buyer-page discoverability for VCARPETS.",
+  "task": "Publish a commercial carpet packing-list and carton-label approval guide, then connect it to the existing FOB and delivery-inspection workflows",
+  "approvedBy": "Standing owner authorization for the daily VCARPETS evidence-led growth task, including one complete English buyer article, scoped internal links, Preview, PR merge and production verification.",
   "approvedCategories": [
-    "content-update",
+    "new-blog-content",
     "seo-metadata",
-    "internal-link"
+    "internal-link",
+    "procurement-diagram",
+    "index-notification"
   ],
   "allowedPaths": [
-    "src/app/products/carpet-tiles/page.tsx",
-    "src/app/resources/ai-commercial-carpet-source-guide/page.tsx",
-    "scripts/carpet-category-evidence.test.mjs",
+    "src/lib/blog-posts/commercial-carpet-packing-list-carton-label-checklist.ts",
+    "src/lib/blog-posts/commercial-carpet-fob-tianjin-port-buyer-checklist.ts",
+    "src/lib/blog-posts/carpet-tile-delivery-inspection-site-storage-checklist.ts",
+    "src/lib/blog-data.ts",
+    "public/images/blog-series/carpet-packing-docs-20261026/commercial-carpet-packing-list-carton-label-workflow.svg",
+    "keyword-map.csv",
+    "ops/indexnow-urls.json",
+    "ops/carpet-packing-docs-growth-20261026.md",
     "ops/change-request.json",
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "681119361976105b229eb5d8ec8f266aca501d1e",
+  "rollbackCommit": "d59cc6e3145ab5cd3f896052f0106b738775e824",
   "affectedUrls": [
-    "https://www.vcarpets.com/products/carpet-tiles",
-    "https://www.vcarpets.com/resources/ai-commercial-carpet-source-guide"
+    "https://www.vcarpets.com/blog/commercial-carpet-packing-list-carton-label-checklist",
+    "https://www.vcarpets.com/blog/commercial-carpet-fob-tianjin-port-buyer-checklist",
+    "https://www.vcarpets.com/blog/carpet-tile-delivery-inspection-site-storage-checklist"
   ],
-  "notes": "Page-local content, CollectionPage description/entity links and internal links only. Reuse product-page evidence summaries without altering product facts. Remove category-wide MOQ/lead-time implications, distinguish supplier references from unconfirmed designs and test evidence, retain all product URLs and existing inquiry handlers. Preserve the new linear-block PP product and 500 m\u00b2 guide. No robots, global schema/sitemap/canonical logic, forms, analytics, dependency or deployment-setting changes. Draft PR, Preview verification and required checks precede authorized merge.",
-  "backupLocation": "Sibling vcarpets-geo-evidence-20261025 includes live HTML, HTTP headers and baseline checks."
+  "notes": "One new answer-first B2B guide and two contextual reverse links. The guide distinguishes PO, carton label, packing list and transport records; cites Trade.gov, IMO CTU and a carpet-specific manufacturer guide without converting third-party numeric conditions into VCARPETS promises. No product specification, price, MOQ, lead time, certification, factory, form, tracking, robots, global schema, canonical logic, dependency or route migration change. Existing procurement illustration policy is preserved; the new SVG is a labelled workflow diagram, not product, factory, shipment or client evidence.",
+  "backupLocation": "Sibling vcarpets-packing-backup-20261026 contains current production home and delivery-guide HTML and headers before edits."
 }

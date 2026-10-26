@@ -37,6 +37,10 @@ export const commercialCarpetFobTianjinPortBuyerChecklist: BlogPost = {
   ],
   suggestedLinks: [
     {
+      label: "Approve Carpet Packing Lists and Carton Labels",
+      href: "/blog/commercial-carpet-packing-list-carton-label-checklist",
+    },
+    {
       label: "Commercial Carpet Shipping Guide",
       href: "/blog/shipping-optimization-5000sqm-mumbai-14days",
     },
