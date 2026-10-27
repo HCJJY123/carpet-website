@@ -242,6 +242,16 @@ export const commercialCarpetTileReplenishmentGuide: BlogPost = {
         },
         {
           "type": "paragraph",
+          "text": "At project handover, place the starting reserve quantity, storage location, custodian and release method in the same closeout pack as the installed-zone and care records. The commercial carpet project closeout checklist provides the broader responsibility framework.",
+          "links": [
+            {
+              "text": "commercial carpet project closeout checklist",
+              "href": "/blog/commercial-carpet-project-closeout-checklist"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
           "text": "Ask VCARPETS to confirm the proposed product identity, sample-review route, packing quantity, current supply conditions and quotation basis. Do not rely on an old price, historical MOQ or a promise that another batch will be identical. Bulk commercial terms and project-specific requirements should be confirmed in the written quotation.",
           "links": [
             {
@@ -304,6 +314,10 @@ export const commercialCarpetTileReplenishmentGuide: BlogPost = {
     }
   ],
   "suggestedLinks": [
+    {
+      "label": "Build the project closeout pack",
+      "href": "/blog/commercial-carpet-project-closeout-checklist"
+    },
     {
       "label": "Browse commercial carpet tiles",
       "href": "/products/carpet-tiles"
