@@ -201,6 +201,13 @@ export const carpetTileDeliveryInspectionChecklist: BlogPost = {
         },
         {
           type: "paragraph",
+          text: "Before the project team leaves, consolidate those receiving records with the accepted installation zones, product-matched care file, spare-stock inventory and open issues. The project closeout checklist shows the handover pack and ownership fields to retain.",
+          links: [
+            { "text": "commercial carpet project closeout checklist", "href": "/blog/commercial-carpet-project-closeout-checklist" }
+          ]
+        },
+        {
+          type: "paragraph",
           text: "For FOB orders, transport and export-document responsibilities are a separate commercial workstream. Review the FOB Tianjin Port buyer checklist before shipment, then use this receiving workflow when the physical delivery reaches the buyer’s nominated destination.",
           links: [
             { "text": "FOB Tianjin Port buyer checklist", "href": "/blog/commercial-carpet-fob-tianjin-port-buyer-checklist" }
@@ -272,6 +279,7 @@ export const carpetTileDeliveryInspectionChecklist: BlogPost = {
     }
   ],
   suggestedLinks: [
+    { label: "Build the Project Closeout Pack", href: "/blog/commercial-carpet-project-closeout-checklist" },
     { label: "Approve Packing Lists and Carton Labels", href: "/blog/commercial-carpet-packing-list-carton-label-checklist" },
     { label: "Browse Commercial Carpet Tiles", href: "/products/carpet-tiles" },
     { label: "Download the Blank Receiving Record", href: "/products/carpet-tiles#batch-zone-spare-record" },

@@ -1,6 +1,6 @@
 {
-  "task": "Publish a commercial carpet packing-list and carton-label approval guide, then connect it to the existing FOB and delivery-inspection workflows",
-  "approvedBy": "Standing owner authorization for the daily VCARPETS evidence-led growth task, including one complete English buyer article, scoped internal links, Preview, PR merge and production verification.",
+  "task": "Restore the paused VCARPETS production project, publish a commercial carpet project closeout checklist, and connect handover records to delivery, spare-stock and maintenance workflows",
+  "approvedBy": "Standing owner authorization for the daily VCARPETS evidence-led growth task, including scoped fixes, one complete English buyer article, contextual internal links, Preview, PR merge and production verification.",
   "approvedCategories": [
     "new-blog-content",
     "seo-metadata",
@@ -9,25 +9,27 @@
     "index-notification"
   ],
   "allowedPaths": [
-    "src/lib/blog-posts/commercial-carpet-packing-list-carton-label-checklist.ts",
-    "src/lib/blog-posts/commercial-carpet-fob-tianjin-port-buyer-checklist.ts",
+    "src/lib/blog-posts/commercial-carpet-project-closeout-checklist.ts",
     "src/lib/blog-posts/carpet-tile-delivery-inspection-site-storage-checklist.ts",
+    "src/lib/blog-posts/commercial-carpet-tile-replenishment-dye-lots-spare-stock.ts",
+    "src/app/resources/maintenance-guides/page.tsx",
     "src/lib/blog-data.ts",
-    "public/images/blog-series/carpet-packing-docs-20261026/commercial-carpet-packing-list-carton-label-workflow.svg",
+    "public/images/blog-series/carpet-closeout-20261027/commercial-carpet-project-closeout-workflow.svg",
     "keyword-map.csv",
     "ops/indexnow-urls.json",
-    "ops/carpet-packing-docs-growth-20261026.md",
+    "ops/commercial-carpet-closeout-growth-20261027.md",
     "ops/change-request.json",
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "d59cc6e3145ab5cd3f896052f0106b738775e824",
+  "rollbackCommit": "ac8f398fd067e3f32f1d9ba73e0dad30422cca80",
   "affectedUrls": [
-    "https://www.vcarpets.com/blog/commercial-carpet-packing-list-carton-label-checklist",
-    "https://www.vcarpets.com/blog/commercial-carpet-fob-tianjin-port-buyer-checklist",
-    "https://www.vcarpets.com/blog/carpet-tile-delivery-inspection-site-storage-checklist"
+    "https://www.vcarpets.com/blog/commercial-carpet-project-closeout-checklist",
+    "https://www.vcarpets.com/blog/carpet-tile-delivery-inspection-site-storage-checklist",
+    "https://www.vcarpets.com/blog/commercial-carpet-tile-replenishment-dye-lots-spare-stock",
+    "https://www.vcarpets.com/resources/maintenance-guides"
   ],
-  "notes": "One new answer-first B2B guide and two contextual reverse links. The guide distinguishes PO, carton label, packing list and transport records; cites Trade.gov, IMO CTU and a carpet-specific manufacturer guide without converting third-party numeric conditions into VCARPETS promises. No product specification, price, MOQ, lead time, certification, factory, form, tracking, robots, global schema, canonical logic, dependency or route migration change. Existing procurement illustration policy is preserved; the new SVG is a labelled workflow diagram, not product, factory, shipment or client evidence.",
-  "backupLocation": "Sibling vcarpets-packing-backup-20261026 contains current production home and delivery-guide HTML and headers before edits."
+  "notes": "The production project was found returning HTTP 503 DEPLOYMENT_PAUSED and was resumed through the existing Vercel project before content edits; public HTTP 200 was then verified. Content scope is one answer-first B2B closeout guide, three contextual reverse links and one labelled SVG workflow. GSA, CRI and Interface sources support general closeout and facility-specific maintenance controls; no third-party cleaning interval, warranty, product specification, price, MOQ, lead time, certification or installation method is transferred to VCARPETS. No product record, form, tracking, robots, global schema, canonical logic, dependency or existing URL changes.",
+  "backupLocation": "Sibling vcarpets-closeout-backup-20261027 contains current production HTML and headers for the three existing pages before edits."
 }
