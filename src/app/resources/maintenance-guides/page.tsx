@@ -77,6 +77,7 @@ export default function MaintenanceGuidesPage() {
             <h2 className="mt-3 text-3xl font-black text-primary">What belongs in a carpet care handoff?</h2>
             <p className="mt-5 text-sm leading-8 text-muted">Identify the exact carpet and backing, the traffic and soil conditions by zone, the cleaning team and its equipment, the product-matched care instructions, and the spare-material plan. Agree who can approve a cleaning method and who records incidents before the building is occupied.</p>
             <p className="mt-4 text-sm leading-8 text-muted">This page helps buyers prepare questions; it does not specify a universal cleaning frequency, chemical, extraction method or warranty condition. Obtain the instructions for the construction actually supplied, and have the responsible facilities team review them with its cleaning contractor.</p>
+            <p className="mt-4 text-sm leading-8 text-muted">For installation handover, combine the matched care file with the final product schedule, accepted-zone record, spare inventory and open issues in one <Link href="/blog/commercial-carpet-project-closeout-checklist" className="font-bold text-accent underline">commercial carpet project closeout checklist</Link>.</p>
           </div>
           <aside className="rounded-md border border-border bg-white p-7 shadow-sm">
             <h2 className="text-xl font-black text-primary">Send with your document request</h2>
