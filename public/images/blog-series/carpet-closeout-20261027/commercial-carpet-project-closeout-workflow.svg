@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Commercial carpet project closeout workflow</title>
+  <desc id="desc">A four-stage procurement diagram linking product records, installation acceptance, maintenance handover and spare stock with one controlled closeout pack.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2f7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f2742" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="54" y="48" width="1092" height="579" rx="28" fill="#ffffff" stroke="#d9e1ea"/>
+  <text x="100" y="116" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="2.4" fill="#d76728">COMMERCIAL CARPET PROJECT CLOSEOUT</text>
+  <text x="100" y="154" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="800" fill="#15324f">One controlled handover pack connects the floor</text>
+  <text x="100" y="190" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="800" fill="#15324f">to future decisions</text>
+  <text x="100" y="220" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#54677a">Record the exact product, location, approval, owner and open exception at every stage.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="260" width="225" height="210" rx="18" fill="#f8fbfe" stroke="#b8c8d8"/>
+    <circle cx="137" cy="307" r="25" fill="#15324f"/>
+    <text x="137" y="315" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#ffffff">1</text>
+    <text x="112" y="361" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#15324f">Product record</text>
+    <text x="112" y="397" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#54677a">Final product identity</text>
+    <text x="112" y="424" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#54677a">Approved sample/design</text>
+    <text x="112" y="451" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#54677a">Packing and labels</text>
+
+    <rect x="355" y="260" width="225" height="210" rx="18" fill="#fffaf6" stroke="#efc5a9"/>
+    <circle cx="402" cy="307" r="25" fill="#d76728"/>
+    <text x="402" y="315" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#ffffff">2</text>
+    <text x="377" y="361" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#15324f">Acceptance</text>
+    <text x="377" y="397" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#54677a">As-installed zones</text>
+    <text x="377" y="424" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#54677a">Sign-off boundary</text>
+    <text x="377" y="451" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#54677a">Open issue log</text>
+
+    <rect x="620" y="260" width="225" height="210" rx="18" fill="#f8fbfe" stroke="#b8c8d8"/>
+    <circle cx="667" cy="307" r="25" fill="#15324f"/>
+    <text x="667" y="315" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#ffffff">3</text>
+    <text x="642" y="361" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#15324f">Care handover</text>
+    <text x="642" y="397" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#54677a">Matched instructions</text>
+    <text x="642" y="424" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#54677a">Facility zones</text>
+    <text x="642" y="451" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#54677a">Named plan owner</text>
+
+    <rect x="885" y="260" width="225" height="210" rx="18" fill="#fffaf6" stroke="#efc5a9"/>
+    <circle cx="932" cy="307" r="25" fill="#d76728"/>
+    <text x="932" y="315" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#ffffff">4</text>
+    <text x="907" y="361" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#15324f">Future use</text>
+    <text x="907" y="397" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#54677a">Spare-stock balance</text>
+    <text x="907" y="424" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#54677a">Storage and release</text>
+    <text x="907" y="451" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#54677a">Replacement record</text>
+  </g>
+
+  <g fill="none" stroke="#95a7b8" stroke-width="4" stroke-linecap="round">
+    <path d="M315 365h31"/>
+    <path d="M580 365h31"/>
+    <path d="M845 365h31"/>
+  </g>
+  <g fill="#95a7b8">
+    <path d="M346 365l-11-8v16z"/>
+    <path d="M611 365l-11-8v16z"/>
+    <path d="M876 365l-11-8v16z"/>
+  </g>
+
+  <rect x="289" y="520" width="622" height="64" rx="16" fill="#15324f"/>
+  <text x="600" y="548" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="1.6" fill="#f3c6a7">CONTROLLED CLOSEOUT PACK</text>
+  <text x="600" y="572" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#ffffff">Current record · named owner · dated exception · next decision</text>
+</svg>
