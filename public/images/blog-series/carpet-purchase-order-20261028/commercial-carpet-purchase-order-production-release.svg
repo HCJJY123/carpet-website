@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Commercial carpet purchase order and production release workflow</title>
+  <desc id="desc">Four stages connect the approved reference, order schedule, exception review and authorized production release.</desc>
+  <rect width="1200" height="675" rx="32" fill="#f4f1ea"/>
+  <path d="M0 490 C230 430 390 565 650 502 C890 444 1030 478 1200 420 V675 H0 Z" fill="#e4ddd0"/>
+  <text x="72" y="86" fill="#153f3a" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">Purchase order to production release</text>
+  <text x="72" y="124" fill="#4e5b57" font-family="Arial, Helvetica, sans-serif" font-size="20">One controlled revision connects product, quantity, approvals and commercial terms.</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g transform="translate(72 190)">
+      <rect width="230" height="260" rx="22" fill="#ffffff" stroke="#c8bca9" stroke-width="2"/>
+      <circle cx="44" cy="45" r="22" fill="#d6774f"/>
+      <text x="44" y="53" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">1</text>
+      <text x="28" y="98" fill="#153f3a" font-size="23" font-weight="700">Approved reference</text>
+      <text x="28" y="137" fill="#4e5b57" font-size="15">Product and construction</text>
+      <text x="28" y="169" fill="#4e5b57" font-size="15">Sample or artwork revision</text>
+      <text x="28" y="201" fill="#4e5b57" font-size="15">Approval scope and owner</text>
+    </g>
+    <path d="M318 320 H355" stroke="#8a7b67" stroke-width="4" stroke-linecap="round"/>
+    <path d="M347 310 L360 320 L347 330" fill="none" stroke="#8a7b67" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(368 190)">
+      <rect width="230" height="260" rx="22" fill="#ffffff" stroke="#c8bca9" stroke-width="2"/>
+      <circle cx="44" cy="45" r="22" fill="#bd985d"/>
+      <text x="44" y="53" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">2</text>
+      <text x="28" y="98" fill="#153f3a" font-size="23" font-weight="700">Order schedule</text>
+      <text x="28" y="137" fill="#4e5b57" font-size="15">Quantity and sales unit</text>
+      <text x="28" y="169" fill="#4e5b57" font-size="15">Phases, zones and spares</text>
+      <text x="28" y="201" fill="#4e5b57" font-size="15">Terms and milestones</text>
+    </g>
+    <path d="M614 320 H651" stroke="#8a7b67" stroke-width="4" stroke-linecap="round"/>
+    <path d="M643 310 L656 320 L643 330" fill="none" stroke="#8a7b67" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(664 190)">
+      <rect width="230" height="260" rx="22" fill="#ffffff" stroke="#c8bca9" stroke-width="2"/>
+      <circle cx="44" cy="45" r="22" fill="#517f78"/>
+      <text x="44" y="53" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">3</text>
+      <text x="28" y="98" fill="#153f3a" font-size="23" font-weight="700">Exception review</text>
+      <text x="28" y="137" fill="#4e5b57" font-size="15">Compare every revision</text>
+      <text x="28" y="169" fill="#4e5b57" font-size="15">Assign owner and due date</text>
+      <text x="28" y="201" fill="#4e5b57" font-size="15">Close or accept the gap</text>
+    </g>
+    <path d="M910 320 H947" stroke="#8a7b67" stroke-width="4" stroke-linecap="round"/>
+    <path d="M939 310 L952 320 L939 330" fill="none" stroke="#8a7b67" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(960 190)">
+      <rect width="168" height="260" rx="22" fill="#153f3a"/>
+      <circle cx="44" cy="45" r="22" fill="#d6774f"/>
+      <text x="44" y="53" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">4</text>
+      <text x="24" y="98" fill="#ffffff" font-size="21" font-weight="700">Production</text>
+      <text x="24" y="126" fill="#ffffff" font-size="21" font-weight="700">release</text>
+      <text x="24" y="169" fill="#dbe8e4" font-size="14">Named revision</text>
+      <text x="24" y="199" fill="#dbe8e4" font-size="14">Authorized decision</text>
+      <text x="24" y="229" fill="#dbe8e4" font-size="14">Recorded date</text>
+    </g>
+  </g>
+  <rect x="72" y="520" width="1056" height="84" rx="18" fill="#fffaf2" stroke="#c8bca9" stroke-width="2"/>
+  <text x="100" y="555" fill="#153f3a" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">Buyer control</text>
+  <text x="100" y="584" fill="#4e5b57" font-family="Arial, Helvetica, sans-serif" font-size="17">If one field changes, reopen the affected approval and issue a new controlled revision.</text>
+</svg>

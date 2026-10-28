@@ -372,6 +372,7 @@ export const commercialCarpetPricingMoqDataCenterGuide: BlogPost = {
     },
   ],
   suggestedLinks: [
+    { label: "Commercial Carpet Purchase Order and Production Release Checklist", href: "/blog/commercial-carpet-purchase-order-production-release-checklist" },
     { label: "Commercial Carpet Terms", href: "/commercial-terms" },
     { label: "Commercial Carpet FOB Tianjin Port Buyer Guide", href: "/blog/commercial-carpet-fob-tianjin-port-buyer-checklist" },
     { label: "Commercial Carpet Tile Cost Guide", href: "/blog/commercial-carpet-tile-cost-total-cost-guide" },

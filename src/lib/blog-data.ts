@@ -1,4 +1,5 @@
 import { officeCarpet500sqmGuide } from "@/lib/blog-posts/500-sqm-office-carpet-tiles-specification-guide";
+import { commercialCarpetPurchaseOrderProductionReleaseChecklist } from "@/lib/blog-posts/commercial-carpet-purchase-order-production-release-checklist";
 import { commercialCarpetProjectCloseoutChecklist } from "@/lib/blog-posts/commercial-carpet-project-closeout-checklist";
 import { commercialCarpetPackingListCartonLabelChecklist } from "@/lib/blog-posts/commercial-carpet-packing-list-carton-label-checklist";
 import { commercialCarpetSupplierVerificationChecklist } from "@/lib/blog-posts/commercial-carpet-supplier-verification-checklist-b2b-buyers";
@@ -99,6 +100,7 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  commercialCarpetPurchaseOrderProductionReleaseChecklist,
   commercialCarpetProjectCloseoutChecklist,
   commercialCarpetPackingListCartonLabelChecklist,
   officeCarpet500sqmGuide,
