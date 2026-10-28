@@ -427,6 +427,10 @@ export const commercialCarpetPackingListCartonLabelChecklist: BlogPost = {
   ],
   suggestedLinks: [
     {
+      label: "Confirm the Purchase Order Before Packing",
+      href: "/blog/commercial-carpet-purchase-order-production-release-checklist",
+    },
+    {
       label: "Compare FOB Tianjin Port Quotations",
       href: "/blog/commercial-carpet-fob-tianjin-port-buyer-checklist",
     },
