@@ -1,35 +1,23 @@
 {
-  "task": "Publish a commercial carpet purchase-order and production-release checklist, connect it to sample, quote and packing workflows, and improve order-ready B2B inquiry inputs",
-  "approvedBy": "Standing owner authorization for the daily VCARPETS evidence-led growth task, including scoped fixes, one complete English buyer article, contextual internal links, Preview, PR merge and production verification.",
+  "task": "Publish one original Reddit-informed commercial carpet shedding and backing inspection guide with four labelled illustrations",
+  "approvedBy": "Owner request Sentinel_5673ec3d8ed88191b43a280bcfb31a73 to research and publish six-site keyword blogs; SEMrush addition Sentinel_0ab86a0ba40081918b0186b57942d275",
   "approvedCategories": [
     "new-blog-content",
     "seo-metadata",
-    "internal-link",
-    "procurement-diagram",
-    "index-notification"
+    "internal-link"
   ],
   "allowedPaths": [
-    "src/lib/blog-posts/commercial-carpet-purchase-order-production-release-checklist.ts",
-    "src/lib/blog-posts/commercial-carpet-sample-approval-checklist.ts",
-    "src/lib/blog-posts/commercial-carpet-pricing-moq-data-center-guide.ts",
-    "src/lib/blog-posts/commercial-carpet-packing-list-carton-label-checklist.ts",
+    "src/lib/blog-posts/commercial-carpet-shedding-backing-inspection.ts",
     "src/lib/blog-data.ts",
-    "public/images/blog-series/carpet-purchase-order-20261028/commercial-carpet-purchase-order-production-release.svg",
     "keyword-map.csv",
-    "ops/indexnow-urls.json",
-    "ops/commercial-carpet-purchase-order-growth-20261028.md",
     "ops/change-request.json",
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "da0e0ccb6d92af18f0086583e31893ebccf3717b",
+  "rollbackCommit": "f83af39f0de28cc43aa05ff59635ae2ae8c22c3c",
   "affectedUrls": [
-    "https://www.vcarpets.com/blog/commercial-carpet-purchase-order-production-release-checklist",
-    "https://www.vcarpets.com/blog/commercial-carpet-sample-approval-checklist",
-    "https://www.vcarpets.com/blog/commercial-carpet-pricing-moq-data-center-guide",
-    "https://www.vcarpets.com/blog/commercial-carpet-packing-list-carton-label-checklist"
+    "https://www.vcarpets.com/blog/commercial-carpet-shedding-backing-inspection"
   ],
-  "notes": "Scope is one distinct answer-first B2B purchase-order and production-release guide, three contextual reverse links and one labelled SVG workflow. Trade.gov, Acquisition.gov and ICC sources support general order data, delivery and named-port controls; government purchasing rules are cited only as a control example and are not presented as private-contract law. No third-party product specification, price, MOQ, lead time, certification, stock, warranty or installation method is transferred to VCARPETS. No form, tracking, robots, global schema, canonical logic, dependency or existing URL structure changes.",
-  "backupLocation": "Sibling vcarpets-po-backup-20261028 contains current production HTML and headers for the three existing pages before edits."
+  "notes": "One new article only. Existing owned images reused with illustration captions. No form, tracking, global metadata, URL, dependency, workflow or permission changes."
 }

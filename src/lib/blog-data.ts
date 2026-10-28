@@ -1,3 +1,4 @@
+import { carpetSheddingInspection } from "@/lib/blog-posts/commercial-carpet-shedding-backing-inspection";
 import { officeCarpet500sqmGuide } from "@/lib/blog-posts/500-sqm-office-carpet-tiles-specification-guide";
 import { commercialCarpetPurchaseOrderProductionReleaseChecklist } from "@/lib/blog-posts/commercial-carpet-purchase-order-production-release-checklist";
 import { commercialCarpetProjectCloseoutChecklist } from "@/lib/blog-posts/commercial-carpet-project-closeout-checklist";
@@ -100,6 +101,7 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  carpetSheddingInspection,
   commercialCarpetPurchaseOrderProductionReleaseChecklist,
   commercialCarpetProjectCloseoutChecklist,
   commercialCarpetPackingListCartonLabelChecklist,
