@@ -447,6 +447,16 @@ export const commercialCarpetSupplierVerificationChecklist: BlogPost = {
           text: "Please identify the legal entity that will quote, contract, invoice and receive payment for this order. State your role and the responsible production source for the nominated carpet. Quote the exact product construction, color or artwork, size or width, quantity unit, packing, MOQ, project schedule and named delivery term. List the available product data, applicable test reports, installation and maintenance information, and identify which document matches the quoted construction. Propose the sample reference, approval sequence, inspection options and the process for any change to product, price, schedule or beneficiary details.",
         },
         {
+          type: "paragraph",
+          text: "Before approving the order, define how a later product issue must be reported and which records both parties should retain. The commercial carpet warranty-claim documentation checklist provides a neutral evidence structure without inventing coverage or remedies.",
+          links: [
+            {
+              text: "commercial carpet warranty-claim documentation checklist",
+              href: "/blog/commercial-carpet-warranty-claim-documentation-checklist",
+            },
+          ],
+        },
+        {
           type: "list",
           items: [
             {

@@ -1,3 +1,4 @@
+import { commercialCarpetWarrantyClaimDocumentationChecklist } from "@/lib/blog-posts/commercial-carpet-warranty-claim-documentation-checklist";
 import { carpetSheddingInspection } from "@/lib/blog-posts/commercial-carpet-shedding-backing-inspection";
 import { officeCarpet500sqmGuide } from "@/lib/blog-posts/500-sqm-office-carpet-tiles-specification-guide";
 import { commercialCarpetPurchaseOrderProductionReleaseChecklist } from "@/lib/blog-posts/commercial-carpet-purchase-order-production-release-checklist";
@@ -101,6 +102,7 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  commercialCarpetWarrantyClaimDocumentationChecklist,
   carpetSheddingInspection,
   commercialCarpetPurchaseOrderProductionReleaseChecklist,
   commercialCarpetProjectCloseoutChecklist,

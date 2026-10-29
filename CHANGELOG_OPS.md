@@ -1645,3 +1645,16 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 - Adds original article, four labelled illustrations, related product and quotation links.
 - Reddit questions and CRI guidance inform the evidence checklist; no remote diagnosis or warranty promises.
 - Rollback baseline: f83af39f0de28cc43aa05ff59635ae2ae8c22c3c. Tests and Preview pending; not yet published.
+
+## 2026-10-29 — Commercial carpet warranty-claim documentation guide candidate
+
+- Start from production/main `bba21a020f4044bebad07f2b53bc622c85348d4a`; preserve PR117 purchase-order controls and PR118 shedding guide.
+- Add one answer-first B2B guide that connects written terms, exact order/product identity, affected-zone evidence, installation and maintenance records, intervention history, notice route and requested outcome. It does not create a warranty, diagnosis, coverage or remedy.
+- Add contextual reverse links from the shedding, project-closeout and supplier-verification guides plus one product/source-prefilled inquiry path using the existing form.
+- Add one exact 1200×675 SVG planning diagram; it is not a warranty, defect photo, inspection, remedy or client-project record.
+- CRI installation/maintenance guidance and one Interface product-specific warranty example inform the evidence controls. No third-party duration, threshold, exclusion, remedy, maintenance interval or product claim is transferred to VCARPETS.
+- PR118 production was verified at `dpl_DtdBchPWuQPBnw4AS9mpjNgFihz9`. Its IndexNow workflow `40709000637` sent no live request because the release manifest had no changed URL; today's manifest includes that still-new canonical once with today's new canonical.
+- Current VCARPETS GSC and Semrush data are unavailable. GA4 2026-09-30 to 2026-10-27 is only 22 sessions/14 active users, two quote clicks and one WhatsApp click; no traffic, ranking, conversion or qualified-lead gain is claimed.
+- The live site contains broad manufacturer/factory identity claims plus founding year and workforce fields across a large source scope. The owner instruction requires evidence before claiming an owned factory; a dedicated evidence/identity remediation plan is recorded but not bundled into this content release.
+- Rollback baseline: `bba21a020f4044bebad07f2b53bc622c85348d4a`. Full evidence, scores, link map, image decision and release plan: `ops/commercial-carpet-warranty-claim-growth-20261029.md`. Local, Preview, CI, production and notification receipts remain release gates.
+- Local Site Ops Guard, zero-warning lint, SEO/link/asset/placeholder audits and the 225-page production build passed. Focused local HTTP checks passed for the article, three reverse-link pages, contact route, Blog sitemap and SVG; one H1, title, canonical, indexability, direct answer, CTA query, six visible/schema-matching FAQs and exact 1200×675 dimensions were verified. The SVG was rendered and visually inspected. Preview, exact-head CI, production and notification receipts remain release gates.
