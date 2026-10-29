@@ -6,6 +6,7 @@ import { sitemapResponse } from "@/lib/sitemap-xml";
 const BASE = siteUrl;
 
 const productModifiedDates: Record<string, string> = {
+  "/products/carpet-tiles/pp-commercial-carpet-tiles-cloud-geometric": "2026-10-29",
   "/products/office-carpet-tiles": "2026-10-23",
   "/products/hospitality-carpet": "2026-10-23",
   "/products/custom-axminster-carpet": "2026-10-23",
@@ -25,7 +26,7 @@ const productModifiedDates: Record<string, string> = {
   "/products/carpet-tiles/balance-polypropylene-carpet-tiles": "2026-10-23",
   "/products/carpet-tiles/luxury-hotel-carpet-tile-50x50cm": "2026-10-23",
   "/products/wall-to-wall/cinema-theater-carpet": "2026-10-09",
-  "/products/carpet-tiles": "2026-10-20",
+  "/products/carpet-tiles": "2026-10-29",
   "/products/wall-to-wall": "2026-09-08",
   "/products/carpet-tiles/nylon-office-carpet-tile": "2026-10-23",
 };

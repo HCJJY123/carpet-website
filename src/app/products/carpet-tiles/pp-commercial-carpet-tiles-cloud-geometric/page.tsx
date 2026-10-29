@@ -1,13 +1,12 @@
 import EvidenceProductPage, { evidenceProductMetadata } from "@/components/EvidenceProductPage";
 import Link from "next/link";
-import content from "./content.json";
-import "./product.css";
+const description = "Compare 100% PP carpet tiles in gray cloud (about 6 mm) and black-gray geometric (5.4 mm) designs. Request samples and a project-specific FOB quotation.";
 const productId = "pp-commercial-carpet-tiles-cloud-geometric";
-export const metadata = { ...evidenceProductMetadata(productId), description: content.description };
+export const metadata = { ...evidenceProductMetadata(productId), description };
 export default function Page() {
   return <EvidenceProductPage productId={productId}
     sourceNote="Material and separate thickness values were confirmed for this selection on 29 October 2026. Gray cloud: 100% PP, about 6 mm. Black-gray geometric: 100% PP, 5.4 mm. No size, backing, weight or performance rating is generalized between variants. The original supplier title is not used as evidence of nylon composition."
-    supplement={<section className="border-y border-border bg-surface py-10 md:py-14" id="variant-selection"><div className="container-fox max-w-5xl">
+    supplement={<section className="border-y border-border bg-surface py-10 md:py-14" id="variant-selection"><style>{'[data-evidence-product="pp-commercial-carpet-tiles-cloud-geometric"] [class~="aspect-[3/2]"] { aspect-ratio: 1 / 1; }'}</style><div className="container-fox max-w-5xl">
       <h2 className="mb-5 text-2xl font-black text-primary md:text-3xl">Two Patterns, Separately Specified</h2>
       <div className="grid gap-5 sm:grid-cols-2"><article className="border border-border bg-white p-6"><h3 className="mb-3 text-xl font-bold text-primary">Gray cloud · about 6 mm</h3><p className="leading-8 text-muted">A softly mottled gray appearance for office and meeting-room planning. Main references 1 and 2 and detail reference 5 show this variant. Approve the actual color, texture and selected construction with a physical sample.</p></article><article className="border border-border bg-white p-6"><h3 className="mb-3 text-xl font-bold text-primary">Black-gray geometric · 5.4 mm</h3><p className="leading-8 text-muted">Directional gray lines and darker geometric blocks create a more structured floor appearance. Main references 3 and 4 and detail references 6 and 7 show this variant. Review the pattern direction, adjoining modules and floor transitions separately.</p></article></div>
       <p className="mt-6 leading-8 text-muted">All seven images are AI-edited design illustrations based on supplied appearance references. Meeting-room, office and layout scenes are planning concepts, not completed client installations. Images do not establish dimensions, tolerances or test performance.</p>

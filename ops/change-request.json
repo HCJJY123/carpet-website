@@ -16,7 +16,9 @@
     "src/lib/project-planning-references.ts",
     "src/lib/generated-static-sitemap-routes.ts",
     "src/lib/product-evidence-copy.ts",
-    "src/lib/carpet-tile-evidence.ts"
+    "src/lib/carpet-tile-evidence.ts",
+    "src/lib/sitemap-data.ts",
+    "src/app/sitemaps/products.xml/route.ts"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
@@ -27,5 +29,5 @@
     "/blog/commercial-carpet-sample-approval-checklist",
     "/projects/office-carpet-tile-renovation"
   ],
-  "notes": "Only owner-confirmed PP material and variant-specific thickness published; dimensions backing weight and performance not generalized across variants. FOB port tianjingang; price Request a project quotation. Seven edited AI design illustrations are not photographs or actual installations. Existing inquiry links reused; no form handler change. Live affected pages backed up outside repository. Preview and independent QA before PR merge."
+  "notes": "Only owner-confirmed PP material and variant-specific thickness published; dimensions backing weight and performance not generalized across variants. FOB port tianjingang; price Request a project quotation. Seven edited AI design illustrations are not photographs or actual installations. Existing inquiry links reused; no form handler change. Live affected pages backed up outside repository. Preview and independent QA before PR merge. Independent QA requested actual 2026-10-29 lastmod for new product and changed category in existing sitemap date maps only; no global date/logic change. Page-local description and CSS consolidated without visual changes to retain 20-file scope."
 }
