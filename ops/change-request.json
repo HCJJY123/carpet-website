@@ -1,6 +1,6 @@
 {
-  "task": "Publish PP carpet tiles with separately identified gray cloud and black-gray geometric variants and seven disclosed design illustrations",
-  "approvedBy": "Owner product publication request 2026-10-29; owner correction Sentinel_91229272463c819185555d2bf6b19e85 confirms 100% PP, gray cloud about 6 mm, black-gray geometric 5.4 mm",
+  "task": "Publish selected Carpet2 original cleaning-verification blog with four disclosed AI planning images",
+  "approvedBy": "Owner six-site image blog request and selection Sentinel_60da52af1fa881919e6259dd2cdfc252; specific permission Sentinel_c6d99ec07adc819186da02d140fc75d7 for minimal updates to CHANGELOG_OPS.md, keyword-map.csv and ops/change-request.json in HCJJY123/carpet-website",
   "approvedCategories": [
     "content"
   ],
@@ -8,26 +8,16 @@
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
     "keyword-map.csv",
-    "src/app/products/carpet-tiles/pp-commercial-carpet-tiles-cloud-geometric/**",
-    "public/images/products/pp-commercial-carpet-tiles-cloud-geometric/**",
-    "src/lib/data.ts",
-    "src/app/products/carpet-tiles/page.tsx",
-    "src/lib/blog-posts/commercial-carpet-sample-approval-checklist.ts",
-    "src/lib/project-planning-references.ts",
-    "src/lib/generated-static-sitemap-routes.ts",
-    "src/lib/product-evidence-copy.ts",
-    "src/lib/carpet-tile-evidence.ts",
-    "src/lib/sitemap-data.ts",
-    "src/app/sitemaps/products.xml/route.ts"
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/washable-pp-carpet-tiles-cleaning-buyer-verification.ts",
+    "public/images/blog-series/washable-pp-carpet-tiles-cleaning-buyer-verification/**"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "965f1e6425f7a190cd3ddad9f3fcab046d75003e",
+  "rollbackCommit": "84052d3c7c44ebf986d60cdd2e8c940d438835b8",
   "affectedUrls": [
-    "/products/carpet-tiles/pp-commercial-carpet-tiles-cloud-geometric",
-    "/products/carpet-tiles",
-    "/blog/commercial-carpet-sample-approval-checklist",
-    "/projects/office-carpet-tile-renovation"
+    "/blog/washable-pp-carpet-tiles-cleaning-buyer-verification",
+    "/blog"
   ],
-  "notes": "Only owner-confirmed PP material and variant-specific thickness published; dimensions backing weight and performance not generalized across variants. FOB port tianjingang; price Request a project quotation. Seven edited AI design illustrations are not photographs or actual installations. Existing inquiry links reused; no form handler change. Live affected pages backed up outside repository. Preview and independent QA before PR merge. Independent QA requested actual 2026-10-29 lastmod for new product and changed category in existing sitemap date maps only; no global date/logic change. Page-local description and CSS consolidated without visual changes to retain 20-file scope."
+  "notes": "Uses existing blog registry, canonical Article FAQ and sitemap templates unchanged; preserves PP product PR120. No cleaning compatibility claims or form behavior changes."
 }
