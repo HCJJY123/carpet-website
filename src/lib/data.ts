@@ -25,6 +25,73 @@ export const brandInfo = {
 
 export const products: Product[] = [
 {
+  "id": "pp-commercial-carpet-tiles-cloud-geometric",
+  "name": "PP Carpet Tiles for Offices: Cloud & Geometric",
+  "category": "carpet-tiles",
+  "description": "Compare 100% PP carpet tiles in gray cloud (about 6 mm) and black-gray geometric (5.4 mm) designs. Request samples and a project-specific FOB quotation.",
+  "longDescription": "Compare 100% PP carpet tiles in gray cloud (about 6 mm) and black-gray geometric (5.4 mm) designs. Request samples and a project-specific FOB quotation.",
+  "image": "/images/products/pp-commercial-carpet-tiles-cloud-geometric/main-01-grey-cloud-sample.webp",
+  "imageAlt": "AI-edited design illustration: gray cloud sample study; not a product photograph or completed project",
+  "gallery": [
+    {
+      "src": "/images/products/pp-commercial-carpet-tiles-cloud-geometric/main-01-grey-cloud-sample.webp",
+      "alt": "AI-edited design illustration: gray cloud sample study; not a product photograph or completed project"
+    },
+    {
+      "src": "/images/products/pp-commercial-carpet-tiles-cloud-geometric/main-02-grey-cloud-meeting-room.webp",
+      "alt": "AI-edited design illustration: gray cloud meeting-room concept; not a product photograph or completed project"
+    },
+    {
+      "src": "/images/products/pp-commercial-carpet-tiles-cloud-geometric/main-03-black-grey-geometric-sample.webp",
+      "alt": "AI-edited design illustration: black-gray geometric sample study; not a product photograph or completed project"
+    },
+    {
+      "src": "/images/products/pp-commercial-carpet-tiles-cloud-geometric/main-04-black-grey-geometric-office.webp",
+      "alt": "AI-edited design illustration: black-gray geometric office concept; not a product photograph or completed project"
+    },
+    {
+      "src": "/images/products/pp-commercial-carpet-tiles-cloud-geometric/detail-01-grey-cloud-texture.webp",
+      "alt": "AI-edited design illustration: gray cloud texture study; not a product photograph or completed project"
+    },
+    {
+      "src": "/images/products/pp-commercial-carpet-tiles-cloud-geometric/detail-02-black-grey-geometric-texture.webp",
+      "alt": "AI-edited design illustration: black-gray geometric texture study; not a product photograph or completed project"
+    },
+    {
+      "src": "/images/products/pp-commercial-carpet-tiles-cloud-geometric/detail-03-geometric-layout-planning.webp",
+      "alt": "AI-edited design illustration: geometric layout planning; not a product photograph or completed project"
+    }
+  ],
+  "moq": "Confirm by project",
+  "moqTiers": {
+    "sample": "Confirm format, cost and timing",
+    "trialOrder": "Confirm selected variant",
+    "project": "Confirm variant and quantity"
+  },
+  "leadTime": "Confirm after sample and specification approval",
+  "spec": {
+    "material": "100% polypropylene (PP)",
+    "size": "Confirm for selected variant",
+    "colors": []
+  },
+  "technicalSpecs": {
+    "fireRating": "Request variant-specific evidence",
+    "trafficClass": "Confirm for intended use",
+    "fiber": "100% polypropylene (PP)",
+    "yarnSystem": "Confirm selected construction",
+    "backing": "Confirm for selected variant",
+    "pileWeight": "Confirm for selected variant",
+    "totalThickness": "Gray cloud about 6 mm; black-gray geometric 5.4 mm",
+    "antistatic": "Request evidence if required"
+  },
+  "features": [
+    "Gray cloud: about 6 mm",
+    "Black-gray geometric: 5.4 mm",
+    "FOB port: tianjingang",
+    "FOB price: Request a project quotation"
+  ]
+},
+{
   "id": "staggered-block-pp-office-carpet-tiles",
   "name": "Linear Block PP Carpet Tiles 50×50 cm for Offices",
   "category": "carpet-tiles",

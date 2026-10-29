@@ -61,6 +61,7 @@ const categoryFaqs = [
 ];
 
 const productOptions = [
+  {"title": "PP Carpet Tiles for Offices: Cloud & Geometric", "text": "100% PP in two separately specified patterns: gray cloud about 6 mm; black-gray geometric 5.4 mm. Sample review and project quotation.", "href": "/products/carpet-tiles/pp-commercial-carpet-tiles-cloud-geometric"},
   { title: "Linear Block PP Carpet Tiles 50×50 cm for Offices", text: "Gray fine-line and staggered-block appearance. Confirm the requested format, physical sample and project quotation.", href: "/products/carpet-tiles/staggered-block-pp-office-carpet-tiles" },
   { title: "Balance 50×50 cm Polypropylene Loop Pile Carpet Tiles with PVC Backing for Home & Office", text: "Machine-made polypropylene for home and office floor planning. Review samples and request a FOB Tianjin Port project quotation.", href: "/products/carpet-tiles/balance-polypropylene-carpet-tiles" },
   { title: "50×50 cm Commercial PP Loop Pile Carpet Tiles with Bitumen Backing for Offices", text: "Gray with colored gradient accents, PP loop pile and bitumen backing. Review samples and request a FOB Tianjin Port project quotation.", href: "/products/carpet-tiles/gradient-accent-office-carpet-tiles" },

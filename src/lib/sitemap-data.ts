@@ -25,6 +25,7 @@ type SitemapEntryInput = Omit<SitemapEntry, "url"> & { path: string };
 
 const defaultModified = "2026-08-06";
 const modifiedDates: Record<string, string> = {
+  "/products/carpet-tiles/pp-commercial-carpet-tiles-cloud-geometric": "2026-10-29",
   "/products": "2026-10-23",
   "/products/office-carpet-tiles": "2026-10-23",
   "/products/hospitality-carpet": "2026-10-23",
@@ -54,7 +55,7 @@ const modifiedDates: Record<string, string> = {
   "/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles": "2026-10-23",
   "/products/carpet-tiles/balance-polypropylene-carpet-tiles": "2026-10-23",
   "/products/carpet-tiles/luxury-hotel-carpet-tile-50x50cm": "2026-10-23",
-  "/products/carpet-tiles": "2026-10-20",
+  "/products/carpet-tiles": "2026-10-29",
   "/products/carpet-tiles/nylon-office-carpet-tile": "2026-10-23",
   "/products/wall-to-wall/cinema-theater-carpet": "2026-10-09",
   "/cz/commercial-carpet-supplier-czech-republic": "2026-10-09",
