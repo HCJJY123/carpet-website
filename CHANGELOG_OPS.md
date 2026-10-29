@@ -1666,3 +1666,10 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 - Rollback base: `965f1e6425f7a190cd3ddad9f3fcab046d75003e`; live affected HTML backed up before edits. Existing conversion handlers unchanged.
 - Validation: `npm run ops:check`, `npm run lint`, full `npm run build`, local `npm run ops:verify -- --origin=http://127.0.0.1:3130` passed. Static checks confirm one H1, self-canonical, Product/Breadcrumb/FAQ JSON-LD and seven distinct assets. Preview and independent QA remain required before production merge.
 - Independent mobile/desktop visual QA passed. Corrected only the new product and changed carpet-tile category lastmod to 2026-10-29 in both sitemap data maps; no global date refresh.
+
+## 2026-10-29 — PP cleaning buyer guide
+- Selected Carpet2 original article; four new disclosed AI planning illustrations.
+- Exact PP variants linked without inferring washability. Existing canonical/schema/sitemap registry reused.
+- Rollback baseline: 84052d3c7c44ebf986d60cdd2e8c940d438835b8. Preview and parent QA required before merge.
+
+Preview acceptance: original article and four new planning images independently checked on desktop and mobile; metadata, FAQ, directory, sitemap and existing CTA navigation passed. Owner specifically approved the three required same-repository operation-record updates; no permissions or customer data changed. Full build and operations checks rerun before ordinary merge.
