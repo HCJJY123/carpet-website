@@ -321,6 +321,16 @@ export const commercialCarpetProjectCloseoutChecklist: BlogPost = {
           type: "paragraph",
           text: "Warranty scope, notice periods, exclusions and required evidence come from the applicable written terms. Do not infer coverage from this checklist, a product category or a photograph. Keep the signed commercial record and the party responsible for the actual transaction in the closeout file.",
         },
+        {
+          type: "paragraph",
+          text: "When an open issue needs a formal review after handover, use the commercial carpet warranty-claim documentation checklist to connect the written terms, exact product, affected zone, installation and maintenance history, retained evidence and requested outcome.",
+          links: [
+            {
+              text: "commercial carpet warranty-claim documentation checklist",
+              href: "/blog/commercial-carpet-warranty-claim-documentation-checklist",
+            },
+          ],
+        },
       ],
     },
     {

@@ -191,6 +191,16 @@ export const carpetSheddingInspection: BlogPost = {
         },
         {
           "type": "paragraph",
+          "text": "If the observation may become a formal product or commercial issue, use the warranty-claim documentation checklist to align the exact order, product identity, affected zone, photographs, installation and maintenance records before requesting a decision.",
+          "links": [
+            {
+              "text": "warranty-claim documentation checklist",
+              "href": "/blog/commercial-carpet-warranty-claim-documentation-checklist"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
           "text": "Review commercial carpet tile backing options alongside the project's installation and operational requirements. A backing comparison does not replace product-specific installation advice.",
           "links": [
             {
