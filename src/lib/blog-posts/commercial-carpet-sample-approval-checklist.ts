@@ -40,6 +40,7 @@ export const commercialCarpetSampleApprovalChecklist: BlogPost = {
   relatedProductIds: ["nylon-office-carpet-tile", "pp-pvc-backed-office-carpet-tiles", "education-school-carpet-tiles", "luxury-hotel-broadloom"],
   suggestedLinks: [
     { label: "Turn the Approved Sample into a Controlled Purchase Order", href: "/blog/commercial-carpet-purchase-order-production-release-checklist" },
+    {"label": "PP cloud and geometric carpet tiles: approve each pattern and thickness separately", "href": "/products/carpet-tiles/pp-commercial-carpet-tiles-cloud-geometric"},
     { label: "Linear Accent Carpet Tiles: Design and Sample Review", href: "/products/carpet-tiles/linear-accent-commercial-carpet-tiles" },
     { label: "PP PVC-Backed Office Carpet Tiles", href: "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles" },
     { label: "Office Carpet Tile Layout Approval", href: "/blog/office-carpet-tile-layout-approval-bulk-order" },

@@ -23,6 +23,18 @@ export const reviewedOn = "22 October 2026";
 // Construction and dimension references come from the existing product catalog.
 // They are not independent laboratory verification or certificates.
 const profiles: Record<string, Profile> = {
+"pp-commercial-carpet-tiles-cloud-geometric": {
+  "name": "PP Carpet Tiles for Offices: Cloud & Geometric",
+  "summary": "100% polypropylene face in gray cloud (about 6 mm) and black-gray geometric (5.4 mm) variants. Confirm the exact sample and quotation. FOB price: Request a project quotation. Port: tianjingang.",
+  "construction": "Owner-confirmed face composition is 100% PP for both variants. Gray cloud is about 6 mm thick; black-gray geometric is 5.4 mm. Size, backing, pile construction and weight require separate variant-specific confirmation.",
+  "application": "Compare the two appearances for office and meeting-room planning. Seven AI-edited illustrations are not product photographs or completed projects. Confirm the exact construction and installation evidence for the intended use.",
+  "checks": [
+    "Identify pattern and retained sample",
+    "Keep 6 mm cloud and 5.4 mm geometric specifications separate",
+    "Confirm dimensions backing weight and installation evidence",
+    "Agree quantity packing FOB quotation and delivery"
+  ]
+},
   "staggered-block-pp-office-carpet-tiles": {
   "name": "Linear Block PP Carpet Tiles 50×50 cm for Offices",
   "summary": "Review this gray linear-block carpet tile design for office layouts. The supplier reference specifies a PP face, PVC backing and nominal 50×50 cm format; approve the offered construction and sample before ordering. FOB price: Request a project quotation. Port: tianjingang.",

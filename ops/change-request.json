@@ -1,35 +1,31 @@
 {
-  "task": "Publish one original commercial carpet warranty-claim documentation guide and connect it to existing issue, supplier-verification and closeout paths",
-  "approvedBy": "Owner daily VCARPETS B2B natural-traffic and inquiry-growth instruction dated 2026-10-29",
+  "task": "Publish PP carpet tiles with separately identified gray cloud and black-gray geometric variants and seven disclosed design illustrations",
+  "approvedBy": "Owner product publication request 2026-10-29; owner correction Sentinel_91229272463c819185555d2bf6b19e85 confirms 100% PP, gray cloud about 6 mm, black-gray geometric 5.4 mm",
   "approvedCategories": [
-    "new-blog-content",
-    "seo-metadata",
-    "internal-link",
-    "illustration",
-    "index-notification-manifest",
-    "operations-record"
+    "content"
   ],
   "allowedPaths": [
-    "src/lib/blog-posts/commercial-carpet-warranty-claim-documentation-checklist.ts",
-    "src/lib/blog-posts/commercial-carpet-shedding-backing-inspection.ts",
-    "src/lib/blog-posts/commercial-carpet-project-closeout-checklist.ts",
-    "src/lib/blog-posts/commercial-carpet-supplier-verification-checklist-b2b-buyers.ts",
-    "src/lib/blog-data.ts",
-    "public/images/blog-series/carpet-warranty-claim-20261029/commercial-carpet-warranty-claim-evidence-workflow.svg",
-    "keyword-map.csv",
-    "ops/indexnow-urls.json",
-    "ops/commercial-carpet-warranty-claim-growth-20261029.md",
     "ops/change-request.json",
-    "CHANGELOG_OPS.md"
+    "CHANGELOG_OPS.md",
+    "keyword-map.csv",
+    "src/app/products/carpet-tiles/pp-commercial-carpet-tiles-cloud-geometric/**",
+    "public/images/products/pp-commercial-carpet-tiles-cloud-geometric/**",
+    "src/lib/data.ts",
+    "src/app/products/carpet-tiles/page.tsx",
+    "src/lib/blog-posts/commercial-carpet-sample-approval-checklist.ts",
+    "src/lib/project-planning-references.ts",
+    "src/lib/generated-static-sitemap-routes.ts",
+    "src/lib/product-evidence-copy.ts",
+    "src/lib/carpet-tile-evidence.ts"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "bba21a020f4044bebad07f2b53bc622c85348d4a",
+  "rollbackCommit": "965f1e6425f7a190cd3ddad9f3fcab046d75003e",
   "affectedUrls": [
-    "https://www.vcarpets.com/blog/commercial-carpet-warranty-claim-documentation-checklist",
-    "https://www.vcarpets.com/blog/commercial-carpet-shedding-backing-inspection",
-    "https://www.vcarpets.com/blog/commercial-carpet-project-closeout-checklist",
-    "https://www.vcarpets.com/blog/commercial-carpet-supplier-verification-checklist-b2b-buyers"
+    "/products/carpet-tiles/pp-commercial-carpet-tiles-cloud-geometric",
+    "/products/carpet-tiles",
+    "/blog/commercial-carpet-sample-approval-checklist",
+    "/projects/office-carpet-tile-renovation"
   ],
-  "notes": "One new answer-first guide, one exact labelled SVG, and three contextual reverse links. No warranty promise, product specification, price, MOQ, lead time, certification, factory, client case, form, tracking, global schema, robots, canonical logic, dependency, domain or deployment-setting change. The IndexNow manifest includes the new canonical and the still-new PR118 canonical that the prior production workflow explicitly did not submit. Existing unrelated untracked file remains untouched."
+  "notes": "Only owner-confirmed PP material and variant-specific thickness published; dimensions backing weight and performance not generalized across variants. FOB port tianjingang; price Request a project quotation. Seven edited AI design illustrations are not photographs or actual installations. Existing inquiry links reused; no form handler change. Live affected pages backed up outside repository. Preview and independent QA before PR merge."
 }

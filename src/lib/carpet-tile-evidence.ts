@@ -46,6 +46,36 @@ export const tileDocumentChecks = [
 ];
 
 export function carpetTileEvidence(product: Product, profile: TileProfile) {
+  if (product.id === "pp-commercial-carpet-tiles-cloud-geometric") return { ...{
+  "summary": "Compare 100% PP carpet tiles in gray cloud (about 6 mm) and black-gray geometric (5.4 mm) designs. Request samples and a project-specific FOB quotation.",
+  "relatedIds": [
+    "heathered-gray-modular-carpet-tiles",
+    "pp-pvc-backed-office-carpet-tiles"
+  ],
+  "reviewedOn": "29 October 2026",
+  "faqs": [
+    {
+      "q": "Are these carpet tiles nylon or polypropylene?",
+      "a": "Both variants listed here have a 100% polypropylene (PP) face, as confirmed for this product selection. They are not listed as nylon. Match the chosen design and construction to the approved physical sample and quotation."
+    },
+    {
+      "q": "Do both patterns have the same thickness?",
+      "a": "No. The gray cloud variant is about 6 mm thick; the black-gray geometric variant is listed at 5.4 mm. Keep the two specifications separate and confirm the installed floor build-up and transitions with the installer."
+    },
+    {
+      "q": "Are the size, backing and performance ratings shared?",
+      "a": "No shared size, backing, weight or performance rating is asserted here. Ask for the specification sheet for the selected variant. Fire, VOC, traffic and chair-use evidence must match that exact construction and intended installation."
+    },
+    {
+      "q": "Are these photographs of supplied products or completed offices?",
+      "a": "No. All seven images are AI-edited design illustrations based on supplied appearance references. Room scenes and layout views are planning concepts, not completed client projects or technical evidence. Approve a physical sample for actual colour and texture."
+    },
+    {
+      "q": "What is the FOB price and shipment port?",
+      "a": "FOB price: Request a project quotation. FOB port: tianjingang (Tianjin Port, China). Include the selected pattern, area, destination, required documents and delivery window. Confirm unit, quantity, packing, MOQ and lead time in the written quotation."
+    }
+  ]
+}, competitors: [] as ComparisonOption[] };
   if (product.id === "staggered-block-pp-office-carpet-tiles") return {
     summary: summaries[product.id], competitors: [] as ComparisonOption[],
     relatedIds: ["pp-pvc-backed-office-carpet-tiles", "pp-bitumen-backed-office-carpet-tiles", "heathered-gray-modular-carpet-tiles"],
