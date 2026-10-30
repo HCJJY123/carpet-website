@@ -1673,3 +1673,13 @@ Pre-production validation on application commit `33eba6658fad2e9b08287f3e6d003f7
 - Rollback baseline: 84052d3c7c44ebf986d60cdd2e8c940d438835b8. Preview and parent QA required before merge.
 
 Preview acceptance: original article and four new planning images independently checked on desktop and mobile; metadata, FAQ, directory, sitemap and existing CTA navigation passed. Owner specifically approved the three required same-repository operation-record updates; no permissions or customer data changed. Full build and operations checks rerun before ordinary merge.
+
+## 2026-10-30 — Commercial carpet pre-installation meeting checklist candidate
+
+- Adds one complete English B2B guide assigning product, site, installation-system and zone-release decisions before commercial carpet work starts.
+- Adds three contextual reverse links and one existing inquiry path with product/source prefill; no form, email, WhatsApp, tracking or lead-data code changes.
+- Adds one exact 1200×675 SVG planning workflow. It is not a site inspection, substrate test, installation approval, product photo or delivered-project record.
+- CRI installation guidance supplies the technical boundary; one Reddit thread is only a buyer-question signal. No universal moisture limit, adhesive, acclimation time, responsibility allocation or product guarantee is added.
+- Current GSC reporting remains unavailable (`payment_required`), and no Semrush report is connected. No ranking, volume, index or inquiry-growth claim is made.
+- Rollback baseline: `9cc543b9445a263e3bdce154bb10df272566a2bc`. Evidence, scoring, link map, image decision and release plan: `ops/commercial-carpet-preinstallation-meeting-growth-20261030.md`.
+- Local Site Ops Guard, zero-warning lint, SEO/link/asset/placeholder audits and the 226-page production/TypeScript build passed. Focused HTTP checks passed the article, three reverse links, Blog sitemap, SVG and contact route; one H1, canonical, indexability, direct answer, CTA query and six visible FAQ/data pairs were verified. The SVG was rendered and visually corrected. Preview, required CI, production verification and one-time notification remain release gates.

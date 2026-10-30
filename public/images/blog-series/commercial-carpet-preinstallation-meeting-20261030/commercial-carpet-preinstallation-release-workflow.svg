@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Commercial carpet pre-installation release workflow</title>
+  <desc id="desc">Four connected stages: verify the carpet, review site records, agree the installation system, then hold or release each named zone.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f2ea"/>
+      <stop offset="1" stop-color="#e7eef0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#26383b" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="70" y="78" fill="#173b3f" font-family="Arial, sans-serif" font-size="36" font-weight="700">Commercial carpet pre-installation release workflow</text>
+  <text x="70" y="118" fill="#4b5f61" font-family="Arial, sans-serif" font-size="21">Confirm the product, site, installation system and authority before work starts.</text>
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <g transform="translate(70 178)">
+      <rect width="245" height="306" rx="20" fill="#fff"/>
+      <circle cx="45" cy="48" r="25" fill="#b9844f"/>
+      <text x="45" y="56" text-anchor="middle" fill="#fff" font-size="23" font-weight="700">1</text>
+      <text x="28" y="103" fill="#173b3f" font-size="25" font-weight="700">Verify carpet</text>
+      <text x="28" y="143" fill="#4b5f61" font-size="18"><tspan x="28">• Product and colour</tspan><tspan x="28" dy="30">• Construction/backing</tspan><tspan x="28" dy="30">• Approved reference</tspan><tspan x="28" dy="30">• Zone and quantity</tspan></text>
+      <rect x="28" y="253" width="189" height="32" rx="16" fill="#f2e7db"/>
+      <text x="122" y="275" text-anchor="middle" fill="#7b552e" font-size="15" font-weight="700">IDENTITY GATE</text>
+    </g>
+    <g transform="translate(344 178)">
+      <rect width="245" height="306" rx="20" fill="#fff"/>
+      <circle cx="45" cy="48" r="25" fill="#2e7b80"/>
+      <text x="45" y="56" text-anchor="middle" fill="#fff" font-size="23" font-weight="700">2</text>
+      <text x="28" y="103" fill="#173b3f" font-size="25" font-weight="700">Review site</text>
+      <text x="28" y="143" fill="#4b5f61" font-size="18"><tspan x="28">• Substrate record</tspan><tspan x="28" dy="30">• Building conditions</tspan><tspan x="28" dy="30">• Access and trades</tspan><tspan x="28" dy="30">• Storage/protection</tspan></text>
+      <rect x="28" y="253" width="189" height="32" rx="16" fill="#dcebed"/>
+      <text x="122" y="275" text-anchor="middle" fill="#245d62" font-size="15" font-weight="700">SITE GATE</text>
+    </g>
+    <g transform="translate(618 178)">
+      <rect width="245" height="306" rx="20" fill="#fff"/>
+      <circle cx="45" cy="48" r="25" fill="#516b86"/>
+      <text x="45" y="56" text-anchor="middle" fill="#fff" font-size="23" font-weight="700">3</text>
+      <text x="28" y="103" fill="#173b3f" font-size="25" font-weight="700">Agree system</text>
+      <text x="28" y="143" fill="#4b5f61" font-size="18"><tspan x="28">• Current instructions</tspan><tspan x="28" dy="30">• Adhesive/fixing</tspan><tspan x="28" dy="30">• Layout/transitions</tspan><tspan x="28" dy="30">• Named reviewers</tspan></text>
+      <rect x="28" y="253" width="189" height="32" rx="16" fill="#e2e7ed"/>
+      <text x="122" y="275" text-anchor="middle" fill="#3d5269" font-size="15" font-weight="700">SYSTEM GATE</text>
+    </g>
+    <g transform="translate(892 178)">
+      <rect width="238" height="306" rx="20" fill="#173b3f"/>
+      <circle cx="45" cy="48" r="25" fill="#d5a264"/>
+      <text x="45" y="56" text-anchor="middle" fill="#173b3f" font-size="23" font-weight="700">4</text>
+      <text x="28" y="103" fill="#fff" font-size="25" font-weight="700">Release zone</text>
+      <text x="28" y="143" fill="#dbe6e7" font-size="18"><tspan x="28">• Hold open gaps</tspan><tspan x="28" dy="30">• Name the authority</tspan><tspan x="28" dy="30">• Record date/scope</tspan><tspan x="28" dy="30">• Reopen on change</tspan></text>
+      <rect x="28" y="253" width="182" height="32" rx="16" fill="#d5a264"/>
+      <text x="119" y="275" text-anchor="middle" fill="#173b3f" font-size="15" font-weight="700">HOLD / RELEASE</text>
+    </g>
+  </g>
+  <g fill="#9aa9aa">
+    <path d="M321 325h17l-9-9 7-7 21 21-21 21-7-7 9-9h-17z"/>
+    <path d="M595 325h17l-9-9 7-7 21 21-21 21-7-7 9-9h-17z"/>
+    <path d="M869 325h17l-9-9 7-7 21 21-21 21-7-7 9-9h-17z"/>
+  </g>
+  <rect x="70" y="535" width="1060" height="82" rx="18" fill="#fff" opacity=".9"/>
+  <text x="96" y="570" fill="#173b3f" font-family="Arial, sans-serif" font-size="19" font-weight="700">Every open item needs:</text>
+  <text x="96" y="600" fill="#4b5f61" font-family="Arial, sans-serif" font-size="18">affected zone · required evidence · responsible person · due date · authorised releaser</text>
+  <text x="1105" y="649" text-anchor="end" fill="#637375" font-family="Arial, sans-serif" font-size="13">VCARPETS planning diagram · not a site approval or inspection record</text>
+</svg>

@@ -38,6 +38,10 @@ export const commercialCarpetTileAdhesiveSubfloorGuide: BlogPost = {
   ],
   suggestedLinks: [
     {
+      label: "Commercial Carpet Pre-Installation Meeting Checklist",
+      href: "/blog/commercial-carpet-preinstallation-meeting-checklist",
+    },
+    {
       label: "Commercial Carpet Tile Specification Checklist",
       href: "/blog/commercial-carpet-tile-specification-checklist-b2b-buyers",
     },
