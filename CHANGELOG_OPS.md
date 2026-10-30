@@ -1683,3 +1683,10 @@ Preview acceptance: original article and four new planning images independently 
 - Current GSC reporting remains unavailable (`payment_required`), and no Semrush report is connected. No ranking, volume, index or inquiry-growth claim is made.
 - Rollback baseline: `9cc543b9445a263e3bdce154bb10df272566a2bc`. Evidence, scoring, link map, image decision and release plan: `ops/commercial-carpet-preinstallation-meeting-growth-20261030.md`.
 - Local Site Ops Guard, zero-warning lint, SEO/link/asset/placeholder audits and the 226-page production/TypeScript build passed. Focused HTTP checks passed the article, three reverse links, Blog sitemap, SVG and contact route; one H1, canonical, indexability, direct answer, CTA query and six visible FAQ/data pairs were verified. The SVG was rendered and visually corrected. Preview, required CI, production verification and one-time notification remain release gates.
+
+## 2026-10-30 — Draft: associate existing inquiry labels with fields
+- Scope: LeadCaptureForm labels only; full/quick/sample variants retain all field names, validation, handlers, product context and consent.
+- Evidence: live Contact fields lacked programmatic label associations. Product route, prefill and quote anchor passed desktop read-only checks.
+- Validation: local SSR/invariant tests, ops:check, lint and production build passed. No real inquiry sent.
+- Required Preview/browser/mobile/real-delivery gates pending. This is not a production deployment receipt.
+- Rollback base: 74c3369b4692d2e0f7994151040e22a39cb1a30a.
