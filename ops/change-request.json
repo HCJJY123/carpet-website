@@ -1,23 +1,29 @@
 {
-  "task": "Publish selected Carpet2 original cleaning-verification blog with four disclosed AI planning images",
-  "approvedBy": "Owner six-site image blog request and selection Sentinel_60da52af1fa881919e6259dd2cdfc252; specific permission Sentinel_c6d99ec07adc819186da02d140fc75d7 for minimal updates to CHANGELOG_OPS.md, keyword-map.csv and ops/change-request.json in HCJJY123/carpet-website",
-  "approvedCategories": [
-    "content"
-  ],
+  "task": "Publish a commercial carpet pre-installation meeting and responsibility checklist for B2B buyers",
+  "approvedBy": "Owner recurring VCARPETS B2B growth and daily complete English Blog request",
+  "approvedCategories": ["content", "seo"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
     "keyword-map.csv",
+    "ops/indexnow-urls.json",
+    "ops/commercial-carpet-preinstallation-meeting-growth-20261030.md",
     "src/lib/blog-data.ts",
-    "src/lib/blog-posts/washable-pp-carpet-tiles-cleaning-buyer-verification.ts",
-    "public/images/blog-series/washable-pp-carpet-tiles-cleaning-buyer-verification/**"
+    "src/lib/blog-posts/commercial-carpet-preinstallation-meeting-checklist.ts",
+    "src/lib/blog-posts/commercial-carpet-tile-adhesive-subfloor-guide.ts",
+    "src/lib/blog-posts/carpet-tile-delivery-inspection-site-storage-checklist.ts",
+    "src/lib/blog-posts/commercial-carpet-purchase-order-production-release-checklist.ts",
+    "public/images/blog-series/commercial-carpet-preinstallation-meeting-20261030/**"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "84052d3c7c44ebf986d60cdd2e8c940d438835b8",
+  "rollbackCommit": "9cc543b9445a263e3bdce154bb10df272566a2bc",
   "affectedUrls": [
-    "/blog/washable-pp-carpet-tiles-cleaning-buyer-verification",
+    "/blog/commercial-carpet-preinstallation-meeting-checklist",
+    "/blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide",
+    "/blog/carpet-tile-delivery-inspection-site-storage-checklist",
+    "/blog/commercial-carpet-purchase-order-production-release-checklist",
     "/blog"
   ],
-  "notes": "Uses existing blog registry, canonical Article FAQ and sitemap templates unchanged; preserves PP product PR120. No cleaning compatibility claims or form behavior changes."
+  "notes": "Uses the existing Blog, canonical, Article, FAQ, sitemap and inquiry templates. Adds one labelled SVG planning diagram and contextual internal links. No form, tracking, dependency, global schema, product specification or identity claim changes."
 }

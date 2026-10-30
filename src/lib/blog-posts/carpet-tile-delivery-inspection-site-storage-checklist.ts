@@ -279,6 +279,7 @@ export const carpetTileDeliveryInspectionChecklist: BlogPost = {
     }
   ],
   suggestedLinks: [
+    { label: "Run the Pre-Installation Meeting", href: "/blog/commercial-carpet-preinstallation-meeting-checklist" },
     { label: "Build the Project Closeout Pack", href: "/blog/commercial-carpet-project-closeout-checklist" },
     { label: "Approve Packing Lists and Carton Labels", href: "/blog/commercial-carpet-packing-list-carton-label-checklist" },
     { label: "Browse Commercial Carpet Tiles", href: "/products/carpet-tiles" },

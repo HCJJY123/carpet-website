@@ -324,6 +324,7 @@ export const commercialCarpetPurchaseOrderProductionReleaseChecklist: BlogPost =
     },
   ],
   suggestedLinks: [
+    { label: "Plan the Pre-Installation Responsibility Meeting", href: "/blog/commercial-carpet-preinstallation-meeting-checklist" },
     { label: "Compare Commercial Carpet Quotations", href: "/blog/commercial-carpet-pricing-moq-data-center-guide" },
     { label: "Approve a Commercial Carpet Sample", href: "/blog/commercial-carpet-sample-approval-checklist" },
     { label: "Review FOB Tianjin Port Terms", href: "/blog/commercial-carpet-fob-tianjin-port-buyer-checklist" },

@@ -1,4 +1,5 @@
 import { washablePPCleaningGuide } from "@/lib/blog-posts/washable-pp-carpet-tiles-cleaning-buyer-verification";
+import { commercialCarpetPreinstallationMeetingChecklist } from "@/lib/blog-posts/commercial-carpet-preinstallation-meeting-checklist";
 import { commercialCarpetWarrantyClaimDocumentationChecklist } from "@/lib/blog-posts/commercial-carpet-warranty-claim-documentation-checklist";
 import { carpetSheddingInspection } from "@/lib/blog-posts/commercial-carpet-shedding-backing-inspection";
 import { officeCarpet500sqmGuide } from "@/lib/blog-posts/500-sqm-office-carpet-tiles-specification-guide";
@@ -103,6 +104,7 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  commercialCarpetPreinstallationMeetingChecklist,
   washablePPCleaningGuide,
   commercialCarpetWarrantyClaimDocumentationChecklist,
   carpetSheddingInspection,
