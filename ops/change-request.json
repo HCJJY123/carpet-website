@@ -1,29 +1,18 @@
 {
-  "task": "Publish a commercial carpet pre-installation meeting and responsibility checklist for B2B buyers",
-  "approvedBy": "Owner recurring VCARPETS B2B growth and daily complete English Blog request",
-  "approvedCategories": ["content", "seo"],
+  "task": "Repair offline weekly report site isolation and safe aggregate export",
+  "approvedBy": "Owner five-site data optimization request 2026-10-30",
+  "approvedCategories": [
+    "tracking"
+  ],
   "allowedPaths": [
     "ops/change-request.json",
-    "CHANGELOG_OPS.md",
-    "keyword-map.csv",
-    "ops/indexnow-urls.json",
-    "ops/commercial-carpet-preinstallation-meeting-growth-20261030.md",
-    "src/lib/blog-data.ts",
-    "src/lib/blog-posts/commercial-carpet-preinstallation-meeting-checklist.ts",
-    "src/lib/blog-posts/commercial-carpet-tile-adhesive-subfloor-guide.ts",
-    "src/lib/blog-posts/carpet-tile-delivery-inspection-site-storage-checklist.ts",
-    "src/lib/blog-posts/commercial-carpet-purchase-order-production-release-checklist.ts",
-    "public/images/blog-series/commercial-carpet-preinstallation-meeting-20261030/**"
+    "visitor-intelligence/scripts/weekly_report.py",
+    "visitor-intelligence/scripts/test_weekly_report.py",
+    "visitor-intelligence/REPORTING.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "9cc543b9445a263e3bdce154bb10df272566a2bc",
-  "affectedUrls": [
-    "/blog/commercial-carpet-preinstallation-meeting-checklist",
-    "/blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide",
-    "/blog/carpet-tile-delivery-inspection-site-storage-checklist",
-    "/blog/commercial-carpet-purchase-order-production-release-checklist",
-    "/blog"
-  ],
-  "notes": "Uses the existing Blog, canonical, Article, FAQ, sitemap and inquiry templates. Adds one labelled SVG planning diagram and contextual internal links. No form, tracking, dependency, global schema, product specification or identity claim changes."
+  "affectedUrls": [],
+  "notes": "Offline reporting only. No visitor collection, D1 schema/data, production website, credentials, or tracking changes. Synthetic tests only. Draft PR; no deployment requested.",
+  "rollbackCommit": "74c3369b4692d2e0f7994151040e22a39cb1a30a"
 }
