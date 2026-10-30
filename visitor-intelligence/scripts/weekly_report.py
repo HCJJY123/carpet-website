@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-"""Build a visitor- and company-level intelligence workbook from a D1 JSON export."""
+"""Offline site-separated report; network identity and scores are unverified signals."""
 
+import argparse
 import json
+import re
+from urllib.parse import urlsplit
 import sys
 from collections import Counter
 from pathlib import Path
@@ -36,6 +39,32 @@ TEXT_COLUMNS = (
 )
 
 
+def normalize_site(value: str) -> str:
+    """Normalize host casing/www only; never merge different registrable domains."""
+    raw = str(value).strip()
+    try:
+        parsed = urlsplit(raw if "://" in raw else "//" + raw)
+        host = (parsed.hostname or "").lower().rstrip(".")
+        if parsed.username or parsed.password or parsed.port not in (None, 80, 443):
+            return "unknown"
+        host = host.removeprefix("www.")
+        if not re.fullmatch(r"[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?", host) or "." not in host:
+            return "unknown"
+        return host
+    except (ValueError, TypeError):
+        return "unknown"
+
+
+def safe_cell(value):
+    if isinstance(value, str) and value.lstrip().startswith(("=", "+", "-", "@")):
+        return "'" + value
+    return value
+
+
+def safe_frame(frame):
+    return frame.apply(lambda column: column.map(safe_cell))
+
+
 def load_rows(path: str) -> pd.DataFrame:
     with open(path, encoding="utf-8") as file:
         payload = json.load(file)
@@ -58,8 +87,9 @@ def load_rows(path: str) -> pd.DataFrame:
         if column not in frame:
             frame[column] = 0
         else:
-            frame[column] = pd.to_numeric(frame[column], errors="coerce").fillna(0).astype(int)
+            frame[column] = pd.to_numeric(frame[column], errors="coerce").replace([float("inf"), -float("inf")], 0).fillna(0).clip(lower=0, upper=86400 if column == "duration" else 1000000).astype(int)
 
+    frame["site"] = frame["site"].map(normalize_site)
     frame["visitor_key"] = frame["visitor_id"]
     frame.loc[frame["visitor_key"] == "", "visitor_key"] = frame["ip_hash"]
     frame.loc[frame["visitor_key"] == "", "visitor_key"] = (
@@ -108,8 +138,8 @@ def grade(score: float) -> str:
 def company_match(group: pd.DataFrame) -> str:
     if group["company_candidate"].max() == 1:
         if "high" in group["company_confidence"].str.lower().values:
-            return "Company identified"
-        return "Probable company"
+            return "Network-based company candidate (unverified)"
+        return "Network-based company candidate (unverified)"
     if "isp" in group["network_type"].str.lower().values:
         return "Company unknown - ISP/mobile network"
     if "cloud" in group["network_type"].str.lower().values:
@@ -135,7 +165,7 @@ def inferred_need(group: pd.DataFrame) -> str:
     interests = unique_text(group["product_interest"], 5)
     paths = " ".join(group["path"].astype(str)).lower()
     if "/thank-you" in paths:
-        return f"Submitted inquiry; {interests or 'commercial carpet project'}"
+        return f"Thank-you page observed (not confirmed inquiry); {interests or 'commercial carpet project'}"
     if "/contact" in paths:
         return f"Project quotation; {interests or 'commercial carpet'}"
     if "/request-sample-box" in paths:
@@ -145,11 +175,12 @@ def inferred_need(group: pd.DataFrame) -> str:
 
 def build_visitor_frame(frame: pd.DataFrame) -> pd.DataFrame:
     leads = []
-    for visitor_key, group in frame.groupby("visitor_key", dropna=False):
+    for (site, visitor_key), group in frame.groupby(["site", "visitor_key"], dropna=False):
         score = score_group(group)
         leads.append({
+            "Site": site,
             "Priority": grade(score),
-            "Intent Score": score,
+            "Rule Intent Score": score,
             "Visitor Label": mode(group["visitor_label"]),
             "Visitor ID": mode(group["visitor_id"]) or visitor_key,
             "Company Match": company_match(group),
@@ -172,7 +203,7 @@ def build_visitor_frame(frame: pd.DataFrame) -> pd.DataFrame:
             "Sessions": max(group["session_id"].nunique(), 1),
             "Pageviews": len(group),
             "Unique Pages": group["path"].nunique(),
-            "Total Duration (min)": round(group["duration"].sum() / 60, 1),
+            "Observed Sampling (min)": round(group["duration"].sum() / 60, 1),
             "First Visit": group["ts"].min(),
             "Last Visit": group["ts"].max(),
             "Internal Visit": "Yes" if group["internal_visit"].max() == 1 else "No",
@@ -187,7 +218,7 @@ def build_visitor_frame(frame: pd.DataFrame) -> pd.DataFrame:
     priority_order = visitor_frame["Priority"].map({"A": 0, "B": 1, "C": 2}).fillna(9)
     visitor_frame.insert(0, "_priority_order", priority_order)
     return visitor_frame.sort_values(
-        ["_priority_order", "Intent Score", "Visit Days", "Pageviews"],
+        ["_priority_order", "Rule Intent Score", "Visit Days", "Pageviews"],
         ascending=[True, False, False, False],
     ).drop(columns=["_priority_order"]).reset_index(drop=True)
 
@@ -196,7 +227,7 @@ def build_company_frame(visitor_frame: pd.DataFrame) -> pd.DataFrame:
     if visitor_frame.empty:
         return visitor_frame.copy()
     return visitor_frame[
-        visitor_frame["Company Match"].isin(["Company identified", "Probable company"])
+        visitor_frame["Company Match"].isin(["Network-based company candidate (unverified)"])
         & (visitor_frame["Internal Visit"] == "No")
     ].copy().reset_index(drop=True)
 
@@ -226,7 +257,7 @@ def build_page_frame(frame: pd.DataFrame) -> pd.DataFrame:
     if external.empty:
         return pd.DataFrame()
     page_frame = (
-        external.groupby("path", dropna=False)
+        external.groupby(["site", "path"], dropna=False)
         .agg(
             Pageviews=("path", "size"),
             Unique_Visitors=("visitor_key", "nunique"),
@@ -236,63 +267,90 @@ def build_page_frame(frame: pd.DataFrame) -> pd.DataFrame:
             Average_Duration_Seconds=("duration", "mean"),
         )
         .reset_index()
-        .rename(columns={"path": "Page"})
+        .rename(columns={"site": "Site", "path": "Page"})
     )
     page_frame["Intent Weight"] = page_frame["Page"].map(page_weight)
-    page_frame["Total Duration (min)"] = (page_frame.pop("Total_Duration_Seconds") / 60).round(1)
-    page_frame["Average Duration (sec)"] = page_frame.pop("Average_Duration_Seconds").round(1)
-    page_frame["Attraction Score"] = (
+    page_frame["Observed Sampling (min)"] = (page_frame.pop("Total_Duration_Seconds") / 60).round(1)
+    page_frame["Average Observed Sampling (sec)"] = page_frame.pop("Average_Duration_Seconds").round(1)
+    page_frame["Rule Attraction Score"] = (
         page_frame["Unique_Visitors"] * 4
         + page_frame["Company_Candidates"] * 5
         + page_frame["Pageviews"] * 2
-        + page_frame["Average Duration (sec)"].clip(upper=180) / 30
+        + page_frame["Average Observed Sampling (sec)"].clip(upper=180) / 30
         + page_frame["Intent Weight"]
     ).round(1)
     return page_frame.rename(columns={
         "Unique_Visitors": "Unique Visitors",
         "Company_Candidates": "Company Candidates",
         "Countries": "Country Count",
-    }).sort_values(["Attraction Score", "Unique Visitors", "Pageviews"], ascending=False).reset_index(drop=True)
+    }).sort_values(["Rule Attraction Score", "Unique Visitors", "Pageviews"], ascending=False).reset_index(drop=True)
 
 
-def main(input_path: str, output_path: str = "visitor_intelligence.xlsx") -> None:
+def build_aggregate_frame(frame, min_visitors=5):
+    """Data minimization, not a mathematical anonymity guarantee."""
+    columns = ["Site", "Day", "Page", "Channel", "Events", "Distinct Browser Keys", "Observed Sampling Seconds"]
+    if frame.empty:
+        return pd.DataFrame(columns=columns)
+    work = frame[frame["internal_visit"].eq(0)].copy()
+    # Only coarse known categories; never echo free-form source/query/identity data.
+    allowed_channels = {"organic_search", "paid_search", "organic_social", "paid_social", "referral", "direct", "email", "ai_referral"}
+    work["traffic_channel"] = work["traffic_channel"].where(work["traffic_channel"].isin(allowed_channels), "other")
+    work["day"] = pd.to_datetime(work["day"], errors="coerce", utc=True).dt.strftime("%Y-%m-%d").fillna("unknown")
+    # Paths may contain personal data: only retain known broad sections.
+    sections = ("/products", "/blog", "/projects", "/solutions", "/contact", "/thank-you", "/request-sample-box")
+    work["path"] = work["path"].map(lambda path: next((x for x in sections if path == x or path.startswith(x + "/")), "/" if path == "/" else "other"))
+    result = work.groupby(["site", "day", "path", "traffic_channel"], dropna=False).agg(
+        Events=("path", "size"), Keys=("visitor_key", "nunique"), Seconds=("duration", "sum")
+    ).reset_index()
+    result = result[result["Keys"] >= min_visitors].copy()
+    result.columns = columns
+    return result
+
+
+def main(input_path, output_path="visitor_intelligence.xlsx", aggregate_only=False, min_visitors=5, site=None):
+    if min_visitors < 2:
+        raise ValueError("Aggregate threshold must be at least 2; default is 5")
     frame = load_rows(input_path)
-    visitor_frame = build_visitor_frame(frame) if not frame.empty else pd.DataFrame()
-    company_frame = build_company_frame(visitor_frame)
-    unknown_frame = build_unknown_frame(visitor_frame)
-    ai_frame = build_ai_frame(visitor_frame)
-    page_frame = build_page_frame(frame) if not frame.empty else pd.DataFrame()
-
-    summary = pd.DataFrame([
-        {"Metric": "Raw visit events", "Value": len(frame)},
-        {"Metric": "Unique visitors", "Value": len(visitor_frame)},
-        {"Metric": "A-grade visitors", "Value": int((visitor_frame.get("Priority") == "A").sum()) if not visitor_frame.empty else 0},
-        {"Metric": "B-grade visitors", "Value": int((visitor_frame.get("Priority") == "B").sum()) if not visitor_frame.empty else 0},
-        {"Metric": "Company matches", "Value": len(company_frame)},
-        {"Metric": "High-intent company unknown", "Value": len(unknown_frame)},
-        {"Metric": "AI referral visitors", "Value": len(ai_frame)},
-        {"Metric": "Internal-country visitors retained", "Value": int((visitor_frame.get("Internal Visit") == "Yes").sum()) if not visitor_frame.empty else 0},
-    ])
-
-    output = Path(output_path)
-    with pd.ExcelWriter(output) as writer:
-        summary.to_excel(writer, sheet_name="Summary", index=False)
-        visitor_frame.to_excel(writer, sheet_name="Visitor Leads", index=False)
-        company_frame.to_excel(writer, sheet_name="Company Matches", index=False)
-        unknown_frame.to_excel(writer, sheet_name="High Intent Unknown", index=False)
-        ai_frame.to_excel(writer, sheet_name="AI Referrals", index=False)
-        page_frame.to_excel(writer, sheet_name="Page Performance", index=False)
-        frame.sort_values("ts", ascending=False).drop(columns=["visitor_key"], errors="ignore").to_excel(
-            writer, sheet_name="Raw Visits", index=False
-        )
-
-    print(f"Exported {len(visitor_frame)} visitors, {len(company_frame)} company matches, and {len(unknown_frame)} high-intent unknown visitors to {output}")
-    if not visitor_frame.empty:
-        print(visitor_frame[["Priority", "Intent Score", "Visitor Label", "Company Match", "Company / Org", "Country", "Likely Need"]].head(20).to_string(index=False))
+    if site and not frame.empty:
+        frame = frame[frame["site"].eq(normalize_site(site))].copy()
+    notes = pd.DataFrame({"Limitations": [
+        "Site separation is mandatory. Different domains are not merged; unknown site is explicit.",
+        "Observed sampling seconds are beacon samples, not complete dwell time or confirmed attention.",
+        "A/B/C and scores are heuristic rules, not verified purchasing intent or lead qualification.",
+        "ASN/network company candidates do not identify a visitor's employer; no verified company identity is claimed.",
+        "Thank-you page views do not establish unique server-confirmed inquiries.",
+        "Aggregate mode excludes identity fields, uses coarse page sections and suppresses small groups; this is not a guarantee of anonymity.",
+        "Detailed mode contains pseudonymous/source data. Keep private and share only with authorized recipients.",
+        "No tracking, D1 collection, data mutation or identity enrichment is performed by this offline script.",
+    ]})
+    sheets = {"Read Me": notes}
+    if aggregate_only:
+        sheets["Site Aggregates"] = build_aggregate_frame(frame, min_visitors)
+    else:
+        visitors = build_visitor_frame(frame) if not frame.empty else pd.DataFrame()
+        sheets.update({"Visitor Leads": visitors, "Company Candidates": build_company_frame(visitors),
+                       "High Intent Unknown": build_unknown_frame(visitors), "AI Referrals": build_ai_frame(visitors),
+                       "Page Performance": build_page_frame(frame) if not frame.empty else pd.DataFrame()})
+        # All counts are site-scoped; do not deduplicate browser keys across domains.
+        sheets["Site Summary"] = frame.groupby("site", dropna=False).agg(
+            Events=("site", "size"), Browser_Keys=("visitor_key", "nunique")
+        ).reset_index() if not frame.empty else pd.DataFrame(columns=["site", "Events", "Browser_Keys"])
+        sheets["Raw Visits"] = frame.sort_values("ts", ascending=False).drop(columns=["visitor_key"], errors="ignore") if not frame.empty else pd.DataFrame()
+    with pd.ExcelWriter(Path(output_path), engine="openpyxl") as writer:
+        for name, sheet in sheets.items():
+            safe_frame(sheet).to_excel(writer, sheet_name=name, index=False)
+            ws = writer.sheets[name]
+            ws.freeze_panes = "A2"
+            ws.auto_filter.ref = ws.dimensions
+    print(f"Exported {len(frame)} input events to {output_path}; no verified company or complete dwell-time claim.")
 
 
 if __name__ == "__main__":
-    main(
-        sys.argv[1] if len(sys.argv) > 1 else "raw.json",
-        sys.argv[2] if len(sys.argv) > 2 else "visitor_intelligence.xlsx",
-    )
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("input", nargs="?", default="raw.json")
+    parser.add_argument("output", nargs="?", default="visitor_intelligence.xlsx")
+    parser.add_argument("--aggregate-only", action="store_true", help="Exclude raw/visitor identity data and suppress small coarse groups")
+    parser.add_argument("--min-visitors", type=int, default=5)
+    parser.add_argument("--site", help="Export exactly one normalized site; no cross-domain aliasing")
+    args = parser.parse_args()
+    main(args.input, args.output, args.aggregate_only, args.min_visitors, args.site)
