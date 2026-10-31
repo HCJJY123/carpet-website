@@ -1,28 +1,18 @@
 {
-  "task": "Publish selected E1 after-hours office carpet tile installation bid comparison with four editorial images",
-  "approvedBy": "Owner 2026-10-31 selected A2 B1 C3 D2 E1 F2 after requesting research-led illustrated blogs; implementation delegated by publishing task",
+  "task": "Improve existing contact content with an optional seam-layout pre-approval checklist",
+  "approvedBy": "Owner 2026-10-31 non-blog content improvement request; draft PR only",
   "approvedCategories": [
-    "content",
-    "seo"
+    "content"
   ],
   "allowedPaths": [
     "ops/change-request.json",
-    "CHANGELOG_OPS.md",
-    "keyword-map.csv",
-    "src/lib/blog-data.ts",
-    "src/lib/blog-posts/after-hours-office-guide.ts",
-    "src/app/blog/[slug]/page.tsx",
-    "public/images/blog/after-hours-office-1.webp",
-    "public/images/blog/after-hours-office-2.webp",
-    "public/images/blog/after-hours-office-3.webp",
-    "public/images/blog/after-hours-office-4.webp"
+    "src/app/contact/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "0e16190154f05c34bcf9dd81fc4d4e1795943d40",
+  "rollbackCommit": "71dbb646db4b9294782d0bc3eed742ecb8f21b65",
   "affectedUrls": [
-    "/blog/after-hours-carpet-tile-installation-office-bid-breakdown",
-    "/blog"
+    "/contact"
   ],
-  "notes": "Adds one distinct bid-scope article; existing sitemap/canonical/FAQ logic retained. Paragraph links accept HTTPS sources in addition to existing relative internal links; no raw HTML. No form, WhatsApp, API, product, company, analytics or dependency changes. Local git is a transparent QA snapshot only, not remote history; publisher must create feature branch and Preview/PR from exact remote base before merging."
+  "notes": "Explanatory content only. No form fields, requiredness, delivery, email URL, WhatsApp behavior, tracking, blog, images, routes or infrastructure changes. No production merge authorized. E1 blog retained; PR124 excluded."
 }
