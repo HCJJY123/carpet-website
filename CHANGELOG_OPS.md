@@ -1694,3 +1694,13 @@ Preview acceptance: original article and four new planning images independently 
 - Rollback baseline: `74c3369b4692d2e0f7994151040e22a39cb1a30a`. Evidence, scoring, image decision, links and release plan: `ops/commercial-carpet-transition-growth-20261031.md`.
 - Local, Preview, CI, production and one-time notification receipts remain release gates at this candidate checkpoint.
 - Local acceptance: exact-scope Site Ops Guard, zero-warning lint, SEO/link/asset/placeholder audits and the 226-page production build passed. Local HTTP and focused article checks passed H1, metadata, canonical, indexability, direct answer, six FAQ pairs, reverse links, Blog sitemap, SVG and encoded CTA link. Preview client prefill, required CI, production and notification remain release gates.
+
+
+
+## 2026-10-31 — Selected E1 after-hours office installation bid guide (pending Preview)
+
+- Adds `/blog/after-hours-carpet-tile-installation-office-bid-breakdown` with a bid-scope comparison table, three visible FAQs, four editorial images, official CRI and real Reddit context, and existing product/cost/subfloor links. No Reddit labour rates used as benchmarks.
+- Adds registry/listing and keyword ownership. Existing automatic sitemap, metadata and FAQ schema retained. HTTPS source citations permitted by the existing paragraph-link renderer without raw HTML.
+- Scope excludes forms, APIs, product claims, pricing, credentials and pending unrelated form work. Ten allowed files including four images.
+- Rollback remote base: `0e16190154f05c34bcf9dd81fc4d4e1795943d40`. Local QA snapshot is not remote history.
+- Validation: local ops guard and lint passed; initial production build passed (226 pages); final rebuild after removing an optional related-product card hit external Google Fonts fetch errors. Four 1536×1024 assets inspected and distinct hashes verified. Local HTTP article/source links and sitemap checked; Vercel Preview, mobile screenshots and required PR checks remain pending. Production publication is not claimed.
