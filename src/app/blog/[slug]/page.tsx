@@ -25,7 +25,7 @@ function RichBlogBlock({ block, index, compactCaptions = false }: { block: BlogC
     let cursor = 0;
     for (const [linkIndex, link] of block.links.entries()) {
       const start = block.text.indexOf(link.text, cursor);
-      if (start < 0 || !link.href.startsWith("/") || link.href.startsWith("//")) continue;
+      if (start < 0 || !(link.href.startsWith("/") || link.href.startsWith("https://")) || link.href.startsWith("//")) continue;
       content.push(block.text.slice(cursor, start));
       content.push(<Link key={linkIndex} href={link.href} className="font-semibold text-primary underline decoration-accent underline-offset-4 hover:text-accent">{link.text}</Link>);
       cursor = start + link.text.length;
@@ -449,4 +449,5 @@ export default async function BlogPostPage({ params }: Props) {
     </article>
   );
 }
+
 

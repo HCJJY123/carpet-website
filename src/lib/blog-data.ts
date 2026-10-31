@@ -1,3 +1,4 @@
+import { afterHoursOfficeGuide } from "@/lib/blog-posts/after-hours-office-guide";
 import { commercialCarpetFloorTransitionPlanningChecklist } from "@/lib/blog-posts/commercial-carpet-floor-transition-planning-checklist";
 import { washablePPCleaningGuide } from "@/lib/blog-posts/washable-pp-carpet-tiles-cleaning-buyer-verification";
 import { commercialCarpetPreinstallationMeetingChecklist } from "@/lib/blog-posts/commercial-carpet-preinstallation-meeting-checklist";
@@ -105,6 +106,7 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  afterHoursOfficeGuide,
   commercialCarpetFloorTransitionPlanningChecklist,
   commercialCarpetPreinstallationMeetingChecklist,
   washablePPCleaningGuide,
@@ -1341,4 +1343,5 @@ export const blogPosts: BlogPost[] = baseBlogPosts.map((post) => {
     suggestedLinks: [...(post.suggestedLinks ?? []), ...newLinks.filter((link) => !post.suggestedLinks?.some((existing) => existing.href === link.href))],
   };
 });
+
 
