@@ -1,5 +1,5 @@
 {
-  "task": "Publish a commercial carpet pre-installation meeting and responsibility checklist for B2B buyers",
+  "task": "Publish a commercial carpet floor transition planning checklist for B2B project buyers",
   "approvedBy": "Owner recurring VCARPETS B2B growth and daily complete English Blog request",
   "approvedCategories": ["content", "seo"],
   "allowedPaths": [
@@ -7,23 +7,21 @@
     "CHANGELOG_OPS.md",
     "keyword-map.csv",
     "ops/indexnow-urls.json",
-    "ops/commercial-carpet-preinstallation-meeting-growth-20261030.md",
+    "ops/commercial-carpet-transition-growth-20261031.md",
     "src/lib/blog-data.ts",
+    "src/lib/blog-posts/commercial-carpet-floor-transition-planning-checklist.ts",
     "src/lib/blog-posts/commercial-carpet-preinstallation-meeting-checklist.ts",
-    "src/lib/blog-posts/commercial-carpet-tile-adhesive-subfloor-guide.ts",
-    "src/lib/blog-posts/carpet-tile-delivery-inspection-site-storage-checklist.ts",
-    "src/lib/blog-posts/commercial-carpet-purchase-order-production-release-checklist.ts",
-    "public/images/blog-series/commercial-carpet-preinstallation-meeting-20261030/**"
+    "src/lib/blog-posts/commercial-carpet-tile-backing-comparison-guide.ts",
+    "public/images/blog-series/commercial-carpet-transition-planning-20261031/**"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "9cc543b9445a263e3bdce154bb10df272566a2bc",
+  "rollbackCommit": "74c3369b4692d2e0f7994151040e22a39cb1a30a",
   "affectedUrls": [
+    "/blog/commercial-carpet-floor-transition-planning-checklist",
     "/blog/commercial-carpet-preinstallation-meeting-checklist",
-    "/blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide",
-    "/blog/carpet-tile-delivery-inspection-site-storage-checklist",
-    "/blog/commercial-carpet-purchase-order-production-release-checklist",
+    "/blog/commercial-carpet-tile-backing-comparison-guide",
     "/blog"
   ],
-  "notes": "Uses the existing Blog, canonical, Article, FAQ, sitemap and inquiry templates. Adds one labelled SVG planning diagram and contextual internal links. No form, tracking, dependency, global schema, product specification or identity claim changes."
+  "notes": "Uses the existing Blog, canonical, Article, FAQ, sitemap and inquiry templates. Adds one labelled SVG planning diagram and two contextual internal links. Does not modify the open PR124 form-label work, form behavior, tracking, dependencies, product specifications, company identity claims or global schema."
 }

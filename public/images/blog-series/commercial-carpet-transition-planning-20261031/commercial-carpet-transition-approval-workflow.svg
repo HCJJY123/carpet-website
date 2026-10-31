@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Commercial carpet floor transition approval workflow</title>
+  <desc id="desc">Four connected stages: map each junction, compare complete floor build-ups, review doors and movement, then issue an approved detail.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6f1e7"/><stop offset="1" stop-color="#e6edf0"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#18323a" flood-opacity=".14"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#b86b3b"/></marker>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <text x="80" y="84" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#18323a">Approve the floor junction, not only the carpet</text>
+  <text x="80" y="123" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#52646a">Buyer and project planning workflow • exact measurements and product instructions still control</text>
+  <path d="M288 350 H378 M588 350 H678 M888 350 H972" stroke="#b86b3b" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="70" y="185" width="230" height="335" rx="24" fill="#ffffff"/>
+    <rect x="370" y="185" width="230" height="335" rx="24" fill="#ffffff"/>
+    <rect x="670" y="185" width="230" height="335" rx="24" fill="#ffffff"/>
+    <rect x="970" y="185" width="160" height="335" rx="24" fill="#18323a"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <circle cx="115" cy="230" r="23" fill="#b86b3b"/><text x="115" y="238" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">1</text>
+    <text x="90" y="287" font-size="27" font-weight="700" fill="#18323a">Map every</text><text x="90" y="321" font-size="27" font-weight="700" fill="#18323a">junction</text>
+    <path d="M100 380 H270 M100 420 H250 M100 460 H230" stroke="#9aa9ad" stroke-width="8" stroke-linecap="round"/>
+    <text x="90" y="495" font-size="16" fill="#52646a">ID • location • drawing</text>
+
+    <circle cx="415" cy="230" r="23" fill="#b86b3b"/><text x="415" y="238" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">2</text>
+    <text x="390" y="287" font-size="27" font-weight="700" fill="#18323a">Compare both</text><text x="390" y="321" font-size="27" font-weight="700" fill="#18323a">build-ups</text>
+    <rect x="405" y="380" width="75" height="26" rx="5" fill="#7c8f95"/><rect x="480" y="380" width="88" height="26" rx="5" fill="#d2a46f"/>
+    <rect x="405" y="411" width="75" height="18" rx="4" fill="#365c66"/><rect x="480" y="411" width="88" height="18" rx="4" fill="#b9c7cb"/>
+    <text x="390" y="495" font-size="16" fill="#52646a">carpet • adjacent finish</text>
+
+    <circle cx="715" cy="230" r="23" fill="#b86b3b"/><text x="715" y="238" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">3</text>
+    <text x="690" y="287" font-size="27" font-weight="700" fill="#18323a">Review use</text><text x="690" y="321" font-size="27" font-weight="700" fill="#18323a">and movement</text>
+    <path d="M708 460 V365 H820 V460" stroke="#365c66" stroke-width="9" fill="none"/><path d="M762 455 A55 55 0 0 1 817 400" stroke="#b86b3b" stroke-width="5" fill="none" stroke-dasharray="7 7"/>
+    <circle cx="731" cy="476" r="14" fill="#7c8f95"/><circle cx="790" cy="476" r="14" fill="#7c8f95"/>
+    <text x="690" y="510" font-size="16" fill="#52646a">doors • wheels • traffic</text>
+
+    <circle cx="1015" cy="230" r="23" fill="#d2a46f"/><text x="1015" y="238" text-anchor="middle" font-size="22" font-weight="700" fill="#18323a">4</text>
+    <text x="992" y="287" font-size="25" font-weight="700" fill="#fff">Issue one</text><text x="992" y="319" font-size="25" font-weight="700" fill="#fff">approved</text><text x="992" y="351" font-size="25" font-weight="700" fill="#fff">detail</text>
+    <path d="M1003 408 l24 24 55-66" stroke="#d2a46f" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="992" y="464" font-size="14" fill="#e6edf0">owner • date</text><text x="992" y="488" font-size="14" fill="#e6edf0">drawing revision</text>
+  </g>
+  <rect x="70" y="566" width="1060" height="50" rx="25" fill="#fff" opacity=".88"/>
+  <text x="600" y="598" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#365c66">Planning illustration — not a measured site detail, transition profile specification or installation approval</text>
+</svg>
