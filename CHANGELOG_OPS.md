@@ -1704,3 +1704,12 @@ Preview acceptance: original article and four new planning images independently 
 - Scope excludes forms, APIs, product claims, pricing, credentials and pending unrelated form work. Ten allowed files including four images.
 - Rollback remote base: `0e16190154f05c34bcf9dd81fc4d4e1795943d40`. Local QA snapshot is not remote history.
 - Validation: local ops guard and lint passed; initial production build passed (226 pages); final rebuild after removing an optional related-product card hit external Google Fonts fetch errors. Four 1536×1024 assets inspected and distinct hashes verified. Local HTTP article/source links and sitemap checked; Vercel Preview, mobile screenshots and required PR checks remain pending. Production publication is not claimed.
+
+
+## 2026-11-01 — Existing carpet tile category procurement refinement (draft)
+
+- Refines only `/products/carpet-tiles`: office/commercial search snippet, concise project-intent introduction, quotation inputs and two sample/quantity FAQs generated from the existing shared FAQ source.
+- Retains product data, images, canonical, keyword ownership, internal/CTA URLs, forms, tracking and every existing blog. No universal performance, price, MOQ, schedule or client-delivery claims added.
+- Rollback base: `d9b3f6e3e5c2a7daa6399537b16122da8d6bd9e1`. Production HTML captured privately before editing.
+- Local checks, Preview, required CI and exact-PR release approval remain gates; this entry does not claim production publication.
+- Local acceptance: Site Ops Guard, lint, exact final-code production/TypeScript build (226 pages), full local-origin ops verification and focused rendered H1/metadata/canonical/indexability/10-FAQ checks passed. Existing href, quote and asset attributes are byte-for-byte unchanged. Preview visual checks and exact-PR release approval remain pending.

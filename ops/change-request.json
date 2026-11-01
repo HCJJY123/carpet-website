@@ -1,18 +1,19 @@
 {
-  "task": "Improve existing contact content with an optional seam-layout pre-approval checklist",
-  "approvedBy": "Owner 2026-10-31 non-blog content improvement request; draft PR only",
+  "task": "Deepen existing commercial carpet tile category for office procurement and comparable sample-led quotations",
+  "approvedBy": "Owner 2026-11-01 request to implement researched six-site purchase-intent SEO changes; draft PR and Preview before release",
   "approvedCategories": [
     "content"
   ],
   "allowedPaths": [
     "ops/change-request.json",
-    "src/app/contact/page.tsx"
+    "src/app/products/carpet-tiles/page.tsx",
+    "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "71dbb646db4b9294782d0bc3eed742ecb8f21b65",
+  "rollbackCommit": "d9b3f6e3e5c2a7daa6399537b16122da8d6bd9e1",
   "affectedUrls": [
-    "/contact"
+    "/products/carpet-tiles"
   ],
-  "notes": "Explanatory content only. No form fields, requiredness, delivery, email URL, WhatsApp behavior, tracking, blog, images, routes or infrastructure changes. No production merge authorized. E1 blog retained; PR124 excluded."
+  "notes": "Existing category content and metadata only. Retain canonical, product records, images, existing CTA URLs, form behavior, tracking, blogs, keyword ownership and infrastructure. No new certification, price, MOQ, lead-time or client claim. Production merge requires exact-PR confirmation."
 }
