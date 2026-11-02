@@ -2,6 +2,14 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-11-02 — Carpet tile RFQ and tender-response guide
+
+Owner requested an integrated B2B growth and daily content release. Deepen the existing `/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers` rather than adding a competing tender/submittal URL. Preserve its canonical, original publication date, author and existing illustrations; add a direct requirement/response matrix, explicit response statuses, alternative/deviation workflow, construction-matched evidence boundary, FOB Tianjin supply responsibility table, copyable brief, six FAQs and article-specific contact prefill. Add one contextual reverse link from `/products/carpet-tiles`. Record keyword ownership and notify only this substantively updated canonical after verified production.
+
+Branch `content/tile-rfq-tender-response-20261102`; rollback `74e554e97194295b27c98621c93f7c0676c4bc1f`; exact research, evidence boundaries, image decision, validation plan and monitoring are in `ops/commercial-carpet-tender-response-growth-20261102.md`. No form/tracking behavior, product claim, price, MOQ, sample format, certification or delivery promise changes. Local validation, Preview, PR, merge, production and notification are pending at this stage.
+
+Local acceptance completed: Site Ops Guard, ESLint, SEO/link/asset/placeholder audits, `git diff --check`, TypeScript and the 226-page production build passed. Local production HTTP/semantic checks passed the updated article, category, contact URL and sitemaps, including one H1/self-canonical, indexability, exact dates, six FAQ pairs, rendered evidence links, category reverse link, article-specific CTA and 11 article images. No inquiry was sent. Preview, exact-head PR checks, merge, production and one-canonical notification remain pending.
+
 ## 2026-10-23 — Sitewide SEO basics repair (release candidate)
 
 Owner requested execution and production release of the reviewed SEO fixes. Branch `seo/site-basics-20261024`, rollback commit `534dcd9bfc611a95e7acdd3cb950dbd5861fb568`; exact scope is in `ops/change-request.json`. Production responses for 42 affected pages and two sitemap endpoints were captured before editing in the backup manifest. One previously linked target returned 404, as expected.
