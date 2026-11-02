@@ -1,19 +1,25 @@
 {
-  "task": "Deepen existing commercial carpet tile category for office procurement and comparable sample-led quotations",
-  "approvedBy": "Owner 2026-11-01 request to implement researched six-site purchase-intent SEO changes; draft PR and Preview before release",
+  "task": "Deepen the existing commercial carpet tile RFQ guide with a comparable tender-response, deviation and supply-scope workflow",
+  "approvedBy": "Owner 2026-11-02 request to execute one integrated B2B growth and daily content release",
   "approvedCategories": [
-    "content"
+    "content",
+    "metadata"
   ],
   "allowedPaths": [
+    "CHANGELOG_OPS.md",
+    "keyword-map.csv",
     "ops/change-request.json",
+    "ops/commercial-carpet-tender-response-growth-20261102.md",
+    "ops/indexnow-urls.json",
     "src/app/products/carpet-tiles/page.tsx",
-    "CHANGELOG_OPS.md"
+    "src/lib/blog-data.ts"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "d9b3f6e3e5c2a7daa6399537b16122da8d6bd9e1",
+  "rollbackCommit": "74e554e97194295b27c98621c93f7c0676c4bc1f",
   "affectedUrls": [
+    "/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers",
     "/products/carpet-tiles"
   ],
-  "notes": "Existing category content and metadata only. Retain canonical, product records, images, existing CTA URLs, form behavior, tracking, blogs, keyword ownership and infrastructure. No new certification, price, MOQ, lead-time or client claim. Production merge requires exact-PR confirmation."
+  "notes": "Keep the existing Blog canonical, published date, author and images. Add a substantive 2026-11-02 review, requirements/response matrix, status labels, alternative approval workflow, evidence boundary, FOB Tianjin scope table, FAQs, article-specific quote prefill and category reverse link. Do not change form behavior, tracking, product claims, certification, price, MOQ or lead time. Production merge requires exact-head checks, READY Preview and public verification."
 }
