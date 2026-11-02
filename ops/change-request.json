@@ -1,25 +1,22 @@
 {
-  "task": "Deepen the existing commercial carpet tile RFQ guide with a comparable tender-response, deviation and supply-scope workflow",
-  "approvedBy": "Owner 2026-11-02 request to execute one integrated B2B growth and daily content release",
+  "task": "Resolve PR #124 label-association patch conflicts against current main; retain full/quick/sample labels only",
+  "approvedBy": "Owner authorized continuation of existing PR #124 form label repair; retain and append existing private operations changelog",
   "approvedCategories": [
-    "content",
-    "metadata"
+    "conversion"
   ],
   "allowedPaths": [
-    "CHANGELOG_OPS.md",
-    "keyword-map.csv",
     "ops/change-request.json",
-    "ops/commercial-carpet-tender-response-growth-20261102.md",
-    "ops/indexnow-urls.json",
-    "src/app/products/carpet-tiles/page.tsx",
-    "src/lib/blog-data.ts"
+    "CHANGELOG_OPS.md",
+    "src/components/LeadCaptureForm.tsx",
+    "scripts/lead-form-labels.test.mjs"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "74e554e97194295b27c98621c93f7c0676c4bc1f",
+  "rollbackCommit": "6c0532093e08fcd3e6274924e7df29a360c6c593",
   "affectedUrls": [
-    "/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers",
-    "/products/carpet-tiles"
+    "/contact",
+    "/products/<category>/<slug>",
+    "/request-sample-box"
   ],
-  "notes": "Keep the existing Blog canonical, published date, author and images. Add a substantive 2026-11-02 review, requirements/response matrix, status labels, alternative approval workflow, evidence boundary, FOB Tianjin scope table, FAQs, article-specific quote prefill and category reverse link. Do not change form behavior, tracking, product claims, certification, price, MOQ or lead time. Production merge requires exact-head checks, READY Preview and public verification."
+  "notes": "Only useId/label htmlFor/control IDs and focused regression tests. Preserve current main product, SEO, sourcing draft, validation, handlers, consent and tracking. Draft only; no merge, deployment, real inquiry, advertising or Vercel changes. Desktop/mobile checks must block all external submission."
 }

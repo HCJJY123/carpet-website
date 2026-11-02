@@ -1721,3 +1721,15 @@ Preview acceptance: original article and four new planning images independently 
 - Rollback base: `d9b3f6e3e5c2a7daa6399537b16122da8d6bd9e1`. Production HTML captured privately before editing.
 - Local checks, Preview, required CI and exact-PR release approval remain gates; this entry does not claim production publication.
 - Local acceptance: Site Ops Guard, lint, exact final-code production/TypeScript build (226 pages), full local-origin ops verification and focused rendered H1/metadata/canonical/indexability/10-FAQ checks passed. Existing href, quote and asset attributes are byte-for-byte unchanged. Preview visual checks and exact-PR release approval remain pending.
+
+## 2026-10-30 — Draft: associate existing inquiry labels with fields
+- Scope: LeadCaptureForm labels only; full/quick/sample variants retain all field names, validation, handlers, product context and consent.
+- Evidence: live Contact fields lacked programmatic label associations. Product route, prefill and quote anchor passed desktop read-only checks.
+- Validation: local SSR/invariant tests, ops:check, lint and production build passed. No real inquiry sent.
+- Required Preview/browser/mobile/real-delivery gates pending. This is not a production deployment receipt.
+- Rollback base: 74c3369b4692d2e0f7994151040e22a39cb1a30a.
+
+## 2026-11-02 — Draft: resolve PR #124 conflicts
+- Retain every current main record and all product/SEO/source-draft logic; merge main without rewriting history.
+- Label-only patch retained across full/quick/sample forms; regression baseline advanced to `6c0532093e08fcd3e6274924e7df29a360c6c593`.
+- Validation results are recorded in PR #124; no real inquiry, merge or production deployment is authorized by this draft repair.

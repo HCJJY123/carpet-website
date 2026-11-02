@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { captureAttributionOnce, getAttributionForEvent } from "@/lib/attribution";
 import { clearPendingContactFunnel, getFunnelSessionSignals, getPendingContactFunnel, scoreLead } from "@/lib/funnel";
 import { trackAnalyticsEvent, trackLeadConversion } from "@/lib/tracking";
@@ -31,6 +31,8 @@ export default function LeadCaptureForm({
   variant = "full",
 }: LeadCaptureFormProps) {
   const router = useRouter();
+  const fieldIdPrefix = useId();
+  const fieldId = (name: string) => `${fieldIdPrefix}-${name}`;
   const formStarted = useRef(false);
   const lastInvalidField = useRef("");
   const fullFormRef = useRef<HTMLFormElement>(null);
@@ -288,36 +290,36 @@ export default function LeadCaptureForm({
 
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
-            <label className={labelClass}>Name *</label>
-            <input name="name" type="text" required autoComplete="name" className={fieldClass} placeholder="Your name" />
+            <label htmlFor={fieldId("name")} className={labelClass}>Name *</label>
+            <input id={fieldId("name")} name="name" type="text" required autoComplete="name" className={fieldClass} placeholder="Your name" />
           </div>
           <div>
-            <label className={labelClass}>Company</label>
-            <input name="company" type="text" autoComplete="organization" className={fieldClass} placeholder="Company or organization" />
+            <label htmlFor={fieldId("company")} className={labelClass}>Company</label>
+            <input id={fieldId("company")} name="company" type="text" autoComplete="organization" className={fieldClass} placeholder="Company or organization" />
           </div>
           <div>
-            <label className={labelClass}>Business Email *</label>
-            <input name="email" type="email" required autoComplete="email" className={fieldClass} placeholder="name@company.com" />
+            <label htmlFor={fieldId("email")} className={labelClass}>Business Email *</label>
+            <input id={fieldId("email")} name="email" type="email" required autoComplete="email" className={fieldClass} placeholder="name@company.com" />
           </div>
           <div>
-            <label className={labelClass}>Country / Region *</label>
-            <input name="country" type="text" required autoComplete="country-name" className={fieldClass} placeholder="Delivery country" />
+            <label htmlFor={fieldId("country")} className={labelClass}>Country / Region *</label>
+            <input id={fieldId("country")} name="country" type="text" required autoComplete="country-name" className={fieldClass} placeholder="Delivery country" />
           </div>
           <div>
-            <label className={labelClass}>WhatsApp</label>
-            <input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" className={fieldClass} placeholder="Include country code" />
+            <label htmlFor={fieldId("whatsapp")} className={labelClass}>WhatsApp</label>
+            <input id={fieldId("whatsapp")} name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" className={fieldClass} placeholder="Include country code" />
           </div>
           <div>
-            <label className={labelClass}>{isSample ? "Estimated Project Area" : "Quantity / Area"}</label>
-            <input name="quantity" type="text" className={fieldClass} placeholder="e.g. 500 SQM" />
+            <label htmlFor={fieldId("quantity")} className={labelClass}>{isSample ? "Estimated Project Area" : "Quantity / Area"}</label>
+            <input id={fieldId("quantity")} name="quantity" type="text" className={fieldClass} placeholder="e.g. 500 SQM" />
           </div>
         </div>
 
         {!isSample ? (
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className={labelClass}>Purchase Stage</label>
-              <select name="project_stage" defaultValue="Not specified" className={fieldClass}>
+              <label htmlFor={fieldId("project_stage")} className={labelClass}>Purchase Stage</label>
+              <select id={fieldId("project_stage")} name="project_stage" defaultValue="Not specified" className={fieldClass}>
                 <option value="Not specified">Select stage (optional)</option>
                 <option value="Ready to order">Ready to order</option>
                 <option value="Requesting quotation">Requesting quotation</option>
@@ -327,8 +329,8 @@ export default function LeadCaptureForm({
               </select>
             </div>
             <div>
-              <label className={labelClass}>Purchase Timeframe</label>
-              <select name="purchase_timeframe" defaultValue="Not specified" className={fieldClass}>
+              <label htmlFor={fieldId("purchase_timeframe")} className={labelClass}>Purchase Timeframe</label>
+              <select id={fieldId("purchase_timeframe")} name="purchase_timeframe" defaultValue="Not specified" className={fieldClass}>
                 <option value="Not specified">Select timing (optional)</option>
                 <option value="Within 30 days">Within 30 days</option>
                 <option value="1-3 months">1-3 months</option>
@@ -340,9 +342,9 @@ export default function LeadCaptureForm({
         ) : null}
 
         <div>
-          <label className={labelClass}>Project Notes</label>
+          <label htmlFor={fieldId("message")} className={labelClass}>Project Notes</label>
           <textarea
-            name="message"
+            id={fieldId("message")} name="message"
             rows={3}
             className={`${fieldClass} resize-none`}
             defaultValue={isSample
@@ -408,20 +410,20 @@ export default function LeadCaptureForm({
         </div>
         <div className="grid gap-4 md:grid-cols-2 md:gap-5">
           <div>
-            <label className={labelClass}>Company Name *</label>
-            <input name="company" type="text" required autoComplete="organization" className={fieldClass} placeholder="Your company or organization" />
+            <label htmlFor={fieldId("company")} className={labelClass}>Company Name *</label>
+            <input id={fieldId("company")} name="company" type="text" required autoComplete="organization" className={fieldClass} placeholder="Your company or organization" />
           </div>
           <div>
-            <label className={labelClass}>Business Email *</label>
-            <input name="email" type="email" required autoComplete="email" className={fieldClass} placeholder="john@company.com" />
+            <label htmlFor={fieldId("email")} className={labelClass}>Business Email *</label>
+            <input id={fieldId("email")} name="email" type="email" required autoComplete="email" className={fieldClass} placeholder="john@company.com" />
           </div>
           <div>
-            <label className={labelClass}>Product Type *</label>
-            <input name="product" type="text" required value={productValue} onChange={(event) => setEditedProduct(event.target.value)} className={fieldClass} placeholder="Carpet tiles, hotel carpet, sisal carpet..." />
+            <label htmlFor={fieldId("product")} className={labelClass}>Product Type *</label>
+            <input id={fieldId("product")} name="product" type="text" required value={productValue} onChange={(event) => setEditedProduct(event.target.value)} className={fieldClass} placeholder="Carpet tiles, hotel carpet, sisal carpet..." />
           </div>
           <div>
-            <label className={labelClass}>Quantity / Area *</label>
-            <input name="quantity" type="text" required className={fieldClass} placeholder="e.g. 500 SQM" />
+            <label htmlFor={fieldId("quantity")} className={labelClass}>Quantity / Area *</label>
+            <input id={fieldId("quantity")} name="quantity" type="text" required className={fieldClass} placeholder="e.g. 500 SQM" />
           </div>
         </div>
       </div>
@@ -433,27 +435,27 @@ export default function LeadCaptureForm({
 
       <div className="grid gap-5 md:grid-cols-2 md:gap-6">
         <div>
-          <label className={labelClass}>Name</label>
-          <input name="name" type="text" autoComplete="name" className={fieldClass} placeholder="Your name" />
+          <label htmlFor={fieldId("name")} className={labelClass}>Name</label>
+          <input id={fieldId("name")} name="name" type="text" autoComplete="name" className={fieldClass} placeholder="Your name" />
         </div>
         <div>
-          <label className={labelClass}>WhatsApp</label>
-          <input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" className={fieldClass} placeholder="+1 000 000 0000" />
+          <label htmlFor={fieldId("whatsapp")} className={labelClass}>WhatsApp</label>
+          <input id={fieldId("whatsapp")} name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" className={fieldClass} placeholder="+1 000 000 0000" />
         </div>
         <div>
-          <label className={labelClass}>Country / Region</label>
-          <input name="country" type="text" autoComplete="country-name" className={fieldClass} placeholder="United States, UK, etc." />
+          <label htmlFor={fieldId("country")} className={labelClass}>Country / Region</label>
+          <input id={fieldId("country")} name="country" type="text" autoComplete="country-name" className={fieldClass} placeholder="United States, UK, etc." />
         </div>
         <div>
-          <label className={labelClass}>Project Type</label>
-          <input name="project_type" type="text" defaultValue={projectTypeDefault} className={fieldClass} placeholder="Hotel, office, retail, public area..." />
+          <label htmlFor={fieldId("project_type")} className={labelClass}>Project Type</label>
+          <input id={fieldId("project_type")} name="project_type" type="text" defaultValue={projectTypeDefault} className={fieldClass} placeholder="Hotel, office, retail, public area..." />
         </div>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2 md:gap-6">
         <div>
-          <label className={labelClass}>Purchase Stage</label>
-          <select name="project_stage" defaultValue="Not specified" className={fieldClass}>
+          <label htmlFor={fieldId("project_stage")} className={labelClass}>Purchase Stage</label>
+          <select id={fieldId("project_stage")} name="project_stage" defaultValue="Not specified" className={fieldClass}>
             <option value="Not specified">Select your current stage (optional)</option>
             <option value="Ready to order">Ready to order</option>
             <option value="Requesting quotation">Requesting quotation</option>
@@ -464,8 +466,8 @@ export default function LeadCaptureForm({
           </select>
         </div>
         <div>
-          <label className={labelClass}>Purchase Timeframe</label>
-          <select name="purchase_timeframe" defaultValue="Not specified" className={fieldClass}>
+          <label htmlFor={fieldId("purchase_timeframe")} className={labelClass}>Purchase Timeframe</label>
+          <select id={fieldId("purchase_timeframe")} name="purchase_timeframe" defaultValue="Not specified" className={fieldClass}>
             <option value="Not specified">Select expected timing (optional)</option>
             <option value="Within 30 days">Within 30 days</option>
             <option value="1-3 months">1-3 months</option>
@@ -478,12 +480,12 @@ export default function LeadCaptureForm({
 
       <div className="grid gap-5 md:grid-cols-2 md:gap-6">
         <div>
-          <label className={labelClass}>Delivery Time</label>
-          <input name="delivery_time" type="text" className={fieldClass} placeholder="Target shipment or installation date" />
+          <label htmlFor={fieldId("delivery_time")} className={labelClass}>Delivery Time</label>
+          <input id={fieldId("delivery_time")} name="delivery_time" type="text" className={fieldClass} placeholder="Target shipment or installation date" />
         </div>
         <div>
-          <label className={labelClass}>Need Samples?</label>
-          <select name="need_samples" className={fieldClass}>
+          <label htmlFor={fieldId("need_samples")} className={labelClass}>Need Samples?</label>
+          <select id={fieldId("need_samples")} name="need_samples" className={fieldClass}>
             <option value="Not specified">Not specified</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
@@ -492,8 +494,8 @@ export default function LeadCaptureForm({
       </div>
 
       <div>
-        <label className={labelClass}>Message</label>
-        <textarea name="message" rows={5} className={`${fieldClass} resize-none`} placeholder="Tell us your delivery timeline, design needs, or sample request..." />
+        <label htmlFor={fieldId("message")} className={labelClass}>Message</label>
+        <textarea id={fieldId("message")} name="message" rows={5} className={`${fieldClass} resize-none`} placeholder="Tell us your delivery timeline, design needs, or sample request..." />
       </div>
 
       <div>
