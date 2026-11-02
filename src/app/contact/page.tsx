@@ -60,6 +60,12 @@ export default function ContactPage() {
                   {brandInfo.email}
                 </a>
               </div>
+              <details className="mb-6 rounded-lg border border-border bg-surface p-5 text-sm leading-relaxed text-muted">
+                <summary className="cursor-pointer font-bold text-primary">Concerned about visible seams? Prepare an approval brief.</summary>
+                <p className="mt-3">For broadloom or a patterned layout, share the room dimensions, estimated area, doorways and main viewing direction. Ask the installer to mark proposed seams, pile direction and pattern alignment on the layout before cutting.</p>
+                <p className="mt-3">Request a representative joined sample or on-site mock-up under the intended lighting. Agree who approves the appearance and who is responsible for installation; a small loose sample cannot demonstrate the finished seam.</p>
+                <p className="mt-3">Add your carpet type, area, destination and any seam concerns to the optional Message field below, or email the marked plan using Email Sales Directly above. Ask which product specifications and sample options are available for that layout. Seam visibility is not guaranteed to disappear.</p>
+              </details>
               <div data-quote-form-anchor>
                 <QueryProductLeadCaptureForm
                   formName="contact_project_quote"
@@ -212,3 +218,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

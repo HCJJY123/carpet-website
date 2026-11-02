@@ -45,6 +45,7 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
     { label: "Commercial Carpet Tiles", href: "/products/carpet-tiles" },
     { label: "PP PVC-Backed Office Carpet Tiles", href: "/products/carpet-tiles/pp-pvc-backed-office-carpet-tiles" },
     { label: "Carpet Tile Adhesive and Subfloor Review", href: "/blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide" },
+    { label: "Commercial Carpet Floor Transition Planning", href: "/blog/commercial-carpet-floor-transition-planning-checklist" },
     {
       label: "PP Bitumen-Backed Office Carpet Tiles",
       href: "/products/carpet-tiles/pp-bitumen-backed-office-carpet-tiles",
@@ -264,6 +265,16 @@ export const commercialCarpetTileBackingComparisonGuide: BlogPost = {
         {
           type: "paragraph",
           text: "For a project that needs a PVC-free route, the supplier should quote the material choice together with the technical data, sample reference, installation method and commercial terms. This gives the consultant or contractor something concrete to approve instead of a general environmental claim.",
+        },
+        {
+          type: "paragraph",
+          text: "After choosing a backing direction, use the Commercial Carpet Floor Transition Planning guide to compare the complete tile build-up with adjacent finishes, door movement and wheeled routes before approving the affected junctions.",
+          links: [
+            {
+              text: "Commercial Carpet Floor Transition Planning",
+              href: "/blog/commercial-carpet-floor-transition-planning-checklist",
+            },
+          ],
         },
       ],
     },

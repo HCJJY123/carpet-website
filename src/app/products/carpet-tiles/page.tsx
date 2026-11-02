@@ -35,6 +35,14 @@ const categoryFaqs = [
     answer: "Yes. VCARPETS supports carpet tile distributors, commercial flooring contractors, importers, and project buyers with wholesale carpet tiles, bulk quotations, samples, project color review, backing selection, export packing, and international delivery planning."
   },
   {
+    question: "What should I send for an office carpet tile quotation?",
+    answer: "Send the product code or reference image, net floor area in square meters, room use, destination and required on-site date. State the requested tile size, fiber, backing and project documents if known. Keep cutting allowance and spare stock separate from net area, and ask the quotation to identify its pricing unit, packing quantity and FOB supply scope."
+  },
+  {
+    question: "What should I approve in a carpet tile sample before a bulk order?",
+    answer: "Match the sample to the quoted product code, fiber, backing, dimensions and color. Review adjacent tiles and pile direction under the intended lighting when appearance matters. Record what the sample approves; appearance approval does not replace product-matched test reports, site compatibility checks or written confirmation of bulk-order terms."
+  },
+  {
     question: "What is the wholesale price for carpet tiles?",
     answer: `Listed FOB reference ranges are model-specific: ${priceExamples}. These ranges cover different products and configuration options, not one universal starting price. ${priceUnitDisclosure} Final quotation depends on the selected fiber, backing, pile weight, thickness, quantity, color, packing and destination.`
   },
@@ -179,12 +187,12 @@ const evidenceExamples = [
 ];
 
 export const metadata: Metadata = {
-  title: "Commercial Carpet Tiles 50x50 | Wholesale & Samples",
-  description: "Compare 50x50 nylon and polypropylene commercial carpet tiles for offices and hotels. Review wholesale quotation factors, backing, samples and export terms.",
+  title: "Commercial Carpet Tiles for Offices | Wholesale & Samples",
+  description: "Compare commercial and office carpet tiles by fiber, backing and size. Request samples and a wholesale quote using your area, destination and project requirements.",
   alternates: { canonical: categoryPath },
   openGraph: {
-    title: "Commercial Carpet Tiles 50x50 | Wholesale & Samples",
-    description: "Compare commercial carpet tile products by fiber, backing, factory price, MOQ, samples, and office, hotel, healthcare, or education application.",
+    title: "Commercial Carpet Tiles for Offices | Wholesale & Samples",
+    description: "Shortlist commercial and office carpet tiles by construction, sample approval and project requirements. Compare wholesale quotations on the same area and supply scope.",
     url: absoluteUrl(categoryPath),
     type: "website",
     images: [{ url: absoluteUrl("/images/category-tiles.webp"), alt: "Commercial modular carpet tiles supplied by VCARPETS" }]
@@ -243,8 +251,8 @@ export default function CategoryPage() {
         <div className="absolute inset-x-0 bottom-0 -z-10 h-28 bg-gradient-to-t from-[#102A43] to-transparent" />
         <div className="container-fox relative z-10">
           <p className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#f0a23a]">Commercial Carpet Tile Supplier & Distributor Support</p>
-          <h1 className="text-4xl font-black uppercase text-white md:text-6xl">Commercial Carpet Tiles & Modular Flooring</h1>
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">50x50 nylon and polypropylene carpet tiles for offices, hotels, corridors, schools, healthcare support areas, airports, and commercial projects. Compare wholesale price, backing, thickness, MOQ, and technical performance across the listed range.</p>
+          <h1 className="text-4xl font-black uppercase text-white md:text-6xl">Commercial Carpet Tiles for Offices & Projects</h1>
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-gray-300">Compare nylon and polypropylene office carpet tiles by product code, tile size, backing and approved sample. Share your floor area, destination and required date for a model-specific wholesale quotation; performance and supply terms are confirmed for the selected construction.</p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="btn-fox-orange">Request Price & Samples</Link>
             <Link href="#carpet-tile-products" className="inline-flex min-h-12 items-center justify-center border border-white/40 px-7 py-3 text-xs font-black uppercase tracking-widest text-white transition-colors hover:border-white">Compare Products</Link>
@@ -282,7 +290,7 @@ export default function CategoryPage() {
       <ConversionLiftPanel
         eyebrow="Quote Before Final Selection"
         title="Ask for the Right Carpet Tile Specification by Project Use"
-        body="Tell us the office, hotel, school, healthcare, corridor, or retail application, then add area and destination. This helps the factory recommend the tile construction, backing, MOQ, and sample path before you spend time comparing every style."
+        body="Send the net floor area, room use, preferred product or reference image, destination and required date. If the backing is undecided, describe the subfloor and access needs so options can be reviewed before a sample and quotation are agreed."
         product="Commercial Carpet Tiles"
         quoteHref="/contact?product=Commercial%20Carpet%20Tiles#quote-form"
         compact
@@ -334,7 +342,7 @@ export default function CategoryPage() {
           </div>
           <p className="mt-6 max-w-4xl text-sm leading-7 text-muted">For a hypothetical 500 m² carpeted office, nominal 50×50 cm tiles give 2,000 net tiles before cutting allowance, retained spares and carton rounding. This is geometry, not a product recommendation or completed project. Use the <Link href="/blog/500-sqm-office-carpet-tiles-specification-guide" className="font-bold text-accent underline">500 m² office specification and quantity guide</Link> to separate the calculation from construction and document approval.</p>
           <p className="mt-4 text-sm leading-7 text-muted">Evidence review: 25 October 2026. Product pages identify catalog or supplier references and document gaps; the <Link href="/resources/ai-commercial-carpet-source-guide" className="font-bold text-accent underline">procurement resource directory</Link> connects the supporting decision guides.</p>
-          <p className="mt-6 text-sm leading-7 text-muted">Compare the <Link href="/products/carpet-tiles/nylon-office-carpet-tile#size-layout-backing" className="font-bold text-accent underline">50x50 cm nylon commercial carpet tile size, layout and backing checks</Link> and use the <Link href="/resources/installation-guides" className="font-bold text-accent underline">installation planning brief</Link> to align the site and product details before requesting a quote. Plan spare tiles and cleaning responsibilities with the <Link href="/resources/maintenance-guides" className="font-bold text-accent underline">maintenance handoff brief</Link>. For a concrete substrate, review the <Link href="/blog/carpet-tiles-over-concrete-installation-guide" className="font-bold text-accent underline">concrete-floor guide</Link>; send the complete scope through the <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="font-bold text-accent underline">commercial carpet tile RFQ form</Link>.</p>
+          <p className="mt-6 text-sm leading-7 text-muted">Compare the <Link href="/products/carpet-tiles/nylon-office-carpet-tile#size-layout-backing" className="font-bold text-accent underline">50x50 cm nylon commercial carpet tile size, layout and backing checks</Link> and use the <Link href="/resources/installation-guides" className="font-bold text-accent underline">installation planning brief</Link> to align the site and product details before requesting a quote. Plan spare tiles and cleaning responsibilities with the <Link href="/resources/maintenance-guides" className="font-bold text-accent underline">maintenance handoff brief</Link>. For a concrete substrate, review the <Link href="/blog/carpet-tiles-over-concrete-installation-guide" className="font-bold text-accent underline">concrete-floor guide</Link>. Then use the <Link href="/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers" className="font-bold text-accent underline">commercial carpet tile RFQ and tender-response checklist</Link> before sending the complete scope through the <Link href="/contact?product=Commercial%20Carpet%20Tiles#quote-form" className="font-bold text-accent underline">project quotation form</Link>.</p>
           <p className="mt-5 text-sm leading-7 text-muted">Still deciding between modules and roll carpet? Use the <Link href="/blog/carpet-tiles-vs-broadloom-commercial-projects-guide" className="font-bold text-accent underline">carpet tiles vs broadloom buyer comparison</Link> to review repair access, zone layout and the same installed scope before comparing quotations.</p>
           <p className="mt-4 text-sm leading-7 text-muted">Specifying a removable panel floor? Use the <Link href="/blog/carpet-tiles-raised-access-floor-procurement-guide" className="font-bold text-accent underline">raised-access-floor carpet tile procurement checklist</Link> to record panel information, fixing review and future service access before releasing the finish order. Suitability must be confirmed for the exact product and floor system.</p>
         </div>
@@ -394,7 +402,7 @@ export default function CategoryPage() {
             <h2 className="mb-7 text-3xl font-black uppercase text-primary md:text-5xl">Carpet Tile Manufacturer for Office & Contract Projects</h2>
             <div className="space-y-5 text-base leading-8 text-muted">
               <p>VCARPETS manufactures commercial carpet tiles for wholesale buyers, carpet tile distributors, office carpet suppliers, flooring contractors, hotels, and project procurement teams. The collection includes nylon carpet tiles, polypropylene carpet tiles, modular carpet squares, bitumen backed carpet tiles, and PVC-free PE backing options.</p>
-              <p>Applications include office floor carpet tiles, commercial office carpet, hotel carpet tiles, raised floor carpet tiles, acoustic carpet tiles, school carpet tiles, gym carpet tiles, airport carpet tiles, exhibition carpet tiles, and heavy-duty commercial carpet tiles. The required traffic class, fire rating, antistatic performance, backing, and installation system must be confirmed for each project.</p>
+              <p>For office carpet tiles, separate workstation, meeting-room, corridor and entrance zones. Record rolling-chair use, cleaning routines and raised-floor access where relevant. Check traffic, fire, acoustic and antistatic requirements against the exact tile and backing; a material name or visual match alone does not prove suitability.</p>
               <p>Available visual directions include black carpet tiles, blue carpet tiles, navy carpet tiles, green carpet tiles, grey carpet tiles, beige carpet tiles, and patterned carpet tiles. Actual colors depend on the selected product, yarn, MOQ, sample approval, and custom production feasibility.</p>
             </div>
           </div>
@@ -442,10 +450,10 @@ export default function CategoryPage() {
           </div>
           <dl className="grid gap-px border border-border bg-border sm:grid-cols-2">
             {[
-              ["Project Area", "Total SQM, floor plan, waste allowance, and phased delivery needs"],
-              ["Application", "Office, hotel, school, gym, airport, exhibition, or other space"],
-              ["Material", "Nylon, Nylon 6.6, polypropylene, or specified alternative"],
-              ["Backing", "Bitumen, PVC, cushion, PVC-free PE, or raised floor requirement"],
+              ["Area & Quantity", "Net floor area in m², layout, cutting allowance, retained spares and delivery phases; do not count spare stock twice"],
+              ["Use & Required Date", "Room-by-room use, rolling-chair zones, destination and required on-site date; production and transit confirmed separately"],
+              ["Product & Sample", "Product code or reference image, requested fiber and color, then approval of the exact sample construction"],
+              ["Backing & Subfloor", "Preferred backing, substrate and raised-floor access needs; request a comparison if the construction is undecided"],
               ["Installation", "Releasable adhesive, tabs, loose-lay system, and layout direction"],
               ["Performance", "Traffic class, fire rating, antistatic, acoustic, and cleaning needs"]
             ].map(([term, detail]) => (

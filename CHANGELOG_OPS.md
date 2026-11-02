@@ -2,6 +2,14 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-11-02 — Carpet tile RFQ and tender-response guide
+
+Owner requested an integrated B2B growth and daily content release. Deepen the existing `/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers` rather than adding a competing tender/submittal URL. Preserve its canonical, original publication date, author and existing illustrations; add a direct requirement/response matrix, explicit response statuses, alternative/deviation workflow, construction-matched evidence boundary, FOB Tianjin supply responsibility table, copyable brief, six FAQs and article-specific contact prefill. Add one contextual reverse link from `/products/carpet-tiles`. Record keyword ownership and notify only this substantively updated canonical after verified production.
+
+Branch `content/tile-rfq-tender-response-20261102`; rollback `74e554e97194295b27c98621c93f7c0676c4bc1f`; exact research, evidence boundaries, image decision, validation plan and monitoring are in `ops/commercial-carpet-tender-response-growth-20261102.md`. No form/tracking behavior, product claim, price, MOQ, sample format, certification or delivery promise changes. Local validation, Preview, PR, merge, production and notification are pending at this stage.
+
+Local acceptance completed: Site Ops Guard, ESLint, SEO/link/asset/placeholder audits, `git diff --check`, TypeScript and the 226-page production build passed. Local production HTTP/semantic checks passed the updated article, category, contact URL and sitemaps, including one H1/self-canonical, indexability, exact dates, six FAQ pairs, rendered evidence links, category reverse link, article-specific CTA and 11 article images. No inquiry was sent. Preview, exact-head PR checks, merge, production and one-canonical notification remain pending.
+
 ## 2026-10-23 — Sitewide SEO basics repair (release candidate)
 
 Owner requested execution and production release of the reviewed SEO fixes. Branch `seo/site-basics-20261024`, rollback commit `534dcd9bfc611a95e7acdd3cb950dbd5861fb568`; exact scope is in `ops/change-request.json`. Production responses for 42 affected pages and two sitemap endpoints were captured before editing in the backup manifest. One previously linked target returned 404, as expected.
@@ -1684,9 +1692,44 @@ Preview acceptance: original article and four new planning images independently 
 - Rollback baseline: `9cc543b9445a263e3bdce154bb10df272566a2bc`. Evidence, scoring, link map, image decision and release plan: `ops/commercial-carpet-preinstallation-meeting-growth-20261030.md`.
 - Local Site Ops Guard, zero-warning lint, SEO/link/asset/placeholder audits and the 226-page production/TypeScript build passed. Focused HTTP checks passed the article, three reverse links, Blog sitemap, SVG and contact route; one H1, canonical, indexability, direct answer, CTA query and six visible FAQ/data pairs were verified. The SVG was rendered and visually corrected. Preview, required CI, production verification and one-time notification remain release gates.
 
+## 2026-10-31 — Commercial carpet floor transition planning checklist candidate
+
+- Adds one complete English B2B guide that coordinates complete carpet and adjoining-floor build-ups, door movement, edge protection, wheeled routes, accessory responsibility, sample/mock-up scope and transition-aware RFQ inputs.
+- Adds two contextual reverse links and one existing inquiry path with product/source prefill; no form, email, WhatsApp, tracking, lead-data or open PR124 files are changed.
+- Adds one exact 1200×675 SVG planning workflow. It is not a site measurement, transition profile specification, installation approval, product photo or client-project record.
+- CRI installation guidance and a Shaw manufacturer-specific bulletin support the technical boundary. One public RFQ and one Reddit discussion are demand clues only. No external numerical limit, proprietary profile, local code rule or repair advice is transferred to VCARPETS.
+- Current GSC/Bing reads remain unavailable (`payment_required`), the other connected GSC organization lacks VCARPETS, and no Semrush connector is available. No ranking, volume, index-count or inquiry-growth claim is made.
+- Rollback baseline: `74c3369b4692d2e0f7994151040e22a39cb1a30a`. Evidence, scoring, image decision, links and release plan: `ops/commercial-carpet-transition-growth-20261031.md`.
+- Local, Preview, CI, production and one-time notification receipts remain release gates at this candidate checkpoint.
+- Local acceptance: exact-scope Site Ops Guard, zero-warning lint, SEO/link/asset/placeholder audits and the 226-page production build passed. Local HTTP and focused article checks passed H1, metadata, canonical, indexability, direct answer, six FAQ pairs, reverse links, Blog sitemap, SVG and encoded CTA link. Preview client prefill, required CI, production and notification remain release gates.
+
+
+
+## 2026-10-31 — Selected E1 after-hours office installation bid guide (pending Preview)
+
+- Adds `/blog/after-hours-carpet-tile-installation-office-bid-breakdown` with a bid-scope comparison table, three visible FAQs, four editorial images, official CRI and real Reddit context, and existing product/cost/subfloor links. No Reddit labour rates used as benchmarks.
+- Adds registry/listing and keyword ownership. Existing automatic sitemap, metadata and FAQ schema retained. HTTPS source citations permitted by the existing paragraph-link renderer without raw HTML.
+- Scope excludes forms, APIs, product claims, pricing, credentials and pending unrelated form work. Ten allowed files including four images.
+- Rollback remote base: `0e16190154f05c34bcf9dd81fc4d4e1795943d40`. Local QA snapshot is not remote history.
+- Validation: local ops guard and lint passed; initial production build passed (226 pages); final rebuild after removing an optional related-product card hit external Google Fonts fetch errors. Four 1536×1024 assets inspected and distinct hashes verified. Local HTTP article/source links and sitemap checked; Vercel Preview, mobile screenshots and required PR checks remain pending. Production publication is not claimed.
+
+
+## 2026-11-01 — Existing carpet tile category procurement refinement (draft)
+
+- Refines only `/products/carpet-tiles`: office/commercial search snippet, concise project-intent introduction, quotation inputs and two sample/quantity FAQs generated from the existing shared FAQ source.
+- Retains product data, images, canonical, keyword ownership, internal/CTA URLs, forms, tracking and every existing blog. No universal performance, price, MOQ, schedule or client-delivery claims added.
+- Rollback base: `d9b3f6e3e5c2a7daa6399537b16122da8d6bd9e1`. Production HTML captured privately before editing.
+- Local checks, Preview, required CI and exact-PR release approval remain gates; this entry does not claim production publication.
+- Local acceptance: Site Ops Guard, lint, exact final-code production/TypeScript build (226 pages), full local-origin ops verification and focused rendered H1/metadata/canonical/indexability/10-FAQ checks passed. Existing href, quote and asset attributes are byte-for-byte unchanged. Preview visual checks and exact-PR release approval remain pending.
+
 ## 2026-10-30 — Draft: associate existing inquiry labels with fields
 - Scope: LeadCaptureForm labels only; full/quick/sample variants retain all field names, validation, handlers, product context and consent.
 - Evidence: live Contact fields lacked programmatic label associations. Product route, prefill and quote anchor passed desktop read-only checks.
 - Validation: local SSR/invariant tests, ops:check, lint and production build passed. No real inquiry sent.
 - Required Preview/browser/mobile/real-delivery gates pending. This is not a production deployment receipt.
 - Rollback base: 74c3369b4692d2e0f7994151040e22a39cb1a30a.
+
+## 2026-11-02 — Draft: resolve PR #124 conflicts
+- Retain every current main record and all product/SEO/source-draft logic; merge main without rewriting history.
+- Label-only patch retained across full/quick/sample forms; regression baseline advanced to `6c0532093e08fcd3e6274924e7df29a360c6c593`.
+- Validation results are recorded in PR #124; no real inquiry, merge or production deployment is authorized by this draft repair.

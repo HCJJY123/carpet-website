@@ -165,6 +165,16 @@ export const commercialCarpetPreinstallationMeetingChecklist: BlogPost = {
           type: "paragraph",
           text: "If a record does not exist, list it as unavailable or pending. A meeting minute should distinguish verified evidence, a proposal awaiting review and a decision that has actually been released.",
         },
+        {
+          type: "paragraph",
+          text: "Treat every doorway and floor boundary as a separate coordination item when levels, door movement, wheeled traffic or edge protection remain open. Use the commercial carpet floor transition planning checklist to assign a junction ID, compare the complete floor build-ups and record the approved detail before releasing the affected work.",
+          links: [
+            {
+              text: "commercial carpet floor transition planning checklist",
+              href: "/blog/commercial-carpet-floor-transition-planning-checklist",
+            },
+          ],
+        },
       ],
     },
     {

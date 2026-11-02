@@ -9,7 +9,7 @@ const React = require('react');
 const { renderToStaticMarkup } = require('react-dom/server');
 const path = 'src/components/LeadCaptureForm.tsx';
 const source = fs.readFileSync(path, 'utf8');
-const original = execFileSync('git', ['show', '74c3369b4692d2e0f7994151040e22a39cb1a30a:' + path], { encoding: 'utf8' });
+const original = execFileSync('git', ['show', '6c0532093e08fcd3e6274924e7df29a360c6c593:' + path], { encoding: 'utf8' });
 const normalized = source.replace('useEffect, useId, useRef, useState', 'useEffect, useRef, useState')
   .replace('  const fieldIdPrefix = useId();\n  const fieldId = (name: string) => `${fieldIdPrefix}-${name}`;\n', '')
   .replace(/ htmlFor=\{fieldId\("[^"]+"\)\}/g, '')
@@ -32,7 +32,7 @@ for (const variant of ['full', 'quick', 'sample']) {
   const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map(m => m[1]);
   assert.equal(ids.length, new Set(ids).size, variant + ' unique instance IDs');
   const labels = [...html.matchAll(/<label\b[^>]*for="([^"]+)"[^>]*>([\s\S]*?)<\/label>/g)];
-  assert(labels.length >= 10, variant + ' has persistent labels');
+  assert.equal(labels.length, 2 * ({ full: 13, quick: 9, sample: 7 }[variant]), variant + ' exact persistent label count');
   for (const [, id, text] of labels) {
     assert(ids.includes(id), 'label must point to rendered input: ' + id);
     assert(text.replace(/<[^>]+>/g, '').trim(), 'label must be non-empty');
