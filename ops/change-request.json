@@ -1,22 +1,19 @@
 {
-  "task": "Resolve PR #124 label-association patch conflicts against current main; retain full/quick/sample labels only",
-  "approvedBy": "Owner authorized continuation of existing PR #124 form label repair; retain and append existing private operations changelog",
+  "task": "Clarify Tokyo planning guide; draft PR and automatic Preview only",
+  "approvedBy": "Owner approved draft PR push and possible automatic Vercel Preview on 2026-11-03; no merge or production release",
   "approvedCategories": [
-    "conversion"
+    "content"
   ],
   "allowedPaths": [
     "ops/change-request.json",
-    "CHANGELOG_OPS.md",
-    "src/components/LeadCaptureForm.tsx",
-    "scripts/lead-form-labels.test.mjs"
+    "src/lib/data.ts",
+    "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "6c0532093e08fcd3e6274924e7df29a360c6c593",
+  "rollbackCommit": "041964d773d0463cdfd68e070067b23f28f59d1c",
   "affectedUrls": [
-    "/contact",
-    "/products/<category>/<slug>",
-    "/request-sample-box"
+    "/projects/multi-floor-office-carpet-tiles-tokyo"
   ],
-  "notes": "Only useId/label htmlFor/control IDs and focused regression tests. Preserve current main product, SEO, sourcing draft, validation, handlers, consent and tracking. Draft only; no merge, deployment, real inquiry, advertising or Vercel changes. Desktop/mobile checks must block all external submission."
+  "notes": "Only case-5 planning wording; preserve routes, media, schema, forms and other records. Full local ops, lint, build and rendered checks passed. Draft PR and automatic Preview authorized; no merge or production deployment."
 }
