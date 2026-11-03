@@ -1733,3 +1733,13 @@ Preview acceptance: original article and four new planning images independently 
 - Retain every current main record and all product/SEO/source-draft logic; merge main without rewriting history.
 - Label-only patch retained across full/quick/sample forms; regression baseline advanced to `6c0532093e08fcd3e6274924e7df29a360c6c593`.
 - Validation results are recorded in PR #124; no real inquiry, merge or production deployment is authorized by this draft repair.
+
+
+## 2026-11-03 — Tokyo planning-copy consistency (draft, not deployed)
+- Scope: `/projects/multi-floor-office-carpet-tiles-tokyo`; only case-5 text in `src/lib/data.ts`.
+- Made reference scale and hypothetical status explicit; replaced completed-client/outcome claims with planning objectives and verification requirements. No route, image, form, schema or other case changes.
+- Base/rollback: `041964d773d0463cdfd68e070067b23f28f59d1c`. Live HTML backed up locally before applying changes.
+- Syntax and scoped-data regression passed; full validation is being recorded in the draft PR. Preview and production verification pending. No merge/deployment authorized by this draft.
+
+- 2026-11-03 local acceptance: ops:check, lint, TypeScript/production build (226 pages), local-origin ops:verify, executable-data regression and rendered H1/canonical/indexability/disclosure/inquiry-link/JSON-LD checks passed.
+- Owner approved draft-PR push and possible automatic Preview. No merge or production release approval.

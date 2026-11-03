@@ -1746,13 +1746,13 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "case-5",
     title: "Multi-Floor Office Carpet Planning Guide - Tokyo",
-    subtitle: "A multi-floor office carpet rollout using color progression, acoustic thinking, and phased delivery to improve workplace coherence.",
+    subtitle: "A multi-floor office carpet planning scenario exploring color progression, acoustic requirements, and phased delivery.",
     category: "carpet-tiles",
     image: "/images/case-techpark.webp",
-    description: "A 5,000 m² workplace carpet program across eight floors, using tonal progression and performance-led modular specification to support comfort and space identity.",
+    description: "A hypothetical 5,000 m² workplace carpet program across eight floors, used to explore tonal progression and modular specification. This is not a completed client project.",
     projectSpecs: [
-      { label: "Location", value: "Tokyo, Japan" },
-      { label: "Size", value: "5,000 m² across 8 floors" },
+      { label: "Reference Location", value: "Tokyo, Japan — planning scenario" },
+      { label: "Planning Scale", value: "5,000 m² across 8 floors — reference assumptions" },
       { label: "Format", value: "Modular workplace carpet system" },
       { label: "Design Strategy", value: "Light-to-dark floor progression for orientation and zoning" }
     ],
@@ -1760,17 +1760,17 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Workplace Rollout Brief",
         paragraphs: [
-          "The client was upgrading eight office floors during an active occupancy cycle and needed a flooring strategy that could improve workplace quality without forcing long closures.",
-          "A modular carpet system was selected because it supported phased installation, easier future access, and better control of disruption than a single large broadloom replacement.",
-          "The design objective was not dramatic branding. It was to create a more coherent, professional office environment that could feel quieter and more intentional from floor to floor."
+          "This is a hypothetical planning scenario, not a completed client project. It considers an occupied eight-floor office and a flooring strategy intended to limit prolonged closures during refurbishment.",
+          "A modular carpet system is an option to assess for phased installation and future access. Compare disruption, substrate preparation and installation requirements with alternative formats.",
+          "The proposed design objective is a coherent office environment with clear floor-by-floor identity. Acoustic expectations require evidence for the selected flooring system."
         ]
       },
       {
         title: "Color Progression as Orientation Tool",
         paragraphs: [
-          "Instead of repeating one tone across all levels, the project used a controlled light-to-dark progression to help each floor feel related but distinct.",
-          "This created an easy orientation cue for staff and visitors while keeping the overall workplace palette disciplined enough for a corporate setting.",
-          "The tonal strategy also helped distribute wear visibility more intelligently, with deeper tones introduced in heavier-use zones where rolling chairs and circulation would be more demanding."
+          "The planning concept uses a controlled light-to-dark progression to give each floor a related but distinct palette.",
+          "The intended orientation cues should be reviewed with staff and visitors before the palette is approved.",
+          "Assess tone and pattern samples in heavier-use zones for appearance retention; darker tones alone do not establish wear or rolling-chair performance."
         ],
         image: "/images/blog-office-carpet.webp",
         imageAlt: "Office carpet zoning and tonal progression across workplace areas",
@@ -1779,33 +1779,33 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Phased Installation in an Occupied Building",
         paragraphs: [
-          "Installation sequencing was coordinated floor by floor so teams could work around occupancy, furniture moves, and business continuity requirements.",
-          "Because the format was modular, small zones could be completed and reopened faster, which reduced pressure on the client's internal relocation planning.",
-          "That phased approach turned carpet replacement into a manageable operational program rather than a disruptive one-time construction event."
+          "Plan installation sequencing floor by floor around occupancy, furniture moves and business continuity requirements.",
+          "Assess whether smaller work zones are feasible. Reopening times depend on substrate preparation, adhesive requirements and site approvals.",
+          "Agree work zones, access restrictions and handover checks before confirming the phased programme."
         ]
       },
       {
         title: "Comfort and Long-Term Flexibility",
         paragraphs: [
-          "Beyond appearance, the client valued the acoustic softening that carpet introduced compared with the previous harder-feeling office finish.",
-          "The modular system also gave the facilities team more freedom to handle future churn, workstation reconfiguration, or localized replacement without restarting a full-floor renovation.",
-          "This made the project commercially attractive not only at handover, but also in terms of long-term workplace management."
+          "Review acoustic objectives alongside appearance, using applicable test data and the actual room construction rather than assuming a measured improvement.",
+          "Plan for workstation reconfiguration and localized replacement by retaining compatible spare tiles and documenting the layout and installation system.",
+          "Compare initial installation and future maintenance requirements when assessing the commercial suitability of the proposed system."
         ]
       }
     ],
     technicalDetails: [
-      "Tonal zoning by floor created a more structured occupant experience.",
-      "Modular format supported phased installation and ongoing workspace flexibility.",
-      "Acoustic improvement was part of the commercial value of the project."
+      "Proposed tonal zoning by floor, subject to user review.",
+      "Modular format to evaluate against phased installation and workspace access requirements.",
+      "Acoustic performance to verify for the selected construction and site system."
     ],
     designHighlights: [
       "Light gray to dark gray progression across floors.",
-      "Workplace identity strengthened without visual excess.",
-      "Balanced commercial durability with quiet office aesthetics."
+      "Workplace identity as a design objective, not a measured outcome.",
+      "Commercial durability requirements to verify alongside the proposed office palette."
     ],
     results: [
-      "The office environment achieved better acoustic comfort and stronger floor-by-floor identity.",
-      "The client associated the upgrade with improved workplace quality and staff experience."
+      "Planning target: acoustic comfort and clearer floor identity; no measured project outcome is claimed.",
+      "Validate the proposed specification, installation plan and user requirements before procurement; this guide does not report client feedback."
     ]
   },
   {
