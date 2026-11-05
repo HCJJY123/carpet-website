@@ -1,3 +1,4 @@
+import { sitemapLastModified } from "@/lib/sitemap-lastmod";
 import { applicationPages } from "@/lib/application-data";
 import { blogPosts } from "@/lib/blog-data";
 import { projectPath } from "@/lib/case-seo";
@@ -97,7 +98,7 @@ function addEntry(entries: Map<string, SitemapEntry>, entry: SitemapEntryInput) 
   const url = canonicalUrl(entry.path);
   if (!url) return;
 
-  entries.set(url, { ...entry, lastModified: modifiedDates[entry.path] ?? entry.lastModified, url });
+  entries.set(url, { ...entry, lastModified: sitemapLastModified(entry.path, modifiedDates[entry.path] ?? entry.lastModified), url });
 }
 
 export function getSitemapEntries(): SitemapEntry[] {

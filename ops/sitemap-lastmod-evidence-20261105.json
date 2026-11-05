@@ -1,0 +1,176 @@
+{
+  "rollback": "922fb225644d660a830fbcc24e41e35e0a08e014",
+  "dateBasis": "Existing authored review dates are preserved when verified; new cross-midnight release dates use Asia/Shanghai. Dates are not the date of this metadata repair.",
+  "entries": {
+    "/products/wall-to-wall/luxury-hotel-broadloom": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/wall-to-wall/3d-printed-hotel-carpet": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/wall-to-wall/custom-luxury-hotel-room-carpet": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/wall-to-wall/3d-printed-banquet-hall-carpet": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/wall-to-wall/singapore-casino-carpet": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/wall-to-wall/custom-floral-printed-hotel-carpet": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/public-area/gold-mining-carpet-mat": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/public-area/public-area-heavy-duty": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/public-area/natural-sisal-carpet": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/public-area/custom-sculpted-wool-lobby-rug": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/public-area/commercial-stair-carpet-runner": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/wall-to-wall/cinema-theater-carpet": {
+      "date": "2026-10-22",
+      "commit": "c75db95",
+      "reason": "PR101: existing product detail copy rewritten; exact affectedUrls inspected."
+    },
+    "/products/carpet-tiles/staggered-block-pp-office-carpet-tiles": {
+      "date": "2026-10-25",
+      "commit": "e0fc90d",
+      "reason": "New product and seven design illustrations; source review date 25 October."
+    },
+    "/products/public-area": {
+      "date": "2026-10-21",
+      "commit": "1526ef0",
+      "reason": "Added substantive natural-sisal buyer guidance and contextual link."
+    },
+    "/technical-documents": {
+      "date": "2026-10-01",
+      "commit": "0f196a3",
+      "reason": "Hotel procurement evidence review and technical-document guidance."
+    },
+    "/certifications": {
+      "date": "2026-10-01",
+      "commit": "0f196a3",
+      "reason": "Hotel procurement evidence review and technical-document guidance."
+    },
+    "/projects": {
+      "date": "2026-10-01",
+      "commit": "7e52f25",
+      "reason": "Added planning references and changed directory metadata/content."
+    },
+    "/privacy-policy": {
+      "date": "2026-09-30",
+      "commit": "dc65780",
+      "reason": "Owner-confirmed legal company name correction in policy."
+    },
+    "/ru/hotelnyy-kovrolin": {
+      "date": "2026-09-20",
+      "commit": "bb3547a",
+      "reason": "Brand identity content/metadata update, checked source history; Russian landing record changed at this merge."
+    },
+    "/ru/products/carpet-tiles/nylon-office-carpet-tile": {
+      "date": "2026-09-20",
+      "commit": "bb3547a",
+      "reason": "Brand identity content/metadata update, checked source history; Russian landing record changed at this merge."
+    },
+    "/ru/products/public-area/public-area-heavy-duty": {
+      "date": "2026-09-20",
+      "commit": "bb3547a",
+      "reason": "Brand identity content/metadata update, checked source history; Russian landing record changed at this merge."
+    },
+    "/ru/products/public-area/gold-mining-carpet-mat": {
+      "date": "2026-09-20",
+      "commit": "bb3547a",
+      "reason": "Brand identity content/metadata update, checked source history; Russian landing record changed at this merge."
+    },
+    "/markets": {
+      "date": "2026-09-20",
+      "commit": "bb3547a",
+      "reason": "Brand identity content/metadata update, checked source history; Russian landing record changed at this merge."
+    },
+    "/ru": {
+      "date": "2026-10-23",
+      "commit": "5397a04",
+      "reason": "PR105 explicit affected-page review date and sitemap metadata evidence retained."
+    },
+    "/ph/commercial-carpet-supplier-philippines": {
+      "date": "2026-10-23",
+      "commit": "5397a04",
+      "reason": "PR105 explicit affected-page review date and sitemap metadata evidence retained."
+    },
+    "/cz/commercial-carpet-supplier-czech-republic": {
+      "date": "2026-10-09",
+      "commit": "3f82f73",
+      "reason": "Country-market procurement links and root per-URL authored review dates."
+    },
+    "/cz/dodavatel-komercnich-kobercu": {
+      "date": "2026-10-09",
+      "commit": "3f82f73",
+      "reason": "Country-market procurement links and root per-URL authored review dates."
+    },
+    "/blog": {
+      "date": "2026-11-05",
+      "commit": "922fb225",
+      "reason": "New protection article added to the visible listing."
+    },
+    "/products/carpet-tiles": {
+      "date": "2026-11-02",
+      "commit": "6c053209",
+      "reason": "Added RFQ/tender guide reverse link after PR128 procurement rewrite."
+    },
+    "/projects/multi-floor-office-carpet-tiles-tokyo": {
+      "date": "2026-11-04",
+      "commit": "2eacf977",
+      "reason": "Substantive hypothetical-scenario correction released Nov 4 Beijing time."
+    },
+    "/contact": {
+      "date": "2026-11-01",
+      "commit": "d9b3f6e",
+      "reason": "Added optional configuration approval questions; release Nov 1 Beijing time. Label-only Nov 2 change is excluded."
+    },
+    "/projects/office-carpet-tile-renovation": {
+      "date": "2026-10-29",
+      "commit": "84052d3",
+      "reason": "Added PP cloud/geometric sample-option link."
+    },
+    "/products/wall-to-wall": {
+      "date": "2026-10-23",
+      "commit": "a9f4686",
+      "reason": "Substantive broadloom quotation/category alignment."
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import { sitemapLastModified } from "@/lib/sitemap-lastmod";
+
 export type SimpleSitemapEntry = {
   url: string;
   lastModified: string;
@@ -18,7 +20,7 @@ export function sitemapXml(entries: SimpleSitemapEntry[]) {
   const urls = entries.map((entry) => [
     "  <url>",
     `    <loc>${escapeXml(entry.url)}</loc>`,
-    `    <lastmod>${entry.lastModified}</lastmod>`,
+    `    <lastmod>${sitemapLastModified(entry.url, entry.lastModified)}</lastmod>`,
     entry.changeFrequency ? `    <changefreq>${entry.changeFrequency}</changefreq>` : "",
     typeof entry.priority === "number" ? `    <priority>${entry.priority.toFixed(2)}</priority>` : "",
     "  </url>",
