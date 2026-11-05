@@ -1743,3 +1743,11 @@ Preview acceptance: original article and four new planning images independently 
 
 - 2026-11-03 local acceptance: ops:check, lint, TypeScript/production build (226 pages), local-origin ops:verify, executable-data regression and rendered H1/canonical/indexability/disclosure/inquiry-link/JSON-LD checks passed.
 - Owner approved draft-PR push and possible automatic Preview. No merge or production release approval.
+
+## 2026-11-05 — Commercial carpet protection and handover guide
+
+Owner requested the recurring integrated VCARPETS B2B growth implementation and full English buyer article. Publish `/blog/commercial-carpet-protection-handover-checklist` to close the workflow gap between pre-installation release and project closeout. Add a direct answer, zone protection schedule, system-specific method boundary, responsibility matrix, occupied-site access controls, removal/cleaning/acceptance gates, copyable record, six FAQs and an article-specific inquiry prefill. Add contextual reverse links from the existing pre-installation and closeout guides.
+
+Use one exact accessible workflow SVG; do not use generated product, factory or client evidence. No product specification, certification, price, sample format, MOQ, production timing, protection material or installation service is promised. No form, tracking, route template or global schema behavior changes. Branch `content/commercial-carpet-protection-20261105`; rollback `2eacf977b75d874d28c3cfd8ad7c37987fda5a4d`. Exact sources, scoring, access limitations, image mapping and monitoring are recorded in `ops/commercial-carpet-protection-growth-20261105.md`.
+
+Local acceptance passed: Site Ops Guard, zero-warning lint, SEO/link/asset/placeholder audits, the TypeScript/production build (226 pages), local-origin HTTP checks for all three affected articles, one H1, title, canonical, indexability, workflow SVG, encoded RFQ CTA, FAQ schema, reverse links and root/Blog sitemap inclusion. Preview, required CI, production and one-canonical notification remain release gates.

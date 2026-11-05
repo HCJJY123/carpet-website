@@ -200,6 +200,16 @@ export const commercialCarpetProjectCloseoutChecklist: BlogPost = {
             },
           ],
         },
+        {
+          type: "paragraph",
+          text: "Keep protection removal, final cleaning, condition inspection and operational handover as separate dated decisions. The commercial carpet protection and handover checklist provides the zone record that connects later-trade access and damage exceptions to this closeout file.",
+          links: [
+            {
+              text: "commercial carpet protection and handover checklist",
+              href: "/blog/commercial-carpet-protection-handover-checklist",
+            },
+          ],
+        },
       ],
     },
     {
@@ -404,6 +414,7 @@ export const commercialCarpetProjectCloseoutChecklist: BlogPost = {
   ],
   suggestedLinks: [
     { label: "Plan Delivery Inspection", href: "/blog/carpet-tile-delivery-inspection-site-storage-checklist" },
+    { label: "Control Protection through Handover", href: "/blog/commercial-carpet-protection-handover-checklist" },
     { label: "Control Spare Stock and Replacement", href: "/blog/commercial-carpet-tile-replenishment-dye-lots-spare-stock" },
     { label: "Prepare a Maintenance Handover", href: "/resources/maintenance-guides" },
     { label: "Browse Commercial Carpet Tiles", href: "/products/carpet-tiles" },
