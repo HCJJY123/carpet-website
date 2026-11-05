@@ -96,4 +96,6 @@ Source artwork is lightweight vector text and shapes. It contains no customer lo
 - Source implementation complete.
 - Local acceptance passed on the final source: exact-scope Site Ops Guard, zero-warning lint, SEO/link/asset/placeholder audits, TypeScript and the 226-page production build.
 - Local production-origin checks passed for the new article and both reverse-link sources: HTTP 200, one H1, indexability, title, self-canonical, visible body, workflow SVG, encoded RFQ CTA, FAQ schema and root/Blog sitemap inclusion.
-- Preview, PR required checks, merge, production verification and one-canonical crawl notification remain release gates.
+- Vercel Preview `dpl_asPm1EZany8DCat6tViYsuZksxLB` reached `READY` for exact commit `ae6c7436592a3b84018b2eaab8c4b510286a395e`. Preview HTTP checks passed the new article, both reverse-link pages, contact route, Blog sitemap and SVG.
+- Desktop Preview visual review passed the H1, hero SVG, opening body, tables and floating contact controls. Clicking the article CTA preserved the source path and prefilled `Commercial carpet project protection planning` in the real contact form; no inquiry was submitted. The remote browser did not expose a separate mobile viewport, so a true narrow-device screenshot remains a seven-day follow-up rather than a claimed pass.
+- PR #131 exact-head Site Ops Guard and Vercel checks passed. Merge, production verification and one-canonical crawl notification remain release gates.
