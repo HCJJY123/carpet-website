@@ -1,3 +1,4 @@
+import { sitemapLastModified } from "@/lib/sitemap-lastmod";
 import { NextResponse } from "next/server";
 import { countryApplicationPages } from "@/lib/country-application-pages";
 import { countryMarketPages } from "@/lib/country-market-pages";
@@ -17,7 +18,7 @@ export function GET() {
   ];
   const updatedMarketDates = new Map([...countryMarketPages, ...countryApplicationPages].filter((page) => page.updatedDate).map((page) => [page.path, page.updatedDate as string]));
   const body = urls
-    .map(({ path, priority }) => `  <url><loc>${escapeXml(`${BASE}${path}`)}</loc><lastmod>${updatedMarketDates.get(path) ?? "2026-08-19"}</lastmod><changefreq>monthly</changefreq><priority>${priority}</priority></url>`)
+    .map(({ path, priority }) => `  <url><loc>${escapeXml(`${BASE}${path}`)}</loc><lastmod>${sitemapLastModified(path, updatedMarketDates.get(path) ?? "2026-08-19")}</lastmod><changefreq>monthly</changefreq><priority>${priority}</priority></url>`)
     .join("\n");
 
   return new NextResponse(
