@@ -1,19 +1,30 @@
 {
-  "task": "Clarify Tokyo planning guide; draft PR and automatic Preview only",
-  "approvedBy": "Owner approved draft PR push and possible automatic Vercel Preview on 2026-11-03; no merge or production release",
+  "task": "Publish a commercial carpet protection and handover checklist with contextual internal links and one-time crawl notification",
+  "approvedBy": "Owner authorized the recurring integrated VCARPETS B2B growth implementation, feature-branch validation, Preview, PR, merge and production verification",
   "approvedCategories": [
-    "content"
+    "content",
+    "seo",
+    "conversion"
   ],
   "allowedPaths": [
     "ops/change-request.json",
-    "src/lib/data.ts",
-    "CHANGELOG_OPS.md"
+    "CHANGELOG_OPS.md",
+    "keyword-map.csv",
+    "ops/indexnow-urls.json",
+    "ops/commercial-carpet-protection-growth-20261105.md",
+    "src/lib/blog-data.ts",
+    "src/lib/blog-posts/commercial-carpet-protection-handover-checklist.ts",
+    "src/lib/blog-posts/commercial-carpet-preinstallation-meeting-checklist.ts",
+    "src/lib/blog-posts/commercial-carpet-project-closeout-checklist.ts",
+    "public/images/blog-series/commercial-carpet-protection-20261105/commercial-carpet-protection-handover-workflow.svg"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "041964d773d0463cdfd68e070067b23f28f59d1c",
+  "rollbackCommit": "2eacf977b75d874d28c3cfd8ad7c37987fda5a4d",
   "affectedUrls": [
-    "/projects/multi-floor-office-carpet-tiles-tokyo"
+    "/blog/commercial-carpet-protection-handover-checklist",
+    "/blog/commercial-carpet-preinstallation-meeting-checklist",
+    "/blog/commercial-carpet-project-closeout-checklist"
   ],
-  "notes": "Only case-5 planning wording; preserve routes, media, schema, forms and other records. Full local ops, lint, build and rendered checks passed. Draft PR and automatic Preview authorized; no merge or production deployment."
+  "notes": "Add one evidence-bounded English buyer guide, one exact planning SVG, two contextual reverse links and scoped release records. Preserve routes, product facts, forms, tracking and schema templates. No real inquiry, no invented performance limits or protection material promise. Merge only after local checks, Preview review and required PR checks pass. Notify only the new canonical after production verification."
 }

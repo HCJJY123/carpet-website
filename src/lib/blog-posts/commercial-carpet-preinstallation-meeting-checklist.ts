@@ -167,6 +167,16 @@ export const commercialCarpetPreinstallationMeetingChecklist: BlogPost = {
         },
         {
           type: "paragraph",
+          text: "Before the first completed zone is opened to later trades, use the commercial carpet protection and handover checklist to name the covering method, permitted traffic, inspection owner, removal trigger, final cleaning and acceptance authority.",
+          links: [
+            {
+              text: "commercial carpet protection and handover checklist",
+              href: "/blog/commercial-carpet-protection-handover-checklist",
+            },
+          ],
+        },
+        {
+          type: "paragraph",
           text: "Treat every doorway and floor boundary as a separate coordination item when levels, door movement, wheeled traffic or edge protection remain open. Use the commercial carpet floor transition planning checklist to assign a junction ID, compare the complete floor build-ups and record the approved detail before releasing the affected work.",
           links: [
             {
@@ -360,6 +370,10 @@ export const commercialCarpetPreinstallationMeetingChecklist: BlogPost = {
     {
       label: "Prepare the project closeout pack",
       href: "/blog/commercial-carpet-project-closeout-checklist",
+    },
+    {
+      label: "Control protection through final handover",
+      href: "/blog/commercial-carpet-protection-handover-checklist",
     },
     {
       label: "Compare commercial carpet products",
