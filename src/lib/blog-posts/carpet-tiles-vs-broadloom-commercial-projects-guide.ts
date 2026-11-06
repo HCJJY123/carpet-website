@@ -14,11 +14,11 @@ export const carpetTilesVsBroadloomCommercialProjectsGuide: BlogPost = {
   title: "Carpet Tiles vs Broadloom: A Commercial Project Buying Guide",
   subtitle: "Compare modular tiles and roll carpet by repair access, layout, installed scope and project evidence before asking suppliers to quote.",
   painPoint: "Two quotations can share a price unit while covering different quantities, installation systems and replacement plans. Choosing a format by the cheapest square-metre rate leaves those differences unresolved.",
-  seoTitle: "Carpet Tiles vs Broadloom: Buyer Comparison | VCARPETS",
-  description: "Compare carpet tiles vs broadloom for offices, hotels and cinemas: replacement, seams, quantities, installed costs and the information needed for a B2B quote.",
+  seoTitle: "Carpet Tiles vs Broadloom for Offices & Hotels",
+  description: "Compare carpet tiles vs broadloom for office and hotel projects: zones, layouts, replacement, quantities, evidence and inputs for a comparable B2B quote.",
   keywords: ["carpet tiles vs broadloom", "commercial carpet tiles vs broadloom carpet", "wall to wall carpet vs carpet tiles", "office carpet format comparison", "hotel carpet procurement", "carpet installed cost comparison"],
   date: "2026-08-17",
-  dateModified: "2026-10-17",
+  dateModified: "2026-11-07",
   author: "VCARPETS Technical Team",
   category: "Buying Guide",
   image: "/images/blog-series/reddit-hotel-office-carpet-decisions/hotel-office-carpet-comparison-summary.webp",
@@ -144,6 +144,20 @@ export const carpetTilesVsBroadloomCommercialProjectsGuide: BlogPost = {
       ],
     },
     {
+      title: "Office and Hotel Shortlists: Turn the Format Choice into a Quote Path",
+      paragraphs: [],
+      blocks: [
+        { type: "paragraph", text: "High-intent buyers usually need more than a definition of tile and broadloom. They need a product route, a zone decision and a list of evidence that can be checked before price. Use the two shortlists below to move from research to a comparable B2B request without assuming that every product in a category shares the same specifications." },
+        { type: "table", headers: ["Buyer situation", "Start with", "Keep open until evidence review", "VCARPETS path"], rows: [
+          ["Corporate office, coworking or raised-floor fit-out", "Commercial carpet tile category and named product", "Fibre, backing, fixing, chair use, access strategy, carton coverage and project documents", "Office carpet tile solution → product page → sample/RFQ"],
+          ["Hotel guestroom, corridor or ballroom", "Wall-to-wall category and hotel zone", "Construction, roll width, repeat, seam plan, sample route, required documents and project quantity", "Hotel hospitality solution → broadloom product → sample/RFQ"],
+          ["Mixed hotel or office refurbishment", "Zone schedule with separate format reasons", "Transition, floor build-up, phasing, retained material and installer responsibilities", "Comparison guide → both category routes → one coordinated RFQ"],
+        ], note: "The path organizes the inquiry. It does not approve a product, floor assembly or installation method." },
+        { type: "paragraph", text: "For an office shortlist, use the office carpet tile solution to record the proposed module, backing, layout, sample and quotation assumptions. For a hotel shortlist, use the hospitality solution to separate guestrooms, corridors, public areas and function rooms before selecting broadloom. Both routes lead to named products and the existing inquiry form instead of a generic request for the cheapest carpet.", links: [{ text: "office carpet tile solution", href: "/solutions/office-carpet-tiles-supplier" }, { text: "hospitality solution", href: "/solutions/hotel-hospitality" }] },
+        { type: "callout", label: "Quote qualification shortcut", text: "State the building use, area by zone, destination, drawing status, design reference, required documents and target site date. Ask the supplier to identify every assumption. This gives the sales and technical teams enough context to recommend a product route while leaving unverified values open." },
+      ],
+    },
+    {
       title: "A Mixed-Format Decision Example",
       paragraphs: [],
       blocks: [
@@ -180,7 +194,7 @@ export const carpetTilesVsBroadloomCommercialProjectsGuide: BlogPost = {
     },
     {
       title: "Source and Scope of This Guide",
-      paragraphs: ["Reviewed October 17, 2026. The linked CRI 104 commercial installation reference is the 2019-copyright PDF; its planning guidance is industry context, not evidence of VCARPETS certification. The comparison tables, budget worksheet, geometry illustration and mixed-format example are procurement aids prepared for this guide. Product-specific instructions, project documents and the agreed quotation take precedence for the actual order. No universal savings, service life, test rating or installation time is asserted."],
+      paragraphs: ["Reviewed November 7, 2026. The office and hotel quote-path section was expanded after a US desktop competitor-page review showed that buyers are commonly served through category, application and technical-decision pages rather than a single generic landing page. This is a content-architecture observation, not a ranking or traffic promise. The linked CRI 104 commercial installation reference is the 2019-copyright PDF; its planning guidance is industry context, not evidence of VCARPETS certification. The comparison tables, budget worksheet, geometry illustration and mixed-format example are procurement aids prepared for this guide. Product-specific instructions, project documents and the agreed quotation take precedence for the actual order. No universal savings, service life, test rating or installation time is asserted."],
     },
   ],
 };

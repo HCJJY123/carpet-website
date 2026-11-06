@@ -1774,3 +1774,13 @@ Release authorization: parent supplied the user's exact sitemap correctness inst
 - Local checks and Preview/production verification must pass before release is reported complete. Rollback base: 01b163c6a918d21bb70ca0a0b2b9e5bd126b14b0.
 - Local acceptance: exact 13-file ops guard, ESLint, SEO/link/asset/placeholder audits, TypeScript and one full production build passed. Explicit-loopback local server passed ops:verify and focused article/schema/four-image/reverse-link/CTA/sitemap checks (290 root URLs, 82 blog URLs, six FAQ entries). Default-host local start failed on environment network-interface enumeration; explicit 127.0.0.1 worked without application changes.
 - Image contact sheet inspected: four separate compositions; no fabricated certification, report or performance values. Formal desktop/mobile Preview QA remains a release gate.
+
+## 2026-11-07 — Semrush-led hotel broadloom and office carpet tile procurement paths
+
+- Uses current Semrush US desktop competitor-page evidence for Interface, Shaw Contract and Ege Carpets as demand and content-architecture input; all traffic, keyword and AI values remain third-party estimates, separate from VCARPETS Search Console and inquiries.
+- Rebuilds `/solutions/hotel-hospitality` around hotel zones, named product routes, physical samples, evidence, layout approval and a source-prefilled B2B FOB Tianjin inquiry. Removes unsupported category-wide ASTM/EN, material, gauge, width, wear-class, acoustic, MOQ and delivery claims.
+- Corrects `/solutions/office-carpet-tiles-supplier` so module, packing, backing, fixing, samples, MOQ and timing remain tied to the selected product and written quotation.
+- Substantively updates the complete English guide `/blog/carpet-tiles-vs-broadloom-commercial-projects-guide` with office and hotel product shortlists, quote paths and qualification inputs. Original publication date and permanent URL remain unchanged; modification date is 2026-11-07.
+- Reuses existing illustrative assets. No product record, form handler, tracking, API, dependency, schema template or new URL is introduced. Rollback base: `7c648c4599d2879ce233fe4017e290451c757036`.
+- Live HTML for all three indexed URLs was backed up before editing. Local, Preview, required CI, production and one-time notification receipts remain release gates at this checkpoint.
+- Local acceptance: exact-scope Site Ops Guard, zero-warning ESLint, SEO/link/asset/placeholder audits, TypeScript and the 226-page production build passed. Same-process local-origin verification passed all site checks; all three affected URLs rendered HTTP 200 with one H1, self-canonical, indexability, updated title/content, FAQ schema where applicable and encoded source/product inquiry context. No inquiry was sent.
