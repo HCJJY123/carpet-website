@@ -84,7 +84,7 @@ export const nylonUnderfloorHeatingApproval: BlogPost = {
         },
         {
           "type": "paragraph",
-          "text": "Start with the actual product reference and request the current technical data sheet and sample confirmation for the quoted construction. The catalogue is a starting point, not a substitute for project approval.",
+          "text": "Start with the actual product reference and request the current technical data sheet and sample confirmation for the quoted construction. The catalogue is a starting point, not a substitute for project approval. View the nylon office carpet tile.",
           "links": [
             {
               "text": "View the nylon office carpet tile",
@@ -200,7 +200,7 @@ export const nylonUnderfloorHeatingApproval: BlogPost = {
         },
         {
           "type": "paragraph",
-          "text": "Keep the broader site-readiness and bonding questions in the existing adhesive/subfloor review, while recording heating-specific conditions in this approval pack.",
+          "text": "Keep the broader site-readiness and bonding questions in the existing adhesive/subfloor review, while recording heating-specific conditions in this approval pack. Adhesive and subfloor compatibility guide.",
           "links": [
             {
               "text": "Adhesive and subfloor compatibility guide",
@@ -334,7 +334,7 @@ export const nylonUnderfloorHeatingApproval: BlogPost = {
         },
         {
           "type": "paragraph",
-          "text": "Use the existing enquiry route for a project-specific supply review, and bring unresolved heating items to the pre-installation meeting before the relevant release decision.",
+          "text": "Use the existing enquiry route for a project-specific supply review, and bring unresolved heating items to the pre-installation meeting before the relevant release decision. Request a nylon tile compatibility review; Pre-installation meeting checklist.",
           "links": [
             {
               "text": "Request a nylon tile compatibility review",
@@ -362,7 +362,7 @@ export const nylonUnderfloorHeatingApproval: BlogPost = {
         },
         {
           "type": "paragraph",
-          "text": "Consult the current manufacturer documents for the actual products and have the appointed project parties resolve the application.",
+          "text": "Consult the current manufacturer documents for the actual products and have the appointed project parties resolve the application. Forbo Tessera FAQ; Tarkett DESSO installation guide (2024 PDF); Shaw TaskWorx installation guidance; Public buyer question on radiant heating.",
           "links": [
             {
               "text": "Forbo Tessera FAQ",
