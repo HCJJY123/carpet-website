@@ -1,33 +1,24 @@
 {
-  "task": "Publish one product-linked nylon carpet tile underfloor-heating approval guide with four distinct concept illustrations",
-  "approvedBy": "User authorized assistant-selected publication after three topic options, four distinct images without AI labels, testing and normal release on 2026-11-06.",
-  "approvedCategories": [
-    "content",
-    "seo-global",
-    "documentation"
-  ],
+  "task": "Use current Semrush competitor-page evidence to strengthen the hotel broadloom and office carpet tile procurement paths and substantively update the existing tile-versus-broadloom buyer guide",
+  "approvedBy": "User explicitly requested Semrush-led competitor, high-intent keyword and high-traffic-page analysis for VCARPETS, prioritizing wall-to-wall hotel carpet and office carpet tiles on 2026-11-07.",
+  "approvedCategories": ["content", "seo-global", "documentation"],
   "allowedPaths": [
-    "src/lib/blog-posts/nylon-carpet-tiles-underfloor-heating-approval.ts",
-    "src/lib/blog-data.ts",
-    "src/lib/blog-posts/commercial-carpet-preinstallation-meeting-checklist.ts",
-    "src/lib/sitemap-lastmod.ts",
+    "src/app/solutions/hotel-hospitality/page.tsx",
+    "src/lib/solution-data.ts",
+    "src/lib/blog-posts/carpet-tiles-vs-broadloom-commercial-projects-guide.ts",
     "keyword-map.csv",
     "ops/indexnow-urls.json",
     "ops/change-request.json",
-    "ops/nylon-underfloor-heating-20261106.md",
-    "CHANGELOG_OPS.md",
-    "public/images/blog-series/nylon-underfloor-heating-20261106/1.webp",
-    "public/images/blog-series/nylon-underfloor-heating-20261106/2.webp",
-    "public/images/blog-series/nylon-underfloor-heating-20261106/3.webp",
-    "public/images/blog-series/nylon-underfloor-heating-20261106/4.webp"
+    "ops/semrush-hotel-office-carpet-growth-20261107.md",
+    "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "01b163c6a918d21bb70ca0a0b2b9e5bd126b14b0",
+  "rollbackCommit": "7c648c4599d2879ce233fe4017e290451c757036",
   "affectedUrls": [
-    "/blog/nylon-carpet-tiles-underfloor-heating-approval",
-    "/blog",
-    "/blog/commercial-carpet-preinstallation-meeting-checklist"
+    "/solutions/hotel-hospitality",
+    "/solutions/office-carpet-tiles-supplier",
+    "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide"
   ],
-  "notes": "No product performance claims, forms, tracking, dependencies, security or budget changes. Normal branch/Preview/PR workflow. Catalogue is not UFH approval."
+  "notes": "No new URL, form, tracking, API, dependency, product record or search-engine promise. Remove unsupported category-wide specifications and claims; preserve B2B FOB Tianjin positioning and existing inquiry handlers. Normal branch/Preview/PR workflow. Semrush values are third-party estimates, separate from VCARPETS GSC and inquiry data."
 }
