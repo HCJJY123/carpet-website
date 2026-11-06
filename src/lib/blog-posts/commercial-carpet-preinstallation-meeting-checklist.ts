@@ -350,7 +350,9 @@ export const commercialCarpetPreinstallationMeetingChecklist: BlogPost = {
     },
   ],
   faqs: preinstallationMeetingFaqs,
+  dateModified: "2026-11-06",
   suggestedLinks: [
+    { label: "Review nylon tiles over underfloor heating", href: "/blog/nylon-carpet-tiles-underfloor-heating-approval" },
     {
       label: "Review adhesive and subfloor compatibility",
       href: "/blog/commercial-carpet-tile-adhesive-subfloor-compatibility-guide",

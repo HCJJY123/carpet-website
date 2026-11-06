@@ -3,7 +3,7 @@
 const verifiedModifiedDates: Record<string, string> = {
   "/technical-documents": "2026-10-01",
   "/projects": "2026-10-01",
-  "/blog": "2026-11-05",
+  "/blog": "2026-11-06",
   "/certifications": "2026-10-01",
   "/privacy-policy": "2026-09-30",
   "/products/public-area": "2026-10-21",

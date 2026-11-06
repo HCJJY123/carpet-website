@@ -1764,3 +1764,13 @@ Rollback: `922fb225644d660a830fbcc24e41e35e0a08e014`. Public audit backup: 289 G
 Local acceptance: three regression groups passed, proving all 289 root loc entries and seven split-map URL/frequency/priority/header sets remain unchanged and every overlapping date now agrees. Site Ops Guard and ESLint passed with zero code errors/warnings. One Next.js 16.2.9 production build and TypeScript check passed (226 generated pages); no second build was run. Local HTTP ops verification and eight-endpoint XML comparison passed, with root count 289 and zero split/root date mismatches. An initial cross-command localhost check could not reach the server; running the server and check in the same command resolved the environment lifecycle issue without changing application code. No real inquiry or search-engine submission was made. This remains a local candidate, not production completion.
 
 Release authorization: parent supplied the user's exact sitemap correctness instruction and authorized one branch push/Preview, normal PR merge and production verification within the user-approved US$53 team budget (parent's current budget record: US$48.21 used at 09:43 UTC). Latest main remains the rollback SHA; the verified Vercel project `prj_W2oIVAQd3PkX1jP8cfKKyeOmI6xI` maps HCJJY123/carpet-website to www.vcarpets.com. No budget setting is changed. Preview/CI and production acceptance remain pending.
+
+
+## 2026-11-06 — Nylon tile underfloor-heating approval guide
+
+- Added one original product-linked English guide and four distinct concept illustrations. No universal UFH suitability, temperature, TOG or energy-saving claim.
+- Added one contextual reverse link, exact publication/modification dates, keyword ownership and one-new-URL notification manifest.
+- Preserved product records, forms, metadata templates, domain configuration and all unrelated content.
+- Local checks and Preview/production verification must pass before release is reported complete. Rollback base: 01b163c6a918d21bb70ca0a0b2b9e5bd126b14b0.
+- Local acceptance: exact 13-file ops guard, ESLint, SEO/link/asset/placeholder audits, TypeScript and one full production build passed. Explicit-loopback local server passed ops:verify and focused article/schema/four-image/reverse-link/CTA/sitemap checks (290 root URLs, 82 blog URLs, six FAQ entries). Default-host local start failed on environment network-interface enumeration; explicit 127.0.0.1 worked without application changes.
+- Image contact sheet inspected: four separate compositions; no fabricated certification, report or performance values. Formal desktop/mobile Preview QA remains a release gate.

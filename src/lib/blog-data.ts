@@ -1,3 +1,4 @@
+import { nylonUnderfloorHeatingApproval } from "@/lib/blog-posts/nylon-carpet-tiles-underfloor-heating-approval";
 import { afterHoursOfficeGuide } from "@/lib/blog-posts/after-hours-office-guide";
 import { commercialCarpetProtectionHandoverChecklist } from "@/lib/blog-posts/commercial-carpet-protection-handover-checklist";
 import { commercialCarpetFloorTransitionPlanningChecklist } from "@/lib/blog-posts/commercial-carpet-floor-transition-planning-checklist";
@@ -107,6 +108,7 @@ export interface BlogPost {
 }
 
 const baseBlogPosts: BlogPost[] = [
+  nylonUnderfloorHeatingApproval,
   afterHoursOfficeGuide,
   commercialCarpetProtectionHandoverChecklist,
   commercialCarpetFloorTransitionPlanningChecklist,
