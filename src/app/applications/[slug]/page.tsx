@@ -76,6 +76,19 @@ export default async function ApplicationDetailPage({ params }: Props) {
             <Link href={`/contact?application=${encodeURIComponent(page.title)}#quote-form`} className="btn-fox-orange text-center">Request Project Quotation</Link>
             <Link href="/resources/technical-library" className="btn-fox-outline text-center">Technical Library</Link>
           </div>
+          {page.decisionLinks?.length ? (
+            <div className="mt-10 border-t border-border pt-8">
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-accent">Procurement Guides</p>
+              <h2 className="mt-3 text-2xl font-black text-primary">Prepare the ballroom RFQ and approval record</h2>
+              <div className="mt-5 grid gap-3 md:grid-cols-3">
+                {page.decisionLinks.map((link) => (
+                  <Link key={link.href} href={link.href} className="rounded-md border border-border bg-white p-5 text-sm font-black text-primary transition hover:border-accent hover:text-accent">
+                    {link.label} →
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </div>
       </section>
     </main>

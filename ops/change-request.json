@@ -1,24 +1,23 @@
 {
-  "task": "Use current Semrush competitor-page evidence to strengthen the hotel broadloom and office carpet tile procurement paths and substantively update the existing tile-versus-broadloom buyer guide",
-  "approvedBy": "User explicitly requested Semrush-led competitor, high-intent keyword and high-traffic-page analysis for VCARPETS, prioritizing wall-to-wall hotel carpet and office carpet tiles on 2026-11-07.",
+  "task": "Add an evidence-bounded hotel ballroom carpet RFQ and production-release guide, connect it from the existing ballroom application page, and preserve the 2026-11-07 Semrush-led hotel and office pages during their observation window",
+  "approvedBy": "User explicitly requested integrated VCARPETS B2B growth implementation and a complete English buying article, with hotel wall-to-wall carpet as a priority product, on 2026-11-08.",
   "approvedCategories": ["content", "seo-global", "documentation"],
   "allowedPaths": [
-    "src/app/solutions/hotel-hospitality/page.tsx",
-    "src/lib/solution-data.ts",
-    "src/lib/blog-posts/carpet-tiles-vs-broadloom-commercial-projects-guide.ts",
+    "src/lib/blog-posts/hotel-ballroom-carpet-rfq-checklist.ts",
+    "src/lib/blog-data.ts",
+    "src/lib/application-data.ts",
+    "src/app/applications/[slug]/page.tsx",
     "keyword-map.csv",
-    "ops/indexnow-urls.json",
     "ops/change-request.json",
-    "ops/semrush-hotel-office-carpet-growth-20261107.md",
+    "ops/hotel-ballroom-rfq-growth-20261108.md",
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "7c648c4599d2879ce233fe4017e290451c757036",
+  "rollbackCommit": "9d470a0f94ff4d17dacdceddeef064b8656e6481",
   "affectedUrls": [
-    "/solutions/hotel-hospitality",
-    "/solutions/office-carpet-tiles-supplier",
-    "/blog/carpet-tiles-vs-broadloom-commercial-projects-guide"
+    "/blog/hotel-ballroom-carpet-rfq-checklist",
+    "/applications/hotel-ballroom"
   ],
-  "notes": "No new URL, form, tracking, API, dependency, product record or search-engine promise. Remove unsupported category-wide specifications and claims; preserve B2B FOB Tianjin positioning and existing inquiry handlers. Normal branch/Preview/PR workflow. Semrush values are third-party estimates, separate from VCARPETS GSC and inquiry data."
+  "notes": "No product record, form handler, tracking, API, dependency, crawler or global schema behavior changes. Product facts remain construction-specific or project-confirmed. Normal branch, Preview and PR workflow. Semrush session is expired on 2026-11-08; no current Semrush number is invented, and the prior 2026-11-07 US desktop estimate remains third-party evidence only."
 }

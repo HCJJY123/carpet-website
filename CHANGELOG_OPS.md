@@ -1784,3 +1784,13 @@ Release authorization: parent supplied the user's exact sitemap correctness inst
 - Reuses existing illustrative assets. No product record, form handler, tracking, API, dependency, schema template or new URL is introduced. Rollback base: `7c648c4599d2879ce233fe4017e290451c757036`.
 - Live HTML for all three indexed URLs was backed up before editing. Local, Preview, required CI, production and one-time notification receipts remain release gates at this checkpoint.
 - Local acceptance: exact-scope Site Ops Guard, zero-warning ESLint, SEO/link/asset/placeholder audits, TypeScript and the 226-page production build passed. Same-process local-origin verification passed all site checks; all three affected URLs rendered HTTP 200 with one H1, self-canonical, indexability, updated title/content, FAQ schema where applicable and encoded source/product inquiry context. No inquiry was sent.
+
+## 2026-11-08 — Hotel ballroom carpet RFQ checklist candidate
+
+- Adds one complete English B2B guide at `/blog/hotel-ballroom-carpet-rfq-checklist` for ballroom zones, current drawings, construction selection, artwork and sample scope, roll direction and seams, transparent quantity, construction-matched evidence, packing, FOB Tianjin quotation inputs and controlled production release.
+- Adds a contextual procurement-guide module only to `/applications/hotel-ballroom`; other application pages keep their existing content.
+- Reuses the existing 1536 × 1024 ballroom application image with an explicit illustrative-evidence caption. No generated product, factory, certificate, sample, TDS, test or client evidence is added.
+- The specified Semrush entry showed an expired login on 2026-11-08. No current Semrush metric is invented. The 2026-11-07 US desktop competitor estimates remain third-party context and are kept separate from unavailable VCARPETS GSC and inquiry data.
+- No product record, form handler, tracking, API, dependency, crawler rule or global schema behavior is changed. No universal rating, waste percentage, MOQ, price, sample format, production time or certification is claimed.
+- Branch `content/hotel-ballroom-rfq-20261108`; rollback `9d470a0f94ff4d17dacdceddeef064b8656e6481`. Full evidence, scoring, link map, image decision and measurement plan: `ops/hotel-ballroom-rfq-growth-20261108.md`.
+- Local checks, exact-head Preview, PR checks, production approval, production verification and one-time indexing decision remain distinct gates. No real inquiry or search notification is sent.

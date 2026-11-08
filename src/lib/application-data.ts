@@ -12,6 +12,7 @@ export type ApplicationPage = {
   productIds: string[];
   buyingChecks: string[];
   riskNotes: string[];
+  decisionLinks?: { label: string; href: string }[];
 };
 
 export const applicationPages: ApplicationPage[] = [
@@ -66,6 +67,11 @@ export const applicationPages: ApplicationPage[] = [
     productIds: ["3d-printed-banquet-hall-carpet", "luxury-hotel-broadloom", "3d-printed-hotel-carpet"],
     buyingChecks: ["Approve artwork and sample", "Confirm large-area roll plan", "Review event cleaning", "Coordinate installation schedule"],
     riskNotes: ["Pattern scale should be reviewed at room size.", "Schedule changes can affect production and shipping.", "Final specification must match the approved construction."],
+    decisionLinks: [
+      { label: "Hotel ballroom carpet RFQ checklist", href: "/blog/hotel-ballroom-carpet-rfq-checklist" },
+      { label: "Pattern repeat and seam planning", href: "/blog/printed-broadloom-pattern-repeat-seam-planning" },
+      { label: "Hotel carpet procurement documents", href: "/blog/hotel-carpet-procurement-documents-checklist" },
+    ],
   },
   {
     slug: "public-space",
