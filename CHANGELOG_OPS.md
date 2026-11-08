@@ -1794,3 +1794,8 @@ Release authorization: parent supplied the user's exact sitemap correctness inst
 - No product record, form handler, tracking, API, dependency, crawler rule or global schema behavior is changed. No universal rating, waste percentage, MOQ, price, sample format, production time or certification is claimed.
 - Branch `content/hotel-ballroom-rfq-20261108`; rollback `9d470a0f94ff4d17dacdceddeef064b8656e6481`. Full evidence, scoring, link map, image decision and measurement plan: `ops/hotel-ballroom-rfq-growth-20261108.md`.
 - Local checks, exact-head Preview, PR checks, production approval, production verification and one-time indexing decision remain distinct gates. No real inquiry or search notification is sent.
+
+
+## 2026-11-08 — AI search procurement examples
+
+Added a worked 50×50 tile count, a 4 m printed broadloom cut example and a like-for-like hotel carpet quotation comparison to three existing product pages. Example allowances are labelled assumptions; no new performance, price, case or certification claims. Existing product metadata, inquiry handlers and URL structure are preserved. Rollback base: f2c3eb9c43c1008ef5de1c563d6f973b21195590. Validation and release evidence are recorded in the associated PR.

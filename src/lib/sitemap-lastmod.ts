@@ -1,6 +1,7 @@
 // Verified content dates only; evidence: ops/sitemap-lastmod-evidence-20261105.json.
 // This registry changes metadata, never sitemap membership or canonical URLs.
 const verifiedModifiedDates: Record<string, string> = {
+  "/products/carpet-tiles/nylon-office-carpet-tile": "2026-11-08",
   "/technical-documents": "2026-10-01",
   "/projects": "2026-10-01",
   "/blog": "2026-11-06",
@@ -8,8 +9,8 @@ const verifiedModifiedDates: Record<string, string> = {
   "/privacy-policy": "2026-09-30",
   "/products/public-area": "2026-10-21",
   "/products/carpet-tiles/staggered-block-pp-office-carpet-tiles": "2026-10-25",
-  "/products/wall-to-wall/luxury-hotel-broadloom": "2026-10-22",
-  "/products/wall-to-wall/3d-printed-hotel-carpet": "2026-10-22",
+  "/products/wall-to-wall/luxury-hotel-broadloom": "2026-11-08",
+  "/products/wall-to-wall/3d-printed-hotel-carpet": "2026-11-08",
   "/products/wall-to-wall/custom-luxury-hotel-room-carpet": "2026-10-22",
   "/products/wall-to-wall/3d-printed-banquet-hall-carpet": "2026-10-22",
   "/products/wall-to-wall/glitter-hotel-corridor-broadloom-carpet": "2026-10-22",
