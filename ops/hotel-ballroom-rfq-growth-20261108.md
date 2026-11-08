@@ -6,7 +6,7 @@
 - Baseline main and rollback: `9d470a0f94ff4d17dacdceddeef064b8656e6481` (PR #134). The worktree was clean before this branch.
 - Branch: `content/hotel-ballroom-rfq-20261108`.
 - Existing production HTML for `/applications/hotel-ballroom` and `/solutions/hotel-hospitality` was saved outside the repository before edits. The hotel solution page was reviewed and kept unchanged during its 2026-11-07 observation window.
-- Current state at this record: code complete on the feature branch; local checks in progress. No Preview, PR, production deployment, indexing notification, Search Console index status or inquiry result is claimed.
+- Current state at closeout: code complete on the feature branch and published as draft PR #135. Vercel Preview is READY; production merge, production deployment, indexing notification, Search Console index status and inquiry results are not claimed.
 
 ## Data access and evidence boundary
 
@@ -119,7 +119,12 @@ Local acceptance results:
 - Focused rendered checks passed: HTTP access, one H1, title, self-canonical, indexability, Article/Breadcrumb/FAQ JSON-LD, six schema-matched FAQs, hero alt, encoded product/source RFQ parameters, Blog listing, Blog sitemap membership and ballroom application reverse link.
 - The representative unchanged `/applications/office` page did not render the ballroom-only procurement module.
 - The reused hero file is 1536 × 1024 WebP and is rendered with its actual 3:2 aspect ratio.
-- No inquiry was sent. A Preview and desktop/mobile visual inspection remain required before any production approval request.
+- Draft PR: https://github.com/HCJJY123/carpet-website/pull/135, head `34b791bee2f9b0091a77164906389abeb93077f4` at the time of the first Preview inspection. GitHub reported the PR mergeable and kept it in draft status.
+- GitHub Actions Site Ops Guard run `42433361523` completed successfully. The Vercel commit status was successful.
+- Vercel Preview `dpl_FpcCA7wrQr7q3akXACGU3nJpHJZm` reached READY for that exact head: https://carpet-website-5g00vy7wt-mike123-s-projects.vercel.app
+- Desktop Preview inspection passed the article hero, title, opening content, comparison and release tables, source links, CTA visibility and the ballroom application procurement-links module. The cookie panel could be dismissed without blocking the page.
+- A true narrow mobile viewport was not available in the connected browser. Responsive CSS, rendered DOM, build output and CTA parameters were checked, but mobile visual acceptance remains pending and must not be reported as completed.
+- No inquiry was sent.
 
 Release status must distinguish local code, Preview, PR, production, crawlability, index status and inquiries. This new production scope is not preapproved in the growth board. After a verified feature branch and Preview, it must remain a candidate for approval; no merge, production claim or search notification is allowed without the applicable approval.
 
