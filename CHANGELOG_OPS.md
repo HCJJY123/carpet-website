@@ -1807,3 +1807,12 @@ Added a worked 50×50 tile count, a 4 m printed broadloom cut example and a like
 - Scope: shared footer and WhatsApp contact paths across all VCARPETS pages. No URL, product, form, email, dependency or deployment configuration changes.
 - Rollback baseline: 7f100f21c828a8aff5fd585294d620880ded9e41. Revert this PR if required.
 - Validation: QR round-trip decode passed; required source checks, build and Preview conversion/layout checks recorded with the PR.
+
+## 2026-11-12 — WhatsApp RFQ drafts and page attribution
+- User requested preset wording like the supplied WhatsApp screenshot and InflatCustom, across all three specified sites.
+- VCARPETS drafts now include application, carpet construction, area/quantity, dimensions, material/backing, design, destination, delivery date and sample/document needs. Existing custom request text is retained.
+- All shared contact links carry Source, Page, Intent and URL. Client enhancement refreshes current-page context before native navigation and works independently of optional analytics consent.
+- The footer uses a new versioned QR asset pointing to /api/whatsapp. That static 307 utility prepares a full draft with website/QR attribution; a static QR does not claim to know the precise page it was scanned from.
+- Receiver remains +86 188 3027 8977. No form/email delivery, indexed content, canonical, schema, sitemap, robots, dependency or tracking behavior changes.
+- Rollback baseline: 312a38efbf5fa59cb3f2698bf568d377b27bd9bb. Use PR revert if needed.
+- Validation: contact-path regression tests, scope guard, lint/build, short QR decode, Preview attribution/redirect and production checks are recorded with this change's PR. No real messages or inquiries are sent during QA.

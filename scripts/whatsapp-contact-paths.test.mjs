@@ -33,6 +33,8 @@ test("WhatsApp from header, product, contact and floating actions opens the conf
     assert.equal(url.pathname, `/${brandInfo.whatsapp.replace(/\D/g, "")}`);
     assert.equal(url.searchParams.has("wa_message"), false);
     assert.match(url.searchParams.get("text"), /Please review my project\./);
+    assert.match(url.searchParams.get("text"), /Carpet type \/ construction:/);
+    assert.match(url.searchParams.get("text"), new RegExp(`Source: ${placement}`));
   }
 });
 
@@ -42,12 +44,27 @@ test("multilingual product and quotation context survive URL encoding without be
   const url = new URL(getContactBridgeUrl(message, context));
   assert.deepEqual([...url.searchParams.keys()], ["text"]);
   const text = url.searchParams.get("text");
-  assert.ok(text.startsWith(message));
+  assert.ok(text.startsWith("Hello VCARPETS,"));
+  assert.ok(text.includes(message));
   for (const value of Object.values(context)) assert.ok(text.includes(value));
 });
 
 test("legacy bridge destination and new direct destination share the same business and message", () => {
   const context = { product: "Cinema carpet", placement: "contact_bridge", pagePath: "/contact" };
   assert.equal(getContactBridgeUrl("Hello", context), getWhatsAppBusinessUrl("Hello", context));
-  assert.equal(new URL(getContactBridgeUrl("Hello")).searchParams.get("text"), "Hello");
+  assert.match(new URL(getContactBridgeUrl("Hello")).searchParams.get("text"), /Area \/ quantity \(m² \/ pcs\):/);
+});
+
+test("refreshing a draft keeps buyer details, replaces attribution once, and excludes unrelated query values", () => {
+  const initial = new URL(getContactBridgeUrl("Please review sample & backing options.", { quantity: "800 m²", placement: "footer_whatsapp_qr" })).searchParams.get("text");
+  const context = { placement: "header", pageTitle: "Romania Office Carpet Tiles | VCARPETS", pageUrl: "https://www.vcarpets.com/markets/ro/office-carpet-tiles?utm_source=chatgpt.com&email=private-value", intent: "project_quote" };
+  const refreshed = new URL(getContactBridgeUrl(initial, context)).searchParams.get("text");
+  assert.equal((refreshed.match(/--- Attribution ---/g) || []).length, 1);
+  assert.match(refreshed, /Area \/ quantity \(m² \/ pcs\): 800 m²/);
+  assert.match(refreshed, /Destination country \/ port: Romania/);
+  assert.match(refreshed, /Source: header/);
+  assert.match(refreshed, /Campaign: utm_source=chatgpt.com/);
+  assert.ok(!refreshed.includes("private-value"));
+  assert.ok(!refreshed.includes("Source: footer_whatsapp_qr"));
+  assert.equal(new URL(getContactBridgeUrl(refreshed, context)).searchParams.get("text"), refreshed);
 });
