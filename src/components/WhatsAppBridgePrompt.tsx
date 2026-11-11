@@ -21,7 +21,7 @@ function WhatsAppBridgePromptContent() {
   const message = searchParams.get("wa_message")?.trim();
   const product = searchParams.get("product")?.trim();
   const whatsapp = isValidWhatsAppUrl(legacyWhatsapp)
-    ? legacyWhatsapp
+    ? getWhatsAppBusinessUrl(new URL(legacyWhatsapp!).searchParams.get("text") || message || "Hello VCARPETS, I would like to discuss my commercial carpet project.", { placement: "contact_bridge", product: product || undefined, pagePath: "/contact" })
     : message
       ? getWhatsAppBusinessUrl(message, {
           placement: searchParams.get("placement") || "contact_bridge",

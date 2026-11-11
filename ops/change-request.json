@@ -1,27 +1,31 @@
 {
-  "task": "Add construction-specific quantity and quotation examples to three existing office and hotel product pages for AI-search and B2B procurement usefulness.",
-  "approvedBy": "User explicitly requested a systematic four-site AI-search growth plan, immediate initial implementation and production publication on 2026-11-08.",
+  "task": "Unify VCARPETS WhatsApp as +8618830278977 and add a clickable, scannable footer QR matching InflatCustom.",
+  "approvedBy": "User explicitly requested on 2026-11-12 to update WhatsApp information across inflatcraft.com, visfurn.com and vcarpets.com and supplied https://wa.me/qr/XRN7YC4EDIGKD1 plus its matching QR.",
   "approvedCategories": [
     "content",
     "documentation",
-    "seo-global"
+    "navigation",
+    "conversion"
   ],
   "allowedPaths": [
-    "src/components/CarpetQuantityExample.tsx",
-    "src/app/products/carpet-tiles/nylon-office-carpet-tile/page.tsx",
-    "src/app/products/wall-to-wall/3d-printed-hotel-carpet/page.tsx",
-    "src/app/products/wall-to-wall/luxury-hotel-broadloom/page.tsx",
+    "src/components/Footer.tsx",
+    "src/components/WhatsAppBridgePrompt.tsx",
+    "src/lib/data.ts",
+    "public/images/contact/whatsapp-rose-qr-20261112.svg",
+    "public/llms.txt",
+    "public/llms-full.txt",
+    "public/ai-sources.json",
     "ops/change-request.json",
-    "CHANGELOG_OPS.md",
-    "src/lib/sitemap-lastmod.ts"
+    "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "f2c3eb9c43c1008ef5de1c563d6f973b21195590",
+  "rollbackCommit": "7f100f21c828a8aff5fd585294d620880ded9e41",
   "affectedUrls": [
+    "/",
+    "/contact",
     "/products/carpet-tiles/nylon-office-carpet-tile",
-    "/products/wall-to-wall/3d-printed-hotel-carpet",
-    "/products/wall-to-wall/luxury-hotel-broadloom"
+    "All pages using the shared footer, WhatsApp helpers, header and floating CTA"
   ],
-  "notes": "Preserve URL, metadata, schemas, product records, categories, forms, tracking, infrastructure and images. Calculations are explicitly illustrative, not product performance or delivery claims. Reuse existing supplement interface. Feature branch, Preview, checks, PR then production. Update only the three changed pages in the existing content-date registry; preserve sitemap membership and generation logic."
+  "notes": "Preserve separate phone/WeChat, email, forms, tracking, content, URLs and SEO behavior. QR encodes the exact supplied contact link; all WhatsApp chat CTAs use the new number. Normalize bookmarked legacy WhatsApp links to the new business number. Verify app/web landing paths without sending messages. Feature branch, required checks, Vercel Preview and PR before merge."
 }

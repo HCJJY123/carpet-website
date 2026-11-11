@@ -15,6 +15,12 @@
     "url": "https://www.vcarpets.com",
     "email": "sales@vcarpets.com",
     "telephone": "+86 152 2288 5400",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "WhatsApp sales support",
+      "telephone": "+86 188 3027 8977",
+      "url": "https://wa.me/8618830278977"
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Cuihuangkou Town, Wuqing District",
