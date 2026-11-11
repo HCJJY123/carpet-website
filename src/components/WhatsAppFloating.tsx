@@ -19,10 +19,13 @@ export default function WhatsAppFloating() {
       const previous = originalLinks.current.get(anchor);
       const original = previous && previous.applied === anchor.href ? previous.original : anchor.href;
       const message = new URL(original).searchParams.get('text') || '';
+      const attribution = message.split('\n\n--- Attribution ---\n')[1] || '';
+      const originalPlacement = attribution.match(/^Source: (.+)$/m)?.[1];
+      const originalIntent = attribution.match(/^Intent: (.+)$/m)?.[1];
       const product = anchor.dataset.whatsappProduct || (pathname.split('/').filter(Boolean).length >= 3 && pathname.startsWith('/products/') ? document.querySelector('h1')?.textContent?.trim() : '') || '';
       anchor.href = getContactBridgeUrl(message, {
-        placement: anchor.dataset.whatsappPlacement || (anchor.closest('footer') ? 'footer_whatsapp' : 'website_whatsapp'),
-        intent: anchor.dataset.whatsappIntent || 'request_project_quote',
+        placement: anchor.dataset.whatsappPlacement || originalPlacement || (anchor.closest('footer') ? 'footer_whatsapp' : 'website_whatsapp'),
+        intent: anchor.dataset.whatsappIntent || originalIntent || 'request_project_quote',
         product,
         pageUrl: window.location.href,
         pageTitle: document.title,
