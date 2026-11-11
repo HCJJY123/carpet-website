@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { isLocalizedCampaignPath } from "@/lib/localized-paths";
 import { getContactBridgeUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
@@ -8,7 +8,39 @@ import { getContactBridgeUrl, whatsappBusinessMessages } from "@/lib/whatsapp";
 export default function WhatsAppFloating() {
   const pathname = usePathname();
   const [showMobileCta, setShowMobileCta] = useState(false);
+  const originalLinks = useRef(new WeakMap<HTMLAnchorElement, { original: string; applied: string }>());
   const isContactPath = pathname === "/contact" || pathname.startsWith("/contact/");
+
+  // Preparing a draft is a contact feature and works without optional analytics.
+  useEffect(() => {
+    const update = (anchor: HTMLAnchorElement) => {
+      const current = new URL(anchor.href, window.location.origin);
+      if (current.origin !== 'https://wa.me' || current.pathname !== '/8618830278977') return;
+      const previous = originalLinks.current.get(anchor);
+      const original = previous && previous.applied === anchor.href ? previous.original : anchor.href;
+      const message = new URL(original).searchParams.get('text') || '';
+      const attribution = message.split('\n\n--- Attribution ---\n')[1] || '';
+      const originalPlacement = attribution.match(/^Source: (.+)$/m)?.[1];
+      const originalIntent = attribution.match(/^Intent: (.+)$/m)?.[1];
+      const product = anchor.dataset.whatsappProduct || (pathname.split('/').filter(Boolean).length >= 3 && pathname.startsWith('/products/') ? document.querySelector('h1')?.textContent?.trim() : '') || '';
+      anchor.href = getContactBridgeUrl(message, {
+        placement: anchor.dataset.whatsappPlacement || originalPlacement || (anchor.closest('footer') ? 'footer_whatsapp' : 'website_whatsapp'),
+        intent: anchor.dataset.whatsappIntent || originalIntent || 'request_project_quote',
+        product,
+        pageUrl: window.location.href,
+        pageTitle: document.title,
+      });
+      originalLinks.current.set(anchor, { original, applied: anchor.href });
+    };
+    const prepare = (event: Event) => {
+      const anchor = event.target instanceof Element ? event.target.closest('a') : null;
+      if (anchor instanceof HTMLAnchorElement) update(anchor);
+    };
+    document.querySelectorAll<HTMLAnchorElement>('a[href*="wa.me/"]').forEach(update);
+    const events = ['pointerdown', 'focusin', 'click', 'auxclick'];
+    events.forEach(name => document.addEventListener(name, prepare, true));
+    return () => events.forEach(name => document.removeEventListener(name, prepare, true));
+  }, [pathname]);
 
   useEffect(() => {
     const updateVisibility = () => {

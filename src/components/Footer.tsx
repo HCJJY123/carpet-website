@@ -6,13 +6,14 @@ import CookiePreferencesLink from "@/components/CookiePreferencesLink";
 
 export default function Footer() {
   const footerWhatsAppUrl = getContactBridgeUrl(
-    "Hello VCARPETS, I would like to share my commercial carpet project details. Please help with price, MOQ, samples, lead time, and technical documents.",
+    "",
     {
       placement: "footer_support",
       intent: "footer_project_inquiry",
-      pagePath: "footer",
+      pagePath: "/",
     }
   );
+  const footerQrUrl = getContactBridgeUrl('', { placement: 'footer_whatsapp_qr', intent: 'request_project_quote', pagePath: '/' });
 
   return (
     <footer className="bg-[#102A43] text-white mt-auto">
@@ -105,8 +106,8 @@ export default function Footer() {
                   <span>WhatsApp: <span dir="ltr">{brandInfo.whatsapp}</span></span>
                 </a>
                 <div>
-                  <a href={brandInfo.whatsappContactUrl} target="_blank" rel="noopener noreferrer" data-whatsapp-placement="footer_whatsapp_qr" data-whatsapp-intent="footer_project_inquiry" className="block h-36 w-36 overflow-hidden rounded-xl border border-white/20 bg-white p-1 transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366]" aria-label="Scan or click to chat with Rose on WhatsApp">
-                    <Image src="/images/contact/whatsapp-rose-qr-20261112.svg" alt="WhatsApp contact QR code for Rose" width={296} height={296} className="h-full w-full object-contain" unoptimized />
+                  <a href={footerQrUrl} target="_blank" rel="noopener noreferrer" data-whatsapp-placement="footer_whatsapp_qr" data-whatsapp-intent="footer_project_inquiry" className="block h-36 w-36 overflow-hidden rounded-xl border border-white/20 bg-white p-1 transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366]" aria-label="Scan or click to chat with Rose on WhatsApp">
+                    <Image src="/images/contact/whatsapp-quote-qr-20261112.svg" alt="WhatsApp contact QR code for Rose" width={360} height={360} className="h-full w-full object-contain" unoptimized />
                   </a>
                   <p className="mt-3 max-w-44 text-[10px] font-bold uppercase leading-relaxed tracking-wider text-gray-300">Scan or click to chat with Rose</p>
                 </div>
