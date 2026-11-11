@@ -18,7 +18,7 @@ export const brandInfo = {
   email: "sales@vcarpets.com",
   phone: "+86 152 2288 5400",
   whatsapp: "+86 188 3027 8977",
-  whatsappContactUrl: "https://wa.me/qr/XRN7YC4EDIGKD1",
+  whatsappContactUrl: "https://wa.me/8618830278977",
   wechat: "8615222885400",
   address: "Cuihuangkou Town, Wuqing District, Tianjin 301700, China",
   stats: { area: "50,000㎡", employees: "900+", markets: "45+", experience: "Since 2005" }

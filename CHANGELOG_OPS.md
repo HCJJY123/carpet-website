@@ -1801,7 +1801,7 @@ Release authorization: parent supplied the user's exact sitemap correctness inst
 Added a worked 50×50 tile count, a 4 m printed broadloom cut example and a like-for-like hotel carpet quotation comparison to three existing product pages. Example allowances are labelled assumptions; no new performance, price, case or certification claims. Existing product metadata, inquiry handlers and URL structure are preserved. Rollback base: f2c3eb9c43c1008ef5de1c563d6f973b21195590. Validation and release evidence are recorded in the associated PR.
 
 ## 2026-11-12 — WhatsApp contact and footer QR
-- User-authorized contact: +86 188 3027 8977 (Rose); QR: https://wa.me/qr/XRN7YC4EDIGKD1, decoded against the supplied image.
+- User-authorized contact: +86 188 3027 8977 (Rose); QR: https://wa.me/8618830278977. The supplied contact QR was decoded but is app-only; the number-based QR supports app/web handoff.
 - Updated shared WhatsApp configuration and legacy contact bridge; preserved prefilled inquiry messages and existing tracking. Added a clickable 144px white footer QR with an accessible label, visible number and scan/click instruction.
 - Updated WhatsApp references in AI source files; separate telephone and WeChat retained.
 - Scope: shared footer and WhatsApp contact paths across all VCARPETS pages. No URL, product, form, email, dependency or deployment configuration changes.
