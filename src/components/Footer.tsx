@@ -100,6 +100,16 @@ export default function Footer() {
               </li>
               <li className="flex flex-col gap-3">
                 <span className="text-xs font-bold uppercase tracking-[0.08em] text-accent">Chat & Project Inquiry</span>
+                <a href={footerWhatsAppUrl} target="_blank" rel="noopener noreferrer" data-whatsapp-placement="footer_number" data-whatsapp-intent="footer_project_inquiry" className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-white hover:text-[#25D366] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4" aria-label="Chat with Rose on WhatsApp">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" className="shrink-0 text-[#25D366]" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9.4 9.4 0 0 1-4-.9L3 21l1.9-5.5A9.4 9.4 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z" /></svg>
+                  <span>WhatsApp: <span dir="ltr">{brandInfo.whatsapp}</span></span>
+                </a>
+                <div>
+                  <a href={brandInfo.whatsappContactUrl} target="_blank" rel="noopener noreferrer" data-whatsapp-placement="footer_whatsapp_qr" data-whatsapp-intent="footer_project_inquiry" className="block h-36 w-36 overflow-hidden rounded-xl border border-white/20 bg-white p-1 transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366]" aria-label="Scan or click to chat with Rose on WhatsApp">
+                    <Image src="/images/contact/whatsapp-rose-qr-20261112.svg" alt="WhatsApp contact QR code for Rose" width={296} height={296} className="h-full w-full object-contain" unoptimized />
+                  </a>
+                  <p className="mt-3 max-w-44 text-[10px] font-bold uppercase leading-relaxed tracking-wider text-gray-300">Scan or click to chat with Rose</p>
+                </div>
                 <a
                   href={footerWhatsAppUrl}
                   target="_blank"
