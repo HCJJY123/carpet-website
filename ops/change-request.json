@@ -1,44 +1,23 @@
 {
-  "task": "Optimize VCARPETS page and image loading across the existing homepage, product, category, project and article pages.",
-  "approvedBy": "User on 2026-11-12 explicitly requested unified webpage and image speed optimization for inflatcustom and vcarpets; existing authorization permits reversible performance fixes, preview validation and production release.",
+  "task": "Deepen the existing office carpet tile renovation guide into an order-ready RFQ workflow covering zones, quantities, cartons, phases, retained stock and FOB scope.",
+  "approvedBy": "User explicitly approved PR #137 current five-file scope and head SHA f125de96c6e41007dd06fc94992a5e016c048f27 on 2026-11-12; conflict resolution only merges the latest main baseline without expanding the approved scope.",
   "approvedCategories": [
-    "performance",
-    "build-config",
-    "documentation"
+    "content",
+    "documentation",
+    "seo-global"
   ],
   "allowedPaths": [
-    ".gitignore",
-    "package.json",
-    "scripts/prepare-responsive-images.mjs",
-    "src/lib/responsive-images.ts",
-    "src/components/ProductImage.tsx",
-    "src/components/ServerProductImage.tsx",
-    "src/components/ImageRenderer.tsx",
-    "src/components/ProductGallery.tsx",
-    "src/components/EvidenceProductPage.tsx",
-    "src/components/HomeHeroCarousel.tsx",
-    "src/app/products/carpet-tiles/gradient-accent-office-carpet-tiles/ProductGallery.tsx",
+    "src/lib/blog-posts/office-carpet-tiles-renovation-cycle-procurement-guide.ts",
     "ops/change-request.json",
-    "CHANGELOG_OPS.md",
-    "src/components/PageHero.tsx"
+    "ops/office-renovation-rfq-growth-20261111.md",
+    "ops/backups/20261111/office-renovation-before.html.gz",
+    "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "7ec39eec211d53df827aeb2a13eada99b440ab72",
+  "rollbackCommit": "5aa9cb58d20356eaf3f5499f3a257cb5fd815ac4",
   "affectedUrls": [
-    "/",
-    "/products",
-    "/products/carpet-tiles",
-    "/products/wall-to-wall",
-    "/products/carpet-tiles/nylon-office-carpet-tile",
-    "/products/carpet-tiles/gradient-accent-office-carpet-tiles",
-    "/products/wall-to-wall/3d-printed-hotel-carpet",
-    "/projects",
-    "/blog",
-    "All existing pages using the shared ProductImage component",
-    "/projects",
-    "/blog",
-    "Existing pages using PageHero"
+    "/blog/office-carpet-tiles-renovation-cycle-procurement-guide"
   ],
-  "notes": "Precompute missing responsive WebP derivatives during the existing npm build without new dependencies, preserving original assets for full-detail viewing. Resolve only relevant image entries on the server; remove the full image manifest from client gallery bundles. Prioritize first-screen imagery and defer hidden carousel downloads until initial loading completes. Preserve published URLs, SEO metadata, content, tracking, consent, WhatsApp numbers/drafts, forms, email and hosting configuration. Use branch/Preview/PR, ops checks, lint/build, responsive visual and conversion-link verification. No real messages or leads."
+  "notes": "Preserve the canonical URL, original publication date, existing product relations and images. The images remain explicitly illustrative. Add no product performance, certification, price, MOQ, lead-time, sample-format or installation promise. The 50x50 arithmetic is illustrative and does not confirm an offered product or packing configuration. Merge remains limited to the approved five-file PR scope; latest main performance and WhatsApp changes are retained."
 }

@@ -2,6 +2,16 @@
 
 This file is append-only. Do not delete or rewrite historical entries.
 
+## 2026-11-11 — Office carpet tile renovation RFQ guide candidate
+
+Deepen the existing `/blog/office-carpet-tiles-renovation-cycle-procurement-guide` rather than create a competing carton calculator or office-renovation URL. Preserve its canonical and 2026-08-14 publication date; add a direct answer, zone schedule, transparent net-area/pieces/cartons/retained-stock workflow, occupied-site phase matrix, rolling-chair evidence boundary, comparable supply-scope matrix, copyable 11-field RFQ brief, six FAQs and an article-specific contact prefill. Existing images remain and are labeled illustrative; no generated evidence image is added.
+
+Branch `content/office-renovation-rfq-20261111`; rollback `7f100f21c828a8aff5fd585294d620880ded9e41`. Required Semrush relay returned a 401 expired-login response and the authorized fallback stopped at an empty login form, so no Semrush metrics or AI Visibility result is claimed. GSC connector returned `payment_required`; no current GSC data is claimed. Exact research, evidence boundaries and monitoring are in `ops/office-renovation-rfq-growth-20261111.md`. Local checks, Preview, PR and exact-SHA production approval remain pending at this stage.
+
+Local acceptance completed: Site Ops Guard, ESLint, SEO/link/asset/placeholder audits, `git diff --check`, TypeScript and the 226-page production build passed. Local production HTTP QA passed `ops:verify`; the updated canonical returned 200 with one H1, exact title, self-canonical, no noindex, visible direct answer and arithmetic boundary, original/modified dates, FAQPage data, article-specific CTA parameters and root-sitemap lastmod `2026-11-11T00:00:00.000Z`. No inquiry was submitted. Local Chromium screenshot capture was blocked by the runtime process-socket restriction, so desktop/mobile visual acceptance remains a Preview gate rather than a completed claim.
+
+Draft PR #137 opened with head `d87d8ca078933670ae824d4201b7470376b76adc`. Vercel Preview `dpl_BqJs2wqbeyFvn7wi4NKeFuYiJBxp` reached READY and the GitHub Site Ops Guard run `42937518657` passed. Public Preview `ops:verify`, exact metadata/body/FAQ/CTA/sitemap checks and a browser desktop-width visual check passed. The browser organization blocks DevTools, so an exact 390 px device-emulation visual was not completed; source responsive classes, build and HTTP checks passed, but mobile visual acceptance remains open. PR stays draft and unmerged; production and index notification remain unchanged.
+
 ## 2026-11-02 — Carpet tile RFQ and tender-response guide
 
 Owner requested an integrated B2B growth and daily content release. Deepen the existing `/blog/commercial-carpet-tile-rfq-checklist-b2b-buyers` rather than adding a competing tender/submittal URL. Preserve its canonical, original publication date, author and existing illustrations; add a direct requirement/response matrix, explicit response statuses, alternative/deviation workflow, construction-matched evidence boundary, FOB Tianjin supply responsibility table, copyable brief, six FAQs and article-specific contact prefill. Add one contextual reverse link from `/products/carpet-tiles`. Record keyword ownership and notify only this substantively updated canonical after verified production.
