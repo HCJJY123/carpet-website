@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { responsiveImageManifest } from "@/lib/responsive-image-manifest";
+import { getResponsiveImage } from "@/lib/responsive-images";
 
 interface PageHeroProps {
   title: string;
@@ -19,16 +19,16 @@ export default function PageHero({
   image,
   imageAlt,
   objectPosition = "center",
-  responsiveDelivery = false,
+  responsiveDelivery = true,
   children,
 }: PageHeroProps) {
-  const responsive = responsiveDelivery ? responsiveImageManifest[image] : undefined;
+  const responsive = responsiveDelivery ? getResponsiveImage(image) : undefined;
 
   return (
     <section className="relative isolate min-h-[280px] overflow-hidden bg-[#102A43] py-16 text-center text-white sm:min-h-[320px] sm:py-20 md:min-h-[360px] md:py-24">
       {responsive ? (
         <picture className="absolute inset-0 -z-20 block h-full w-full scale-105">
-          <source type="image/avif" srcSet={responsive.avif.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
+          {responsive.avif.length > 0 && <source type="image/avif" srcSet={responsive.avif.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />}
           <source type="image/webp" srcSet={responsive.webp.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
           <img
             src={responsive.fallback}

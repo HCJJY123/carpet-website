@@ -65,7 +65,7 @@ export default function ImageRenderer({
     return (
       <div className={`relative overflow-hidden ${className}`}>
         <picture>
-          <source type="image/avif" srcSet={avifSrcSet} sizes={sizes} />
+          {avifSrcSet && <source type="image/avif" srcSet={avifSrcSet} sizes={sizes} />}
           <source type="image/webp" srcSet={webpSrcSet} sizes={sizes} />
           <img
             src={responsive.fallback}

@@ -41,3 +41,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Reproducible image derivatives generated before dev/build.
+/public/images/optimized/responsive-v1/
+/src/lib/generated-responsive-images.json

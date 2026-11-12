@@ -1,31 +1,44 @@
 {
-  "task": "Add site-specific WhatsApp RFQ drafts and Source/Page/Intent/URL attribution to all VCARPETS entry points, matching the owner's screenshot and InflatCustom behavior.",
-  "approvedBy": "User explicitly requested on 2026-11-12 that InflatCraft, VISFURN and VCARPETS use preset WhatsApp wording like the supplied screenshot. Existing authorization covers implementing and publishing these contact-flow changes.",
+  "task": "Optimize VCARPETS page and image loading across the existing homepage, product, category, project and article pages.",
+  "approvedBy": "User on 2026-11-12 explicitly requested unified webpage and image speed optimization for inflatcustom and vcarpets; existing authorization permits reversible performance fixes, preview validation and production release.",
   "approvedCategories": [
-    "content",
-    "documentation",
-    "conversion",
-    "navigation"
+    "performance",
+    "build-config",
+    "documentation"
   ],
   "allowedPaths": [
-    "src/lib/whatsapp.ts",
-    "src/components/WhatsAppFloating.tsx",
-    "src/components/Footer.tsx",
-    "src/app/api/whatsapp/route.ts",
-    "public/images/contact/whatsapp-quote-qr-20261112.svg",
-    "scripts/whatsapp-contact-paths.test.mjs",
+    ".gitignore",
+    "package.json",
+    "scripts/prepare-responsive-images.mjs",
+    "src/lib/responsive-images.ts",
+    "src/components/ProductImage.tsx",
+    "src/components/ServerProductImage.tsx",
+    "src/components/ImageRenderer.tsx",
+    "src/components/ProductGallery.tsx",
+    "src/components/EvidenceProductPage.tsx",
+    "src/components/HomeHeroCarousel.tsx",
+    "src/app/products/carpet-tiles/gradient-accent-office-carpet-tiles/ProductGallery.tsx",
     "ops/change-request.json",
-    "CHANGELOG_OPS.md"
+    "CHANGELOG_OPS.md",
+    "src/components/PageHero.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "312a38efbf5fa59cb3f2698bf568d377b27bd9bb",
+  "rollbackCommit": "7ec39eec211d53df827aeb2a13eada99b440ab72",
   "affectedUrls": [
-    "All existing WhatsApp contact buttons and the shared footer",
-    "/api/whatsapp",
     "/",
-    "/contact",
-    "/products/carpet-tiles/nylon-office-carpet-tile"
+    "/products",
+    "/products/carpet-tiles",
+    "/products/wall-to-wall",
+    "/products/carpet-tiles/nylon-office-carpet-tile",
+    "/products/carpet-tiles/gradient-accent-office-carpet-tiles",
+    "/products/wall-to-wall/3d-printed-hotel-carpet",
+    "/projects",
+    "/blog",
+    "All existing pages using the shared ProductImage component",
+    "/projects",
+    "/blog",
+    "Existing pages using PageHero"
   ],
-  "notes": "Keep +8618830278977. Drafts contain carpet-specific fields and attribution. Enhance current-page context independently of optional analytics consent. Preserve existing custom request text, product/quantity/country context, tracking, form/email paths and native app/web navigation. A short first-party QR redirect keeps the 144px QR scannable while preparing the full draft; QR scans identify the website and QR source, without claiming an unobserved scan-page URL. The redirect is an API utility, excluded from content sitemap generation. No new dependency, indexed page, analytics, schema, robots or sitemap logic changes. Source checks, meaningful contact-path tests, lint/build, Vercel Preview, PR and production verification are required. Do not send real messages or inquiries."
+  "notes": "Precompute missing responsive WebP derivatives during the existing npm build without new dependencies, preserving original assets for full-detail viewing. Resolve only relevant image entries on the server; remove the full image manifest from client gallery bundles. Prioritize first-screen imagery and defer hidden carousel downloads until initial loading completes. Preserve published URLs, SEO metadata, content, tracking, consent, WhatsApp numbers/drafts, forms, email and hosting configuration. Use branch/Preview/PR, ops checks, lint/build, responsive visual and conversion-link verification. No real messages or leads."
 }
