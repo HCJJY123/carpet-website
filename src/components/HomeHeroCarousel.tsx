@@ -123,6 +123,7 @@ function HeroBackgroundImage({
 export default function HomeHeroCarousel({ whatsappUrl, responsiveImages }: HomeHeroCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [renderedSlides, setRenderedSlides] = useState(() => new Set([0]));
+  const [pageReady, setPageReady] = useState(false);
   const [paused, setPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [dragOffset, setDragOffset] = useState(0);
@@ -134,6 +135,13 @@ export default function HomeHeroCarousel({ whatsappUrl, responsiveImages }: Home
   const activeSlide = slides[activeIndex];
 
   useEffect(() => {
+    const ready = () => setPageReady(true);
+    if (document.readyState === "complete") ready();
+    else window.addEventListener("load", ready, { once: true });
+    return () => window.removeEventListener("load", ready);
+  }, []);
+
+  useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const updateMotionPreference = () => setReducedMotion(mediaQuery.matches);
     updateMotionPreference();
@@ -142,7 +150,7 @@ export default function HomeHeroCarousel({ whatsappUrl, responsiveImages }: Home
   }, []);
 
   useEffect(() => {
-    if (paused || reducedMotion || dragging || settling) return;
+    if (!pageReady || paused || reducedMotion || dragging || settling) return;
     const timer = window.setTimeout(() => {
       const nextIndex = (activeIndex + 1) % slides.length;
       setRenderedSlides((current) => {
@@ -154,9 +162,12 @@ export default function HomeHeroCarousel({ whatsappUrl, responsiveImages }: Home
       setActiveIndex(nextIndex);
     }, ROTATION_MS);
     return () => window.clearTimeout(timer);
-  }, [activeIndex, dragging, paused, reducedMotion, settling]);
+  }, [activeIndex, dragging, pageReady, paused, reducedMotion, settling]);
 
   useEffect(() => {
+    if (!pageReady) return;
+    const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+    if (connection?.saveData || (connection?.effectiveType && connection.effectiveType !== "4g")) return;
     const nextIndex = (activeIndex + 1) % slides.length;
     const warmNextSlide = () => {
       setRenderedSlides((current) => {
@@ -174,7 +185,7 @@ export default function HomeHeroCarousel({ whatsappUrl, responsiveImages }: Home
 
     const timer = setTimeout(warmNextSlide, 1_000);
     return () => clearTimeout(timer);
-  }, [activeIndex]);
+  }, [activeIndex, pageReady]);
 
   useEffect(() => {
     return () => {
@@ -327,6 +338,7 @@ export default function HomeHeroCarousel({ whatsappUrl, responsiveImages }: Home
           <Link
             key={slide.image}
             href={slide.bannerHref}
+            prefetch={false}
             draggable={false}
             tabIndex={index === activeIndex ? 0 : -1}
             onClick={(event) => {

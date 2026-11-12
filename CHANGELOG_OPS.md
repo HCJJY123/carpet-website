@@ -1816,3 +1816,13 @@ Added a worked 50×50 tile count, a 4 m printed broadloom cut example and a like
 - Receiver remains +86 188 3027 8977. No form/email delivery, indexed content, canonical, schema, sitemap, robots, dependency or tracking behavior changes.
 - Rollback baseline: 312a38efbf5fa59cb3f2698bf568d377b27bd9bb. Use PR revert if needed.
 - Validation: contact-path regression tests, scope guard, lint/build, short QR decode, Preview attribution/redirect and production checks are recorded with this change's PR. No real messages or inquiries are sent during QA.
+
+
+## 2026-11-12 — Responsive image delivery and page loading
+
+- Approved scope: owner requested unified page/image performance optimization for VCARPETS and InflatCustom. This repository handles VCARPETS only. Rollback baseline: `7ec39eec211d53df827aeb2a13eada99b440ab72`.
+- Generate content-hashed responsive WebP derivatives for referenced local images not already covered by the existing AVIF/WebP manifest. Original images, dimensions, colors, product data and published URLs remain available. Build cache reuses previously encoded derivatives.
+- Resolve each image entry on the server, including the product gallery, so browser bundles no longer contain the complete site image manifest. Match main-image and thumbnail sizes to their layouts.
+- Load the first carousel image before warming hidden slides; skip background warming on slow or data-saving connections and avoid banner-page prefetching.
+- Preserve all consent/tracking, forms, email and native WhatsApp paths. No messages or inquiry submissions are part of verification.
+- Validation: locked-dependency install, lint, scope guard and full production build passed. All 1,384 generated variants for 300 additional images passed dimension/aspect checks. Preview checks and production verification follow. A 640px case thumbnail is 40,772 bytes compared with its 365,664-byte original.

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ProductGallery from "@/components/ProductGallery";
 import ProductImage from "@/components/ProductImage";
+import { getResponsiveImage } from "@/lib/responsive-images";
 import { ProductTrackedLink, ProductViewEvent } from "@/components/ProductAnalytics";
 import { brandInfo, products, type Product } from "@/lib/data";
 import { evidenceCopy, referenceSpecs } from "@/lib/product-evidence-copy";
@@ -105,7 +106,8 @@ export default function EvidenceProductPage({ productId, sourceNote, supplement,
           </div>
         </div>
         <figure className="min-w-0 lg:order-1">
-          <ProductGallery key={product.id} mainImage={product.image} gallery={images.slice(0, 4)} productName={copy.name} />
+          <ProductGallery key={product.id} mainImage={product.image} gallery={images.slice(0, 4)} productName={copy.name}
+            responsiveImages={Object.fromEntries(images.slice(0, 4).map((image) => [image.src, getResponsiveImage(image.src)]))} />
           <figcaption className="mt-3 text-xs leading-6 text-muted">AI-generated or edited scenes are design references, not completed-project or performance evidence. Approve color, texture and construction with a physical sample.</figcaption>
         </figure>
       </div>

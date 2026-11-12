@@ -1,9 +1,7 @@
-"use client";
-
 import type { ComponentProps } from "react";
 import ImageRenderer from "./ImageRenderer";
-import { responsiveImageManifest } from "@/lib/responsive-image-manifest";
+import { getResponsiveImage } from "@/lib/responsive-images";
 
 export default function ProductImage(props: Omit<ComponentProps<typeof ImageRenderer>, "responsive">) {
-  return <ImageRenderer {...props} responsive={responsiveImageManifest[props.src]} />;
+  return <ImageRenderer {...props} responsive={getResponsiveImage(props.src)} />;
 }
