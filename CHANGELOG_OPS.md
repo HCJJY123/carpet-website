@@ -1836,3 +1836,11 @@ Added a worked 50×50 tile count, a 4 m printed broadloom cut example and a like
 - Load the first carousel image before warming hidden slides; skip background warming on slow or data-saving connections and avoid banner-page prefetching.
 - Preserve all consent/tracking, forms, email and native WhatsApp paths. No messages or inquiry submissions are part of verification.
 - Validation: locked-dependency install, lint, scope guard and full production build passed. All 1,384 generated variants for 300 additional images passed dimension/aspect checks. Preview checks and production verification follow. A 640px case thumbnail is 40,772 bytes compared with its 365,664-byte original.
+
+
+## 2026-11-17 — Draft: broadloom sample approvals and quantity basis
+
+- Existing `/products/wall-to-wall` only: distinguish artwork proof, physical strike-off and construction sample; clarify net area versus ordering allowance.
+- Base/rollback: `b19ced3a650c836070190010b05657b624b41ad3`. Live HTML backup retained in `ops/backups/20261117/wall-to-wall-before.html.gz`.
+- No new route, product fact, metadata/schema, CTA, tracking, form or global-setting change. No production deployment authorized or performed.
+- Evidence and validation: `ops/broadloom-approval-20261117.md`.

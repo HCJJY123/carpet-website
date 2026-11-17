@@ -1,23 +1,22 @@
 {
-  "task": "Deepen the existing office carpet tile renovation guide into an order-ready RFQ workflow covering zones, quantities, cartons, phases, retained stock and FOB scope.",
-  "approvedBy": "User explicitly approved PR #137 current five-file scope and head SHA f125de96c6e41007dd06fc94992a5e016c048f27 on 2026-11-12; conflict resolution only merges the latest main baseline without expanding the approved scope.",
+  "task": "Clarify three broadloom approval formats and net floor area versus order quantity in the existing wall-to-wall category procurement cards. Draft-only content scope.",
+  "approvedBy": "User five-site content optimization request of 2026-11-17, message Sentinel_d6a2b002626481919947ea7420199860; this branch is for Draft PR review only, not merge or production approval.",
   "approvedCategories": [
     "content",
-    "documentation",
-    "seo-global"
+    "documentation"
   ],
   "allowedPaths": [
-    "src/lib/blog-posts/office-carpet-tiles-renovation-cycle-procurement-guide.ts",
+    "src/app/products/wall-to-wall/page.tsx",
     "ops/change-request.json",
-    "ops/office-renovation-rfq-growth-20261111.md",
-    "ops/backups/20261111/office-renovation-before.html.gz",
+    "ops/broadloom-approval-20261117.md",
+    "ops/backups/20261117/wall-to-wall-before.html.gz",
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "5aa9cb58d20356eaf3f5499f3a257cb5fd815ac4",
+  "rollbackCommit": "b19ced3a650c836070190010b05657b624b41ad3",
   "affectedUrls": [
-    "/blog/office-carpet-tiles-renovation-cycle-procurement-guide"
+    "/products/wall-to-wall"
   ],
-  "notes": "Preserve the canonical URL, original publication date, existing product relations and images. The images remain explicitly illustrative. Add no product performance, certification, price, MOQ, lead-time, sample-format or installation promise. The 50x50 arithmetic is illustrative and does not confirm an offered product or packing configuration. Merge remains limited to the approved five-file PR scope; latest main performance and WhatsApp changes are retained."
+  "notes": "Do not change metadata, schema, tracking, forms, CTA targets, product facts, prices, MOQ, deadlines, protected observation-window product pages or global settings. Existing section layout retained; no new route or generic duplicate block."
 }

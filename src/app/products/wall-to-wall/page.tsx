@@ -132,11 +132,11 @@ const hospitalityProcurementChecks = [
   },
   {
     title: "Broadloom construction and pattern approval",
-    detail: "Compare Axminster, printed nylon, tufted or wool-blend broadloom by pile, backing, pattern repeat, roll width and expected service conditions. Request a strike-off or physical sample before production artwork is released.",
+    detail: "Separate three approvals: a digital artwork proof checks the design, scale and repeat; a physical strike-off checks the proposed colour and surface appearance; a construction sample checks the selected fibre, pile and backing. Record which revision each approval covers. One sample may not represent all three. Confirm the available sample formats, fees and scope for the selected proposal; artwork approval alone is not production approval.",
   },
   {
     title: "Roll plan, seams and installation risk",
-    detail: "A project quote should account for room dimensions, roll direction, pattern matching, seam locations, cutting waste, stair or lift access and phased handover. Area alone is not enough to finalize the quantity.",
+    detail: "Label measured net floor area separately from the quantity to order. Ask for a cutting plan using the proposed roll width, pattern repeat, direction and seam positions, with cutting allowance and retained spare carpet shown separately. Do not apply a universal waste percentage. Confirm the measured layout and ordering quantity with the installer before placing the order; also identify access limits and handover phases.",
   },
   {
     title: "Documents and delivery sequence",
@@ -408,7 +408,7 @@ export default function CategoryPage() {
           </div>
           <dl className="grid gap-px border border-border bg-border sm:grid-cols-2">
             {[
-              ["Project Area", "Total SQM, room count, and floor plans"],
+              ["Project Area", "Net floor area by zone, measured plans, and proposed order quantity with allowances separated"],
               ["Application", "Guestroom, corridor, ballroom, lobby, or other space"],
               ["Construction", "Axminster, printed, tufted, wool-blend, or specified alternative"],
               ["Performance", "Traffic class, fire standard, stain resistance, and antistatic needs"],
