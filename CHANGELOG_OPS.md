@@ -1836,3 +1836,20 @@ Added a worked 50×50 tile count, a 4 m printed broadloom cut example and a like
 - Load the first carousel image before warming hidden slides; skip background warming on slow or data-saving connections and avoid banner-page prefetching.
 - Preserve all consent/tracking, forms, email and native WhatsApp paths. No messages or inquiry submissions are part of verification.
 - Validation: locked-dependency install, lint, scope guard and full production build passed. All 1,384 generated variants for 300 additional images passed dimension/aspect checks. Preview checks and production verification follow. A 640px case thumbnail is 40,772 bytes compared with its 365,664-byte original.
+
+
+## 2026-11-17 — Draft: broadloom sample approvals and quantity basis
+
+- Existing `/products/wall-to-wall` only: distinguish artwork proof, physical strike-off and construction sample; clarify net area versus ordering allowance.
+- Base/rollback: `b19ced3a650c836070190010b05657b624b41ad3`. Live HTML backup retained in `ops/backups/20261117/wall-to-wall-before.html.gz`.
+- No new route, product fact, metadata/schema, CTA, tracking, form or global-setting change. No production deployment authorized or performed.
+- Evidence and validation: `ops/broadloom-approval-20261117.md`.
+
+
+## 2026-11-18 — PR #141 release authorization and preview acceptance (not yet deployed)
+
+- Subsequent explicit user production authorization: `Sentinel_5c1c9f1f9c148191bcd66806e074d3b1`, 2026-11-18 03:49:52 UTC, verified by coordinating thread; initial draft-only entry above is retained as history.
+- Content scope remains the three existing wall-to-wall text edits at `9c969b3bec1858042b0cfbbea2110e0603f92560`; this follow-up modifies only release records.
+- Existing Preview ops:verify and form-label/WhatsApp source tests passed. Prior exact-head lint/build passed. Coordinating-thread UI zoom/window checks around 2026-11-18 22:50 UTC covered 390x505, 375x505 and 1440x946 CSS viewports, with matching client/scroll widths (382, 367, 1432), no changed-text overflow and clicked RFQ/recommendation links reaching the intended Contact anchor/prefill. At 375px Company was visible and operable. Not a physical-phone test; no input or submission was made.
+- Full evidence and boundaries: `ops/broadloom-approval-20261117.md`. No Yandex/tracking/forms or other protected settings were changed; broader Step 0 is not declared complete.
+- Refreshed rollback baseline: `b19ced3a650c836070190010b05657b624b41ad3` / Mike deployment `dpl_F1qgM8t4f4xvVJddbnpE1PajV46G`. Final head/check verification and production acceptance remain pending; this entry does not claim merge or deployment.
