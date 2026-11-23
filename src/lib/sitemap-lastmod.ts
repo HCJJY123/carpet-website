@@ -35,7 +35,7 @@ const verifiedModifiedDates: Record<string, string> = {
   "/projects/multi-floor-office-carpet-tiles-tokyo": "2026-11-04",
   "/contact": "2026-11-01",
   "/projects/office-carpet-tile-renovation": "2026-10-29",
-  "/products/wall-to-wall": "2026-10-23"
+  "/products/wall-to-wall": "2026-11-18"
 };
 
 export function sitemapLastModified(pathOrUrl: string, fallback: string): string {

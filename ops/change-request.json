@@ -1,25 +1,28 @@
 {
-  "task": "Clarify three broadloom approval formats and net floor area versus order quantity in the existing wall-to-wall category procurement cards. Content-only PR #141 release scope; no page-source expansion.",
-  "approvedBy": "Subsequent explicit production authorization: user message Sentinel_5c1c9f1f9c148191bcd66806e074d3b1, 2026-11-18 03:49:52 UTC, as verified by the coordinating thread. Applies to PR #141 existing wall-to-wall content diff at 9c969b3bec1858042b0cfbbea2110e0603f92560 plus documentation-only release reconciliation. Merge remains subject to final head and required-check verification.",
+  "task": "Repair the Yandex no-script fallback position and correct the wall-to-wall category sitemap date.",
+  "approvedBy": "Owner requested the six-site AI crawl audit on 2026-11-23, then authorized the listed remedies in order. VCARPETS scope is the invalid head fallback and the outdated broadloom sitemap entry.",
   "approvedCategories": [
-    "content",
+    "seo-global",
+    "analytics",
     "documentation"
   ],
   "allowedPaths": [
-    "src/app/products/wall-to-wall/page.tsx",
+    "src/app/layout.tsx",
+    "src/components/YandexMetrica.tsx",
+    "src/lib/sitemap-lastmod.ts",
     "ops/change-request.json",
-    "ops/broadloom-approval-20261117.md",
-    "ops/backups/20261117/wall-to-wall-before.html.gz",
     "CHANGELOG_OPS.md"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "b19ced3a650c836070190010b05657b624b41ad3",
+  "rollbackCommit": "7a71ce00a99b9d054f3d43d549b458f9713fa2ac",
   "affectedUrls": [
-    "/products/wall-to-wall"
+    "/",
+    "/contact",
+    "/products/carpet-tiles/50x50-nylon-pp-office-carpet-tiles",
+    "/products/wall-to-wall",
+    "/sitemap.xml",
+    "/sitemaps/products.xml"
   ],
-  "notes": "Do not change metadata, schema, tracking, forms, CTA targets, product facts, prices, MOQ, deadlines, protected observation-window product pages or global settings. Existing section layout retained; no new route or generic duplicate block. Release acceptance and limitations are appended to ops/broadloom-approval-20261117.md and CHANGELOG_OPS.md. No merge or production completion is claimed by this record.",
-  "approvalHistory": [
-    "User five-site content optimization request of 2026-11-17, message Sentinel_d6a2b002626481919947ea7420199860; this branch is for Draft PR review only, not merge or production approval."
-  ]
+  "notes": "The shared layout applies to all public pages. Preserve the head initialization script, counter, fallback image URL, conversion paths and index membership. PR #141 reached the production domain on 2026-11-18 UTC. Production HTML and sitemap were captured before editing."
 }

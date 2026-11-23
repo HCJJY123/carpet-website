@@ -1853,3 +1853,7 @@ Added a worked 50×50 tile count, a 4 m printed broadloom cut example and a like
 - Existing Preview ops:verify and form-label/WhatsApp source tests passed. Prior exact-head lint/build passed. Coordinating-thread UI zoom/window checks around 2026-11-18 22:50 UTC covered 390x505, 375x505 and 1440x946 CSS viewports, with matching client/scroll widths (382, 367, 1432), no changed-text overflow and clicked RFQ/recommendation links reaching the intended Contact anchor/prefill. At 375px Company was visible and operable. Not a physical-phone test; no input or submission was made.
 - Full evidence and boundaries: `ops/broadloom-approval-20261117.md`. No Yandex/tracking/forms or other protected settings were changed; broader Step 0 is not declared complete.
 - Refreshed rollback baseline: `b19ced3a650c836070190010b05657b624b41ad3` / Mike deployment `dpl_F1qgM8t4f4xvVJddbnpE1PajV46G`. Final head/check verification and production acceptance remain pending; this entry does not claim merge or deployment.
+
+## 2026-11-23 — HTML parsing and broadloom sitemap date
+
+Keep the Yandex counter initialization in the document head and render its no-script tracking pixel inside the body. The wall-to-wall sitemap date follows the substantive sample-approval and order-quantity update in PR #141 (production on 18 November UTC). Rollback base: `7a71ce00a99b9d054f3d43d549b458f9713fa2ac`.

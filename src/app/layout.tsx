@@ -10,7 +10,7 @@ import LocaleExperience from "@/components/LocaleExperience";
 import DeferredSiteEnhancements from "@/components/DeferredSiteEnhancements";
 import CookieConsent from "@/components/CookieConsent";
 import MicrosoftUet from "@/components/MicrosoftUet";
-import YandexMetrica from "@/components/YandexMetrica";
+import YandexMetrica, { YandexMetricaFallback } from "@/components/YandexMetrica";
 import { brandInfo, products, productCategories } from "@/lib/data";
 
 const geistSans = Geist({
@@ -96,6 +96,7 @@ export default function RootLayout({
         <MicrosoftUet />
       </head>
       <body className="min-h-full flex flex-col font-sans">
+        <YandexMetricaFallback />
         <LocaleExperience />
         <JsonLd />
         <Header />
