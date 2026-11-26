@@ -101,6 +101,11 @@ function HeroBackgroundImage({
 
   return (
     <picture className="absolute inset-0 block h-full w-full">
+      <source
+        media="(max-width: 640px) and (orientation: portrait)"
+        type="image/avif"
+        srcSet={src.replace(".webp", "-mobile-v2.avif")}
+      />
       <source type="image/avif" srcSet={responsive.avif.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
       <source type="image/webp" srcSet={responsive.webp.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
       <img
