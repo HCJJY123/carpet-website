@@ -1,5 +1,5 @@
 {
-  "task": "Reduce mobile first-paint latency after the initial portrait image change.",
+  "task": "Keep homepage banner photos sharp and complete before an automatic slide change.",
   "approvedBy": "Owner requested PageSpeed optimization on mobile and desktop on 2026-11-26.",
   "approvedCategories": [
     "performance",
@@ -8,13 +8,12 @@
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/page.tsx",
-    "src/components/HomeHeroCarousel.tsx",
-    "public/images/home/hero-home-mobile-inline.avif"
+    "public/images/home/hero-home-mobile-inline.avif",
+    "src/components/HomeHeroCarousel.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "78dca05ce574147b7f615adb5753cfaa92846df8",
+  "rollbackCommit": "55f0fa779e4ffeabbfd7fd093be8123960979943",
   "affectedUrls": [
     "/"
   ],

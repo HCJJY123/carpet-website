@@ -77,7 +77,9 @@ function HeroBackgroundImage({
   objectPosition,
   responsive,
   mobileCover,
+  onLoad,
 }: {
+  onLoad: () => void;
   mobileCover?: string;
   responsive?: ResponsiveImageEntry;
   src: string;
@@ -92,6 +94,7 @@ function HeroBackgroundImage({
         src={src}
         alt={alt}
         fill
+        onLoad={onLoad}
         priority={priority}
         quality={82}
         sizes="100vw"
@@ -113,13 +116,14 @@ function HeroBackgroundImage({
       <source type="image/webp" srcSet={responsive.webp.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
       <img
         src={responsive.fallback}
+        onLoad={onLoad}
         alt={alt}
         width={responsive.width}
         height={responsive.height}
         sizes="100vw"
         loading={priority ? "eager" : "lazy"}
         fetchPriority={priority ? "high" : "low"}
-        decoding="async"
+        decoding={priority ? "sync" : "async"}
         draggable={false}
         className="h-full w-full object-cover"
         style={{ objectPosition }}
@@ -131,6 +135,8 @@ function HeroBackgroundImage({
 export default function HomeHeroCarousel({ whatsappUrl, responsiveImages, mobileCover }: HomeHeroCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [renderedSlides, setRenderedSlides] = useState(() => new Set([0]));
+  const readySlides = useRef(new Set<number>());
+  const pendingRotation = useRef<number | null>(null);
   const [pageReady, setPageReady] = useState(false);
   const [paused, setPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -167,13 +173,17 @@ export default function HomeHeroCarousel({ whatsappUrl, responsiveImages, mobile
         updated.add(nextIndex);
         return updated;
       });
-      setActiveIndex(nextIndex);
+      if (readySlides.current.has(nextIndex)) setActiveIndex(nextIndex);
+      else pendingRotation.current = nextIndex;
     }, ROTATION_MS);
-    return () => window.clearTimeout(timer);
+    return () => {
+      window.clearTimeout(timer);
+      pendingRotation.current = null;
+    };
   }, [activeIndex, dragging, pageReady, paused, reducedMotion, settling]);
 
   useEffect(() => {
-    if (!pageReady || window.matchMedia("(hover: none) and (pointer: coarse)").matches) return;
+    if (!pageReady || reducedMotion || document.hidden) return;
     const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
     if (connection?.saveData || (connection?.effectiveType && connection.effectiveType !== "4g")) return;
     const nextIndex = (activeIndex + 1) % slides.length;
@@ -193,7 +203,7 @@ export default function HomeHeroCarousel({ whatsappUrl, responsiveImages, mobile
 
     const timer = setTimeout(warmNextSlide, 1_000);
     return () => clearTimeout(timer);
-  }, [activeIndex, pageReady]);
+  }, [activeIndex, pageReady, reducedMotion]);
 
   useEffect(() => {
     return () => {
@@ -366,6 +376,13 @@ export default function HomeHeroCarousel({ whatsappUrl, responsiveImages, mobile
             aria-hidden={index !== activeIndex}
           >
             <HeroBackgroundImage
+              onLoad={() => {
+                readySlides.current.add(index);
+                if (pendingRotation.current === index) {
+                  pendingRotation.current = null;
+                  setActiveIndex(index);
+                }
+              }}
               mobileCover={index === 0 ? mobileCover : undefined}
               responsive={responsiveImages[slide.image]}
               src={slide.image}
