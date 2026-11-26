@@ -1857,3 +1857,7 @@ Added a worked 50×50 tile count, a 4 m printed broadloom cut example and a like
 ## 2026-11-23 — HTML parsing and broadloom sitemap date
 
 Keep the Yandex counter initialization in the document head and render its no-script tracking pixel inside the body. The wall-to-wall sitemap date follows the substantive sample-approval and order-quantity update in PR #141 (production on 18 November UTC). Rollback base: `7a71ce00a99b9d054f3d43d549b458f9713fa2ac`.
+
+## 2026-11-26 — Mobile homepage banner
+
+Serve portrait AVIF crops from the same three originals and preload the matching first image. Baseline homepage performance was 93 on mobile and 100 on desktop.
