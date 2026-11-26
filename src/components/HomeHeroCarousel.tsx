@@ -6,6 +6,7 @@ import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } f
 import type { ResponsiveImageEntry } from "@/lib/responsive-image-manifest";
 
 type HomeHeroCarouselProps = {
+  mobileCover: string;
   whatsappUrl: string;
   responsiveImages: Record<string, ResponsiveImageEntry>;
 };
@@ -75,7 +76,9 @@ function HeroBackgroundImage({
   priority,
   objectPosition,
   responsive,
+  mobileCover,
 }: {
+  mobileCover?: string;
   responsive?: ResponsiveImageEntry;
   src: string;
   alt: string;
@@ -104,7 +107,7 @@ function HeroBackgroundImage({
       <source
         media="(max-width: 640px) and (orientation: portrait)"
         type="image/avif"
-        srcSet={src.replace(".webp", "-mobile-v2.avif")}
+        srcSet={mobileCover ?? src.replace(".webp", "-mobile-v2.avif")}
       />
       <source type="image/avif" srcSet={responsive.avif.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
       <source type="image/webp" srcSet={responsive.webp.map((item) => `${item.src} ${item.width}w`).join(", ")} sizes="100vw" />
@@ -125,7 +128,7 @@ function HeroBackgroundImage({
   );
 }
 
-export default function HomeHeroCarousel({ whatsappUrl, responsiveImages }: HomeHeroCarouselProps) {
+export default function HomeHeroCarousel({ whatsappUrl, responsiveImages, mobileCover }: HomeHeroCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [renderedSlides, setRenderedSlides] = useState(() => new Set([0]));
   const [pageReady, setPageReady] = useState(false);
@@ -170,7 +173,7 @@ export default function HomeHeroCarousel({ whatsappUrl, responsiveImages }: Home
   }, [activeIndex, dragging, pageReady, paused, reducedMotion, settling]);
 
   useEffect(() => {
-    if (!pageReady) return;
+    if (!pageReady || window.matchMedia("(hover: none) and (pointer: coarse)").matches) return;
     const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
     if (connection?.saveData || (connection?.effectiveType && connection.effectiveType !== "4g")) return;
     const nextIndex = (activeIndex + 1) % slides.length;
@@ -363,6 +366,7 @@ export default function HomeHeroCarousel({ whatsappUrl, responsiveImages }: Home
             aria-hidden={index !== activeIndex}
           >
             <HeroBackgroundImage
+              mobileCover={index === 0 ? mobileCover : undefined}
               responsive={responsiveImages[slide.image]}
               src={slide.image}
               alt={index === activeIndex ? slide.alt : ""}

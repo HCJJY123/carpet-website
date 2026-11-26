@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import { Metadata } from "next";
 import Link from "next/link";
 import { productCategories as categories, caseStudies, certifications, products } from "@/lib/data";
@@ -22,6 +24,10 @@ const homeCategoryImages: Record<string, string> = {
   "public-area": "/images/home/category-public-area.webp",
 };
 
+const mobileCover = "data:image/avif;base64," + readFileSync(
+  path.join(process.cwd(), "public/images/home/hero-home-mobile-inline.avif")
+).toString("base64");
+
 export default function Home() {
   const whatsappUrl = getContactBridgeUrl(whatsappBusinessMessages.header, { placement: "home_hero", intent: "project_support", pagePath: "/" });
   const featuredProduct = products.find((product) => product.id === "3d-printed-hotel-carpet");
@@ -38,14 +44,6 @@ export default function Home() {
   return (
     <div className="bg-white">
       <link
-        rel="preload"
-        as="image"
-        type="image/avif"
-        media="(max-width: 640px) and (orientation: portrait)"
-        href="/images/home/hero-home-mobile-v2.avif"
-        fetchPriority="high"
-      />
-      <link
         media="(width > 640px) or (orientation: landscape)"
         rel="preload"
         as="image"
@@ -56,6 +54,7 @@ export default function Home() {
         type="image/avif"
       />
       <HomeHeroCarousel
+        mobileCover={mobileCover}
         whatsappUrl={whatsappUrl}
         responsiveImages={Object.fromEntries(
           [
