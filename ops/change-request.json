@@ -11,7 +11,7 @@
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "55f0fa779e4ffeabbfd7fd093be8123960979943",
+  "rollbackCommit": "b93b3ec698cf3d37f6799eeff6d8107bddab032b",
   "affectedUrls": ["Sitewide Yandex Metrica initialization; representative routes / and /commercial-carpet-tiles"],
   "notes": "The root layout category is required by the guard only for moving/removing the existing Yandex nodes. No other analytics, advertising, consent controls, endpoints, SEO settings or page content change."
 }
