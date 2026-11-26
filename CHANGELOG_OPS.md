@@ -1865,3 +1865,7 @@ Serve portrait AVIF crops from the same three originals and preload the matching
 ## 2026-11-26 — First paint
 
 Inline the initial mobile banner and defer speculative slide warming on touch devices. Keep desktop imagery, responsive navigation and enquiry links.
+
+## 2026-11-26 — Yandex Analytics consent
+
+Only load the existing Yandex counter (111239007) after Analytics opt-in. Recheck consent before initializing a delayed script and stop the active counter on withdrawal, including a preference change from another tab. Omit the optional no-JavaScript pixel because server rendering has no verified consent. Use the isolated browser smoke test before release; no requests, hits or goals should reach analytics vendors during QA. Base: `55f0fa779e4ffeabbfd7fd093be8123960979943`.

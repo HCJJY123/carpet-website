@@ -1,22 +1,17 @@
 {
-  "task": "Reduce mobile first-paint latency after the initial portrait image change.",
-  "approvedBy": "Owner requested PageSpeed optimization on mobile and desktop on 2026-11-26.",
-  "approvedCategories": [
-    "performance",
-    "documentation"
-  ],
+  "task": "Gate only the existing Yandex Metrica counter on Analytics consent, including withdrawal and no-JavaScript visits.",
+  "approvedBy": "Owner authorized the separate VCARPETS Yandex Analytics consent repair on 2026-11-26. This change request covers the four consent states. Production review remains bound to this PR and SHA.",
+  "approvedCategories": ["analytics", "seo-global", "documentation"],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/page.tsx",
-    "src/components/HomeHeroCarousel.tsx",
-    "public/images/home/hero-home-mobile-inline.avif"
+    "src/app/layout.tsx",
+    "src/components/YandexMetrica.tsx",
+    "scripts/check-yandex-consent.py"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "78dca05ce574147b7f615adb5753cfaa92846df8",
-  "affectedUrls": [
-    "/"
-  ],
-  "notes": "Preserve the existing images, conversion handlers and analytics. The production homepage was archived before editing."
+  "rollbackCommit": "55f0fa779e4ffeabbfd7fd093be8123960979943",
+  "affectedUrls": ["Sitewide Yandex Metrica initialization; representative routes / and /commercial-carpet-tiles"],
+  "notes": "The root layout category is required by the guard only for moving/removing the existing Yandex nodes. No other analytics, advertising, consent controls, endpoints, SEO settings or page content change."
 }
