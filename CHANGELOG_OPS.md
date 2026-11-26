@@ -1861,3 +1861,7 @@ Keep the Yandex counter initialization in the document head and render its no-sc
 ## 2026-11-26 — Mobile homepage banner
 
 Serve portrait AVIF crops from the same three originals and preload the matching first image. Baseline homepage performance was 93 on mobile and 100 on desktop.
+
+## 2026-11-26 — First paint
+
+Inline the initial mobile banner and defer speculative slide warming on touch devices. Keep desktop imagery, responsive navigation and enquiry links.

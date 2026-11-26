@@ -1,6 +1,6 @@
 {
-  "task": "Optimize the homepage banner on phones and preserve desktop presentation.",
-  "approvedBy": "Owner requested mobile and desktop PageSpeed improvements on 2026-11-26.",
+  "task": "Reduce mobile first-paint latency after the initial portrait image change.",
+  "approvedBy": "Owner requested PageSpeed optimization on mobile and desktop on 2026-11-26.",
   "approvedCategories": [
     "performance",
     "documentation"
@@ -10,15 +10,13 @@
     "CHANGELOG_OPS.md",
     "src/app/page.tsx",
     "src/components/HomeHeroCarousel.tsx",
-    "public/images/home/hero-home-mobile-v2.avif",
-    "public/images/home/hero-hotel-corridor-carpet-mobile-v2.avif",
-    "public/images/home/hero-custom-wool-rug-mobile-v2.avif"
+    "public/images/home/hero-home-mobile-inline.avif"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "d1e8f089518bd3b38656514ad1d12c951e6f7c3c",
+  "rollbackCommit": "78dca05ce574147b7f615adb5753cfaa92846df8",
   "affectedUrls": [
     "/"
   ],
-  "notes": "The production homepage was archived before editing. Carousel links and controls retain their existing behavior."
+  "notes": "Preserve the existing images, conversion handlers and analytics. The production homepage was archived before editing."
 }
