@@ -1865,3 +1865,7 @@ Serve portrait AVIF crops from the same three originals and preload the matching
 ## 2026-11-26 — First paint
 
 Inline the initial mobile banner and defer speculative slide warming on touch devices. Keep desktop imagery, responsive navigation and enquiry links.
+
+## 2026-11-26 — Stabilize homepage carousel image changes
+
+Retain the four-second rotation and manual controls. Load the next banner before switching its photo and caption and provide enough initial portrait pixels for a full phone screen. Rollback base is 55f0fa779e4ffeabbfd7fd093be8123960979943.
