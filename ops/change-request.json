@@ -1,22 +1,20 @@
 {
-  "task": "Reduce mobile first-paint latency after the initial portrait image change.",
-  "approvedBy": "Owner requested PageSpeed optimization on mobile and desktop on 2026-11-26.",
+  "task": "Prepare the existing office carpet tiles page for zone-based sample requests, FOB Tianjin Port bulk quotes and product-specific document requests.",
+  "approvedBy": "The owner requested an AITS-informed office carpet tile improvement on 2026-11-26. This candidate records preparation only; production sign-off and baseline release are not asserted.",
   "approvedCategories": [
-    "performance",
+    "content",
     "documentation"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/page.tsx",
-    "src/components/HomeHeroCarousel.tsx",
-    "public/images/home/hero-home-mobile-inline.avif"
+    "src/app/commercial-carpet-tiles/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "78dca05ce574147b7f615adb5753cfaa92846df8",
+  "rollbackCommit": "55f0fa779e4ffeabbfd7fd093be8123960979943",
   "affectedUrls": [
-    "/"
+    "/commercial-carpet-tiles"
   ],
-  "notes": "Preserve the existing images, conversion handlers and analytics. The production homepage was archived before editing."
+  "notes": "The category gives one sample path and one procurement guide link, and corrects its own export and evidence copy. Bulk quotes are FOB Tianjin Port. Ask for the documents applicable to the offered tile. No new delivery, installation, certification or fixed-cost service, and no shared component, tracking, product record or form changes."
 }

@@ -8,7 +8,7 @@ import { productPath } from "@/lib/seo";
 
 export const metadata = {
   title: "Office Carpet Tiles Supplier | 50x50 Commercial Tiles | VCARPETS",
-  description: "Source 50x50 commercial carpet tiles for offices, hotels and retail projects. Compare backing, MOQ, samples, factory price ranges and export support from China.",
+  description: "Source 50x50 commercial carpet tiles for offices, hotels and retail projects. Compare backing, MOQ and samples, and request a bulk FOB Tianjin Port quote by office zone.",
   alternates: { canonical: "/commercial-carpet-tiles" },
 };
 
@@ -38,18 +38,21 @@ export default function CommercialCarpetTilesPage() {
               High-Performance Commercial Carpet Tiles
             </h1>
             <p className="mb-9 max-w-3xl text-lg leading-relaxed text-gray-100/90 md:text-xl">
-              Factory-direct 50x50 modular carpet tiles for offices, hotels, retail, schools, and commercial fit-outs. Compare nylon or polypropylene fiber, backing, fire-rating, MOQ, and delivery terms before ordering.
+              Compare 50x50 modular carpet tiles for offices and other commercial fit-outs. Choose the fiber and backing by zone, then ask for a bulk FOB Tianjin Port quote and the documents available for that construction.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="#quick-quote" className="btn-fox-orange">Get Factory Quote</Link>
-              <Link href="/request-sample-box?product=Commercial%20Carpet%20Tiles" className="inline-flex min-h-12 items-center justify-center rounded-sm border border-white/55 px-6 py-3 text-xs font-black uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-primary">Request Samples</Link>
+              <Link href="#quick-quote" className="btn-fox-orange">Request a Bulk Quote</Link>
+              <Link href="/request-sample-box?product=Commercial%20Carpet%20Tiles" className="inline-flex min-h-12 items-center justify-center rounded-sm border border-white/55 px-6 py-3 text-xs font-black uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-primary">Request Samples by Office Zone</Link>
             </div>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-gray-100">
+              In Project Notes, list each zone, its floor area and the samples you want to compare. Include your destination and when each phase needs material.
+            </p>
             <div className="mt-8 grid gap-px border border-white/20 bg-white/20 text-white sm:grid-cols-4">
               {[
                 ["Reference Price", "From US$3.80 / SQM"],
                 ["Typical MOQ", "200-500 SQM"],
                 ["Production", "7-25 Days"],
-                ["Trade Terms", "FOB / CIF / DAP"],
+                ["Bulk Trade Terms", "FOB Tianjin Port"],
               ].map(([label, value]) => (
                 <div key={label} className="bg-[#15385d]/85 px-4 py-4">
                   <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-white/60">{label}</p>
@@ -63,7 +66,7 @@ export default function CommercialCarpetTilesPage() {
 
       <AnswerFirst
         title="Are Commercial Carpet Tiles the Right Choice for Your Project?"
-        answer="Commercial carpet tiles are a practical choice for offices, hotels, retail, schools, and phased renovations where damaged areas may need individual replacement. VCARPETS supplies 50x50 modular tiles in nylon or polypropylene options with project-specific backing. Compare traffic level, fire requirement, rolling-chair use, maintenance plan, sample approval, and total delivered cost before choosing a style."
+        answer="Commercial carpet tiles are a practical choice for offices, hotels, retail, schools, and phased renovations where damaged areas may need individual replacement. VCARPETS supplies 50x50 modular tiles in nylon or polypropylene options with project-specific backing. Compare traffic level, fire requirement, rolling-chair use, maintenance plan and sample approval before choosing a style. For budget comparisons, separate the FOB carpet price from freight after Tianjin, import costs and local installation."
         facts={[
           { label: "Common Format", value: "50x50 cm modular carpet tiles" },
           { label: "Fiber Options", value: "Nylon or polypropylene by product" },
@@ -91,7 +94,7 @@ export default function CommercialCarpetTilesPage() {
       <ConversionLiftPanel
         eyebrow="High-Intent Buyer Shortcut"
         title="Send Area and Destination Before Comparing Every Tile"
-        body="Commercial carpet tile buyers usually need a fast match between fiber, backing, quantity, and delivery country. Submit the basics first and the factory can narrow the choices instead of making you compare every option manually."
+        body="Send the area by zone, backing requirements and destination country so the export team can identify suitable tiles and quote the bulk order FOB Tianjin Port."
         product="Commercial Carpet Tiles"
         quoteHref="#quick-quote"
         compact
@@ -100,9 +103,9 @@ export default function CommercialCarpetTilesPage() {
       <section id="quick-quote" className="scroll-mt-24 border-b border-border bg-white py-12 md:py-16" data-funnel-section="carpet_tile_quick_quote">
         <div className="container-fox grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-14">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-accent">Factory Quote Without Leaving This Page</p>
+            <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-accent">Bulk Project Quote</p>
             <h2 className="text-3xl font-black uppercase leading-tight text-primary md:text-4xl">Get Price, MOQ, Sample and Lead Time</h2>
-            <p className="mt-5 leading-relaxed text-muted">Send the destination and estimated area. The export team will match a suitable fiber and backing, then reply with comparable project pricing.</p>
+            <p className="mt-5 leading-relaxed text-muted">Include your destination for project planning and list the area for each zone. Ask for the selected tile, order quantity and packing basis on the FOB Tianjin Port quote.</p>
             <dl className="mt-8 divide-y divide-border border-y border-border">
               {[
                 ["What to send", "Area, application, destination, and required date"],
@@ -121,7 +124,7 @@ export default function CommercialCarpetTilesPage() {
             formName="carpet_tiles_quick_quote"
             productDefault="Commercial Carpet Tiles"
             projectTypeDefault="Office / commercial carpet tile project"
-            submitLabel="GET FACTORY QUOTE"
+            submitLabel="REQUEST BULK QUOTE"
             introText="Only contact details and destination are required. Quantity and buying stage can be added when available."
             variant="quick"
           />
@@ -174,6 +177,18 @@ export default function CommercialCarpetTilesPage() {
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="mt-8 max-w-3xl">
+            <h3 className="text-xl font-bold text-primary">Choosing office carpet tiles by zone</h3>
+            <p className="mt-3 leading-relaxed text-muted">
+              For desk areas, check the selected tile’s documented suitability for rolling chairs. For busy corridors, compare traffic requirements and the cleaning schedule. For meeting rooms, state any acoustic requirement and ask for evidence for the proposed backing.
+            </p>
+            <p className="mt-3 leading-relaxed text-muted">
+              Ordering in two phases? Ask which colour lot can be supplied for each phase and how many whole cartons to retain for repairs. A later order may not match the first batch.{" "}
+              <Link href="/blog/office-carpet-tiles-renovation-cycle-procurement-guide" className="font-semibold text-primary underline underline-offset-4">
+                Plan a phased office carpet tile order
+              </Link>.
+            </p>
           </div>
         </div>
       </section>
@@ -256,16 +271,16 @@ export default function CommercialCarpetTilesPage() {
         <div className="container-fox">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 uppercase leading-tight">Exporting Quality to Global Standards</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 uppercase leading-tight">Documents and Terms to Check Before Ordering</h2>
               <div className="space-y-6">
                 {[
-                  { q: "ASTM E648 Fire Rating", a: "Standard compliance for US hospitality and commercial buildings." },
-                  { q: "CRI Green Label Plus", a: "Low VOC emissions for superior indoor air quality (IAQ)." },
-                  { q: "ISO 9001:2015", a: "Rigorous quality management from production to packaging." },
-                  { q: "Global DDP Delivery", a: "Direct door-to-door delivery with customs cleared in 40+ countries." }
+                  { q: "Fire performance", a: "Send the fire-test method and rating required by your project. Ask whether a report is available for the exact tile and backing offered." },
+                  { q: "Indoor air requirements", a: "If your tender specifies an emissions certificate, name the program and ask which proposed products its current listing covers." },
+                  { q: "Tender documents", a: "List any management-system certificate your tender requires. Ask for its holder, scope and validity separately from product test reports." },
+                  { q: "Bulk quote: FOB Tianjin Port", a: "The carpet quote excludes onward freight, import charges and local installation. Give your destination and required date so your team can budget those items separately." }
                 ].map((item) => (
                   <div key={item.q} className="border-l-4 border-accent pl-6 py-2">
-                    <h4 className="text-white font-bold text-lg mb-1 uppercase tracking-wide">{item.q}</h4>
+                    <h3 className="text-white font-bold text-lg mb-1 uppercase tracking-wide">{item.q}</h3>
                     <p className="text-gray-400 text-sm">{item.a}</p>
                   </div>
                 ))}
@@ -273,7 +288,7 @@ export default function CommercialCarpetTilesPage() {
             </div>
             <div className="bg-white/5 p-12 rounded-2xl border border-white/10 text-center">
               <h3 className="text-2xl font-bold text-white mb-6 uppercase">Ready to Start?</h3>
-              <p className="text-gray-400 mb-10">Get a professional technical assessment and sample matched to your project requirements within 24 hours.</p>
+              <p className="text-gray-400 mb-10">Send the proposed tile or sample reference, project area, destination and required documents. Ask which samples and reports are available for your selection.</p>
               <Link href="/contact" className="btn-fox-orange w-full py-5 text-center">Start Your Inquiry</Link>
             </div>
           </div>

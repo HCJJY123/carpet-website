@@ -1865,3 +1865,7 @@ Serve portrait AVIF crops from the same three originals and preload the matching
 ## 2026-11-26 — First paint
 
 Inline the initial mobile banner and defer speculative slide warming on touch devices. Keep desktop imagery, responsive navigation and enquiry links.
+
+## 2026-11-26 — Office carpet tile sample handoff (candidate)
+
+Clarify office-zone sample inputs; link the existing phased-renovation RFQ guide. Correct this category’s export copy to FOB Tianjin Port for bulk orders and replace its general compliance claims with model-specific document requests. The sample target, form fields, tracking and linked guide are unchanged. Preparation only; recover by reverting this isolated change. Base: `55f0fa779e4ffeabbfd7fd093be8123960979943`.
