@@ -368,6 +368,7 @@ export default function Header() {
                             <Link
                               key={`${link.href}-${child.label}`}
                               href={child.href}
+                              prefetch={false}
                               onClick={(event) => handleQuoteFormNavigation(event, child.href, link.href)}
                               className={`block px-9 py-3.5 text-[14px] font-medium leading-tight transition-colors ${
                                 childActive ? "text-white" : "text-white/78 hover:bg-white/10 hover:text-white"
@@ -528,6 +529,7 @@ export default function Header() {
                   <div className="flex items-stretch">
                     <Link
                       href={link.href}
+                      prefetch={menuOpen ? null : false}
                       onClick={() => setMenuOpen(false)}
                       className="flex flex-1 items-center px-4 py-3 text-sm font-semibold uppercase tracking-[0.06em] text-[#102A43]"
                     >
@@ -570,6 +572,7 @@ export default function Header() {
                           <Link
                             key={`${link.href}-${child.label}`}
                             href={child.href}
+                            prefetch={menuOpen && sectionOpen ? null : false}
                             onClick={(event) => handleQuoteFormNavigation(event, child.href, link.href)}
                             className="block border-b border-border/60 px-5 py-2.5 text-[13px] font-semibold text-[#102A43]/70 last:border-b-0"
                           >
@@ -584,7 +587,7 @@ export default function Header() {
             })}
           </div>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
-            <Link href="/contact#quote-form" onClick={(event) => handleQuoteFormNavigation(event, "/contact#quote-form")} className="btn-fox-orange text-center">
+            <Link prefetch={menuOpen ? null : false} href="/contact#quote-form" onClick={(event) => handleQuoteFormNavigation(event, "/contact#quote-form")} className="btn-fox-orange text-center">
               Get Factory Quote
             </Link>
             <a

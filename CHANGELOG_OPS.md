@@ -1873,3 +1873,7 @@ Retain the four-second rotation and manual controls. Load the next banner before
 ## 2026-11-26 — Yandex Analytics consent
 
 Only load the existing Yandex counter (111239007) after Analytics opt-in. Recheck consent before initializing a delayed script and stop the active counter on withdrawal, including a preference change from another tab. Omit the optional no-JavaScript pixel because server rendering has no verified consent. Use the isolated browser smoke test before release; no requests, hits or goals should reach analytics vendors during QA. Base: `55f0fa779e4ffeabbfd7fd093be8123960979943`.
+
+## 2026-11-26 — Avoid route downloads behind a closed navigation menu
+
+The homepage trace recorded 84 Fetch requests. The header prefetches mobile routes only after opening the drawer and its section, and keeps desktop submenu links available on activation. All destinations and contact handlers are preserved. Rollback base: e55e676b8fc76346d724b2c3a268ac996bfd4ca3.

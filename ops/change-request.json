@@ -1,17 +1,21 @@
 {
-  "task": "Gate only the existing Yandex Metrica counter on Analytics consent, including withdrawal and no-JavaScript visits.",
-  "approvedBy": "Owner authorized the separate VCARPETS Yandex Analytics consent repair on 2026-11-26. This change request covers the four consent states. Production review remains bound to this PR and SHA.",
-  "approvedCategories": ["analytics", "seo-global", "documentation"],
+  "task": "Reduce initial route requests from unopened desktop menus and the collapsed phone drawer.",
+  "approvedBy": "Owner requested PageSpeed optimization on mobile and desktop on 2026-11-26.",
+  "approvedCategories": [
+    "performance",
+    "navigation",
+    "documentation"
+  ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/layout.tsx",
-    "src/components/YandexMetrica.tsx",
-    "scripts/check-yandex-consent.py"
+    "src/components/Header.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "b93b3ec698cf3d37f6799eeff6d8107bddab032b",
-  "affectedUrls": ["Sitewide Yandex Metrica initialization; representative routes / and /commercial-carpet-tiles"],
-  "notes": "The root layout category is required by the guard only for moving/removing the existing Yandex nodes. No other analytics, advertising, consent controls, endpoints, SEO settings or page content change."
+  "rollbackCommit": "e55e676b8fc76346d724b2c3a268ac996bfd4ca3",
+  "affectedUrls": [
+    "/"
+  ],
+  "notes": "Only adjust route prefetch on the existing shared header links. Preserve every destination, navigation item and contact handler."
 }
