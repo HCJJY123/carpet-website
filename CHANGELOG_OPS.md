@@ -1869,3 +1869,7 @@ Inline the initial mobile banner and defer speculative slide warming on touch de
 ## 2026-11-26 — Stabilize homepage carousel image changes
 
 Retain the four-second rotation and manual controls. Load the next banner before switching its photo and caption and provide enough initial portrait pixels for a full phone screen. Rollback base is 55f0fa779e4ffeabbfd7fd093be8123960979943.
+
+## 2026-11-26 — Yandex Analytics consent
+
+Only load the existing Yandex counter (111239007) after Analytics opt-in. Recheck consent before initializing a delayed script and stop the active counter on withdrawal, including a preference change from another tab. Omit the optional no-JavaScript pixel because server rendering has no verified consent. Use the isolated browser smoke test before release; no requests, hits or goals should reach analytics vendors during QA. Base: `55f0fa779e4ffeabbfd7fd093be8123960979943`.
