@@ -1,21 +1,20 @@
 {
-  "task": "Reduce initial route requests from unopened desktop menus and the collapsed phone drawer.",
-  "approvedBy": "Owner requested PageSpeed optimization on mobile and desktop on 2026-11-26.",
+  "task": "Prepare the existing office carpet tiles page for zone-based sample requests, FOB Tianjin Port bulk quotes and product-specific document requests.",
+  "approvedBy": "The owner requested an AITS-informed office carpet tile improvement on 2026-11-26. This candidate records preparation only; production sign-off and baseline release are not asserted.",
   "approvedCategories": [
-    "performance",
-    "navigation",
+    "content",
     "documentation"
   ],
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/components/Header.tsx"
+    "src/app/commercial-carpet-tiles/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "e55e676b8fc76346d724b2c3a268ac996bfd4ca3",
+  "rollbackCommit": "2d5685b97e2101a91221d16eb7533690ce8093b7",
   "affectedUrls": [
-    "/"
+    "/commercial-carpet-tiles"
   ],
-  "notes": "Only adjust route prefetch on the existing shared header links. Preserve every destination, navigation item and contact handler."
+  "notes": "The category gives one sample path and one procurement guide link, and corrects its own export and evidence copy. Bulk quotes are FOB Tianjin Port. Ask for the documents applicable to the offered tile. No new delivery, installation, certification or fixed-cost service, and no shared component, tracking, product record or form changes."
 }
