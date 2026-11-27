@@ -1881,3 +1881,7 @@ The homepage trace recorded 84 Fetch requests. The header prefetches mobile rout
 ## 2026-11-26 — Office carpet tile sample handoff (candidate)
 
 Clarify office-zone sample inputs; link the existing phased-renovation RFQ guide. Correct this category’s export copy to FOB Tianjin Port for bulk orders and replace its general compliance claims with model-specific document requests. The sample target, form fields, tracking and linked guide are unchanged. Preparation only; recover by reverting this isolated change. Base: `55f0fa779e4ffeabbfd7fd093be8123960979943`.
+
+## 2026-11-27 — Hotel carpet samples and broadloom bid comparison
+
+Preview candidate for the two hotel procurement pages. Adds zone-specific sample approval and compares available roll lots with made-to-order broadloom. Rollback base: 5ae585cc111cb57a816f433f443309b879e733bd.

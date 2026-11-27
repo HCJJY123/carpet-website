@@ -13,6 +13,10 @@ const hotelQuoteHref = "/contact?product=Hotel%20Carpet%20Project&source=%2Fhote
 
 const hotelFaqs = [
   {
+    question: "Which hospitality carpet samples should we compare for a corridor and a guestroom?",
+    answer: "Give both bidders the same corridor plan, guestroom layout and cleaning schedule. Ask for the proposed backing and construction for each zone. Use a full pattern repeat or a strike-off to review a patterned corridor across a join, and review the guestroom sample beside the intended furniture finish. Keep each approved reference with its own quotation line.",
+  },
+  {
     question: "What carpet is usually specified for hotel guestrooms and corridors?",
     answer: "Guestrooms often use comfort-oriented wall-to-wall carpet, while corridors need stronger appearance retention, pattern planning, and noise control. Final construction should be confirmed by traffic level, fire requirement, design intent, cleaning plan, and project budget.",
   },
