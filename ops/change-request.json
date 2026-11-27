@@ -1,6 +1,6 @@
 {
-  "task": "Prepare the existing office carpet tiles page for zone-based sample requests, FOB Tianjin Port bulk quotes and product-specific document requests.",
-  "approvedBy": "The owner requested an AITS-informed office carpet tile improvement on 2026-11-26. This candidate records preparation only; production sign-off and baseline release are not asserted.",
+  "task": "Improve hotel carpet selection and bid comparison on two existing hospitality pages.",
+  "approvedBy": "Owner requested Semrush-informed on-page optimization on 2026-11-27. Candidate changes only.",
   "approvedCategories": [
     "content",
     "documentation"
@@ -8,13 +8,15 @@
   "allowedPaths": [
     "ops/change-request.json",
     "CHANGELOG_OPS.md",
-    "src/app/commercial-carpet-tiles/page.tsx"
+    "src/app/hotel-carpet/page.tsx",
+    "src/app/solutions/hotel-hospitality/page.tsx"
   ],
   "protectedUrlsChanged": false,
   "directMainSyncApproved": false,
-  "rollbackCommit": "2d5685b97e2101a91221d16eb7533690ce8093b7",
+  "rollbackCommit": "5ae585cc111cb57a816f433f443309b879e733bd",
   "affectedUrls": [
-    "/commercial-carpet-tiles"
+    "/hotel-carpet",
+    "/solutions/hotel-hospitality"
   ],
-  "notes": "The category gives one sample path and one procurement guide link, and corrects its own export and evidence copy. Bulk quotes are FOB Tianjin Port. Ask for the documents applicable to the offered tile. No new delivery, installation, certification or fixed-cost service, and no shared component, tracking, product record or form changes."
+  "notes": "Adds room-zone sample and like-for-like bid guidance. Existing commercial terms, contacts, forms, tracking and URLs are preserved."
 }

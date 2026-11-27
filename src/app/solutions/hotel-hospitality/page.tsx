@@ -15,6 +15,7 @@ const zones = [
 ];
 
 const faqs = [
+  { q: "How do we compare a broadloom special with a made-to-order hotel carpet?", a: "Ask for the available metres from one dye lot, usable roll widths and the quantity needed after pattern matching. Check whether the same design can be reordered for the next renovation phase. Compare both offers against the same room schedule, waste allowance and named delivery point, with any sample or strike-off cost shown separately." },
   { q: "Does VCARPETS supply custom hotel carpet patterns and colours?", a: "Custom pattern and colour requests can be reviewed for hotel broadloom projects. Send the zone, artwork or references, area and destination. Feasibility, sample route, minimum quantity, cost and timing are confirmed for the selected proposal." },
   { q: "Which hotel carpet construction should a buyer request?", a: "Start with the hotel zone and operating brief, then compare the nominated Axminster, printed or tufted construction. The words hotel carpet do not establish fibre, backing, fire performance, width or service life; verify the physical sample and applicable product documents." },
   { q: "What information is needed for an FOB Tianjin quotation?", a: "Provide the hotel zone, net area, drawing revision, room or corridor dimensions, design reference, destination, required documents and target site date. The written quotation confirms the selected construction, quantity basis, packing, sample terms, minimum order and production timing." },
